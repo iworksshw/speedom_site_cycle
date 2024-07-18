@@ -21,7 +21,7 @@
                 }
             }
             h1{
-                margin-top:43px; color: #000; text-align: center; font-family: "Pretendard"; font-size: rem(30px); font-style: normal; font-weight: 300; line-height: normal;
+                margin-top:43px; color: #000; text-align: center; font-size: rem(30px); font-style: normal; font-weight: 300; line-height: normal;
             }
         }
         .titleBox {
@@ -43,7 +43,7 @@
             }
             dl{
                 .title{
-                    width:100%; color: #000; font-family: "Pretendard"; font-size: rem(15px); font-style: normal; font-weight: 600; line-height: normal;
+                    width:100%; color: #000; font-size: rem(15px); font-style: normal; font-weight: 600; line-height: normal;
                     .required{
                         vertical-align: middle; margin-right:5px;
                     }
@@ -51,7 +51,7 @@
                 .iptBox{
                     width:100%; margin-top:12px;
                     input{
-                        width:100%; height:66px; padding:0 30px; color: #000; font-family: "Pretendard"; font-size: rem(16px); font-style: normal; font-weight: 300; 
+                        width:100%; height:66px; padding:0 30px; color: #000; font-size: rem(16px); font-style: normal; font-weight: 300; 
                         line-height: normal; border:0; border-radius: 12px; background: #F7F9FB; 
                     }
                 }
@@ -71,7 +71,7 @@
                 width:100%; margin-top:70px;
                 + .loginBox {margin-top:10px;}
                 .btn{
-                    width: 100%; height: 66px; font-family: "Pretendard"; font-size: rem(16px); font-style: normal; font-weight: 600; line-height: normal; border-radius: 12px;
+                    width: 100%; height: 66px; font-size: rem(16px); font-style: normal; font-weight: 600; line-height: normal; border-radius: 12px;
                     &.basic{
                         color: #FFF; background: #4D5DF2;
                         &:disabled{
@@ -87,7 +87,7 @@
                 }
             }
             .loginSerch{
-                width:100%; margin-top:22px; color: #000; text-align: center; font-family: "Pretendard"; font-size: rem(14px); font-style: normal; font-weight: 300; line-height: normal;
+                width:100%; margin-top:22px; color: #000; text-align: center; font-size: rem(14px); font-style: normal; font-weight: 300; line-height: normal;
             }
             .footInfo{
                 margin-top:70px; color: #000; text-align: center; font-family: Pretendard; font-size: rem(14px); font-style: normal; font-weight: 600; line-height: 1.85em; /* 185.714% */
