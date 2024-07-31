@@ -25,6 +25,7 @@
             }
         }
         .gnbArea {
+            border-top: 1px solid var(---Primary); border-bottom: 1px solid var(---Primary);
             .gnbBox {
                 .depth1Group {
                     margin-left: 215px; margin-right:290px;
@@ -197,6 +198,16 @@
             }
             .allMenu {
                 width: 24px; height: 100%; font-size: 0; background: url(../../images/common/ic_all_menu.svg) center no-repeat;
+            }
+        }
+    }
+    @include media('pcs'){
+        .gnbArea {
+            .gnbBox {
+                justify-content: flex-end;
+                .depth1Group {
+                    display: none;
+                }
             }
         }
     }
