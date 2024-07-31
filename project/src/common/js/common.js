@@ -1,4 +1,169 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    //스크롤에 따른 헤더 반응
+    let scrlT = document.documentElement.scrollTop;
+    let afterScrlT = scrlT;
+    document.addEventListener("scroll",function(e){
+        const header = document.querySelector(".cptHeader");
+        scrlT = document.documentElement.scrollTop;
+        if(scrlT > 112){
+            header.classList.add("on")
+        }else{
+            header.classList.remove("on")
+        }
+        //모바일
+        if(afterScrlT > scrlT){
+            //scroll down => GNB up
+            header.classList.remove("up")
+        }else{
+            //scroll up => GNB down
+            header.classList.add("up")
+        }
+        afterScrlT = scrlT;
+    })
+
+
+    //GNB - Start
+    const depth1Menus = document.querySelectorAll(".gnbArea .depth1Menu");
+    const depth2Menus = document.querySelectorAll(".gnbArea .depth2Menu");
+    const depth3Menus = document.querySelectorAll(".gnbArea .depth3Menu");
+    const depth4Menus = document.querySelectorAll(".gnbArea .depth4Menu");
+    let depth1On = false; //메뉴 활성화 상태
+
+    //특정 엘리먼트 외 클릭 시 동작
+    document.addEventListener("mouseup", function(e){
+        //메뉴 외 영역 클릭시 메뉴 닫힘
+        if(!document.querySelector(".gnbBox").querySelector("." + e.target.classList.value)){
+            depth1Menus.forEach(function(depth1Menu){
+                if(depth1Menu.classList.contains("on")){
+                    depth1Menu.querySelector(".depth2Area").style.transition = "height 0.2s";
+                    depth1Menu.classList.remove("on");
+                    depth1On = false;
+                    setTimeout(function(){
+                        depth1Menu.querySelector(".depth2Area").style.transition = "none";
+                    },210)
+                }
+            });
+        }
+    });
+
+    //뎁스 1메뉴 클릭
+    depth1Menus.forEach(function(depth1Menu, idxI, elements){
+        depth1Menu.querySelector(".depth1Name").addEventListener("click",function(e){
+            e.preventDefault();
+            depth2Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            depth3Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            depth4Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            elements.forEach(function(element, idxJ){
+                if(idxI == idxJ){
+                    if(element.classList.contains("on")){
+                        //on되어 있는 메뉴 클릭
+                        element.querySelector(".depth2Area").style.transition = "height 0.2s";
+                        element.classList.remove("on");
+                        depth1On = false;
+                        setTimeout(function(){
+                            element.querySelector(".depth2Area").style.transition = "none";
+                        },210)
+                    }else{
+                        //클릭 시 메뉴 활성화 된 메뉴가 없을 때 모션 추가
+                        if(depth1On == false) {
+                            depth1On = true;
+                            element.querySelector(".depth2Area").style.transition = "height 0.2s";
+                            setTimeout(function(){
+                                element.querySelector(".depth2Area").style.transition = "none";
+                            },210)
+                        }
+                        element.classList.add("on");
+                        const depth2Ele = element.querySelectorAll(".depth2Menu")[0];
+                        if(depth2Ele){
+                            depth2Ele.classList.add("on");
+                            const depth3Ele = depth2Ele.querySelectorAll(".depth3Menu")[0];
+                            if(depth3Ele){
+                                depth3Ele.classList.add("on");
+                                const depth4Ele = depth3Ele.querySelectorAll(".depth4Menu")[0];
+                                if(depth4Ele){
+                                    depth4Ele.classList.add("on");
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    element.classList.remove("on");
+                }
+            });
+            
+        });
+    });
+
+    //뎁스 2메뉴 오버
+    depth2Menus.forEach(function(depth2Menu,idxI, elements){
+        depth2Menu.querySelector(".depth2Name").addEventListener("mouseover",function(e){
+            depth3Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            depth4Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            elements.forEach(function(element, idxJ){
+                if(idxI == idxJ){
+                    element.classList.add("on");
+                    const depth3Ele = element.querySelectorAll(".depth3Menu")[0];
+                    if(depth3Ele){
+                        depth3Ele.classList.add("on");
+                        const depth4Ele = depth3Ele.querySelectorAll(".depth4Menu")[0];
+                        if(depth4Ele){
+                            depth4Ele.classList.add("on");
+                        }
+                    }
+                }else{
+                    element.classList.remove("on");
+                }
+            });
+        });
+    })
+
+    //뎁스 3메뉴 오버
+    depth3Menus.forEach(function(depth3Menu,idxI, elements){
+        depth3Menu.querySelector(".depth3Name").addEventListener("mouseover",function(e){
+            depth4Menus.forEach(function(menu){
+                menu.classList.remove("on");
+            });
+            elements.forEach(function(element, idxJ){
+                if(idxI == idxJ){
+                    element.classList.add("on");
+                    const depth4Ele = element.querySelectorAll(".depth4Menu")[0];
+                    if(depth4Ele){
+                        depth4Ele.classList.add("on");
+                    }
+                }else{
+                    element.classList.remove("on");
+                }
+            });
+        });
+    })
+
+    //뎁스 4메뉴 오버
+    depth4Menus.forEach(function(depth4Menu,idxI, elements){
+        depth4Menu.querySelector(".depth4Name").addEventListener("mouseover",function(e){
+            elements.forEach(function(element, idxJ){
+                if(idxI == idxJ){
+                    element.classList.add("on");
+                }else{
+                    element.classList.remove("on");
+                }
+            });
+        });
+    })
+    //GNB - End
+
+
+
     //파일찾기
     const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
     uploadFiles.forEach(function(uploadFile,idx){

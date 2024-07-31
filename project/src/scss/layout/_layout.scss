@@ -3,21 +3,15 @@
 .lytLayout {
     .layoutArea{
         .layoutTop{
-
+            width:100%; height:176px; position:  sticky; left: 0; top: 0;
         }
         .layoutContainer{
-
-            //좌메뉴가 없을 때
+            width:100%; height:3000px; background:#ccc;
             .layoutCont{
 
             }
-
-            //좌메뉴가 있을 때
-            .layoutNav{
-
-            }
             .layoutSubCont{
-
+                width: 100%; max-width: 1480px; margin: 0 auto; padding: 0 20px;
             }
         }
         .layoutFooter{
