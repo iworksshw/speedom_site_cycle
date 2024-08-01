@@ -91,7 +91,7 @@
     .gnbArea {
         width:100%; border-top: 1px solid var(--Bg-Line-line-100); border-bottom: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 100;
         .gnbBox {
-            width: 100%; max-width:1480px; height: 64px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;
+            width: 100%; max-width:1480px; height: 62px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;
             .depth1Group {
                 width: 824px; margin-right:20px; display: flex; justify-content: space-between; align-items: center; transition: margin-left 0.3s;
                 .depth1Menu {
@@ -207,6 +207,51 @@
                 justify-content: flex-end;
                 .depth1Group {
                     display: none;
+                }
+            }
+        }
+    }
+    @include media('mobile'){
+        & ,&.on {
+            transform: translateY(-112px); background: #fff;
+            .quickArea .quickBox .guickMenuGroup {display: none;}
+            .headArea {
+                .headBox {
+                    .logoBox {
+                        width: 110px; height: 26px; position: absolute; left: 20px; top: 94px;
+                        .logo g path {fill: #00458D;}
+                    }
+                    .myMenuGroup {
+                        position: absolute; right: 74px; top: 83px; gap: 4px;
+                        .item {
+                            a {
+                                width: 50px; height: 50px; padding-left: 0; padding-top: 34px; font-size: rem(12px); text-align: center; display:block;
+                            }
+                            &.ico01 a {background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;}
+                            &.ico02 {display: none;}
+                            &.ico03 a {background: url(../../images/common/ic_head_03.svg) center 8px no-repeat;}
+                            &.ico04 {display: none;}
+                        }
+                    }
+                }
+            }
+            .gnbArea {
+                border-top: 1px solid #fff; border-bottom: 1px solid var(--Bg-Line-line-100, #E1E4EA);;
+                .gnbBox {
+                    height: 70px;
+                    .depth1Group {
+                        display: none;
+                        .depth1Menu {
+                            .depth1Name {
+                                color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
+                            }
+                        }
+                    }
+                    .allMenu {
+                        width: 50px; height: 50px; padding-top: 34px;
+                        color: var(--Gray-800, #2C2C2C); font-size: rem(12px); font-weight: 700; line-height: normal; 
+                        background: url(../../images/common/ic_all_menu_mo.svg) center 8px no-repeat;
+                    }
                 }
             }
         }
