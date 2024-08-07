@@ -10,6 +10,7 @@
   --Gray-700:#414347;
   --Gray-600:#58595F;
   --Gray-500:#6F7176;
+  --Gray-300:#B0B2B7;
   --Bg-Line-line-100: #E1E4EA;
   --Bg-Line-bg-100: #F9FAFC;
 }
@@ -126,3 +127,12 @@ body.noScrl {height:100vh; overflow:hidden;}
   .mo_mb40 {margin-bottom:40px !important;}
   .mo_mb50 {margin-bottom:50px !important;}
 }
+
+
+/* z-index
+#탑메뉴 영역
+.cptHeader : -----------------------------100
+.cptHeader .headArea : -------------------101 => (.cptHeader .gnbArea 보다 커야함)
+.cptHeader .gnbArea : --------------------100
+.cptHeader .gnbArea .gnbBox .depth2Area : 99
+*/

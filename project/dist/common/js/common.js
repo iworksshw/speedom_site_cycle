@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //특정 엘리먼트 외 클릭 시 동작
     document.addEventListener("mouseup", function(e){
         //메뉴 외 영역 클릭시 메뉴 닫힘
-        if(!document.querySelector(".gnbBox").querySelector("." + e.target.classList.value)){
+        if(!document.querySelector(".gnbBox").contains(e.target)){
             depth1Menus.forEach(function(depth1Menu){
                 if(depth1Menu.classList.contains("on")){
                     depth1Menu.querySelector(".depth2Area").style.transition = "height 0.2s";

@@ -1,0 +1,10 @@
+//프린트 시
+
+@media print {
+    .lytLayout {
+        .layoutArea{
+            .layoutTop {display: none;}
+            .layoutFooter{display: none;}
+        }
+    }
+}
