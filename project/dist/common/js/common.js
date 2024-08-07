@@ -6,18 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("scroll",function(e){
         const header = document.querySelector(".cptHeader");
         scrlT = document.documentElement.scrollTop;
-        if(scrlT > 112){
-            header.classList.add("on")
-        }else{
-            header.classList.remove("on")
-        }
-        //모바일
-        if(afterScrlT > scrlT){
-            //scroll down => GNB up
-            header.classList.remove("up")
-        }else{
-            //scroll up => GNB down
-            header.classList.add("up")
+        if(header){
+            if(scrlT > 112){
+                header.classList.add("on")
+            }else{
+                header.classList.remove("on")
+            }
+            //모바일
+            if(afterScrlT > scrlT){
+                //scroll down => GNB up
+                header.classList.remove("up")
+            }else{
+                //scroll up => GNB down
+                header.classList.add("up")
+            }
         }
         afterScrlT = scrlT;
     })
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //특정 엘리먼트 외 클릭 시 동작
     document.addEventListener("mouseup", function(e){
         //메뉴 외 영역 클릭시 메뉴 닫힘
-        if(!document.querySelector(".gnbBox").contains(e.target)){
+        if(document.querySelector(".gnbBox") && !document.querySelector(".gnbBox").contains(e.target)){
             depth1Menus.forEach(function(depth1Menu){
                 if(depth1Menu.classList.contains("on")){
                     depth1Menu.querySelector(".depth2Area").style.transition = "height 0.2s";
@@ -162,7 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     //GNB - End
 
-
+    //디자인 셀렉트
+    designSelect();
 
     //파일찾기
     const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
@@ -206,6 +209,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 });
+
+
+// ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
+function designSelect() {
+    const designSlts = document.querySelectorAll(".iptSlt");
+    designSlts.forEach(function(designSlt, idx){
+        designSlt.addEventListener("click", function(e){
+            if(this.classList.contains("on")){
+                this.querySelector(".sltTitle").textContent = e.target.textContent;
+                this.classList.remove("on");
+                designSelectCallback(this);
+            }else{
+                this.classList.add("on");
+            }
+        });
+    });
+
+    //디자인 셀렉트 닫기
+    document.addEventListener("mouseup", function(e){
+        if(!e.target.classList.contains("iptSlt") && !e.target.closest(".iptSlt")){
+            designSlts.forEach(function(designSlt, idx){
+                designSlt.classList.remove("on");
+            });
+        }
+    });
+}
+
+//디자인 셀렉트 선택 후 콜백
+function designSelectCallback($target){
+    console.log($target, $target.querySelector(".sltTitle").textContent);
+}
 
 // ------------------------------- 팝업 함수 ------------------------------- //
 //팝업 열기
