@@ -1,0 +1,21 @@
+<%
+var url = locals.url ? locals.url : '../../';
+var team = locals.team ? locals.team : '';
+var name = locals.name ? locals.name : '';
+var phone = locals.phone ? locals.phone : '';
+%>
+
+<div class="cptSubBtm">
+    <div class="subBtmArea">
+        <div class="subBtmBox">
+            <dl class="manager">
+                <dt>담당자</dt>
+                <dd><span><%= team %></span> <b><%= name %></b></dd>
+            </dl>
+            <ul class="btmList">
+                <li class="phone"><%= phone %></li>
+                <li class="email"><a href="#">이메일 보내기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

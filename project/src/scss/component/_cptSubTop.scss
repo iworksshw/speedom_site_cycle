@@ -2,12 +2,19 @@
 .cptSubTop {
     width: 100%; background: #EDF5F2;
     .subTopArea {
-        width: 100%; max-width:1480px; margin: 0 auto; padding: 24px 20px 37px;
+        width: 100%; max-width:1480px; margin: 0 auto; padding: 24px 20px 37px; position: relative;
         .location {
             width: 100%; display: flex; justify-content: flex-end;
             .item {
+                height: 18px; padding-left: 28px; position: relative; 
+                &:first-child {
+                    padding-left: 0; background: none;
+                    a {width: 18px; height: 18px; font-size: 0; background: url(../../images/common/ic_loca_home.svg) center no-repeat;}
+                    &::before {display: none;}
+                }
+                &::before {content: ""; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat; position: absolute; left: 6px; top: 2px;}
                 a {
-                    color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: normal; text-decoration-line: underline;
+                    height: 100%; color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: normal; text-decoration-line: underline; display: block;
                 }
             }
         }
@@ -23,6 +30,65 @@
                 color: var(--Gray-900); font-size: rem(40px); font-weight: 700; line-height: 1.3;
                 b {
                     color: var(---Primary); font-weight: 700;
+                }
+            }
+        }
+        .addFunc {
+            display: flex; gap: 12px; position: absolute; right: 20px; bottom: -108px;
+            .item {
+                width: 48px; height: 48px;
+                button {
+                    width: 100%; height: 100%; font-size: 0;
+                    &.btnPrint {background: url(../../images/common/ic_loca_print.svg) center no-repeat;}
+                    &.btnShare {background: url(../../images/common/ic_loca_share.svg) center no-repeat;}
+                }
+            }
+        }
+    }
+    @include media("mobile") {
+        .subTopArea {
+            padding: 24px 16px 28px;
+            .location {
+                justify-content: flex-start;
+                .item {
+                    height: 16px; display: none;
+                    a {
+                        font-size: rem(14px);
+                    }
+                    &::before {top: 0;}
+                    &:nth-child(2){
+                        display: block;
+                        width: 42px; font-size: 0; background: url(../../images/common/ic_loca_dot.svg) 28px center no-repeat;
+                        a {
+                            width: 16px; height: 16px; display: none;
+                        }
+                    }
+                    &:first-child {
+                        width: 16px; height: 16px; display: block;
+                        a {width: 16px; height: 16px;}
+                    }
+                    &:last-child {
+                        width: max-content; background: none; display: block;
+                        a {
+                            width: max-content; font-size: rem(14px); display: block;
+                        }
+                    }
+                }
+            }
+            .subText {
+                margin-top: 8px;
+                p {
+                    font-size: rem(28px);
+                }
+            }
+            .addFunc {
+                right: 16px; top: 24px; bottom: auto;
+                .item {
+                    width: 20px; height: 20px;
+                    &.print {display: none;}
+                    button {
+                        &.btnShare {background: url(../../images/common/ic_loca_share_mo.svg) center no-repeat;}
+                    }
                 }
             }
         }

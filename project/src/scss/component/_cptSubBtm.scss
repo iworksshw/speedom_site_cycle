@@ -1,0 +1,32 @@
+/* ------------------------------- 서브 바텀 (담당자) ------------------------------- */
+.cptSubBtm {
+    width: 100%; margin-bottom: 40px; background:#fff;
+    .subBtmArea {
+        width: 100%; max-width:1480px; margin: 0 auto; padding: 0 20px; position: relative;
+        .subBtmBox {
+            width: 100%; padding: 20px 32px; border-top: 2px solid var(--Gray-600); display: flex; justify-content: space-between;
+            .manager {
+                width: max-content; display: flex;
+                dt {
+                    width: max-content; height: 28px; padding-left: 44px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 1.6; 
+                    background: url(../../images/common/ic_cont_manager.svg) left center no-repeat; display: block; align-content: center;
+                }
+                dd {
+                    width: max-content; height: 28px; padding-left: 32px; color: var(--Gray-800); font-size: rem(16px); font-weight: 400; line-height: 1.6; position: relative; align-content: center;
+                    &::before {content:""; width: 1px; height: 11px; background: var(--Gray-300); display: block; position: absolute; left: 16px; top: 8px;}
+                }
+            }
+            .btmList {
+                width: max-content; display: flex; gap: 48px;
+                li {
+                    width: max-content; height: 28px; padding-left: 28px; align-content: center;
+                    &.phone {background: url(../../images/common/ic_cont_phone.svg) left center no-repeat;}
+                    &.email {background: url(../../images/common/ic_cont_email.svg) left center no-repeat;}
+                    a {
+                        height: 100%; color: var(--Gray-800); font-size: rem(16px); font-weight: 400; line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+}
