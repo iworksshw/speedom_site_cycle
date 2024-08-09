@@ -10,9 +10,13 @@
   --Gray-700:#414347;
   --Gray-600:#58595F;
   --Gray-500:#6F7176;
+  --Gray-400:#92959A;
   --Gray-300:#B0B2B7;
   --Gray-200:#CED1D6;
+  --Gray-150:#EDEDED;
+  --Gray-50:#FBFBFB;
   --Bg-Line-line-100: #E1E4EA;
+  --Bg-Line-line-200: #EDEDED;
   --Bg-Line-bg-100: #F9FAFC;
   --gray-gray-40: #C6C6C6;
 
@@ -139,4 +143,13 @@ body.noScrl {height:100vh; overflow:hidden;}
 .cptHeader .headArea : -------------------101 => (.cptHeader .gnbArea 보다 커야함)
 .cptHeader .gnbArea : --------------------100
 .cptHeader .gnbArea .gnbBox .depth2Area : 99
+
+#테이블
+.comDataTable .tableArea table thead tr th - 10
+
+#팝업
+.modPopup : ------------------------------1000
+
+#폼(디자인 셀렉트)
+.iptSlt .sltBox : ------------------------300
 */
