@@ -17,6 +17,36 @@
 <div class="cptPubGuide">
 <div class="guideArea">
 
+    
+<!-- 가이드 그룹 -->
+<div class="guideBox">
+<div class="guideTitle">버튼</div>
+<div class="guideCont">
+<div class="gText">
+    - 버튼의 기본 형태입니다.
+</div>
+<div class="gGroup">
+<div class="gView"></div>
+<div class="gCode">
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+
+<button class="btn Primary">확인</button>
+<button class="btn Primary" disabled>확인</button>
+<button class="btn gray">확인</button>
+<button class="btn gray" disabled>확인</button>
+<button class="btn dkLine">확인</button>
+<button class="btn dkLine" disabled>확인</button>
+<button class="btn gLine">확인</button>
+<button class="btn gLine" disabled>확인</button>
+
+</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- //가이드 그룹 -->
+    
 <!-- 가이드 그룹 -->
 <div class="guideBox">
 <div class="guideTitle">CRUD 사용 위치 (그리드, 테이블 아래)</div>
@@ -34,42 +64,27 @@
 <pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
 <textarea class="codeGuide" style="display:none;">
 
-<style>
-.comBtnGroup {width: 100%; display: flex; justify-content: space-between;}
-.comBtnGroup .alignL {width: 100%; display: flex; justify-content: flex-start;}
-.comBtnGroup .alignC {width: 100%; display: flex; justify-content: center;}
-.comBtnGroup .alignR {width: 100%; display: flex; justify-content: flex-end;}
-.comBtnGroup .btnBox .btn {min-width: 100px; padding: 0 10px; height: 34px; margin-left: 5px; font-size: 14px; font-weight: 400; white-space: nowrap; border-radius: 4px;}
-.comBtnGroup .btnBox .btn:first-child {margin-left:0;}
-.comBtnGroup .btnBox .btn.red {color: #fff; background: #b01f1f; border:1px solid #b01f1f;}
-.comBtnGroup .btnBox .btn.blue {color: #fff; background: #5a7eff; border:1px solid #5a7eff;}
-.comBtnGroup .btnBox .btn.dkBlue {color: #fff; background: #2a2d3e; border:1px solid #2a2d3e;}
-.comBtnGroup .btnBox .btn.purple {color: #fff; background: #263688; border:1px solid #263688;}
-.comBtnGroup .btnBox .btn.gLine {color:#757575; background:#fff; border:1px solid #9fa0a0;}
-.comBtnGroup .btnBox .btn.blLine {color:#2a2d3e; background:#fff; border:1px solid #2a2d3e;}
-.comBtnGroup .btnBox .btn.dkbLine {color: #2a2d3e; background:#fff; border:1px solid #2a2d3e;}
-.comBtnGroup .btnBox .btn.bLine {color: #5a7eff; background:#fff; border:1px solid #5a7eff;}
-</style>
 <!-- 그리드/테이블 하단 버튼 양측 -->  
 <div class="comBtnGroup">
     <div class="alignL">
         <div class="btnBox">
-            <button class="btn red">미리보기</button>
-            <button class="btn blue">서명하기</button>
-            <button class="btn dkBlue">취소</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
     <div class="alignC">
         <div class="btnBox">
-            <button class="btn purple">저장</button>
-            <button class="btn gLine">승인하기</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
     <div class="alignR">
         <div class="btnBox">
-            <button class="btn blLine">미리보기</button>
-            <button class="btn dkbLine">취소</button>
-            <button class="btn bLine">저장</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
 </div>
@@ -83,7 +98,7 @@
 
 <!-- 가이드 그룹 -->
 <div class="guideBox">
-<div class="guideTitle">모바일 Class 규칙</div>
+<div class="guideTitle">모바일 Class 규칙 (미정)</div>
 <div class="guideCont">
 <div class="gText">
     반응형에서의 정렬은 align class 태그에서 class를 변형 및 추가하며, 부모나 자식태그를 가급적 사용하지 않습니다.
@@ -117,22 +132,23 @@
 <div class="comBtnGroup">
     <div class="alignL moR">
         <div class="btnBox">
-            <button class="btn red">미리보기</button>
-            <button class="btn blue">서명하기</button>
-            <button class="btn dkBlue">취소</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
     <div class="alignC moL">
         <div class="btnBox mo100">
-            <button class="btn purple">저장</button>
-            <button class="btn gLine">승인하기</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
     <div class="alignR moC">
         <div class="btnBox moLine1">
-            <button class="btn blLine">미리보기</button>
-            <button class="btn dkbLine">취소</button>
-            <button class="btn bLine">저장</button>
+            <button class="btn Primary">확인</button>
+            <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
         </div>
     </div>
 </div>

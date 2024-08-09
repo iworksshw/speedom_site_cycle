@@ -4,8 +4,8 @@
     margin-top:5px; display:flex; align-items:flex-start;
     &:first-child {margin-top:0;}
     .frmBox {
-        margin-left:5px;
-        &:first-child {margin-left:0;}
+        margin-right:5px;
+        &:last-child {margin-right:0;}
     }
     &.error, .error {
         .iptText {padding-left: 16px; border: 1px solid var(--system-danger-50);}
@@ -25,6 +25,7 @@
 /* ----- 폼 박스 ----- */
 .frmBox {
     width: 100%; display: flex; flex-wrap: wrap;
+    &.maxCont {width: max-content;}
     &.frmTini {width:60px; min-width:60px;}
     &.frmXs {width:100px; min-width:100px;}
     &.frmSm {width:130px; min-width:130px;}
@@ -43,32 +44,65 @@
     &:focus {padding: 0 15px; border: 2px solid var(--Gray-800); outline: none;;}
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
     &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
-    &.lrg {
+    &.lg {
 
     }
-    &.mdl {
+    &.md {
 
     }
-    &.sml {
+    &.sm {
 
     }
 }
 /* ----- 라디오/체크박스 ----- */
+/* checkbox */
+.iptChk {
+    &+ .iptLbl {background:url(../../images/common/ic_20_chk_off.svg) left center no-repeat;}
+    &:checked + .iptLbl {background:url(../../images/common/ic_20_chk_on.svg) left center no-repeat;}
+    &:indeterminate + .iptLbl {background:url(../../images/common/ic_20_chk_ind.svg) left center no-repeat;}
+    &:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_chk_off_dis.svg) left center no-repeat;}
+    &:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_chk_on_dis.svg) left center no-repeat;}
+    &:disabled:indeterminate + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_chk_ind_dis.svg) left center no-repeat;}
+}
+
+/* radio */
+.iptRdo {
+    &+ .iptLbl {background:url(../../images/common/ic_20_rdo_off.svg) left center no-repeat;}
+    &:checked + .iptLbl {background:url(../../images/common/ic_20_rdo_on.svg) left center no-repeat;}
+    &:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_rdo_off_dis.svg) left center no-repeat;}
+    &:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_rdo_on_dis.svg) left center no-repeat;}
+}
+.iptLbl {
+    min-height:20px; margin-right:10px; padding-left: 28px; color: var(--Gray-800); font-size: rem(17px); font-weight: 400; word-break: keep-all; line-height: 20px;
+    &:last-child {margin-right:0;}
+    &.noText {padding-left: 20px; font-size: 0;}
+}
+.iptLblBtn {
+    min-height:20px; margin-right:10px; padding-left: 28px; color: var(--Gray-800); font-size: rem(17px); font-weight: 400; word-break: keep-all; line-height: 20px;
+    &:last-child {margin-right:0;}
+}
+
 /* ----- 디자인셀렉트/드롭다운 ----- */
 .iptSlt {
     width: 100%; height: 48px; position: relative;
     &.on {
         .sltBox {
+            .sltTitle {
+                &::after {transform: rotate(180deg);}
+            }
             .optionGroup {
                 display: block;
             }
         }
     }
     .sltBox {
-        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-800); background-color: #FFF; background-image: url(../../images/common/ic_16_down_arr.svg); 
-        background-position: right 16px center; background-repeat: no-repeat; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
+        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-800); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
         .sltTitle {
-            width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center;
+            width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center; position: relative;
+            &::after {
+                content:""; width: 16px; height: 16px; display: block; position: absolute; right: 16px; top: calc(50% - 8px);
+                background-image: url(../../images/common/ic_16_down_arr.svg); background-position: center; background-repeat: no-repeat;
+            }
         }
         .optionGroup {
             width: 100%; padding: 5px 0 7px; border-top: 1px solid var(--Gray-800); display: none;
@@ -79,14 +113,51 @@
             }
         }
     }
-    &.lrg {
+    &.lg {
 
     }
-    &.mdl {
+    &.md {
 
     }
-    &.sml {
+    &.sm {
 
     }
 }
 /* ----- 버튼 ----- */
+.btn {
+    width: max-content; height: 48px; padding: 0 24px; font-size: rem(16px); font-weight: 500; line-height: normal; border-radius: 8px;
+    
+    //크기별 (사용 미정)
+    &.lg {height: 56px; padding: 0 32px; font-size: rem(20px);}
+    &.md {height: 48px; padding: 0 24px; font-size: rem(16px);}
+    &.sm {height: 36px; padding: 0 20px; font-size: rem(14px);}
+    &.sx {height: 32px; padding: 0 12px; font-size: rem(14px);}
+
+    //색깔별
+    &.Primary {
+        color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
+        &:hover {border: 1px solid #077265; background: #077265;}
+        &:active {border: 1px solid #05665B; background: #05665B;}
+        &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-150); background: var(--Gray-150);}
+    }
+    &.gray {
+        color: #fff; border: 1px solid var(--Gray-400); background: var(--Gray-400);
+        &:hover {border: 1px solid var(--Gray-600); background: var(--Gray-600);}
+        &:active {border: 1px solid var(--Gray-600); background: var(--Gray-600);}
+        &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-150); background: var(--Gray-150);}
+    }
+    &.dkLine {
+        color: var(--Gray-800); border: 1px solid var(--Gray-800); background: #fff;
+        &:hover {color: #000; border: 1px solid #000;}
+        &:active {border: 1px solid #000; background: var(--Bg-Line-bg-100);}
+        &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
+    }
+    &.gLine {
+        color: var(--Gray-600); border: 1px solid var(--Gray-300); background: #fff;
+        &:hover {color: #111; border: 1px solid var(--Gray-500);}
+        &:active {border: 1px solid var(--Gray-500); background: var(--Bg-Line-bg-100);}
+        &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
+    }
+}
+
+
