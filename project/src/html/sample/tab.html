@@ -1,0 +1,182 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '경륜 경주 규칙',
+                    subText: '새로운 참여형 레저 스포츠, <b>경륜</b>에 대해 알려드릴게요',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea" style="width: 1280px; margin: 0 auto;">
+                    <style>
+                    /* ----------------------------------- 모드 탭 ----------------------------------- */
+
+                    .modTab {
+                        .tabMenu {
+                            display: flex;
+                            .tabItem {
+                                width: 100%; flex-shrink: 1; display: flex; justify-content: center;
+                                .tabName {
+                                    width: 100%; height: 56px; padding: 0 40px; color: var(--Gray-500); font-size: 18px; font-weight: 400; line-height: 1.6; background:#fff;
+                                    border-bottom: 2px solid var(--Gray-150); position: relative;
+                                }
+                                .tabName.on {
+                                    &::after {content:''; width: 100%; height: 4px; background: var(--Gray-800); position: absolute; left: 0; bottom: -2px; }
+                                }
+                            }
+                        }
+                        .tabContianer {
+                            .tabCont {display:none;}
+                            .tabCont.on {display:block;}
+                        }
+                    }
+                    </style>
+                    <div class="modTab">
+                        <div class="tabMenuGroup">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">연도별기록</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                            </ul>
+                            <div class="tabDirection">
+                                <div class="tabBtn alignL"></div>
+                                <div class="tabBtn alignR"></div>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                contents 0-1
+                            </div>
+                            <div class="tabCont">
+                                contents 0-2
+                            </div>
+                            <div class="tabCont">
+                                contents 0-3
+                            </div>
+                            <div class="tabCont">
+                                contents 0-4
+                            </div>
+                            <div class="tabCont">
+                                contents 0-5
+                            </div>
+                            <div class="tabCont">
+                                contents 0-6
+                            </div>
+                            <div class="tabCont">
+                                contents 0-7
+                            </div>
+                            <div class="tabCont">
+                                contents 0-8
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">연도별기록</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                            </ul>
+                            <div class="tabDirection">
+                                <div class="tabBtn alignL"></div>
+                                <div class="tabBtn alignR"></div>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                contents 0-1
+                            </div>
+                            <div class="tabCont">
+                                contents 0-2
+                            </div>
+                            <div class="tabCont">
+                                contents 0-3
+                            </div>
+                            <div class="tabCont">
+                                contents 0-4
+                            </div>
+                            <div class="tabCont">
+                                contents 0-5
+                            </div>
+                            <div class="tabCont">
+                                contents 0-6
+                            </div>
+                            <div class="tabCont">
+                                contents 0-7
+                            </div>
+                            <div class="tabCont">
+                                contents 0-8
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                    tabMenuInit(); //모드 탭 함수
+                    
+                    var swiper = new Swiper(".tabSwiper", {
+                        slidesPerView: "auto",
+                        navigation: {
+                            nextEl: ".tabBtn.alignL",
+                            prevEl: ".tabBtn.alignR",
+                        },
+                    });
+                    
+                    </script>
+                    <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                     
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
