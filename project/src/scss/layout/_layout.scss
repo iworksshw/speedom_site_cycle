@@ -15,6 +15,9 @@
             }
             .layoutSubCont{
                 width: 100%;
+                .layoutContArea {
+                    width: 100%; max-width: 1280px; padding: 0 20px; margin: 0 auto;
+                }
             }
         }
         .layoutFooter{
