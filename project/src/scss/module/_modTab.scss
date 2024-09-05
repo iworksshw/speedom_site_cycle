@@ -48,8 +48,8 @@
             }
         }
         @include media('mobile') {   
-            &~ .tabDirection button {display:none;}
-            &:hover ~ .tabDirection button {display:block;}
+            &~ .tabDirection button {opacity: 0; transition: opacity 0.3s; transition-delay: 0.5s;}
+            &.on ~ .tabDirection button {opacity: 1; transition: opacity 0.1s; transition-delay: 0;}
             .tabMenu {
                 .tabItem {
                     .tabName {

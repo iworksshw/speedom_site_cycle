@@ -272,7 +272,12 @@ function tabMenuInit(){
 
         //모바일에서 해당 hover효과
         tabmenuGroups.forEach(function(tabmenuGroup){
-            tabmenuGroup.addEventListener("touchstart", function() {}, true);
+            tabmenuGroup.addEventListener("touchstart", function() {
+                this.classList.add("on");
+            }, true);
+            tabmenuGroup.addEventListener("touchend", function() {
+                this.classList.remove("on");
+            }, true);
         });
 
         //모드탭 내의 메뉴 수
