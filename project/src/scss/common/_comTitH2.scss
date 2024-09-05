@@ -1,0 +1,15 @@
+.comTitH2 {
+    margin-top: 40px;
+    &:first-child {margin-top: 0;}
+    h2 {font-size: rem(24px); color: var(---Primary); font-weight: 700; line-height: 1.4; word-break: keep-all;}
+
+    // 컴포넌트 변경 Class
+    &.bk {
+        h2 {color: var(--Grey-900);}
+    }
+
+    @include media("mobile"){
+        margin-top: 24px;
+        h2 {font-size: rem(20px);}
+    }
+}
