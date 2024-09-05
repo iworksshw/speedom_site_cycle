@@ -34,6 +34,39 @@
                 }) %>
 
                 <div class="layoutContArea">
+                    
+                    <p>
+                        Tab : 기본형<br>
+                    </p>
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                contents 0-1
+                            </div>
+                            <div class="tabCont">
+                                contents 0-2
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Tab : .toAll (swiper : mobile, tablet, PC)<br>
+                        PC부터 swiper기능을 쓸 때 사용
+                    </p>
                     <div class="modTab">
                         <div class="tabMenuGroup tabSwiper toAll">
                             <ul class="tabMenu swiper-wrapper">
@@ -44,10 +77,17 @@
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                             </ul>
-                            <div class="tabDirection">
-                                <div class="tabBtn alignL"></div>
-                                <div class="tabBtn alignR"></div>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
                             </div>
                         </div>
                         <div class="tabContianer">
@@ -75,8 +115,19 @@
                             <div class="tabCont">
                                 contents 0-8
                             </div>
+                            <div class="tabCont">
+                                contents 0-9
+                            </div>
+                            <div class="tabCont">
+                                contents 0-10
+                            </div>
                         </div>
                     </div>
+
+                    <p>
+                        Tab : .toMob (swiper : mobile)<br>
+                        mobile만 swiper기능을 쓸 때 사용
+                    </p>
                     <div class="modTab">
                         <div class="tabMenuGroup tabSwiper toMob">
                             <ul class="tabMenu swiper-wrapper">
@@ -84,13 +135,14 @@
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">연도별기록</button></li>
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                             </ul>
-                            <div class="tabDirection">
-                                <div class="tabBtn alignL"></div>
-                                <div class="tabBtn alignR"></div>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
                             </div>
                         </div>
                         <div class="tabContianer">
@@ -106,20 +158,13 @@
                             <div class="tabCont">
                                 contents 0-4
                             </div>
-                            <div class="tabCont">
-                                contents 0-5
-                            </div>
-                            <div class="tabCont">
-                                contents 0-6
-                            </div>
-                            <div class="tabCont">
-                                contents 0-7
-                            </div>
-                            <div class="tabCont">
-                                contents 0-8
-                            </div>
                         </div>
                     </div>
+                    
+                    <p>
+                        Tab : .toTab (swiper : mobile, tablet)<br>
+                        tablet 이하에서만 swiper기능을 쓸 때 사용
+                    </p>
                     <div class="modTab">
                         <div class="tabMenuGroup tabSwiper toTab">
                             <ul class="tabMenu swiper-wrapper">
@@ -131,9 +176,13 @@
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                                 <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
                             </ul>
-                            <div class="tabDirection">
-                                <div class="tabBtn alignL"></div>
-                                <div class="tabBtn alignR"></div>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
                             </div>
                         </div>
                         <div class="tabContianer">
@@ -165,88 +214,6 @@
                     </div>
                     <script>
                     tabMenuInit(); //모드 탭 함수
-
-                    //모바일, 태블릿, PC 모두 슬라이드
-                    let tabSwiperAll = new Swiper(".tabSwiper.toAll", {
-                        slidesPerView: "auto",
-                        navigation: {
-                            nextEl: ".tabSwiper.toAll .tabBtn.alignL",
-                            prevEl: ".tabSwiper.toAll .tabBtn.alignR",
-                        },
-                    });
-
-                    //BreakPoint
-                    const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
-                    const tabTa = window.matchMedia('(max-width: 1279px)');     //태블릿 분기
-                    let tabSwiperMob;
-                    let tabSwiperTab;
-                    
-                    function tabSwiperMobAction($bln){
-                        if($bln){
-                            tabSwiperMob = new Swiper(".tabSwiper.toMob", {
-                                slidesPerView: "auto",
-                                navigation: {
-                                    nextEl: ".tabSwiper.toMob .tabBtn.alignL",
-                                    prevEl: ".tabSwiper.toMob .tabBtn.alignR",
-                                },
-                            });
-                        }else{
-                            if(tabSwiperMob){
-                                tabSwiperMob.destroy();
-                                tabSwiperMob = undefined;
-                            }
-                        }
-                    }
-                    function tabSwiperTabAction($bln){
-                        if($bln){
-                            tabSwiperTab = new Swiper(".tabSwiper.toTab", {
-                                slidesPerView: "auto",
-                                navigation: {
-                                    nextEl: ".tabSwiper.toTab .tabBtn.alignL",
-                                    prevEl: ".tabSwiper.toTab .tabBtn.alignR",
-                                },
-                            });
-                        }else{
-                            if(tabSwiperTab){
-                                tabSwiperTab.destroy();
-                                tabSwiperTab = undefined;
-                            }
-                        }
-                    }
-
-                    if(tabMo.matches) {
-                        //console.log("모바일");
-                        tabSwiperMobAction(true);
-                    } else {
-                        //console.log("모바일아님");
-                        tabSwiperMobAction(false);
-                    }
-                    if(tabTa.matches) {
-                        //console.log("태블릿");
-                        tabSwiperTabAction(true);
-                    } else {
-                        //console.log("태블릿아님");
-                        tabSwiperTabAction(false);
-                    }
-
-                    tabMo.addListener(function(){
-                        if(tabMo.matches) {
-                            //console.log("모바일");
-                            tabSwiperMobAction(true);
-                        } else {
-                            //console.log("모바일아님");
-                            tabSwiperMobAction(false);
-                        }
-                    });
-                    tabTa.addListener(function(){
-                        if(tabTa.matches) {
-                            //console.log("태블릿");
-                            tabSwiperTabAction(true);
-                        } else {
-                            //console.log("태블릿아님");
-                            tabSwiperTabAction(false);
-                        }
-                    });
                     </script>
                     <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                      
