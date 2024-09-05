@@ -7,10 +7,17 @@
 <!-- 레이아웃 -->
 <div class="lytLayout">
     <div class="layoutArea">
+        <!-- 서브 탑 (타이틀) -->
+        <%- include('../../_ejs/sub_top.ejs', {
+            location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+            subTitle: '경륜기초안내',
+            subText: '경륜이 <b>처음이신가요?</b> <br/>지금부터 경륜에 대해 알아봐요.',
+            url: "../../../",
+            visualClass : "bg01",
+        }) %>
 
         <!-- jsj component List -->
         <div class="tempWrap" style="padding: 60px 40px;">
-
 
             <div class="comSubInfo">
                 <h2 class="infoTit">경륜만의 스릴과 매력을 즐기기 위해 다양한 경륜의 기초정보를 알아봅시다.</h2>
@@ -76,7 +83,7 @@
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </div>

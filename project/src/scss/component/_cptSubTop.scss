@@ -1,42 +1,50 @@
 /* ------------------------------- 서브 탑 ------------------------------- */
 .cptSubTop {
     width: 100%; background: #EDF5F2;
+
+    &.bg01 {background: linear-gradient(92deg, #EBF8FA 1.1%, #EDF9F4 62.91%);}
+    &.bg02 {background: linear-gradient(92deg, #FAF4EB 1.1%, #F5F9ED 62.91%);}
+    &.bg03 {background: linear-gradient(92deg, #EDEEFA 1.1%, #EEF6F9 62.91%);}
+    &.bg04 {background: linear-gradient(92deg, #FBF1F5 1.1%, #ECF6F8 62.91%);}
+    &.bg05 {background: linear-gradient(92deg, #F1FBF2 1.1%, #ECF3F8 62.91%);}
+
     .subTopArea {
-        width: 100%; max-width:1480px; margin: 0 auto; padding: 24px 20px 37px; position: relative;
+        width: 100%; max-width:1320px; margin: 0 auto; padding: 24px 20px 50px; position: relative;
         .location {
             width: 100%; display: flex; justify-content: flex-end;
             .item {
                 height: 18px; padding-left: 28px; position: relative; 
                 &:first-child {
                     padding-left: 0; background: none;
-                    a {width: 18px; height: 18px; font-size: 0; background: url(../../images/common/ic_loca_home.svg) center no-repeat;}
+                    a {width: 18px; height: 18px; font-size: 0; background: url(../../images/common/ic_loca_home.svg) center no-repeat; border-bottom: none;}
                     &::before {display: none;}
                 }
-                &::before {content: ""; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat; position: absolute; left: 6px; top: 2px;}
+                &::before {content: ""; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat; position: absolute; left: 6px; top: 3px;}
                 a {
-                    height: 100%; color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: normal; text-decoration-line: underline; display: block;
+                    padding-bottom: 2px; border-bottom: 1px solid var(--Gray-200); color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: normal; display: inline-block;vertical-align: middle;
                 }
             }
         }
         .subTitle {
-            width: 100%; margin-top:32px;
+            width: 100%; margin-top:26px;
             h1 {
-                color: var(--Gray-600); font-size: rem(18px); font-weight: 700; line-height: 1.3;
+                padding: 0 2px; color: var(--Gray-900); font-size: rem(16px); font-weight: 700; display: inline-block; position: relative; z-index: 1;
+                &::after {display: block; content: ""; width: calc(100% + 4px); height: 12px; background: var(---Point2); position: absolute; left: -2px; bottom: 0; z-index: -1;}
             }
         }
         .subText {
-            width: 100%; margin-top: 4px;
+            width: 100%; margin-top: 7px;
             p {
-                color: var(--Gray-900); font-size: rem(40px); font-weight: 700; line-height: 1.3;
+                color: var(--Gray-900); font-size: rem(50px); font-weight: 200; line-height: 1.3;
                 b {
-                    color: var(---Primary); font-weight: 700;
+                    font-weight: 600;
                 }
             }
         }
         .addFunc {
-            display: flex; gap: 12px; position: absolute; right: 20px; bottom: -108px;
+            display: flex; gap: 4px; position: absolute; right: 20px; top: 68px;
             .item {
-                width: 48px; height: 48px;
+                width: 40px; height: 40px;
                 button {
                     width: 100%; height: 100%; font-size: 0;
                     &.btnPrint {background: url(../../images/common/ic_loca_print.svg) center no-repeat;}
@@ -47,7 +55,7 @@
     }
     @include media("mobile") {
         .subTopArea {
-            padding: 24px 16px 28px;
+            padding: 32px 16px 24px;
             .location {
                 justify-content: flex-start;
                 .item {
@@ -65,7 +73,7 @@
                     }
                     &:first-child {
                         width: 16px; height: 16px; display: block;
-                        a {width: 16px; height: 16px;}
+                        a {width: 16px; height: 16px; display: block;}
                     }
                     &:last-child {
                         width: max-content; background: none; display: block;
@@ -75,20 +83,23 @@
                     }
                 }
             }
+            .subTitle {
+                margin-top: 32px;
+                h1 {
+                    font-size: rem(15px); font-weight: 600;
+                }
+            }
             .subText {
-                margin-top: 8px;
+                margin-top: 12px;
                 p {
-                    font-size: rem(28px);
+                    font-size: rem(28px); font-weight: 300; 
                 }
             }
             .addFunc {
-                right: 16px; top: 24px; bottom: auto;
+                right: 16px; top: 29px;
                 .item {
-                    width: 20px; height: 20px;
+                    width: 20px; height: 22px;
                     &.print {display: none;}
-                    button {
-                        &.btnShare {background: url(../../images/common/ic_loca_share_mo.svg) center no-repeat;}
-                    }
                 }
             }
         }
