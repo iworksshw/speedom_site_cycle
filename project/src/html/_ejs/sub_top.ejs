@@ -3,9 +3,10 @@ var url = locals.url ? locals.url : '../../';
 var location = locals.location ? locals.location : [];
 var subTitle = locals.subTitle ? locals.subTitle : '';
 var subText = locals.subText ? locals.subText : '';
+var visualClass = locals.visualClass ? locals.visualClass : '';
 %>
 
-<div class="cptSubTop">
+<div class="cptSubTop <%= visualClass %>">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
