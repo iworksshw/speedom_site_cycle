@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    document.addEventListener("touchstart", function() {}, true);
+    
     //스크롤에 따른 헤더 반응
     let scrlT = document.documentElement.scrollTop;
     let afterScrlT = scrlT;
