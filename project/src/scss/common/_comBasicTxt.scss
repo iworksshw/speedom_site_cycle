@@ -1,0 +1,15 @@
+.comBasicTxt{
+    margin-top: 12px;
+    &:first-child {margin-top: 0;}
+    .txt {
+        font-size: rem(16px); line-height: 1.6; color: var(--Gray-800); word-break: keep-all;
+        em {font-weight: 700;}
+    }
+
+    @include media("mobile"){
+        margin-top: 8px;
+        .txt {
+            font-size: rem(15px);
+        }
+    }
+}
