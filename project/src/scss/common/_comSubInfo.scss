@@ -1,0 +1,15 @@
+/* --------------------------- 서브페이지 안내 --------------------------- */
+.comSubInfo {
+    min-height: 48px; padding: 0 0 40px 80px; margin-top: 60px; border-bottom: 1px solid var(--Gray-150); position: relative;
+    &:first-child {margin-top: 0;}
+    &::after {display: block; content: ""; width: 48px; height: 48px; border-radius: 4px; background: var(---Primary) url(../../images/common/ico_info_bicycle.svg) center no-repeat; position: absolute; top: 0; left: 0;}
+    .infoTit { color: var(--Gray-800); font-size: rem(18px); font-weight: 700; line-height: 1.4;}
+    .info {margin-top: 6px;color: var(--Gray-800); font-size: rem(16px); line-height: 1.6;}
+
+    @include media("mobile"){
+        min-height:auto; padding: 60px 0 20px 0; margin-top: 20px;
+        &::after {border-radius: 18px;}
+        .infoTit {font-size: rem(16px); }
+        .info {font-size: rem(15px); }
+    }
+}
