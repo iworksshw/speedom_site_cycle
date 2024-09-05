@@ -1,0 +1,270 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '경륜 경주 규칙',
+                    subText: '새로운 참여형 레저 스포츠, <b>경륜</b>에 대해 알려드릴게요',
+                    url: "../../",
+                }) %>
+
+                <div class="comBoardLine">
+                    <div class="boardArea">
+                        <ul class="boardList">
+                            <li class="listItem">
+                                <div class="listCont"></div>
+                            </li>
+                            <li class="listItem">
+                                <div class="listTitle"></div>
+                                <div class="listCont"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- 데이터 테이블 -->
+                <div class="comDataTable"><!-- addClass - row: head가 세로만 존재, both: head가 가로,세로에 모두 존재 -->
+                    <div class="tableArea">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                                <col style="width:300px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>날씨</th>
+                                    <th>풍향</th>
+                                    <th>풍속</th>
+                                    <th>기온</th>
+                                    <th>습도</th>
+                                    <th>우량</th>
+                                    <th>200M</th>
+                                    <th>최종주회</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br><br>
+                
+                <!-- 데이터 테이블 -->
+                <div class="comDataTable row"><!-- addClass - row: head가 세로만 존재, both: head가 가로,세로에 모두 존재 -->
+                    <div class="tableArea">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>19:00</th>
+                                    <td>홍길동</td>
+                                    <td>4</td>
+                                    <td>3/4W</td>
+                                    <td>2:27:9725</td>
+                                    <td>젖히기</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
