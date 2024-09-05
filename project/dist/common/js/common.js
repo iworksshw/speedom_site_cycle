@@ -262,11 +262,23 @@ function closeAlert($altName){
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
 //모드 탭 함수
 function tabMenuInit(){
+    
     //모드탭의 수
     const modTabs = document.querySelectorAll(".modTab");
     modTabs.forEach(function(modTab,tabIdx,elements){
+        const tabmenuGroups = modTab.querySelectorAll(".tabMenuGroup");
         const tabmenus = modTab.querySelectorAll(".tabName");
         const tabConts = modTab.querySelectorAll(".tabCont");
+
+        //모바일에서 해당 hover효과
+        tabmenuGroups.forEach(function(tabmenuGroup){
+            tabmenuGroup.addEventListener("touchstart", function() {
+                this.classList.add("on");
+            }, true);
+            tabmenuGroup.addEventListener("touchend", function() {
+                this.classList.remove("on");
+            }, true);
+        });
 
         //모드탭 내의 메뉴 수
         tabmenus.forEach(function(tabmenu,menuIdx,inElements){
@@ -286,11 +298,98 @@ function tabMenuInit(){
             });
         });
     });
+
+    tabMenuSwiper();
 }
 
 
 // ------------------------------- 아코디언 함수 ------------------------------- //
 //모드 아코디언 함수
+
+function tabMenuSwiper(){
+    //모바일, 태블릿, PC 모두 슬라이드
+    let tabSwiperAll = new Swiper(".tabSwiper.toAll", {
+        slidesPerView: "auto",
+        navigation: {
+            prevEl: ".tabSwiper.toAll ~ .tabDirection .tabBtn.alignL button",
+            nextEl: ".tabSwiper.toAll ~ .tabDirection .tabBtn.alignR button",
+        },
+    });
+
+    //BreakPoint
+    const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
+    const tabTa = window.matchMedia('(max-width: 1279px)');     //태블릿 분기
+    let tabSwiperMob;
+    let tabSwiperTab;
+    
+    function tabSwiperMobAction($bln){
+        if($bln){
+            tabSwiperMob = new Swiper(".tabSwiper.toMob", {
+                slidesPerView: "auto",
+                navigation: {
+                    prevEl: ".tabSwiper.toMob ~ .tabDirection .tabBtn.alignL button",
+                    nextEl: ".tabSwiper.toMob ~ .tabDirection .tabBtn.alignR button",
+                },
+            });
+        }else{
+            if(tabSwiperMob){
+                tabSwiperMob.destroy();
+                tabSwiperMob = undefined;
+            }
+        }
+    }
+    function tabSwiperTabAction($bln){
+        if($bln){
+            tabSwiperTab = new Swiper(".tabSwiper.toTab", {
+                slidesPerView: "auto",
+                navigation: {
+                    prevEl: ".tabSwiper.toTab ~ .tabDirection .tabBtn.alignL button",
+                    nextEl: ".tabSwiper.toTab ~ .tabDirection .tabBtn.alignR button",
+                },
+            });
+        }else{
+            if(tabSwiperTab){
+                tabSwiperTab.destroy();
+                tabSwiperTab = undefined;
+            }
+        }
+    }
+
+    if(tabMo.matches) {
+        //console.log("모바일");
+        tabSwiperMobAction(true);
+    } else {
+        //console.log("모바일아님");
+        tabSwiperMobAction(false);
+    }
+    if(tabTa.matches) {
+        //console.log("태블릿");
+        tabSwiperTabAction(true);
+    } else {
+        //console.log("태블릿아님");
+        tabSwiperTabAction(false);
+    }
+
+    tabMo.addListener(function(){
+        if(tabMo.matches) {
+            //console.log("모바일");
+            tabSwiperMobAction(true);
+        } else {
+            //console.log("모바일아님");
+            tabSwiperMobAction(false);
+        }
+    });
+    tabTa.addListener(function(){
+        if(tabTa.matches) {
+            //console.log("태블릿");
+            tabSwiperTabAction(true);
+        } else {
+            //console.log("태블릿아님");
+            tabSwiperTabAction(false);
+        }
+    });
+}
+
 function accordionInit(){
     const modAccos = document.querySelectorAll(".modAccordion");
     modAccos.forEach(function(modAcco,modIdx){
