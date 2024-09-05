@@ -261,54 +261,10 @@ function closeAlert($altName){
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
 //모드 탭 함수
-function tabMenuInit(){
-    
-    //모드탭의 수
-    const modTabs = document.querySelectorAll(".modTab");
-    modTabs.forEach(function(modTab,tabIdx,elements){
-        const tabmenuGroups = modTab.querySelectorAll(".tabMenuGroup");
-        const tabmenus = modTab.querySelectorAll(".tabName");
-        const tabConts = modTab.querySelectorAll(".tabCont");
-
-        //모바일에서 해당 hover효과
-        tabmenuGroups.forEach(function(tabmenuGroup){
-            tabmenuGroup.addEventListener("touchstart", function() {
-                this.classList.add("on");
-            }, true);
-            tabmenuGroup.addEventListener("touchend", function() {
-                this.classList.remove("on");
-            }, true);
-        });
-
-        //모드탭 내의 메뉴 수
-        tabmenus.forEach(function(tabmenu,menuIdx,inElements){
-            tabmenu.addEventListener("click", function(event){
-                inElements.forEach(function(inElement){
-                    inElement.classList.remove("on");
-                    inElement.setAttribute("title", "탭메뉴");
-                });
-                this.classList.add("on");
-                this.setAttribute("title", "선택 된 탭메뉴");
-                tabConts.forEach(function(tabCont,contIdx){
-                    tabCont.classList.remove("on");
-                    if(menuIdx == contIdx){
-                        tabCont.classList.add("on");
-                    }
-                })
-            });
-        });
-    });
-
-    tabMenuSwiper();
-}
-
-
-// ------------------------------- 아코디언 함수 ------------------------------- //
-//모드 아코디언 함수
-
 function tabMenuSwiper(){
     //모바일, 태블릿, PC 모두 슬라이드
     let tabSwiperAll = new Swiper(".tabSwiper.toAll", {
+        focusableElements: false,
         slidesPerView: "auto",
         navigation: {
             prevEl: ".tabSwiper.toAll ~ .tabDirection .tabBtn.alignL button",
@@ -325,6 +281,7 @@ function tabMenuSwiper(){
     function tabSwiperMobAction($bln){
         if($bln){
             tabSwiperMob = new Swiper(".tabSwiper.toMob", {
+                focusableElements: false,
                 slidesPerView: "auto",
                 navigation: {
                     prevEl: ".tabSwiper.toMob ~ .tabDirection .tabBtn.alignL button",
@@ -341,6 +298,7 @@ function tabMenuSwiper(){
     function tabSwiperTabAction($bln){
         if($bln){
             tabSwiperTab = new Swiper(".tabSwiper.toTab", {
+                focusableElements: false,
                 slidesPerView: "auto",
                 navigation: {
                     prevEl: ".tabSwiper.toTab ~ .tabDirection .tabBtn.alignL button",
@@ -390,6 +348,50 @@ function tabMenuSwiper(){
     });
 }
 
+function tabMenuInit(){
+    
+    //모드탭의 수
+    const modTabs = document.querySelectorAll(".modTab");
+    modTabs.forEach(function(modTab,tabIdx,elements){
+        const tabmenuGroups = modTab.querySelectorAll(".tabMenuGroup");
+        const tabmenus = modTab.querySelectorAll(".tabName");
+        const tabConts = modTab.querySelectorAll(".tabCont");
+
+        //모바일에서 해당 hover효과
+        tabmenuGroups.forEach(function(tabmenuGroup){
+            tabmenuGroup.addEventListener("touchstart", function() {
+                this.classList.add("on");
+            });
+            tabmenuGroup.addEventListener("touchend", function() {
+                this.classList.remove("on");
+            });
+        });
+
+        //모드탭 내의 메뉴 수
+        tabmenus.forEach(function(tabmenu,menuIdx,inElements){
+            tabmenu.addEventListener("click", function(event){
+                inElements.forEach(function(inElement){
+                    inElement.classList.remove("on");
+                    inElement.setAttribute("title", "탭메뉴");
+                });
+                this.classList.add("on");
+                this.setAttribute("title", "선택 된 탭메뉴");
+                tabConts.forEach(function(tabCont,contIdx){
+                    tabCont.classList.remove("on");
+                    if(menuIdx == contIdx){
+                        tabCont.classList.add("on");
+                    }
+                })
+            });
+        });
+    });
+
+    tabMenuSwiper();
+}
+
+
+// ------------------------------- 아코디언 함수 ------------------------------- //
+//모드 아코디언 함수
 function accordionInit(){
     const modAccos = document.querySelectorAll(".modAccordion");
     modAccos.forEach(function(modAcco,modIdx){
