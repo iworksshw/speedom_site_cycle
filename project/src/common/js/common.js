@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.addEventListener("touchstart", function() {}, true);
-    
+
     //스크롤에 따른 헤더 반응
     let scrlT = document.documentElement.scrollTop;
     let afterScrlT = scrlT;
@@ -263,11 +262,18 @@ function closeAlert($altName){
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
 //모드 탭 함수
 function tabMenuInit(){
+    
     //모드탭의 수
     const modTabs = document.querySelectorAll(".modTab");
     modTabs.forEach(function(modTab,tabIdx,elements){
+        const tabmenuGroups = modTab.querySelectorAll(".tabMenuGroup");
         const tabmenus = modTab.querySelectorAll(".tabName");
         const tabConts = modTab.querySelectorAll(".tabCont");
+
+        //모바일에서 해당 hover효과
+        tabmenuGroups.forEach(function(tabmenuGroup){
+            tabmenuGroup.addEventListener("touchstart", function() {}, true);
+        });
 
         //모드탭 내의 메뉴 수
         tabmenus.forEach(function(tabmenu,menuIdx,inElements){
