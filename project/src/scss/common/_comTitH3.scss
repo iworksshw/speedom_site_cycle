@@ -1,7 +1,7 @@
 .comTitH3 {
     margin-top: 40px;
     &:first-child {margin-top: 0;}
-    h3 {padding-left: 18px; font-size: rem(18px); color: var(--Gray-900); font-weight: 700; line-height: 1.4; background: url(../../images/common/bullet_h3.svg) left center no-repeat;}
+    h3 {padding-left: 18px; font-size: rem(18px); color: var(--Gray-900); font-weight: 700; line-height: 1.4; background: url(../../images/common/bullet_h3.svg) left center no-repeat; word-break: keep-all;}
 
     @include media("mobile"){
         margin-top: 24px;
