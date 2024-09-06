@@ -208,6 +208,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     })
+
+    //탭메뉴 (1차)
+    tabMenuInit();
 });
 
 
@@ -349,7 +352,6 @@ function tabMenuSwiper(){
 }
 
 function tabMenuInit(){
-    
     //모드탭의 수
     const modTabs = document.querySelectorAll(".modTab");
     modTabs.forEach(function(modTab,tabIdx,elements){
