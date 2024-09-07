@@ -1,0 +1,21 @@
+.comGroupTop {
+    width: 100%; margin-bottom:20px; display: flex; justify-content: space-between;
+    .alignL {
+        width: 100%; display: flex; justify-content: flex-start; align-items: center;
+    }
+    .alignR {
+        width: 100%; display: flex; justify-content: flex-end; align-items: center;
+    }
+    .unit {
+        margin-left: 5px; display:inline-block;
+        &:first-child {margin-left: 0;}
+        .text {font-size:rem(16px); line-height:1.6; vertical-align:bottom; color: var(--font-700);}
+        .total {font-size:rem(16px); font-size:400; color: var(---Primary); font-weight: 700;}
+    }
+    .opList {
+        .item {
+            .frmBox {width: 210px; min-width: 210px;}
+            .frmSearch {width: 400px; min-width: 400px; margin-left: 7px;}
+        }
+    }
+}
