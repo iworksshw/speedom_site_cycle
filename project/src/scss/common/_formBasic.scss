@@ -26,11 +26,12 @@
 .frmBox {
     width: 100%; display: flex; flex-wrap: wrap;
     &.maxCont {width: max-content;}
-    &.frmTini {width:60px; min-width:60px;}
-    &.frmXs {width:100px; min-width:100px;}
-    &.frmSm {width:130px; min-width:130px;}
-    &.frmMd {width:170px; min-width:170px;}
-    &.frmLg {width:200px; min-width:200px;}
+    &.frmTini {width:auto; min-width:auto;}
+    &.frmXs {width:auto; min-width:auto;}
+    &.frmSm {width:210px; min-width:210px;}
+    &.frmMd {width:auto; min-width:auto;}
+    &.frmLg {width:auto; min-width:auto;}
+    &.frmXL {width:auto; min-width:auto;}
     &.frmHalf {width:calc(50% - 3px); min-width:calc(50% - 3px);}
     &.frmThrd {width:calc(33% - 3px); min-width:calc(33% - 3px);}
     &.frmFrth {width:calc(25% - 3px); min-width:calc(25% - 3px);}
@@ -52,6 +53,13 @@
     }
     &.sm {
 
+    }
+}
+/* ----- 검색 필드 ----- */
+.frmSearch {
+    position: relative;
+    .btnSearch {
+        width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
     }
 }
 /* ----- 라디오/체크박스 ----- */
@@ -85,7 +93,6 @@
 /* ----- 디자인셀렉트/드롭다운 ----- */
 .iptSlt {
     width: 100%; height: 48px; position: relative;
-    @include media('mobile') {height: 36px;}
     &.on {
         .sltBox {
             border: 1px solid var(--Gray-800);
@@ -100,10 +107,10 @@
     .sltBox {
         width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-300); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
         .sltTitle {
-            width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center; position: relative;
+            width: 100%; height: 46px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center; position: relative;
             &::after {
                 content:""; width: 24px; height: 24px; display: block; position: absolute; right: 16px; top: calc(50% - 12px);
-                background-image: url(../../images/common/ic_20_down_arr.svg); background-position: center; background-repeat: no-repeat;
+                background-image: url(../../images/common/ic_24_down_arr.svg); background-position: center; background-repeat: no-repeat;
             }
         }
         .optionGroup {
@@ -116,18 +123,39 @@
         }
         @include media('mobile') {
             .sltTitle {
-                height: 36px; ; padding: 0 12px;
+                padding: 0 12px;
+                &::after {
+                    content:""; width: 20px; height: 20px; display: block; position: absolute; right: 12px; top: calc(50% - 10px);
+                    background-image: url(../../images/common/ic_20_down_arr.svg); background-position: center; background-repeat: no-repeat;
+                }
             }
         }
     }
     &.lg {
-
-    }
-    &.md {
-
+        height: 56px; 
+        .sltBox {
+            .sltTitle {
+                height: 54px; font-size: rem(19px);
+            }
+            .optionGroup {
+                .option {
+                    height: 45px; font-size: rem(19px);
+                }
+            }
+        }
     }
     &.sm {
-
+        height: 36px; 
+        .sltBox {
+            .sltTitle {
+                height: 34px; font-size: rem(14px);
+            }
+            .optionGroup {
+                .option {
+                    height: 30px; font-size: rem(14px);
+                }
+            }
+        }
     }
 }
 /* ----- 버튼 ----- */
