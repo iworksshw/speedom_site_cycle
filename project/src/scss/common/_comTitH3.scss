@@ -1,10 +1,15 @@
 .comTitH3 {
-    margin-top: 40px;
+    margin-top: 32px;
     &:first-child {margin-top: 0;}
     h3 {padding-left: 18px; font-size: rem(18px); color: var(--Gray-900); font-weight: 700; line-height: 1.4; background: url(../../images/common/bullet_h3.svg) left center no-repeat; word-break: keep-all;}
+    &.mgH {margin-top:24px;}
 
     @include media("mobile"){
         margin-top: 24px;
         h3 {font-size: rem(16px);}
+        &.mgH {margin-top:24px;}
     }
 } 
+
+//조건
+.comTitH2 + .comTitH3 {margin-top: 20px;}

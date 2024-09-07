@@ -5,7 +5,8 @@
 //모바일, 태블릿, PC 모두 슬라이드    toAll
 
 .modTab {
-    width: 100%; position: relative;
+    width: 100%; margin-top: 60px; position: relative;
+    &:first-child {margin-top:0;}
     .tabMenuGroup{
         width: 100%; overflow: hidden;
         .tabMenu {
@@ -25,7 +26,7 @@
         &.toAll {
             .tabMenu {
                 .tabItem {
-                    width: 213px; min-width: 213px;
+                    width: 250px; min-width: 240px;
                 }
             }
             & ~ .tabDirection {display: block;}
@@ -41,7 +42,7 @@
             &.toTab {
                 .tabMenu {
                     .tabItem {
-                        width: 213px; min-width: 213px;
+                        width: 250px; min-width: 240px;
                     }
                 }
                 & ~ .tabDirection {display: block;}
@@ -63,21 +64,21 @@
             &.toAll {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
             } 
             &.toTab {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
             }
             &.toMob {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
                 & ~ .tabDirection {display: block;}
@@ -131,6 +132,7 @@
         }
     }
     .tabContianer {
+        margin-top: 60px;
         .tabCont {display:none;}
         .tabCont.on {display:block;}
     }

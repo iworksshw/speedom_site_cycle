@@ -14,12 +14,12 @@
 
 	<title>KCYCLE 경륜</title>
 
-	<link rel="stylesheet" href="../../common/css/swiper.css" />
-	<link rel="stylesheet" href="../../common/css/style.css" />
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
-	<script src="../../common/js/swiper.min.js"></script>
-	<script src="../../common/js/common.js"></script>
+	<script src="../../../common/js/swiper.min.js"></script>
+	<script src="../../../common/js/common.js"></script>
 	<!--
     <script src="../common/js/basic.js"></script>
     -->
@@ -146,7 +146,7 @@
                                         </ul>
                                         <div class="bnBox">
                                             <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
+                                                <img src="../../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
                                             </div>
                                             <div class="textBox">
                                                 <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
@@ -371,7 +371,7 @@
                                         </ul>
                                         <div class="bnBox">
                                             <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
+                                                <img src="../../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
                                             </div>
                                             <div class="textBox">
                                                 <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
@@ -596,7 +596,7 @@
                                         </ul>
                                         <div class="bnBox">
                                             <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
+                                                <img src="../../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
                                             </div>
                                             <div class="textBox">
                                                 <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
@@ -821,7 +821,7 @@
                                         </ul>
                                         <div class="bnBox">
                                             <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
+                                                <img src="../../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
                                             </div>
                                             <div class="textBox">
                                                 <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
@@ -1046,7 +1046,7 @@
                                         </ul>
                                         <div class="bnBox">
                                             <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
+                                                <img src="../../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
                                             </div>
                                             <div class="textBox">
                                                 <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
@@ -1091,8 +1091,8 @@
             <li class="item"><a href="#">경륜 알아보기</a></li>
             
         </ul>
-        <div class="subTitle"><h1>경륜 경주 규칙</h1></div>
-        <div class="subText"><p>새로운 참여형 레저 스포츠, <b>경륜</b>에 대해 알려드릴게요</p></div>
+        <div class="subTitle"><h1>서브 상단 공통 정보 상자</h1></div>
+        <div class="subText"><p>서브 상단에 있는 <b>공통 정보 상자</b> 입니다</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -1104,69 +1104,81 @@
     </div>
 </div>
 
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                
+<style>
+    .tplMenu {width: 1200px; position: fixed; left: 50%; bottom: 0; z-index: 10000; transform: translateX(-50%);}
+    .tplMenu .menuList {display: flex; flex-wrap: wrap; gap: 1px;}
+    .tplMenu .menuList .item {min-width: 100px; height: 24px; background: #333;}
+    .tplMenu .menuList .item a {width: 100%; height: 100%; padding: 0 5px; font-size: 14px; color: #fff; line-height: 24px; text-align: center; display: block;}
+</style>
+<div class="tplMenu">
+    <ul class="menuList">
+        <li class="item"><a href="./text_list.html">타이틀, 텍스트, 리스트</a></li>
+        <li class="item"><a href="./sub_info.html">서브 상단 공통 정보 상자</a></li>
+        <li class="item"><a href="./tab.html">탭</a></li>
+    </ul>
+</div>
 
-                <div id="sample01" class="modPopup lg on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                    <div class="popupDim">딤영역</div>
-                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                        <div class="popupInMotion">
-                            <div class="popupContainer">
-                                <div class="popupContArea">
-                                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
-                                    <div class="popTitle">변경이력</div>
-                                    <div class="popCont">
-                                        <!-- 팝업 컨텐츠 영역 -->
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역<br>
-                                        팝업콘텐츠 영역
-                                        <!-- //팝업 컨텐츠 영역 -->
+                <div class="layoutContArea">
+
+                    <div class="comGroupTop">
+                        <div class="alignL">
+                            <div class="unit"><span class="text">전체<span class="total">999</span>건</span></div>
+                        </div>
+                        <div class="alignR">
+                            <ul class="opList">
+                                <li class="item">
+                                    <div class="frmGroup">
+                                        
+                                        <div class="frmSearch">
+                                            <input type="text" placeholder="검색어를 입력해주세요">
+                                            <button class="btnSearch">검색</button>
+                                        </div>
                                     </div>
-
-                                    <!-- 팝업 하단 영역
-                                    <div class="popBtm">
-                                        <button class="btn gLine">취소</button>
-                                        <button class="btn dkBlue">계정신청</button>
-                                    </div> -->
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="comBoardList">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:8%;">
+                                <col style="width:auto;">
+                                <col style="width:10%;">
+                                <col style="width:8%;">
+                                <col style="width:8%;">
+                                <col style="width:9%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="bdType left"><span class="listType">기타문의</span></td>
+                                    <td class="bdTitle left">
+                                        <div class="link">
+                                            <div class="title">
+                                                <a href="#">경륜선수와 함께하는 자전거 안전교실 재능기부 활동 경륜선수와 함께하는 자전거 안전교실 재능기부 활동 경륜선수와 함께하는 자전거 안전교실 재능기부 활동</a>
+                                                <span class="num">[2]</span>
+                                                <span class="icons">
+                                                    <span class="icon new">새로운 글</span>
+                                                    <span class="icon file">첨부파일</span>
+                                                    <span class="icon secret">비밀글</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="bdState"><span class="state pink">접수완료</span></td> <!-- blue : 진행중, pink : 접수완료, gray : 답변완료 -->
+                                    <td>홍길동</td>
+                                    <td>35125</td>
+                                    <td class="right">0000.00.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
                 </div>
 
-                
                 <!-- 서브 바텀 (담당자) -->
                 
 

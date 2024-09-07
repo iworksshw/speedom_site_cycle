@@ -3,6 +3,7 @@
     &:first-child {margin-top: 0;}
     .item {
         margin-top: 8px; padding-left: 11px; font-size: rem(16px); color: var(--Gray-800); position: relative; word-break: keep-all;
+        em {font-weight: 600;}
         &:first-child {margin-top: 0;}
         &::after {display: block; content: ""; width: 3px; height: 3px; background: var(--Gray-400); position: absolute; left: 0; top: 10px;}
     }
@@ -25,4 +26,9 @@
             padding-left: 0;
         }
     }
+}
+
+//조건
+.comBasicTxt + .comBasicList {
+    margin-top: 20px;
 }
