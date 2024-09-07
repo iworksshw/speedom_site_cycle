@@ -1,0 +1,13 @@
+.comImgWrap {
+    margin-top: 20px;
+    &:first-child {margin-top: 0;}
+
+    .mView {display: none;}
+
+    img {max-width: 100%;}
+
+    @include media("mobile"){
+        .pcView {display: none;}
+        .mView {display: block;}
+    }
+}

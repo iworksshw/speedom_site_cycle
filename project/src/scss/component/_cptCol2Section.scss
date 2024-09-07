@@ -1,0 +1,20 @@
+.cptCol2Section {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    .sectGroup {
+        display: flex; flex-wrap: wrap; gap: 80px 100px; align-items: stretch;
+        .sectItem {
+            flex: 0 0 calc(50% - 50px);
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 30px;
+        .sectGroup {
+            gap: 40px;
+            .sectItem {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
