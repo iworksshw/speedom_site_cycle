@@ -1,0 +1,148 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '타이틀, 텍스트, 리스트',
+                    subText: '대타이틀, 소타이틀, 텍스트, 리스트입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2 bk">
+                                <h2>공정한 경주를 위한 선수 입소·확정검사</h2>
+                            </div>
+            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    모든 선수는 공정한 경주를 위해 <em>목요일 경륜장에 입소</em>하여 일요일 모든 경주가 끝날 때까지 일반인과의 접촉이 차단되며, 선수를 대상으로 출주 전후에 금지약물에 대한 <em>도핑테스트를 실시</em>합니다. <br>
+                                    입소한 선수는 최상의 경주를  위하여 <em>전문의의 건강검진을 받고, 자전거 또한 규격품사용, 조립상태, 부품상태 등의 정밀검사 등 이른바 확정검사</em>를 받습니다. <br>
+                                    이와 같이 <em>선수 신체 및 자전거에 대한 검열에서 합격되면 선수는 최종 합격통보</em>를 받게 되며 팬들은 이러한 엄격하고 공정한 검열이 있기 때문에 안심하고 경륜을 즐길 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2 bk">
+                                <h2>경주편성체계</h2>
+                            </div>
+            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    경주의 편성은 해당회차 출전선수 중 기량이 비슷한 동일 등급의 선수로 이루어지며, 경륜선수는 선수 개개인의 기량에 따라 <em>특선(S)급 4반, 우수(A)급 3반, 선발(B)급 3반</em>으로 세분화 되어 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>선수 등급</h2>
+                            </div>
+            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    선수의 등급은 상ㆍ하반기(6개월단위)마다 경주 성적에 따라 등급 심사를 통하여 조정됩니다. 수급반은 매회차 변경됩니다.(S1↔S2)
+                                </p>
+                            </div>
+            
+                            <div class="comTitH3">
+                                <h3>특별 승·강급</h3>
+                            </div>
+            
+                            <div class="comBasicList space">
+                                <ul class="listGroup">
+                                    <li class="item">특별 승급은 3회 연속 1,2위(결승경주 포함) 기록 시 상위 등급으로 승급됩니다.</li>
+                                    <li class="item">특별 강급은 2회 연속 6, 7위 기록 시 하위 등급으로 강급됩니다.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>.comTitH3 : 소제목에 추가 클래스 넣어야 하는 경우</h3>
+                            </div>
+            
+                            <div class="comBasicList space">
+                                <ul class="listGroup">
+                                    <li class="item">대제목에 설명글 이후 소제목이 나온다면 간격이 32가 아니라 40이다 => class="comTitH3 mgH"</li>
+                                    <li class="item">데이터 테이블이 들어가는 섹션에서는 간격이 32가 아니라 40이다 => class="comTitH3 mgH"</li>
+                                    <li class="item">일반 테이블이 들어가는 섹션은 기본 32가 맞다 => class="comTitH3"</li>
+                                </ul>
+                            </div>
+
+                            <div class="comTitH3">
+                                <h3>.comBasicList : 리스트의 두가지 사용법</h3>
+                            </div>
+            
+                            <div class="comBasicList space">
+                                <ul class="listGroup">
+                                    <li class="item">대제목 + 리스트와 소제목 + 리스트가 있습니다.=> class="comBasicList"</li>
+                                    <li class="item">소제목 관련 리스트 일 때는 클래스 "space"를 추가합니다  => class="comBasicList space"</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
