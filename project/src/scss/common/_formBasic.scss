@@ -85,8 +85,10 @@
 /* ----- 디자인셀렉트/드롭다운 ----- */
 .iptSlt {
     width: 100%; height: 48px; position: relative;
+    @include media('mobile') {height: 36px;}
     &.on {
         .sltBox {
+            border: 1px solid var(--Gray-800);
             .sltTitle {
                 &::after {transform: rotate(180deg);}
             }
@@ -96,12 +98,12 @@
         }
     }
     .sltBox {
-        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-800); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
+        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-300); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
         .sltTitle {
             width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center; position: relative;
             &::after {
-                content:""; width: 16px; height: 16px; display: block; position: absolute; right: 16px; top: calc(50% - 8px);
-                background-image: url(../../images/common/ic_16_down_arr.svg); background-position: center; background-repeat: no-repeat;
+                content:""; width: 24px; height: 24px; display: block; position: absolute; right: 16px; top: calc(50% - 12px);
+                background-image: url(../../images/common/ic_20_down_arr.svg); background-position: center; background-repeat: no-repeat;
             }
         }
         .optionGroup {
@@ -110,6 +112,11 @@
             .option {
                 width: 100%; height: 39px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center;
                 &:hover {color: var(--Gray-900); font-weight: 500; background: #F5F5F5;}
+            }
+        }
+        @include media('mobile') {
+            .sltTitle {
+                height: 36px; ; padding: 0 12px;
             }
         }
     }
