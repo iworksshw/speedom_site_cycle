@@ -1,0 +1,302 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+        <!-- 서브 탑 (타이틀) -->
+        <%- include('../../_ejs/sub_top.ejs', {
+            location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+            subTitle: '경륜기초안내',
+            subText: '경륜이 <b>처음이신가요?</b> <br/>지금부터 경륜에 대해 알아봐요.',
+            url: "../../../",
+            visualClass : "bg01",
+        }) %>
+
+        <!-- jsj component List -->
+        <div class="tempWrap" style="padding: 60px 20px;">
+
+            <div class="cptSection">
+                <div class="sectArea">
+                    <div class="comTitH3">
+                        <h3>선수 등급 구분표</h3>
+                    </div>
+                    <div class="comContTable">
+                        <!-- PC 테이블 -->
+                        <div class="pcView">
+                            <table class="basic">
+                                <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>      
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <span class="tOrange">S급(특선급)</span>
+                                        </th>
+                                        <th colspan="3">
+                                            <span class="tBlue">A급(우수급)</span> 
+                                        </th>
+                                        <th colspan="3">
+                                            <span class="tMint">B급(선발급)</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="mark orange">SS</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark orange">S1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark orange">S2</span>
+                                        </td>
+                                        <td class="lineR">
+                                            <span class="mark orange">S3</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark blue">A1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark blue">A2</span>
+                                        </td>
+                                        <td class="lineR">
+                                            <span class="mark blue">A3</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B2</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B3</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Mobile 테이블 -->
+                        <div class="mView">
+                            <table class="basic">
+                                <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                <colgroup>
+                                    <col style="width: 133px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="4"><span class="tOrange">S급(특선급)</span></th>
+                                        <td>
+                                            <span class="mark orange">SS</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3"><span class="tBlue">A급(우수급)</span></th>
+                                        <td><span class="mark blue">A1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark blue">A2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark blue">A3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3"><span class="tMint">B급(선발급)</span></th>
+                                        <td><span class="mark mint">B1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark mint">B2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark mint">B3</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    
+                    <div class="comTitH3">
+                        <h3>급반 고유점수</h3>
+                    </div>
+                    <div class="comContTable">
+                        <!-- PC 테이블 -->
+                        <div class="pcView">
+                            <table class="basic">
+                                <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                <colgroup>
+                                    <col style="width:auto;">
+                                    <col style="width:7%;">
+                                    <col style="width:7%;">
+                                    <col style="width:7%;">
+                                    <col style="width:7%;">
+                                    <col style="width:10%;">      
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2">급반별</th>
+                                        <th colspan="4">
+                                            <span class="tOrange">S급(특선급)</span>
+                                        </th>
+                                        <th colspan="3">
+                                            <span class="tBlue">A급(우수급)</span> 
+                                        </th>
+                                        <th colspan="3">
+                                            <span class="tMint">B급(선발급)</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mark orange">SS</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark orange">S1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark orange">S2</span>
+                                        </td>
+                                        <td class="lineR">
+                                            <span class="mark orange">S3</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark blue">A1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark blue">A2</span>
+                                        </td>
+                                        <td class="lineR">
+                                            <span class="mark blue">A3</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B2</span>
+                                        </td>
+                                        <td>
+                                            <span class="mark mint">B3</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>고유점수</th>
+                                        <td>102</td>
+                                        <td>100</td>
+                                        <td>98</td>
+                                        <td class="lineR">96</td>
+                                        <td>94</td>
+                                        <td>92</td>
+                                        <td class="lineR">90</td>
+                                        <td>88</td>
+                                        <td>86</td>
+                                        <td>84</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Mobile 테이블 -->
+                        <div class="mView">
+                            <table class="basic">
+                                <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>선수등급</th>
+                                        <th>급반별</th>
+                                        <th>고유점수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="4"><span class="tOrange">S급(특선급)</span></th>
+                                        <td>
+                                            <span class="mark orange">SS</span>
+                                        </td>
+                                        <td>102</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S1</span></td>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S2</span></td>
+                                        <td>98</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark orange">S3</span></td>
+                                        <td>96</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3"><span class="tBlue">A급(우수급)</span></th>
+                                        <td><span class="mark blue">A1</span></td>
+                                        <td>97</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark blue">A2</span></td>
+                                        <td>92</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark blue">A3</span></td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3"><span class="tMint">B급(선발급)</span></th>
+                                        <td><span class="mark mint">B1</span></td>
+                                        <td>88</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark mint">B2</span></td>
+                                        <td>86</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mark mint">B3</span></td>
+                                        <td>84</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
