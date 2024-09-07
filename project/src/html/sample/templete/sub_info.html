@@ -1,7 +1,7 @@
 <!-- Header -->
-<%- include('../_ejs/top.ejs', {
+<%- include('../../_ejs/top.ejs', {
     title: "KCYCLE 경륜",
-    url: "../../"
+    url: "../../../"
 }) %>
 
 <!-- 레이아웃 -->
@@ -11,8 +11,8 @@
         <!-- 상단영역 -->
         <div class="layoutTop">
             <!-- Top -->
-            <%- include('../_ejs/header.ejs', {
-                url: "../../"
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
             }) %>
         </div>
         <!-- //상단영역 -->
@@ -25,34 +25,32 @@
 
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
-                <%- include('../_ejs/sub_top.ejs', {
+                <%- include('../../_ejs/sub_top.ejs', {
                     location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '경륜 경주 규칙',
-                    subText: '새로운 참여형 레저 스포츠, <b>경륜</b>에 대해 알려드릴게요',
-                    url: "../../",
+                    subTitle: '서브 상단 공통 정보 상자',
+                    subText: '서브 상단에 있는 <b>공통 정보 상자</b> 입니다',
+                    url: "../../../",
                 }) %>
 
                 <!-- 콤포넌트 템플릿 메뉴 -->
-                <style>
-                    .tplMenu {}
-                    .tplMenu .menuList {}
-                    .tplMenu .menuList .item {}
-                </style>
-                <div class="tplMenu">
-                    <ul class="menuList">
-                        <li class="item"><a href="./text_list.html">텍스트, 리스트</a></li>
-                        <li class="item"><a href="./text_list.html">텍스트, 리스트</a></li>
-                        <li class="item"><a href="./text_list.html">텍스트, 리스트</a></li>
-                        <li class="item"><a href="./text_list.html">텍스트, 리스트</a></li>
-                    </ul>
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경륜만의 스릴과 매력을 즐기기 위해 다양한 경륜의 기초정보를 알아봅시다</h2>
+                        <p class="info">경륜은 자전거를 이용해 속도를 즐기는 스포츠로 결과를 예측 할 수 없어 더욱 짜릿합니다.<br>
+                            경륜의 기초정보를 이용하여 경륜을 더욱 재밌게 즐겨보세요.</p>
+                    </div>
+                    
                 </div>
-                
+
                 <!-- 서브 바텀 (담당자) -->
-                <%- include('../_ejs/sub_btm.ejs', {
+                <%- include('../../_ejs/sub_btm.ejs', {
                     team: '경륜운영팀',
                     name: '차룡',
                     phone: '02-2067-5711',
-                    url: "../../",
+                    url: "../../../",
                 }) %>
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
@@ -65,8 +63,8 @@
         <!-- 하단영역 -->
         <div class="layoutFooter">
             <!-- Footer -->
-            <%- include('../_ejs/footer.ejs', {
-                url: "../../"
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
             }) %>
         </div>
         <!-- //하단영역 -->
@@ -76,4 +74,4 @@
 
 
 <!-- Bottom -->
-<%- include('../_ejs/bottom.ejs', { }) %>
+<%- include('../../_ejs/bottom.ejs', { }) %>

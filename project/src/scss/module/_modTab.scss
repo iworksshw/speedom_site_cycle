@@ -64,21 +64,21 @@
             &.toAll {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
             } 
             &.toTab {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
             }
             &.toMob {
                 .tabMenu {
                     .tabItem {
-                        width: 140px; min-width: 140px;
+                        width: 180px; min-width: 180px;
                     }
                 }
                 & ~ .tabDirection {display: block;}
