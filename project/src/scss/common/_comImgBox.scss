@@ -1,0 +1,22 @@
+.comImgBox {
+    margin-top: 12px; padding: 50px 30px; border: 1px solid var(--Bg-Line-line-200); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;
+    &:first-child {margin-top: 0;}
+
+    .pcView {width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; }
+    .mView {display: none;}
+    
+    img {max-width: 100%;}
+
+    // 컴포넌트 변경 Class
+    // 여백 좁은 이미지 박스
+    &.narrow {padding: 30px;}
+
+    @include media("mobile"){
+        padding: 36px 20px; border-radius: 12px; gap: 20px;
+
+        .pcView {display: none;}
+        .mView { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;}
+
+        &.narrow {padding: 16px;}
+    }
+}

@@ -1,0 +1,8 @@
+.comFomulBox {
+    @extend .comImgBox;
+    margin-top: 20px; padding: 24px 18px; background: var(--Gray-50);
+
+    @include media("mobile"){
+        padding: 24px 18px;
+    }
+}

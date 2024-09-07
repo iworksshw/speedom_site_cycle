@@ -5,6 +5,9 @@
 
   ---Primary:#078B7B;
   ---Point2:#A7FFEF;
+  --Point-Orange: #F97B07;
+  --Point-Blue:#0EA3F6;
+  --Point-Primary2: #28C39E;
   --Gray-900:#111111;
   --Gray-800:#2C2C2C;
   --Gray-700:#414347;
@@ -136,6 +139,10 @@ body.noScrl {height:100vh; overflow:hidden;}
   .mo_mb50 {margin-bottom:50px !important;}
 }
 
+/* ------------------- Font Color ------------------- */
+.tOrange {color: var(--Point-Orange) !important;}
+.tBlue {color: var(--Point-Blue) !important;}
+.tMint {color: var(--Point-Primary2) !important;}
 
 /* z-index
 #탑메뉴 영역
