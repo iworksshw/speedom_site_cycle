@@ -10,6 +10,7 @@
     // H3 하단 내부 리스트
     &.space {
         padding-left: 18px;
+        @include media("mobile"){padding-left: 0;}
     }
 
     @include media("mobile"){

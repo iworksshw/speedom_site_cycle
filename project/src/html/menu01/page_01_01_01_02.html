@@ -27,8 +27,8 @@
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
                     location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '경륜기초안내',
-                    subText: '경륜이 처음이신가요?<br>지금부터 경륜에 대해 알아봐요.',
+                    subTitle: '경륜기초정보',
+                    subText: '경륜이 <b>처음이신가요?</b><br>지금부터 경륜에 대해 알아봐요.',
                     url: "../../",
                 }) %>
 
@@ -118,7 +118,120 @@
                                             <h3>선수 등급 구분표</h3>
                                         </div>
 
-                                        <!-- 선수 등급 구분표 테이블 영역 -->
+                                        <div class="comContTable">
+                                            <!-- PC 테이블 -->
+                                            <div class="pcView">
+                                                <table class="basic">
+                                                    <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>      
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="4">
+                                                                <span class="tOrange">S급(특선급)</span>
+                                                            </th>
+                                                            <th colspan="3">
+                                                                <span class="tBlue">A급(우수급)</span> 
+                                                            </th>
+                                                            <th colspan="3">
+                                                                <span class="tMint">B급(선발급)</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="mark orange">SS</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark orange">S1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark orange">S2</span>
+                                                            </td>
+                                                            <td class="lineR">
+                                                                <span class="mark orange">S3</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark blue">A1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark blue">A2</span>
+                                                            </td>
+                                                            <td class="lineR">
+                                                                <span class="mark blue">A3</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B2</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B3</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- Mobile 테이블 -->
+                                            <div class="mView">
+                                                <table class="basic">
+                                                    <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col style="width: 133px;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th rowspan="4"><span class="tOrange">S급(특선급)</span></th>
+                                                            <td>
+                                                                <span class="mark orange">SS</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S1</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S2</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S3</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3"><span class="tBlue">A급(우수급)</span></th>
+                                                            <td><span class="mark blue">A1</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark blue">A2</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark blue">A3</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3"><span class="tMint">B급(선발급)</span></th>
+                                                            <td><span class="mark mint">B1</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark mint">B2</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark mint">B3</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
 
 
                                     </div>
@@ -141,13 +254,28 @@
                                             <h3>유니폼 상의 · 헬멧 색상 별 번호</h3>
                                         </div>
                                         
-                                        <!-- 이미지 영역 -->
+                                        <div class="comImgBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_001.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑">
+                                                <img src="../../../images/contents/cont01_01_002.png" alt="유니폼 색상 별 번호: 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_001_m.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑, 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
+                                            </div>
+                                        </div>
                                         
                                         <div class="comTitH3">
                                             <h3>등급별 유니폼 하의 선수 등급 표시</h3>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comImgBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_003.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_003_m.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
+                                            </div>
+                                        </div>
 
                                         
                                     </div>
@@ -198,7 +326,151 @@
                                             <h3>급반 고유점수</h3>
                                         </div>
 
-                                        <!-- 디자인 테이블 영역 -->
+                                        <div class="comContTable">
+                                            <!-- PC 테이블 -->
+                                            <div class="pcView">
+                                                <table class="basic">
+                                                    <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:10%;">      
+                                                        <col style="width:10%;">
+                                                        <col style="width:10%;">
+                                                        <col style="width:10%;">
+                                                        <col style="width:10%;">
+                                                        <col style="width:10%;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th rowspan="2">급반별</th>
+                                                            <th colspan="4">
+                                                                <span class="tOrange">S급(특선급)</span>
+                                                            </th>
+                                                            <th colspan="3">
+                                                                <span class="tBlue">A급(우수급)</span> 
+                                                            </th>
+                                                            <th colspan="3">
+                                                                <span class="tMint">B급(선발급)</span>
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="mark orange">SS</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark orange">S1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark orange">S2</span>
+                                                            </td>
+                                                            <td class="lineR">
+                                                                <span class="mark orange">S3</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark blue">A1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark blue">A2</span>
+                                                            </td>
+                                                            <td class="lineR">
+                                                                <span class="mark blue">A3</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B1</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B2</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="mark mint">B3</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>고유점수</th>
+                                                            <td>102</td>
+                                                            <td>100</td>
+                                                            <td>98</td>
+                                                            <td class="lineR">96</td>
+                                                            <td>94</td>
+                                                            <td>92</td>
+                                                            <td class="lineR">90</td>
+                                                            <td>88</td>
+                                                            <td>86</td>
+                                                            <td>84</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- Mobile 테이블 -->
+                                            <div class="mView">
+                                                <table class="basic">
+                                                    <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수등급</th>
+                                                            <th>급반별</th>
+                                                            <th>고유점수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th rowspan="4"><span class="tOrange">S급(특선급)</span></th>
+                                                            <td>
+                                                                <span class="mark orange">SS</span>
+                                                            </td>
+                                                            <td>102</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S1</span></td>
+                                                            <td>100</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S2</span></td>
+                                                            <td>98</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark orange">S3</span></td>
+                                                            <td>96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3"><span class="tBlue">A급(우수급)</span></th>
+                                                            <td><span class="mark blue">A1</span></td>
+                                                            <td>97</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark blue">A2</span></td>
+                                                            <td>92</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark blue">A3</span></td>
+                                                            <td>90</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3"><span class="tMint">B급(선발급)</span></th>
+                                                            <td><span class="mark mint">B1</span></td>
+                                                            <td>88</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark mint">B2</span></td>
+                                                            <td>86</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="mark mint">B3</span></td>
+                                                            <td>84</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
 
                                         <div class="comTitH3">
                                             <h3>평균득점</h3>
@@ -225,11 +497,19 @@
                         
                                         <div class="comBasicTxt">
                                             <p class="txt">
-                                                선수가 1착으로 들어온 횟수를 출주회수로 나누어 백분율로 나타낸 것을 말합니다.
+                                                선수가 <em>1착으로 들어온 횟수를 출주회수로 나누어 백분율</em>로 나타낸 것을 말합니다.
                                             </p>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comFomulBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_004.png" alt="수식: (1착횟수/출추횟수) * 100%">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_004_m.png" alt="수식: (1착횟수/출추횟수) * 100%">
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 
@@ -247,7 +527,15 @@
                                             </ul>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comFomulBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_013.png" alt="수식: ((1착횟수 + 2착횟수)/출추횟수) * 100%">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_013_m.png" alt="수식: ((1착횟수 + 2착횟수)/출추횟수) * 100%">
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 
@@ -265,7 +553,15 @@
                                             </ul>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comFomulBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_014.png" alt="수식: ((1착횟수 + 2착횟수 + 3착횟수)/출추횟수) * 100%">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_014_m.png" alt="수식: ((1착횟수 + 2착횟수 + 3착횟수)/출추횟수) * 100%">
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <!-- //탭 컨텐츠 3 -->
@@ -286,7 +582,14 @@
                                             </ul>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comFomulBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_015.png" alt="수식: 페달 안쪽 큰기어 톱니바퀴 수(대기어)/뒷바퀴 작은 기어 톱니바퀴 수(소기어)">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_015_m.png" alt="수식: 페달 안쪽 큰기어 톱니바퀴 수(대기어)/뒷바퀴 작은 기어 톱니바퀴 수(소기어)">
+                                            </div>
+                                        </div>
                                          
                                         <div class="comTitH3">
                                             <h3>대기어 소기어</h3>
@@ -298,10 +601,47 @@
                                             </p>
                                         </div>
 
-                                        <!-- 이미지 영역 -->
+                                        <div class="comImgBox narrow">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_005.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_005_m.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+
                                 <!-- 정보이야기 박스 영역 -->
+                                <div class="cptEtcInfo">
+                                    <div class="infoBox">
+                                        <dl class="info">
+                                            <dt>
+                                                <em class="tit">기어배수를 높게 올릴수록 경주에서 좋은가요?</em>
+                                                <span class="subTit">기어배수로 보는 경주이야기</span>
+                                            </dt>
+                                            <dd>
+                                                <div class="infoList">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            일렬로 달리는 선수들을 관찰해 보면 같은 스피드로 달릴 때 높은 기어인 선수의 다리회전이 낮은 기어의 선수보다 느린 것을 알 수 있습니다.<br>그것은 기어배수의 차에 의한 것으로 똑같이 한 번 페달을 밟아도 달리는 거리는 다르기 때문입니다.
+                                                        </li>
+                                                        <li class="item">
+                                                            기어배수는 수치가 높아질수록 페달을 밟은데 큰 힘이 필요하며 반대로 낮아질수록 힘은 적게 소모됩니다. <br>
+                                                            또한 근력이 일정하다고 가정했을 때 큰 기어배수를 사용하는 경우에는 일정한 속도를 얻기까지 시간은 많이 걸리지만, 일단 속도를 얻고나면 오래 유지할 수 있는 장점이 있습니다.<br>
+                                                            반대로 작은 기어배수를 사용할 경우에는 동일 주행속도를 얻기까지 시간은 적게 걸리지만, 상대적으로 그 속도를 오래 유지하기가 어려운 단점이 있습니다.
+                                                        </li>
+                                                        <li class="item">
+                                                            일반적인 관점에서 말한다면 기어배수를 올리는 선수는 자신의 힘이 떨어지는 것을 방지하기 위해서나 혹은 일발을 노리기 위해서 입니다. <br>
+                                                            따라서 작전변화가 예상되므로 기어배수는 그 선수의 전법과 함께 고려해야 하며, 단순히 높은 기어는 안된다든지, 표준기어가 강하다는지 하는 극단적인 판단은 피해야 합니다.
+                                                        </li>
+                                                    </ul>
+                                                </div> 
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
 
                                 <!-- //탭 컨텐츠 4 -->
                             </div>
@@ -321,9 +661,163 @@
                                     </div>
                                 </div>
 
+
                                 <!-- 고유영역 -->
-                                
+                                <div class="cptDescList">
+                                    <div class="listArea">
+                                        <ul class="thumList">
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_006.png" alt="경주 중 1위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">단승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/7</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1, 2위 선수 2명을 순위에 상관없이 맞추는 방식입니다.</li>
+                                                            <li class="item">가장 기본적인 승식이며, 비교적 적은 금액으로 배당금을 기대할 수 있습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_007.png" alt="경주 중 1, 2위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">연승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">2/7</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1위 혹은 2위 선수 중 1명을 맞추는 방식입니다.</li>
+                                                            <li class="item">8인 이상의 경우는 3위 이내,&nbsp;출주 선수 4인 이하로 열리는 경기에서는 진행하지 않습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_008.png" alt="경주 중 1, 2위 순서 무관 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">복승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/21</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1, 2위 선수 2명을 순위에 상관없이 맞추는 방식입니다.</li>
+                                                            <li class="item">연승보다 어렵지만 더 높은 배당금을 기대할 수 있습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_009.png" alt="경주 중 1, 2위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">쌍승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/42</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1, 2위 선수 2명을 순위에 맞게 맞추는 방식입니다.</li>
+                                                            <li class="item">복승식보다 어렵지만, 더 높은 배당금을 기대할 수 있습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_010.png" alt="경주 중 1, 2, 3위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">삼복승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/35</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1, 2, 3위의 선수 3명을 순위에 상관없이 맞추는 방식입니다.</li>
+                                                            <li class="item">쌍승식에 비해 간단한 승식입니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_011.png" alt="경주 중 1, 2, 3위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">쌍복승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/105</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1위 선수를 순위에 맞게, 2, 3위 선수 2명은 순위에 상관없이 맞추는 방식입니다.</li>
+                                                            <li class="item">쌍승식보다 어렵지만 높은 배당금을 기대할 수 있습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                            <li class="thumItem">
+                                                <div class="thumArea">
+                                                    <img src="../../../images/contents/cont01_01_012.png" alt="경주 중 1, 2, 3위 체크">
+                                                </div>
+                                                <dl class="descArea">
+                                                    <dt>
+                                                        <em class="tit">삼쌍승식</em>
+                                                        <div class="ballon">적중확률 : <span class="detail">1/210</span></div>
+                                                    </dt>
+                                                    <dd>
+                                                        <ul class="listGroup">
+                                                            <li class="item">1, 2, 3위 선수 3명을 순위에 맞게 맞추는 방식입니다.</li>
+                                                            <li class="item">가장 어려운 승식이지만, 가장 높은 배당금을 기대할 수 있습니다.</li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <!-- 정보이야기 박스 영역 -->
+                                <div class="cptEtcInfo">
+                                    <div class="infoBox">
+                                        <dl class="info">
+                                            <dt>
+                                                <em class="tit">경주를 올바르고 재밌게 즐겨보세요!</em>
+                                                <span class="subTit">건강하고 즐거운 경룬문화를 위한 TIP</span>
+                                            </dt>
+                                            <dd>
+                                                <div class="infoList">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            경륜은 스릴 넘치는 사이클 경주를 즐기면서 베팅으로 배당금까지 받는 "일석이조"의 재미있는 경기입니다.
+                                                        </li>
+                                                        <li class="item">
+                                                            자신 있게 선택한 레이스에만 베팅하고, 처음부터 무리하지 않고 조금씩 베팅 금액을 늘려나가는 것이 좋습니다.<br>
+                                                            (한 경주 당 3~5장 정도의 경주권을 구입하여 적당한 수준으로 베팅하는 것이 중요해요!)
+                                                        </li>
+                                                        <li class="item">
+                                                            베팅은 손실을 감수할 수 있는 범위 내에서 진행하세요.<br>
+                                                            <em>도박 중독 위험과 법적 제한 사항을 충분히 인지하고 책임감 있게 참여해야 합니다.</em>
+                                                        </li>
+                                                    </ul>
+                                                </div> 
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
                                 <!-- //탭 컨텐츠 5 -->
                             </div>
                         </div>
