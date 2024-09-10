@@ -1,0 +1,145 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '타이틀, 텍스트, 리스트',
+                    subText: '대타이틀, 소타이틀, 텍스트, 리스트입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptSection">
+                        <div class="sectArea">
+
+                            <div class="comTitH3">
+                                <h3>유니폼 상의 · 헬멧 색상 별 번호</h3>
+                            </div>
+        
+                            <div class="comImgBox">
+                                <div class="pcView">
+                                    <img src="../../../images/contents/cont01_01_001.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑">
+                                    <img src="../../../images/contents/cont01_01_002.png" alt="유니폼 색상 별 번호: 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
+                                </div>
+                                <div class="mView">
+                                    <img src="../../../images/contents/cont01_01_001_m.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑, 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>등급별 유니폼 하의 선수 등급 표시</h3>
+                            </div>
+        
+                            <div class="comImgBox">
+                                <div class="pcView">
+                                    <img src="../../../images/contents/cont01_01_003.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
+                                </div>
+                                <div class="mView">
+                                    <img src="../../../images/contents/cont01_01_003_m.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+
+            <div class="cptSection">
+                <div class="sectArea">
+                    <div class="comTitH2">
+                        <h2>기어배수</h2>
+                    </div>
+
+                    <div class="comFomulBox">
+                        <div class="pcView">
+                            <img src="../../../images/contents/cont01_01_004.png" alt="수식: (1착횟수/출추횟수) * 100%">
+                        </div>
+                        <div class="mView">
+                            <img src="../../../images/contents/cont01_01_004_m.png" alt="수식: (1착횟수/출추횟수) * 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cptSection">
+                <div class="sectArea">
+                    <div class="comTitH3">
+                        <h3>대기어 소기어</h3>
+                    </div>
+
+                    <div class="comBasicTxt">
+                        <p class="txt">
+                            이것은 선수의 각력이나 컨디션, 날씨 등에 따라 선수가 직접 정하는 것으로 <em>경주 전에 신고한 기어배수는 변경할 수 없습니다.</em>
+                        </p>
+                    </div>
+
+                    <div class="comImgBox narrow">
+                        <div class="pcView">
+                            <img src="../../../images/contents/cont01_01_005.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
+                        </div>
+                        <div class="mView">
+                            <img src="../../../images/contents/cont01_01_005_m.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
