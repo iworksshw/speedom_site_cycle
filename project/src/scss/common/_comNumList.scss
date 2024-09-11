@@ -1,0 +1,28 @@
+.comNumList {
+    margin-top: 12px;
+    &:first-child {margin-top: 0;}
+
+    &.space {padding-left: 16px;}
+
+    .listGroup {
+        .item {
+            margin-top: 8px; display: flex; align-items: flex-start;
+            &:first-child {margin-top: 0;}
+            .number {width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--Gray-300); margin-right: 6px; text-align: center; line-height: 17px; font-size: rem(11px); color: var(--Gray-600); font-weight: 700; line-height: 1.6; display: inline-block; vertical-align: middle; flex: 0 0 auto;}
+            .txt {margin-top: -4px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; display: inline-block; vertical-align: middle;}
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 8px;
+    
+        &.space {padding-left: 12px;}
+    
+        .listGroup {
+            .item {
+                .number {width: 16px; height: 16px; margin-right: 4px; line-height: 15px; font-size: rem(10px); }
+                .txt {margin-top: -4px; font-size: rem(15px);}
+            }
+        }
+    }
+}
