@@ -18,10 +18,13 @@
                 .infoList {
                     @extend .comBasicList;
                     padding-left: 7px;
-
+                    
                     .listGroup {
                         .item {
                             margin-top: 12px;
+                            em {
+                                font-weight: 700;
+                            }
                         }
                     }
                     
