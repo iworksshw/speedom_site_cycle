@@ -4,5 +4,6 @@
 
     @include media("mobile"){
         padding: 24px 18px;
+        img {width: 50%;}
     }
 }

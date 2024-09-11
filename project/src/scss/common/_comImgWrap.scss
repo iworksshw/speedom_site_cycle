@@ -4,10 +4,55 @@
 
     .mView {display: none;}
 
+    .imgGroup {
+        width: 100%; display: flex; align-items: stretch; 
+        .imgArea {
+            flex: 0 0 100%; overflow: hidden; line-height: 1;
+            .imgTxt {margin-top: 12px; font-size: rem(14px); color: var(--Gray-800); line-height: 1.6; text-align: left; word-break: keep-all;}
+        }
+    }
     img {max-width: 100%;}
+
+    // 컴포넌트 변경 Class
+    // 3열
+    &.col3 {
+        .imgGroup {
+            gap: 24px;
+            .imgArea {flex: 0 0 calc(33.3333% - 16px);}
+        }
+    }
+
+    // 4열
+    &.col4 {
+        .imgGroup {
+            gap: 32px;
+            .imgArea {flex: 0 0 calc(25% - 24px);}
+        }
+    }
 
     @include media("mobile"){
         .pcView {display: none;}
         .mView {display: block;}
+
+        .imgGroup {
+            flex-wrap: wrap;
+            .imgArea {
+                .imgTxt {margin-top: 8px;}
+            }
+        }
+
+        &.col3 {
+            .imgGroup {
+                gap: 20px;
+                .imgArea {flex: 0 0 100%;}
+            }
+        }
+
+        &.col4 {
+            .imgGroup {
+                gap: 20px;
+                .imgArea {flex: 0 0 100%;}
+            }
+        }
     }
 }
