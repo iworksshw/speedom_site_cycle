@@ -1,12 +1,8 @@
 /* ------------------------------- 기본 폼 ------------------------------- */
 /* ----- 폼 그룹 ----- */
 .frmGroup {
-    margin-top:5px; display:flex; align-items:flex-start;
+    margin-top:12px; display:flex; align-items:flex-start; gap: 12px;
     &:first-child {margin-top:0;}
-    .frmBox {
-        margin-right:5px;
-        &:last-child {margin-right:0;}
-    }
     &.error, .error {
         .iptText {padding-left: 16px; border: 1px solid var(--system-danger-50);}
         .errMsg {display: block;}
@@ -28,13 +24,15 @@
     &.maxCont {width: max-content;}
     &.frmTini {width:auto; min-width:auto;}
     &.frmXs {width:auto; min-width:auto;}
-    &.frmSm {width:210px; min-width:210px;}
-    &.frmMd {width:auto; min-width:auto;}
+    &.frmSm {width:auto; min-width:auto;}
+    &.frmMd {
+        width: 300px; min-width: 300px;
+        @include media ('mobile') {
+            width: 100%; min-width: 100%;
+        }
+    }
     &.frmLg {width:auto; min-width:auto;}
     &.frmXL {width:auto; min-width:auto;}
-    &.frmHalf {width:calc(50% - 3px); min-width:calc(50% - 3px);}
-    &.frmThrd {width:calc(33% - 3px); min-width:calc(33% - 3px);}
-    &.frmFrth {width:calc(25% - 3px); min-width:calc(25% - 3px);}
 }
 
 /* ----- 입력필드 ----- */
@@ -45,14 +43,17 @@
     &:focus {padding: 0 15px; border: 2px solid var(--Gray-800); outline: none;;}
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
     &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
-    &.lg {
-
+    @include media ('mobile') {
+        padding: 0 12px;
     }
-    &.md {
-
+    &.lg {
+        height: 58px; 
+        @include media ('mobile') {
+            padding: 0 16px;
+        }
     }
     &.sm {
-
+        height: 38px; 
     }
 }
 /* ----- 검색 필드 ----- */
@@ -60,6 +61,9 @@
     position: relative;
     .btnSearch {
         width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        @include media ('mobile') {
+            width: 20px; height: 20px; background: url(../../images/common/ic_20_search.svg) center no-repeat; right: 12px; top: 14px;
+        }
     }
 }
 /* ----- 라디오/체크박스 ----- */
@@ -166,7 +170,7 @@
     &.lg {height: 56px; padding: 0 32px; font-size: rem(20px);}
     &.md {height: 48px; padding: 0 24px; font-size: rem(16px);}
     &.sm {height: 36px; padding: 0 20px; font-size: rem(14px);}
-    &.sx {height: 32px; padding: 0 12px; font-size: rem(14px);}
+    &.xs {height: 32px; padding: 0 12px; font-size: rem(14px);}
 
     //색깔별
     &.Primary {
