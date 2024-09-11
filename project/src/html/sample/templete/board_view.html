@@ -1,0 +1,125 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '게시판 상세',
+                    subText: '게시판의 <b>상세페이지</b> 입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptBoardView">
+                        <div class="boardViewArea">
+                            <div class="viewTop">
+                                <i class="noti"><span class="mark">공지</span></i>
+                                <h2 class="viewTitle">24년 전반기 경정 최강자를 가린다. 체육 공단 이사장배 왕중왕전 19~20일 양일간 열려</h2>
+                                <ul class="info">
+                                    <li class="item">2024.07.05</li>
+                                    <li class="item">경륜심판팀</li>
+                                    <li class="item">조회수 : 200</li>
+                                </ul>
+
+                            </div>
+                            <div class="comFileDownload">
+                                <dl class="fileGroup">
+                                    <dt class="fileTitle">첨부파일</dt>
+                                    <dd class="fileArea">
+                                        <ul class="fileList">
+                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
+                                            <li class="download"><a href="#">경륜자전거 업사이클링 디자인 공모전 개최 안내.pdf</a></li>
+                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
+                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트리스트리스트.hwp</a></li>
+                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="viewBody">
+                                <div class="viewContArea">
+
+                                </div>
+                            </div>
+
+                            <div class="comPrevNext">
+                                <dl>
+                                    <dt>이전글</dt>
+                                    <dd><a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 한글50자 까지 나열됩니다뉴스 한글50자 까지 나열됩니다 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스</a> </dd>
+                                </dl>
+                                <dl>
+                                    <dt>다음글</dt>
+                                    <dd><a href="#">스포츠동아배 대상경륜 기념 고객 사은행사 '예상지 드림2' 안내</a></dd>
+                                </dl>
+                            </div>
+
+                            <div class="comBtnGroup">
+                                <div class="alignR">
+                                    <div class="btnBox">
+                                        <button class="btn dkLine">목록보기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
