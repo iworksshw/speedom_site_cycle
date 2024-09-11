@@ -1,0 +1,35 @@
+.cptImgPopup {
+    margin-top: 32px;
+    &:first-child {margin-top: 0;}
+
+    .imgArea {
+        .imgBox {
+            margin-top: 12px; position: relative;
+            &:first-child {margin-top: 0;}
+            .popInfo {
+                text-align: right;position: absolute; top: -34px; right: 0;
+                .info {padding-left: 20px; font-size: rem(14px); line-height: 1.6; color: var(--Gray-600); display: inline-block; background: url(../../images/common/ico_guide_default.svg) left center no-repeat;}
+            }
+            .imgWrap {
+                width: 100%; border-radius: 12px; text-align: center; overflow: hidden;
+                img {max-width: 100%;}
+            }
+            .infoGroup {
+                .numbItem {position: absolute;}
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 24px;
+    
+        .imgArea {
+            .imgBox {
+                .popInfo {
+                    margin-bottom: 16px; text-align: left;position: static;
+                    .info {font-size: rem(13px);display: block;}
+                }
+            }
+        }
+    }
+}
