@@ -30,4 +30,27 @@
             }
         }
     }
+    @include media ('mobile') {
+        .start {
+            width:32px; height:32px;
+        }
+        .prev {
+            width:32px; height:32px;
+        }
+        .next {
+            width:32px; height:32px;
+        }
+        .end {
+            width:32px; height:32px;
+        }
+        .numList {
+            li {
+                width: 32px; height: 32px;
+                &:first-child {margin-left:0;}
+                a {
+                    line-height: 30px; 
+                }
+            }
+        }
+    }
 }

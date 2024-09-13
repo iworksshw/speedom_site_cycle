@@ -1,12 +1,8 @@
 /* ------------------------------- 기본 폼 ------------------------------- */
 /* ----- 폼 그룹 ----- */
 .frmGroup {
-    margin-top:5px; display:flex; align-items:flex-start;
+    margin-top:12px; display:flex; align-items:flex-start; gap: 12px;
     &:first-child {margin-top:0;}
-    .frmBox {
-        margin-right:5px;
-        &:last-child {margin-right:0;}
-    }
     &.error, .error {
         .iptText {padding-left: 16px; border: 1px solid var(--system-danger-50);}
         .errMsg {display: block;}
@@ -28,13 +24,15 @@
     &.maxCont {width: max-content;}
     &.frmTini {width:auto; min-width:auto;}
     &.frmXs {width:auto; min-width:auto;}
-    &.frmSm {width:210px; min-width:210px;}
-    &.frmMd {width:auto; min-width:auto;}
+    &.frmSm {width:auto; min-width:auto;}
+    &.frmMd {
+        width: 300px; min-width: 300px;
+        @include media ('mobile') {
+            width: 100%; min-width: 100%;
+        }
+    }
     &.frmLg {width:auto; min-width:auto;}
     &.frmXL {width:auto; min-width:auto;}
-    &.frmHalf {width:calc(50% - 3px); min-width:calc(50% - 3px);}
-    &.frmThrd {width:calc(33% - 3px); min-width:calc(33% - 3px);}
-    &.frmFrth {width:calc(25% - 3px); min-width:calc(25% - 3px);}
 }
 
 /* ----- 입력필드 ----- */
@@ -45,21 +43,45 @@
     &:focus {padding: 0 15px; border: 2px solid var(--Gray-800); outline: none;;}
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
     &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
-    &.lg {
-
+    @include media ('mobile') {
+        padding: 0 12px;
     }
-    &.md {
-
+    &.lg {
+        height: 58px; 
+        @include media ('mobile') {
+            padding: 0 16px;
+        }
     }
     &.sm {
-
+        height: 38px; 
     }
 }
 /* ----- 검색 필드 ----- */
 .frmSearch {
-    position: relative;
+    width: 100%; position: relative;
     .btnSearch {
         width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_search.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        @include media ('mobile') {
+            width: 20px; height: 20px; background: url(../../images/common/ic_20_search.svg) center no-repeat; right: 12px; top: 14px;
+        }
+    }
+    
+    &.typeLine {
+        .iptText {
+            padding: 0; color: var(--Gray-900); font-size: rem(20px); font-weight: 600; border-radius: 0; border: 0; border-bottom: 2px solid var(--Gray-800); 
+            &::placeholder {color: var(--Gray-900);}
+        }
+        .btnSearch {
+            width: 40px; height: 40px; background: url(../../images/common/ic_40_search.svg) center no-repeat; position: absolute; right: 0; top: 4px;
+        }
+        @include media ('mobile') {
+            .iptText {
+                font-size: rem(18px);
+            }
+            .btnSearch {
+                width: 32px; height: 32px; background: url(../../images/common/ic_32_search.svg) center no-repeat; right: 0; top: 8px;
+            }
+        }
     }
 }
 /* ----- 라디오/체크박스 ----- */
@@ -105,7 +127,7 @@
         }
     }
     .sltBox {
-        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-300); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 300; overflow: hidden;
+        width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--Gray-300); background-color: #FFF; position: absolute; left: 0; top: 0; z-index: 80; overflow: hidden;
         .sltTitle {
             width: 100%; height: 46px; padding: 0 16px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; align-content: center; position: relative;
             &::after {
@@ -128,6 +150,27 @@
                     content:""; width: 20px; height: 20px; display: block; position: absolute; right: 12px; top: calc(50% - 10px);
                     background-image: url(../../images/common/ic_20_down_arr.svg); background-position: center; background-repeat: no-repeat;
                 }
+            }
+        }
+    }
+    &.typeLine {
+        .sltBox {
+            border-radius: 0; border: 0; border-bottom: 2px solid var(--Gray-800); overflow: visible;
+            .sltTitle {
+                padding: 0 26px 0 2px; color: var(--Gray-900); font-size: rem(20px); font-weight: 600;
+                &::after {
+                    right: 2px; top: calc(50% - 10px);
+                }
+            }     
+            .optionGroup {
+                padding: 0; border-top: 1px solid var(--Gray-800); background: #fff; box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10); overflow: visible;
+                .option {
+                    height: 47px; padding: 0 12px; border: 1px solid var(--Bg-Line-line-100); border-top: 0;
+                    &:hover {color: #fff; font-weight: 600; background: var(--Point-Primary2);}
+                }
+            }  
+            @include media('mobile') {
+                .sltTitle {font-size: rem(18px);} 
             }
         }
     }
@@ -166,7 +209,7 @@
     &.lg {height: 56px; padding: 0 32px; font-size: rem(20px);}
     &.md {height: 48px; padding: 0 24px; font-size: rem(16px);}
     &.sm {height: 36px; padding: 0 20px; font-size: rem(14px);}
-    &.sx {height: 32px; padding: 0 12px; font-size: rem(14px);}
+    &.xs {height: 32px; padding: 0 12px; font-size: rem(14px);}
 
     //색깔별
     &.Primary {
