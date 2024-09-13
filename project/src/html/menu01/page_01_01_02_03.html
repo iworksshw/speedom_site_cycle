@@ -1,0 +1,232 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜 즐겨보기'],
+                    subTitle: '배당률보는법',
+                    subText: '배당률을 이해하면 <br/><b>경기를 더욱 흥미롭게</b> 즐길 수 있어요!',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">배당률은 경주에서 선수가 순위권에 들어갈 가능성을 수치로 나타낸 것입니다.</h2>
+                        <p class="info">배당률은 특정 선수 또는 승식 조합이 우승 또는 순위권에 입상할 가능성과 예상 적중 금액을 나타내는 지표입니다.<br/>배당률은 다양한 요소를 고려하여 계산되며, 일반적으로 선수들의 과거 전적, 경주장 특성, 베팅 현황 등을 반영합니다.</p>
+                    </div>
+
+                    <div class="cptCol2Section">
+                        <div class="sectArea">
+                            <ul class="sectGroup">
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>단승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            1번 선수에 2,000원을 투표하고, <em>1번 선수가 1위</em>를 하였다면 배당률은 1.2으로 <br/> <em>환급금은 2,000 × 1.2 =2,400원</em> 입니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_001.png" alt="단승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_001_m.png" alt="단승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>연승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            2번 선수에 3,000원을 투표한 경우, <em>2번 선수가 1위 또는 2위</em>를 하였다면 배당률은 1.9로 <br/>
+                                            <em>환급금은 3,000 × 1.9=5,700원</em> 입니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_002.png" alt="연승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_002_m.png" alt="연승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>복승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            3번 선수와 4번 선수에 5,000원을 투표한 경우, <em>3번 선수와 4번 선수가 순위에 관계없이 
+                                            1위 또는 2위</em>를 하였다면 배당률은 2.4으로 <br/>
+                                            <em>환급금은 5,000 × 2.4=12,000원</em> 입니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_003.png" alt="복승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_003_m.png" alt="복승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>쌍승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            5번 선수와 6번 선수에 5,000원을 투표한 경우 <em>5번 선수가 1위를, 6번 선수가 2위</em>로 
+                                            적중하였다면 배당률은 3.3으로 <br/>
+                                            <em>환급금은 5,000 × 3.3=16,500원</em> 입니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_004.png" alt="쌍승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_004_m.png" alt="쌍승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>삼복승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            2, 5, 6번 선수에 5,000원을 투표한 경우 <em>2, 5, 6번 선수가 순위에 상관없이 1, 2, 3위</em>를 
+                                            하였다면 배당률은 3.1으로<br/>
+                                            <em>환급금은 5,000 × 3.1=15,500원</em> 입니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_005.png" alt="삼복승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_005_m.png" alt="삼복승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>쌍복승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            2, 1, 5번 선수에 5,000원을 투표한 경우 <em>2번 선수가 1위를 하고 1,5번 선수가 순위에 상관
+                                            없이 2,3위</em>를 하였다면 배당률은 36.6으로<br/>
+                                            <em>환급금은 5,000 × 36.6=183,000원</em>이 됩니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_006.png" alt="쌍복승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_006_m.png" alt="쌍복승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comTitH2 bk">
+                                        <h2>삼쌍승식</h2>
+                                    </div>
+                    
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            1, 2, 5번 선수에 5,000원을 투표한 경우 <em>1번 선수가 1위를, 2번 선수가 2위를, 5번 선수가 
+                                            3위</em>로 적중하였다면 배당률은 9.1이므로<br/>
+                                            <em>환급금은 5,000 × 9.1=45,500원</em>이 됩니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <div class="pcView"><img src="../../../images/contents/cont01_01_02_03_007.png" alt="삼쌍승식 표 이미지"></div>
+                                                <div class="mView"><img src="../../../images/contents/cont01_01_02_03_007_m.png" alt="삼쌍승식 표 이미지"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

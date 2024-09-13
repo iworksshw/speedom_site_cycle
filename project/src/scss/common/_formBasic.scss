@@ -160,7 +160,7 @@
 }
 /* ----- 버튼 ----- */
 .btn {
-    width: max-content; height: 48px; padding: 0 24px; font-size: rem(16px); font-weight: 500; line-height: normal; border-radius: 8px;
+    width: max-content; height: 48px; padding: 0 24px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px; display: inline-block;
     
     //크기별 (사용 미정)
     &.lg {height: 56px; padding: 0 32px; font-size: rem(20px);}

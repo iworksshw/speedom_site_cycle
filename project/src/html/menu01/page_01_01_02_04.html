@@ -1,0 +1,122 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜 즐겨보기'],
+                    subTitle: '경주권 환급',
+                    subText: '경주권을 구매해서 <b>적중</b>했다면, <br/> <b>경주권 환급을 통해 환급금</b>을 받으세요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경주환급금은 경기에서 베팅이 적중하면 지급되는 금액입니다.</h2>
+                        <p class="info">경주권을 구매하여 적중하면 당첨금을 받게 되는데 이를 "환급금" 이라고 합니다. <br/>
+                            구매한 경주권이 적중하였다면 투표금액에 배당률을 곱한 금액을 환급받게 됩니다.</p>
+                    </div>
+
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>환급금 지급안내</h2>
+                            </div>
+    
+                            <div class="comBasicList">
+                                <ul class="listGroup">
+                                    <li class="item">구매한 경주권이 적중하였다면 적중 투표금액에 배당률을 곱하여 계산된 금액을 환급받게 됩니다.</li>
+                                    <li class="item">적중경주권은 고객이 원하는 바에 따라 현금 또는 구매권으로 교환됩니다.</li>
+                                    <li class="item">현금환급 및 구매권 교환은 광명돔 경륜장 및 장외지점의 투표소에서 받으실 수 있습니다.</li>
+                                    <li class="item">적중경주권의 환급금 시효기간은 구매일로부터 1년이며 시효기간 경과시에는 무효가 됩니다. (경륜·경륜법 제12조 [소멸시효])</li>
+                                </ul>
+                            </div>
+
+                            <div class="comTitH3">
+                                <h3>경주운영시간</h3>
+                            </div>
+                            
+                            <div class="comContTable">
+                                <table class="basic">
+                                    <caption>경주 운영시간 표 : 광명스피돔과 지점발매창구를 포함한 표</caption>
+                                    <colgroup>
+                                        <col style="width:50%;">
+                                        <col style="width:50%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>광명스피돔</th>
+                                            <th>지점 발매창구</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>매주 금~일 경주운영시간</td>
+                                            <td>매주 수~일 경주운영시간</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                            <div class="comAddGuide point"> 
+                                <p class="guide">월,화요일은 휴무일로 환급업무를 시행하지 않습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
