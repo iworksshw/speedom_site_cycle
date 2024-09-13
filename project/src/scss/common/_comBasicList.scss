@@ -6,6 +6,16 @@
         em {font-weight: 600;}
         &:first-child {margin-top: 0;}
         &::after {display: block; content: ""; width: 3px; height: 3px; background: var(--Gray-400); position: absolute; left: 0; top: 10px;}
+
+        .sTit {font-weight: 700; display: block;}
+        .sTxt {font-style: normal;}
+        .lineTit {font-weight: 700; display: inline; }
+        .lineTxt {font-style: normal; display: inline;}
+
+        .addGuide {
+            @extend .comAddGuide;
+            margin-top: 8px !important;
+        }
     }
 
     // 컴포넌트 변경 Class
@@ -13,6 +23,12 @@
     &.space {
         padding-left: 7px;
     }
+    // Item 간격 Wide
+    &.mgH {
+        .item {margin-top: 12px;}
+    }
+    // 간격 예외
+    .comImgBox + & {margin-top: 32px;}
 
 
     @include media("mobile"){
@@ -25,6 +41,9 @@
         &.space {
             padding-left: 0;
         }
+
+        // 간격 예외
+        .comImgBox + & {margin-top: 24px;}
     }
 }
 

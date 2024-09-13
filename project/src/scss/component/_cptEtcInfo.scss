@@ -5,6 +5,9 @@
     .infoBox {
         width: 100%; border: 1px solid var(--Point-Primary2); border-radius: 20px; padding: 40px 32px;
         .info{
+            padding: 32px 0; border-top: 1px solid var(--Bg-Line-line-200);
+            &:first-child {padding-top: 0; border-top: none;}
+            &:last-child {padding-bottom: 0;}
             dt {
                 min-height: 40px; padding-left: 48px; background: url(../../images/common/ico_etc_info.svg) left center no-repeat; display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;
                 .tit {font-size: rem(20px); color: var(--Gray-800); font-weight:700; line-height: 1.4;}
@@ -29,6 +32,17 @@
                     }
                     
                 }
+                .boxStep {
+                    margin-top: 12px; display: flex; column-gap: 55px;
+                    .stepItem {
+                        padding: 14px 8px; border-radius: 8px; text-align: center; background: var(--Bg-Line-line-300); flex: 0 1 100%; position: relative;
+                        &::after {display: block; content: ""; width: 24px; height: 24px; background: url(../../images/common/ic_20_arr_right_g.svg) center no-repeat; position: absolute; top: 50%; right: -39px; transform: translateY(-50%);}
+                        &:last-child:after {display: none;}
+
+                        em {font-size: rem(18px); color: var(---Primary); font-weight: 700; display: block;}
+                        i {margin-top: 4px; font-style: normal; font-size: rem(16px); color: var(--Gray-800); font-weight: 300;display: block;}
+                    }
+                }
             }
         }
     }
@@ -51,6 +65,14 @@
                     margin-top: 16px;
                     .infoList {
                         padding-left: 0;                        
+                    }
+
+                    .boxStep {
+                        gap: 36px 0; flex-wrap: wrap;
+                        .stepItem {
+                            flex: 0 0 100%;
+                            &::after {width: 20px; height: 20px; top: auto; right: auto; bottom: -28px; left: 50%; transform: translateX(-50%) rotate(90deg);}
+                        }
                     }
                 }
             }
