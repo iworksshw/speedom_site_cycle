@@ -9,6 +9,9 @@
 
         .sTit {font-weight: 700; display: block;}
         .sTxt {font-style: normal;}
+        .lineTit {font-weight: 700; display: inline; }
+        .lineTxt {font-style: normal; display: inline;}
+
         .addGuide {
             @extend .comAddGuide;
             margin-top: 8px !important;
@@ -24,6 +27,8 @@
     &.mgH {
         .item {margin-top: 12px;}
     }
+    // 간격 예외
+    .comImgBox + & {margin-top: 32px;}
 
 
     @include media("mobile"){
@@ -36,6 +41,9 @@
         &.space {
             padding-left: 0;
         }
+
+        // 간격 예외
+        .comImgBox + & {margin-top: 24px;}
     }
 }
 

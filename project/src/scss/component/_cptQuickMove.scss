@@ -30,7 +30,7 @@
     @include media("mobile"){
         margin-top: 40px;
         .boxArea {
-            border-radius: 0; padding: 24px;
+            width: calc(100% + 32px); margin-left: -16px; border-radius: 0; padding: 24px;
         
             .quickBox {
                 flex-wrap: wrap; gap: 20px;
