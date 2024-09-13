@@ -2,36 +2,47 @@
     margin-top: 60px;
     &:first-child {margin-top: 0;}
 
-    .quickBox {
-        width: 100%; border-radius: 16px; padding: 24px 80px; background: var(--Bg-Line-bg-100); display: flex; align-items: center; justify-content: space-between; gap: 10px;
-        .txtArea {
-            .point {font-size: rem(18px); font-weight: 700; color: var(--Gray-900); line-height: 1.4; display: block;}
-            .desc {
-                margin-top: 9px; font-size: rem(16px); line-height: 1.6; color: var(--Gray-800);
-                b {font-weight: 600;}
+    .boxArea {
+        border-radius: 16px; padding: 24px 80px; background: var(--Bg-Line-bg-100); 
+
+        .quickBox { 
+            width: 100%; padding: 24px 0; border-top: 1px solid var(--Bg-Line-line-100); display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            &:first-child {border-top: none; padding-top: 0;}
+            &:last-child {padding-bottom: 0;}
+
+            .txtArea {
+                .point {font-size: rem(18px); font-weight: 700; color: var(--Gray-900); line-height: 1.4; display: block;}
+                .desc {
+                    margin-top: 9px; font-size: rem(16px); line-height: 1.6; color: var(--Gray-800);
+                    b {font-weight: 600;}
+                }
+                img {display: inline-block; vertical-align: middle;}
             }
-        }
-        .btnArea {
-            .quickBtn {
-                height: 48px; border-radius: 8px; padding: 0 24px; line-height: 48px; font-size: rem(16px); font-weight: 500; color: #fff; background: var(---Primary); display: inline-block; vertical-align: middle;
-                &::after {display: inline-block; content: ""; vertical-align: text-bottom; width: 20px; height: 20px; margin-left: 4px; background: url(../../images/common/ic_16_arr_right_w.svg) center no-repeat;}
+            .btnArea {
+                .btn {
+                    &::after {display: inline-block; content: ""; vertical-align: text-bottom; width: 20px; height: 20px; margin-left: 4px; background: url(../../images/common/ic_16_arr_right_w.svg) center no-repeat;}
+                }
             }
         }
     }
+    
 
     @include media("mobile"){
         margin-top: 40px;
-    
-        .quickBox {
-            border-radius: 0; padding: 24px; flex-wrap: wrap; gap: 20px;
-            .txtArea {
-                flex: 0 0 100%; word-break: keep-all;
-                .desc {
-                    margin-top: 9px; font-size: rem(15px);
+        .boxArea {
+            width: calc(100% + 32px); margin-left: -16px; border-radius: 0; padding: 24px;
+        
+            .quickBox {
+                flex-wrap: wrap; gap: 20px;
+                .txtArea {
+                    flex: 0 0 100%; word-break: keep-all;
+                    .desc {
+                        margin-top: 9px; font-size: rem(15px);
+                    }
                 }
-            }
-            .btnArea {
-                flex: 0 0 100%;
+                .btnArea {
+                    flex: 0 0 100%;
+                }
             }
         }
     }

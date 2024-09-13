@@ -1,0 +1,65 @@
+.cptWordTab {
+    .btnArea {
+        padding-bottom: 40px; border-bottom: 1px solid var(--Bg-Line-line-100);
+        .btnGroup {
+            width: 100%; display: flex; gap: 1%; align-items: center; justify-content: space-between;
+            .btnItem {
+                flex: 1 0 auto;
+                .btn {width: 100%; border-radius: 23px;}
+            }
+        }
+    }
+
+    .contArea {
+        margin-top: 40px;
+
+        .wordGroup {
+            .wordItem {
+                margin-top: 48px;
+                &:first-child {margin-top: 0;}
+                dt {
+                    display: flex; align-items: center;
+                    .word {font-size: rem(24px); color: var(--Gray-900); font-weight: 700;}
+                    .tagWrap {
+                        margin-left: 12px;
+                        .tag {
+                            height: 24px; padding: 0 10px; border-radius: 12px; line-height: 22px; font-size: rem(12px); font-weight: 600; display: inline-block; vertical-align: middle;
+                            &.mint {color: var(---Primary); border: 1px solid var(---Primary);}
+                            &.blue {color: var(--Point-Primary3); border: 1px solid var(--Point-Primary3);}
+                        }
+                    }
+                }
+                dd {margin-top: 17px; font-size: rem(16px); color: var(--Gray-800); word-break: keep-all;}
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 20px;
+    
+        .btnArea {
+            .btnGroup {
+                display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start;
+                .btnItem {
+                    flex: 0 0 60px;
+                    .btn {height: 36px; padding: 0 5px; line-height: 34px; border-radius: 18px;}
+                }
+            }
+        }
+    
+        .contArea {
+            .wordGroup {
+                .wordItem {
+                    margin-top: 32px;
+                    dt {
+                        .word {font-size: rem(18px);font-weight: 600;}
+                        .tagWrap {
+                            margin-left: 8px;
+                        }
+                    }
+                    dd {margin-top: 9px; font-size: rem(15px);}
+                }
+            }
+        }
+    }
+}

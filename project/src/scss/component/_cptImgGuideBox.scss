@@ -1,0 +1,75 @@
+.cptImgGuideBox {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+
+    .boxArea {
+        margin-top: 20px; border: 1px solid var(--Bg-Line-line-200); border-radius: 16px; padding: 60px 80px; display: flex; align-items: stretch; justify-content: space-between; column-gap: 80px;
+        &:first-child {margin-top: 0;}
+
+        .descArea {
+            flex: 0 0 calc(50% - 40px);
+
+            .descItem {
+                padding: 0 0 44px 65px; position: relative;
+                &::before {display: block; content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--Point-Primary2); position: absolute; top: 10px; left: 34px;}
+                &::after {display: block; content: ""; width: 1px; height: calc(100% - 24px); background: var(--Gray-200); position: absolute; top: 26px; left: 38px;}
+                &:last-child {padding-bottom: 0;}
+                &:last-child::after {display: none;}
+                .num {font-size: rem(16px); font-weight: 700; line-height: 1.4; color: var(--Point-Primary2); display: inline-block; position: absolute; top: 3px; left: 0;}
+                dt {font-size: rem(18px); font-weight: 700; color: var(--Gray-900);}
+                dd {margin-top: 4px; font-size: rem(16px); font-weight: 500; color: var(--Gray-800);}
+                i {width: 100%;margin-top: 4px; font-style: normal; font-size: rem(15px); color: var(--Gray-600); display: inline-block; }
+            }
+        }
+        .viewArea {
+            flex: 0 0 calc(50% - 40px);
+            .viewTit {font-size: rem(20px); color: var(---Primary); font-weight: 700;}
+            .dotList {
+                @extend .comBasicList;
+                .listGroup.half {
+                    &::after {display: block; content: ""; clear: both;}
+                    .item {width: 50%; float: left; margin-top: 0; margin-bottom: 12px;}
+                }
+            }
+            .comImgWrap {
+                margin-top: 40px;
+                &:first-child {margin-top: 0;}
+            }
+            .comImgWrap.mgH {margin-top: 15px;}
+        }
+    }
+    @include media("mobile"){
+        margin-top: 40px;
+
+        .boxArea {
+            margin-top: 12px;padding: 24px; flex-wrap: wrap; column-gap:0;
+        
+            .descArea {
+                flex: 0 0 100%; padding-bottom: 32px; border-bottom: 1px solid var(--Bg-Line-line-200);
+
+                .descItem {
+                    padding: 0 0 24px 61px;
+                    &::before {top: 7px; left: 33px;}
+                    &::after {height: calc(100% - 22px); top: 22px; left: 37px;}
+                    .num {top: 1px;}
+                    dt {font-size: rem(16px);}
+                    dd {font-size: rem(15px); font-weight: 400;}
+                    i {font-size: rem(14px);}
+                }
+            }
+            .viewArea {
+                flex: 0 0 100%; padding-top: 32px;
+                .viewTit {font-size: rem(18px);font-weight: 600;}
+                .comImgWrap {margin-top: 16px;}
+                .comImgWrap.mgH {margin-top: 12px;}
+            }
+        }
+
+        // 컴포넌트 변경 Class
+        // 이미지-설명문 모바일 순서 변경
+        &.mReverse {
+            .descArea {order: 1; padding: 32px 0 0 0; border-top: 1px solid var(--Bg-Line-line-200); border-bottom: none;}
+            .viewArea {order: 0; padding: 0 0 32px 0;}
+        }
+    }
+}
