@@ -27,8 +27,8 @@
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../../_ejs/sub_top.ejs', {
                     location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '게시판 리스트',
-                    subText: '<b>일반 게시판 리스트</b> 입니다',
+                    subTitle: '앨범 게시판 리스트',
+                    subText: '<b>앨범 게시판 리스트</b> 입니다',
                     url: "../../../",
                 }) %>
 
@@ -37,18 +37,16 @@
 
                 <div class="layoutContArea">
 
-                    <div class="cptBoardList">
-                        <div class="boardListArea">
+                    <div class="cptAlbumList">
+                        <div class="albumListArea">
 
 
-                            <!-- 게시판 리스트 상단 -->
-                            <div class="comGroupTop">
-                                <div class="alignL">
-                                    <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
-                                </div>
-                                <div class="alignR">
-                                    <ul class="opList">
-                                        <li class="item">
+                            <!-- 검색 박스 -->
+                            <div class="comSearchBox">
+                                <div class="searchLine col2">
+                                    <dl class="condition">
+                                        <dt class="title">구분</dt>
+                                        <dd class="conBox">
                                             <div class="frmGroup">
                                                 <div class="frmBox">
                                                     <div class="iptSlt">
@@ -62,18 +60,59 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="item">
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">지점</dt>
+                                        <dd class="conBox">
                                             <div class="frmGroup">
-                                                <div class="frmSearch">
-                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
-                                                    <button class="btnSearch">검색</button>
+                                                <div class="frmBox">
+                                                    <div class="iptSlt">
+                                                        <div class="sltBox">
+                                                            <div class="sltTitle">전체</div>
+                                                            <ul class="optionGroup">
+                                                                <li class="option">전체</li>
+                                                                <li class="option">드롭다운</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchLine">
+                                    <dl class="condition">
+                                        <dt class="title">검색어</dt>
+                                        <dd class="conBox">
+
+                                        </dd>
+                                    </dl>
+                                    <button class="btn Primary search">검색</button>
                                 </div>
                             </div>
+
+                            <div class="listBoard">
+                                <ul class="listGroup">
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="관악지점 지정좌석실 사은행사 안내">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">관악지점 지정좌석실 사은행사 안내 한줄 말 줄임</div>
+                                            <div class="progress">
+                                                <span class="ing">진행중</span>
+                                                <span class="end">종료</span>
+                                            </div>
+                                            <div class="date">기간 : 2024.07.24~2024.08.11</div>
+                                            <div class="date">발표 : 2024.08.15</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            
 
                             <!-- 게시판 리스트 -->
                             <div class="listTable">

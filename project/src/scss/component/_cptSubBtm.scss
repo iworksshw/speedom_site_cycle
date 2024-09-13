@@ -30,4 +30,32 @@
             }
         }
     }
+    @include media('mobile'){
+        width: 100%; margin-bottom: 0;
+        .subBtmArea {
+            width: 100%; padding: 0;
+            .subBtmBox {
+                padding: 16px 16px 24px; flex-wrap: wrap;
+                .manager {
+                    width: 100%;
+                    dt {
+                        font-size: rem(15px); 
+                    }
+                    dd {
+                        font-size: rem(15px);
+                        b {margin-left: 4px;}
+                    }
+                }
+                .btmList {
+                    width: 100%; margin-top: 16px; gap: 36px;
+                    li {
+                        height: 24px; padding-left: 32px;
+                        a {
+                            font-size: rem(15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

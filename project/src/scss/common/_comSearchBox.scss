@@ -1,0 +1,32 @@
+.comSearchBox {
+    width: 100%; padding: 32px 40px; border-radius: 12px; background: var(--Bg-Line-bg-100); display: flex; flex-wrap: wrap; gap: 20px;
+    .searchLine {
+        width: 100%; display: flex; justify-content: space-between;
+        &.col2 {
+            .condition {
+                width: calc(50% - 30px);
+                .title {
+                    width: 70px;
+                }
+            }
+        }
+        &.col4 {
+            .condition {
+                width: calc(25% - 30px);
+                .title {
+                    width: 60px;
+                }
+            }
+        }
+        .condition {
+            width: 100%; display: flex; 
+            .title {
+                width: 70px; color: var(--Gray-800); font-size: rem(16px); font-weight: 600; line-height: 1.6; align-content: center; flex-shrink: 0;
+            }
+            .conBox {
+                width: 100%;
+            }
+        }
+        .btn {width: 100px;}
+    }
+}
