@@ -1,7 +1,7 @@
 <!-- Header -->
-<%- include('../../_ejs/top.ejs', {
+<%- include('../_ejs/top.ejs', {
     title: "KCYCLE 경륜",
-    url: "../../../"
+    url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
@@ -11,8 +11,8 @@
         <!-- 상단영역 -->
         <div class="layoutTop">
             <!-- Top -->
-            <%- include('../../_ejs/header.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //상단영역 -->
@@ -25,18 +25,15 @@
 
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
-                <%- include('../../_ejs/sub_top.ejs', {
-                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '게시판 리스트',
-                    subText: '<b>일반 게시판 리스트</b> 입니다',
-                    url: "../../../",
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객센터'],
+                    subTitle: '공지사항',
+                    subText: '<b>경륜경정총괄본부</b>에서<br>주요 정보를 알려드려요.',
+                    url: "../../",
                 }) %>
 
-                <!-- 콤포넌트 템플릿 메뉴 -->
-                <%- include('./tp_menu.ejs', { }) %>
-
                 <div class="layoutContArea">
-
+                    
                     <div class="cptBoardList">
                         <div class="boardListArea">
 
@@ -298,13 +295,6 @@
                     
                 </div>
 
-                <!-- 서브 바텀 (담당자) -->
-                <%- include('../../_ejs/sub_btm.ejs', {
-                    team: '경륜운영팀',
-                    name: '차룡',
-                    phone: '02-2067-5711',
-                    url: "../../../",
-                }) %>
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
             </div>
@@ -316,8 +306,8 @@
         <!-- 하단영역 -->
         <div class="layoutFooter">
             <!-- Footer -->
-            <%- include('../../_ejs/footer.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //하단영역 -->
@@ -327,4 +317,4 @@
 
 
 <!-- Bottom -->
-<%- include('../../_ejs/bottom.ejs', { }) %>
+<%- include('../_ejs/bottom.ejs', { }) %>
