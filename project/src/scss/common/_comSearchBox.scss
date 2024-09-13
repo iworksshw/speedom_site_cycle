@@ -1,5 +1,6 @@
 .comSearchBox {
-    width: 100%; padding: 32px 40px; border-radius: 12px; background: var(--Bg-Line-bg-100); display: flex; flex-wrap: wrap; gap: 20px;
+    width: 100%; margin-top: 60px; padding: 32px 40px; border-radius: 12px; background: var(--Bg-Line-bg-100); display: flex; flex-wrap: wrap; gap: 20px;
+    &:first-child {margin-top: 0px;}
     .searchLine {
         width: 100%; display: flex; justify-content: space-between;
         &.col2 {
@@ -27,6 +28,33 @@
                 width: 100%;
             }
         }
-        .btn {width: 100px;}
+        .btn {
+            width: 100px; margin-left: 20px; flex-shrink: 0;
+        }
+    }
+    @include media('mobile') {
+        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; gap: 16px;
+        &:first-child {margin-top: 0px;}
+        .searchLine {
+            &.col2 {
+                .condition {
+                    width: calc(50% - 6px);
+                }
+            }
+            &.col4 {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    width: calc(50% - 6px);
+                }
+            }
+            .condition {
+                .title {
+                    display:none;
+                }
+            }
+            .btn {
+                width: 86px; margin-left: 10px;
+            }
+        }
     }
 }
