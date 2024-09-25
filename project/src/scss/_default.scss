@@ -27,6 +27,10 @@
   --gray-gray-40: #C6C6C6;
 
   --system-danger-50: #EB003B;
+
+  --zone-blue: #548CE0;
+  --zone-pink: #F45990;
+  --zone-green: #2EB273;
 }
 $basicFontSize:16px;
 
@@ -143,9 +147,16 @@ body.noScrl {height:100vh; overflow:hidden;}
 }
 
 /* ------------------- Font Color ------------------- */
+.tKey {color: var(---Primary) !important;}
+.tRed {color: var(--Point-Red) !important;}
 .tOrange {color: var(--Point-Orange) !important;}
 .tBlue {color: var(--Point-Blue) !important;}
 .tMint {color: var(--Point-Primary2) !important;}
+
+
+/* ------------------- Font Weight ------------------- */
+.tBold {font-weight: 600 !important;}
+.tEBold {font-weight: 700 !important;}
 
 /* z-index
 #탑메뉴 영역
