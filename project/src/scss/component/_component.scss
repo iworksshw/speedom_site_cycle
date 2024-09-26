@@ -12,6 +12,7 @@
 
 @import 'cptSection';   //기본 컨텐츠 단락
 @import 'cptCol2Section';   //기본 컨텐츠 2열 단락
+@import 'cptCol3Section';   //기본 컨텐츠 3열 단락
 
 @import 'cptEtcInfo';   //서브컨텐츠 추가 안내사항
 @import 'cptDescList';  //썸네일 포함 서브컨텐츠 설명 리스트
@@ -21,8 +22,9 @@
 @import 'cptImgGuideBox';  //이미지 포함 가이드 박스
 
 @import 'cptWordTab';   //용어사전 컴포넌트
-
-
-
-
-
+@import 'cpt2ImgboxSect';  // 경주권과 구매권 이미지박스 컴포넌트
+@import 'cptOrderGuide';   // 진행 순서 이미지 가이드
+@import 'cptNumbGuide';    // 이미지 넘버링 가이드
+@import 'cptProcess';   // 절차 순서 컴포넌트
+@import 'cptLaw';       // 관련 법령 컴포넌트
+@import 'cptCompanys';  // 판매업체 리스트 컴포넌트

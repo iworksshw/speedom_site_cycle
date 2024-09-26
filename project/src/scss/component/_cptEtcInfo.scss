@@ -17,10 +17,10 @@
                 }
             }
             dd {
-                margin-top: 32px;
+                margin-top: 32px; 
                 .infoList {
                     @extend .comBasicList;
-                    padding-left: 7px;
+                    padding-left: 7px; flex: 1 1 auto;
                     
                     .listGroup {
                         .item {
@@ -43,7 +43,35 @@
                         i {margin-top: 4px; font-style: normal; font-size: rem(16px); color: var(--Gray-800); font-weight: 300;display: block;}
                     }
                 }
+
+                .qnaList {
+                    .qnaItem {
+                        margin-top: 24px;
+                        &:first-child {margin-top: 0;}
+                        .qTit {
+                            line-height: 1.6;
+                            .num {font-size: rem(18px); color: var(---Primary); font-weight: 700;}
+                            .txt {font-size: rem(16px); color: var(--Gray-800); }
+                        }
+                        .aTxt {
+                            margin-top: 12px; border-radius: 8px; padding: 24px 30px; background: var(--Bg-Line-bg-200);
+                            .pharse {
+                                margin-top: 8px; font-size: rem(15px); line-height: 1.6; color: var(--Gray-800); word-break: keep-all;
+                                &:first-child {margin-top: 0;}
+                            }
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    // 컴포넌트 변경 Class
+    // 컨텐츠 2열
+    &.col2 {
+        dd {display: flex; column-gap: 24px; align-items: center;}
+        @include media("mobile"){
+            dd {flex-wrap: wrap; row-gap: 16px;}
         }
     }
 
@@ -72,6 +100,23 @@
                         .stepItem {
                             flex: 0 0 100%;
                             &::after {width: 20px; height: 20px; top: auto; right: auto; bottom: -28px; left: 50%; transform: translateX(-50%) rotate(90deg);}
+                        }
+                    }
+
+                    .qnaList {
+                        .qnaItem {
+                            margin-top: 20px;
+                            .qTit {
+                                display: flex; align-items: flex-start; column-gap: 5px;
+                                .num {font-size: rem(16px);}
+                                .txt {font-size: rem(15px);}
+                            }
+                            .aTxt {
+                                margin-top: 8px;padding: 20px 16px;
+                                .pharse {
+                                    margin-top: 8px; font-size: rem(14px);
+                                }
+                            }
                         }
                     }
                 }

@@ -211,6 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //탭메뉴 (1차)
     tabMenuInit();
+
+    //단어 탭
+    tabWords();
 });
 
 
@@ -391,6 +394,31 @@ function tabMenuInit(){
     tabMenuSwiper();
 }
 
+// 컨텐츠 탭
+function tabWords() {
+    const tabBtns = document.querySelectorAll(".cptWordTab .btnArea .btnItem");
+    const tabConts = document.querySelectorAll(".cptWordTab .contArea .tabCont");
+
+    tabBtns.forEach((tabBtn, index) => {
+        tabBtn.addEventListener("click", function(){
+            const btns = document.querySelectorAll(".cptWordTab .btnArea .btnItem .btn");
+            btns.forEach(btn => {
+                btn.classList.remove("Primary");
+                btn.classList.add("gLine");
+            });
+
+            const currentBtn = this.querySelector(".btn");
+
+            if (currentBtn) {
+                currentBtn.classList.remove("gLine");
+                currentBtn.classList.add("Primary");
+            } 
+
+            tabConts.forEach(tabCont => tabCont.classList.remove("on"));
+            tabConts[index].classList.add('on');
+        })
+    })
+}
 
 // ------------------------------- 아코디언 함수 ------------------------------- //
 //모드 아코디언 함수

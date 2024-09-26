@@ -1,0 +1,44 @@
+.cptCompanys {
+    margin-top: 60px;
+    .compGroup {
+        margin-top: 20px; display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: stretch;
+        .compItem {
+            flex: 0 1 calc(50% - 20px); border: 1px solid var(--Bg-Line-line-100); border-radius: 12px; padding: 0 40px 0 30px;
+            .compWrap {
+                min-height: 80px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; column-gap: 20px;
+                .name {
+                    font-size: rem(18px); color: var(--Gray-900); line-height: 1.4; font-weight: 700;white-space: nowrap;
+                    a {
+                        display: inline-block; 
+                        &::after {display: inline-block; content: ""; width: 28px; height: 28px; margin-left: 8px; border-radius: 50%; background: var(--Bg-Line-bg-200) url(../../images/common/ic_16_new_window.svg) center no-repeat; vertical-align: middle;}
+                    }
+                }
+                dd {
+                    display: flex; gap: 0 40px; flex-wrap: wrap; justify-content: flex-end; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 500;
+                    .person {padding-left: 24px; background: url(../../images/common/ic_16_person.svg) left 5px no-repeat;}
+                    .number {padding-left: 24px; background: url(../../images/common/ic_16_number.svg) left 5px no-repeat;}
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 28px;
+        .compGroup {
+            margin-top: 16px;gap: 24px 0;
+            .compItem {
+                flex: 0 0 100%; padding: 20px 24px;
+                .compWrap {
+                    min-height: auto; padding: 0; flex-wrap: wrap; justify-content: flex-start; row-gap: 16px;
+                    .name {
+                        width: 100%; font-weight: 600;
+                    }
+                    dd {
+                        gap: 4px 0; justify-content: flex-start; font-size: rem(15px);
+                        & > div {width: 100%;}
+                    }
+                }
+            }
+        }
+    }
+}
