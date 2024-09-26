@@ -1,7 +1,7 @@
 <!-- Header -->
-<%- include('../../_ejs/top.ejs', {
+<%- include('../_ejs/top.ejs', {
     title: "KCYCLE 경륜",
-    url: "../../../"
+    url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
@@ -11,8 +11,8 @@
         <!-- 상단영역 -->
         <div class="layoutTop">
             <!-- Top -->
-            <%- include('../../_ejs/header.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //상단영역 -->
@@ -25,62 +25,21 @@
 
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
-                <%- include('../../_ejs/sub_top.ejs', {
-                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '앨범 게시판 리스트',
-                    subText: '<b>앨범 게시판 리스트</b> 입니다',
-                    url: "../../../",
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객센터','행사안내'],
+                    subTitle: '알림',
+                    subText: '다양한 정보가 가득한<br> <b>알림 소식</b>을 확인해보세요.',
+                    url: "../../",
                 }) %>
 
-                <!-- 콤포넌트 템플릿 메뉴 -->
-                <%- include('./tp_menu.ejs', { }) %>
-
                 <div class="layoutContArea">
-
+                    
                     <div class="cptAlbumList">
                         <div class="albumListArea">
 
 
                             <!-- 검색 박스 -->
                             <div class="comSearchBox">
-                                <div class="searchLine col2">
-                                    <dl class="condition">
-                                        <dt class="title">구분</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <div class="iptSlt">
-                                                        <div class="sltBox">
-                                                            <div class="sltTitle">이벤트 전체</div>
-                                                            <ul class="optionGroup">
-                                                                <li class="option">이벤트 전체</li>
-                                                                <li class="option">드롭다운</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="condition">
-                                        <dt class="title">지점</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <div class="iptSlt">
-                                                        <div class="sltBox">
-                                                            <div class="sltTitle">지점별</div>
-                                                            <ul class="optionGroup">
-                                                                <li class="option">지점별</li>
-                                                                <li class="option">드롭다운</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                </div>
                                 <div class="searchLine">
                                     <dl class="condition">
                                         <dt class="title">검색어</dt>
@@ -109,7 +68,6 @@
                                                 <span class="mark ing">진행중</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -122,7 +80,6 @@
                                                 <span class="mark ing">진행중</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -135,7 +92,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -148,7 +104,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -161,7 +116,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -174,7 +128,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -187,7 +140,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -200,7 +152,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -213,7 +164,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -226,7 +176,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -239,7 +188,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                     <li class="listItem">
@@ -252,7 +200,6 @@
                                                 <span class="mark end">종료</span>
                                             </div>
                                             <div class="date">기간 : 2024.07.24~2024.08.11</div>
-                                            <div class="date">발표 : 2024.08.15</div>
                                         </div>
                                     </li>
                                 </ul>
@@ -278,13 +225,6 @@
                     
                 </div>
 
-                <!-- 서브 바텀 (담당자) -->
-                <%- include('../../_ejs/sub_btm.ejs', {
-                    team: '경륜운영팀',
-                    name: '차룡',
-                    phone: '02-2067-5711',
-                    url: "../../../",
-                }) %>
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
             </div>
@@ -296,8 +236,8 @@
         <!-- 하단영역 -->
         <div class="layoutFooter">
             <!-- Footer -->
-            <%- include('../../_ejs/footer.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //하단영역 -->
@@ -307,4 +247,4 @@
 
 
 <!-- Bottom -->
-<%- include('../../_ejs/bottom.ejs', { }) %>
+<%- include('../_ejs/bottom.ejs', { }) %>

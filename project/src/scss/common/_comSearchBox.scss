@@ -1,5 +1,6 @@
 .comSearchBox {
-    width: 100%; padding: 32px 40px; border-radius: 12px; background: var(--Bg-Line-bg-100); display: flex; flex-wrap: wrap; gap: 20px;
+    width: 100%; margin-top: 60px; padding: 32px 40px; border-radius: 12px; background: var(--Bg-Line-bg-100); display: flex; flex-wrap: wrap; gap: 20px;
+    &:first-child {margin-top: 0px;}
     .searchLine {
         width: 100%; display: flex; justify-content: space-between;
         &.col2 {
@@ -27,6 +28,36 @@
                 width: 100%;
             }
         }
-        .btn {width: 100px;}
+        .btn {
+            margin-left: 20px; flex-shrink: 0; display: inline-flex; align-items: center;
+            &.search::before {
+                content:""; width: 20px; height: 20px; margin-right: 4px; background: url(../../images/common/ic_20_search_white.svg) center no-repeat; display: inline-block;
+            }
+        }
+    }
+    @include media('mobile') {
+        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; gap: 16px;
+        &:first-child {margin-top: 0px;}
+        .searchLine {
+            &.col2 {
+                .condition {
+                    width: calc(50% - 6px);
+                }
+            }
+            &.col4 {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    width: calc(50% - 6px);
+                }
+            }
+            .condition {
+                .title {
+                    display:none;
+                }
+            }
+            .btn {
+                padding: 0 16px; margin-left: 10px;
+            }
+        }
     }
 }

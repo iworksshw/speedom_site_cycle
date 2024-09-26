@@ -8,7 +8,8 @@
     .infoEtc {margin-top: 8px; font-size: rem(16px); color: var(---Primary); font-weight: 600;line-height: 1.6;}
 
     @include media("mobile"){
-        min-height:auto; padding: 60px 0 20px 0; margin-top: 20px;
+        min-height:auto; margin-top: -20px; padding: 60px 0 20px 0;
+        &:first-child {margin-top: -20px;}
         &::after {border-radius: 18px;}
         .infoTit {font-size: rem(16px); }
         .info {font-size: rem(15px); }
