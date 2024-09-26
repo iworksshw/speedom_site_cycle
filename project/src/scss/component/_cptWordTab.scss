@@ -13,6 +13,11 @@
     .contArea {
         margin-top: 40px;
 
+        .tabCont {
+            display: none;
+            &.on {display: block;}
+        }
+
         .wordGroup {
             .wordItem {
                 margin-top: 48px;
@@ -30,6 +35,16 @@
                     }
                 }
                 dd {margin-top: 17px; font-size: rem(16px); color: var(--Gray-800); word-break: keep-all;}
+            }
+        }
+    }
+    @include media("1186px"){
+        .btnArea {
+            .btnGroup {
+                gap: 10px 1%; justify-content: flex-start; flex-wrap: wrap;
+                .btnItem {
+                    flex: 0 1 auto;
+                }
             }
         }
     }

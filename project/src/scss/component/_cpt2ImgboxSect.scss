@@ -1,0 +1,27 @@
+.cpt2ImgboxSect {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    .sectGroup {
+        margin-top: 20px; display: flex; flex-wrap: wrap; gap: 80px 100px; align-items: stretch;
+        &:first-child {margin-top: 0;}
+        .sectItem {
+            flex: 0 0 calc(50% - 50px);
+
+            .boxTit {
+                h2 {font-size: rem(20px); color: var(--Gray-900); font-weight: 700;}
+            }
+            .comBasicTxt {min-height: 52px;}
+            .comImgBox {min-height: 320px;}
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 30px;
+        .sectGroup {
+            margin-top: 24px; gap: 40px;
+            .sectItem {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

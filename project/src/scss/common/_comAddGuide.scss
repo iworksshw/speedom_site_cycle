@@ -2,14 +2,20 @@
     margin-top: 12px;
     &:first-child {margin-top: 0;}
     .guide {
-        padding-left: 20px; margin-top: 4px; font-size: rem(14px); color: var(--Gray-600); line-height: 1.6; background: url(../../images/common/ico_guide_default.svg) left 2px no-repeat;
+        padding-left: 20px; margin-top: 4px; font-size: rem(14px); color: var(--Gray-600); line-height: 1.6; background: url(../../images/common/ico_guide_default.svg) left 5px no-repeat;
         &:first-child {margin-top: 0;}
     }
 
     // 예외사항 클래스 추가
     // 붉은 글씨 안내 문구
     &.point {
-        .guide {padding-left: 24px; font-size: rem(15px); color: var(--Point-Red); font-weight: 500; background-image: url(../../images/common/ic_20_danger.svg);}
+        .guide {padding-left: 24px; font-size: rem(15px); color: var(--Point-Red); font-weight: 500; background-image: url(../../images/common/ic_20_danger.svg); background-position: left 2px;}
+    }
+
+    // H3 하단 내부 리스트
+    &.space {
+        padding-left: 18px;
+        @include media("mobile"){padding-left: 0;}
     }
 
     @include media("mobile"){

@@ -1,0 +1,21 @@
+.cptCol3Section {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    .sectGroup {
+        margin-top: 20px; display: flex; flex-wrap: wrap; gap: 80px 40px; align-items: stretch;
+        &:first-child {margin-top: 0;}
+        .sectItem {
+            flex: 0 0 calc(33.3333% - 26.6667px);
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 30px;
+        .sectGroup {
+            margin-top: 16px; gap: 32px;
+            .sectItem {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

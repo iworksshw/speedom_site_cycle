@@ -1,0 +1,38 @@
+.cptLaw {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+
+    .lawGroup {
+        margin-top: 20px;
+        .lawItem {
+            margin-top: 32px;
+            &:first-child {margin-top: 0;}
+
+            .lawTitH3 {
+                margin-bottom: 12px;
+                h3 {font-size: rem(18px); color: var(--Gray-900); font-weight: 700; line-height: 1.4;}
+            }
+            .lawTitH4 {font-size: rem(16px); font-weight: 700; color: var(--Gray-800); line-height: 1.6;}
+            .lawTxt {font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; word-break: keep-all;}
+            .lawLink {margin-top: 12px; font-size: rem(14px); color: var(---Primary); text-decoration: underline; text-underline-position: under; display: inline-block;}
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+    
+        .lawGroup {
+            margin-top: 16px;
+            .lawItem {
+                margin-top: 24px;
+    
+                .lawTitH3 {
+                    h3 {font-size: rem(16px);}
+                }
+                .lawTitH4 {font-size: rem(15px);}
+                .lawTxt {font-size: rem(15px);}
+                .lawLink {margin-top: 8px;}
+            }
+        }
+    }
+}
