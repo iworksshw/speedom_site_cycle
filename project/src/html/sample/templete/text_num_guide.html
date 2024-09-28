@@ -1,0 +1,258 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '타이틀, 텍스트, 리스트',
+                    subText: '대타이틀, 소타이틀, 텍스트, 리스트입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptNumbGuide">
+                        <div class="guideArea">
+                            <div class="imgArea">
+                                <img src="../../../images/contents/cont01_01_02_02_003.png" alt="경주 출주표. 상세 하단 참조" class="pcView">
+                                <img src="../../../images/contents/cont01_01_02_02_003_m.png" alt="경주 출주표. 상세 하단 참조" class="mView">
+                            </div>
+                            <div class="descArea">
+                                <ul class="numGroup">
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">15</span>
+                                            <span class="txt">최근 3회차, 2회차, 1회차 회전 성적</span>
+                                        </div>
+                                        <div class="desc">최근 3회차, 2회차, 1회차 일차별 성적을 말합니다.</div>
+                                    </li>
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">16</span>
+                                            <span class="txt">금회성적</span>
+                                        </div>
+                                        <div class="desc">해당선수의 금회 1일차, 2일차 성적을 말합니다.</div>
+                                    </li>
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">17</span>
+                                            <span class="txt">입상순위 및 전법</span>
+                                        </div>
+                                        <div class="desc">해당경주의 입상순위 및 전법을 말합니다.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cptNumbGuide">
+                        <div class="guideArea">
+                            <div class="imgArea">
+                                <img src="../../../images/contents/cont01_01_02_02_004.png" alt="경주 출주표. 상세 하단 참조" class="pcView">
+                                <img src="../../../images/contents/cont01_01_02_02_004_m.png" alt="경주 출주표. 상세 하단 참조" class="mView">
+                            </div>
+                            <div class="descArea">
+                                <ul class="numGroup">
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">18</span>
+                                            <span class="txt">상대전적(승/횟수)</span>
+                                        </div>
+                                        <div class="desc">직전 연도부터 현재까지 상대되는 두 선수가 동반 출전한 경주의 순위상 승패 기록의 누계를 말합니다.</div>
+                                    </li>
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">19</span>
+                                            <span class="txt">동반입상전적(입상/횟수)</span>
+                                        </div>
+                                        <div class="desc">직전 연도부터 현재까지 상대되는 두 선수의 동반 출전 경주에서 1위~3위로 동반입상한 횟수의 누계를 말합니다.</div>
+                                    </li>
+                                    <li class="numItem">
+                                        <div class="tit">
+                                            <span class="num">20</span>
+                                            <span class="txt">경주규칙위반점 잔여점수</span>
+                                        </div>
+                                        <div class="desc">선수 개인별 위반점을 3회차 합산하여 50점 초과시 1회차 출전정지 처분을 받게되며, 50점은 소멸됩니다.</div>
+                                        
+                                        <div class="comAddGuide"> 
+                                            <p class="guide">최근 3회차 외 전전회차 위반점(최근2회) 순차적 소멸 적용</p>
+                                        </div>
+
+                                        <ul class="arwArea">
+                                            <li class="arwItem">
+                                                <div class="comContTable">
+                                                    <table class="basic">
+                                                        <caption>경주규칙위반점 표 : 횟수별 별 구분기준을 포함한 표</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="4">경주규칙위반점</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>최근 2회</th>
+                                                                <th>최근 1회</th>
+                                                                <th>금회</th>
+                                                                <th>잔여점수</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>25</td>
+                                                                <td>15</td>
+                                                                <td>5</td>
+                                                                <td>5</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </li>
+                                            <li class="arwItem">
+                                                <div class="comContTable">
+                                                    <table class="basic">
+                                                        <caption>위반점 적용 표 : 위반점 적용 기준을 포함한 표</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>위반점 적용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>3회 위반점 45점 중 전전회차 위반점(25점) 소멸</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>차회출전 시 위반점 20점 적용 (잔여점수 30점)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="arwArea">
+                                            <li class="arwItem">
+                                                <div class="comContTable">
+                                                    <table class="basic">
+                                                        <caption>경주규칙위반점 표 : 횟수별 별 구분기준을 포함한 표</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="4">경주규칙위반점</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>최근 2회</th>
+                                                                <th>최근 1회</th>
+                                                                <th>금회</th>
+                                                                <th>잔여점수</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>25</td>
+                                                                <td>15</td>
+                                                                <td>5</td>
+                                                                <td>5</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </li>
+                                            <li class="arwItem">
+                                                <div class="comContTable">
+                                                    <table class="basic">
+                                                        <caption>위반점 적용 표 : 위반점 적용 기준을 포함한 표</caption>
+                                                        <colgroup>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>위반점 적용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>3회 위반점 합계 60점 -&gt; 1회차 출전정지, 50점 소멸</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>차회출전 시 위반점 10점 적용 (잔여점수 40점)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>

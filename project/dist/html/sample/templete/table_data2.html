@@ -1115,17 +1115,21 @@
 <div class="tplMenu">
     <ul class="menuList">
         <li class="item"><a href="./text_list.html">타이틀, 텍스트, 리스트</a></li>
+        <li class="item"><a href="./text_law.html">텍스트 : 법령</a></li>
+        <li class="item"><a href="./text_num_guide.html">텍스트 : 이미지+숫자+설명</a></li>
         <li class="item"><a href="./sub_info.html">서브 상단 공통 정보 상자</a></li>
         <li class="item"><a href="./tab.html">탭</a></li>
         <li class="item"><a href="./img.html">이미지</a></li>
         <li class="item"><a href="./table_basic.html">컨텐츠 테이블</a></li>
         <li class="item"><a href="./table_data.html">데이터 테이블1</a></li>
         <li class="item"><a href="./table_data2.html">데이터 테이블2</a></li>
+        <li class="item"><a href="./table_form.html">폼 테이블</a></li>
         <li class="item"><a href="./board_list.html">일반 게시판 리스트</a></li>
         <li class="item"><a href="./album_list.html">앨범 게시판 리스트</a></li>
         <li class="item"><a href="./board_view.html">게시판 상세</a></li>
         <li class="item"><a href="./board_top.html">각종 상단 모음</a></li>
         <li class="item"><a href="./other01.html">기타 01</a></li>
+        <li class="item"><a href="./other02.html">기타 02</a></li>
     </ul>
 </div>
 
@@ -1138,8 +1142,8 @@
                                 <h3>특별 승·강급</h3>
                             </div>
 
-                            <div class="comDataTable row"><!-- addClass - row: th가 body에 존재 -->
-                                <div class="tableArea">
+                            <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                <div class="tableArea sizeL">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
@@ -1220,7 +1224,115 @@
                                 </div>
                             </div>
 
-                            
+                            <div class="comTitH3">
+                                <h3>특별 승·강급</h3>
+                            </div>
+
+                            <!--
+                            .tBold.tZoneGreen : 광명 
+                            .tBold.tZoneBlue : 창원 
+                            .tBold.tZonePink : 부산 
+
+                            default : 선발, 우수 특선
+                            .tBold : 특준, 선준, 우준
+                            .tBold.tMint : 선결
+                            .tBold.tBlue : 우결
+                            .tBold.tOrange : 결승
+                            .tBold.tRed : 특우
+
+                            .legend.type01 : 선행
+                            .legend.type02 : 젖히기
+                            .legend.type03 : 추입
+                            .legend.type04 : 마크
+                            -->
+                            <div class="comDataTable both"> <!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                <div class="tableArea sizeXL"> <!-- addClass - sizeS : 최소사이즈 600px, sizeM : 최소사이즈 800px, sizeL : 최소사이즈 1000px -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:90px;">
+                                            <col style="width:70px;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:70px;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:70px;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:70px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" class="btmLine">선수명</th> <!-- addClass - btmLine : 가장 하단에 위치함 (진한 바닥 라인) -->
+                                                <th colspan="4">최근 3회전 성적</th>
+                                                <th colspan="4">최근 3회전 성적</th>
+                                                <th colspan="4">최근 3회전 성적</th>
+                                                <th colspan="2">금회 성적</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="noStand">장소/일자</th> <!-- addClass - noStand : 가장 좌측(기준)이 아님 -->
+                                                <th>1일차</th>
+                                                <th>2일차</th>
+                                                <th>3일차</th>
+                                                <th>장소/일자</th>
+                                                <th>1일차</th>
+                                                <th>2일차</th>
+                                                <th>3일차</th>
+                                                <th>장소/일자</th>
+                                                <th>1일차</th>
+                                                <th>2일차</th>
+                                                <th>3일차</th>
+                                                <th>장소/일자</th>
+                                                <th>1일차</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="center">
+                                                    <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                </th>
+                                                <td><span class="zone green">광</span> 0301</td>
+                                                <td><span class="rating">선발</span> 10-4 <span class="legend type01">선</span></td>
+                                                <td><span class="rating">우수</span> 9-3</td>
+                                                <td><span class="rating">특선</span> 6-7</td>
+                                                <td><span class="zone blue">창</span> 0301</td>
+                                                <td><span class="rating bold">특준</span> 10-4 <span class="legend type02">젖</span></td>
+                                                <td><span class="rating bold">선준</span> 10-4</td>
+                                                <td><span class="rating bold">우준</span> 10-4</td>
+                                                <td><span class="zone pink">부</span> 0301</td>
+                                                <td><span class="rating mint">선결</span> 9-3 <span class="legend type03">추</span></td>
+                                                <td><span class="rating blue">선준</span> 10-4</td>
+                                                <td><span class="rating orange">특준</span> 10-4</td>
+                                                <td><span class="zone green">광</span> 0301</td>
+                                                <td><span class="rating red">특우</span> 10-4 <span class="legend type04">마</span></td>
+                                                <!--
+                                                .zone green : 광명 
+                                                .zone blue : 창원 
+                                                .zone pink : 부산 
+                    
+                                                .rating : 선발, 우수 특선
+                                                .rating bold : 특준, 선준, 우준
+                                                .rating mint : 선결
+                                                .rating blue : 우결
+                                                .rating orange : 결승
+                                                .rating red : 특우
+                    
+                                                .legend type01 : 선행
+                                                .legend type02 : 젖히기
+                                                .legend type03 : 추입
+                                                .legend type04 : 마크
+                                                -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
 
                             
 
