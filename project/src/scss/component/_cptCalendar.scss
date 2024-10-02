@@ -1,0 +1,71 @@
+.cptCalendar {
+    .calenInfo {
+        width: 100%; padding: 24px 32px; border-radius: 16px; background: var(--Bg-Line-bg-50);
+        .markInfo {
+            padding-bottom: 16px; border-bottom: 1px solid var(--Bg-Line-line-200); margin-bottom: 12px; display: flex; column-gap: 20px;
+            .item {
+                .mark {
+                    font-size: rem(16px); color: var(--Gray-800); font-weight: 600; line-height: 1.6;
+                    &::before {display: inline-block; content: ""; width: 16px; height: 16px; border-radius: 50%; margin-right:8px;}
+                    &.mint::before {background: var(--Point-Primary2);}
+                    &.blue::before {background: var(--Point-Blue);}
+                    &.yellow::before {background: #ffb444;}
+                }
+            }
+        }
+    }
+    .calenWrap {
+        margin-top: 60px;
+        .yearData {
+            text-align: center;
+            .yearArw {
+                width: 40px; height: 40px; font-size: 0; background: url(../../images/common/ic_40_arw_prev_k.svg) center no-repeat; vertical-align: middle;
+                &.next {transform: rotate(180deg);}
+            }
+            .yearTxt {margin: 0 60px; font-size: rem(50px); font-weight: 600; line-height: 1.3; color: var(--Gray-900); display: inline-block; vertical-align: middle;}
+        }
+        .yearGroup {
+            margin-top: 40px; display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch; justify-content: center;
+            .yearItem {
+                flex: 0 0 calc(25% - 30px);
+                &.nowMonth {
+                    border-radius: 16px; border: 1px solid var(--Point-Primary2); background: #fff; box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
+                    .weekDays {width: calc(100% - 20px); margin-left: 10px; padding: 6px; }
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        .calenInfo {
+            width: calc(100% + 32px); margin-left: -16px; padding: 24px 16px 20px; border-radius: 0; border: 1px solid var(--Bg-Line-line-200); border-left: none; border-right: none;
+            .markInfo {
+                padding-bottom: 20px; column-gap: 14px;
+                .item {
+                    .mark {
+                        font-size: rem(14px); 
+                        &::before {width: 16px; height: 16px;margin-right:4px;vertical-align: text-top;}
+                    }
+                }
+            }
+        }
+        .calenWrap {
+            margin-top: 40px;
+            .yearData {
+                .yearArw {
+                    width: 32px; height: 32px; background-size:32px; 
+                }
+                .yearTxt {margin: 0 40px; font-size: rem(28px); color: var(--Gray-800);}
+            }
+            .yearGroup {
+                margin-top: 20px; gap: 20px; 
+                .yearItem {
+                    flex: 0 0 100%;
+                    &.nowMonth {
+                        .weekDays {width: calc(100% - 20px); margin-left: 10px; padding: 2px; }
+                    }
+                }
+            }
+        }
+    }
+}

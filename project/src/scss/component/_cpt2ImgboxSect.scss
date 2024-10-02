@@ -21,6 +21,8 @@
             margin-top: 24px; gap: 40px;
             .sectItem {
                 flex: 0 0 100%;
+                .comBasicTxt {min-height:auto;}
+                .comImgBox {min-height: auto;}
             }
         }
     }
