@@ -1,0 +1,105 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '타이틀, 텍스트, 리스트',
+                    subText: '대타이틀, 소타이틀, 텍스트, 리스트입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptLaw">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>경륜·경정법</h2>
+                            </div>
+
+                            <ul class="lawGroup">
+                                <li class="lawItem">
+                                    <div class="lawTitH3">
+                                        <h3>경륜ㆍ경정법[법률 제19592호, 2023.8.8., 타법개정]</h3>
+                                    </div>
+                                    <h4 class="lawTitH4">제1장 총칙</h4>
+                                    <p class="lawTxt">제1조(목적) 이 법은 경륜(競輪) 및 경정(競艇)을 공정하게 시행하고 원활하게 보급하여 국민의 여가 선용과 국민 체육 진흥을 도모하고, 청소년의 건전육성과 지방재정 확충을 위한 재원을 마련하며,자전거 및 모터보트 경기의 수준 향상에 이바지함을 목적으로 한다.</p>
+                                    <a href="#" class="lawLink" target="_blank" title="새창열림">법령 자세히보기</a>
+                                </li>
+                                <li class="lawItem">
+                                    <div class="lawTitH3">
+                                        <h3>경륜ㆍ경정법 시행령[대통령령 제34258호, 2024.2.27., 타법개정]</h3>
+                                    </div>
+                                    <h4 class="lawTitH4">제1장 총칙</h4>
+                                    <p class="lawTxt">제1조(목적) 이 영은 「경륜·경정법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.</p>
+                                    <a href="#" class="lawLink" target="_blank" title="새창열림">법령 자세히보기</a>
+                                </li>
+                                <li class="lawItem">
+                                    <div class="lawTitH3">
+                                        <h3>경륜ㆍ경정법 시행규칙&nbsp;[문화체육관광부령 제480호, 2022.5.12., 일부개정]</h3>
+                                    </div>
+                                    <p class="lawTxt">제1조(목적) 이 규칙은 「경륜·경정법」 및 「경륜·경정법 시행령」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.</p>
+                                    <a href="#" class="lawLink" target="_blank" title="새창열림">법령 자세히보기</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>

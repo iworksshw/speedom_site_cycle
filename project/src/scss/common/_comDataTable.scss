@@ -4,14 +4,19 @@
     &:first-child {margin-top:0;}
     .tableArea {
         width:100%; border-top: 2px solid var(--Gray-900); overflow: auto;
+        &.sizeS table {min-width: 600px;}
+        &.sizeM table {min-width: 800px;}
+        &.sizeL table {min-width: 1000px;}
+        &.sizeXL table {min-width: 1200px;}
         table {
-            width:100%; border-spacing: 0; border-collapse: separate; table-layout: fixed;
+            width:100%; border-spacing: 0; border-collapse: separate; /*table-layout: fixed;*/
             thead {
                 tr {
                     th { 
                         padding: 20px 5px; color: var(--Gray-900); font-size: rem(15px); font-weight: 600; line-height: 1.3; border-right: 1px solid var(--Bg-Line-line-200);
-                        border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100); position: sticky; top: 0; left: 0;
+                        border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100); position: sticky; top: 0;
                         &:last-child {border-right: 0;}
+                        &.btmLine {border-bottom: 1px solid var(--Gray-900);}
                     }
                     &:last-child {
                         th {
@@ -24,7 +29,7 @@
                 tr {
                     th {
                         padding: 20px 5px; color: var(--Gray-900); font-size: rem(15px); font-weight: 600; line-height: 1.3; border-right: 1px solid var(--Gray-300); 
-                        border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100); position: sticky; left: 0;
+                        border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100);
                         &:last-child {border-right: 0;}
                     }
                     td {
@@ -119,29 +124,46 @@
             }
         }
     }
-    &.row {
+    &.both {
         .tableArea {
             table {
                 thead {
                     tr {
                         th {
-                            &:first-child {border-right: 1px solid var(--Gray-300); z-index: 10;}
+                            &:first-child {border-right: 1px solid var(--Gray-300); z-index: 10; left: 0;}
+                            &.noStand {border-right: 1px solid var(--Bg-Line-line-200); left: auto; z-index: 0;}
                         }
                     }
                 }
                 tbody {
                     tr {
                         th {
-                            border-right: 1px solid var(--Gray-300);
+                            border-right: 1px solid var(--Gray-300); position: sticky; left: 0; z-index: 5;
                         }
                     }
                 }
             }
         }
+    }
+    &.row {
+        .tableArea {
+            table {
+                tbody {
+                    tr {
+                        th {
+                            border-right: 1px solid var(--Gray-900); position: sticky; left: 0; z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include media("tablet"){
 
     }
     @include media("mobile"){
         .tableArea {
+            width: calc(100% + 32px); margin-left: -16px;
             table {
                 thead {
                     tr {
@@ -162,20 +184,6 @@
                 }
             }
         }
-        &.row {
-            .tableArea {
-                table {
-                    tbody {
-                        tr {
-                            th {
-                                border-right: 1px solid var(--Gray-900);
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
     }
     .profile {
         width: max-content; display: inline-flex;
@@ -185,7 +193,7 @@
         }
         .info {
             margin-left: 8px; display: block; 
-            
+            .name {justify-content: flex-start;}
             .other {margin-top: 4px; display: flex; white-space: nowrap;}
         }
     }
@@ -209,9 +217,30 @@
         &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
         &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
     }
-    .name {display: flex; align-items: center;}
+    .name {display: flex; align-items: center; justify-content: center;}
     .player {
         margin-left: 4px; font-size: rem(15px); color: var(--font-800); font-weight: 600; line-height: 1.4; white-space: nowrap; display: inline-block;
         &[href] {line-height: 18px; border-bottom: 1px solid var(--Gray-300);}
+    }
+
+    //지역, 등급, 범례
+    .zone {
+        &.green {color: var(--zone-green); font-weight: 600;} //광명
+        &.pink {color: var(--zone-pink); font-weight: 600;}  //부산
+        &.blue {color: var(--zone-blue); font-weight: 600;}  //창원
+    }
+    .rating {                               //선발, 우수 특선
+        &.bold {font-weight: 600;}          //특준, 선준, 우준
+        &.mint {color: var(--Point-Primary2); font-weight: 600;}    //선결
+        &.blue {color: var(--Point-Blue); font-weight: 600;}        //우결
+        &.orange {color: var(--Point-Orange); font-weight: 600;}    //결승
+        &.red {color: #f00; font-weight: 600;}                    //특우
+    }
+    .legend {
+        width: 16px; height: 16px; margin-bottom: 1px; color: #fff; font-size: rem(11px); font-weight: 700; line-height: 16px; border-radius: 4px; vertical-align: middle; display: inline-block;
+        &.type01 {background: #2C77BC;} //선행
+        &.type02 {background: #34ADA8;} //젖히기
+        &.type03 {background: #F07E3F;} //추입
+        &.type04 {background: #92BA2B;} //마크
     }
 }

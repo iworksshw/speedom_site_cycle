@@ -154,11 +154,23 @@ body.noScrl {height:100vh; overflow:hidden;}
 .tOrange {color: var(--Point-Orange) !important;}
 .tBlue {color: var(--Point-Blue) !important;}
 .tMint {color: var(--Point-Primary2) !important;}
-
+.tZoneGreen {color: var(--zone-green) !important;} //광명
+.tZonePink {color: var(--zone-pink) !important;}  //부산
+.tZoneBlue {color: var(--zone-blue) !important;}  //창원
 
 /* ------------------- Font Weight ------------------- */
 .tBold {font-weight: 600 !important;}
 .tEBold {font-weight: 700 !important;}
+
+
+
+
+
+/* ------------------- scroll bar (PC, Tablet) ------------------- */
+@media screen and (min-width: 768) {
+  
+}
+
 
 /* z-index
 #탑메뉴 영역

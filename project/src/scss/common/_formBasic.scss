@@ -112,6 +112,16 @@
     &:last-child {margin-right:0;}
 }
 
+/* ----- 셀렉트 ----- */
+select.iptSlt {
+    width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-600); border-radius: 8px; border: 1px solid var(--Gray-300); 
+    background:#fff url(../../images/common/ic_24_down_arr.svg) right 18px center no-repeat;
+    &.typeLine {
+        padding: 0 26px 0 2px; color: var(--Gray-900); font-size: 1.25rem; font-weight: 600; border-radius: 0; border: 0; border-bottom: 2px solid var(--Gray-800);
+        background:#fff url(../../images/common/ic_24_down_arr.svg) right 2px center no-repeat;
+    }
+}
+
 /* ----- 디자인셀렉트/드롭다운 ----- */
 .iptSlt {
     width: 100%; height: 48px; position: relative;
