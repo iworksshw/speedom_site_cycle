@@ -40,7 +40,12 @@
     width: 100%; height: 48px; padding: 0 16px; color: var(--Gray-800); font-size: rem(16px); font-weight: 400; line-height: normal; border-radius: 8px; 
     border: 1px solid var(--Gray-300); background-color: #FFF; 
     &::placeholder {color: var(--Gray-300);}
-    &:focus {padding: 0 15px; border: 2px solid var(--Gray-800); outline: none;;}
+    &:focus {
+        padding: 0 15px; border: 2px solid var(--Gray-800); outline: none;
+        @include media ('mobile') {
+            padding: 0 12px;
+        }
+    }
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
     &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
     @include media ('mobile') {
@@ -216,10 +221,10 @@ select.iptSlt {
     width: max-content; height: 48px; padding: 0 24px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px; display: inline-block;
     
     //크기별 (사용 미정)
-    &.lg {height: 56px; padding: 0 32px; font-size: rem(20px);}
-    &.md {height: 48px; padding: 0 24px; font-size: rem(16px);}
-    &.sm {height: 36px; padding: 0 20px; font-size: rem(14px);}
-    &.xs {height: 32px; padding: 0 12px; font-size: rem(14px);}
+    &.lg {height: 56px; padding: 0 32px; font-size: rem(20px); line-height: 54px;}
+    &.md {height: 48px; padding: 0 24px; font-size: rem(16px); line-height: 46px;}
+    &.sm {height: 36px; padding: 0 20px; font-size: rem(14px); line-height: 34px;}
+    &.xs {height: 32px; padding: 0 12px; font-size: rem(14px); line-height: 30px;}
 
     //색깔별
     &.Primary {
