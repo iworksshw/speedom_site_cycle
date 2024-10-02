@@ -3,18 +3,18 @@
     .compGroup {
         margin-top: 20px; display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: stretch;
         .compItem {
-            flex: 0 1 calc(50% - 20px); border: 1px solid var(--Bg-Line-line-100); border-radius: 12px; padding: 0 40px 0 30px;
+            flex: 0 1 calc(50% - 20px); border: 1px solid var(--Bg-Line-line-100); border-radius: 12px; padding: 0 30px;
             .compWrap {
-                min-height: 80px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; column-gap: 20px;
+                min-height: 80px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; column-gap: 20px; flex-wrap: wrap;
                 .name {
-                    font-size: rem(18px); color: var(--Gray-900); line-height: 1.4; font-weight: 700;white-space: nowrap;
+                    font-size: rem(18px); color: var(--Gray-900); line-height: 1.4; font-weight: 700;white-space: nowrap; flex: 1 0 auto;
                     a {
                         display: inline-block; 
                         &::after {display: inline-block; content: ""; width: 28px; height: 28px; margin-left: 8px; border-radius: 50%; background: var(--Bg-Line-bg-200) url(../../images/common/ic_16_new_window.svg) center no-repeat; vertical-align: middle;}
                     }
                 }
                 dd {
-                    display: flex; gap: 0 40px; flex-wrap: wrap; justify-content: flex-end; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 500;
+                    min-width: 355px; display: flex; gap: 0 40px; flex-wrap: wrap; justify-content: flex-start; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 500; flex: 0 1 auto;
                     .person {padding-left: 24px; background: url(../../images/common/ic_16_person.svg) left 5px no-repeat;}
                     .number {padding-left: 24px; background: url(../../images/common/ic_16_number.svg) left 5px no-repeat;}
                 }
@@ -31,10 +31,10 @@
                 .compWrap {
                     min-height: auto; padding: 0; flex-wrap: wrap; justify-content: flex-start; row-gap: 16px;
                     .name {
-                        width: 100%; font-weight: 600;
+                        width: 100%; font-weight: 600; flex: 0 0 100%;
                     }
                     dd {
-                        gap: 4px 0; justify-content: flex-start; font-size: rem(15px);
+                        min-width: auto; gap: 4px 0; justify-content: flex-start; font-size: rem(15px); flex: 0 0 100%;
                         & > div {width: 100%;}
                     }
                 }

@@ -214,8 +214,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //단어 탭
     tabWords();
-});
 
+    //캘린더 팝업
+    calendarPop()
+
+    window.addEventListener("resize", calendarPop);
+});
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
 function designSelect() {
@@ -263,6 +267,51 @@ function openAlert($altName){
 }
 function closeAlert($altName){
     document.querySelector("#"+$altName).classList.remove("on");
+}
+
+// 캘린더 팝업
+function calendarPop() {
+    const calAreas = document.querySelectorAll(".comCalendar .dayGroup .dayItem");
+    let frame = document.querySelector(".cptCalendar").getBoundingClientRect();
+
+    calAreas.forEach(calArea => {
+        const btn = calArea.querySelector(".mark");
+        const allPops = document.querySelectorAll(".calenPopup");
+        const pop = calArea.querySelector(".calenPopup");
+        const closeBtn = calArea.querySelector(".popClose");
+        let btnRect = btn.getBoundingClientRect();
+
+        btn.addEventListener("click", function(){
+            if(pop){
+                allPops.forEach(allPop => allPop.classList.remove("open"));
+                pop.classList.add("open");
+
+                // PC Position right / left 보완
+                if(window.matchMedia("(min-width:768px)").matches){
+                    if(frame.right - btnRect.right < 155) {
+                        pop.style.cssText = "left:auto; transform:none;";
+                        pop.style.right = `${-(frame.right - btnRect.right)}px`;
+                    } else if (btnRect.left - frame.left < 155) {
+                        pop.style.transform = "none";
+                        pop.style.left = `${-(btnRect.left - frame.left)}px`;
+                    }
+                } else {
+                    if(frame.right - btnRect.right < 135) {
+                        pop.style.cssText = "left:auto; transform:none;";
+                        pop.style.right = `${-(frame.right - btnRect.right - 10)}px`;
+                    }
+                }
+                
+            }
+        })
+
+        if(closeBtn) {
+            closeBtn.addEventListener("click", function(){
+                pop.classList.remove("open");
+            })
+        }
+        
+    });
 }
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
