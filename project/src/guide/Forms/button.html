@@ -155,6 +155,7 @@
     <br>.m30 : 버튼이 아래로 떨어지지 않으며 첫번째 버튼 너비가 30%가 됩니다
     <br>.m50 : 버튼이 아래로 떨어지지 않으며 두개의 버튼이 50%가 됩니다
     <br>.m70 : 버튼이 아래로 떨어지지 않으며 두번째 버튼 너비가 30%가 됩니다
+    <br>.min : align 영역에 버튼이 하나만 들어가며, 중앙정렬되고 너비는 버튼 컨텐츠의 너비가 된다.
     <br>이외에 .btnBox내부에 버튼이 3개 이상 존재할 경우 새롭게 클래스를 추가하여 만들고 가이드에 추가합니다
     <br>ex) 버튼 3개인데 첫번째 버튼 100% 두번째,세번째 버튼 50%
 </div>
@@ -181,6 +182,24 @@
     <div class="alignR">
         <div class="btnBox m70">
             <button class="btn gray">취소</button>
+            <button class="btn dkLine">목록</button>
+        </div>
+    </div>
+</div>
+
+<div class="comBtnGroup">
+    <div class="alignL">
+        <div class="btnBox min">
+            <button class="btn Primary">확인</button>
+        </div>
+    </div>
+    <div class="alignC">
+        <div class="btnBox min">
+            <button class="btn gray">취소</button>
+        </div>
+    </div>
+    <div class="alignR">
+        <div class="btnBox min">
             <button class="btn dkLine">목록</button>
         </div>
     </div>
