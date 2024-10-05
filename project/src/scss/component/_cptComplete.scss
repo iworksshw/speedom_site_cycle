@@ -1,7 +1,7 @@
 /* --------------------------- 완료 안내문 --------------------------- */
 .cptComplete {
-    width: 100%; margin-top: 100px; display: flex; flex-wrap: wrap; justify-content: center;
-    &.mgh {margin-top: 140px;}
+    width: 100%; margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center;
+    &.mgh {margin-top: 80px;}
     .compArea {
         padding-top: 116px; background: url(../../images/common/ic_76_complete.svg) center top no-repeat;
         .title {
@@ -17,8 +17,8 @@
     }
 
     @include media('mobile'){
-        margin-top: 80px;
-        &.mgh {margin-top: 80px;}
+        margin-top: 40px;
+        &.mgh {margin-top: 40px;}
         .compArea {
             padding-top: 84px; background: url(../../images/common/ic_76_complete.svg) center top / 60px no-repeat;
             .title {
