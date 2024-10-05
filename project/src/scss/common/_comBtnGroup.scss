@@ -33,4 +33,9 @@
         }
     }
 
+    //조건
+    &.section {
+        margin-top: 60px;
+        @include media('mobile') {margin-top: 40px;}
+    }
 }
