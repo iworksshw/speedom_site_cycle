@@ -270,48 +270,59 @@ function closeAlert($altName){
 }
 
 // 캘린더 팝업
+// 상대좌표 함수
+function getDocumentOffset(element) {
+    let offsetTop = 0;
+    let offsetLeft = 0;
+
+    while (element) {
+        offsetTop += element.offsetTop;
+        offsetLeft += element.offsetLeft;
+        element = element.offsetParent;
+    }
+
+    const right = offsetLeft + (element ? element.offsetWidth : 0);
+
+    return {
+        top: offsetTop,
+        left: offsetLeft,
+        right: right
+    };
+}
+
+// 캘린더 OPEN/Close
 function calendarPop() {
-    const calAreas = document.querySelectorAll(".comCalendar .dayGroup .dayItem");
-    let frame = document.querySelector(".cptCalendar").getBoundingClientRect();
+    const calFrame = document.querySelector(".cptCalendar");
+    let frameXY = getDocumentOffset(calFrame);
+    const calMarks = document.querySelectorAll(".cptCalendar .dayItem .mark");
+    const calPop = document.querySelector(".cptCalendar .calenPopup");
+    const popClose = calPop.querySelector(".popClose");
 
-    calAreas.forEach(calArea => {
-        const btn = calArea.querySelector(".mark");
-        const allPops = document.querySelectorAll(".calenPopup");
-        const pop = calArea.querySelector(".calenPopup");
-        const closeBtn = calArea.querySelector(".popClose");
-        let btnRect = btn.getBoundingClientRect();
+    // Popup Open
+    calMarks.forEach(calMark => {
+        calMark.addEventListener("click", function(){
+            let nowBtn = this;
+            let btnXY = getDocumentOffset(nowBtn);
 
-        btn.addEventListener("click", function(){
-            if(pop){
-                allPops.forEach(allPop => allPop.classList.remove("open"));
-                pop.classList.add("open");
+            calPop.classList.add("open");
 
-                // PC Position right / left 보완
-                if(window.matchMedia("(min-width:768px)").matches){
-                    if(frame.right - btnRect.right < 155) {
-                        pop.style.cssText = "left:auto; transform:none;";
-                        pop.style.right = `${-(frame.right - btnRect.right)}px`;
-                    } else if (btnRect.left - frame.left < 155) {
-                        pop.style.transform = "none";
-                        pop.style.left = `${-(btnRect.left - frame.left)}px`;
-                    }
+            if(window.matchMedia("(min-width:768px)").matches){
+                calPop.style.top = `${btnXY.top - frameXY.top + 38}px`;
+
+                if(calFrame.getBoundingClientRect().right - btnXY.right < 180) {
+                    calPop.style.left = "auto";
+                    calPop.style.right = 0;
                 } else {
-                    if(frame.right - btnRect.right < 135) {
-                        pop.style.cssText = "left:auto; transform:none;";
-                        pop.style.right = `${-(frame.right - btnRect.right - 10)}px`;
-                    }
+                    calPop.style.left = `${btnXY.left - frameXY.left - 168}px`;
                 }
-                
             }
         })
+    })
 
-        if(closeBtn) {
-            closeBtn.addEventListener("click", function(){
-                pop.classList.remove("open");
-            })
-        }
-        
-    });
+    // Popup Close
+    popClose.addEventListener("click", function(){
+        calPop.classList.remove("open");
+    })
 }
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
