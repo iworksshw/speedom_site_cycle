@@ -1,0 +1,39 @@
+.comInfoLayerPop {
+    width: 100%; max-width: 455px; display: none; position: absolute; top: 28px; left: 0; z-index: 9;
+    &.on {display: block;}
+
+    .popWrap {
+        width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--Bg-Line-line-100); background: #fff;
+        .popHead {
+            margin-bottom: 12px; display: flex;
+            .popTit {font-size: rem(15px); color: var(---Primary); font-weight: 600; line-height: 1.4;}
+            .popClose {width: 16px;height: 16px; margin-left: auto; font-size: 0; background: url(../../images/common/ic_24_pop_close.svg) center / 16px no-repeat;}
+        }
+        .popBody {
+            width: 100%; height: 205px; overflow-y: auto;
+            &:hover::-webkit-scrollbar-thumb {
+                background: rgba(87, 87, 87, 0.54);
+            }
+            &::-webkit-scrollbar {width:30px; padding:0 10px}
+            &::-webkit-scrollbar-thumb {padding:0 10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
+            &::-webkit-scrollbar-track{background: rgba(0,0,0,0);}
+            &::-webkit-scrollbar-button {display: none;}
+            .carrer {
+                width: 100%; margin-top: 12px; display: flex; column-gap: 12px; align-items: flex-start;
+                &:first-child {margin-top: 0;}
+                span {
+                    display: inline-block;font-size: rem(13px);line-height: 1.4; word-break: keep-all;
+                    &.date {font-weight: 300; color: var(--Gray-600); flex: 1 0 55px;}
+                    &.name {color: var(--Gray-800); flex: 1 1 auto;}
+                    &.etc {margin-left: auto; text-align: right; font-weight: 600; color: var(--Gray-900); flex: 1 1 auto;}
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        .popWrap {
+            .popBody {height: 225px;}
+        }
+    }
+}
