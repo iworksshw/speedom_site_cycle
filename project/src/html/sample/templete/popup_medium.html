@@ -1,0 +1,101 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '팝업',
+                    subText: '팝업 Midium 입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div id="sample01" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                    <div class="popTitle">팝업 Medium</div>
+                                    <div class="popCont">
+                                        <!-- 팝업 컨텐츠 영역 -->
+                                        팝업콘텐츠 영역<br>
+                                        팝업콘텐츠 영역<br>
+                                        팝업콘텐츠 영역<br>
+                                        <!-- //팝업 컨텐츠 영역 -->
+                                    </div>
+                
+                                    <!-- 팝업 하단 영역 -->
+                                    <div class="popBtm">
+                                        <div class="comBtnGroup">
+                                            <div class="alignC">
+                                                <div class="btnBox">
+                                                    <button class="btn lg Primary pcW180">신고하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
