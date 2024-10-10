@@ -1,0 +1,65 @@
+.cptCompareData {
+    .alertArea {
+        width: 100%; padding-bottom: 32px; margin-bottom: 60px; border-bottom: 1px solid var(--Bg-Line-line-200); text-align: center;
+        .mView {display: none;}
+        .txt {font-size: rem(18px); font-weight: 500; color: var(--Gray-800); line-height: 1.6;}
+        .comBtnGroup {margin-top: 12px;}
+    }
+
+    .compareBox {
+        margin-top: 20px; border-radius: 16px; background: var(--Bg-Line-bg-100);
+        .cpList {
+            display: flex; padding: 40px 60px; justify-content: space-evenly; align-items: start;
+            .cpItem {
+                text-align: center;
+                .thumArea {
+                    width: 112px; height: 133px; border-radius: 16px; overflow: hidden;
+                    img {width: 100%; height: 100%; object-fit: cover;}
+                }
+                .txtArea {
+                    margin-top: 12px;
+                    .name {font-size: rem(18px); color: var(--Gray-900); font-weight: 600;}
+                    .cateGroup {
+                        margin-top: 8px;
+                        .cate {
+                            height: 24px; padding: 0 8px; border-radius: 4px; line-height: 24px; font-size: rem(12px); color: #fff; font-weight: 600; background: var(--Gray-500); display: inline-block; vertical-align: middle;
+                            &.blue {background: var(--Point-Blue);}
+                            &.mint {background: var(--Point-Primary2);}
+                            &.orange {background: var(--Point-Orange);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        .alertArea {
+            margin-bottom: 40px; 
+            .mView {display: block;}
+            .txt {font-size: rem(16px); font-weight: 400;}
+            .comBtnGroup {margin-top: 20px;}
+        }
+    
+        .compareBox {
+            width: calc(100% + 32px); border-radius: 0; margin-left: -16px;
+            .cpList {
+                padding: 20px 16px; justify-content: space-between; column-gap: 10px;
+                .cpItem {
+                    flex: 0 1 auto;
+                    .thumArea {
+                        max-width: 105px; height: 121px; width: auto;
+                    }
+                    .txtArea {
+                        .name {font-size: rem(16px);}
+                        .cateGroup {
+                            .cate {
+                                height: 20px;  line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

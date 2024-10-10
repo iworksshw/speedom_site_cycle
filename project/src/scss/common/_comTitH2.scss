@@ -1,7 +1,11 @@
 .comTitH2 {
-    margin-top: 40px;
-    &:first-child {margin-top: 0;}
+    margin-top: 40px;display: flex; align-items: center;
+    &:first-child {margin-top: 0;} 
     h2 {font-size: rem(24px); color: var(---Primary); font-weight: 700; line-height: 1.4; word-break: keep-all;}
+    .right {
+        margin-left: auto;
+        .frmBox {width: 160px; max-width: 160px;}
+    }
 
     // 컴포넌트 변경 Class
     &.bk {
@@ -11,5 +15,11 @@
     @include media("mobile"){
         margin-top: 24px;
         h2 {font-size: rem(20px);}
+        .right {
+            .frmBox {
+                width: 120px; max-width: 120px;
+                .iptSlt { height: 36px; padding: 0 12px; border-radius: 6px; font-size: rem(14px); background-size: 14px; background-position: right 12px center;}
+            }
+        }
     }
 }

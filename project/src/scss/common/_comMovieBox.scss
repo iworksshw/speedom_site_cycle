@@ -1,0 +1,17 @@
+.comMovieBox {
+    margin-top: 20px;
+    &:first-child {margin-top: 0;}
+
+    .boxArea {
+        border-radius: 12px; padding: 28px 32px; background: #f0faf7;
+        .movieList {
+            display: flex; align-items: center;
+            .movieItem {
+                flex: 1 1 auto; text-align: center; padding: 0 10px; border-right: 1px solid var(--Gray-200);
+                &:last-child {border-right: none;}
+                a {display: inline-block; vertical-align: middle; font-size: rem(18px); font-weight: 500; color: var(---Secondary);}
+                &::after {display: inline-block; content: ""; vertical-align: middle; margin-left: 12px; width: 18px; height: 18px; background: url(../../images/common/ic_18_movie_play.svg) center no-repeat;}
+            }
+        }
+    }
+}
