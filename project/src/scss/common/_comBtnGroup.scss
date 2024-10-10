@@ -1,7 +1,7 @@
 /* --------------------------- 하단 버튼 그룹 --------------------------- */
 .comBtnGroup {
     width: 100%; margin-top: 40px; display: flex; justify-content: space-between;
-    &:first-child {margin-top: 40px;}
+    &:first-child {margin-top: 0;}
     .alignL {width: 100%; display: flex; justify-content: flex-start;}
     .alignC {width: 100%; display: flex; justify-content: center;}
     .alignR {width: 100%; display: flex; justify-content: flex-end;}
@@ -33,4 +33,9 @@
         }
     }
 
+    //조건
+    &.section {
+        margin-top: 60px;
+        @include media('mobile') {margin-top: 40px;}
+    }
 }

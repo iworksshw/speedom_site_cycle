@@ -226,6 +226,10 @@ select.iptSlt {
     &.sm {height: 36px; padding: 0 20px; font-size: rem(14px); line-height: 34px;}
     &.xs {height: 32px; padding: 0 12px; font-size: rem(14px); line-height: 30px;}
 
+    //가로 너비 예외
+    &.pcW180 {width:180px} //PC width 180px, Mo width 100%
+    &.pcW140 {width:140px} //PC width 140px, Mo width 100%
+
     //색깔별
     &.Primary {
         color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
@@ -240,7 +244,7 @@ select.iptSlt {
         &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-150); background: var(--Gray-150);}
     }
     &.dkLine {
-        color: var(--Gray-800); border: 1px solid var(--Gray-800); background: #fff;
+        color: var(--Gray-800); border: 1px solid var(--Gray-600); background: #fff;
         &:hover {color: #000; border: 1px solid #000;}
         &:active {border: 1px solid #000; background: var(--Bg-Line-bg-100);}
         &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
