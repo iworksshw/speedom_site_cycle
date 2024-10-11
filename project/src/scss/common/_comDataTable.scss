@@ -48,6 +48,12 @@
                 }
             }
         }
+        .tbGreen {background: #ECF8F6;}
+        .tbBlue {background: #ECF1F8;}
+        .tbRed {background: #F6ECF8;}
+        .tbYellow {background: #F5F2DD45;}
+        .tbGray {background: #EDF4F8;}
+        .bdrBold {border-right: 1px solid var(--Gray-300) !important;}
     }
     &.colLineDel {
         .tableArea {
