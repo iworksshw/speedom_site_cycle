@@ -1,0 +1,79 @@
+.cptFullFloat {
+    width: 100%; position: fixed; bottom: 0; left: 0; z-index: 9; 
+    &.stick {
+        width: 100vw; margin-left: calc(730px - 50vw); margin-top: 60px; position: static;
+        .floatBox {box-shadow: none;}
+    }
+
+    .floatBox {
+        width: 100%; border-top: 1px solid var(--Bg-Line-bg-100); background: var(--Bg-Line-bg-200); box-shadow: 0px -5px 30px 0px rgba(0, 0, 0, 0.10); transition: box-shadow 0.2s;
+        .contArea {
+            max-width: 1480px; padding: 50px 20px; margin: 0 auto;
+            .floatTit {
+                display: flex; align-items: flex-end; column-gap: 12px;
+                h3 {font-size: rem(24px); font-weight: 700; line-height: 1.4; color: var(---Primary);}
+                .desc {font-size: rem(15px); line-height: 1.6; color: var(--Gray-600);}
+            }
+            .floatCont {
+                margin-top: 32px;
+                .cpBox {
+                    width: 100%; padding: 24px 60px; border-radius: 16px; background: var(--Bg-Line-white); display: flex; align-items: center; justify-content: space-between; column-gap: 20px;
+                    .cpList {
+                        display: flex; flex-wrap: wrap; gap: 20px 80px; align-items: center;
+                        .cpItem {
+                            display: flex; column-gap: 8px;align-items: center;
+                            .name {font-size: rem(16px); color: var(--Gray-800); font-weight: 600;}
+                            .cateGroup {
+                                .cate {
+                                    height: 24px; padding: 0 8px; border-radius: 4px; line-height: 24px; font-size: rem(12px); color: #fff; font-weight: 600; background: var(--Gray-500); display: inline-block; vertical-align: middle;
+                                    &.blue {background: var(--Point-Blue);}
+                                    &.mint {background: var(--Point-Primary2);}
+                                    &.orange {background: var(--Point-Orange);}
+                                }
+                            }
+                            .deleteBtn {width: 16px; height: 24px; font-size: 0; background: url(../../images/common/ic_12_close.svg) center no-repeat;}
+                        }
+                    }
+                    .btn {flex: 0 0 auto;}
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        &.stick {
+            width: calc(100% + 32px); margin-left: -16px; margin-top: 40px;
+            .floatBox {box-shadow: none;}
+        }
+    
+        .floatBox {
+            box-shadow: 0px -3px 20px 0px rgba(0, 0, 0, 0.15);
+            .contArea {
+                padding: 24px 16px 88px; position: relative;
+                .floatTit {
+                    flex-wrap: wrap; gap: 4px;
+                    h3 {width: 100%; font-size: rem(20px);}
+                }
+                .floatCont {
+                    margin-top: 12px;
+                    .cpBox {
+                        padding: 20px 16px; border-radius: 12px; flex-wrap: wrap; row-gap: 16px;
+                        .cpList {
+                            gap: 12px;
+                            .cpItem {
+                                .name {font-size: rem(15px);}
+                                .cateGroup {
+                                    .cate {
+                                        height: 20px;line-height: 20px; 
+                                    }
+                                }
+                                .deleteBtn {height: 20px;}
+                            }
+                        }
+                        .btn {flex: 0 0 auto; position: absolute; width: calc(100% - 32px); left: 16px; bottom: 16px; height: 56px;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -16,7 +16,7 @@
             .layoutSubCont{
                 width: 100%;
                 .layoutContArea {
-                    width: 100%; max-width: 1480px; padding: 60px 20px 0; margin: 0 auto 120px;
+                    width: 100%; max-width: 1480px; padding: 60px 20px 0; margin: 0 auto 120px; position: relative;
                     @include media('mobile'){
                         padding: 40px 16px 0;
                     }

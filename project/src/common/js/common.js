@@ -216,9 +216,15 @@ document.addEventListener("DOMContentLoaded", function () {
     tabWords();
 
     //캘린더 팝업
-    calendarPop()
+    if(document.querySelector(".cptCalendar")) {
+        calendarPop();
+        window.addEventListener("resize", calendarPop);
+    }
 
-    window.addEventListener("resize", calendarPop);
+    // 선수비교 하단 플로팅박스
+    if(document.querySelector(".cptFullFloat")) {
+        fullFloating();
+    }
 });
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
@@ -477,6 +483,33 @@ function tabWords() {
             tabConts.forEach(tabCont => tabCont.classList.remove("on"));
             tabConts[index].classList.add('on');
         })
+    })
+}
+
+// 선수비교 하단 플로팅박스
+function fullFloating(){
+    const float = document.querySelector(".cptFullFloat");
+    const winH = window.innerHeight;
+    const contH = document.documentElement.scrollHeight;
+    const floatH = float.clientHeight;
+
+    window.addEventListener("scroll", function(){
+        const scrlT = window.scrollY;
+        console.log(winH, contH, scrlT, floatH);
+
+        if(window.matchMedia("(min-width:768px)").matches){
+            if(scrlT > contH - winH - floatH) {
+                float.classList.add("stick");
+            } else {
+                float.classList.remove("stick");
+            }
+        } else {
+            if(scrlT > contH - winH - floatH - 184) {
+                float.classList.add("stick");
+            } else {
+                float.classList.remove("stick");
+            }
+        }        
     })
 }
 
