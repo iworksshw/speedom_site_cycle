@@ -31,11 +31,13 @@
                         padding: 20px 5px; color: var(--Gray-900); font-size: rem(15px); font-weight: 600; line-height: 1.3; border-right: 1px solid var(--Gray-300); 
                         border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100);
                         &:last-child {border-right: 0;}
+                        .txtBtn {text-decoration: underline; text-underline-position: under;}
                     }
                     td {
                         padding: 20px 5px; color: var(--Gray-700); text-align: center; font-size: rem(15px); font-weight: 400; line-height: 1.3; 
                         border-right: 1px solid var(--Bg-Line-line-200); border-bottom: 1px solid var(--Bg-Line-line-100);
                         &:last-child {border-right: 0;}
+                        .txtBtn {text-decoration: underline; text-underline-position: under;}
                     }
                     &:nth-child(2n) {
                         td {background: var(--Gray-50);}
@@ -182,9 +184,11 @@
                     tr {
                         th {
                             padding: 10px 5px; font-size: rem(14px);
+                            .txtBtn {font-size: rem(14px);}
                         }
                         td {
                             padding: 10px 5px; font-size: rem(14px);
+                            .txtBtn {font-size: rem(14px);}
                         }
                     }
                 }

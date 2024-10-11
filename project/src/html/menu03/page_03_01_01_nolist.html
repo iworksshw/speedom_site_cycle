@@ -1,0 +1,200 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜선수', '선수조회'],
+                    subTitle: '선수조회',
+                    subText: '선수 프로필 · 경주별 기록 등을 <br/>상세한 <b>선수의 정보를 조회</b>할 수 있습니다.',
+                    url: "../../",
+                    visualClass: "bg03",
+                }) %>
+
+                <div class="layoutContArea">
+                    <div class="cptWordFilter">
+                        <div class="sectArea">
+                            <div class="btnArea">
+                                <ul class="btnGroup">
+                                    <li class="btnItem">
+                                        <button type="button" class="btn Primary">전체</button> <!--선택 탭 class : Primary-->
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄱ</button> 
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄴ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄷ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㄹ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㅁ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅂ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅅ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅇ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅈ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅊ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅋ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅌ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅍ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅎ</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="comSearchBox">
+                                <div class="searchLine col4">
+                                    <dl class="condition">
+                                        <dt class="title">선수</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">현역선수</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">등급</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">조회</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">기수</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">조회</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">훈련지</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">선택하세요</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchLine">
+                                    <dl class="condition">
+                                        <dt class="title">검색어</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <button class="btn Primary search">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cptPersonList">
+                        <div class="sectArea">
+                            <div class="comNoneData">
+                                <p class="noneTxt">검색된 선수가 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

@@ -1,8 +1,12 @@
 .comTitH3 {
-    margin-top: 32px;
+    margin-top: 32px;display: flex; align-items: center;
     &:first-child {margin-top: 0;}
     h3 {padding-left: 18px; font-size: rem(18px); color: var(--Gray-900); font-weight: 700; line-height: 1.4; background: url(../../images/common/bullet_h3.svg) left 7px no-repeat; word-break: keep-all;}
     &.mgH {margin-top:24px;}
+    .right {
+        margin-left: auto; 
+        .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
+    }
 
     @include media("mobile"){
         margin-top: 24px;
