@@ -1,7 +1,7 @@
 <!-- Header -->
-<%- include('../../_ejs/top.ejs', {
+<%- include('../_ejs/top.ejs', {
     title: "KCYCLE 경륜",
-    url: "../../../"
+    url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
@@ -11,8 +11,8 @@
         <!-- 상단영역 -->
         <div class="layoutTop">
             <!-- Top -->
-            <%- include('../../_ejs/header.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //상단영역 -->
@@ -25,26 +25,24 @@
 
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
-                <%- include('../../_ejs/sub_top.ejs', {
-                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
-                    subTitle: '게시판 상세',
-                    subText: '게시판의 <b>상세페이지</b> 입니다',
-                    url: "../../../",
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객센터'],
+                    subTitle: '예상과 후기',
+                    subText: '경주에 대한 예상과 후기,<br><b>경륜 회원님들과 공감</b>해요.',
+                    url: "../../",
                 }) %>
 
-                <!-- 콤포넌트 템플릿 메뉴 -->
-                <%- include('./tp_menu.ejs', { }) %>
-
                 <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경주에 대한 예상과 후기를 작성하여 감상을 나누는 커뮤니티 입니다.</h2>
+                        <p class="info">고객 여러분들이 분석한 내용을 바탕으로 경기에 대한 예상이나 후기를 작성하고 다른 회원들과 공유할 수 있습니다. </p>
+                    </div>
                     
                     <div class="cptBoardView">
                         <div class="boardViewArea">
                             <div class="viewTop">
-                                <i class="noti">
-                                    <span class="mark">공지</span>
-                                    <span class="mark ing">진행중</span>
-                                    <span class="mark">종료</span>
-                                </i>
+                                <i class="noti"><span class="mark">공지</span></i>
                                 <h2 class="viewTitle">24년 전반기 경정 최강자를 가린다. 체육 공단 이사장배 왕중왕전 19~20일 양일간 열려</h2>
                                 <ul class="info">
                                     <li class="item">2024.07.05</li>
@@ -53,20 +51,6 @@
                                     <li class="item">추천수 : <span class="recomNum">20</span></li>
                                 </ul>
 
-                            </div>
-                            <div class="comFileDownload">
-                                <dl class="fileGroup">
-                                    <dt class="fileTitle">첨부파일</dt>
-                                    <dd class="fileArea">
-                                        <ul class="fileList">
-                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
-                                            <li class="download"><a href="#">경륜자전거 업사이클링 디자인 공모전 개최 안내.pdf</a></li>
-                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
-                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트리스트리스트.hwp</a></li>
-                                            <li class="download"><a href="#">(공지용) 경륜 선수단 리스트.hwp</a></li>
-                                        </ul>
-                                    </dd>
-                                </dl>
                             </div>
                             <div class="viewBody">
                                 <div class="viewContArea">
@@ -104,6 +88,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
 
                             <div class="comBtnGroup">
                                 <div class="alignR moR">
@@ -170,7 +155,6 @@
                                 </div>
                             </div>
 
-
                             <div class="comPrevNext addLine"> <!-- addClass - addLine : 이전글 상단에 라인 추가하고 margin-top 띄움 -->
                                 <dl>
                                     <dt>이전글</dt>
@@ -196,12 +180,13 @@
                 </div>
 
                 <!-- 서브 바텀 (담당자) -->
-                <%- include('../../_ejs/sub_btm.ejs', {
-                    team: '경륜운영팀',
-                    name: '차룡',
-                    phone: '02-2067-5711',
-                    url: "../../../",
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '정보지원팀',
+                    name: '이승화',
+                    phone: '02-2067-5533',
+                    url: "../../",
                 }) %>
+
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
             </div>
@@ -213,8 +198,8 @@
         <!-- 하단영역 -->
         <div class="layoutFooter">
             <!-- Footer -->
-            <%- include('../../_ejs/footer.ejs', {
-                url: "../../../"
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
             }) %>
         </div>
         <!-- //하단영역 -->
@@ -224,4 +209,4 @@
 
 
 <!-- Bottom -->
-<%- include('../../_ejs/bottom.ejs', { }) %>
+<%- include('../_ejs/bottom.ejs', { }) %>

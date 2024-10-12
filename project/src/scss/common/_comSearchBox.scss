@@ -36,8 +36,8 @@
         }
     }
     @include media('mobile') {
-        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; gap: 16px;
-        &:first-child {margin-top: 0px;}
+        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; border-radius: 0; gap: 16px;
+        &:first-child {margin-top: -40px;}
         .searchLine {
             &.col2 {
                 .condition {
