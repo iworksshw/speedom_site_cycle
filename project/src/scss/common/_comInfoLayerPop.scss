@@ -23,7 +23,7 @@
                 &:first-child {margin-top: 0;}
                 span {
                     display: inline-block;font-size: rem(13px);line-height: 1.4; word-break: keep-all;
-                    &.date {font-weight: 300; color: var(--Gray-600); flex: 1 0 55px;}
+                    &.date {font-weight: 300; color: var(--Gray-600); flex: 0 0 55px;}
                     &.name {color: var(--Gray-800); flex: 1 1 auto;}
                     &.etc {margin-left: auto; text-align: right; font-weight: 600; color: var(--Gray-900); flex: 1 1 auto;}
                 }

@@ -5,6 +5,10 @@
     &.mgH {margin-top:24px;}
     .right {
         margin-left: auto; 
+        .addTxt {
+            padding-left: 20px; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_16_info.svg) left 2px no-repeat;
+            b {font-weight: 500; color: var(--Gray-800);}
+        }
         .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
     }
 
@@ -12,6 +16,15 @@
         margin-top: 24px;
         h3 {font-size: rem(16px); background-position: left 5px;}
         &.mgH {margin-top:24px;}
+        .right {
+            .addTxt {
+                font-size: rem(13px);
+            }
+        }
+
+        &.mRow {
+            flex-wrap: wrap;
+        }
     }
 } 
 
