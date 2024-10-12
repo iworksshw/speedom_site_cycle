@@ -16,6 +16,7 @@
 @import 'comBoardList';     //보드 리스트
 @import 'comPaging';        //페이징
 @import 'comFileDownload';  //첨부파일 다운로드
+@import 'comComment';       //댓글
 @import 'comPrevNext';      //이전글/다음글
 @import 'comAddGuide';      //테이블 등 하단 안내문구
 @import 'comCalendar';      //달력 양식
@@ -24,6 +25,7 @@
 @import 'comInfoLayerPop';  //컨텐츠 내부 레이어 팝업
 @import 'comNoneData';      //데이터 결과 없음
 @import 'comMovieBox';      //동영상 외부링크 리스트
+@import 'comBoardInfoBox';  //각종 게시판 내 정보상자
 
 @import 'comPrivacyBox';     //컨텐츠 내 약관상자
 @import 'comMovieLinkBox';  //동영상 보기 링크

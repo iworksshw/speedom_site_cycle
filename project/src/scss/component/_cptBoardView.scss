@@ -1,7 +1,8 @@
 
 /* --------------------------- 게시판 상세 --------------------------- */
 .cptBoardView{
-    width: 100%;
+    width: 100%; margin-top: 60px;
+    &:first-child {margin-top: 0;}
     .boardViewArea {
         width: 100%;
         .viewTop {
@@ -26,6 +27,7 @@
                 width: 100%; margin-top: 16px; display: flex; gap: 24px;
                 .item {
                     color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: 1.5;
+                    .recomNum {color: var(---Primary); font-weight: 600;}
                 }
             }
         }
@@ -38,10 +40,16 @@
             .viewBtnGroup {
                 padding-bottom:40px;
                 .recom {
-                    
+                    &::before {
+                        content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_recom.svg) center no-repeat; 
+                        vertical-align: middle; display: inline-block;
+                    }
                 }
                 .report {
-
+                    &::before {
+                        content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_report.svg) center no-repeat; 
+                        vertical-align: middle; display: inline-block;
+                    }
                 }
             }
         }
@@ -70,7 +78,14 @@
                 .viewContArea {
                     padding: 32px 16px;
                 }
+                .viewBtnGroup {
+                    padding-bottom:32px;
+                }
             }
+        }
+
+        .comBtnGroup {
+            padding: 0 20px;
         }
     }
 

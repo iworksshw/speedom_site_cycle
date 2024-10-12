@@ -30,7 +30,7 @@
         }
     }
     @include media('mobile') {
-        width: calc(100% + 32px); margin-left: -16px; border-left: 0; border-right: 0; border-radius: 0;
+        width: calc(100% + 32px); margin-top: 16px; margin-left: -16px; border-left: 0; border-right: 0; border-radius: 0;
         .infoBox {
             .boxTop {
                 padding: 24px 20px; 
@@ -58,7 +58,3 @@
     }
 }
 
-//조건
-@include media('mobile') {
-    .comFormTable + .comPrivacyBox {margin-top: -1px;}
-}

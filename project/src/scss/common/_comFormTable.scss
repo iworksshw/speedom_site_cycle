@@ -18,6 +18,13 @@
         .txt {
             font-size: rem(16px); color: var(--font-700); font-weight: 300; line-height: 1.6;
             & + .txt {margin-left: 24px;}
+            
+        }
+        .normalTxt {
+            font-size: rem(16px); color: var(--font-800); font-weight: 400; line-height: 1.6;
+            .desc {
+                margin-left: 12px; color: var(--Point-Red); font-weight: 600;
+            }
         }
         .strong {
             font-size: rem(18px); color: var(--font-900); font-weight: 700; line-height: 1.4;
@@ -50,12 +57,16 @@
                         padding: 32px;
                     }
                 }
+                .top {padding-top: 28px; vertical-align: top;}
+                .byte {width: 100%; margin-top: 4px; color: var(--Gray-300); font-size: rem(15px); font-weight: 500; line-height: 1.6; text-align: right; display: block;
+                    b {color: var(--Gray-800); font-weight: 500;}
+                }
             }
         }
         
         @include media('mobile') {
             table {
-                display: flex; padding-bottom: 16px;
+                display: flex;
                 caption {display: none;}
                 colgroup {display:none;}
                 tbody {
@@ -72,6 +83,7 @@
                             margin-top: 0; padding: 4px 0 20px; border-bottom: 1px solid var(--Bg-Line-line-100); 
                         }
                     }
+                    .top {padding-top: 0;}
                 }
             }
         }
@@ -81,4 +93,15 @@
     .frmGroup {
         flex-wrap: wrap;                    
     }
+    .iptTextArea {
+        height: 377px
+    }
+    .tableArea + .frmGroup {
+        margin-top: 20px;
+        @include media('mobile') {
+            margin-top: 4px;
+        }
+    }
+    
 }
+

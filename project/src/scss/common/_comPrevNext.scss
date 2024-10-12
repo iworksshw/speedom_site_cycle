@@ -2,6 +2,7 @@
 /* -------------------------------- 이전글/다음글 -------------------------------- */
 .comPrevNext {
     width: 100%; padding: 24px 32px; border-bottom: 1px solid var(--Bg-Line-line-100); display: flex; flex-wrap: wrap; gap: 20px;
+    &.addLine {margin-top: 40px; border-top: 1px solid var(--Bg-Line-line-100);}
     dl {
         width: 100%; display: flex;
         dt {

@@ -1127,6 +1127,7 @@
         <li class="item"><a href="./board_list.html">일반 게시판 리스트</a></li>
         <li class="item"><a href="./album_list.html">앨범 게시판 리스트</a></li>
         <li class="item"><a href="./board_view.html">게시판 상세</a></li>
+        <li class="item"><a href="./board_write.html">게시판 글쓰기</a></li>
         <li class="item"><a href="./board_top.html">각종 상단 모음</a></li>
         <li class="item"><a href="./btn_bottom.html">하단 버튼 그룹</a></li>
         <li class="item"><a href="./complete.html">완료페이지</a></li>
@@ -1152,6 +1153,7 @@
                                     <li class="item">2024.07.05</li>
                                     <li class="item">경륜심판팀</li>
                                     <li class="item">조회수 : 200</li>
+                                    <li class="item">추천수 : <span class="recomNum">20</span></li>
                                 </ul>
 
                             </div>
@@ -1195,12 +1197,84 @@
                                     <!-- //컨텐츠 영역입니다. -->
                                 </div>
                                 <div class="viewBtnGroup">
-                                    <button class="btn sm recom">추천하기</button>
-                                    <button class="btn sm report">신고하기</button>
+                                    <div class="comBtnGroup">
+                                        <div class="alignC">
+                                            <div class="btnBox min">
+                                                <button class="btn sm gLine recom">추천하기</button>
+                                                <button class="btn sm gLine report">신고하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="comPrevNext">
+                            <div class="comBtnGroup">
+                                <div class="alignR moR">
+                                    <div class="btnBox min">
+                                        <button class="btn sm Primary">수정</button>
+                                        <button class="btn sm gLine">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comComment">
+                                <div class="cmtArea">
+                                    <div class="cmtHead">
+                                        <b class="cmtTitle">댓글</b>
+                                        <i class="number">5</i>
+                                    </div>
+                                    
+                                    <div class="cmtWriteBox">
+                                        <div class="alignL">
+                                            <textarea class="writeText" placeholder="댓글을 입력해주세요"></textarea>
+                                        </div>
+                                        <div class="alignR">
+                                            <span class="byte"><b>120</b>/500</span>
+                                            <button class="btnReg">등록</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="cmtBody">
+
+                                        <!-- 댓글 단위 -->
+                                        <div class="cmtBox">
+                                            <div class="cmtTop">
+                                                <div class="alignL">
+                                                    <b class="cmtName">공정불법대응센터</b><i class="date">2023.08.02</i>
+                                                </div>
+                                                <div class="alignR">
+                                                    <button class="btnDel">삭제</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="cmtCont">
+                                                <p class="cmtText">지난 광명 경주 진행 시 A선수와 B선수가 담합하는 것을 보았습니다.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- 댓글 단위 -->
+                                        <div class="cmtBox">
+                                            <div class="cmtTop">
+                                                <div class="alignL">
+                                                    <b class="cmtName">공정불법대응센터</b><i class="date">2023.08.02</i>
+                                                </div>
+                                                <div class="alignR">
+                                                    <button class="btnDel">삭제</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="cmtCont">
+                                                <p class="cmtText">지난 광명 경주 진행 시 A선수와 B선수가 담합하는 것을 보았습니다. 지난 광명 경주 진행 시 A선수와 B선수가 담합하는 것을 보았습니다. 지난 광명 경주 진행 시 A선수와 B선수가 담합하는 것을 보았습니다. 지난 광명 경주 진행 시 A선수와 B선수가 담합하는 것을 보았습니다.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="comPrevNext addLine"> <!-- addClass - addLine : 이전글 상단에 라인 추가하고 margin-top 띄움 -->
                                 <dl>
                                     <dt>이전글</dt>
                                     <dd><a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 한글50자 까지 나열됩니다뉴스 한글50자 까지 나열됩니다 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스</a> </dd>
