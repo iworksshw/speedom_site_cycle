@@ -6,7 +6,11 @@
     .boardViewArea {
         width: 100%;
         .viewTop {
-            width: 100%; padding: 0 0 24px; border-bottom: 1px solid var(--Bg-Line-line-100);            
+            width: 100%; padding: 0 0 24px; border-bottom: 1px solid var(--Bg-Line-line-100);        
+            
+            &.noline {
+                border-bottom: 0; padding-bottom: 20px;
+            }
             .noti {
                 width: 100%; margin-bottom: 12px; font-style: normal; display: flex; gap: 8px;
                 .mark {
@@ -37,28 +41,32 @@
                 width: 100%; padding: 40px;
                 img {max-width: 100%;}
             }
-            .viewBtnGroup {
-                padding-bottom:40px;
-                .recom {
-                    &::before {
-                        content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_recom.svg) center no-repeat; 
-                        vertical-align: middle; display: inline-block;
-                    }
+        }
+        .viewBtnGroup {
+            padding-bottom:40px;
+            .recom {
+                &::before {
+                    content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_recom.svg) center no-repeat; 
+                    vertical-align: middle; display: inline-block;
                 }
-                .report {
-                    &::before {
-                        content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_report.svg) center no-repeat; 
-                        vertical-align: middle; display: inline-block;
-                    }
+            }
+            .report {
+                &::before {
+                    content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_report.svg) center no-repeat; 
+                    vertical-align: middle; display: inline-block;
                 }
             }
         }
     }
     @include media('mobile') {
-        width: calc(100% + 32px); margin-left: -16px; padding-top: 20px;
+        width: calc(100% + 32px); margin-left: -16px;
         .boardViewArea {
             .viewTop {
                 padding: 0 16px 20px; border-bottom: 1px solid var(--Bg-Line-line-100);
+
+                &.noline {
+                    border-bottom: 0; padding-bottom: 16px;
+                }
                 .noti {
                     margin-bottom: 8px;
                     .mark {width: max-content; padding: 0 10px;}
@@ -78,9 +86,9 @@
                 .viewContArea {
                     padding: 32px 16px;
                 }
-                .viewBtnGroup {
-                    padding-bottom:32px;
-                }
+            }
+            .viewBtnGroup {
+                padding-bottom:32px;
             }
         }
 
@@ -90,6 +98,24 @@
     }
 
     //예외
+    .boardViewArea {
+        .viewTop + .comContTable {
+            margin-top:0;
+        }
+        .comContTable + .viewBtnGroup {
+            padding: 60px 0 0;
+        }
+    }
+    @include media('mobile') {
+        .boardViewArea {
+            .comContTable {
+                padding: 0 16px;
+                & + .viewBtnGroup {
+                    padding: 24px 0 0;
+                }
+            }
+        }
+    }
     /*
     .comBtnGroup {
         .alignR {

@@ -1,7 +1,9 @@
 /* ----------------------------- 각종 게시판 내 정보상자 ----------------------------- */
 .comBoardInfoBox {
-    width: 100%; padding: 32px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-100, #E1E4EA); background: var(--Bg-Line-bg-50, #FBFBFB);
+    width: 100%; margin-top: 40px; padding: 32px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-100, #E1E4EA); background: var(--Bg-Line-bg-50, #FBFBFB);
+    &:first-child {margin-top:0;}
     @include media('mobile') {
-        width:calc(100% + 32px); margin-left: -16px; padding: 24px 16px; border-radius: 0;
+        width:calc(100% + 32px); margin-top: 24px; margin-left: -16px; padding: 24px 16px; border-radius: 0;
+        &:first-child {margin-top:0;}
     }
 }

@@ -1,0 +1,105 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객센터'],
+                    subTitle: '공지사항',
+                    subText: '<b>경륜경정총괄본부</b>에서<br>주요 정보를 알려드려요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptBoardList">
+                        <div class="boardListArea">
+
+
+                            <!-- 게시판 리스트 상단 -->
+                            <div class="comGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">전체</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="frmGroup">
+                                                <div class="frmSearch">
+                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                    <button class="btnSearch">검색</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cptPersonList">
+                                <div class="sectArea">
+                                    <div class="comNoneData">
+                                        <p class="noneTxt">검색된 선수가 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

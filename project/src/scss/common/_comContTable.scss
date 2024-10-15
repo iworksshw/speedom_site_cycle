@@ -30,6 +30,10 @@
                 }
             }
         }
+        .frm {
+            padding: 13px 5px;
+        }
+        .left {padding-left: 16px; text-align: left;}
     }
 
     @include media("mobile"){

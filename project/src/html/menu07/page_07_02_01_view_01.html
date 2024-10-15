@@ -27,106 +27,91 @@
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
                     location: ['고객광장'],
-                    subTitle: '명예심판',
-                    subText: '함께하는 경주!<br><b>명예심판에 참여</b>해보세요.',
+                    subTitle: '문화교실',
+                    subText: '현재 운영되고 있는<br> <b>다양한 프로그램</b>을 확인해보세요.',
                     url: "../../",
                 }) %>
 
                 <div class="layoutContArea">
                     
-                    <div class="comSubInfo">
-                        <h2 class="infoTit">명예심판제도는 경륜 경기의 공정성을 확보하고, 투명한 판정을 위해 운영되는 제도입니다.</h2>
-                        <p class="info">경륜 경정사업본부에서 선발된 명예심판들이 경주 중 발생하는 다양한 상황을 면밀히 분석하고 판단하여, 심판원의 판정을 보완하거나 시정하는 역할을 수행합니다.</p>
-                    </div>
                     <div class="cptSection">
                         <div class="sectArea">
 
-                            <div class="comTitH2">
-                                <h2>2024년 제 1회 명예심판행사 참가신청</h2>
-                            </div>
-
                             <div class="comFormTable">
-                                <div class="tableTop">
-                                    <div class="alignL">
-                                        <em class="strong">신청기간 : 2024.05.20 ~ 2024.05.30</em>
-                                    </div>
-                                    <div class="alignR">
-                                        <span class="txt">2024.07.05</span>
-                                        <span class="txt">경륜심판팀</span>
-                                    </div>
+                                <div class="tableTitle">
+                                    <h2>문화교실 수강신청서</h2>
                                 </div>
                                 <div class="tableArea">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
-                                            <col style="width: 232px;">
+                                            <col style="width: 200px;">
                                             <col style="width: auto;">
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <td colspan="2" class="innerTxt">
-                                                    안녕하세요. 명예심판 신청 관련 안내드립니다. 안녕하세요. 명예심판 신청 관련 안내드립니다.<br>
-                                                    안녕하세요. 명예심판 신청 관련 안내드립니다.안녕하세요. 명예심판 신청 관련 안내드립니다.안녕하세요. 명예심판 신청 관련 안내드립니다.
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>이름</th>
+                                                <th>지역</th>
                                                 <td>
                                                     <div class="frmGroup">
                                                         <div class="frmBox frmMd">
-                                                            <input type="text" class="iptText" placeholder="" value="홍길동" disabled="">
+                                                            <input type="text" class="iptText" placeholder="" value="미사본장" disabled="">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>아이디</th>
+                                                <th>프로그램명</th>
                                                 <td>
                                                     <div class="frmGroup">
                                                         <div class="frmBox frmMd">
-                                                            <input type="text" class="iptText" placeholder="" value="honggildong1234" disabled="">
+                                                            <input type="text" class="iptText" placeholder="" value="미사경정공원 숲 체험교실" disabled="">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>휴대폰번호</th>
+                                                <th>이름<span class="required">*</span></th>
                                                 <td>
                                                     <div class="frmGroup">
                                                         <div class="frmBox frmMd">
-                                                            <input type="text" class="iptText" placeholder="" value="010-0987-6543">
+                                                            <input type="text" class="iptText" placeholder="이름을 입력해주세요." value="">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>이메일주소</th>
+                                                <th>성별<span class="required">*</span></th>
+                                                <td>
+                                                    <div class="frmGroup gap40">
+                                                        <div class="frmBox maxCont"><input id="rdo101" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">여성</label></div>
+                                                        <div class="frmBox maxCont"><input id="rdo102" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">남성</label></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>생년월일<span class="required">*</span></th>
                                                 <td>
                                                     <div class="frmGroup">
                                                         <div class="frmBox frmMd">
-                                                            <input type="text" class="iptText" placeholder="" value="honggildong">
-                                                        </div>
-                                                        <div class="frmBox frmMd">
-                                                            <select class="iptSlt">
-                                                                <option value="">gmail.com</option>
-                                                                <option value="">직접입력</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="frmBox frmMd" style="display: none;">
-                                                            <input type="text" class="iptText" placeholder="직접입력">
+                                                            <input type="text" class="iptText" placeholder="생년월일 8자리를 입력해주세요." value="">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>이용지점</th>
+                                                <th>연락처<span class="required">*</span></th>
                                                 <td>
-                                                    <div class="frmBox frmMd">
-                                                        <select class="iptSlt">
-                                                            <option value="">선택하세요</option>
-                                                            <option value="">직접입력</option>
-                                                        </select>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="‘-’없이 숫자만 입력해주세요." value="">
+                                                        </div>
                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="top">문의사항</th>
+                                                <td>
+                                                    <textarea class="iptTextArea" name="" id=""></textarea>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -144,23 +129,32 @@
                                         </div>
                                     </dt>
                                     <dd class="boxCont">
+                                        <p class="txtTit">
+                                            개인정보의 수집 및 이용목적
+                                        </p>
                                         <p class="txt">
-                                            선수의 등급은 상ㆍ하반기(6개월단위)마다 경주 성적에 따라 등급 심사를 통하여 조정됩니다. 수급반은 매회차 변경됩니다.(S1↔S2)
+                                            기금조성총괄본부는 문화교실 진행을 위하여 아래와 같이 개인정보를 수집 및 이용하오니, 동의해 주시기 바랍니다.
                                         </p>
                                         <ul class="listGroup">
                                             <li class="item">
-                                                <b class="sTit">수집 및 이용항목</b>
-                                                <i class="sTxt">회원가입 필수정보 외 성별, 나이, 이용지점</i>
+                                                <b class="lineTit">수집 및 이용항목</b>
+                                                <i class="lineTxt">성명, 성별, 생년월일, 연락처</i>
                                             </li>
                                             <li class="item">
-                                                <b class="sTit">수집 및 이용목적</b>
-                                                <i class="sTxt">일일명예심판 행사 진행 관련</i>
+                                                <b class="lineTit">수집 및 이용목적</b>
+                                                <i class="lineTxt">문화교실 운영 관련 수강생 관리</i>
                                             </li>
                                             <li class="item">
-                                                <b class="sTit">보유 및 이용기간 : 3년</b>
-                                                <i class="sTxt">(단, 법령에 따로 정하는 경우는 해당 기간까지 보관)</i>
+                                                <b class="lineTit">보유 및 이용기간</b>
+                                                <i class="lineTxt">수강기간 내 (단, 법령에 따로 정하는 경우는 해당 기간까지 보관)</i>
                                             </li>
                                         </ul>
+                                        <p class="txt">
+                                            동의를 거부할 권리가 있으며, 이 경우 불이익은 없으나 문화교실 수강신청이 불가합니다.
+                                        </p>
+                                        <p class="anno">
+                                            ※ 스피존문화교실 회원의 부주의로 발생한 안전사고, 도난 및 분실등에 대해서는 기금조성총괄본부에서 일체 책임지지 않습니다.
+                                        </p>
                                     </dd>
                                 </dl>
                             </div>
@@ -179,6 +173,13 @@
                     
                 </div>
 
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '영업총괄팀',
+                    name: '배기준',
+                    phone: '02-2067-5606',
+                    url: "../../",
+                }) %>
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
             </div>
