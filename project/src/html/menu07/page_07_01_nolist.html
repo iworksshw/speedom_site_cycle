@@ -1,0 +1,107 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객센터'],
+                    subTitle: '예상과 후기',
+                    subText: '경주에 대한 예상과 후기,<br><b>경륜 회원님들과 공감</b>해요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경주에 대한 예상과 후기를 작성하여 감상을 나누는 커뮤니티 입니다.</h2>
+                        <p class="info">고객 여러분들이 분석한 내용을 바탕으로 경기에 대한 예상이나 후기를 작성하고 다른 회원들과 공유할 수 있습니다. </p>
+                    </div>
+
+                    <div class="cptBoardList">
+                        <div class="boardListArea">
+
+
+                            <!-- 게시판 리스트 상단 -->
+                            <div class="comGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">전체 <span class="total">1000</span> 건</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <div class="frmGroup">
+                                                <div class="frmSearch">
+                                                    <input type="text" class="iptText" placeholder="검색어를 입력하세요">
+                                                    <button class="btnSearch">검색</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cptPersonList">
+                                <div class="sectArea">
+                                    <div class="comNoneData">
+                                        <p class="noneTxt">검색된 선수가 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '정보지원팀',
+                    name: '이승화',
+                    phone: '02-2067-5533',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

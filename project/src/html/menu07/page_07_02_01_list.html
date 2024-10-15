@@ -1,0 +1,295 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객광장'],
+                    subTitle: '문화교실',
+                    subText: '현재 운영되고 있는<br> <b>다양한 프로그램</b>을 확인해보세요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptAlbumList">
+                        <div class="albumListArea">
+
+
+                            <!-- 검색 박스 -->
+                            <div class="comSearchBox">
+                                <div class="searchLine">
+                                    <dl class="condition">
+                                        <dt class="title">검색어</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <button class="btn Primary search">검색</button>
+                                </div>
+                            </div>
+
+                            <!-- 2뎁스 탭 (데이터) -->
+                            <div class="comTabData">
+                                <div class="tabMenuGroup tabDataSwiper">
+                                    <ul class="tabMenu swiper-wrapper">
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName on">전체</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">서울</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">경기</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">충남</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">충남</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">충남</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 앨범리스트 영역 -->
+                            <div class="listBoard">
+                                <ul class="listGroup">
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="노래교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">노래교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="요가교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">요가교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="민요교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">민요교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="스포츠댄스 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">스포츠댄스 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="노래교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">노래교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="요가교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">요가교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="민요교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">민요교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="스포츠댄스 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">스포츠댄스 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="노래교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">노래교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="요가교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">요가교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">장안</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="민요교실 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">민요교실 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                    <li class="listItem">
+                                        <div class="imgBox">
+                                            <img src="../../../images/thum/thum_album.png" alt="스포츠댄스 회원모집">
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">스포츠댄스 회원모집</div>
+                                            <div class="progress">
+                                                <span class="mark line">분당</span>
+                                            </div>
+                                            <div class="date">2024.07.24~2024.08.11</div>
+                                            <div class="date">월~일 09:00 ~ 16:00</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 페이징 -->
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '영업총괄팀',
+                    name: '배기준',
+                    phone: '02-2067-5606',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

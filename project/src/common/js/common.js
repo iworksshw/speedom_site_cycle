@@ -215,6 +215,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //단어 탭
     tabWords();
 
+    //2뎁스 탭메뉴 (데이터)
+    tabMenuDataSwiper();
+
     //캘린더 팝업
     if(document.querySelector(".cptCalendar")) {
         calendarPop();
@@ -332,6 +335,34 @@ function calendarPop() {
 }
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
+//2뎁스 탭메뉴 (데이터) (페이지 내에 같은 탭이 2개 이상이면 스크립트 수정해야함)
+function tabMenuDataSwiper(){
+    //모바일, 태블릿, PC 모두 슬라이드
+    let tabSwiperData = new Swiper(".tabDataSwiper", {
+        init: false,
+        focusableElements: false,
+        spaceBetween: 8,
+        slidesPerView: "auto",
+        breakpoints: {
+            768: {
+              spaceBetween: 12,
+            },
+        },
+    });
+    tabSwiperData.on('init', function () {
+        let _idx = 0;
+        this.slidesEl.querySelectorAll("li").forEach(function(tabItem){
+            if(tabItem.querySelector(".tabName").classList.contains("on")){
+                tabSwiperData.slideTo(_idx);
+                console.log(_idx);
+            }else{
+                _idx++;
+            }
+        });
+    });
+    tabSwiperData.init();
+}
+
 //모드 탭 함수
 function tabMenuSwiper(){
     //모바일, 태블릿, PC 모두 슬라이드

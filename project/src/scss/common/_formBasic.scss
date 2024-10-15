@@ -3,6 +3,7 @@
 .frmGroup {
     margin-top:12px; display:flex; align-items:flex-start; gap: 12px;
     &:first-child {margin-top:0;}
+    &.gap40 {gap: 40px}
     &.error, .error {
         .iptText {padding-left: 16px; border: 1px solid var(--system-danger-50);}
         .errMsg {display: block;}
@@ -245,6 +246,12 @@ select.iptSlt {
     //가로 너비 예외
     &.pcW180 {width:180px} //PC width 180px, Mo width 100%
     &.pcW140 {width:140px} //PC width 140px, Mo width 100%
+    &.pmW150 {
+        width:150px;
+        @include media ('mobile'){
+            width:150px !important;
+        }
+    } //PC width 150px, Mo width 100%
 
     //색깔별
     &.Primary {

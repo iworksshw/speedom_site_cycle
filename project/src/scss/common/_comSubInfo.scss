@@ -14,5 +14,10 @@
         .infoTit {font-size: rem(16px); }
         .info {font-size: rem(15px); }
         .infoEtc {font-size: rem(15px);}
+
+        //조건
+        & + .cptBoardList {
+            margin-top:0;
+        }
     }
 }
