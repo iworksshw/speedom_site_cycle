@@ -225,6 +225,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if(document.querySelector(".cptFullFloat")) {
         fullFloating();
     }
+
+    // 일별달력 슬라이드
+    if (document.querySelector(".comDateSwiper")) {
+        slctDateSlide();
+    }
 });
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
@@ -511,6 +516,18 @@ function fullFloating(){
             }
         }        
     })
+}
+
+// 날짜 선택 슬라이드
+function slctDateSlide() {
+    let dateSwiper = new Swiper(".dateSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        navigation: {
+            nextEl: ".swiper-button-next.selectDate",
+            prevEl: ".swiper-button-prev.selectDate",
+        },
+    });
 }
 
 // ------------------------------- 아코디언 함수 ------------------------------- //
