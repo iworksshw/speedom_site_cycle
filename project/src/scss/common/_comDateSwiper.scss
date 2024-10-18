@@ -1,0 +1,81 @@
+.comDateSwiper {
+    overflow: hidden;
+    .dateSwiper {
+        width: 100%; padding: 0 34px; position: relative;
+        &::before {display: block; content: ""; width: 34px; height: 56px; background: #fff; position: absolute; left: 0; top: 0; z-index: 9;}
+        &::after {display: block; content: ""; width: 34px; height: 56px; background: #fff; position: absolute; right: 0; top: 0; z-index: 9;}
+        .swiper-slide {
+            width: fit-content;
+            .dateBox {
+                width: 56px; height: 56px; border-radius: 50%; padding: 11px 0; text-align: center; transition: all 0.15s;
+                & > span {display: block;font-size: rem(14px);color: var(--Gray-800); line-height: 1.25;}
+                .region {font-weight: 500;}
+                .date {font-weight: 700;}
+
+                &:hover {
+                    &.blue {
+                        background: #E9F2FF;
+                        span { color: #2F6FcF;}
+                    }
+                    &.red {
+                        background:#FFEFF5; 
+                        span {color: #E4417B;}
+                    }
+                    &.green {
+                        background: #EAF6F1; 
+                        span {color: #1FAE6A;}
+                    }
+                }
+
+                &.on {
+                    & > span {color: #fff;}
+                    &.blue {background: var(--zone-blue); 
+                        span {color: #fff;}
+                    }
+                    &.red {background: var(--zone-pink);
+                        span {color: #fff;}
+                    }
+                    &.green {background: var(--zone-green);
+                        span {color: #fff;}
+                    }
+                }
+            }
+        }
+
+        .swiper-button-next {
+            right: 0;
+            &::after {width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_20_paging_next.svg) center / 20px no-repeat;}
+        }
+        .swiper-button-prev {
+            left: 0;
+            &::after {width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_20_paging_prev.svg) center / 20px no-repeat;}
+        }
+    }
+
+    @include media("mobile"){
+        width: calc(100% + 32px); margin-left: -16px; border-bottom: 10px solid #f4f6fa;
+        .dateSwiper {
+            padding: 24px;
+            &::before {width: 24px; top: 24px;background:#fff;}
+            &::after {width: 60px;top: 24px;background:linear-gradient(270deg, #fff 40%, transparent);}
+        }
+    }
+
+    // 예외 변수
+    // 스티키 (출주표)
+    &.sticky {
+        &.sOn {
+            height: 64px; 
+            .dateSwiper {
+                max-width: 1440px; padding: 10px 34px; background: #fff; position: fixed; top:64px; left: 50%; transform: translateX(-50%); z-index: 99; overflow: hidden;
+            }
+        }
+        @include media("mobile"){
+            &.sOn {
+                .dateSwiper {
+                    top:70px;
+                }
+            }
+        }
+    }
+}
