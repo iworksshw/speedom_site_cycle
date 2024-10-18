@@ -1,0 +1,9 @@
+.cptLinkSection {
+    width: 100%; margin-top: 60px; padding-bottom: 60px; border-bottom: 10px solid #f4f6fa;
+    &:first-child {margin-top: 0;}
+    &:last-child {padding-bottom: 0; border-bottom: none;}
+
+    @include media("mobile"){
+        margin-top: 40px;
+    }
+}

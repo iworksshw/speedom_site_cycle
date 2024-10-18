@@ -37,3 +37,9 @@
 
 //조건
 .comTitH2 + .comMovieLinkBox {margin-top: 20px;}
+.comTitH3 + .comMovieLinkBox {margin-top: 12px;}
+.comMovieLinkBox + .comDataTable {margin-top: 40px;}
+
+@include media('mobile') {
+.comMovieLinkBox + .comDataTable {margin-top: 32px;}
+}

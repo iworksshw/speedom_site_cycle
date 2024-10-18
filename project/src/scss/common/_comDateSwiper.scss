@@ -12,13 +12,6 @@
                 .region {font-weight: 500;}
                 .date {font-weight: 700;}
 
-                &.on {
-                    & > span {color: #fff;}
-                    &.blue {background: var(--zone-blue);}
-                    &.red {background: var(--zone-pink);}
-                    &.green {background: var(--zone-green);}
-                }
-
                 &:hover {
                     &.blue {
                         background: #E9F2FF;
@@ -31,6 +24,19 @@
                     &.green {
                         background: #EAF6F1; 
                         span {color: #1FAE6A;}
+                    }
+                }
+
+                &.on {
+                    & > span {color: #fff;}
+                    &.blue {background: var(--zone-blue); 
+                        span {color: #fff;}
+                    }
+                    &.red {background: var(--zone-pink);
+                        span {color: #fff;}
+                    }
+                    &.green {background: var(--zone-green);
+                        span {color: #fff;}
                     }
                 }
             }
@@ -52,6 +58,24 @@
             padding: 24px;
             &::before {width: 24px; top: 24px;background:#fff;}
             &::after {width: 60px;top: 24px;background:linear-gradient(270deg, #fff 40%, transparent);}
+        }
+    }
+
+    // 예외 변수
+    // 스티키 (출주표)
+    &.sticky {
+        &.sOn {
+            height: 64px; 
+            .dateSwiper {
+                max-width: 1440px; padding: 10px 34px; background: #fff; position: fixed; top:64px; left: 50%; transform: translateX(-50%); z-index: 99; overflow: hidden;
+            }
+        }
+        @include media("mobile"){
+            &.sOn {
+                .dateSwiper {
+                    top:70px;
+                }
+            }
         }
     }
 }
