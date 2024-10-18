@@ -1,0 +1,205 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객광장'],
+                    subTitle: '문화교실',
+                    subText: '현재 운영되고 있는<br> <b>다양한 프로그램</b>을 확인해보세요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptSection">
+                        <div class="sectArea">
+
+                            <div class="comFormTable">
+                                <div class="tableTitle">
+                                    <h2>문화교실 수강신청서</h2>
+                                </div>
+                                <div class="tableArea">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width: 200px;">
+                                            <col style="width: auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>지역</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="" value="미사본장" disabled="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>프로그램명</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="" value="미사경정공원 숲 체험교실" disabled="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>이름<span class="required">*</span></th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="이름을 입력해주세요." value="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>성별<span class="required">*</span></th>
+                                                <td>
+                                                    <div class="frmGroup gap40">
+                                                        <div class="frmBox maxCont"><input id="rdo101" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">여성</label></div>
+                                                        <div class="frmBox maxCont"><input id="rdo102" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">남성</label></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>생년월일<span class="required">*</span></th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="생년월일 8자리를 입력해주세요." value="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>연락처<span class="required">*</span></th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="frmBox frmMd">
+                                                            <input type="text" class="iptText" placeholder="‘-’없이 숫자만 입력해주세요." value="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="top">문의사항</th>
+                                                <td>
+                                                    <textarea class="iptTextArea" name="" id=""></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="comPrivacyBox">
+                                <dl class="infoBox">
+                                    <dt class="boxTop">
+                                        <div class="frmGroup">
+                                            <div class="frmBox maxCont">
+                                                <input id="chk101" type="checkbox" class="iptChk" checked=""><label for="chk101" class="iptLbl">개인정보이동동의</label>
+                                            </div>
+                                        </div>
+                                    </dt>
+                                    <dd class="boxCont">
+                                        <p class="txtTit">
+                                            개인정보의 수집 및 이용목적
+                                        </p>
+                                        <p class="txt">
+                                            기금조성총괄본부는 문화교실 진행을 위하여 아래와 같이 개인정보를 수집 및 이용하오니, 동의해 주시기 바랍니다.
+                                        </p>
+                                        <ul class="listGroup">
+                                            <li class="item">
+                                                <b class="lineTit">수집 및 이용항목</b>
+                                                <i class="lineTxt">성명, 성별, 생년월일, 연락처</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="lineTit">수집 및 이용목적</b>
+                                                <i class="lineTxt">문화교실 운영 관련 수강생 관리</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="lineTit">보유 및 이용기간</b>
+                                                <i class="lineTxt">수강기간 내 (단, 법령에 따로 정하는 경우는 해당 기간까지 보관)</i>
+                                            </li>
+                                        </ul>
+                                        <p class="txt">
+                                            동의를 거부할 권리가 있으며, 이 경우 불이익은 없으나 문화교실 수강신청이 불가합니다.
+                                        </p>
+                                        <p class="anno">
+                                            ※ 스피존문화교실 회원의 부주의로 발생한 안전사고, 도난 및 분실등에 대해서는 기금조성총괄본부에서 일체 책임지지 않습니다.
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            
+                            <div class="comBtnGroup section">
+                                <div class="alignC">
+                                    <div class="btnBox">
+                                        <button class="btn Primary pcW180">신청하기</button>
+                                        <!-- <button class="btn Primary pcW180" disabled>신청하기</button> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '영업총괄팀',
+                    name: '배기준',
+                    phone: '02-2067-5606',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

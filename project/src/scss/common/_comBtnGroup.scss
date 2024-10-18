@@ -31,6 +31,8 @@
                 .btn:last-child {width: 30%; min-width: 30%;}
             }
         }
+        .moR .btnBox.min { justify-content: flex-end;}
+        .moL .btnBox.min { justify-content: flex-start;}
     }
 
     //조건

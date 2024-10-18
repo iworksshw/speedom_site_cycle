@@ -1,0 +1,43 @@
+/* ------------------------ 2뎁스 탭 (데이터) ------------------------ */
+.comTabData {
+    width: 100%; margin-top: 60px; 
+    .tabMenuGroup {
+        width: 100%; overflow: hidden;
+        .tabMenu {    
+            width: 100%; display: flex;
+
+            .tabItem {
+                width: max-content; flex-shrink: 0; display: flex; justify-content: center;
+
+                .tabName {
+                    width: max-content; height: 46px; padding: 0 36px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px; border-radius: 23px;
+                    color: var(--Gray-600); border: 1px solid var(--Gray-300); background: #fff; display: inline-block;
+                    &.on {
+                        color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
+                    }
+                }
+            }
+        }
+    }
+    @include media('mobile'){
+        width: calc(100% + 32px); margin-left: -16px; margin-top: 40px;
+        .tabMenuGroup {
+            padding: 0 20px;
+            .tabMenu {
+                .tabItem {
+                    .tabName {
+                        padding: 0 24px; font-size: rem(15px); color: var(--Gray-700); border: 1px solid var(--Bg-Line-line-100);
+                    }
+                }
+            }
+        }
+    }
+
+    //조건
+    & + .listBoard {
+        margin-top: 40px !important;
+        @include media('mobile'){
+            margin-top: 24px !important;
+        }
+    }
+}

@@ -1126,14 +1126,20 @@
         <li class="item"><a href="./table_form.html">폼 테이블</a></li>
         <li class="item"><a href="./board_list.html">일반 게시판 리스트</a></li>
         <li class="item"><a href="./album_list.html">앨범 게시판 리스트</a></li>
+        <li class="item"><a href="./nolist.html">리스트 없음</a></li>
         <li class="item"><a href="./board_view.html">게시판 상세</a></li>
+        <li class="item"><a href="./board_write.html">게시판 글쓰기</a></li>
         <li class="item"><a href="./board_top.html">각종 상단 모음</a></li>
         <li class="item"><a href="./btn_bottom.html">하단 버튼 그룹</a></li>
         <li class="item"><a href="./complete.html">완료페이지</a></li>
+        <li class="item"><a href="./person_list.html">선수 리스트</a></li>
+        <li class="item"><a href="./person_view.html">선수 상세</a></li>
+        <li class="item"><a href="./person_compare.html">선수 비교</a></li>
         <li class="item"><a href="./popup_large.html">팝업 Large</a></li>
         <li class="item"><a href="./popup_medium.html">팝업 medium</a></li>
         <li class="item"><a href="./other01.html">기타 01</a></li>
         <li class="item"><a href="./other02.html">기타 02</a></li>
+        <li class="item"><a href="./../../menu02/page_02_01.html" target="_blank">기타 03(달력-링크)</a></li>
     </ul>
 </div>
 
@@ -1267,6 +1273,135 @@
                             <button class="btn Primary search">검색</button>
                         </div>
                     </div>   
+
+
+                    <!-- 검색 필터 (데이터) -->
+                    <div class="cptWordFilter">
+                        <div class="sectArea">
+                            <div class="btnArea">
+                                <ul class="btnGroup">
+                                    <li class="btnItem">
+                                        <button type="button" class="btn Primary">전체</button> <!--선택 탭 class : Primary-->
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄱ</button> 
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄴ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄷ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㄹ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㅁ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅂ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅅ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅇ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅈ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅊ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅋ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅌ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅍ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅎ</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="comSearchBox">
+                                <div class="searchLine col4">
+                                    <dl class="condition">
+                                        <dt class="title">선수</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">현역선수</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">등급</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">조회</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">기수</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">조회</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">훈련지</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">선택하세요</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchLine">
+                                    <dl class="condition">
+                                        <dt class="title">검색어</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <button class="btn Primary search">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     
                 </div>
 
