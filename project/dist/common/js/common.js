@@ -534,7 +534,7 @@ function tabMenu02Init(){
         });
     });
 
-    tabMenuSwiper();
+    //tabMenuSwiper();
 }
 
 // 컨텐츠 탭

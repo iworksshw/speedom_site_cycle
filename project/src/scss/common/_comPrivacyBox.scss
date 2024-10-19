@@ -38,8 +38,18 @@
                 margin-top: 12px;
                 &:first-child {margin-top: 0;}
                 .miniItem {
-                    margin-top: 20px;
+                    margin-top: 20px; padding-left: 16px;
                     &:first-child {margin-top: 0;}
+                    .listTxt {
+                        padding-left: 11px; font-size: rem(15px); color: var(--Gray-800); text-align: left; font-weight: 400; line-height: 1.5; position: relative; word-break: keep-all;
+                        &::after {display: block; content: ""; width: 3px; height: 3px; background: var(--Gray-400); position: absolute; left: 0; top: 10px;}
+                    }
+                    .miniCheck {
+                        padding-left: 11px;
+                        .frmBox .iptLbl {
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
             .miniCheck {
