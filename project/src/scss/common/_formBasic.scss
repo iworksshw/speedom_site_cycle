@@ -246,6 +246,7 @@ select.iptSlt {
     //가로 너비 예외
     &.pcW180 {width:180px} //PC width 180px, Mo width 100%
     &.pcW140 {width:140px} //PC width 140px, Mo width 100%
+    &.pcW200 {width:200px} //PC width 200px, Mo width 100%
     &.pmW150 {
         width:150px;
         @include media ('mobile'){
