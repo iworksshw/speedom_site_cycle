@@ -1,0 +1,1441 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 정보'],
+                    subTitle: '종합경주정보',
+                    subText: '<b>스피드와 전략</b>이 만나는 경륜의 세계! <br/><b>모든 정보</b>를 한 곳에서 확인하세요.',
+                    url: "../../",
+                    visualClass: "bg02",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptDateSelect">
+                        <div class="sectArea">
+                            <!-- 날짜 선택 박스영역 -->
+                            <div class="selectBox">
+                                <div class="frmGroup">
+                                    <div class="frmBox frmMd">
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024</option>
+                                            <option value="">2023</option>
+                                            <option value="">2022</option>
+                                            <option value="">2021</option>
+                                            <option value="">2020</option>
+                                        </select>
+                                    </div>
+                                    <div class="frmBox">
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024년 07월 21일 28회 3일차</option>
+                                            <option value="">2024년 07월 21일 28회 4일차</option>
+                                            <option value="">2024년 07월 21일 28회 5일차</option>
+                                            <option value="">2024년 07월 21일 28회 6일차</option>
+                                            <option value="">2024년 07월 21일 28회 7일차</option>
+                                            <option value="">2024년 07월 21일 28회 8일차</option>
+                                            <option value="">2024년 07월 21일 28회 9일차</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="calendarBtn" onclick="openPopup('calendarPop')">달력으로 날짜 선택</button>
+
+                                <div class="layerPopup" id="calendarPop"> <!--class 'on' : 팝업 열림-->
+                                    <div class="popHead">
+                                        <h3>달력조회</h3>
+                                        <button type="button" class="popClose"  onclick="closePopup('calendarPop')">팝업 닫기</button>
+                                    </div>
+                                    <div class="popCont">
+                                        <div class="dateSetting">
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn first">이전 해로 이동</button>
+                                                <button type="button" class="setBtn prev">이전 달로 이동</button>
+                                            </div>
+                                            <div class="date">
+                                                <span>2024년</span>
+                                                <span>12월</span>
+                                            </div>
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn next">다음 달로 이동</button>
+                                                <button type="button" class="setBtn last">다음 해로 이동</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="comCalendar inPop"> <!--class 'inPop' : 레이어팝업 내부에 들어올 때-->
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem today"> <!--class 'today' : 오늘 날짜 표시-->
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cptSection">
+                        <!-- 일별달력 슬라이드  -->
+                        <div class="comDateSwiper">
+                            <div class="swiper dateSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue on"> <!--class 'on' : 현재 날짜-->
+                                            <span class="region">창원</span>
+                                            <span class="date">01</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">02</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">03</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">04</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">05</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">06</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">07</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">08</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">09</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">10</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">11</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">12</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">13</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">14</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">15</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">16</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">17</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">18</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">19</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">20</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">21</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">22</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">23</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next selectDate"></div>
+                                <div class="swiper-button-prev selectDate"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 데이터 변경 영역 -->
+                    <!-- to Dev : 슬라이드 요소 선택 시 하단의 데이터가 일괄 변경됩니다. -->
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2 mRow">
+                                <h2>창원 01경주 (선발 12:52)</h2>
+                                <p class="etcAdds">우수 5주회 선두고정(1691m)</p>
+                            </div>
+                            
+                            <div class="modTab02">
+                                <div class="tabMenuGroup tabDataSwiper">
+                                    <ul class="tabMenu swiper-wrapper">
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName on">출주표</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">최근경주성적</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">연도별기록</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">출전선수상담</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">경주결과</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName">확정배당률</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tabContianer">
+                                    <div class="tabCont on">
+                                        <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeL">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수정보</th>
+                                                            <th>기어배수</th>
+                                                            <th>200m 기록</th>
+                                                            <th>입상/<br/>출전 횟수</th>
+                                                            <th>훈련지</th>
+                                                            <th>승률</th>
+                                                            <th>연대율</th>
+                                                            <th>삼연대율</th>
+                                                            <th>선행</th>
+                                                            <th>젖히기</th>
+                                                            <th>추입</th>
+                                                            <th>마크</th>
+                                                            <th>등급</th>
+                                                            <th>최근 3회<br/>평균득점</th>
+                                                            <th>최근 3회<br/>종합순위</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
+                                                            </th>
+                                                            <td>3.93</td>
+                                                            <td>11”40</td>
+                                                            <td>14/23</td>
+                                                            <td>창원의창</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>57%</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>(현)B2<br/>(전)B1</td>
+                                                            <td>(광)87.11<br/>
+                                                                (종)86.71</td>
+                                                            <td>415/554</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="comGroupTop">
+                                            <div class="alignR">
+                                                <ul class="legendList">
+                                                    <li class="lgItem">
+                                                        <span class="legend type01">선</span>
+                                                        <span class="txt">선행</span>
+                                                    </li>
+                                                    <li class="lgItem">
+                                                        <span class="legend type02">젖</span>
+                                                        <span class="txt">젖히기</span>
+                                                    </li>
+                                                    <li class="lgItem">
+                                                        <span class="legend type04">추</span>
+                                                        <span class="txt">추입</span>
+                                                    </li>
+                                                    <li class="lgItem">
+                                                        <span class="legend type03">마</span>
+                                                        <span class="txt">마크</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="comDataTable both"> <!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeXL"> <!-- addClass - sizeS : 최소사이즈 600px, sizeM : 최소사이즈 800px, sizeL : 최소사이즈 1000px -->
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:90px;">
+                                                        <col style="width:80px;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:80px;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:80px;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:80px;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th rowspan="2" class="btmLine">선수명</th> <!-- addClass - btmLine : 가장 하단에 위치함 (진한 바닥 라인) -->
+                                                            <th colspan="4">최근 3회전 성적</th>
+                                                            <th colspan="4">최근 2회전 성적</th>
+                                                            <th colspan="4">최근 1회전 성적</th>
+                                                            <th colspan="2">금회 성적</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="noStand">장소/일자</th> <!-- addClass - noStand : 가장 좌측(기준)이 아님 -->
+                                                            <th>1일차</th>
+                                                            <th>2일차</th>
+                                                            <th>3일차</th>
+                                                            <th>장소/일자</th>
+                                                            <th>1일차</th>
+                                                            <th>2일차</th>
+                                                            <th>3일차</th>
+                                                            <th>장소/일자</th>
+                                                            <th>1일차</th>
+                                                            <th>2일차</th>
+                                                            <th>3일차</th>
+                                                            <th>장소/일자</th>
+                                                            <th>1일차</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                            </th>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating">선발</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone blue">창</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type02">젖</span></td>
+                                                            <td><span class="rating bold">선준</span> 10-4</td>
+                                                            <td><span class="rating bold">우준</span> 10-4</td>
+                                                            <td><span class="zone pink">부</span> 0301</td>
+                                                            <td><span class="rating mint">선결</span> 9-3 <span class="legend type03">추</span></td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4 <span class="legend type04">마</span></td>
+                                                            <!--
+                                                            .zone green : 광명 
+                                                            .zone blue : 창원 
+                                                            .zone pink : 부산 
+                                
+                                                            .rating : 선발, 우수 특선
+                                                            .rating bold : 특준, 선준, 우준
+                                                            .rating mint : 선결
+                                                            .rating blue : 우결
+                                                            .rating orange : 결승
+                                                            .rating red : 특우
+                                
+                                                            .legend type01 : 선행
+                                                            .legend type02 : 젖히기
+                                                            .legend type03 : 추입
+                                                            .legend type04 : 마크
+                                                            -->
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
+                                                            </th>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
+                                                            </th>
+                                                            <td><span class="zone blue">창</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type03">마</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold orange">결승</span> 10-4 <span class="legend type04">추</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
+                                                            </th>
+                                                            <td><span class="zone pink">부</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
+                                                            </th>
+                                                            <td><span class="zone pink">부</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
+                                                            </th>
+                                                            <td><span class="zone pink">부</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="center">
+                                                                <div class="name"><span class="sign num07">7</span><a href="#" class="player">허준</a></div>
+                                                            </th>
+                                                            <td><span class="zone pink">부</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating">우수</span> 9-3</td>
+                                                            <td><span class="rating">특선</span> 6-7</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating bold">특준</span> 10-4 <span class="legend type01">선</span></td>
+                                                            <td><span class="rating bold blue">우결</span> 10-4</td>
+                                                            <td><span class="rating">우수</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating orange">결승</span> 10-4</td>
+                                                            <td><span class="rating blue">선준</span> 10-4</td>
+                                                            <td><span class="rating orange">특준</span> 10-4</td>
+                                                            <td><span class="zone green">광</span> 0301</td>
+                                                            <td><span class="rating red">특우</span> 10-4</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeL">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:90px;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수정보</th>
+                                                            <th>등급</th>
+                                                            <th>전법</th>
+                                                            <th>각질</th>
+                                                            <th>출신지</th>
+                                                            <th>출주일</th>
+                                                            <th>1착위</th>
+                                                            <th>2착위</th>
+                                                            <th>3착위</th>
+                                                            <th>평균득점</th>
+                                                            <th>총순위</th>
+                                                            <th>최근 3회 순위</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
+                                                            </th>
+                                                            <td>우수</td>
+                                                            <td>젖히기</td>
+                                                            <td>지구형</td>
+                                                            <td>서울</td>
+                                                            <td>-</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>0</td>
+                                                            <td>115</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
+                                                            </th>
+                                                            <td>특선</td>
+                                                            <td>마크</td>
+                                                            <td>복합형</td>
+                                                            <td>경기</td>
+                                                            <td>63</td>
+                                                            <td>36</td>
+                                                            <td>10</td>
+                                                            <td>4</td>
+                                                            <td>89.74</td>
+                                                            <td>115</td>
+                                                            <td>87.45</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeL">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:5%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:7%;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:8%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th rowspan="2" class="btmLine">선수정보</th>
+                                                            <th rowspan="2" class="btmLine">체중</th>
+                                                            <th colspan="6">훈련량</th>
+                                                            <th rowspan="2" class="btmLine">훈련지</th>
+                                                            <th rowspan="2" class="btmLine">훈련 동참자</th>
+                                                            <th rowspan="2" class="btmLine">전회훈련</th>
+                                                            <th rowspan="2" class="btmLine">훈련내용</th>
+                                                            <th rowspan="2" class="btmLine">참고사항</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="noStand">200m</th>
+                                                            <th>333m</th>
+                                                            <th>500m</th>
+                                                            <th>도로km</th>
+                                                            <th>트랙</th>
+                                                            <th>훈련일수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>경기개인</td>
+                                                            <td>김경수</td>
+                                                            <td>광명</td>
+                                                            <td class="left">피스타에서 333m, 500m 댓쉬훈련으로 선행력 보강을 하였으며, 도로에서 내리막 및 등판훈련으로 스피드와 근력을 강화하였습니다.</td>
+                                                            <td>개인사정으로 인한 퇴소</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>경기개인</td>
+                                                            <td>김경수</td>
+                                                            <td>서울</td>
+                                                            <td class="left">도로에서 오르막 등판훈련과 내리막 훈련을 하였으며, 보조훈련으로 웨이트 트레이닝을 하였습니다.</td>
+                                                            <td>안경 변색 교체 (7/17)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>순발형</td>
+                                                            <td>김경수</td>
+                                                            <td>충북</td>
+                                                            <td class="left">도로에서 근지구력 보강을 위해 오르막 300m 인터벌 댓쉬를 실시하였습니다. 보조훈련으로 계단뛰기를 하였습니다.</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>복합형</td>
+                                                            <td>김경수</td>
+                                                            <td>경남</td>
+                                                            <td class="left">피스타에서 333m, 500m 댓쉬훈련으로 선행력 보강을 하였으며, 도로에서 내리막 및 등판훈련으로 스피드와 근력을 강화하였습니다.</td>
+                                                            <td>장갑 흰/검/형광 교체(7/1), 후보</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>경기개인</td>
+                                                            <td>김경수</td>
+                                                            <td>광명</td>
+                                                            <td class="left">피스타에서 333m, 500m 댓쉬훈련으로 선행력 보강을 하였으며, 도로에서 내리막 및 등판훈련으로 스피드와 근력을 강화하였습니다.</td>
+                                                            <td>개인사정으로 인한 퇴소</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>경기개인</td>
+                                                            <td>김경수</td>
+                                                            <td>광명</td>
+                                                            <td class="left">피스타에서 333m, 500m 댓쉬훈련으로 선행력 보강을 하였으며, 도로에서 내리막 및 등판훈련으로 스피드와 근력을 강화하였습니다.</td>
+                                                            <td>개인사정으로 인한 퇴소</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
+                                                            </th>
+                                                            <td>81->85</td>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>1</td>
+                                                            <td>20</td>
+                                                            <td>30</td>
+                                                            <td>4</td>
+                                                            <td>경기개인</td>
+                                                            <td>김경수</td>
+                                                            <td>광명</td>
+                                                            <td class="left">피스타에서 333m, 500m 댓쉬훈련으로 선행력 보강을 하였으며, 도로에서 내리막 및 등판훈련으로 스피드와 근력을 강화하였습니다.</td>
+                                                            <td>개인사정으로 인한 퇴소</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="comTitH3">
+                                            <h3>경주영상</h3>
+                                        </div>
+                                        <div class="comMovieLinkBox">
+                                            <ul class="linkBox">
+                                                <li class="item">
+                                                    <a href="#" class="movieLink">전체 경주 동영상 보기</a> <!--class 'disabled' : 동영상 없음-->
+                                                </li>
+                                                <li class="item">
+                                                    <a href="#" class="movieLink">선두유도원 퇴피 후 동영상 보기</a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="#" class="movieLink">느린화면 동영상 보기</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeL">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:7%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                        <col style="width:8.4%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수정보</th>
+                                                            <th>순위</th>
+                                                            <th>착차</th>
+                                                            <th>주행시간</th>
+                                                            <th>승부수</th>
+                                                            <th>실격</th>
+                                                            <th>경고</th>
+                                                            <th>주의</th>
+                                                            <th>기권구분</th>
+                                                            <th>골인구분</th>
+                                                            <th>200m 기록</th>
+                                                            <th>200m 평균시속</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
+                                                            </th>
+                                                            <td>3</td>
+                                                            <td>3/4B</td>
+                                                            <td>2:28:4425</td>
+                                                            <td>마크</td>
+                                                            <td>-</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>-</td>
+                                                            <td>10"71</td>
+                                                            <td>67.23</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="comPlayerGrade">
+                                            <ul class="gradeGroup">
+                                                <li class="gradeItem">
+                                                    <div class="grade first">1위</div>
+                                                    <div class="nameArea">
+                                                        <b class="name">김광진</b>
+                                                        <span class="desc">
+                                                            <span class="number num01">1</span>
+                                                            13기/44세
+                                                        </span>
+                                                    </div>
+                                                    <div class="thumArea">
+                                                        <img src="../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                                    </div>
+                                                </li>
+                                                <li class="gradeItem">
+                                                    <div class="grade second">2위</div>
+                                                    <div class="nameArea">
+                                                        <b class="name">김상인</b>
+                                                        <span class="desc">
+                                                            <span class="number num03">3</span>
+                                                            13기/44세
+                                                        </span>
+                                                    </div>
+                                                    <div class="thumArea">
+                                                        <img src="../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                                    </div>
+                                                </li>
+                                                <li class="gradeItem">
+                                                    <div class="grade third">3위</div>
+                                                    <div class="nameArea">
+                                                        <b class="name">곽훈신</b>
+                                                        <span class="desc">
+                                                            <span class="number num04">4</span>
+                                                            13기/44세
+                                                        </span>
+                                                    </div>
+                                                    <div class="thumArea">
+                                                        <img src="../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="comDataTable both"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                            <div class="tableArea sizeL">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                        <col style="width:11%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>승식</th>
+                                                            <th>단승식</th>
+                                                            <th>연승식</th>
+                                                            <th>연승식</th>
+                                                            <th>쌍승식</th>
+                                                            <th>복승식</th>
+                                                            <th>삼복승식</th>
+                                                            <th>쌍복승식</th>
+                                                            <th>삼쌍승식</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>승자</th>
+                                                            <th>6</th>
+                                                            <th>6</th>
+                                                            <th>1</th>
+                                                            <th>6-1</th>
+                                                            <th>6-1</th>
+                                                            <th>6-1-4</th>
+                                                            <th>6-1-4</th>
+                                                            <th>6-1-4</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>배당률(%)</th>
+                                                            <td>4.0</td>
+                                                            <td>13</td>
+                                                            <td>1.0</td>
+                                                            <td>6.8</td>
+                                                            <td>1.3</td>
+                                                            <td>7.7</td>
+                                                            <td>29.9</td>
+                                                            <td>36.1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

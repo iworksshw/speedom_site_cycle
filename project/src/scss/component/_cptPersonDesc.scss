@@ -83,74 +83,6 @@
             }
     }
 
-    // 예외 클래스
-    &.inPopup {
-        .sectArea {
-            display: flex; flex-wrap: wrap; gap: 40px 32px; align-items: flex-start;
-            .profPart {
-                flex: 0 0 330px; margin-top: 0; flex-wrap: wrap;
-        
-                .profBox {
-                    width:100%; flex-wrap: wrap;padding: 60px 24px 32px; margin-top: 0; row-gap: 40px; 
-                    
-                    .chkArea {
-                        position: absolute; top: 16px; left: 24px;
-                    }
-                    .photoArea {
-                        flex: 0 1 100%; padding-top: 0;
-                        .thumArea {margin: 0 auto;}
-                        .txtArea {
-                            margin-top: 20px; 
-                            .name {font-size: rem(30px);}
-                        }
-                    }
-            
-                    .infoArea {
-                        flex: 0 1 100%; 
-                        .infoGroup {
-                            gap: 32px;
-                            .infoItem {
-                                flex: 0 0 100%;
-            
-                                .dlList {
-                                    .item {
-                                        .tit {min-width: 120px; font-size: rem(15px);flex: 1 0 42%;}
-                                        .txt {font-size: rem(15px);flex: 1 1 38%;}
-                                    }
-                                }
-            
-                                // 항목 width:100%
-                                &.full {
-                                    flex: 0 0 100%;
-                                    .dlList {
-                                        display: block;
-                                    }
-                                }
-                            }
-                        }
-                    }    
-                }
-                            
-            }
-            .dataPart {
-                flex: 0 1 calc(100% - 362px); margin-top: 0; width: calc(100% - 362px);
-            }
-        }
-
-        @include media("mobile"){
-            .sectArea {
-                gap: 0;
-                .profPart {
-                    flex: 1 0 100%;  
-                }
-                .dataPart {
-                    flex: 1 0 100%; margin-top: 40px; width: 100%;
-                }
-            }
-        }
-    }
-
-
     @include media("tablet"){
         .profBox {
             flex-wrap: wrap; row-gap: 36px;
@@ -214,6 +146,91 @@
             margin-top: 40px;
             .comTitH2 {
                 margin-top: 40px;
+            }
+        }
+    }
+
+    
+    // 예외 클래스
+    &.inPopup {
+        .sectArea {
+            display: flex; flex-wrap: wrap; gap: 40px 32px; align-items: flex-start;
+            .profPart {
+                flex: 0 0 330px; margin-top: 0; flex-wrap: wrap;
+        
+                .profBox {
+                    width:100%; flex-wrap: wrap;padding: 60px 24px 32px; margin-top: 0; border-radius: 20px; row-gap: 40px; 
+                    
+                    .chkArea {
+                        position: absolute; top: 16px; left: 24px;
+                    }
+                    .photoArea {
+                        flex: 0 1 100%; padding-top: 0;
+                        .thumArea {margin: 0 auto;}
+                        .txtArea {
+                            margin-top: 20px; 
+                            .name {font-size: rem(30px);}
+                        }
+                    }
+            
+                    .infoArea {
+                        flex: 0 1 100%; 
+                        .infoGroup {
+                            gap: 32px;
+                            .infoItem {
+                                flex: 0 0 100%;
+            
+                                .dlList {
+                                    .item {
+                                        .tit {min-width: 120px; font-size: rem(15px);flex: 1 0 42%;}
+                                        .txt {font-size: rem(15px);flex: 1 1 38%;}
+                                    }
+                                }
+            
+                                // 항목 width:100%
+                                &.full {
+                                    flex: 0 0 100%;
+                                    .dlList {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }    
+                }
+                            
+            }
+            .dataPart {
+                flex: 0 1 calc(100% - 362px); margin-top: 0; width: calc(100% - 362px);
+            }
+            .digramPart {
+                margin-top: 0; position: relative;
+                &::before {display: block; content: ""; width: calc(100% + 64px); height: 10px;margin-left: -32px; margin-bottom: 40px; background: #f4f6fa;}
+            }
+        }
+
+        @include media("mobile"){
+            .sectArea {
+                gap: 0;
+                .profPart {
+                    flex: 1 0 100%;  
+                    .profBox {
+                        .infoArea {
+                            .infoGroup {
+                                .infoItem {
+                                    .dlList {
+                                        .item {
+                                            .tit {flex: 1 0 24%;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dataPart {
+                    flex: 1 0 100%; margin-top: 40px; width: 100%;
+                }
             }
         }
     }
