@@ -212,6 +212,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //탭메뉴 (1차)
     tabMenuInit();
 
+    tabMenu02Init();
+
     //단어 탭
     tabWords();
 
@@ -225,9 +227,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 선수비교 하단 플로팅박스
-    if(document.querySelector(".cptFullFloat")) {
-        fullFloating();
-    }
+    fullFloating();
+
+    // 일별달력 슬라이드
+    slctDateSlide();
+
+    // 일별달력 선택 - 내부 스크롤
+    dateCalInit();
 });
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
@@ -491,6 +497,46 @@ function tabMenuInit(){
     tabMenuSwiper();
 }
 
+function tabMenu02Init(){
+    //모드탭의 수
+    const modTabs = document.querySelectorAll(".modTab02");
+    modTabs.forEach(function(modTab,tabIdx,elements){
+        const tabmenuGroups = modTab.querySelectorAll(".tabMenuGroup");
+        const tabmenus = modTab.querySelectorAll(".tabName");
+        const tabConts = modTab.querySelectorAll(".tabCont");
+
+        //모바일에서 해당 hover효과
+        tabmenuGroups.forEach(function(tabmenuGroup){
+            tabmenuGroup.addEventListener("touchstart", function() {
+                this.classList.add("on");
+            });
+            tabmenuGroup.addEventListener("touchend", function() {
+                this.classList.remove("on");
+            });
+        });
+
+        //모드탭 내의 메뉴 수
+        tabmenus.forEach(function(tabmenu,menuIdx,inElements){
+            tabmenu.addEventListener("click", function(event){
+                inElements.forEach(function(inElement){
+                    inElement.classList.remove("on");
+                    inElement.setAttribute("title", "탭메뉴");
+                });
+                this.classList.add("on");
+                this.setAttribute("title", "선택 된 탭메뉴");
+                tabConts.forEach(function(tabCont,contIdx){
+                    tabCont.classList.remove("on");
+                    if(menuIdx == contIdx){
+                        tabCont.classList.add("on");
+                    }
+                })
+            });
+        });
+    });
+
+    //tabMenuSwiper();
+}
+
 // 컨텐츠 탭
 function tabWords() {
     const tabBtns = document.querySelectorAll(".cptWordTab .btnArea .btnItem");
@@ -520,28 +566,100 @@ function tabWords() {
 // 선수비교 하단 플로팅박스
 function fullFloating(){
     const float = document.querySelector(".cptFullFloat");
-    const winH = window.innerHeight;
-    const contH = document.documentElement.scrollHeight;
-    const floatH = float.clientHeight;
+    
+    if (float) {
+        const winH = window.innerHeight;
+        const contH = document.documentElement.scrollHeight;
+        const floatH = float.clientHeight;
+        
+        window.addEventListener("scroll", function(){
+            const scrlT = window.scrollY;
+            console.log(winH, contH, scrlT, floatH);
 
-    window.addEventListener("scroll", function(){
-        const scrlT = window.scrollY;
-        console.log(winH, contH, scrlT, floatH);
+            if(window.matchMedia("(min-width:768px)").matches){
+                if(scrlT > contH - winH - floatH) {
+                    float.classList.add("stick");
+                } else {
+                    float.classList.remove("stick");
+                }
+            } else {
+                if(scrlT > contH - winH - floatH - 184) {
+                    float.classList.add("stick");
+                } else {
+                    float.classList.remove("stick");
+                }
+            }        
+        })
+    }
+    
+}
 
-        if(window.matchMedia("(min-width:768px)").matches){
-            if(scrlT > contH - winH - floatH) {
-                float.classList.add("stick");
+// 날짜 선택 슬라이드
+function slctDateSlide() {
+    if (document.querySelector(".comDateSwiper")) {
+        let dateSwiper = new Swiper(".dateSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 12,
+            navigation: {
+                nextEl: ".swiper-button-next.selectDate",
+                prevEl: ".swiper-button-prev.selectDate",
+            },
+        });
+    }
+}
+
+// 일별달력 스와이퍼 Sticky
+function dateCalInit () {
+    const dateCal = document.querySelector(".comDateSwiper.sticky");
+
+    if(dateCal) {
+        const dateCalH = dateCal.getBoundingClientRect().top + window.scrollY;
+
+        window.addEventListener("scroll", function(){
+            // Sticky 추가
+            if(window.scrollY > dateCalH - 74) {
+                dateCal.classList.add("sOn");
             } else {
-                float.classList.remove("stick");
+                dateCal.classList.remove("sOn");
             }
-        } else {
-            if(scrlT > contH - winH - floatH - 184) {
-                float.classList.add("stick");
-            } else {
-                float.classList.remove("stick");
+
+            dateBoxInit();
+        })
+
+    
+    }
+}
+
+// 스크롤에 따라 dateBox .on 이동
+function dateBoxInit() {
+    const sections = document.querySelectorAll(".cptLinkSection");
+    const slides = document.querySelectorAll(".dateSwiper .swiper-slide");
+    const btns = document.querySelectorAll(".dateBox");
+    
+    sections.forEach((section, idx) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            btns.forEach(btn => btn.classList.remove("on"));
+
+            const targetS = slides[idx];
+            if (targetS) {
+                const targetB = targetS.querySelector(".dateBox");
+                if (targetB) {
+                    targetB.classList.add("on");
+                }
             }
-        }        
+        }
     })
+}
+
+// 일별달력 클릭 시 스크롤 이동
+function scrlMoveTo(link, nowBtn) {
+    const elem = document.querySelector("#" + link);
+
+    if(elem) {
+        const moveY = elem.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({top:moveY - 160, behavior:"smooth"});
+    } 
 }
 
 // ------------------------------- 아코디언 함수 ------------------------------- //

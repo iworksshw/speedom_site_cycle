@@ -1,0 +1,67 @@
+.comPlayerGrade {
+    margin: 40px 0;
+    &:first-child {margin-top: 0;}
+    .gradeGroup {
+        display: flex; column-gap: 40px;
+
+        .gradeItem {
+            padding: 24px 40px; border: 1px solid var(--Bg-Line-line-100); border-radius: 12px; flex: 0 1 33.3333%; display: flex; align-items: center; column-gap: 40px;
+            .grade {
+                width: 28px; padding-top: 36px; font-size: rem(20px); font-weight: 700; color: var(--Gray-600); text-align: center; background: url(../../images/common/ic_28_grade_gold.svg) top center no-repeat; flex: 1 0 28px;
+                &.first {color: var(---Primary);}
+                &.second {background-image: url(../../images/common/ic_28_grade_silver.svg);}
+                &.third {background-image: url(../../images/common/ic_28_grade_bronze.svg);}
+            }
+            .nameArea{
+                flex: 1 0 auto;
+                .name{
+                    font-size: rem(24px); color: var(--Gray-800); font-weight: 700; line-height: 1.4;display: inline-block; position: relative;
+                    &::after {display: block; content: ""; width: 100%; height: 1px; background: var(--Gray-600); opacity: 0.3;}
+                }
+                .desc {
+                    width: 100%; margin-top: 8px; font-size: rem(14px); font-weight: 300; color: var(--Gray-600); line-height: 1.6; display: inline-block;
+                    .number {
+                        width: 16px; height: 16px; border-radius: 50%; margin-right: 4px; line-height: 15px; text-align: center; font-size: rem(11px); color: #fff; font-weight: 700; display: inline-block; vertical-align: middle;
+                        &.num01 {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: #FFF;}
+                        &.num02 {color: #fff; border: 1px solid #111111; background: #111111;}
+                        &.num03 {color: #fff; border: 1px solid #FF2828; background: #FF2828;}
+                        &.num04 {color: #fff; border: 1px solid #2A7DDF; background: #2A7DDF;}
+                        &.num05 {color: #fff; border: 1px solid #FFB907; background: #FFB907;}
+                        &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
+                        &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
+                    }
+                }
+            }
+            .thumArea{
+                width: 108px; height: 108px; padding: 4px; border-radius: 50%; flex: 0 0 100px; overflow: hidden; position: relative;
+                &::before {display: block; content: ""; width: 100%; height: 100%; background: linear-gradient(120deg, #28c39e, #1c6ec3); position: absolute; top: 0; left: 0; z-index: -9; opacity: 0.3;}
+                img {width: 100%; height: 100%; object-fit: cover; border-radius: 50%;}
+            }
+        }
+    }
+
+    @include media('mobile') {
+        margin: 16px 0 24px;
+        .gradeGroup {
+            flex-wrap: wrap; row-gap: 10px;
+    
+            .gradeItem {
+                padding: 12px 24px; flex: 0 1 100%;column-gap: 24px;
+                .grade {
+                    padding-top: 32px; font-size: rem(18px); font-weight: 600;
+                }
+                .nameArea{
+                    .name{
+                        font-size: rem(20px); 
+                    }
+                    .desc {
+                        margin-top: 6px; font-size: rem(13px);
+                    }
+                }
+                .thumArea{
+                    width: 68px; height: 68px;flex: 0 0 60px;
+                }
+            }
+        }
+    }
+}

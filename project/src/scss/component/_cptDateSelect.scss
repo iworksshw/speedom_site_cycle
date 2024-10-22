@@ -1,0 +1,77 @@
+.cptDateSelect {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    .selectBox {
+        padding: 32px 40px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-200); background: var(--Bg-Line-bg-100); display: flex; column-gap: 50px; position: relative;
+        .frmGroup {
+            flex: 1 0 auto;
+            select {background-color: transparent;}
+        }
+        .calendarBtn {
+            width: 48px; height: 48px; border-radius: 50%; font-size: 0; background: var(---Primary) url(../../images/common/ic_24_calendar.svg) center no-repeat; flex: 0 0 48px; 
+        }
+        .layerPopup {
+            max-width: 360px; border-radius: 20px; overflow: hidden; background: #fff; position: absolute; right: 20px; top: 90px; box-shadow: 2px 4px 30px 0px rgba(0, 0, 0, 0.10); z-index: 9; display: none;
+
+            &.on {display: block;}
+
+            .popHead {
+                padding: 16px 32px; background: var(--Point-Primary2); display: flex; align-items: center; justify-content: space-between;
+                h3 {font-size: rem(20px); color: #fff; font-weight: 700; line-height: 1.4;}
+                .popClose {width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_close_white.svg) center no-repeat;}
+            }
+
+            .popCont{
+                .dateSetting {
+                    padding: 10px 24px; border-bottom: 1px solid var(--Gray-200); display: flex; column-gap: 8px; align-items: center;
+                    .btnGroup {
+                        display: flex; align-items: center; column-gap: 4px;
+                        .setBtn {
+                            width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--Bg-Line-line-100); font-size: 0; background: url(../../images/common/ic_12_arr_fill_g.svg) center no-repeat; 
+                            &.first {background-image: url(../../images/common/ic_12_arr_fill_g.svg);}
+                            &.next {transform: rotate(180deg);}
+                            &.last {background-image: url(../../images/common/ic_12_arr_fill_g.svg); transform: rotate(180deg);}
+                        }
+                        
+                    }
+                    .date {
+                        span {padding: 0 8px; font-size: rem(18px); color: var(--Gray-900); display: inline-block; vertical-align: middle;}
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 20px;
+        .selectBox {
+            padding: 0; border: none; background: none;  gap: 16px 15px; position: relative;
+            .frmGroup {
+                flex: 1 0 100%;flex-wrap: wrap;
+                .frmBox {
+                    &:last-child {width: calc(100% - 63px);}
+                }
+            }
+            .calendarBtn {
+                position: absolute; bottom: 0; right: 0;
+            }
+            .layerPopup {
+                right: 0; top: 120px;z-index: 15;
+                .popHead {
+                    padding: 16px 20px;
+                    h3 {font-size: rem(18px);font-weight: 600; line-height: 1.3;}
+                }
+    
+                .popCont{
+                    .dateSetting {
+                        padding: 10px 20px; justify-content: center;
+                        .date {
+                            text-align: center;
+                            span {font-size: rem(16px); }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

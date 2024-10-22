@@ -1,0 +1,8 @@
+.modLinkScroll {
+    width: 100%; margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    
+    @include media("mobile"){
+        margin-top: 40px;
+    }
+}

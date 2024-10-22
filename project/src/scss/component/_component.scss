@@ -14,6 +14,7 @@
 @import 'cptSection';   //기본 컨텐츠 단락
 @import 'cptCol2Section';   //기본 컨텐츠 2열 단락
 @import 'cptCol3Section';   //기본 컨텐츠 3열 단락
+@import 'cptLinkSection';   //ID 스크롤 이동 단락
 
 @import 'cptEtcInfo';   //서브컨텐츠 추가 안내사항
 @import 'cptDescList';  //썸네일 포함 서브컨텐츠 설명 리스트
@@ -36,3 +37,6 @@
 @import 'cptCompareData';   // 선수 전적 비교
 @import 'cptFullFloat';     // 선수 비교 플로팅 박스
 @import 'cptComplete';  // 완료 안내문
+@import 'cptDateSelect';    //날짜선택 셀렉트박스 묶음
+
+@import 'cptJoinTable'; //회원 정보 입력 폼
