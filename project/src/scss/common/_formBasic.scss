@@ -15,6 +15,8 @@
             margin-left: 5px; margin-top:0; height: 48px; align-content: center;
             &:first-child {margin-left: 0;}
         }
+        // 고객광장 - 고객의 소리 - 쓰기
+        &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
     }
     .textBox {margin-left: 5px; height: 48px; align-content: center;}
 }

@@ -64,6 +64,75 @@
                         }
                     }
                 }
+                // 고객광장 - 고객의 소리 - 로그인 후
+                &.thTable {
+                    border-top: 1px solid var(--font-900, #111);
+                    thead {
+                        tr {
+                            th {height: 59px;border-bottom: 1px solid var(--font-900, #111);font-size: rem(16px);color: var(--font-900, #111);text-align: center;font-weight: 500;line-height: normal;
+                                &:first-child {padding-left: 20px;}
+                                &:last-child {padding-right: 20px;}
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                &.num {}
+                                &.sort {
+                                    font-weight: 600;
+                                }
+                                &.bdTitle {}
+                                &.writing {}
+                                &.answer {}
+                                &.processing {
+                                    span {
+                                        display: inline-block; align-content: center; padding-left: 16px; padding-right: 16px; height: 26px; 
+                                        font-size: rem(13px); font-weight: 600; color: var(---Primary);line-height: 26px; border-radius: 20px;border: 1px solid var(---Primary); background: #FFF;
+                                    }
+                                    &.progress span {color: var(--Point-Red);border-color: var(--Point-Red);
+                                    }
+                                    &.complete span {color: var(--Gray-500);border-color: var(--Gray-500);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @include media('mobile'){
+                        thead {
+                            display: none;
+                        }
+                        tbody {
+                            tr {
+                                flex-direction: column;
+                                td {
+                                    &.num {
+
+                                    }
+                                    &.sort {order: 2;margin-top: 8px;font-size: rem(15px);height: 26px;line-height: 26px;
+                                    }
+                                    &.bdTitle {
+                                        order: 3;margin-top: -26px;text-indent: 38px;height: auto;
+                                        a {height: auto;overflow: visible;white-space: normal;
+                                        }
+                                    }
+                                    &.writing {
+                                        order: 4;margin-top: 8px;position: relative;padding-left: 44px;
+                                        &:after {content: '작성일:';position: absolute;top: 0;left: 0;}
+                                    }
+                                    &.answer {
+                                        order: 5;position: relative;padding-left: 44px;
+                                        &:after {content: '답변일:';position: absolute;top: 0;left: 0;}
+                                    }
+                                    &.processing {
+                                        order: 1;
+                                        span {height: 24px;padding-left: 10px;padding-right: 10px;font-size: rem(12px);line-height: 24px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             @include media('mobile'){
                 width: calc(100% + 32px); margin-top: 0; margin-left: -16px; display: flex;
@@ -128,7 +197,12 @@
                         }
                     }
                 }
+
             }
+        }
+        @include media('mobile'){
+            // 고객광장 - 고객의 소리 - 로그인 후 
+            .comTitH2 {display: none;}
         }
     }
 }
