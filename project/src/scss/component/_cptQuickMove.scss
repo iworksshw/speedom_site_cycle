@@ -24,9 +24,13 @@
                 }
             }
         }
+        &.bgWhite {border-radius: 16px;border: 1px solid var(--bg-line-line-200, #EDEDED);background: var(--bg-line-white, #FFF);
+            .quickBox .btnArea .btn::after {
+                background-image: url('../../images/common/ic_16_arr_right_g.svg');
+            }
+        }
     }
     
-
     @include media("mobile"){
         margin-top: 40px;
         .boxArea {
@@ -44,6 +48,14 @@
                     flex: 0 0 100%;
                 }
             }
+        }
+    }
+
+    // 고객광장 - 이용안내
+    & + .cptAnnounce {
+        margin-top: 60px;
+        @include media("mobile"){
+            margin-top: 40px;
         }
     }
 }
