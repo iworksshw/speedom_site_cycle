@@ -1,0 +1,268 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '앨범/갤러리 변환 게시판 리스트',
+                    subText: '<b>앨범/갤러리 게시판 리스트</b> 입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="cptGalleryList">
+                        <div class="galleryListArea">
+
+
+                            <!-- 게시판 리스트 상단 -->
+                            <div class="comGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <div class="frmGroup">
+                                                <div class="frmSearch">
+                                                    <input type="text" class="iptText" placeholder="검색어를 입력하세요">
+                                                    <button class="btnSearch">검색</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 앨범/갤러리 체인지 영역 -->
+                            <div class="listChange">
+                                <button class="album">앨범형</button>
+                                <button class="gallery">갤러리형</button>
+                            </div>
+
+                            <!-- 리스트 영역 -->
+                            <div class="listBoard">
+                                <ul class="listGroup">
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">중독에서 벗어나 회복으로!</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">도박 중독의 과정 알아가기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">이용자 10계명</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">중독에서 벗어나 회복으로!</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">도박 중독의 과정 알아가기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">이용자 10계명</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">중독에서 벗어나 회복으로!</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">도박 중독의 과정 알아가기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="중독에서 벗어나 회복으로!">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <img src="../../../images/thum/thum_album.png" alt="도박 중독의 과정 알아가기">
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">이용자 10계명</div>
+                                                <div class="context">현재 나의 도박중독상태가 궁금하다면, 영상을 보면서 진단해보세요!</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 페이징 -->
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
