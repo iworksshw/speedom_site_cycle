@@ -26,7 +26,7 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
-                    location: ['경륜선수', '상금정보', '전체 상금 순위'],
+                    location: ['경륜선수', '상금정보'],
                     subTitle: '전체 상금 순위',
                     subText: '경륜선수의 <br><b>전체 상금 순위</b>를 알려드려요.',
                     url: "../../",
@@ -56,23 +56,11 @@
 							</div>
 
                             <!-- 이부분 확인필요 -->
-                            <div class="modTab02">
-                                <div class="tabMenuGroup tabDataSwiper">
-                                    <ul class="tabMenu swiper-wrapper">
-                                        <li class="tabItem swiper-slide">
-                                            <button type="button" class="tabName on">전체</button>
-                                        </li>
-                                        <li class="tabItem swiper-slide">
-                                            <button type="button" class="tabName">특선급</button>
-                                        </li>
-                                        <li class="tabItem swiper-slide">
-                                            <button type="button" class="tabName">우수급</button>
-                                        </li>
-                                        <li class="tabItem swiper-slide">
-                                            <button type="button" class="tabName">선발급</button>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div>
+                                <button type="button">전체</button>
+                                <button type="button">특선급</button>
+                                <button type="button">우수급</button>
+                                <button type="button">선발급</button>
                             </div>
                             <!--// 이부분 확인필요 -->
 
