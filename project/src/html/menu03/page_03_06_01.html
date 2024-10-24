@@ -1,0 +1,106 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜선수', '상금정보', '상금 지급 정보'],
+                    subTitle: '상금 지급 정보',
+                    subText: '선수 <b>상금 지급 정보</b>에 <br>대해 알려드려요.',
+                    url: "../../",
+                    visualClass: "bg03",
+                }) %>
+                
+                <div class="layoutContArea">
+                    
+					<div class="comSubInfo">
+						<h2 class="infoTit">경륜 선수는 매 경기마다 순위에 따라 상금을 지급받으며 경기의 등급과 경기 규모에 따라 상금의 지급액이 달라집니다.</h2>
+						<p class="info">경기의 상금 규모는 일반경륜과 대상경륜에 따라 다르며 등급과 순위에 따라 상금 지급액이 결정됩니다. </p>
+					</div>
+                    
+					<div class="cptSection">
+						<div class="sectArea">
+
+							<div class="comTitH2">
+								<h2>전체상금순위 [2024년 기준]</h2>
+								<div class="right">
+									(단위 : 원)
+								</div>
+							</div>
+
+                            <div class="tempArea" style="padding: 30px; background-color: gray; text-align: center; font-size: 20px; color: #fff;">
+                                테이블 영역 작업
+                            </div>
+						</div>
+					</div>
+					
+					<!-- 페이징 -->
+					<div class="comPaging">
+						<a class="start" href="#"></a>
+						<a class="prev" href="#"></a>
+						<ul class="numList">
+							<li><a href="#">1</a></li>
+							<li class="on"><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+						<a class="next" href="#"></a>
+						<a class="end" href="#"></a>
+					</div>
+
+                </div>
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
