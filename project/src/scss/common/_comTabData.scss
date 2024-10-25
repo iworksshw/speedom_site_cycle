@@ -12,8 +12,12 @@
                 .tabName {
                     width: max-content; height: 46px; padding: 0 36px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px; border-radius: 23px;
                     color: var(--Gray-600); border: 1px solid var(--Gray-300); background: #fff; display: inline-block;
+                    
                     &.on {
                         color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
+                        &.orange { border: 1px solid var(--Point-Orange); background: var(--Point-Orange);}
+                        &.blue { border: 1px solid var(--Point-Blue); background: var(--Point-Blue);}
+                        &.mint { border: 1px solid var(--Point-Primary2); background: var(--Point-Primary2);}
                     }
                 }
             }

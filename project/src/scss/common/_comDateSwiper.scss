@@ -27,6 +27,15 @@
                     }
                 }
 
+                &.disabled {
+                    cursor: default;
+                    & > span {color: var(--Gray-300);}
+                    &:hover {
+                        color: var(--Gray-300); background: none;
+                        span {color: var(--Gray-300);}
+                    }
+                }
+
                 &.on {
                     & > span {color: #fff;}
                     &.blue {background: var(--zone-blue); 
