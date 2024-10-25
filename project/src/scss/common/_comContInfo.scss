@@ -1,0 +1,9 @@
+.comContInfo {
+    margin-top: 24px;
+
+    .m1 {font-size: 30px;}
+
+    @include media("mobile"){
+        margin-top: 24px;
+    }
+}
