@@ -26,7 +26,7 @@
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
 				<!-- 서브 탑 (타이틀) -->
 				<%- include('../_ejs/sub_top.ejs', {
-					location: ['경륜선수', '순위 정보', '전체성적순위'],
+					location: ['경륜선수', '순위 정보'],
 					subTitle: '전체성적순위',
 					subText: '경륜선수의 <br><b>전체성적순위</b>를 알려드려요.',
 					url: "../../",
@@ -41,8 +41,6 @@
 						선수의 성적순위는 선수조회 메뉴에서 조회 가능한 선수만 제공합니다.</p>
 					</div>
 					
-					
-					
 					<div class="cptSection">
 						<div class="sectArea">
 
@@ -52,23 +50,11 @@
 									<div class="frmBox">
 										<select class="iptSlt">
 											<option value="">2024년</option>
-											<option value="">2023년</option>
+											<option value="">드롭다운</option>
 										</select>
 									</div>
 								</div>
 							</div>
-							
-							<style>
-								.sortIco {position: relative; padding-right: 16px; font-weight: 600; font-size: unset;}
-								.sortIco::before {content: ''; position: absolute; top: 50%; right: 0; width: 16px; height: 16px; transform: translateY(-50%); background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.37796 11.5636C8.17858 11.7938 7.82142 11.7938 7.62204 11.5636L3.52033 6.82733C3.23989 6.5035 3.46992 6 3.8983 6L12.1017 6C12.5301 6 12.7601 6.5035 12.4797 6.82733L8.37796 11.5636Z' fill='%23FF3333'/%3E%3C/svg%3E%0A") no-repeat center center;}
-								.sortIco.up::before {transform: translateY(-50%) rotate(180deg) !important;}
-
-								.tRed .sortIco::before {/* background:url(../../images/common/ic_16_tbl_sort_down_red.svg) */}
-								.tRed .sortIco.up::before {/* background:url(../../images/common/ic_16_tbl_sort_down_red.svg) */}
-
-								/* 내림차순 down/ 오름차순 up */
-								/* ic_16_tbl_sort_up */
-							</style>
 
 							<div class="comDataTable">
 								<div class="tableArea sizeXL">
@@ -90,8 +76,8 @@
 												<th rowspan="2" class="btmLine">삼연대율<br>(%)</th>
 											</tr>
 											<tr>
-												<th><button type="button" class="sortIco up tRed" title="오름차순으로 정렬">종합</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th>
+												<th><button type="button" class="sortIco tRed" title="내림차순으로 정렬">종합</button></th>
+												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th><!-- class="sortIco up" title="오름차순으로 정렬" -->
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">종합</button></th>
@@ -118,6 +104,160 @@
 												<td>100</td>
 												<td>100</td>
 											</tr>
+											<tr>
+												<td>2</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>임채빈</td>
+												<td>25</td>
+												<td>SS</td>
+												<td>106.84</td>
+												<td>106.66</td>
+												<td>0</td>
+												<td>108.83</td>
+												<td>107.87</td>
+												<td>106.91</td>
+												<td>0</td>
+												<td>105.97</td>
+												<td>94</td>
+												<td>100</td>
+												<td>100</td>
+											</tr>
+											<!-- 순위 리스트는 50개로 노출 -->
 										</tbody>
 									</table>
 								</div>
@@ -145,7 +285,7 @@
 					
 				<!-- 서브 바텀 (담당자) -->
 				<%- include('../_ejs/sub_btm.ejs', {
-					team: '경륜운영팀',
+					team: '경륜기획팀',
 					name: '조준호',
 					phone: '02-2067-5711',
 					url: "../../",

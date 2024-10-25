@@ -1,104 +1,603 @@
 <!-- Header -->
 <%- include('../_ejs/top.ejs', {
-    title: "KCYCLE 경륜",
-    url: "../../"
+	title: "KCYCLE 경륜",
+	url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
 <div class="lytLayout">
-    <div class="layoutArea">
+	<div class="layoutArea">
 
-        <!-- 상단영역 -->
-        <div class="layoutTop">
-            <!-- Top -->
-            <%- include('../_ejs/header.ejs', {
-                url: "../../"
-            }) %>
-        </div>
-        <!-- //상단영역 -->
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
 
-        <!-- 중단영역 -->
-        <div class="layoutContainer" id="container">
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
 
-            <!-- 서브 콘텐츠 영역 -->
-            <div class="layoutSubCont">
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
 
-                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
-                <!-- 서브 탑 (타이틀) -->
-                <%- include('../_ejs/sub_top.ejs', {
-                    location: ['경륜선수', '상금정보', '상금 지급 정보'],
-                    subTitle: '상금 지급 정보',
-                    subText: '선수 <b>상금 지급 정보</b>에 <br>대해 알려드려요.',
-                    url: "../../",
-                    visualClass: "bg03",
-                }) %>
-                
-                <div class="layoutContArea">
-                    
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<!-- 서브 탑 (타이틀) -->
+				<%- include('../_ejs/sub_top.ejs', {
+					location: ['경륜선수', '상금정보'],
+					subTitle: '상금 지급 정보',
+					subText: '선수 <b>상금 지급 정보</b>에 <br>대해 알려드려요.',
+					url: "../../",
+					visualClass: "bg03",
+				}) %>
+				
+				<div class="layoutContArea">
+					
 					<div class="comSubInfo">
 						<h2 class="infoTit">경륜 선수는 매 경기마다 순위에 따라 상금을 지급받으며 경기의 등급과 경기 규모에 따라 상금의 지급액이 달라집니다.</h2>
 						<p class="info">경기의 상금 규모는 일반경륜과 대상경륜에 따라 다르며 등급과 순위에 따라 상금 지급액이 결정됩니다. </p>
 					</div>
-                    
+					
 					<div class="cptSection">
 						<div class="sectArea">
-
 							<div class="comTitH2">
-								<h2>전체상금순위 [2024년 기준]</h2>
+								<h2>일반경륜 상금 지급액</h2>
 								<div class="right">
-									(단위 : 원)
+									<p>(단위 : 원)</p>
 								</div>
 							</div>
 
-                            <div class="tempArea" style="padding: 30px; background-color: gray; text-align: center; font-size: 20px; color: #fff;">
-                                테이블 영역 작업
-                            </div>
+							<div class="comDataTable both">
+								<div class="tableArea sizeXL">
+									<table>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th class="bdrBold">등급</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+												<th>7위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th rowspan="3">1일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="3">2일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="6">3일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>선결</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>우결</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>결승</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 					
-					<!-- 페이징 -->
-					<div class="comPaging">
-						<a class="start" href="#"></a>
-						<a class="prev" href="#"></a>
-						<ul class="numList">
-							<li><a href="#">1</a></li>
-							<li class="on"><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-						</ul>
-						<a class="next" href="#"></a>
-						<a class="end" href="#"></a>
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>대상경륜 상금 지급액</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
+
+							<div class="comDataTable both">
+								<div class="tableArea sizeXL">
+									<table>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th class="bdrBold">등급</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+												<th>7위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>1일차</th>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="2">2일차</th>
+												<th>특선</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>특준</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="2">3일차</th>
+												<th>특선</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>결승</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="comBasicTxt">
+								<p class="txt">
+									※ 우수 및 선발급 경주상금은 일반경륜 성적상금표의 착순별 성적상금 지급
+								</p>
+							</div>
+						</div>
 					</div>
+					
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>상반기 왕중왕전 및 전등급 대상경륜 상금 지급액</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
 
-                </div>
-                    
-                <!-- 서브 바텀 (담당자) -->
-                <%- include('../_ejs/sub_btm.ejs', {
-                    team: '경륜운영팀',
-                    name: '조준호',
-                    phone: '02-2067-5711',
-                    url: "../../",
-                }) %>
-                
-                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
-                
-            </div>
-            <!-- //서브 콘텐츠 영역 -->
 
-        </div>
-        <!-- //중단영역 -->
+							<div class="comDataTable both">
+								<div class="tableArea sizeXL">
+									<table>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th class="bdrBold">등급</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+												<th>7위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th rowspan="3">1일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="6">2일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>선준</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>우준</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>특준</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="6">3일차</th>
+												<th>선발</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>선결</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>우수</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>우결</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>결승</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>그랑프리 경륜 상금 지급액</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
 
-        <!-- 하단영역 -->
-        <div class="layoutFooter">
-            <!-- Footer -->
-            <%- include('../_ejs/footer.ejs', {
-                url: "../../"
-            }) %>
-        </div>
-        <!-- //하단영역 -->
+							<div class="comDataTable both">
+								<div class="tableArea sizeXL">
+									<table>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th class="bdrBold">등급</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+												<th>7위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>1일차</th>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="2">2일차</th>
+												<th>특선</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th>준결</th>
+												<td>1,983,000</td>
+												<td>1,697,000</td>
+												<td>1,506,000</td>
+												<td>1,221,000</td>
+												<td>1,093,000</td>
+												<td>1,010,000</td>
+												<td>953,000</td>
+											</tr>
+											<tr>
+												<th rowspan="3">3일차</th>
+												<th>특선</th>
+												<td>563,000</td>
+												<td>506,000</td>
+												<td>466,000</td>
+												<td>466,000</td>
+												<td>382,000</td>
+												<td>367,000</td>
+												<td>356,000</td>
+											</tr>
+											<tr>
+												<th>특우</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+											<tr>
+												<th>결승</th>
+												<td>941,000</td>
+												<td>838,000</td>
+												<td>770,000</td>
+												<td>667,000</td>
+												<td>622,000</td>
+												<td>593,000</td>
+												<td>572,000</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<!-- 서브 바텀 (담당자) -->
+				<%- include('../_ejs/sub_btm.ejs', {
+					team: '경륜운영팀',
+					name: '조준호',
+					phone: '02-2067-5711',
+					url: "../../",
+				}) %>
+				
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
 
-    </div>
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
 </div>
 
 

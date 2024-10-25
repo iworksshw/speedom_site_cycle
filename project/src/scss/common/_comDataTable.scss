@@ -17,6 +17,13 @@
                         border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100); position: sticky; top: 0;
                         &:last-child {border-right: 0;}
                         &.btmLine {border-bottom: 1px solid var(--Gray-900);}
+
+                        .sortIco {
+                            position: relative; padding-right: 16px; font-weight: 600; font-size: unset;
+                            &::before {content: ''; position: absolute; top: 50%; right: 0; width: 16px; height: 16px; transform: translateY(-50%); background: url(../../images/common/ic_16_tbl_sort.svg) no-repeat center center;}
+                            &.up::before {transform: translateY(-50%) rotate(180deg) !important;}
+                            &.tRed::before {background: url(../../images/common/ic_16_tbl_sort_red.svg) no-repeat center center;}
+                        }
                     }
                     &:last-child {
                         th {
@@ -49,12 +56,13 @@
                 }
             }
         }
-        .tbGreen {background: #ECF8F6;}
+        .tbGreen {background: #ECF8F6 !important;}
         .tbBlue {background: #ECF1F8;}
         .tbRed {background: #F6ECF8;}
         .tbYellow {background: #F5F2DD45;}
         .tbGray {background: #EDF4F8;}
         .bdrBold {border-right: 1px solid var(--Gray-300) !important;}
+        .bdbBold {border-bottom: 1px solid var(--Gray-300) !important;}
     }
     &.colLineDel {
         .tableArea {

@@ -1089,8 +1089,8 @@
             
             
         </ul>
-        <div class="subTitle"><h1>전체성적순위</h1></div>
-        <div class="subText"><p>경륜선수의 <br><b>전체성적순위</b>를 알려드려요.</p></div>
+        <div class="subTitle"><h1>다승30</h1></div>
+        <div class="subText"><p>경륜선수의 <br><b>다승 30</b>위를 알려드려요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -1105,17 +1105,25 @@
 				<div class="layoutContArea">
 					
 					<div class="comSubInfo">
-						<h2 class="infoTit">각 경륜 시행체에 따라 경륜선수의 전체 성적의 순위를 확인하실 수 있습니다.</h2>
-						<p class="info">전체, 광명, 창원, 부산의 평균득점, 최근 3회득점을 선택하시면 각 시행체별로 기준 순위리스트를 보실 수 있으며, 최근3회득점 순위는 당해년도 순위이오니 참고하시기 바랍니다.
-						선수의 성적순위는 선수조회 메뉴에서 조회 가능한 선수만 제공합니다.</p>
+						<h2 class="infoTit">각 등급 별로 1착, 2착, 3착을 가장 많이 한 선수를 순위대로 안내드립니다.</h2>
+						<p class="info">각 회차 경주성적은 광명(’06년이전 잠실), 창원, 부산경륜 성적이 포함된 자료입니다.</p>
 					</div>
 					
 					<div class="cptSection">
 						<div class="sectArea">
 
 							<div class="comTitH2">
-								<h2>경륜선수 전체성적순위</h2>
-								<div class="right">
+								<h2>다승순위안내</h2>
+							</div>
+
+							<!-- 디자인수급필요 -->
+							<div class="comGroupTop">
+								<div>
+									<button type="button" class="btn dkLine">특선급</button>
+									<button type="button" class="btn dkLine">우수급</button>
+									<button type="button" class="btn dkLine">선발급</button>
+								</div>
+								<div>
 									<div class="frmBox">
 										<select class="iptSlt">
 											<option value="">2024년</option>
@@ -1124,51 +1132,40 @@
 									</div>
 								</div>
 							</div>
+							<!--// 디자인수급필요 -->
 
 							<div class="comDataTable">
 								<div class="tableArea sizeXL">
 									<table>
 										<caption></caption>
 										<colgroup>
-											<col span="13" style="width:auto;">
+											<col span="11" style="width:auto;">
 										</colgroup>
 										<thead>
 											<tr>
-												<th rowspan="2" class="btmLine">순위</th>
-												<th rowspan="2" class="btmLine">선수명</th>
-												<th rowspan="2" class="btmLine">기수</th>
-												<th rowspan="2" class="btmLine">등급</th>
-												<th colspan="4">평균득점</th>
-												<th colspan="4">최근 3회득점</th>
-												<th rowspan="2" class="btmLine">승률<br>(%)</th>
-												<th rowspan="2" class="btmLine">연대율<br>(%)</th>
-												<th rowspan="2" class="btmLine">삼연대율<br>(%)</th>
-											</tr>
-											<tr>
-												<th><button type="button" class="sortIco tRed" title="내림차순으로 정렬">종합</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th><!-- class="sortIco up" title="오름차순으로 정렬" -->
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">종합</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
+												<th>순위</th>
+												<th>선수명</th>
+												<th>출생년도</th>
+												<th>출신</th>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>출주일수</th>
+												<th>승률(%)</th>
+												<th>연대율(%)</th>
+												<th>삼연대율(%)</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td>1</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1176,16 +1173,12 @@
 											<tr>
 												<td>2</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1193,16 +1186,12 @@
 											<tr>
 												<td>3</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1210,16 +1199,12 @@
 											<tr>
 												<td>4</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1227,16 +1212,12 @@
 											<tr>
 												<td>5</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1244,16 +1225,12 @@
 											<tr>
 												<td>6</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1261,16 +1238,12 @@
 											<tr>
 												<td>7</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1278,16 +1251,12 @@
 											<tr>
 												<td>8</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1295,16 +1264,12 @@
 											<tr>
 												<td>9</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
@@ -1312,21 +1277,17 @@
 											<tr>
 												<td>10</td>
 												<td>임채빈</td>
-												<td>25</td>
-												<td>SS</td>
-												<td>106.84</td>
-												<td>106.66</td>
-												<td>0</td>
-												<td>108.83</td>
-												<td>107.87</td>
-												<td>106.91</td>
-												<td>0</td>
-												<td>105.97</td>
+												<td>1991</td>
+												<td>서울</td>
+												<td>34회</td>
+												<td>2회</td>
+												<td>-</td>
+												<td>36</td>
 												<td>94</td>
 												<td>100</td>
 												<td>100</td>
 											</tr>
-											<!-- 순위 리스트는 50개로 노출 -->
+											<!-- 순위 리스트는 30개로 노출 -->
 										</tbody>
 									</table>
 								</div>
