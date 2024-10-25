@@ -1,0 +1,2687 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜 정보', '경주 배당률'],
+                    subTitle: '최종배당률',
+                    subText: '경주 시작 직전에 <b>실시간으로 결정되는 <br/> 각 선수의 배당률</b>을 확인하세요.',
+                    url: "../../",
+                    visualClass: "bg02",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경주 시작 전에 예상 배당률을 기반으로 실제 승률과 베팅 금액에 따라 조정된 최종 배당률을 말합니다.</h2>
+                        <p class="info">단승, 연승, 복승, 쌍승, 삼복승, 쌍복승, 삼쌍승 등 다양한 베팅 방식에 따라 최종배당률이 달라집니다.</p>
+                        <p class="infoEtc">인기배당률은 <span class="tRed">빨간색</span>으로 표시됩니다.</p>
+                    </div>
+                    
+                    <div class="cptDateSelect">
+                        <div class="sectArea">
+                            <div class="comGroupTop">
+                                <div class="alignL">
+                                    <button type="button" class="btnReload">새로고침</button>
+                                </div>
+                            </div>
+                            <!-- 날짜 선택 박스영역 -->
+                            <div class="selectBox">
+                                <div class="frmGroup">
+                                    <div class="frmBox frmMd">
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024</option>
+                                            <option value="">2023</option>
+                                            <option value="">2022</option>
+                                            <option value="">2021</option>
+                                            <option value="">2020</option>
+                                        </select>
+                                    </div>
+                                    <div class="frmBox">
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024년 07월 21일 28회 3일차</option>
+                                            <option value="">2024년 07월 21일 28회 4일차</option>
+                                            <option value="">2024년 07월 21일 28회 5일차</option>
+                                            <option value="">2024년 07월 21일 28회 6일차</option>
+                                            <option value="">2024년 07월 21일 28회 7일차</option>
+                                            <option value="">2024년 07월 21일 28회 8일차</option>
+                                            <option value="">2024년 07월 21일 28회 9일차</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="calendarBtn" onclick="openPopup('calendarPop')">달력으로 날짜 선택</button>
+
+                                <div class="layerPopup" id="calendarPop"> <!--class 'on' : 팝업 열림-->
+                                    <div class="popHead">
+                                        <h3>달력조회</h3>
+                                        <button type="button" class="popClose"  onclick="closePopup('calendarPop')">팝업 닫기</button>
+                                    </div>
+                                    <div class="popCont">
+                                        <div class="dateSetting">
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn first">이전 해로 이동</button>
+                                                <button type="button" class="setBtn prev">이전 달로 이동</button>
+                                            </div>
+                                            <div class="date">
+                                                <span>2024년</span>
+                                                <span>12월</span>
+                                            </div>
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn next">다음 달로 이동</button>
+                                                <button type="button" class="setBtn last">다음 해로 이동</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="comCalendar inPop"> <!--class 'inPop' : 레이어팝업 내부에 들어올 때-->
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem today"> <!--class 'today' : 오늘 날짜 표시-->
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cptSection">
+                        <!-- 일별달력 슬라이드  -->
+                        <div class="comDateSwiper">
+                            <div class="swiper dateSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue on"> <!--class 'on' : 현재 날짜-->
+                                            <span class="region">창원</span>
+                                            <span class="date">01</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">02</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">03</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">04</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">05</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">06</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">07</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">08</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">09</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">10</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">11</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">12</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">13</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">14</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">15</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">16</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">17</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">18</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">19</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">20</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue">
+                                            <span class="region">창원</span>
+                                            <span class="date">21</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red">
+                                            <span class="region">부산</span>
+                                            <span class="date">22</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green">
+                                            <span class="region">광명</span>
+                                            <span class="date">23</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next selectDate"></div>
+                                <div class="swiper-button-prev selectDate"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            
+                            <div class="comTitH2">
+                                <h2>광명 16경주 (특급 18:22) </h2>
+                            </div>
+
+                            <div class="comPlayerThumList">
+                                <div class="listBox">
+                                    <ul class="playerGroup">
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num01">1</span>
+                                                        <span class="name">김상인</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="강동진 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num02">2</span>
+                                                        <span class="name">강동진</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num03">3</span>
+                                                        <span class="name">김광진</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num04">4</span>
+                                                        <span class="name">곽훈신</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num05">5</span>
+                                                        <span class="name">정언열</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num06">6</span>
+                                                        <span class="name">오성균</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="playerItem">
+                                            <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                                <div class="thumArea">
+                                                    <img src="../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                                </div>
+                                                <div class="descArea">
+                                                    <div class="player">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="name">허준</span>
+                                                    </div>
+                                                    <p class="desc">13기/44세</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comTitH2 bk">
+                                <h2>매출액</h2>
+                            </div>
+
+                            <div class="comDataTable">
+                                <div class="tableArea sizeM">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>배번</th>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                            </tr>
+                                            <tr>
+                                                <th>단승식</th>
+                                                <th>연승식</th>
+                                                <th>쌍승식</th>
+                                                <th>복승식</th>
+                                                <th>삼복승식</th>
+                                                <th>쌍복승식</th>
+                                                <th>삼쌍승식</th>
+                                                <th>합계</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>702,800</td>
+                                                <td>856,800</td>
+                                                <td>103,323,000</td>
+                                                <td>22,912,900</td>
+                                                <td>204,416,300</td>
+                                                <td>328,762,100</td>
+                                                <td>250,854,600</td>
+                                                <td>911,558,500</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>단승식</h3>
+                            </div>
+                            
+                            <div class="comDataTable">
+                                <div class="tableArea sizeS">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>연승식</h3>
+                            </div>
+                            
+                            <div class="comDataTable">
+                                <div class="tableArea sizeS">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.0</td>
+                                                <td>8.3</td>
+                                                <td>9.2</td>
+                                                <td>9.9</td>
+                                                <td>8.8</td>
+                                                <td>1.3</td>
+                                                <td>4.0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>쌍승식</h3>
+                            </div>
+                            
+                            <div class="comDataTable both colLineDel">
+                                <div class="tableArea sizeS">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>선 \ 후</th>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td class="empty"></td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td>1.3</td>
+                                                <td class="empty"></td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>3</th>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td class="empty"></td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>4</th>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td class="empty"></td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>5</th>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td class="empty"></td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>6</th>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td class="empty"></td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>7</th>
+                                                <td>1.3</td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td class="empty"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>복승식</h3>
+                            </div>
+                            
+                            <div class="comDataTable both colLineDel">
+                                <div class="tableArea sizeM">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                            <col style="width:12.5%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>선 \ 후</th>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td class="empty"></td>
+                                                <td>33.3</td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td>30.0</td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>3</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td>22.0</td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>4</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td>19.7</td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>5</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td>4.0</td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>6</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td>20.1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>7</th>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                                <td class="empty"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="comTitH3">
+                                <h3>삼복승식</h3>
+                            </div>
+
+                            <div class="comDataTable colLineDel">
+                                <div class="tableArea sizeL">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="row2Line">
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td><span class="tRed tBold">8.1</span></td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td><span class="tRed tBold">27.1</span></td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>8.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>8.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>8.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>8.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                                <th>1-2-3</th>
+                                                <td>8.1</td>
+                                                <th>1-2-3</th>
+                                                <td>27.1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comTitH3">
+                                <h3>쌍복승식</h3>
+                            </div>
+
+                            <div class="comDataTable colLineDel"><!-- addClass - row: th가 body에 존재, colLineDel: 2줄마다 나타나는 선을 없앰 -->
+                                <div class="tableArea sizeL">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="row2Line">
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                                <th>배번</th>
+                                                <th>배당률</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td><span class="tKey tBold">8.1</span></td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th><span class="tKey">1</span>-2-3</th>
+                                                <td>2.1</td>
+                                                <th><span class="tKey">2</span>-1-4</th>
+                                                <td>753.5</td>
+                                                <th><span class="tKey">3</span>-1-2</th>
+                                                <td>975.0</td>
+                                                <th><span class="tKey">4</span>-1-2</th>
+                                                <td>8.1</td>
+                                                <th><span class="tKey">5</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">6</span>-1-2</th>
+                                                <td>1001.9</td>
+                                                <th><span class="tKey">7</span>-2-3</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="comTitH3">
+                                <h3>삼쌍승식</h3>
+                            </div>
+
+                            <div class="comDataTable colLineDel"><!-- addClass - row: th가 body에 존재, colLineDel: 2줄마다 나타나는 선을 없앰 -->
+                                <div class="tableArea sizeL player01"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr class="row1Line"> <!-- addClass - row1Line 1줄마다 선 두껍게 -->
+                                                <th colspan="2">1-2위</th>
+                                                <th colspan="2">1-2위</th>
+                                                <th colspan="2">1-2위</th>
+                                                <th colspan="2">1-2위</th>
+                                                <th colspan="2">1-2위</th>
+                                                <th colspan="2">1-2위</th>
+                                            </tr>
+                                            <tr class="row2Line"> <!-- addClass - row2Line 2줄마다 선 두껍게 -->
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                                <th>3위</th>
+                                                <th>배당률</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player02"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player03"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player04"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player05"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player06"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tableArea sizeL player07"> <!-- addClass - player01~07 th색깔 변경 -->
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                            <col style="width:8.3333%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="row1Line">
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                                <th colspan="2">1-2</th>
+                                                <th colspan="2">1-3</th>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td><span class="tRed tBold"> 8.1</span></td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                            <tr class="row2Line">
+                                                <th>3</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>753.5</td>
+                                                <th>2</th>
+                                                <td>975.0</td>
+                                                <th>2</th>
+                                                <td>8.1</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                                <th>2</th>
+                                                <td>1001.9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 선수정보 팝업 -->
+                    <div id="playerData01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('playerData01');">닫기</button>
+                                        <div class="popTitle">선수프로필</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+
+                                            <div class="cptPersonDesc inPopup"> <!--class 'inPopup' : 레이어 팝업 내부에서 쓰일 때 클래스 추가-->
+                                                <div class="sectArea">
+                                                    <div class="profPart">
+                                                        <div class="profBox">
+                                                            <div class="chkArea">
+                                                                <input type="checkbox" id="like01"/>
+                                                                <label for="like01">선호선수</label>
+                                                            </div>
+                                                            <div class="photoArea">
+                                                                <div class="thumArea">
+                                                                    <div class="thumWrap">
+                                                                        <img src="../../images/thum/thum_person_detail.png" alt="강동국 선수 프로필 이미지">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="txtArea">
+                                                                    <b class="name">강동국</b>
+                                                                    <i class="date">19990041</i>
+                                                                    <div class="cateGroup">
+                                                                        <span class="cate blue">A1</span>
+                                                                        <span class="cate">06기</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoArea">
+                                                                <ul class="infoGroup">
+                                                                    <li class="infoItem">
+                                                                        <div class="infoTit">신체정보</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">출생년도</b>
+                                                                                <i class="txt">1974년 02월 21일</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">신장/체중</b>
+                                                                                <i class="txt">176cm / 76kg</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">시력</b>
+                                                                                <i class="txt">좌 1.0 / 우 1.2</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">혈액형</b>
+                                                                                <i class="txt">A형</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">가슴둘레</b>
+                                                                                <i class="txt">101cm</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">대퇴부 둘레</b>
+                                                                                <i class="txt">위좌 60cm / 위우 60cm</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">하퇴부 둘레</b>
+                                                                                <i class="txt">위좌 38cm / 위우 38cm</i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="infoItem">
+                                                                        <div class="infoTit">개인정보</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">결혼</b>
+                                                                                <i class="txt">기혼</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">흡연여부</b>
+                                                                                <i class="txt">무</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">고등학교</b>
+                                                                                <i class="txt">거창종합</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">대학교</b>
+                                                                                <i class="txt">-</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">아마경력 <button type="button" class="popIcon" onclick="openPopup('carrer')">팝업 열기</button></b>
+                                                                                <i class="txt">비선수</i>
+                                                                                <div class="comInfoLayerPop" id="carrer">
+                                                                                    <div class="popWrap">
+                                                                                        <div class="popHead">
+                                                                                            <div class="popTit">아마추어 주요경력</div>
+                                                                                            <button type="button" class="popClose" onclick="closePopup('carrer')">팝업 닫기</button>
+                                                                                        </div>
+                                                                                        <div class="popBody">
+                                                                                            <ul class="carrerList">
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">2017 페어플레이상</span>
+                                                                                                    <span class="etc">특선급</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜</span>
+                                                                                                    <span class="etc">특선급 2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
+                                                                                                    <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">출신지/출신팀</b>
+                                                                                <i class="txt">경남 / 경남</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">최신입상내역 <button type="button" class="popIcon" onclick="openPopup('prizing')">팝업 열기</button></b>
+                                                                                <i class="txt tMint">부산광역시장배 대상경륜 1위</i>
+                                                                                <div class="comInfoLayerPop" id="prizing">
+                                                                                    <div class="popWrap">
+                                                                                        <div class="popHead">
+                                                                                            <div class="popTit">입상내역</div>
+                                                                                            <button type="button" class="popClose" onclick="closePopup('prizing')">팝업 닫기</button>
+                                                                                        </div>
+                                                                                        <div class="popBody">
+                                                                                            <ul class="carrerList">
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">부산광역시장배 대상경륜</span>
+                                                                                                    <span class="etc">3위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">KSPO 이사장배 왕중왕전 </span>
+                                                                                                    <span class="etc">1위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">1위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="infoItem full">
+                                                                        <div class="infoTit">기타</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">친인척 관계</b>
+                                                                                <i class="txt"><a href="#">강동진(12기)</a> / 형 </i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">기타사항</b>
+                                                                                <i class="txt etc">기타사항이 있는 경우에 작성되는 곳입니다.</i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="dataPart">
+                                                        <div class="comTitH2">
+                                                            <h2>경주 기록정보</h2>
+                                                            <div class="right">
+                                                                <div class="frmBox">
+                                                                    <select class="iptSlt">
+                                                                        <option value="">2024년</option>
+                                                                        <option value="">2023년</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comTitH3">
+                                                            <h3>경주성적</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>등급변동</th>
+                                                                            <th>승률(%)</th>
+                                                                            <th>연대율(%)</th>
+                                                                            <th>삼연대율(%)</th>
+                                                                            <th>출주횟수</th>
+                                                                            <th>출주일수</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>B2->A1</td>
+                                                                            <td>0</td>
+                                                                            <td>3</td>
+                                                                            <td>7</td>
+                                                                            <td>10</td>
+                                                                            <td>30</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>최근 3회 종합득점</th>
+                                                                            <th>최근 3회 종합순위</th>
+                                                                            <th>총 평균 득점</th>
+                                                                            <th>총 순위 득점</th>
+                                                                            <th>최근 3경주 200m 최고기록</th>
+                                                                            <th>훈련지/동창 훈련자</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>81.356</td>
+                                                                            <td>538</td>
+                                                                            <td>82.402</td>
+                                                                            <td>517</td>
+                                                                            <td>11”58</td>
+                                                                            <td>구미/홍길동</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>입상전법</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="3">선행</th>
+                                                                            <th colspan="3">선행</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="3">추입</th>
+                                                                            <th colspan="3">마크</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>위반행위 및 낙차사고</h3>
+                                                            <div class="right">
+                                                                <button type="button" class="txtBtn"  onclick="openPopup('warned')">더 보기</button>
+                                                                <div class="comInfoLayerPop" id="warned">
+                                                                    <div class="popWrap">
+                                                                        <div class="popHead">
+                                                                            <div class="popTit">위반행위 현황</div>
+                                                                            <button type="button" class="popClose" onclick="closePopup('warned')">팝업 닫기</button>
+                                                                        </div>
+                                                                        <div class="popBody">
+                                                                            <ul class="carrerList">
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024.07.20</span>
+                                                                                    <span class="name">28회차 2일차 창원 10경주 73조 2항 2호 주의 판정</span>
+                                                                                    <span class="etc">특선급</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">제28회 스포츠조선배 대상경륜</span>
+                                                                                    <span class="etc">특선급 2위</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
+                                                                                    <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>실격행위</th>
+                                                                            <th>경고행위</th>
+                                                                            <th>주의행위</th>
+                                                                            <th>낙차기권</th>
+                                                                            <th>낙차입</th>
+                                                                            <th>사고기권</th>
+                                                                            <th>사고입</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>경주별 순위</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:auto;">
+                                                                        <col style="width:18%;">
+                                                                        <col style="width:18%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>경주회차</th>
+                                                                            <th>출전구분</th>
+                                                                            <th>순위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>1</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>2</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>3</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="digramPart">
+                                                        <div class="comTitH2">
+                                                            <h2>기록 그래프</h2>
+                                                        </div>
+                        
+                                                        <div class="comTitH3">
+                                                            <h3>착순위 정보</h3>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmBox">
+                                                                <!-- to Dev : PC와 MOB에서 보일 화면이 구분되지 않는다면 pcView / mView 없이 사용하시면 됩니다. -->
+                                                                <div class="pcView">
+                                                                    <img src="../../images/thum/thum_diagram01.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                                <div class="mView">
+                                                                    <img src="../../images/thum/thum_diagram01_m.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>4위</th>
+                                                                            <th>5위</th>
+                                                                            <th>6위</th>
+                                                                            <th>7위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>입상전법</h3>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmBox">
+                                                                <div class="pcView">
+                                                                    <img src="../../images/thum/thum_diagram02.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                                <div class="mView">
+                                                                    <img src="../../images/thum/thum_diagram02_m.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>선행</th>
+                                                                            <th>젖히기</th>
+                                                                            <th>추입</th>
+                                                                            <th>마크</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1(25%)</td>
+                                                                            <td>1(25%)</td>
+                                                                            <td>-</td>
+                                                                            <td>2번(50%)</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comTitH2">
+                                                            <h2>종합득점 및 종합순위</h2>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram03.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram04.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram05.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '이승화',
+                    phone: '02-2067-5533',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
