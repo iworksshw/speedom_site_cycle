@@ -269,6 +269,7 @@ function designSelectCallback($target){
 // ------------------------------- 팝업 함수 ------------------------------- //
 //팝업 열기
 function openPopup($popName){
+    event.preventDefault();
     document.querySelector("#"+$popName).classList.add("on");
 }
 //팝업 닫기
