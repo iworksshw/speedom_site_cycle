@@ -7,6 +7,7 @@
 @import 'cptLogin';     //로그인
 @import 'cptBoardList';	//일반게시판 리스트
 @import 'cptAlbumList'; //앨범게시판 리스트
+@import 'cptGallery';   //앨범/갤러리 변환게시판 리스트
 @import 'cptBoardView';	//게시판 상세
 @import 'cptBoardWrite';//게시판 쓰기
 @import 'cptComment';	//댓글
@@ -38,3 +39,8 @@
 @import 'cptFullFloat';     // 선수 비교 플로팅 박스
 @import 'cptComplete';  // 완료 안내문
 @import 'cptDateSelect';    //날짜선택 셀렉트박스 묶음
+
+@import 'cptJoinTable'; //회원 정보 입력 폼
+
+@import 'cptGuideLine'; // 고객광장 - 안내사항
+@import 'cptAnnounce';  // 고객광장 - 이용안내

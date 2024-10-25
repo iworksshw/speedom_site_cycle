@@ -1,0 +1,20 @@
+/* ---------------------- 고객광장 - 안내사항 ---------------------- */
+.cptGuideLine {
+    .guideLineInfoBox {
+        margin-top: 8px;
+        .comBoardInfoBox {
+            margin-top: 20px;
+        }
+    }
+
+    @include media("mobile"){
+        .comBoardInfoBox {
+            border: 0 none;
+        }
+    }
+
+    & + .cptQuickMove {
+        margin-top: 40px;
+        @include media("mobile"){margin-left: 16px;margin-right: 16px;}
+    }
+}

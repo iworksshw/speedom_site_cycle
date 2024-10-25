@@ -5,7 +5,10 @@
     .etcAdds {margin-left: 16px; font-size: rem(18px); color: var(--Gray-800); align-self: flex-end;}
     .right {
         margin-left: auto;
-        .frmBox {width: 160px; max-width: 160px;}
+        .frmBox {
+            width: 160px; max-width: 160px;
+            .iptSlt {height: 36px; font-size: 14px; background-position: right 16px center;}
+        }
     }
 
     // 컴포넌트 변경 Class
@@ -20,7 +23,7 @@
         .right {
             .frmBox {
                 width: 120px; max-width: 120px;
-                .iptSlt { height: 36px; padding: 0 12px; border-radius: 6px; font-size: rem(14px); background-size: 14px; background-position: right 12px center;}
+                .iptSlt {padding: 0 12px; border-radius: 6px; font-size: rem(14px); background-size: 14px; background-position: right 12px center;}
             }
         }
         &.mRow {

@@ -1,0 +1,131 @@
+/* ---------------------- 회원 정보 입력 폼 ---------------------- */
+.cptJoinTable {
+    width: 100%;
+    .joinArea {
+        width: 100%; max-width: 600px; margin: 0 auto; padding-top: 40px;
+        .joinStep {
+            .stepGroup {
+                width: 100%; display: flex; justify-content: center; gap: 116px; counter-reset: section;
+                .step {
+                    width:36px; height: 70px; padding-top: 44px; position: relative;
+                    &:first-child {
+                        margin-left: 0;
+                        &::before {display:none;}
+                    }
+                    &::after {
+                        content:counter(section); width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--Bg-Line-line-100); counter-increment: section;
+                        color: var(--Gray-500); text-align: center; font-size: rem(20px); font-style: normal; font-weight: 500; line-height: 34px;
+                        background: #fff; display: block; position: absolute; left: 0; top: 0;
+                    }
+                    &::before {
+                        content:""; width: 68px; height: 4px; background: url(../../images/common/ic_etc_step.svg) center no-repeat; display: block; 
+                        position: absolute; left: -92px; top: 16px;
+                    }
+                    .txt {
+                        width: max-content; color: var(--Gray-400, #92959A); font-size: rem(16px); font-weight: 400; line-height: 1.6;
+                        display: block; position: absolute; left: 18px; bottom: 0; transform: translateX(-50%);
+                    }
+                    &.complete {
+                        &::after {
+                            font-size: 0; border: 1px solid var(---Primary); background: var(---Primary) url(../../images/common/ic_20_step.svg) center no-repeat; opacity: 0.4;
+                        }
+                        &::before {
+                            background: url(../../images/common/ic_etc_step_on.svg) center no-repeat;
+                        }
+                        .txt {
+                            color: var(--Gray-900);
+                        }
+                        
+                    }
+                    &.current {
+                        &::after {
+                            color: #fff; font-weight: 700; border: 1px solid var(---Primary); background: var(---Primary);
+                        }
+                        &::before {
+                            background: url(../../images/common/ic_etc_step_on.svg) center no-repeat;
+                        }
+                        .txt {
+                            color: var(---Primary); font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        .joinTitle {
+            width: 100%; margin-top: 60px; padding-bottom: 12px; border-bottom: 1px solid var(--Gray-900);
+            &:first-child {margin-top: 0;}
+            h2 {
+                color: var(--Gray-900); font-size: rem(20px); font-weight: 700; line-height: 1.4;
+            }
+        }
+        .tbBox {
+            width: 100%; margin-top: 40px;
+            &:first-child {margin-top: 0;}
+            .tbTitle {
+                width: 100%; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+            }
+            .tbCont {
+                width: 100%; margin-top: 8px;
+            }
+        }
+        .required {
+            margin-left: 5px; color: var(--Point-Red); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+        }
+    }
+    @include media('mobile') {
+        .joinArea {
+            padding: 20px 0 0;
+            .joinStep {
+                .stepGroup {
+                    gap: 60px;
+                    .step {
+                        width:32px; height: 66px; padding-top: 40px;
+                        &:first-child {
+                            margin-left: 0;
+                            &::before {display:none;}
+                        }
+                        &::after {
+                            width: 32px; height: 32px; font-size: rem(16px); line-height: 32px;
+                        }
+                        &::before {
+                            content:""; width: 24px; height: 4px; background: url(../../images/common/ic_etc_step_m.svg) center no-repeat; display: block; 
+                            position: absolute; left: -42px; top: 16px;
+                        }
+                        .txt {
+                            display: none;
+                        }
+                        &.complete {
+                            &::before {
+                                background: url(../../images/common/ic_etc_step_on_m.svg) center no-repeat;
+                            }
+                            .txt {
+                                display: none;
+                            }
+                        }
+                        &.current {
+                            &::before {
+                                background: url(../../images/common/ic_etc_step_on_m.svg) center no-repeat;
+                            }
+                            .txt {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .joinTitle {
+                h2 {
+                    font-size: rem(18px); font-weight: 600; line-height: 1.3;
+                }
+                & + .tbBox {margin-top: 32px;}
+            }
+            .tbBox {
+                margin-top: 24px;
+                &:first-child {margin-top: 0;}
+                .tbTitle {
+                    font-weight: 600; line-height: 1.6;
+                }
+            }
+        }
+    }
+}

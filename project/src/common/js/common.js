@@ -209,6 +209,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 
+    //앨범/갤러리 체인지
+    let changeList = document.querySelector(".cptGalleryList");
+    if(changeList){
+        let changeBtns = changeList.querySelectorAll(".listChange button");
+        changeBtns.forEach(function (changeBtn){
+            changeBtn.addEventListener("click",function(e){
+                console.dir(this.parentNode);
+                if(this.parentNode.classList.contains('gallery')){
+                    this.parentNode.classList.remove('gallery');
+                    this.parentNode.nextElementSibling.classList.remove('gallery');
+                }else{
+                    this.parentNode.classList.add('gallery');
+                    this.parentNode.nextElementSibling.classList.add('gallery');
+                }
+            });
+        });
+    }
+
     //탭메뉴 (1차)
     tabMenuInit();
 
@@ -535,7 +553,7 @@ function tabMenu02Init(){
         });
     });
 
-    tabMenuSwiper();
+    //tabMenuSwiper();
 }
 
 // 컨텐츠 탭

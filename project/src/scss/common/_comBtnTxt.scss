@@ -1,0 +1,9 @@
+.comBtnTxt {
+    .txt {
+        font-size: rem(16px); font-weight: 400; color: var(--Gray-800); line-height: 1.6;text-align: center;
+    }
+    & + .comBtnGroup {
+        margin-top: 12px;
+    }
+    /*모바일은 만들어주세요*/
+}
