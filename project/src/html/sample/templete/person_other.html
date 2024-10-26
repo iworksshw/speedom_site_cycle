@@ -1,0 +1,220 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '선수 관련',
+                    subText: '기타 선수 관련 페이지입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comPlayerThumList">
+                        <div class="listBox">
+                            <ul class="playerGroup">
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num01">1</span>
+                                                <span class="name">김상인</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="강동진 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num02">2</span>
+                                                <span class="name">강동진</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num03">3</span>
+                                                <span class="name">김광진</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num04">4</span>
+                                                <span class="name">곽훈신</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num05">5</span>
+                                                <span class="name">정언열</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num06">6</span>
+                                                <span class="name">오성균</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="playerItem">
+                                    <a href="#" class="playerPf" onclick="openPopup('playerData01')">
+                                        <div class="thumArea">
+                                            <img src="../../../images/thum/thum_profile.png" alt="김상인 프로필 이미지">
+                                        </div>
+                                        <div class="descArea">
+                                            <div class="player">
+                                                <span class="sign num07">7</span>
+                                                <span class="name">허준</span>
+                                            </div>
+                                            <p class="desc">13기/44세</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="comPlayerGrade">
+                        <ul class="gradeGroup">
+                            <li class="gradeItem">
+                                <div class="grade first">1위</div>
+                                <button type="button" class="nameArea" onclick="openPopup('playerData01')">
+                                    <b class="name">김광진</b>
+                                    <span class="desc">
+                                        <span class="number num01">1</span>
+                                        13기/44세
+                                    </span>
+                                </button>
+                                <div class="thumArea">
+                                    <img src="../../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                </div>
+                            </li>
+                            <li class="gradeItem">
+                                <div class="grade second">2위</div>
+                                <button type="button" class="nameArea" onclick="openPopup('playerData01')">
+                                    <b class="name">김상인</b>
+                                    <span class="desc">
+                                        <span class="number num03">3</span>
+                                        13기/44세
+                                    </span>
+                                </button>
+                                <div class="thumArea">
+                                    <img src="../../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                </div>
+                            </li>
+                            <li class="gradeItem">
+                                <div class="grade third">3위</div>
+                                <button type="button" class="nameArea" onclick="openPopup('playerData01')">
+                                    <b class="name">곽훈신</b>
+                                    <span class="desc">
+                                        <span class="number num04">4</span>
+                                        13기/44세
+                                    </span>
+                                </button>
+                                <div class="thumArea">
+                                    <img src="../../../images/thum/thum_person_list.png" alt="김광진 프로필 이미지">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
