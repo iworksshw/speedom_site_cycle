@@ -1,0 +1,222 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '도박중독의 이해',
+                    subText: '도박중독에 대해 이해하고<br /><b>예방과 치유방법</b>을 알아보세요.',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">건강한 가치관 형성을 위한 도박중독의 이해</h2>
+                        <p class="info">도박중독은 꾸준한 노력과 전문가의 도움으로 충분히 극복할 수 있습니다.</p>
+                    </div>
+
+                    <div class="cptContPrevention">
+                        <div class="contArea">
+                            <div class="comTitH2">
+                                <h2>도박중독의 단계와 유형은 어떻게 되나요?</h2>
+                            </div>            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    도박중독은 크게 사교적 도박, 문제성 도박, 병적(습관성) 도박의 3가지 단계로 구분할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>도박중독의 진행과정</h3>
+                        </div>
+                        <div class="comContGameFlow">
+                            <div class="item">
+                                <div class="icBox icon1">
+                                    <p class="txt">Step</p>
+                                    <p class="num">1</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>사고적 도박</dt>
+                                    <dd>
+                                        대부분의 도박자들은 이성적인 베팅으로 재미와 즐거움, 짜릿함을 추구합니다. 사교적 도박에서의 도박은 즐길 수 있는 하나의 레저 혹은 여가생활이며, 적당한 금액과 
+                                        시간동안 즐겼다고 생각하며 게임의 승패를 떠나 스스로 도박을 조절할 수 있습니다. 소액을 잃고 따는 과정에서 잃은 돈에 대한 상실감이 크지 않으며, 도박 이외의 생활에서 
+                                        도박으로 인한 뚜렷한 문제나 어려움이 발생되지 않습니다. 즉 자신의 도박을 스스로 통제하고 책임질 수 있는 단계입니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <div class="icBox icon2">
+                                    <p class="txt">Step</p>
+                                    <p class="num">2</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>문제성 도박</dt>
+                                    <dd>
+                                        처음에는 우연한 호기심으로 인해 도박을 접하거나, 친구나 동료의 소개로 도박을 시작하여 초기에는 재미도 느끼고 일상생활에서 받은 스트레스를 해소하면서 도박을 
+                                        즐기게 됩니다. 그러나 대박경험 등을 통해 도박으로 돈을 벌 수 있다는 생각을 하면서 더욱 많은 시간과 돈을 투자하게 됩니다. 이로 인해 가정이나 직장 등의 일상생활에 지장과
+                                        문제가 발생하게 됩니다. 아직 금단증상과 내성을 경험 하지는 않지만, 도박에 대한 자제력을 잃고 점점 심각한 문제를 경험하게 됩니다. 즉 자신이 감당하지 못할 정도의 돈과 
+                                        시간을 도박에 쓰고 있으며, 사람들과의 관계나 직장, 건강, 가정에 부정적인 영향을 미치고 재정적, 심리적, 사회적인 고통을 초래합니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <div class="icBox icon3">
+                                    <p class="txt">Step</p>
+                                    <p class="num">3</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>병적 도박</dt>
+                                    <dd>
+                                        병적 도박은 도박에 대한 억제할 수 없는 압도적인 충동에 휩쓸려 조절능력을 상실하여 개인의 능력과 가족기능을 붕괴시키는 등 부정적인 결과가 발생하는데도 반복적으로 
+                                        도박행동을 하는 경우를 말합니다. 병적 도박에서는 다양한 삶의 영역(가정 파탄, 실직, 학업소홀, 경제적 고통, 자신감 상실, 자포자기 및 자살충동 등)에 해로운 결과를 
+                                        일으키게 됩니다. <br />
+                                        그리고 내성과 금단증상을 보입니다. 즉 더 큰 돈을 걸고, 위험한 베팅을 해야 쾌감과 흥분을 느끼게 되고 도박을 접할 수 없거나 도박을 하지 않으면 불안, 초조, 불면증, 짜증 
+                                        등의 심리적, 신체적 증상이 나타나 결국 다시 도박장을 찾게 되는 금단증상을 보입니다. 이는 절벽에서 떨어지지 않기 위해 도박이라는 줄을 붙잡고 있는 위태위태한 상황으로 
+                                        생각해 볼 수 있습니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="rightBtn">
+                            <a href="#" class="btn Primary">도박중독 자가진단 하러가기</a>
+                        </div>                    
+                        <div class="comTitH3">
+                            <h3>도박중독의 2가지 유형</h3>
+                        </div>
+                        <div class="comContVerFlow">
+                            <div class="wdBox">
+                                <div class="rowA">
+                                    <div class="num">1</div>
+                                    <p class="txt">자극추구형</p>
+                                </div>
+                                <div class="rowB">
+                                    <ul class="listGroup">
+                                        <li class="item">도박중독의 발병연령이 빠름</li>
+                                        <li class="item">가족이나 주변 지인이 도박중독이었던 경우가 많음</li>
+                                        <li class="item">알코올중독, 인터넷 게임중독 등 다른 중독성 질환을 동반하는 경우가 많음</li>
+                                        <li class="item">충동조절능력의 문제 가지고 있음</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="wdBox">
+                                <div class="rowA">
+                                    <div class="num">2</div>
+                                    <p class="txt">현실도피형</p>
+                                </div>
+                                <div class="rowB">
+                                    <ul class="listGroup">
+                                        <li class="item">불쾌한 기분이나 고통스러운 상황, 스트레스를 회피하는 수단으로 도박에 의지</li>
+                                        <li class="item">일상생활의 불편한 기분, 열등감과 무가치감, 직장이나 가정에서의 스트레스 및 압박감을 줄이려는 목적으로 도박을 이용</li>
+                                        <li class="item">대인관계의 문제를 경험하고 있는 경우가 많음</li>
+                                        <li class="item">우울과 불안 등의 기분장애를 동반하는 경우가 많음</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comContTable mgt32">
+                            <table class="basic">
+                                <caption>도박중독의 2가지 유형 표 : 자극추구형, 현실도피형 내용을 포함한 표</caption>
+                                <colgroup>
+                                    <col style="width:50%;">
+                                    <col style="width:50%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>자극추구형</th>
+                                        <th>현실도피형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>남성 &gt; 여성</td>
+                                        <td>남성 &lt; 여성</td>
+                                    </tr>
+                                    <tr>
+                                        <td>이른 발병 연령</td>
+                                        <td>늦은 발병 연령</td>
+                                    </tr>
+                                    <tr>
+                                        <td>높은 가족력</td>
+                                        <td>내성적, 의존적</td>
+                                    </tr>
+                                    <tr>
+                                        <td>다른 중독성 질환 동반</td>
+                                        <td>우울 및 불안의 동반</td>
+                                    </tr>
+                                    <tr>
+                                        <td>여러 유형의 도박</td>
+                                        <td>사회활동의 부재</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충동조절능력의 문제</td>
+                                        <td>관계 중독</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="comBtnGroup">
+                            <div class="alignR">
+                                <div class="btnBox min">
+                                    <a href="../../html/menu06/page_06_03.html" class="btn dkLine">목록보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

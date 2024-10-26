@@ -1,0 +1,161 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '도박중독의 이해',
+                    subText: '도박중독에 대해 이해하고<br /><b>예방과 치유방법</b>을 알아보세요.',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">건강한 가치관 형성을 위한 도박중독의 이해</h2>
+                        <p class="info">도박중독은 꾸준한 노력과 전문가의 도움으로 충분히 극복할 수 있습니다.</p>
+                    </div>
+
+                    <div class="cptContPrevention">
+                        <div class="contArea">
+                            <div class="comTitH2">
+                                <h2>도박중독은 어떻게 진행되나요?</h2>
+                            </div>            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    도박을 처음 시작하게 되었때, ‘호기심 혹은 여가’를 즐기기 위한 목적으로 ‘소액’으로 즐기게 됩니다. <br />
+                                    이렇듯 사교적이고 유희적인 목적에서 시작되어 점차 ‘승리단계’로 넘어가기 시작합니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>도박중독의 진행과정</h3>
+                        </div>
+                        <div class="comContGameFlow">
+                            <div class="item">
+                                <div class="icBox icon1">
+                                    <p class="txt">Step</p>
+                                    <p class="num">1</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>승리단계</dt>
+                                    <dd>
+                                        승리단계에서는 소위 대박이라는 것을 경험하게 되고, 도박에 대한 낙관적이고 긍정적인 이미지를 가지게 됩니다. <br />
+                                        즉 ‘돈을 많이 딸 수 있겠구나, 내가 도박에 소질이 있구나’라는 생각을 하게 됩니다. <br />
+                                        그리고 더 강한 흥분을 얻기 위해 자주 그리고 위험한 곳에 베팅을 하게됩니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <div class="icBox icon2">
+                                    <p class="txt">Step</p>
+                                    <p class="num">2</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>손실단계</dt>
+                                    <dd>
+                                        손실단계에서는 마음속에서 도박이 떠나지 않게 되고, 더 많은 돈을 딸 수 있다는 기대로 인해 점점 더 많은 돈을 걸게 됩니다. <br />
+                                        하지만 돈을 잃는 횟수가 점점 많아지면서 본전을 되찾기 위한 추격매수(잃은 돈을 복구하기 위해 더 많은 돈을 걸게 되는 것)의 양상을 보이게 되고 심각한 경제적 문제가 생기게 
+                                        되어 무리한 대출이나 가족이나 지인에 대한 구제요청을 하게 됩니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <div class="icBox icon3">
+                                    <p class="txt">Step</p>
+                                    <p class="num">3</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>절망단계</dt>
+                                    <dd>
+                                        절망단계에서는 가족이나 지인의 구제, 대출 등을 통해 위기를 해결하고 잠시 도박을 중단하지만, 금단증상 등으로 인해 다시 도박을 하게 되고, 이전에 잃었던 돈과 시간, 
+                                        삶을 되찾기 위해 더욱 위험하고 무분별한 도박을 하게 됩니다. <br />
+                                        감당할 수 없는 과도한 빚과 이혼, 실직, 친구 등의 주변사람들로부터의 소외 등을 경험하게 되고, 심지어 범죄 등의 불법적인 행위를 하기도 합니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <div class="icBox icon4">
+                                    <p class="txt">Step</p>
+                                    <p class="num">4</p>
+                                </div>
+                                <dl class="txtBox">
+                                    <dt>포기단계(병적도박)</dt>
+                                    <dd>
+                                        포기단계에서는 스스로의 삶을 포기하고 도박에 저항할 수 있는 능력을 상실하여 맹목적인 도박을 계속하게 됩니다. <br />
+                                        가족들이나 지인 등이 문제를 인식하고 치료를 요청하기도 하며, 스스로 치료나 주변의 도움을 요청하기도 합니다. <br />
+                                        하지만 가족이나 주변 환경으로부터 소외당하고 고립되면 자살시도를 하게 되는 등의 위기를 경험하게 됩니다.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="comBasicTxt mgt20">
+                            <p class="txt">
+                                이러한 도박중독은 <em>'도박중독이다, 아니다'</em>의 이분법적으로 구분할 수 있는 질환이 아닌, <em>'중독의 수준에 따라 사교성 혹은 오락성 도박'</em>으로 시작하여 <em>'위험이나 문제성 도박'</em>을 거쳐 심각한 수준에 해당하는 <em>'병적 도박'</em>에 이르는 연속적인 진행성 질환입니다.
+                            </p>
+                        </div>
+                        <div class="comBtnGroup">
+                            <div class="alignR">
+                                <div class="btnBox min">
+                                    <a href="../../html/menu06/page_06_03.html" class="btn dkLine">목록보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

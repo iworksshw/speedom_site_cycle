@@ -1,0 +1,170 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '도박중독의 이해',
+                    subText: '도박중독에 대해 이해하고<br /><b>예방과 치유방법</b>을 알아보세요.',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">건강한 가치관 형성을 위한 도박중독의 이해</h2>
+                        <p class="info">도박중독은 꾸준한 노력과 전문가의 도움으로 충분히 극복할 수 있습니다.</p>
+                    </div>
+
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>도박, 무엇인가요?</h2>
+                            </div>            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    도박은 현대인의 특유한 현상은 아닙니다. 선사시대부터 인간은 내기를 걸고 도박하는 것을 즐겼다는 많은 이야기들이 있습니다. <br />
+                                    하지만 많은 사람들이 도박을 하면서도 자신이 하고 있는 것이 도박인지 놀이(게임)인지 구분하는 것을 어려워합니다. <br />
+                                    왜냐하면 도박은 놀이(게임)와 마찬가지로 재미와 즐거움, 짜릿함을 경험할 수 있는 활동이기 때문입니다. 하지만 놀이와는 분명 다른 점이 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>놀이</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                일반적으로 경쟁이 존재하고 규칙에 따라 진행되며 기술, 힘 혹은 운에 따라 결과가 결정되는 놀이 혹은 스포츠 형태에 참여하는 것
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>도박</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                우연으로 결정되는 불확실한 결과나 사건에 예상치 못한 결과가 초래될 위험이 있어도 돈이나 금품 또는 가치 있는 것을 걸고 승부를 거는 행동 <br />
+                                즉, 도박에는 경쟁을 포함하고 있으며 금전을 추구하고, 결과가 언제나 불확실하다는 속성을 지니고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cptContPrevention">
+                        <div class="contArea">
+                            <div class="comTitH2">
+                                <h2>도박의 종류</h2>
+                            </div>            
+                            <div class="comDataTable both mgt16">
+                                <div class="tableArea sizeS">
+                                    <table>
+                                        <caption>도박의 종류 표 : 구분과 내용을 포함한 표</caption>
+                                        <colgroup>
+                                            <col style="width:22.5%;">
+                                            <col style="width:76.5%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>놀이기구 사용</th>
+                                                <td class="left">화투, 장기, 바둑, 골패, 주사위, 트럼프, 체스, 마작 등</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기계 사용</th>
+                                                <td class="left">카지노(슬롯머신, 비디오게임 등), 경품, 오락, 각종 전자오락(바다이야기,스트린경마,파친코 등)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>추첨방식</th>
+                                                <td class="left">복권, 로또</td>
+                                            </tr>
+                                            <tr>
+                                                <th>스포츠 경기</th>
+                                                <td class="left">경마, 경륜, 경정, 체육진흥투표권(토토, 프로토)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>동물 경기</th>
+                                                <td class="left">소싸움, 투견, 투계 등</td>
+                                            </tr>
+                                            <tr>
+                                                <th>인터넷 사용</th>
+                                                <td class="left">사행성 PC방, 인터넷 도박(합법,불법)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>   
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    모든 도박을 마음대로 할 수는 없습니다. <br />
+                                    국가가 사행산업의 업종과 규정을 법으로 정하고 합법적인 사행산업으로 지정한 경륜, 경정, 경마, 스포츠토토, 카지노, 체육진흥투표권(스포츠토토), 복권, 소싸움 외 모든 도박은 불법적인 도박에 해당하여 제공자와 사용자 모두 처벌을 받을 수 있습니다.
+                                </p>
+                            </div>
+                            <div class="comBtnGroup">
+                                <div class="alignR">
+                                    <div class="btnBox min">
+                                        <a href="../../html/menu06/page_06_03.html" class="btn dkLine">목록보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

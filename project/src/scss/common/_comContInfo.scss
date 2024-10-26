@@ -1,7 +1,94 @@
 .comContInfo {
-    margin-top: 24px;
+    margin-top: 12px;
+    .ppBox {padding: 12px 0; display: flex; flex-wrap: wrap; align-items: center;}
+    .ppBox .cont {
+        flex: 1; border-radius: 16px;
+        .rowA {
+            color: var(---Primary); padding: 15px 30px; text-align: center; background: rgba(7, 139, 123, 0.05);        
+            .m1 {font-size: rem(16px); font-weight: 700;}
+            .m2 {font-size: rem(24px); font-weight: 700;}
+        }
+        .rowB {            
+            display: flex; align-items: center; padding: 20px 24px 24px; background: var(--bg-line-white); height: 260px; 
+            .listGroup {
+                width: 100%;
+                .item {
+                    margin-top: 8px; padding-left: 11px; font-size: rem(16px); line-height: 1.5; color: var(--Gray-800); position: relative; word-break: keep-all;
+                    &:first-child {margin-top: 0;}
+                    &::before {
+                        content: ""; width: 3px; height: 3px; background: var(--Gray-400); display: block; position: absolute; left: 0; top: 10px;
+                    }
+                    .sTit {font-weight: 700; display: block;}
+                    .sTxt {font-style: normal;}
+                    .lineTit {font-weight: 700; display: inline; }
+                    .lineTxt {font-style: normal; display: inline;}
+                }
+            }
+        }
+    }
+    .ppBox .cont.family {border: 2px solid rgba(7, 139, 123, 0.50);}
+    .ppBox .cont.busi {
+        border: 2px solid rgba(31, 79, 130, 0.50);
+        .rowA {color: var(--Point-Primary3); background: rgba(31, 79, 130, 0.05);}
+    }
+    .ppBox .arr {margin:0 40px; width: 23px; height: 36px; background: url(../../images/contents/cont06_01_arrow.svg) no-repeat center/100%;}
+    .ppBox .arr.rev {transform: rotate(-180deg); -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg);}
+    .ppBox .clc {
+        width: 280px; height: 280px; box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.10); position: relative; border: 16px solid transparent; border-radius: 50%; background-image: linear-gradient(#fff, #fff), linear-gradient(to right, rgba(40, 195, 158, 0.2), rgba(31, 79, 130, 0.2)); background-origin: border-box; background-clip: content-box, border-box; display: flex; align-items: center; justify-content: center; text-align: center;
+        .inTxt {            
+            img {height: 62px;}
+            .m1 {
+                font-size: rem(20px); margin-top: 14px; font-weight: 700; line-height: 1.4; background: linear-gradient(180deg, #28C39E 0%, #1F4E82 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                .blk {display: block;}
+            }
+
+        }
+    }  
+
+    @include media("pcs"){       
+    
+    }
 
     @include media("mobile"){
-        margin-top: 24px;
+        margin-top: 12px;
+
+        .ppBox {display: block;}
+        .ppBox .cont {
+            width: 100%;
+            .rowA {
+                padding: 10px 20px;
+                .m1 {font-size: rem(15px); font-size: 600;}
+                .m2 {font-size: rem(20px);}
+            }
+            .rowB {
+                padding: 16px 20px 20px; height: 245px;
+                .listGroup {
+                    margin-top: 8px;
+                    .item {
+                        font-size: rem(15px);
+                        .lineTit {
+                            font-weight: 600; line-height: 1.5;
+                        }
+                        .lineTxt {
+                            font-weight: 400; line-height: 1.4;
+                        }
+                    }
+                }
+            }
+        }
+        .ppBox .arr {width: 18px; height: 27px; margin: 20px auto; transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);}
+        .ppBox .arr.rev {transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg);}
+        .ppBox .clc {
+            width: 100%; height: 94px; box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.10); border: 6px solid transparent; border-radius: 50px;
+            .inTxt {        
+                width: 100%; display: flex; align-items: center; justify-content: center; text-align: left;   
+                img {height: 40px;}
+                .m1 {
+                    font-size: rem(18px); margin-top: 0; margin-left: 10px; font-weight: 600; line-height: 1.3;
+                    .blk {display: inline-block;}
+                }
+    
+            }
+        }  
     }
 }
