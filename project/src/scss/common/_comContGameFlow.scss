@@ -1,0 +1,53 @@
+.comContGameFlow {
+    width: 100%; margin-top: 12px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); padding: 60px 44px;
+
+    .item {
+        padding-bottom: 62px; display: flex; position: relative;
+
+        &:last-child {padding-bottom: 0;}
+        &:last-child::after {display: none;}
+        &::after {content: ""; position: absolute; top: 40px; left: 42px; width: 2px; background: var(--Point-Primary2); height: 100%; z-index: -1;}
+
+        .icBox {
+            display: flex; align-items: center; justify-content: center; flex-direction: column; width: 86px; height: 100px; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;
+            .txt {font-size: rem(13px); font-weight: 500; color: var(--Bg-Line-white); line-height: 1;}
+            .num {font-size: rem(40px); font-weight: 800; color: var(--Bg-Line-white); line-height: 1;}
+           
+        }
+        .txtBox {
+            padding-left: 40px; flex: 1;
+            dt {color: var(--Gray-900); font-size: rem(16px); font-weight: 700; line-height: 1.4; margin-bottom: 4px;}
+            dd {color: var(--Gray-700); font-size: rem(15px); line-height: 1.6; word-break: keep-all;}
+        }
+        .icBox.icon1 {background-image: url(../../images/common/ic_hexagon_step1.svg);}
+        .icBox.icon2 {background-image: url(../../images/common/ic_hexagon_step2.svg);}
+        .icBox.icon3 {background-image: url(../../images/common/ic_hexagon_step3.svg);}
+        .icBox.icon4 {background-image: url(../../images/common/ic_hexagon_step4.svg);}
+
+    }
+
+
+    @include media("mobile"){
+        padding: 24px 16px;
+        
+        .item {
+            padding-bottom: 35px;
+
+            &::after {top: 15px; left: 11px;}
+
+            .icBox {
+                width: 24px; height: 26px;
+                .txt {display: none;}
+                .num {font-size: rem(14px); font-weight: 700;}
+               
+            }
+            .txtBox {
+                padding-left: 8px; padding-top: 4px;
+                dt {font-size: rem(15px); font-weight: 700; margin-bottom: 8px;}
+                dd {font-size: rem(14px);}
+            }
+    
+        }
+
+    }
+}
