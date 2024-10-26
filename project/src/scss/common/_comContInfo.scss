@@ -45,7 +45,20 @@
         }
     }  
 
-    @include media("pcs"){       
+    @include media("pcs"){    
+
+        .ppBox {display: block;}
+        .ppBox .cont {width: 100%;}   
+        .ppBox .clc {
+            width: 100%; height: 140px; box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.10); border: 6px solid transparent; border-radius: 50px;
+            .inTxt {        
+                width: 100%; display: flex; align-items: center; justify-content: center; text-align: left;
+                .m1 {margin-top: 0; margin-left: 10px;}
+            }
+        }  
+        .ppBox .arr {width: 18px; height: 27px; margin: 20px auto; transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);}
+        .ppBox .arr.rev {transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg);}
+
     
     }
 
@@ -54,7 +67,6 @@
 
         .ppBox {display: block;}
         .ppBox .cont {
-            width: 100%;
             .rowA {
                 padding: 10px 20px;
                 .m1 {font-size: rem(15px); font-size: 600;}
@@ -79,12 +91,11 @@
         .ppBox .arr {width: 18px; height: 27px; margin: 20px auto; transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);}
         .ppBox .arr.rev {transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg);}
         .ppBox .clc {
-            width: 100%; height: 94px; box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.10); border: 6px solid transparent; border-radius: 50px;
+            height: 94px;
             .inTxt {        
-                width: 100%; display: flex; align-items: center; justify-content: center; text-align: left;   
                 img {height: 40px;}
                 .m1 {
-                    font-size: rem(18px); margin-top: 0; margin-left: 10px; font-weight: 600; line-height: 1.3;
+                    font-size: rem(18px); margin-top: 0; font-weight: 600; line-height: 1.3;
                     .blk {display: inline-block;}
                 }
     

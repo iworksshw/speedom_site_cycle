@@ -1,6 +1,8 @@
 .comContTable {
     margin-top: 14px;
     &:first-child {margin-top: 0;}
+    &.mgH20 {margin-top: 20px;}
+    &.mgH32 {margin-top: 32px;}
 
     .mView {display: none;}
 
@@ -38,12 +40,13 @@
 
     @include media("mobile"){
         margin-top: 12px;
-
+        &.mgH20 {margin-top: 12px;}
+        &.mgH32 {margin-top: 24px;}
         .pcView {display: none;}
         .mView {display: block;}
 
         table {
-            th {padding: 8px 5px; font-size: rem(14px);}
+            th {padding: 8px 5px; font-size: rem(14px); word-break: keep-all;}
             tbody {
                 td {
                     padding: 8px 5px; font-size: rem(14px);
