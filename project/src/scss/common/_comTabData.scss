@@ -1,6 +1,6 @@
 /* ------------------------ 2뎁스 탭 (데이터) ------------------------ */
 .comTabData {
-    width: 100%; margin-top: 60px; 
+    width: 100%; margin-top: 60px;
     .tabMenuGroup {
         width: 100%; overflow: hidden;
         .tabMenu {    
@@ -12,12 +12,24 @@
                 .tabName {
                     width: max-content; height: 46px; padding: 0 36px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px; border-radius: 23px;
                     color: var(--Gray-600); border: 1px solid var(--Gray-300); background: #fff; display: inline-block;
+                    
                     &.on {
                         color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
+                        &.orange { border: 1px solid var(--Point-Orange); background: var(--Point-Orange);}
+                        &.blue { border: 1px solid var(--Point-Blue); background: var(--Point-Blue);}
+                        &.mint { border: 1px solid var(--Point-Primary2); background: var(--Point-Primary2);}
                     }
                 }
             }
         }
+    }
+    &:not(.modTab02) {
+        display: flex;
+        .tabMenuGroup {flex: 1;}
+        .right {
+            .frmBox {width: 160px; max-width: 160px;}
+        }
+        .comTitH2 + & {margin-top: 32px;}
     }
     @include media('mobile'){
         width: calc(100% + 32px); margin-left: -16px; margin-top: 40px;
@@ -31,6 +43,14 @@
                 }
             }
         }
+        &:not(.modTab02) {
+            flex-wrap: wrap; 
+            .right {
+                width: 100%; margin-top: 24px; padding: 0 20px;
+                .frmBox {width: 100%; min-width: 100%;}
+            }
+        }
+        
     }
 
     //조건

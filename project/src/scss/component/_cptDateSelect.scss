@@ -28,9 +28,9 @@
                         display: flex; align-items: center; column-gap: 4px;
                         .setBtn {
                             width: 36px; height: 36px; border-radius: 6px; border: 1px solid var(--Bg-Line-line-100); font-size: 0; background: url(../../images/common/ic_12_arr_fill_g.svg) center no-repeat; 
-                            &.first {background-image: url(../../images/common/ic_12_arr_fill_g.svg);}
+                            &.first {background-image: url(../../images/common/ic_12_dbArr_fill_g.svg);}
                             &.next {transform: rotate(180deg);}
-                            &.last {background-image: url(../../images/common/ic_12_arr_fill_g.svg); transform: rotate(180deg);}
+                            &.last {background-image: url(../../images/common/ic_12_dbArr_fill_g.svg); transform: rotate(180deg);}
                         }
                         
                     }

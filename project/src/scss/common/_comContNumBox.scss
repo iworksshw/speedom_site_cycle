@@ -1,0 +1,19 @@
+.comContNumBox {
+    width: 100%; margin-top: 12px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); padding: 32px 40px;
+    
+    .item {
+        margin-top: 12px; display: flex; align-items: center;
+        span {font-size: rem(11px); font-weight: 700; line-height: 1.6; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--Point-Primary2); color: var(--Bg-Line-white)}
+        p {flex: 1; padding-left: 8px; font-size: rem(16px); line-height: 1.6; color: var(--font-800); word-break: keep-all;}
+        &:first-child {margin-top: 0;}
+    }
+
+    @include media("mobile"){
+        padding: 24px 16px;
+
+        .item {
+            align-items: baseline; margin-top: 8px;
+            p {font-size: rem(15px);}
+        }
+    }    
+}

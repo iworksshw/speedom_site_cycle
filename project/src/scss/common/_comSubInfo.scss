@@ -6,6 +6,10 @@
     .infoTit { color: var(--Gray-800); font-size: rem(18px); font-weight: 700; line-height: 1.4;}
     .info {margin-top: 6px;color: var(--Gray-800); font-size: rem(16px); line-height: 1.6;}
     .infoEtc {margin-top: 8px; font-size: rem(16px); color: var(---Primary); font-weight: 600;line-height: 1.6;}
+    .btn {
+        margin-top: 20px;
+        img {vertical-align: middle;}
+    }
 
     @include media("mobile"){
         min-height:auto; margin-top: -20px; padding: 60px 0 20px 0;
@@ -14,6 +18,7 @@
         .infoTit {font-size: rem(16px); }
         .info {font-size: rem(15px); }
         .infoEtc {font-size: rem(15px);}
+        .btn {margin-top: 12px;}
 
         //조건
         & + .cptBoardList {

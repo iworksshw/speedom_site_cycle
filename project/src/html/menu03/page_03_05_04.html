@@ -1,0 +1,174 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<!-- 서브 탑 (타이틀) -->
+				<%- include('../_ejs/sub_top.ejs', {
+					location: ['경륜선수', '순위 정보'],
+					subTitle: '현재 연승 순위',
+					subText: '경륜선수의 <br><b>현재 연승 순위</b>를 알려드려요.',
+					url: "../../",
+					visualClass: "bg03",
+				}) %> 
+				
+				<div class="layoutContArea">
+					
+					<div class="comSubInfo">
+						<h2 class="infoTit">경주에서 연속 3회이상 1위한 선수는 현재 연승 순위에 표시됩니다.</h2>
+					</div>
+					
+					<div class="cptSection">
+						<div class="sectArea">
+
+							<div class="comTitH2">
+								<h2>현재 연승 순위</h2>
+							</div>
+						
+							<div class="comDataTable">
+								<div class="tableArea sizeXL">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col span="5" style="width:20%;">
+										</colgroup>
+										<thead>
+                                            <th>순위</th>
+                                            <th>선수명</th>
+                                            <th>등급</th>
+                                            <th>현재 연승횟수</th>
+                                            <th>연승기간</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>임채빈</td>
+												<td>SS</td>
+												<td>17</td>
+												<td>2024.05.24 ~ 2024.07.14</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+					
+				<!-- 서브 바텀 (담당자) -->
+				<%- include('../_ejs/sub_btm.ejs', {
+					team: '경륜기획팀',
+					name: '조준호',
+					phone: '02-2067-5711',
+					url: "../../",
+				}) %>
+				
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

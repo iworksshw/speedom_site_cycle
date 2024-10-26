@@ -1,0 +1,156 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '도박중독의 이해',
+                    subText: '도박중독에 대해 이해하고<br /><b>예방과 치유방법</b>을 알아보세요.',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">건강한 가치관 형성을 위한 도박중독의 이해</h2>
+                        <p class="info">도박중독은 꾸준한 노력과 전문가의 도움으로 충분히 극복할 수 있습니다.</p>
+                    </div>
+
+                    <div class="cptContPrevention">
+                        <div class="contArea">
+                            <div class="comTitH2">
+                                <h2>도박중독 예방을 위한 방법은 무엇인가요?</h2>
+                            </div>            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    많은 사람들은 도박이 재미있기 때문에 도박의 중단이 아닌 도박을 적절하게 즐기면서 살아갈 수는 없을까 궁금해 합니다. 물론 도박을 여가생활로 재미를 즐기며 산다면 삶의 활력소가 될 수도 있습니다. <br /><br />
+                                    도박중독에 이르렀다면 도박을 중단하는 것보다 도박을 줄이는 것이 더욱 힘들다고 이야기합니다. 따라서 자신이 도박중독자로 의심이 된다면, 도박을 즉시 중단하고 전문가와 함께 치유의 과정으로 나아가야 하며, 아직 도박중독이 아니라는 확신이 있다면, 도박중독을 예방하기 위한 방법을 찾아야 합니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>도박중독 예방을 위한 13계명</h3>
+                        </div>
+                        <div class="comContNumBox">
+                            <div class="item">
+                                <span>1</span>
+                                <p>도박은 순전히 오락이나 재미로 하세요. 돈을 벌거나 회피수단으로 하지마세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>2</span>
+                                <p>도박자금을 미리 정하고 그 돈을 다 써 버리면 그만두세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>3</span>
+                                <p>털릴 때까지 하지 말고 언제 어떻게 그만둘지를 미리 생각하세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>4</span>
+                                <p>다 털리면 그만두고, 그만두게 되었다고 화내지 마세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>5</span>
+                                <p>자신의 수입 내에서 책임질 수 있는 수준의 돈을 베팅하세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>6</span>
+                                <p>혼자 도박하지 마세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>7</span>
+                                <p>돈을 잃었다는 사실을 받아들이세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>8</span>
+                                <p>돈을 잃은 사실을 숨기지 마세요. 그리고 어떠한 거짓말도 하지 마세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>9</span>
+                                <p>도박충동을 행동으로 옮길 때까지의 시간을 지연시키세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>10</span>
+                                <p>회복을 거부하는 숨겨진 동기를 찾아내도록 충분히 생각해보세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>11</span>
+                                <p>도박은 순전히 오락이나 재미로 하세요. 돈을 벌거나 회피수단으로 하지마세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>11</span>
+                                <p>도박 이외의 다른 여가와 취미활동에 참여하세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>12</span>
+                                <p>하루 일정을 계획해서 그대로 수행하고 매일 일기를 쓰세요.</p>
+                            </div>
+                            <div class="item">
+                                <span>13</span>
+                                <p>친구나 가족, 전문가 등 주변사람들 지지 인맥을 확보하세요.</p>
+                            </div>
+                        </div>
+                        <div class="comBtnGroup">
+                            <div class="alignR">
+                                <div class="btnBox min">
+                                    <a href="../../html/menu06/page_06_03.html" class="btn dkLine">목록보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

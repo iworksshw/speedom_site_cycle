@@ -1,0 +1,554 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<!-- 서브 탑 (타이틀) -->
+				<%- include('../_ejs/sub_top.ejs', {
+					location: ['경륜선수', '순위 정보'],
+					subTitle: '그랑프리 포인트',
+					subText: '경륜선수의 <br><b>그랑프리 포인트</b> 순위를 알려드려요.',
+					url: "../../",
+					visualClass: "bg03",
+				}) %> 
+
+				<div class="layoutContArea">
+					
+					<div class="comSubInfo">
+						<h2 class="infoTit">그랑프리 포인트는 (GPP: Grand Prix Point) 문화체육관광부 장관배 그랑프리 경륜 결승 경주 출전 선수를 선발하기 위한 점수입니다.</h2>
+						<p class="info">평균득점(50점 만점), 승률(50점 만점), 대상경주 입상가점(최대 35점)을 합산하여 기량상위자 선발하고 있습니다.</p>
+					</div>
+					
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH3">
+                                <h3>그랑프리 결승경주 출전(1위~7위)</h3>
+                            </div>
+							<div class="comBasicList space">
+								<ul class="listGroup">
+									<li class="item">1~20위까지 순위 부여, 20위 이하 동점자 발생시 모두 표시</li>
+									<li class="item">평균득점 소수점 3째 자리 반올림 후 둘째자리 이하 동점자는 동일 포인트 부여</li>
+									<li class="item">GPP(총점수) 동점자 발생시 대상경주입상, 평균득점, 승률 순서로 높은 순위 부여</li>
+								</ul>
+							</div>
+							
+							<div class="comTitH3">
+								<h3>그랑프리 포인트 순위</h3>
+								<div class="right">
+									<div class="frmBox">
+										<select class="iptSlt">
+											<option value="">2018년</option>
+											<option value="">드롭다운</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							<div class="comDataTable both colLineDel">
+                                <div class="tableArea sizeXL">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:72px;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:300px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>순위</th>
+                                                <th>선수명</th>
+                                                <th class="bdrBold">등급</th>
+                                                <th class="bdrBold tbGreen">GPP<br>(A+B+C)</th>
+                                                <th class="tbBlue">종합득점</th>
+                                                <th class="tbBlue">랭킹</th>
+                                                <th class="bdrBold tbBlue">Point A</th>
+                                                <th class="tbRed">승률</th>
+                                                <th class="tbRed">랭킹</th>
+                                                <th class="bdrBold tbRed">Point B</th>
+                                                <th class="tbYellow">대상경주</th>
+                                                <th class="tbYellow">Point C</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="tbGray">1</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">이사장배 대상경륜 3위</li>
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray">2</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">이사장배 대상경륜 3위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray">3</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray">4</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">이사장배 대상경륜 3위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray">5</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td></td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray">6</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">이사장배 대상경륜 3위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tbGray bdbBold">7</th>
+                                                <td class="bdbBold">정종진</td>
+                                                <td class="bdrBold bdbBold">SS</td>
+                                                <td class="bdrBold tbGreen bdbBold">111</td>
+                                                <td class="bdbBold">102.29</td>
+                                                <td class="bdbBold">1</td>
+                                                <td class="bdrBold bdbBold">50</td>
+                                                <td class="bdbBold">89</td>
+                                                <td class="bdbBold">1</td>
+                                                <td class="bdrBold bdbBold">50</td>
+                                                <td class="bdbBold">
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="bdbBold">11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>8</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>9</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>10</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>11</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>12</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>13</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>14</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>15</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>16</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>17</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>18</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>19</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <th>20</th>
+                                                <td>정종진</td>
+                                                <td class="bdrBold">SS</td>
+                                                <td class="bdrBold tbGreen">111</td>
+                                                <td>102.29</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>89</td>
+                                                <td>1</td>
+                                                <td class="bdrBold">50</td>
+                                                <td>
+                                                    <div class="comBasicList space">
+                                                        <ul class="listGroup">
+                                                            <li class="item">제23회 스포츠서울배 1위</li>
+                                                            <li class="item">제23회 일간스포츠배 1위</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>11</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+						</div>
+					</div>
+
+				</div>
+					
+				<!-- 서브 바텀 (담당자) -->
+				<%- include('../_ejs/sub_btm.ejs', {
+					team: '경륜기획팀',
+					name: '조준호',
+					phone: '02-2067-5711',
+					url: "../../",
+				}) %>
+				
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

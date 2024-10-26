@@ -1,0 +1,565 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<!-- 서브 탑 (타이틀) -->
+				<%- include('../_ejs/sub_top.ejs', {
+					location: ['경륜선수', '신인선수 정보'],
+					subTitle: '훈련원 졸업성적',
+					subText: '미래 경륜계를 이끌어갈 <b>선수후보생들의  <br>숨겨진 가능성</b>을 확인하세요.',
+					url: "../../",
+					visualClass: "bg03",
+				}) %>
+				
+				<div class="layoutContArea">
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>선수후보생 전법별 경주성적 및 자격검정결과 알림표</h2>
+								<div class="right">
+									<div class="frmBox">
+										<select class="iptSlt">
+											<option value="">28기수</option>
+											<option value="">27기수</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="comDataTable">
+								<div class="tableArea sizeXL">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col span="22" style="width:auto;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th rowspan="2" class="btmLine">구분</th>
+												<th rowspan="2" class="btmLine">성함</th>
+												<th colspan="3">입상계</th>
+												<th rowspan="2" class="btmLine">출주일수</th>
+												<th rowspan="2" class="btmLine">평균득점</th>
+												<th colspan="3">선행</th>
+												<th colspan="3">젖히기</th>
+												<th colspan="3">추입</th>
+												<th colspan="3">마크</th>
+												<th colspan="3">자전거 실기기록</th>
+											</tr>
+											<tr>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>1착</th>
+												<th>2착</th>
+												<th>3착</th>
+												<th>200m</th>
+												<th>500m</th>
+												<th>1km</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>강민성</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>김로운</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>김태율</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>김준철</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>민선기</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>박건이</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>석혜윤</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>손성진</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>손제용</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>송정욱</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>11</td>
+												<td>원준오</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>12</td>
+												<td>유연우</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>13</td>
+												<td>이정석</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>14</td>
+												<td>임대성</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td>임재연</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>16</td>
+												<td>최정환</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>17</td>
+												<td>현지운</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+											<tr>
+												<td>18</td>
+												<td>현지운</td>
+												<td>5</td>
+												<td>9</td>
+												<td>12</td>
+												<td>46</td>
+												<td>91.083</td>
+												<td>0</td>
+												<td>2</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>5</td>
+												<td>3</td>
+												<td>4</td>
+												<td>-</td>
+												<td>4</td>
+												<td>7</td>
+												<td>11”05</td>
+												<td>34”61</td>
+												<td>1.11.79</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 서브 바텀 (담당자) -->
+				<%- include('../_ejs/sub_btm.ejs', {
+					team: '경륜훈련원',
+					name: '유창표',
+					phone: '054-630-1618',
+					url: "../../",
+				}) %>
+				
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

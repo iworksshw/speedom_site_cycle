@@ -1,0 +1,64 @@
+.comPlayerThumList {
+    margin-top: 40px;
+    &:first-child {margin-top: 0;}
+
+    .listBox {
+        border-radius: 16px; border: 1px solid var(--Point-Primary2); padding: 40px;
+        .playerGroup {
+            display: flex; align-items: center; justify-content: space-around;
+            .playerItem {
+                .playerPf {
+                    display: inline-block; text-align: center;
+                    .thumArea {
+                        width: 45px; height: 45px; border-radius: 50%; margin: 0 auto; overflow: hidden;
+                        img {width: 100%; height: 100%; object-fit: cover;}
+                    }
+                    .descArea {
+                        margin-top: 4px;
+                        .sign {
+                            width: 16px; height: 16px; font-size: rem(11px); font-weight: 700; line-height: 1.5; border-radius: 50%; display: inline-block; vertical-align: middle;
+                            &.num01 {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: #FFF;}
+                            &.num02 {color: #fff; border: 1px solid #111111; background: #111111;}
+                            &.num03 {color: #fff; border: 1px solid #FF2828; background: #FF2828;}
+                            &.num04 {color: #fff; border: 1px solid #2A7DDF; background: #2A7DDF;}
+                            &.num05 {color: #fff; border: 1px solid #FFB907; background: #FFB907;}
+                            &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
+                            &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
+                        }
+                        .name {
+                            padding-bottom: 1px; border-bottom: 1px solid #b0b2b8; font-size: rem(15px); color: var(--Gray-800); line-height: 1; font-weight: 600; position: relative; display: inline-block;
+                        }
+                        .desc {margin-top: 2px; font-size: rem(14px); font-weight: 300; color: var(--Gray-600); line-height: 1.6;}
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 32px;
+    
+        .listBox {
+            padding: 24px 38px;
+            .playerGroup {
+                flex-wrap: wrap; justify-content: flex-start; gap: 40px;
+            }
+        }
+    }
+
+    // 예외 클래스
+    // 팝업 내부 적용
+    &.inPop {
+        .playerPf {
+            pointer-events: none; cursor: default;
+        }
+    }
+
+    // 간격예외
+    .comTitH2 + & {
+        margin-top: 16px;
+        @include media("mobile"){
+            margin-top: 12px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .comMovieBox {
-    margin-top: 20px;
+    margin-top: 40px;
     &:first-child {margin-top: 0;}
 
     .boxArea {
@@ -21,21 +21,29 @@
     }
 
     @include media("mobile"){
-        margin-top: 12px;
+        margin-top: 32px;
     
         .boxArea {
-            width: calc(100% + 32px); margin-left: -16px; border-radius: 0; padding: 4px 20px;
+            padding: 4px 24px;
             .movieList {
                 flex-wrap: wrap;
                 .movieItem {
                     flex: 1 1 100%; text-align: left; padding: 20px 0; border-bottom: 1px solid var(--Gray-200); border-right: none;
                     &:last-child {border-bottom: none;}
                     a {
-                        width: 100%; font-size: rem(16px);
+                        width: 100%; font-size: rem(16px); display: flex;
                         &::after {margin-left: auto;}
                     }
                 }
             }
+        }
+    }
+
+    // 간격 예외
+    .comTitH3 + & {
+        margin-top: 20px;
+        @include media("mobile"){
+            margin-top: 12px;
         }
     }
 }
