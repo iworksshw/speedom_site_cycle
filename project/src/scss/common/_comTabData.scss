@@ -25,9 +25,9 @@
     }
     &:not(.modTab02) {
         display: flex;
+        .tabMenuGroup {flex: 1;}
         .right {
             .frmBox {width: 160px; max-width: 160px;}
-            .comAddGuide {min-width: 200px;}
         }
         .comTitH2 + & {margin-top: 32px;}
     }
