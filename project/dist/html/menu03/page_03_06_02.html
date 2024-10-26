@@ -1116,15 +1116,25 @@
 								<h2>전체상금순위 [2024년 기준]</h2>
 							</div>
 
-							<!-- 디자인수급필요 -->
-							<div class="comGroupTop">
-								<div>
-									<button type="button" class="btn dkLine">전체</button>
-									<button type="button" class="btn dkLine">특선급</button>
-									<button type="button" class="btn dkLine">우수급</button>
-									<button type="button" class="btn dkLine">선발급</button>
-								</div>
-								<div>
+							<div class="comTabData">
+                                <div class="tabMenuGroup tabDataSwiper">
+                                    <ul class="tabMenu swiper-wrapper">
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName on">전체</button>
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName orange">특선급</button> <!--class 'orange' : 특선급 탭 컬러-->
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName blue">우수급</button> <!--class 'blud' : 우수급 탭 컬러-->
+                                        </li>
+                                        <li class="tabItem swiper-slide">
+                                            <button type="button" class="tabName mint">선발급</button> <!--class 'mint' : 선발급 탭 컬러-->
+                                        </li>
+                                    </ul>
+                                </div>
+						
+								<div class="right">
 									<div class="frmBox">
 										<select class="iptSlt">
 											<option value="">2024년</option>
@@ -1132,8 +1142,7 @@
 										</select>
 									</div>
 								</div>
-							</div>
-							<!--// 디자인수급필요 -->
+                            </div>
 
 							<div class="comDataTable">
 								<div class="tableArea">
@@ -1151,7 +1160,7 @@
 										<tbody>
 											<tr>
 												<td>1</td>
-												<td><a href="javascript:void(0);">임채빈</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">임채빈</a></td>
 												<td>SS</td>
 												<td>1991</td>
 												<td></td>
@@ -1159,7 +1168,7 @@
 											</tr>
 											<tr >
 												<td>2</td>
-												<td><a href="javascript:void(0);">정종진</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">정종진</a></td>
 												<td>SS</td>
 												<td>1987</td>
 												<td>서울</td>
@@ -1167,7 +1176,7 @@
 											</tr>
 											<tr>
 												<td>3</td>
-												<td><a href="javascript:void(0);">류재열</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">류재열</a></td>
 												<td>S1</td>
 												<td>1987</td>
 												<td>대구</td>
@@ -1175,7 +1184,7 @@
 											</tr>
 											<tr >
 												<td>4</td>
-												<td><a href="javascript:void(0);">양승원</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">양승원</a></td>
 												<td>SS</td>
 												<td>1990</td>
 												<td>충북</td>
@@ -1183,7 +1192,7 @@
 											</tr>
 											<tr>
 												<td>5</td>
-												<td><a href="javascript:void(0);">공태민</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">공태민</a></td>
 												<td>S1</td>
 												<td>1989</td>
 												<td>경기</td>
@@ -1191,7 +1200,7 @@
 											</tr>
 											<tr >
 												<td>6</td>
-												<td><a href="javascript:void(0);">신은섭</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">신은섭</a></td>
 												<td>SS</td>
 												<td>1987</td>
 												<td>서울</td>
@@ -1199,7 +1208,7 @@
 											</tr>
 											<tr>
 												<td>7</td>
-												<td><a href="javascript:void(0);">황승호</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">황승호</a></td>
 												<td>S1</td>
 												<td>1986</td>
 												<td>경기</td>
@@ -1207,7 +1216,7 @@
 											</tr>
 											<tr >
 												<td>8</td>
-												<td><a href="javascript:void(0);">황인혁</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">황인혁</a></td>
 												<td>S1</td>
 												<td>1988</td>
 												<td>대전</td>
@@ -1215,7 +1224,7 @@
 											</tr>
 											<tr>
 												<td>9</td>
-												<td><a href="javascript:void(0);">박진영</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">박진영</a></td>
 												<td>S1</td>
 												<td>1995</td>
 												<td></td>
@@ -1223,7 +1232,7 @@
 											</tr>
 											<tr >
 												<td>10</td>
-												<td><a href="javascript:void(0);">박경호</a></td>
+												<td><a href="#" class="player" onclick="openPopup('playerData01')">박경호</a></td>
 												<td>S1</td>
 												<td>1993</td>
 												<td>서울</td>

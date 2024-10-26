@@ -1,0 +1,103 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '희망길벗 아카이브',
+                    subText: '<b>도박중독,</b><br>영상으로 알아보세요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptBoardView">
+                        <div class="boardViewArea">
+                            <div class="viewTop">
+                                <h2 class="viewTitle">도박중독 회복을 위한 준비</h2>
+                                <ul class="info">
+                                    <li class="item">2024.07.05</li>
+                                    <li class="item">건전화홍보팀</li>
+                                    <li class="item">조회수 : 200</li>
+                                </ul>
+
+                            </div>
+                            <div class="viewBody">
+                                <div class="viewContArea">
+                                    도박중독 회복으리 위한 준비<br>
+                                    계획을 세우고 변화에 필요한 조정을 해야합니다.<br>
+                                    여기서 중요한 변화는 자신의 문제를 인식하고 변화하겠다는 결심을<br>
+                                    가족과 지인들에게 공개하는 것입니다.
+                                </div>
+                            </div>
+
+                            <div class="comPrevNext">
+                                <dl>
+                                    <dt>이전글</dt>
+                                    <dd>이전글이 없습니다.</dd>
+                                </dl>
+                                <dl>
+                                    <dt>다음글</dt>
+                                    <dd><a href="#">도박중독자의 책임회피와 책임전가</a></dd>
+                                </dl>
+                            </div>
+
+                            <div class="comBtnGroup">
+                                <div class="alignR">
+                                    <div class="btnBox min">
+                                        <button class="btn dkLine">목록보기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
