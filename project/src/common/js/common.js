@@ -235,17 +235,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     */
     const textBox = document.querySelector(".fileBox .textBox");
-    if (!textBox) return;
-    textBox.addEventListener("click", function(event) {
-        if (event.target && event.target.classList.contains("fileDel")) {
-            const listItem = event.target.closest("li");
-            const fileBox = parentsElementFind(this, "fileBox");
-            if (listItem) {
-                listItem.remove();
-                fileBox.querySelector(".uploadBtn").value = "";
+    if (textBox) {
+        textBox.addEventListener("click", function(event) {
+            if (event.target && event.target.classList.contains("fileDel")) {
+                const listItem = event.target.closest("li");
+                const fileBox = parentsElementFind(this, "fileBox");
+                if (listItem) {
+                    listItem.remove();
+                    fileBox.querySelector(".uploadBtn").value = "";
+                }
             }
-        }
-    });
+        });
+    }
 
 
 
@@ -445,6 +446,7 @@ function tabMenuDataSwiper(){
     tabSwiperData.init();
 }
 
+
 //모드 탭 함수
 function tabMenuSwiper(){
     //모바일, 태블릿, PC 모두 슬라이드
@@ -554,6 +556,7 @@ function tabMenuInit(){
         //모드탭 내의 메뉴 수
         tabmenus.forEach(function(tabmenu,menuIdx,inElements){
             tabmenu.addEventListener("click", function(event){
+
                 inElements.forEach(function(inElement){
                     inElement.classList.remove("on");
                     inElement.setAttribute("title", "탭메뉴");

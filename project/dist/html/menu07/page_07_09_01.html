@@ -1,4 +1,4 @@
-<!-- Header -->
+ <!-- Header -->
 
 <!doctype html>
 <html lang="ko">
@@ -28,77 +28,14 @@
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
 
-<style>
-	.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
-
-	/* cptDataSum */
-	.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
-	.dataSum .inner {display: flex; gap: 20px;}
-	.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
-	.dataSum .inner > li::before {content: ""; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);}
-	.dataSum .inner > li:first-child::before {display: none;}
-	.dataSum .inner > li .item {display: inline-block; color: var(--Gray-600); font-size: 15px; /* font-size: rem(15px); */ line-height: 1.4;}
-	.dataSum .inner > li .val {display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: 20px; /* font-size: rem(20px); */ font-weight: 700; line-height: 1.4;}
-	.dataSum .inner > li div.val {display: block; margin-left: 0; margin-top: 6px;}
-	.dataSum .inner > li .val .unit {font-size: 15px; font-style: normal;}
-	.dataSum .inner > li .icon {width: 40px; height: 40px; margin: 0 auto 8px;}
-	
-	.cptDataSum {position: relative;}
-	.cptDataSum .comTitH2 + .dataSum {margin-top: 20px;}
-	.cptDataSum .addInfo {display: flex; justify-content: space-between; margin-top: 15px; color: var(--Gray-500);}
-	.cptDataSum .alignR {margin-left: auto;}
-	.cptDataSum .btnRefresh {min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: 14px; /* font-size: rem(14px); */ background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4762 6.05556C12.2126 5.42297 11.8243 4.85685 11.3424 4.38889C10.4567 3.52858 9.25498 3 7.93151 3C5.20791 3 3 5.23858 3 8C3 10.7614 5.20791 13 7.93151 13C9.25498 13 10.4567 12.4714 11.3424 11.6111C11.8243 11.1431 12.2126 10.577 12.4762 9.94445M13 4.11111V6.33333H10.8082' stroke='%232C2C2C' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center left;}
-	
-	.cptDataSum[class*=bg] .dataSum {border-color: transparent;}
-	.cptDataSum[class*=bg] .dataSum .inner > li .val .unit {font-size: unset;}
-	.cptDataSum[class*=bg] .addInfo {position: absolute; top: 100%; left: 0; width: 100%;}
-	.cptDataSum.bg01 .dataSum {background-color: var(--Bg-Line-bg-100);}
-	.cptDataSum.bg01 .dataSum .inner > li::before {background-color: #eaecf1;}
-	
-	/* @include media("tablet"){ */
-	@media screen and (max-width: 1023px) {
-		.dataSum.tbRow .inner {flex-wrap: wrap; gap: 12px;}
-		.dataSum.tbRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
-		.dataSum.tbRow .inner > li::before {content: none;}
-		.dataSum.tbRow .inner > li div.val {margin-top: 0;}
-		.dataSum.tbRow .inner > li .icon {display: none;}
-	}
-	/* @include media("mobile"){ */
-	@media screen and (max-width: 767px) {
-		.dataSum .inner > li span.val {display: block; margin-left: 0; margin-top: 6px;}
-
-		.cptDataSum[class*=bg] .addInfo {position: static;}
-
-		.dataSum.mRow .inner {flex-wrap: wrap; gap: 12px;}
-		.dataSum.mRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
-		.dataSum.mRow .inner > li::before {content: none;}
-		.dataSum.mRow .inner > li div.val {margin-top: 0;}
-		.dataSum.mRow .inner > li .icon {display: none;}
-	}
-
-	/* comTabData */
-	.comTabData .right {margin-top: auto;}
-	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
-
-	/* comGroupTop */
-	.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
-	
-	/* @include media("mobile"){ */
-	@media screen and (max-width: 767px) {
-		.comGroupTop.reverse {flex-direction: column;}
-		.comGroupTop.reverse .alignL {margin-bottom: 20px;}
-		.comGroupTop.reverse .alignR .opList {margin-top: 0;}
-	}
-</style>
-
 <!-- 레이아웃 -->
 <div class="lytLayout">
-	<div class="layoutArea">
+    <div class="layoutArea">
 
-		<!-- 상단영역 -->
-		<div class="layoutTop">
-			<!-- Top -->
-			
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
             <div class="cptHeader">
                 <div class="quickArea">
                     <div class="quickBox">
@@ -1129,33 +1066,31 @@
                 </div>
             </div>
 
-		</div>
-		<!-- //상단영역 -->
+        </div>
+        <!-- //상단영역 -->
 
-		<!-- 중단영역 -->
-		<div class="layoutContainer" id="container">
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
 
-			<!-- 서브 콘텐츠 영역 -->
-			<div class="layoutSubCont">
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
 
-				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<!-- 서브 탑 (타이틀) -->
-				
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                
 
 <div class="cptSubTop ">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">뎁스_1</a></li>
+            <li class="item"><a href="#">고객광장</a></li>
             
-            <li class="item"><a href="#">뎁스_2</a></li>
+            <li class="item"><a href="#">경륜경정신고센터</a></li>
             
-            
-            <li class="item"><a href="#">뎁스_3</a></li>
             
         </ul>
-        <div class="subTitle"><h1>페이지 타이틀</h1></div>
-        <div class="subText"><p>페이지 서브텍스트 문구입니다<br><b>두줄로 써본다</b></p></div>
+        <div class="subTitle"><h1>분실경주권 신고</h1></div>
+        <div class="subText"><p>모두가 즐기고 지킬 수 있는<br class="mView"> <b>건강한 레저문화</b>를 위해<br><b>경륜·경정 신고센터</b>가<br class="mView"> 함께 합니다.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -1167,441 +1102,71 @@
     </div>
 </div>
 
-				<div class="layoutContArea">
-
-					<div class="cptDataSum">
-						<div class="comTitH2 bk">
-							<h2>내알림</h2>
-							<div class="right">
-								<div class="frmBox">
-									<select class="iptSlt">
-										<option value="">2024년</option>
-										<option value="">2023년</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="dataSum">
-							<ul class="inner">
-								<li>
-									<span class="item">전체알림</span>
-									<span class="val">23490</span>
-								</li>
-								<li>
-									<span class="item">새알림</span>
-									<span class="val">10</span>
-								</li>
-								<li>
-									<span class="item">확인된 알림</span>
-									<span class="val">23480</span>
-								</li>
-							</ul>
-						</div>
-
-						<div class="comTitH2 bk">
-							<h2>나의 게시글</h2>
-						</div>
-						<div class="dataSum mRow">
-							<ul class="inner">
-								<li>
-									<span class="item">나의 전체 게시글 수</span>
-									<span class="val">70</span>
-								</li>
-								<li>
-									<span class="item">오늘 조회 수</span>
-									<span class="val">15</span>
-								</li>
-								<li>
-									<span class="item">전체 누적 조회 수</span>
-									<span class="val">2,500</span>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="comTitH2 bk">
-							<h2>나의 활동지수</h2>
-						</div>
-						<div class="dataSum mRow">
-							<ul class="inner">
-								<li>
-									<div class="item">현재 보유 활동지수</div>
-									<div class="val">2,000,000 <i class="unit">P</i></div>
-								</li>
-								<li>
-									<div class="item">8월 적립 활동지수</div>
-									<div class="val tBlue">+3,000,500 <i class="unit">P</i></div>
-								</li>
-								<li>
-									<div class="item">8월 사용 활동지수</div>
-									<div class="val tRed">-1,000,500 <i class="unit">P</i></div>
-								</li>
-							</ul>
-						</div>
-					</div>
-						
-					<div class="comTabData">
-						<div class="tabMenuGroup tabDataSwiper">
-							<ul class="tabMenu swiper-wrapper">
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName on">전체</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">서울</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">경기</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충남</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충북</button>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="right">
-							<div class="frmBox">
-								<select class="iptSlt">
-									<option value="">2024년</option>
-									<option value="">2023년</option>
-								</select>
-							</div>
-						</div>
-					</div>
-						
-					<div class="comTabData">
-						<div class="tabMenuGroup tabDataSwiper">
-							<ul class="tabMenu swiper-wrapper">
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName on">전체</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">서울</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">경기</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충남</button>
-								</li>
-								<!-- <li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충북</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">서울</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">경기</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충남</button>
-								</li>
-								<li class="tabItem swiper-slide">
-									<button type="button" class="tabName">충북</button>
-								</li> -->
-							</ul>
-						</div>
-						
-						<div class="right">
-							<div class="comAddGuide"> 
-								<p class="guide">활동지수는 매월 1일에 초기화 됩니다.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- 나의 게시글 -->
-					<div class="cptBoardList">
-                        <div class="boardListArea">
-                            <!-- 게시판 리스트 상단 -->
-                            <div class="comGroupTop reverse">
-                                <div class="alignL">
-									<div class="tit">내가 쓴 예상과 후기</div>
-                                    <!-- <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div> -->
-                                </div>
-                                <div class="alignR">
-                                    <ul class="opList">
-                                        <!-- <li class="item">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt">
-                                                        <option value="">전체</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </li> -->
-                                        <li class="item">
-                                            <div class="frmGroup">
-                                                <div class="frmSearch">
-                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
-                                                    <button class="btnSearch">검색</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                <div class="layoutContArea">
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper toMob">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">연도별기록</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">선수상담결과</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
                             </div>
-
-                            <!-- 게시판 리스트 -->
-                            <div class="listTable">
-                                <table>
-                                    <caption></caption>
-                                    <colgroup>
-                                        <col style="width:93px;">
-                                        <col style="width:auto;">
-                                        <col style="width:100px;">
-                                        <col style="width:120px;">
-                                        <col style="width:120px;">
-                                        <col style="width:140px;">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td class="num">01</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">0</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">02</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">03</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 목록 리스트 총 15개 노출</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">04</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">05</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">06</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">07</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">08</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">09</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">10</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">11</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">12</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">13</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
                             </div>
-                            <!-- //게시판 리스트 -->
-                            
-                            <div class="comBtnGroup">
-                                <div class="alignR moR">
-                                    <div class="btnBox min">
-                                        <button class="btn Primary">등록하기</button>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                contents 0-1
                             </div>
-                            
-                            <!-- 페이징 -->
-                            <div class="comPaging">
-                                <a class="start" href="#"></a>
-                                <a class="prev" href="#"></a>
-                                <ul class="numList">
-                                    <li><a href="#">1</a></li>
-                                    <li class="on"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                </ul>
-                                <a class="next" href="#"></a>
-                                <a class="end" href="#"></a>
+                            <div class="tabCont">
+                                contents 0-2
+                            </div>
+                            <div class="tabCont">
+                                contents 0-3
+                            </div>
+                            <div class="tabCont">
+                                contents 0-4
                             </div>
                         </div>
                     </div>
+                </div>
 
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>위반행위 및 낙차사고</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
+                <!-- 서브 바텀 (담당자) -->
+                
 
-							<div class="comTitH3">
-								<h3>위반행위 및 낙차사고</h3>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
+<div class="cptSubBtm">
+    <div class="subBtmArea">
+        <div class="subBtmBox">
+            <dl class="manager">
+                <dt>담당자</dt>
+                <dd><span>경륜시스템</span><b>이윤아</b></dd>
+            </dl>
+            <ul class="btmList">
+                <li class="phone">02-2067-5824</li>
+                <li class="email"><a href="#">이메일 보내기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-							<div class="comTitH3">
-								<h3>위반행위 및 낙차사고</h3>
-								<div class="right">
-									<div class="frmBox">
-										<select class="iptSlt">
-											<option value="">2024년</option>
-											<option value="">2023년</option>
-										</select>
-									</div>
-								</div>
-							</div>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
 
-                        </div>
-                    </div>
+        </div>
+        <!-- //중단영역 -->
 
-				</div>
-				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
-				
-			</div>
-			<!-- //서브 콘텐츠 영역 -->
-
-		</div>
-		<!-- //중단영역 -->
-
-		<!-- 하단영역 -->
-		<div class="layoutFooter">
-			<!-- Footer -->
-			
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
 
 <div class="cptFooter">
     <div class="footArea">
@@ -1668,10 +1233,10 @@
         </div>
     </div>
 </div>
-		</div>
-		<!-- //하단영역 -->
+        </div>
+        <!-- //하단영역 -->
 
-	</div>
+    </div>
 </div>
 
 
