@@ -13,9 +13,25 @@
         }
         &.col4 {
             .condition {
-                width: calc(25% - 30px);
+                width: calc(25% - 45px);
                 .title {
-                    width: 60px;
+                    width: 70px;
+                }
+            }
+        }
+        &.col3 {
+            .condition {
+                width: calc(33.3333% - 40px);
+                .title {
+                    width: 70px;
+                }
+            }
+        }
+        &.col2_1 {
+            .condition {
+                width: calc(50% - 30px);
+                .title {
+                    width: 70px;
                 }
             }
         }
@@ -35,6 +51,31 @@
             }
         }
     }
+    @include media('tablet') {
+        .searchLine {
+            &.col4 {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    width: calc(50% - 30px);
+                }
+            }
+            &.col3 {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    width: calc(50% - 30px);
+                    &:last-child {
+                        width: 100%;
+                    }
+                }
+            }
+            &.col2_1 {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    width: 100%;
+                }
+            }
+        }
+    }
     @include media('mobile') {
         width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; border-radius: 0; gap: 16px;
         &:first-child {margin-top: -40px;}
@@ -42,6 +83,14 @@
             &.col2 {
                 .condition {
                     width: calc(50% - 6px);
+                }
+            }
+            &.col3 {
+                .condition {
+                    width: calc(50% - 6px);
+                    &:last-child {
+                        width: 100%;
+                    }
                 }
             }
             &.col4 {
