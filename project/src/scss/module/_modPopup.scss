@@ -42,11 +42,53 @@
                 border-bottom: 1px solid var(--Bg-Line-line-100); position:relative; word-break:keep-all;
                 &.shadow {box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);}
             }
-            .popCont {width:100%; max-height:calc(100vh - 304px); padding:40px 2px 0 32px; overflow:auto; overflow-y: scroll;}
+            .popCont {
+                width:100%; max-height:calc(100vh - 304px); padding:28px 2px 0 32px; overflow:auto; overflow-y: scroll;
+                .popSubTitle {
+                    color: var(---Primary, #078B7B);font-size: rem(20px);font-weight: 700;line-height: 140%; /* 28px */
+                    & + .comFormTable {margin-top: 12px;}
+                }
+                .comPrivacyBox {
+                    margin-top: 48px;
+                    .infoBox .boxCont {
+                        .comNumList {
+                            > .listGroup {
+                                margin-top: 0;
+                                > .item {
+                                    padding-left: 0;
+                                    font-weight: 400;
+                                    &:before {display: none;}
+                                    .txt {margin-top: -4px;}
+                                    &.space {
+                                        padding-left: 24px;margin-top: 0;
+                                        .anno {margin-top: 0;}
+                                    }
+                                    .listGroup {margin-top: 8px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .popBtm {
                 padding:20px 40px 0; display:flex; justify-content:flex-end;
                 &.division {justify-content:space-between;}
                 .btn {padding:0 10px; height: 30px; margin-left:2px; font-size: 14px; font-weight: 400; white-space: nowrap; border-radius: 4px;}
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .comFormTable {
+                & + .popSubTitle {margin-top: 48px;}
+                .tableArea table tbody {
+                    th {
+                        padding: 16px 0 16px 24px;
+                        &.interval {padding-top: 30px;}
+                    }
+                    td {
+                        padding: 16px 24px 16px 0px;
+                    }
+                    .iptTextArea {line-height: 140%;}
+                }
             }
         }
     }
@@ -71,10 +113,18 @@
                     min-height:65px; padding:20px 40px 20px 16px; font-size:rem(20px); line-height: 1.4;
                 }
                 .popCont {
-                    max-height: none; padding:40px 16px;
+                    max-height: none; padding:40px 16px;overflow-x: hidden;
                 }
             }
         }
+        .comFormTable {
+            .tableArea table tbody tr:last-child {padding-bottom:32px;border-bottom: 1px solid var(--Bg-Line-line-200, #EDEDED);}
+            & + .popSubTitle {margin-top: 40px;}
+            *::placeholder,
+            select.iptSlt {font-size: rem(18px);}
+            .iptTextArea {line-height: 160%;}
+        }
+
     }
 }
 

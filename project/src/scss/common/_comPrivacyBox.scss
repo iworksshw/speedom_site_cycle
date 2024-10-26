@@ -80,6 +80,7 @@
                 }
             }
         }
+        .intervalBorder {padding-top: 32px;margin-top:32px;border-top: 1px solid var(--Bg-Line-line-100, #E1E4EA);}
     }
     @include media('mobile') {
         width: calc(100% + 32px); margin-top: 16px; margin-left: -16px; border-left: 0; border-right: 0; border-radius: 0;

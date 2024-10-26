@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //파일찾기
     const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
+    /*
     uploadFiles.forEach(function(uploadFile,idx){
         uploadFile.addEventListener("change",function(event){
             const fileBox = parentsElementFind(this, "fileBox");
@@ -185,7 +186,44 @@ document.addEventListener("DOMContentLoaded", function () {
             fileBox.classList.add("on");
         });
     });
+    */
+    uploadFiles.forEach(function(uploadFile,idx){
+        uploadFile.addEventListener("change",function(event){
+            const fileBox = parentsElementFind(this, "fileBox");
+            let fileName;
+            if(window.FileReader){
+                fileName = this.files[0].name;
+                console.log(fileName);
+            } else {
+                console.log("noFileReader");
+                //var filename = $(this).val().split('/').pop().split('\\').pop();
+                //var filename = this.val().split('/').pop().split('\\').pop();
+            }
+
+            function addNewListItem() {
+                const newListItem = document.createElement("li");
+                const span = document.createElement("span");
+                const button = document.createElement("button");
+    
+                span.textContent = fileName;
+                button.className = "fileDel";
+                button.textContent = "삭제";
+    
+                newListItem.appendChild(span);
+                newListItem.appendChild(button);
+
+
+                const textBox = fileBox.querySelector(".textBox");
+                // 최대 10개까지만 추가
+                if (textBox.querySelectorAll("li").length < 10) {
+                    textBox.appendChild(newListItem);
+                }
+            }
+            addNewListItem();
+        });
+    });
     //파일찾기 취소
+    /*
     const delFiles = document.querySelectorAll(".fileBox .fileDel");
     delFiles.forEach(function(delFile,idx){
         delFile.addEventListener("click",function(event){
@@ -195,6 +233,21 @@ document.addEventListener("DOMContentLoaded", function () {
             fileBox.classList.remove("on");
         });
     });
+    */
+    const textBox = document.querySelector(".fileBox .textBox");
+    if (!textBox) return;
+    textBox.addEventListener("click", function(event) {
+        if (event.target && event.target.classList.contains("fileDel")) {
+            const listItem = event.target.closest("li");
+            const fileBox = parentsElementFind(this, "fileBox");
+            if (listItem) {
+                listItem.remove();
+                fileBox.querySelector(".uploadBtn").value = "";
+            }
+        }
+    });
+
+
 
     //팝업 내부 스크롤 시 타이틀 쉐도우 추가
     const scrollPops = document.querySelectorAll(".modPopup .popCont");
@@ -281,6 +334,7 @@ function designSelect() {
         }
     });
 }
+
 
 //디자인 셀렉트 선택 후 콜백
 function designSelectCallback($target){

@@ -39,6 +39,11 @@
                 b {
                     font-weight: 600;
                 }
+                .mView {display: none;}
+                @include media("mobile"){
+                    .pcView {display: none;}
+                    .mView {display: block;}
+                }
             }
         }
         .addFunc {
