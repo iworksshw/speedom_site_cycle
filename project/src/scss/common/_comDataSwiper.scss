@@ -1,0 +1,54 @@
+.comDataSwiper {
+    margin-top: 40px;
+    &:first-child {margin-top: 0;}
+
+    .dataWrap {
+        .dataBox {
+            border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); padding: 32px; overflow: hidden;text-align: center; position: relative;
+            &::before {display: block; content: ""; width: 32px; height: 100%; background: #fff; position: absolute; top: 0; left:0; z-index: 9;}
+            &::after  {display: block; content: ""; width: 32px; height: 100%; background: #fff; position: absolute; top: 0; right:0; z-index: 9;}
+            .dataItem {
+                img {max-width: 100%;}
+            }
+        }
+        .swiperUnit {
+            margin-top: 16px; position: relative; display: flex; column-gap: 20px; justify-content: center; align-items: center;
+            .swiper-button-next {
+                width: 32px; height: 32px; margin-top: 0; border-radius: 50%; border: 1px solid var(--Gray-200); background: url(../../images/common/ic_16_arr_right_g.svg) center no-repeat; position: static;
+                &::after {display: none;}
+            }
+            .swiper-button-prev {
+                width: 32px; height: 32px;margin-top: 0; border-radius: 50%; border: 1px solid var(--Gray-200); background: url(../../images/common/ic_16_arr_right_g.svg) center no-repeat; transform: rotate(180deg); position: static;
+                &::after {display: none;}
+            }
+            .swiper-pagination {
+                width:auto; position: static; font-size: rem(20px); color: var(--Gray-600); font-weight: 300;
+                .swiper-pagination-current {color: var(---Primary); font-weight: 700;}
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 32px;
+    
+        .dataWrap {
+            .dataBox {
+                padding: 16px;
+                &::before {width: 16px;}
+                &::after  {width: 16px;}
+            }
+            .swiperUnit {
+                margin-top: 20px;
+                .swiper-button-next {
+                    width: 24px; height: 24px;
+                }
+                .swiper-button-prev {
+                    width: 24px; height: 24px;
+                }
+                .swiper-pagination {
+                    font-size: rem(18px);
+                }
+            }
+        }
+    }
+}
