@@ -1,0 +1,21 @@
+/* ---------------------- 고객광장 - 신고접수안내 ---------------------- */
+.cptReportingReceipt {
+    .receiptList {
+        margin-top: 40px;
+        > ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 40px;
+        }
+        & + .cptQuickMove {margin-top: 40px;}
+    }
+    @include media("mobile"){
+        .receiptList {
+            margin-top: 24px;
+            > ul {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+/* ---------------------- 고객광장 - 신고접수제도 이용안내 ---------------------- */
+.cptReportingSystem {
+    .comTitH3 {
+        margin-top: 40px;
+        & + .reportingSystemList {margin-top: 12px;}
+    }
+    .reportingSystemList {
+        > ol {
+            overflow: hidden;display: flex;flex-direction: column;padding: 60px 80px;border-radius: 16px;border: 1px solid var(--bg-line-line-200, #EDEDED);background: #FFF;position: relative;
+            > li {
+                display: flex;gap: 24px;position: relative;
+                &:not(:last-child) {padding-bottom: 44px;}
+                &:first-child > em span:after {content: '';position: absolute;top: -400px;left: 0;width: 100%;height: 400px;background: #fff;}
+                &:last-child > em span:after {content: '';position: absolute;top: 22px;left: 0;width: 100%;height: 400px;background: #fff;}
+                > em {
+                    position: relative;flex-shrink: 0;width: 42px;display: flex;flex-direction: column;justify-content: center;color: var(--Point-Primary2);font-size: 16px;font-style: normal;font-weight: 700;line-height: 140%; /* 22.4px */
+                    span {
+                        position: relative;display: block;z-index: 10;background: #fff;
+                        &:before {content: '';position: absolute;top: 5px;right: 0px;width: 10px;height: 10px;border-radius: 50%;background-color: var(--Point-Primary2);}
+                    }
+                }
+                .systemGroup {
+                    flex: 1;display: flex;align-items: center;gap: 40px;
+                    > p {
+                        width: 240px;display: flex;flex-direction: column;justify-content: center;height: 72px;color: var(--font-900, #111);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 25.2px */
+                        span {display: block;color: var(--font-800, #2C2C2C);font-size: rem(16px);font-weight: 500;line-height: 160%; /* 25.6px */}
+                    }
+                    > div {
+                        flex: 1;display: flex;align-items: center; min-height: 72px;padding: 16px 24px;border-radius: 12px;background: var(--bg-line-bg-200, #F3F5F8);
+                        p {color: var(--font-700, #414347);font-size: rem(15px);font-weight: 400;line-height: 160%; /* 24px */}
+                        .comBasicList .item {margin-top: 0;}
+                    }
+                }
+            }
+            &:before {content: '';position: absolute;top: 0;left: 116px;width: 1px;height: 100%;background: var(--Gray-200, #CED1D6);}
+        }
+    }
+    .reportingForm {
+        margin-top: 40px;border-radius: 12px;border: 1px solid var(--bg-line-line-100, #E1E4EA);background: var(--bg-line-bg-50, #FBFBFB);
+        .formTitle {
+            padding: 24px 32px;border-bottom: 1px solid var(--bg-line-line-200, #EDEDED);
+            h4 {color: var(--font-800, #2C2C2C);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 22.4px */}
+        }
+        .formList {
+            padding: 36px 32px;
+            > ul {
+                display: flex;align-items: center;gap: 32px;
+                > li {
+                    flex: 1;background: var(--bg-line-bg-300, #EDF0F5);border-radius: 12px;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:12px;min-height: 114px;
+                    > p {color: var(---Primary);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 25.2px */}
+                }
+            }
+        }
+        & + .cptQuickMove,
+        & + .cptQuickMove + .comBasicTxt {margin-top: 40px;}
+    }
+    @include media("mobile"){
+        .reportingSystemList {
+            > ol {
+                padding: 40px 24px;
+                &:before {left: 60px;}
+                > li {
+                    gap: 20px;
+                    > em {margin-top: 2px;justify-content: normal;}
+                    .systemGroup {
+                        display: block;
+                        > p {height: auto;}
+                        > div {margin-top: 4px;padding: 12px 16px;}
+                    }
+                }
+            }
+        }
+        .reportingForm {
+            margin-top: 24px;width: calc(100% + 32px);margin-left: -16px;border-radius: 0;border-left: 0 none;border-right: 0 none;border-bottom: 0 none;
+            .formTitle {
+                padding: 18px 16px;
+                h4 {font-size: rem(16px);}
+            }
+            .formList {
+                padding: 24px 16px;
+                > ul {
+                    display: block;
+                    > li + li {margin-top: 24px;}
+                }
+            }
+            & + .cptQuickMove {margin-top: 24px;}
+            & + .cptQuickMove + .comBasicTxt {margin-top: 24px;}
+        }
+    }
+}

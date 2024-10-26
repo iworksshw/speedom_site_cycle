@@ -21,6 +21,27 @@
             .btnArea {
                 .btn {
                     &::after {display: inline-block; content: ""; vertical-align: text-bottom; width: 20px; height: 20px; margin-left: 4px; background: url(../../images/common/ic_16_arr_right_w.svg) center no-repeat;}
+                    // 다운로드 버튼
+                    &.download {
+                        &:after {
+                            background-image: url('../../images/common/ic_16_file_download.svg');
+                            background-size: 12px;
+                        }
+                    }
+                    // 모바일에서 2줄 이상 케이스
+                    &.multiLine {
+                        display: flex;align-items: center;width: 100%;height: auto;min-height: 48px;line-height: normal;padding: 10px 48px 10px 24px;position: relative;
+                        &:after {position: absolute;top: 50%;right: 24px;transform: translateY(-50%);}
+                        @include media("mobile"){
+                            padding: 15px 48px 15px 24px;
+                        }
+                    }
+                }
+                // 버튼 2개 이상
+                &.multiBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
                 }
             }
         }
@@ -35,7 +56,6 @@
         margin-top: 40px;
         .boxArea {
             width: calc(100% + 32px); margin-left: -16px; border-radius: 0; padding: 24px;
-        
             .quickBox {
                 flex-wrap: wrap; gap: 20px;
                 .txtArea {
@@ -46,6 +66,20 @@
                 }
                 .btnArea {
                     flex: 0 0 100%;
+                    // 버튼 2개 이상
+                    &.multiBtn {
+                        flex-direction: column;
+                        align-items: normal;
+                        .btn {
+                            min-width: 222px;
+                            text-align: left;
+                            display: flex;
+                            align-items: center;
+                            span {
+                                flex: 1;
+                            }
+                        }
+                    }
                 }
             }
         }
