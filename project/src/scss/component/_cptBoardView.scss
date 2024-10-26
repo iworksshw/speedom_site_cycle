@@ -32,6 +32,17 @@
                 .item {
                     color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: 1.5;
                     .recomNum {color: var(---Primary); font-weight: 600;}
+                    // 고객의 소리 게시판 view
+                    &.processing {
+                        span {
+                            display: inline-block; align-content: center; padding-left: 16px; padding-right: 16px; height: 26px; 
+                            font-size: rem(13px); font-weight: 600; color: var(---Primary);line-height: 26px; border-radius: 20px;border: 1px solid var(---Primary); background: #FFF;
+                        }
+                        &.progress span {color: var(--Point-Red);border-color: var(--Point-Red);
+                        }
+                        &.complete span {color: var(--Gray-500);border-color: var(--Gray-500);
+                        }
+                    }
                 }
             }
         }
@@ -54,6 +65,39 @@
                 &::before {
                     content:''; width:20px; height:20px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_20_report.svg) center no-repeat; 
                     vertical-align: middle; display: inline-block;
+                }
+            }
+        }
+        // 고객의 소리 - 게시판 view
+        &.customer {
+            .viewBody {
+                .viewContArea {
+                    padding: 40px 32px;
+                }
+            }
+            .comBtnGroup + .answerCont {
+                margin-top: 40px;
+            }
+            .answerCont {
+                .answerTop {
+                    dl {
+                        display: flex;align-items: center;gap: 20px;color: var(--font-600, #58595F);font-size: rem(18px);font-weight: 600;line-height: 160%;
+                        dd {font-size: rem(15px);font-weight: 400;}
+                    }
+                }
+                .answerBody {margin-top: 12px;background: var(--bg-line-bg-100, #F9FAFC);padding: 32px;color: var(--font-800, #2C2C2C);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */}
+            }
+            @include media('mobile') {
+                .viewBody {
+                    .viewContArea {padding-left: 16px;padding-right: 16px;}
+                    & + .comBtnGroup {
+                        margin-top: 0;
+                        padding: 20px 16px 40px;
+                    }
+                }
+                .answerCont {
+                    .answerTop {padding: 0 16px;}
+                    .answerBody {padding-left: 16px;padding-right: 16px;}
                 }
             }
         }

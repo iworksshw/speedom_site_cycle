@@ -1,0 +1,54 @@
+/* ---------------------- 고객광장 - 고객의 소리 운영정책 ---------------------- */
+.cptPrivacy {
+    .privacyProcessing {
+        margin-top: 40px;
+        .processingList {
+            display: flex;align-items: center;gap: 12px;
+            > li {
+                flex: 1;display: flex;justify-content: space-between;flex-direction: column;height: 78px;padding:  12px 0 12px 42px; color: #fff;font-size: rem(15px);font-weight: 500;line-height: 160%;background: url('../../images/contents/cont07_04_001.svg') no-repeat;background-size: 100% 100%;
+                > div {
+                    display: flex;align-items: center;gap: 12px;
+                    em {background-color: #fff;border-radius: 20px;padding: 4px 10px;font-size: rem(14px);font-weight: 700;color: var(--Point-Primary2);line-height: normal;}
+                    span {font-weight: 600;}
+                }
+                &:nth-child(1) {padding-left: 32px;}
+                &:nth-child(2) {
+                    div em {color: #40C4DA;}
+                    background-image: url('../../images/contents/cont07_04_002.svg');
+                }
+                &:nth-child(3) {
+                    div em {color: #2EAAFA;}
+                    background-image: url('../../images/contents/cont07_04_003.svg');
+                }
+                &:nth-child(4) {
+                    div em {color: var(--Point-Primary3)}
+                    background-image: url('../../images/contents/cont07_04_004.svg');background-size: 100% 81px;
+                }
+            }
+        }
+        > .comContTable {
+            margin-top: 40px;
+            .basic + .comBasicTxt {margin-top: 20px;}
+        }
+    }
+    @include media("mobile"){
+        .comTitH2 {
+            margin-top: 40px;
+        }
+        .privacyProcessing {
+            .processingList {
+                flex-direction: column;
+                gap: 0;
+                > li {
+                    width: 100%;min-height: 93px;height: auto;justify-content: normal;padding: 22px 0 0 60px;background-image: url('../../images/contents/cont07_04_001_m.svg');background-position: 0 0;
+                    &:nth-child(1) {padding-left: 60px;}
+                    &:nth-child(2) {height: 84px;}
+                    &:nth-child(2) {padding-top: 26px;background-image: url('../../images/contents/cont07_04_002_m.svg');}
+                    &:nth-child(3) {padding-top: 26px;background-image: url('../../images/contents/cont07_04_003_m.svg');}
+                    &:nth-child(4) {padding-top:  28px;background-image: url('../../images/contents/cont07_04_004_m.svg');background-size: 100% 100%;}
+                    > p {margin-top: 4px;}
+                }
+            }
+        }
+    }
+}
