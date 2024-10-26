@@ -9,6 +9,7 @@
             width: 160px; max-width: 160px;
             .iptSlt {height: 36px; font-size: 14px; background-position: right 16px center;}
         }
+        .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
     }
 
     // 컴포넌트 변경 Class

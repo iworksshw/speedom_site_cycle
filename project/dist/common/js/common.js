@@ -252,6 +252,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 일별달력 선택 - 내부 스크롤
     dateCalInit();
+
+    // 경륜정보 > 통계 > 데이터 슬라이드
+    imgsDataSlide();
 });
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
@@ -679,6 +682,22 @@ function scrlMoveTo(link, nowBtn) {
         const moveY = elem.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({top:moveY - 160, behavior:"smooth"});
     } 
+}
+
+// 경륜정보 > 통계 > 자료데이터 슬라이드
+function imgsDataSlide() {
+    if(document.querySelector(".comDataSwiper")) {
+        let imgDataSwiper = new Swiper(".imgDataSwiper", {
+            pagination: {
+                el: ".comDataSwiper .swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".comDataSwiper .swiper-button-next",
+                prevEl: ".comDataSwiper .swiper-button-prev",
+            },
+        });
+    }
 }
 
 // ------------------------------- 아코디언 함수 ------------------------------- //
