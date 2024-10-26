@@ -54,6 +54,14 @@
         & + .cptQuickMove,
         & + .cptQuickMove + .comBasicTxt {margin-top: 40px;}
     }
+    @include media("tablet"){
+        .reportingForm .formList > ul {
+            display: block;
+            > li + li {
+                margin-top: 32px;
+            }
+        }
+    }
     @include media("mobile"){
         .reportingSystemList {
             > ol {

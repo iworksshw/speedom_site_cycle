@@ -30,6 +30,13 @@
         }
         .comBasicTxt p b {color: var(---Primary);}
     }
+    @include media("tablet"){
+        .reportingCenterList {
+            > ul {
+                display: flex;flex-direction: column;gap: 40px;
+            }
+        }
+    }
     @include media("mobile"){
         .comTitH2 {margin-top: 40px;}
         .reportingCenterList {
