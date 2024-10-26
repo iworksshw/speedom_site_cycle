@@ -1,0 +1,76 @@
+.cptContBi {
+    width: 100%; margin-top: 60px;
+
+    .BiInfo {margin-top: 20px;}
+    .biBox {        
+        .biImg {
+            position: relative;
+            img {width: 100%; height: auto;}
+            .i1 {display: block;}
+            .i1_mo {display: none;}
+        }        
+    }
+
+    .biDownLoad {
+        margin-top: 20px; text-align: center;
+        .btn.gLine {border: 1px solid var(--Gray-600); color: var(--Gray-800);}
+        .btn.lg::before {content:''; width: 20px; height: 20px; display: inline-block; vertical-align: text-top; margin-right: 4px; background: url(../../images/common/ic_20_file_download.svg)}
+    }
+    
+    .LogoSignInfo {
+        margin-top: 32px;
+        .inbox {
+            display: flex; align-items: center; flex-wrap: wrap; gap: 40px;
+            .w50 {
+                width: calc(50% - 20px);
+                .downWrap {
+                    margin-top: 12px;
+                    .img {
+                        border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); background-color: #FFF; background-position: center; background-repeat: no-repeat; height: 280px;
+                    }
+                }
+            }
+            .w50.logo {
+                .img {background-image: url(../../images/contents/cont06_03_01.jpg);}
+            }
+            .w50.sign {
+                .img {background-image: url(../../images/contents/cont06_03_02.jpg);}
+            }
+        }
+
+    }
+
+    @include media("pcs"){       
+    
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+        .BiInfo {margin-top: 16px;}
+        .biBox {        
+            .biImg {
+                .i1 {display: none;}
+                .i1_mo {display: block; width: 100%; height: auto;}
+            }        
+        }
+        .biDownLoad {margin-top: 16px;}
+        .LogoSignInfo {
+            margin-top: 24px;
+            .inbox {
+                gap: 24px;
+                .w50 {
+                    width: 100%;
+                    .downWrap .img {height: 200px;}
+                }
+                .w50.logo {
+                    .img {background-size: 186px;}
+                }
+                .w50.sign {
+                    .img {background-size: 266px;}
+                }
+            }
+        }
+        .comDataTable .tableArea {width: 100%; margin-left: 0;}
+        .comDataTable .tableArea table tbody tr td {padding: 10px 10px; word-break: keep-all;}
+    }
+}
