@@ -1,6 +1,8 @@
 .comBasicTxt{
     margin-top: 12px;
     &:first-child {margin-top: 0;}
+    &.mgH20 {margin-top: 20px;}
+    &.mgH32 {margin-top: 32px;}
     .txt {
         margin-top:8px;font-size: rem(16px); line-height: 1.6; color: var(--Gray-800); word-break: keep-all;
         em {font-weight: 700;}
@@ -23,6 +25,8 @@
 
     @include media("mobile"){
         margin-top: 8px;
+        &.mgH20 {margin-top: 16px;}
+        &.mgH32 {margin-top: 20px;}
         .txt {
             margin-top: 4px; font-size: rem(15px);
         }
