@@ -1,0 +1,198 @@
+<!-- Header -->
+<%- include('../../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../_ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../../_ejs/sub_top.ejs', {
+                    location: ['경륜 라이브러리', '경륜가이드', '경륜 알아보기'],
+                    subTitle: '게시판 상세',
+                    subText: '게시판의 <b>상세페이지</b> 입니다',
+                    url: "../../../",
+                }) %>
+
+                <!-- 콤포넌트 템플릿 메뉴 -->
+                <%- include('./tp_menu.ejs', { }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="allMenuArea">
+                        <div class="allTop">
+                            <div class="pcView">
+                                <div class="logo">
+
+                                </div>
+                                <button class="btnClose">전체 메뉴 닫기</button>
+                            </div>
+                            <div class="moView">
+                                <div class="profile">
+                                    <div class="name"><b>홍길동</b>님</div>
+                                    <a href="#" class="btnLogout">로그아웃</a>
+                                </div>
+                                <div class="searchBox"></div>
+                                <button class="btnClose">전체 메뉴 닫기</button>
+                            </div>
+                        </div>
+                        <div class="allMenuGroup">
+                            <div class="allMenuBox">
+                                <ul class="depth1Group">
+                                    <li class="depth1Menu on">
+                                        <a href="#" class="depth1Name">경륜가이드</a>
+
+                                        <ul class="depth2Group">
+                                            <li class="depth2Menu on">
+                                                <a href="#" class="depth2Name">경륜 알아보기</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜안내</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜기초정보</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주진행과정</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">벨로드롬 가이드</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경륜 즐겨보기</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주권구매 가이드</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">출주표 보는법</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">배당률 보는법</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">벨경주권 환급</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경륜 지식쌓기</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜 자전거 안내</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주규칙안내</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜전법소개</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜심판·장비</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">제재심의위원회</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜용어사전</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜·경정 관련법 안내</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경륜예상지</a>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">우승선수 예측</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li class="depth1Menu">
+                                        <a href="#" class="depth1Name">경륜 정보</a>
+
+                                        <ul class="depth2Group">
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경주일정</a>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">종합경주정보</a>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경주출주표</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">일반 경주결과</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">미확정출주표</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경주결과</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">일반 경주결과</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">대상 경주결과</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경주배당률</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">최종배당률</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">확정배당률</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">경주현황</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주속보</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주소식</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">출전소식상담</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">심판판정</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">착순판정사진</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">심판방송</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">심판제재선수</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="depth2Menu">
+                                                <a href="#" class="depth2Name">통계데이터</a>
+                                                <ul class="depth3Group">
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">배당률 통계</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">매출액 통계</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">고배당 순위</a></li>
+                                                    <li class="depth3Menu"><a href="#" class="depth3Name">무적중 순위</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../../_ejs/sub_btm.ejs', {
+                    team: '경륜운영팀',
+                    name: '차룡',
+                    phone: '02-2067-5711',
+                    url: "../../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../_ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../../_ejs/bottom.ejs', { }) %>
