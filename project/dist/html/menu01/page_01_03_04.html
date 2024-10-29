@@ -1116,9 +1116,28 @@
                             <div class="comTitH2">
                                 <h2>착순판정 장비</h2>
                             </div>
+
+                            <!--20241026 순서 수정, 텍스트 수정 -->
+                            <div class="comTitH3">
+                                <h3>착순판정 시스템구조</h3>
+                            </div>
+            
+                            <div class="comImgBox">
+                                <div class="imgWrap">
+                                    <img src="../../../images/contents/cont01_03_04_001.png" alt="착순판정 시스템 구조 이미지"> <!--20241026 이미지 파일명 수정-->
+                                </div>
+
+                                <!-- 20241026 추가 -->
+                                <div class="btnGroup cameraEquip">
+                                    <button type="button" class="ballon num01" onclick="openPopup('equip01')">착순판정카메라<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                    <button type="button" class="ballon num02" onclick="openPopup('equip02')">허상거울<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                    <button type="button" class="ballon num03" onclick="openPopup('equip03')">광센서<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                </div>
+                                <!-- //20241026 추가 -->
+                            </div>
             
                             <div class="comTitH3">
-                                <h3>착순판정 시스템</h3>
+                                <h3>착순판정시스템 촬영원리</h3>
                             </div>
             
                             <div class="comBasicTxt">
@@ -1126,16 +1145,7 @@
                                     0.01mm의 미세한 틈으로 빛이 통과하는 '슬릿 렌즈'를 장착한 라인스캔 카메라가 <em>4cm 두께의 결승선만을 1/2,000초 단위(1초당 2,000장)로 디지털 영상으로 촬영</em>합니다.
                                 </p>
                             </div>
-                            
-                            <div class="comTitH3">
-                                <h3>착순판정 시스템구조</h3>
-                            </div>
-            
-                            <div class="comImgBox">
-                                <div class="imgWrap">
-                                    <img src="../../../images/contents/conc01_01_03_04_001.png" alt="착순판정 시스템 구조 이미지">
-                                </div>
-                            </div>
+                            <!--//20241026 순서 수정, 텍스트 수정 -->
 
                         </div>
                     </div>
@@ -1326,6 +1336,131 @@
                         </div> 
                     </div>
 
+                    <div id="equip01" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip01');">닫기</button>
+                                    <div class="popTitle">1. 착순판정카메라</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_03_04_011.png" alt="벨로드롬 경기장 전경">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">Line Scan Digital Finish Camera</b>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">결승선 수직상단 약23m(2대)와 약30m(1대) 그리고 약35m(1대) 높이에 서로 다른 촬영각도로 정렬되어 고정 위치</i>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">최대 4K 이상의 고해상도 초고속 스캔(최대33,000/초) 센서를 장착하여 결승선만을 촬영하며, 결승선을 통과하는 사물에 대해 1/2,000초 단위(1초당 2,000장) 촬영</i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="equip02" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip01');">닫기</button>
+                                    <div class="popTitle">2. 허상거울</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_01_01_04_001.png" alt="벨로드롬 경기장 전경">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">Line Scan Digital Finish Camera</b>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">결승선 수직상단 약23m(2대)와 약30m(1대) 그리고 약35m(1대) 높이에 서로 다른 촬영각도로 정렬되어 고정 위치</i>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">최대 4K 이상의 고해상도 초고속 스캔(최대33,000/초) 센서를 장착하여 결승선만을 촬영하며, 결승선을 통과하는 사물에 대해 1/2,000초 단위(1초당 2,000장) 촬영</i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="equip01" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip01');">닫기</button>
+                                    <div class="popTitle">1. 착순판정카메라</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_01_01_04_001.png" alt="벨로드롬 경기장 전경">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">Line Scan Digital Finish Camera</b>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">결승선 수직상단 약23m(2대)와 약30m(1대) 그리고 약35m(1대) 높이에 서로 다른 촬영각도로 정렬되어 고정 위치</i>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">최대 4K 이상의 고해상도 초고속 스캔(최대33,000/초) 센서를 장착하여 결승선만을 촬영하며, 결승선을 통과하는 사물에 대해 1/2,000초 단위(1초당 2,000장) 촬영</i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                     
