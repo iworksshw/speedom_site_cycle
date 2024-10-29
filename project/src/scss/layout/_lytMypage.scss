@@ -24,8 +24,8 @@
                         .lnbMenu {
                             & > li {
                                 margin-top: 16px;
-                                a {display: inline-block;}
-                                &.on > a {
+                                a > span {display: inline-block;}
+                                &.on > a > span {
                                     position: relative;
                                     font-weight: 700;
                                     &::after {
@@ -51,13 +51,13 @@
                         }
                         .info {
                             color: var(--Gray-600);
+                            .state {margin-left: 4px;}
                             &.user {
                                 font-weight: 500;
                                 strong {
                                     font-size: rem(20px); color: var(--Gray-900);
                                 }
                             }
-                            .tRed {margin-left: 4px;}
                         }
                         .shortcut {
                             display: block; margin-top: 12px;
@@ -83,6 +83,10 @@
                         }
                         & + * {margin-top: 0;}
                     }
+                    .comGroupTop .tit {
+                        font-size: rem(18px); font-weight: 700;
+                    }
+
                     &.myMain {
                         .location > li:last-child {display: none;}
                         .cptSection:not(:first-of-type) {margin-top: 100px;}
@@ -136,6 +140,11 @@
                         width: 100%;
                         .cptSubTop {
                             display: none;
+                        }
+                        .comGroupTop.reverse {
+                            flex-direction: column;
+                            .alignL {margin-bottom: 20px;}
+                            .alignR .opList {margin-top: 0;}
                         }
                     }
                 }

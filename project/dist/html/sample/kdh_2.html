@@ -31,7 +31,7 @@
 <style>
 	.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
 
-	/* cptDataSum */
+	/* cptDataSum.scss 요약정보 영역 */
 	.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
 	.dataSum .inner {display: flex; gap: 20px;}
 	.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
@@ -77,20 +77,7 @@
 		.dataSum.mRow .inner > li .icon {display: none;}
 	}
 
-	/* comTabData */
-	.comTabData .right {margin-top: auto;}
 	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;} /* 이라인은 적용X */
-
-	/* comGroupTop */
-	.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
-	
-	/* @include media("mobile"){ */
-	@media screen and (max-width: 767px) {
-		.comGroupTop.reverse {flex-direction: column;}
-		.comGroupTop.reverse .alignL {margin-bottom: 20px;}
-		.comGroupTop.reverse .alignR .opList {margin-top: 0;}
-	}
-	
 </style>
 
 <!-- 레이아웃 -->
@@ -1145,13 +1132,13 @@
 					<div class="lnbArea">
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
-							<li class="on"><a href="#">나의 모의베팅</a></li>
-							<li><a href="#">나의 활동지수</a></li>
-							<li><a href="#">나의 게시글</a></li>
-							<li><a href="#">나의 스크랩</a></li>
-							<li><a href="#">내알림</a></li>
-							<li><a href="#">내정보 수정</a></li>
-							<li><a href="#">회원탈퇴</a></li>
+							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 게시글</span></a></li>
+							<li><a href="#"><span>나의 스크랩</span></a></li>
+							<li><a href="#"><span>내알림</span></a></li>
+							<li><a href="#"><span>내정보 수정</span></a></li>
+							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
 
@@ -1163,7 +1150,7 @@
 						</div>
 						<div class="info">
 							가입일 : <span>2024.09.15</span>
-							<span class="tRed">경고 : <span>1</span>회</span>
+							<span class="state tRed">경고 : <span>1</span>회</span>
 						</div>
 						
 						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
