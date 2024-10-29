@@ -175,6 +175,19 @@
             }
         }
     }
+    &.noSticky {
+        .tableArea {
+            table {
+                tbody {
+                    tr {
+                        th {
+                            position: static;
+                        }
+                    }
+                }
+            }
+        }
+    }
     @include media("tablet"){
 
     }
