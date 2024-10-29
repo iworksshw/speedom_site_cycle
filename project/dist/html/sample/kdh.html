@@ -31,7 +31,7 @@
 <style>
 	.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
 
-	/* cptDataSum */
+	/* cptDataSum.scss 요약정보 영역 */
 	.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
 	.dataSum .inner {display: flex; gap: 20px;}
 	.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
@@ -50,6 +50,7 @@
 	.cptDataSum .btnRefresh {min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: 14px; /* font-size: rem(14px); */ background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4762 6.05556C12.2126 5.42297 11.8243 4.85685 11.3424 4.38889C10.4567 3.52858 9.25498 3 7.93151 3C5.20791 3 3 5.23858 3 8C3 10.7614 5.20791 13 7.93151 13C9.25498 13 10.4567 12.4714 11.3424 11.6111C11.8243 11.1431 12.2126 10.577 12.4762 9.94445M13 4.11111V6.33333H10.8082' stroke='%232C2C2C' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center left;}
 	
 	.cptDataSum[class*=bg] .dataSum {border-color: transparent;}
+	.cptDataSum[class*=bg] .dataSum .inner > li .item {color: var(--Gray-900);}
 	.cptDataSum[class*=bg] .dataSum .inner > li .val .unit {font-size: unset;}
 	.cptDataSum[class*=bg] .addInfo {position: absolute; top: 100%; left: 0; width: 100%;}
 	.cptDataSum.bg01 .dataSum {background-color: var(--Bg-Line-bg-100);}
@@ -76,19 +77,28 @@
 		.dataSum.mRow .inner > li .icon {display: none;}
 	}
 
-	/* comTabData */
-	.comTabData .right {margin-top: auto;}
-	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
 
-	/* comGroupTop */
-	.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
+	/* 이용내역 리스트 */
+	.untitledList {display: flex; flex-wrap: wrap; gap: 20px;}
+	.untitledList > li {width: calc(50% - 10px);}
+	.untitledList > li > .block {position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; border-radius: 12px; background: var(--Bg-Line-bg-100);}
+	.untitledList > li > .block > .full {width: 100%;}
+	.untitledList .cate {width: 100%; margin-bottom: 8px; color: var(---Primary); font-size: 16px; /* font-size: rem(16px); */ font-weight: 600;}
+	.untitledList .tit {color: var(--Gray-800); font-size: 16px; /* font-size: rem(16px); */ font-weight: 600;}
+	.untitledList .tit.full {font-size: 18px; /* font-size: rem(18px); */ font-weight: 500;}
+	.untitledList .date {color: var(--Gray-600); font-size: 15px; /* font-size: rem(15px); */ font-weight: 400;}
+	.untitledList .tit.full ~ .date {margin-top: 4px;}
+	.untitledList .val {width: 100%; margin-top: 15px; font-size: 18px; /* font-size: rem(18px); */ font-weight: 700; text-align: right;}
+	.untitledList .val .state {margin-right: 3px; color: var(--Gray-500); font-size: 14px; /* font-size: rem(14px); */ font-weight: 500;}
+	.untitledList .val .unit {font-size: 15px; font-style: normal;}
+	.untitledList .new {position: absolute; top: 20px; right: 20px; width: 6px; height: 6px; border-radius: 100%; background-color: var(--Point-Red); text-indent: -999999px; overflow: hidden;}
 	
 	/* @include media("mobile"){ */
 	@media screen and (max-width: 767px) {
-		.comGroupTop.reverse {flex-direction: column;}
-		.comGroupTop.reverse .alignL {margin-bottom: 20px;}
-		.comGroupTop.reverse .alignR .opList {margin-top: 0;}
+		.untitledList > li {width: 100%;}
 	}
+
+	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;} /* 이라인은 적용X */
 </style>
 
 <!-- 레이아웃 -->
@@ -1557,6 +1567,57 @@
                             </div>
                         </div>
                     </div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<ul class="untitledList">
+								<li>
+									<div class="block">
+										<div class="tit">회원가입 이벤트</div>
+										<div class="date">2024-09-09</div>
+										<div class="val tBlue">
+											<span class="state">적립</span>
+											+1,050,000 <i class="unit">P</i>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="block">
+										<div class="tit">예상과 후기 사용자 글쓰기</div>
+										<div class="date">2024-09-08</div>
+										<div class="val tRed">
+											<span class="state">사용</span>
+											-50,000 <i class="unit">P</i>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="block">
+										<div class="cate">게시글 신고</div>
+										<div class="tit full">음란, 욕설, 개인정보 등 유해 게시글 등록</div>
+										<div class="date">2024.09.25 11:08</div>
+										<div class="new">새로운 글</div>
+									</div>
+								</li>
+								<li>
+									<div class="block">
+										<div class="cate">게시글 신고</div>
+										<div class="tit full">타인비방 및 명예훼손</div>
+										<div class="date">2024.09.25 11:08</div>
+										<div class="new">새로운 글</div>
+									</div>
+								</li>
+							</ul>
+							<!-- 
+							게시글 신고
+게시글 신고
+음란, 욕설, 개인정보 등 유해 게시글 등록
+타인비방 및 명예훼손
+2024.09.25 11:08
+2024.09.25 11:08
+							-->
+						</div>
+					</div>
 
 					<div class="cptSection">
                         <div class="sectArea">
