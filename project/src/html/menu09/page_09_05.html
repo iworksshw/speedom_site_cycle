@@ -5,7 +5,7 @@
 }) %>
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytMypage">
 	<div class="layoutArea">
 
 		<!-- 상단영역 -->
@@ -23,17 +23,37 @@
 			<!-- 서브 콘텐츠 영역 -->
 			<div class="layoutSubCont">
 
+				<!-- 마이페이지 LNB -->
+				<div class="layoutLnbArea">
+					<div class="lnbArea">
+						<h1 class="lnbTit">마이페이지</h1>
+						<ul class="lnbMenu">
+							<li><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 게시글</span></a></li>
+							<li class="on"><a href="#"><span>나의 스크랩</span></a></li>
+							<li><a href="#"><span>내알림</span></a></li>
+							<li><a href="#"><span>내정보 수정</span></a></li>
+							<li><a href="#"><span>회원탈퇴</span></a></li>
+						</ul>
+					</div>
+				</div>
+
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<!-- 서브 탑 (타이틀) -->
-				<%- include('../_ejs/sub_top.ejs', {
-					location: ['마이페이지'],
-					subTitle: '나의 스크랩',
-					subText: '배경없는 서브레이아웃<br>(LNB포함)',
-					url: "../../",
-					visualClass: "bg03",
-				}) %>
-				
 				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
+                    <div class="cptSubTop">
+                        <div class="subTopArea">
+                            <ul class="location">
+                                <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
+                            </ul>
+
+							<div class="comTitH2 bk">
+								<h2>나의 스크랩</h2>
+							</div>
+                        </div>
+                    </div>
 
                     <div class="modTab">
                         <div class="tabMenuGroup tabSwiper">
@@ -400,15 +420,6 @@
                     </div>
 
 				</div>
-
-				<!-- 서브 바텀 (담당자) -->
-				<%- include('../_ejs/sub_btm.ejs', {
-					team: '경륜훈련원',
-					name: '유창표',
-					phone: '054-630-1618',
-					url: "../../",
-				}) %>
-				
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				
 			</div>
