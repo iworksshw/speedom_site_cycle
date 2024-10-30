@@ -28,12 +28,6 @@
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
 
-<style>
-	/* 퍼블확인용 - 적용X */
-	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
-
-</style>
-
 <!-- 레이아웃 -->
 <div class="lytMypage">
 	<div class="layoutArea">
@@ -1086,145 +1080,182 @@
 					<div class="lnbArea">
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
-							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 모의베팅</span></a></li>
 							<li><a href="#"><span>나의 활동지수</span></a></li>
 							<li><a href="#"><span>나의 게시글</span></a></li>
 							<li><a href="#"><span>나의 스크랩</span></a></li>
-							<li><a href="#"><span>내알림</span></a></li>
+							<li class="on"><a href="#"><span>내알림</span></a></li>
 							<li><a href="#"><span>내정보 수정</span></a></li>
 							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
-
-					<div class="userArea">
-						<div class="info user">
-							<span class="grade">일반회원</span><br>
-							<strong>홍길동</strong>
-							<span class="id">(user1234)</span>
-						</div>
-						<div class="info">
-							가입일 : <span>2024.09.15</span>
-							<span class="state tRed">경고 : <span>1</span>회</span>
-						</div>
-						
-						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
-					</div>
 				</div>
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<div class="layoutContArea myMain">
-					<!-- 서브 탑 (타이틀) -->
+				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
                     <div class="cptSubTop">
                         <div class="subTopArea">
                             <ul class="location">
                                 <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
                             </ul>
+							<div class="subTitle">
+								<h1>내알림</h1>
+							</div>
                         </div>
                     </div>
 
-					<div class="cptDataSum bg01">
-						<div class="dataSum mRow">
+					<div class="cptDataSum">
+						<div class="dataSum">
 							<ul class="inner">
 								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_betting.svg" alt="">
-									</div>
-									<div class="item">모의베팅 순위</div>
-									<div class="val">158위</div>
+									<span class="item">전체알림</span>
+									<span class="val">23490</span>
 								</li>
 								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_activity.svg" alt="">
-									</div>
-									<div class="item">현재 보유 활동지수</div>
-									<div class="val">350,000 <i class="unit">P</i></div>
+									<span class="item">새알림</span>
+									<span class="val">10</span>
 								</li>
 								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_notify.svg" alt="">
-									</div>
-									<div class="item">새알림</div>
-									<div class="val">30</div>
+									<span class="item">확인된 알림</span>
+									<span class="val">23480</span>
 								</li>
 							</ul>
 						</div>
-						<div class="addInfo">
-							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 모의베팅</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
+                    </div>
+                    
+                    <div class="cptSection">
+						<div class="sectArea">
+							<div class="cptDataList">
+                                <div class="comAddGuide alignR"> 
+                                    <p class="guide">알림은 최대 30건이 노출됩니다.</p>
+                                </div>
+								<ul class="dataListBox">
+									<li>
+										<div class="new">새로운 알림</div>
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">음란, 욕설, 개인정보 등 유해 게시글 등록</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li>
+										<div class="new">새로운 알림</div>
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">음란, 욕설, 개인정보 등 유해 게시글 등록</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li>
+										<div class="new">새로운 알림</div>
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">기타 홈페이지상에서의 공공질서에 위배되는 행위반복</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+									<li class="finished">
+										<a href="#" class="block" onclick="openPopup('sample01')">
+											<div class="cate">게시글 신고</div>
+											<div class="tit full">타인비방 및 명예훼손</div>
+											<div class="date">2024.09.25 11:08</div>
+										</a>
+									</li>
+								</ul>
 							</div>
-							<div class="tempArea">작업중</div>
 						</div>
 					</div>
 
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 활동지수</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-							<div class="tempArea">작업중</div>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 게시글</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-							<div class="tempArea">작업중</div>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk mb0">
-								<h2>나의 스크랩</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="modTab">
-                        <div class="tabMenuGroup tabSwiper">
-                            <ul class="tabMenu swiper-wrapper">
-                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
-                            </ul>
-                        </div>
-                        <div class="tabDirection">
-                            <div class="tabBtn alignL">
-                                <button class="prev">이전</button>
-                            </div>
-                            <div class="tabBtn alignR">
-                                <button class="next">다음</button>
-                            </div>
-                        </div>
-                        <div class="tabContianer">
-                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
-                                contents 0-1
-                            </div>
-                            <div class="tabCont">
-                                contents 0-2
+                    <div id="sample01" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                    <div class="popTitle">게시글 신고</div>
+                                    <div class="popCont">
+                                        <!-- 팝업 컨텐츠 영역 -->
+                                        <div class="cptBoardView">
+                                            <div class="boardViewArea bdNone">
+                                                <div class="viewTop">
+                                                    <h2 class="viewTitle">음란, 욕설, 개인정보 등 유해 게시글 등록</h2>
+                                                    <ul class="info">
+                                                        <li class="item">2024.09.25 11:08</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="viewBody">
+                                                    <div class="viewContArea">
+                                                        <!-- 컨텐츠 영역입니다. -->
+                                                        홍길동 (user1234)님이 작성한 게시글이 사용자들에게 불쾌감을 주게되었다는 안내를 받았습니다.<br>
+                                                        안녕하세요, 고객 여러분. 더 나은 서비스를 제공하기 위해 10월 15일(일) 오전 2시부터 4시까지 시스템 점검을 진행할 예정입니다. <br>
+                                                        점검 중에는 일부 기능 사용이 제한될 수 있으니 양해 부탁드립니다. 불편을 최소화할 수 있도록 최선을 다하겠습니다. <br>
+                                                        이용에 참고해 주시기 바랍니다. 감사합니다.
+                                                        <!-- //컨텐츠 영역입니다. -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //팝업 컨텐츠 영역 -->
+                                    </div>
+                
+                                    <!-- 팝업 하단 영역 -->
+                                    <div class="popBtm">
+                                        <div class="comBtnGroup">
+                                            <div class="alignC">
+                                                <div class="btnBox">
+                                                    <button class="btn lg gLine pcW180">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				

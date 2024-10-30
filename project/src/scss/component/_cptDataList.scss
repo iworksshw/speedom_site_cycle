@@ -38,16 +38,37 @@
             .tit {color: var(--Gray-400);}
         }
 
-        &.div_3 > li {
+        &.col3 > li {
             width: calc(33.3333% - 13.3333px);
             &:last-child {
                 width: calc(33.3334% - 13.3334px);
             }
         }
-
+        
         @include media("mobile"){
             > li {
                 width: 100%;
+            }
+            &[class*=col] > li {
+                width: 100% !important;
+            }
+        }
+    }
+    .comTabData + & {
+        margin-top: 32px;
+    }
+    .comAddGuide.alignR {
+        position: relative; display: flex; justify-content: flex-end;
+        .guide {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            margin-bottom: 10px;
+        }
+        
+        @include media("mobile"){
+            .guide {
+                position: static;
             }
         }
     }
