@@ -28,12 +28,6 @@
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
 
-<style>
-	/* 퍼블확인용 - 적용X */
-	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
-
-</style>
-
 <!-- 레이아웃 -->
 <div class="lytMypage">
 	<div class="layoutArea">
@@ -1086,8 +1080,8 @@
 					<div class="lnbArea">
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
-							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
-							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 모의베팅</span></a></li>
+							<li class="on"><a href="#"><span>나의 활동지수</span></a></li>
 							<li><a href="#"><span>나의 게시글</span></a></li>
 							<li><a href="#"><span>나의 스크랩</span></a></li>
 							<li><a href="#"><span>내알림</span></a></li>
@@ -1095,136 +1089,196 @@
 							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
-
-					<div class="userArea">
-						<div class="info user">
-							<span class="grade">일반회원</span><br>
-							<strong>홍길동</strong>
-							<span class="id">(user1234)</span>
-						</div>
-						<div class="info">
-							가입일 : <span>2024.09.15</span>
-							<span class="state tRed">경고 : <span>1</span>회</span>
-						</div>
-						
-						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
-					</div>
 				</div>
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<div class="layoutContArea myMain">
-					<!-- 서브 탑 (타이틀) -->
+				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
                     <div class="cptSubTop">
                         <div class="subTopArea">
                             <ul class="location">
                                 <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
                             </ul>
+							<div class="subTitle">
+								<h1>나의 활동지수</h1>
+                                <div class="right">
+                                    <div class="frmBox">
+                                        <select class="iptSlt">
+                                            <option value="">2024년</option>
+                                            <option value="">2023년</option>
+                                        </select>
+                                    </div>
+                                </div>
+							</div>
                         </div>
                     </div>
 
-					<div class="cptDataSum bg01">
+					<div class="cptDataSum">
 						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_betting.svg" alt="">
-									</div>
-									<div class="item">모의베팅 순위</div>
-									<div class="val">158위</div>
-								</li>
-								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_activity.svg" alt="">
-									</div>
 									<div class="item">현재 보유 활동지수</div>
-									<div class="val">350,000 <i class="unit">P</i></div>
+									<div class="val">2,000,000 <i class="unit">P</i></div>
 								</li>
 								<li>
-									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_notify.svg" alt="">
-									</div>
-									<div class="item">새알림</div>
-									<div class="val">30</div>
+									<div class="item">8월 적립 활동지수</div>
+									<div class="val tBlue">+3,000,500 <i class="unit">P</i></div>
+								</li>
+								<li>
+									<div class="item">8월 사용 활동지수</div>
+									<div class="val tRed">-1,000,500 <i class="unit">P</i></div>
 								</li>
 							</ul>
 						</div>
-						<div class="addInfo">
-							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 모의베팅</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-							<div class="tempArea">작업중</div>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 활동지수</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-							<div class="tempArea">작업중</div>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 게시글</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-							<div class="tempArea">작업중</div>
-						</div>
-					</div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk mb0">
-								<h2>나의 스크랩</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="modTab">
-                        <div class="tabMenuGroup tabSwiper">
-                            <ul class="tabMenu swiper-wrapper">
-                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
-                            </ul>
-                        </div>
-                        <div class="tabDirection">
-                            <div class="tabBtn alignL">
-                                <button class="prev">이전</button>
-                            </div>
-                            <div class="tabBtn alignR">
-                                <button class="next">다음</button>
-                            </div>
-                        </div>
-                        <div class="tabContianer">
-                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
-                                contents 0-1
-                            </div>
-                            <div class="tabCont">
-                                contents 0-2
-                            </div>
-                        </div>
                     </div>
+                    
+                    <div class="cptSection">
+						<div class="sectArea">
+						
+							<div class="comTabData">
+								<div class="tabMenuGroup tabDataSwiper">
+									<ul class="tabMenu swiper-wrapper">
+										<li class="tabItem swiper-slide">
+											<button type="button" class="tabName on">전체</button>
+										</li>
+										<li class="tabItem swiper-slide">
+											<button type="button" class="tabName">적립</button>
+										</li>
+										<li class="tabItem swiper-slide">
+											<button type="button" class="tabName">사용</button>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="right">
+									<div class="comAddGuide"> 
+										<p class="guide">활동지수는 매월 1일에 초기화 됩니다.</p>
+									</div>
+								</div>
+							</div>
 
+							<div class="cptDataList">
+								<ul class="dataListBox">
+									<li>
+										<a href="#" class="block">
+											<div class="tit">예상과 후기 사용자 글쓰기</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tRed">
+												<span class="state">사용</span>
+												-50,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">회원가입 이벤트</div>
+											<div class="date">2024-09-09</div>
+											<div class="val tBlue">
+												<span class="state">적립</span>
+												+1,050,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">이벤트 적립</div>
+											<div class="date">2024-09-09</div>
+											<div class="val tBlue">
+												<span class="state">적립</span>
+												+500 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">예상과 후기 사용자 글쓰기</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tRed">
+												<span class="state">사용</span>
+												-50,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+											<div class="date">2024-09-09</div>
+											<div class="val tBlue">
+												<span class="state">적립</span>
+												+1,050,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tBlue">
+												<span class="state">적립</span>
+												+1,050,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">회원가입 이벤트</div>
+											<div class="date">2024-09-09</div>
+											<div class="val tBlue">
+												<span class="state">적립</span>
+												+1,050,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">예상과 후기 사용자 글쓰기</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tRed">
+												<span class="state">사용</span>
+												-50,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">예상과 후기 사용자 글쓰기</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tRed">
+												<span class="state">사용</span>
+												-50,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block">
+											<div class="tit">예상과 후기 사용자 글쓰기</div>
+											<div class="date">2024-09-08</div>
+											<div class="val tRed">
+												<span class="state">사용</span>
+												-50,000 <i class="unit">P</i>
+											</div>
+										</a>
+									</li>
+								</ul>
+								
+								<!-- 페이징 -->
+								<div class="comPaging">
+									<a class="start" href="#"></a>
+									<a class="prev" href="#"></a>
+									<ul class="numList">
+										<li><a href="#">1</a></li>
+										<li class="on"><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+									</ul>
+									<a class="next" href="#"></a>
+									<a class="end" href="#"></a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				

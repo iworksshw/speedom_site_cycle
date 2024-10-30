@@ -70,8 +70,21 @@
                             .location {
                                 margin-top: -60px; padding: 22px 0 20px;
                             }
-                            .comTitH2 {
-                                margin: 0 0 20px;
+                            .subTitle {
+                                display: flex; align-items: center; justify-content: space-between; margin: 0 0 20px;
+                                h1 {
+                                    font-size: rem(24px); color: var(--Grey-900); font-weight: 700; line-height: 1.4; word-break: keep-all;
+                                    &::after {content: none;}
+                                    // h2 {font-size: rem(20px);}
+                                }
+                                .right {
+                                    margin-left: auto;
+                                    .frmBox {
+                                        width: 160px; max-width: 160px;
+                                        .iptSlt {height: 36px; font-size: 14px; background-position: right 16px center;}
+                                    }
+                                    .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
+                                }
                             }
                         }
                         & + * {
@@ -81,11 +94,32 @@
                     .comGroupTop .tit {
                         font-size: rem(18px); font-weight: 700;
                     }
-                    .cptPersonList .prsnList {
-                        justify-content: space-between;
+                    // .cptPersonList .prsnList {
+                    //     justify-content: space-between;
 
-                        > li:last-child {
-                            margin-right: auto;
+                    //     > li:last-child {
+                    //         margin-right: auto;
+                    //     }
+                    // }
+                    .comBoardInfoBox {
+                        padding: 24px; background-color: transparent; border-radius: 12px; border: 2px solid var(--Gray-900);
+                        .comTitH3 h3 {
+                            padding-left: 0; background: none;
+                        }
+                    }
+                    .cptJoinTable {
+                        margin-top: 60px;
+                        .joinArea {
+                            max-width: 100%; padding-top: 0;
+                            .tbBox {
+                                max-width: 600px;
+                            }
+                                        
+                            @include media('tablet'){
+                                .tbBox {
+                                    max-width: 100%;
+                                }
+                            }   
                         }
                     }
 
@@ -101,6 +135,9 @@
                         }
                         .modTab {
                             margin-top: 12px;
+                        }
+                        .cptPersonList .prsnList {
+                            gap: 60px 56px;
                         }
                     }
                 }
@@ -161,8 +198,15 @@
                                 .location {
                                     display: none;
                                 }
-                                .comTitH2 {
+                                .subTitle {
                                     margin: 32px 0 12px;
+                                    h1 {
+                                        font-size: rem(20px);
+                                    }
+                                    .right .frmBox {
+                                        width: 120px;
+                                        max-width: 120px;
+                                    }
                                 }
                             }
                         }
@@ -209,3 +253,6 @@
         }
     }
 }
+
+// 임시 
+.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
