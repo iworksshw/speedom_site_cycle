@@ -10,9 +10,22 @@
             &:first-child {margin-top: 0;}
             .number {width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--Gray-300); margin-right: 6px; text-align: center; line-height: 17px; font-size: rem(11px); color: var(--Gray-600); font-weight: 700; line-height: 1.6; display: inline-block; vertical-align: middle; flex: 0 0 auto;}
             .txt {margin-top: -4px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; display: inline-block; vertical-align: middle;}
+            &.space {padding-left: 22px;margin-top: 0;}
         }
     }
-
+    .orderedList {
+        padding-left: 24px;
+        > li {list-style-type: decimal;}
+        li {color: var(--Gray-800, #2C2C2C);font-size: rem(15px);font-weight: 400;line-height: 160%; /* 24px */}
+        $korean-markers: ('가', '나', '다', '라', '마', '바', '사', '아', '자', '차', '카', '타', '파', '하');
+        .korean > li {
+            @for $i from 1 through length($korean-markers) {
+                &:nth-child(#{$i})::marker {
+                content: nth($korean-markers, $i) + '. ';
+                }
+            }
+        }
+    }
     @include media("mobile"){
         margin-top: 8px;
     
@@ -22,7 +35,13 @@
             .item {
                 .number {width: 16px; height: 16px; margin-right: 4px; line-height: 15px; font-size: rem(10px); }
                 .txt {margin-top: -4px; font-size: rem(15px);}
+                &.space {padding-left: 20px;margin-top: 0;}
             }
+        }
+
+        .orderedList {
+            padding-left: 20px;
+            > li {font-size: rem(14px);}
         }
     }
 }
