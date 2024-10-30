@@ -6,7 +6,7 @@
     }
     .reportingSystemList {
         > ol {
-            overflow: hidden;display: flex;flex-direction: column;padding: 60px 80px;border-radius: 16px;border: 1px solid var(--bg-line-line-200, #EDEDED);background: #FFF;position: relative;
+            overflow: hidden;display: flex;flex-direction: column;padding: 60px 80px;border-radius: 16px;border: 1px solid var(--Bg-Line-line-200, #EDEDED);background: #FFF;position: relative;
             > li {
                 display: flex;gap: 24px;position: relative;
                 &:not(:last-child) {padding-bottom: 44px;}
