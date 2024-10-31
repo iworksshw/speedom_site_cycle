@@ -1079,18 +1079,20 @@
                 <!-- 서브 탑 (타이틀) -->
                 
 
-<div class="cptSubTop bg03">
+<div class="cptSubTop ">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">경륜선수</a></li>
+            <li class="item"><a href="#">경륜 라이브러리</a></li>
             
-            <li class="item"><a href="#">선수조회</a></li>
+            <li class="item"><a href="#">경륜 가이드</a></li>
             
+            
+            <li class="item"><a href="#">경륜 지식쌓기</a></li>
             
         </ul>
-        <div class="subTitle"><h1>선수조회</h1></div>
-        <div class="subText"><p>선수 프로필 · 경주별 기록 등을 <br/>상세한 <b>선수의 정보를 조회</b>할 수 있습니다.</p></div>
+        <div class="subTitle"><h1>경륜심판장비</h1></div>
+        <div class="subText"><p><b>공정한 경기</b>를 위한 눈과 귀,<br/><b>경륜 심판장비</b>에 대해 알려드려요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -1103,804 +1105,458 @@
 </div>
 
                 <div class="layoutContArea">
-                    <div class="cptWordFilter">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">공정한 경주운영을 위해서는 정확한 심판판정을 지원하는 심판장비가 필요합니다.</h2> <!--20241031 텍스트 수정-->
+                        <p class="info">공정한 경주운영을 위해 경륜에는 엄격한 규칙과 이를 집행하는 심판, 그리고 정확한 판정을 가능하게 하는 다양한 장비들이 존재합니다.</p> <!--20241031 텍스트 수정-->
+                    </div>
+                    
+                    <div class="cptSection">
                         <div class="sectArea">
-                            <div class="btnArea">
-                                <ul class="btnGroup">
-                                    <li class="btnItem">
-                                        <button type="button" class="btn Primary">전체</button> <!--선택 탭 class : Primary-->
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㄱ</button> 
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㄴ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㄷ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine" disabled>ㄹ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine" disabled>ㅁ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅂ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅅ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅇ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅈ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅊ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅋ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅌ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅍ</button>
-                                    </li>
-                                    <li class="btnItem">
-                                        <button type="button" class="btn gLine">ㅎ</button>
-                                    </li>
-                                </ul>
+                            <div class="comTitH2">
+                                <h2>착순판정 장비</h2>
                             </div>
 
-                            <div class="comSearchBox">
-                                <div class="searchLine col4">
-                                    <dl class="condition">
-                                        <dt class="title">선수</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt">
-                                                        <option value="">현역선수</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="condition">
-                                        <dt class="title">등급</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt">
-                                                        <option value="">조회</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="condition">
-                                        <dt class="title">기수</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt">
-                                                        <option value="">조회</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <dl class="condition">
-                                        <dt class="title">훈련지</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt">
-                                                        <option value="">선택하세요</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
+                            <!--20241031 순서 수정, 텍스트 수정 -->
+                            <div class="comTitH3">
+                                <h3>착순판정 시스템구조</h3>
+                            </div>
+            
+                            <div class="comImgBox">
+                                <div class="imgWrap">
+                                    <img src="../../../images/contents/cont01_03_04_001.png" alt="착순판정 시스템 구조 이미지"> <!--20241031 이미지 파일명 수정-->
                                 </div>
-                                <div class="searchLine">
-                                    <dl class="condition">
-                                        <dt class="title">검색어</dt>
-                                        <dd class="conBox">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
-                                                </div>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                    <button class="btn Primary search">검색</button>
+
+                                <!-- 20241031 추가 -->
+                                <div class="btnGroup cameraEquip">
+                                    <button type="button" class="ballon num01" onclick="openPopup('equip01')">착순판정카메라<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                    <button type="button" class="ballon num02" onclick="openPopup('equip02')">허상거울<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                    <button type="button" class="ballon num03" onclick="openPopup('equip03')">광센서<img src="../../images/common/ic_16_glass.svg" alt="자세히 보기"></button>
+                                </div>
+                                <!-- //20241031 추가 -->
+                            </div>
+            
+                            <div class="comTitH3">
+                                <h3>착순판정시스템 촬영원리</h3>
+                            </div>
+            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    0.01mm의 미세한 틈으로 빛이 통과하는 '슬릿 렌즈'를 장착한 라인스캔 카메라가 <em>4cm 두께의 결승선만을 1/2,000초 단위(1초당 2,000장)로 디지털 영상으로 촬영</em>합니다.
+                                </p>
+                            </div>
+
+                            <div class="comImgWrap">
+                                <div class="imgGroup">
+                                    <div class="imgArea">
+                                        <!--애니메이션 반영 임시 영역-->
+                                        <img src="../../../images/contents/cont01_03_04_001.png" alt="착순판정 과정 애니메이션">
+                                    </div>
                                 </div>
                             </div>
+                            <!--//20241031 순서 수정, 텍스트 수정, 이미지 영역 추가 -->
+
+                        </div>
+                    </div>
+                    
+                    <div class="cptSection"> <!--20241031 class 변경-->
+                        <div class="sectArea">
+                            
+                            <div class="comTitH2">
+                                <h2>착순판정 기준</h2>
+                            </div>
+                            
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    경륜경기에서 선수의 결승선 도달시점을 판정하는 기준으로는 낙차사고 등의 이유로 선수와 자전거가 완전히 분리되어 결승선을 통과하게 된 경우를 제외한 모든 상황에 대해 <em>바퀴의 최전부가 결승선 수직면에 맞닿은 시점으로 규정</em>하고 있습니다. <em>(경륜시행규정 제106조 제1호)</em>
+                                </p>
+                            </div>
+                            
+                            <!-- 20241031 삭제 -->
+                            <!-- <ul class="sectGroup">
+                                <li class="sectItem">
+                                    <div class="comTitH3">
+                                        <h3>낙차 후 신체와 자전거가 일체로 결승선 도달</h3>
+                                    </div>
+                                    
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            낙차하였으나 신체와 자전거가 완전 분리되지 않은 상태로 결승선에 도달한 경우에는 바퀴의 최전부를 결승선 도달시점으로 판정합니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comAddGuide point space">
+                                        <p class="guide">전, 후륜 구분없이 먼저 도달한 바퀴에 적용</p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <img src="../../../images/contents/conc01_01_03_04_002.png" alt="경주를 심판하는 심판 판정실의 전경1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sectItem">
+                                    <div class="comTitH3">
+                                        <h3>낙차 후 신체와 자전거가 분리되어 결승선 도달</h3>
+                                    </div>
+                                    
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            낙차로 신체와 자전거가 완전 분리되어 결승선에 도달한 경우에는 신체와 자전거중 후착한 쪽의 최전부를 결승선에 도달한 시점으로 판정합니다.
+                                        </p>
+                                    </div>
+
+                                    <div class="comAddGuide point space">
+                                        <p class="guide">단, 후착한 쪽이 자전거일 경우 바퀴로 적용</p>
+                                    </div>
+
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <img src="../../../images/contents/conc01_01_03_04_003.png" alt="경주를 심판하는 심판 판정실의 전경1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul> -->
+                            <!-- //20241031 삭제 -->
+
+                            <!-- 20241031 추가 -->
+                            <div class="comTitH3">
+                                <h3>결승선 도달시기의 판정</h3>
+                            </div>
+                            
+                            <div class="comBasicTxt space">
+                                <p class="txt">
+                                    선수와 자전거가 일체로 결승선에 도달한 경우 바퀴의 최전부를 수직면에 도달한 순간으로 판정합니다.
+                                </p>
+                            </div>
+
+                            <div class="comImgWrap">
+                                <div class="imgGroup">
+                                    <div class="imgArea">
+                                        <!--20241031 이미지 파일명 수정 / 추가-->
+                                        <img src="../../../images/contents/cont01_03_04_002.png" alt="결승선 도달 시기의 판정 예시 이미지" class="pcView">
+                                        <img src="../../../images/contents/cont01_03_04_002_m.png" alt="결승선 도달 시기의 판정 예시 이미지" class="mView">
+                                        <!--//20241031 이미지 파일명 수정 / 추가-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //20241031 추가 -->
                         </div>
                     </div>
 
-                    <div class="cptPersonDesc"> <!--class 'inPopup' : 레이어 팝업 내부에서 쓰일 때 클래스 추가-->
+                    <!-- 20241031 추가 -->
+                    <div class="cptSection">
                         <div class="sectArea">
-                            <div class="profPart">
-                                <div class="comTitH2">
-                                    <h2>선수프로필</h2>
-                                </div>
+                            
+                            <div class="comTitH2">
+                                <h2>착순판정 특이사례</h2>
+                            </div>
 
-                                <div class="profBox">
-                                    <div class="chkArea">
-                                        <input type="checkbox" id="like01"/>
-                                        <label for="like01">선호선수</label>
-                                    </div>
-                                    <div class="photoArea">
-                                        <div class="thumArea">
-                                            <div class="thumWrap">
-                                                <img src="../../images/thum/thum_person_detail.png" alt="강동국 선수 프로필 이미지">
-                                            </div>
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <i class="date">19990041</i>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="infoArea">
-                                        <ul class="infoGroup">
-                                            <li class="infoItem">
-                                                <div class="infoTit">신체정보</div>
-                                                <ul class="dlList">
-                                                    <li class="item">
-                                                        <b class="tit">출생년도</b>
-                                                        <i class="txt">1974년 02월 21일</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">신장/체중</b>
-                                                        <i class="txt">176cm / 76kg</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">시력</b>
-                                                        <i class="txt">좌 1.0 / 우 1.2</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">혈액형</b>
-                                                        <i class="txt">A형</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">가슴둘레</b>
-                                                        <i class="txt">101cm</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">대퇴부 둘레</b>
-                                                        <i class="txt">위좌 60cm / 위우 60cm</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">하퇴부 둘레</b>
-                                                        <i class="txt">위좌 38cm / 위우 38cm</i>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="infoItem">
-                                                <div class="infoTit">개인정보</div>
-                                                <ul class="dlList">
-                                                    <li class="item">
-                                                        <b class="tit">결혼</b>
-                                                        <i class="txt">기혼</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">흡연여부</b>
-                                                        <i class="txt">무</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">고등학교</b>
-                                                        <i class="txt">거창종합</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">대학교</b>
-                                                        <i class="txt">-</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">아마경력 <button type="button" class="popIcon" onclick="openLayerPopup('carrer')">팝업 열기</button></b> <!--20241031 onclick 함수 수정-->
-                                                        <i class="txt">비선수</i>
-                                                        <div class="comInfoLayerPop" id="carrer">
-                                                            <div class="popWrap">
-                                                                <div class="popHead">
-                                                                    <div class="popTit">아마추어 주요경력</div>
-                                                                    <button type="button" class="popClose" onclick="closePopup('carrer')">팝업 닫기</button>
-                                                                </div>
-                                                                <div class="popBody">
-                                                                    <ul class="carrerList">
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">2017 페어플레이상</span>
-                                                                            <span class="etc">특선급</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜</span>
-                                                                            <span class="etc">특선급 2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
-                                                                            <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">우수경기선수상</span>
-                                                                            <span class="etc">경주사업본부</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">우수경기선수상</span>
-                                                                            <span class="etc">경주사업본부</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">우수경기선수상</span>
-                                                                            <span class="etc">경주사업본부</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">우수경기선수상</span>
-                                                                            <span class="etc">경주사업본부</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">우수경기선수상</span>
-                                                                            <span class="etc">경주사업본부</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">출신지/출신팀</b>
-                                                        <i class="txt">경남 / 경남</i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">최신입상내역 <button type="button" class="popIcon" onclick="openLayerPopup('prizing')">팝업 열기</button></b><!--20241031 onclick 함수 수정-->
-                                                        <i class="txt tKey">부산광역시장배 대상경륜 1위</i> <!--20241031 class 변경-->
-                                                        <div class="comInfoLayerPop" id="prizing">
-                                                            <div class="popWrap">
-                                                                <div class="popHead">
-                                                                    <div class="popTit">입상내역</div>
-                                                                    <button type="button" class="popClose" onclick="closePopup('prizing')">팝업 닫기</button>
-                                                                </div>
-                                                                <div class="popBody">
-                                                                    <ul class="carrerList">
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">부산광역시장배 대상경륜</span>
-                                                                            <span class="etc tKey">3위</span> <!--20241031 class 추가 / 'tKey'-->
-                                                                            <!-- to Dev: 순위별 포인트 컬러 class -->
-                                                                            <!-- 1위 : 'tRed' / 2위 : 'tBlue2' / 3위 : 'tKey' -->
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">KSPO 이사장배 왕중왕전 </span>
-                                                                            <span class="etc tRed">1위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tRed">1위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                        <li class="carrer">
-                                                                            <span class="date">2024. 07</span>
-                                                                            <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc tBlue2">2위</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="infoItem full">
-                                                <div class="infoTit">기타</div>
-                                                <ul class="dlList">
-                                                    <li class="item">
-                                                        <b class="tit">친인척 관계</b>
-                                                        <i class="txt"><a href="#">강동진(12기)</a> / 형 </i>
-                                                    </li>
-                                                    <li class="item">
-                                                        <b class="tit">기타사항</b>
-                                                        <i class="txt etc">기타사항이 있는 경우에 작성되는 곳입니다.</i>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                            <div class="comTitH3">
+                                <h3>낙차 후 신체와 자전거가 일체로 결승선 도달</h3>
+                            </div>
+                            
+                            <div class="comBasicTxt space">
+                                <p class="txt">
+                                    낙차하였으나 신체와 자전거와 분리되지 않은 상태로 결승선에 도달한 경우에는 바퀴의 최전부를 결승선 도달시점으로 판정합니다.
+                                </p>
+                            </div>
+
+                            <div class="comImgWrap">
+                                <div class="imgGroup">
+                                    <div class="imgArea">
+                                        <!--20241031 이미지 파일명 수정 / 추가-->
+                                        <img src="../../../images/contents/cont01_03_04_003.png" alt="낙차 후 신체와 자전거가 일체로 결승선 도달한 판정 예시 이미지" class="pcView">
+                                        <img src="../../../images/contents/cont01_03_04_003_m.png" alt="낙차 후 신체와 자전거가 일체로 결승선 도달한 판정 예시 이미지" class="mView">
+                                        <!--//20241031 이미지 파일명 수정 / 추가-->
                                     </div>
                                 </div>
                             </div>
+
                             
-                            <div class="dataPart">
-                                <div class="comTitH2">
-                                    <h2>경주 기록정보</h2>
-                                    <div class="right">
-                                        <div class="frmBox">
-                                            <select class="iptSlt">
-                                                <option value="">2024년</option>
-                                                <option value="">2023년</option>
-                                            </select>
+                            <div class="comTitH3">
+                                <h3>낙차 후 신체와 자전거가 분리되어 결승선 도달</h3>
+                            </div>
+                            
+                            <div class="comBasicTxt space">
+                                <p class="txt">
+                                    낙차 후 신체와 자전거가 분리되어 결승선에 도달한 경우에는 신체와 자전거 중 후착한 쪽의 최전부를 결승선에 도달한 시점으로 판정합니다.
+                                </p>
+                            </div>
+
+                            <div class="comImgWrap col2">
+                                <div class="imgGroup">
+                                    <div class="imgArea">
+                                        <img src="../../../images/contents/cont01_03_04_004.png" alt="낙차 후 선수가 후착한 판정 예시 이미지">
+                                        <p class="imgTxt center"><em class="tKey">선수가 후착</em>한 경우 <em>신체 최전부</em>로 판정</p>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="../../../images/contents/cont01_03_04_005.png" alt="낙차 후 자전거가 후착한 판정 예시 이미지">
+                                        <p class="imgTxt center"><em class="tKey">자전거가 후착</em>한 경우 전, 후륜 구분 없이 <em>바퀴 최전부</em>로 판정</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comTitH3">
+                                <h3>동착</h3>
+                            </div>
+                            
+                            <div class="comBasicTxt space">
+                                <p class="txt">
+                                    결승선에 도착한 선수의 시간차가 1,000분의1초 이상의 근소차는 순위를 구분하여 판정하고, 1,000분의 1초미만 (2,000분의 1초이하)의 경우는 동착으로 판정합니다.
+                                </p>
+                            </div>
+
+                            <div class="comImgWrap">
+                                <div class="imgGroup">
+                                    <div class="imgArea">
+                                        <!--20241031 이미지 파일명 수정 / 추가-->
+                                        <img src="../../../images/contents/cont01_03_04_006.png" alt="동착 판정의 예시 이미지" class="pcView">
+                                        <img src="../../../images/contents/cont01_03_04_006_m.png" alt="동착 판정의 예시 이미지" class="mView">
+                                        <!--//20241031 이미지 파일명 수정 / 추가-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- //20241031 추가 -->
+
+                    <div class="cptEtcInfo col2">
+                        <div class="infoBox">
+                            <dl class="info">
+                                <dt>
+                                    <em class="tit">착순판정 사진의 커서선</em>
+                                </dt>
+                                <dd>
+                                    <div class="thumArea">
+                                        <img src="../../../images/contents/cont01_03_04_007.png" alt="커서선 예시 이미지"> <!-- //20241031 이미지 경로 수정 -->
+                                    </div>
+                                    <div class="infoList">
+                                        <!-- 20241031 수정 -->
+                                        <ul class="listGroup">
+                                            <li class="item">
+                                                육안으로 구분하기 힘든 미세한 근소차의 착차를 구분하기 위하여 착순판정 사진의 비교를 위해 ‘조각영상(선)’을 부각하여 보여주는 것으로, 촬영 후 완성된 사진은 인위적으로 조작하여 생성할 수 없으며 화면 상에 나타난 <em>커서선 1개의 크기는 1/2,000초 단위로 촬영</em>된 조각영상 1컷의 크기이며, 이를 기준선으로 착차를 구분합니다.
+                                                <div class="comAddGuide">
+                                                    <p class="guide">커서선은 쉽게 알아보기위해 색상을 넣은 실선으로 운영 중이며, 색상은 변경 될 수 있습니다.</p>
+                                                </div>
+                                            </li>
+                                            <!-- <li class="item">
+                                                촬영 후 완성된 사진은 인위적으로 조작하여 그어질 수 없으며 화면 상에 나타난 커서선 1개의 크기는 1/2000초 단위로 촬영된 조각영상 1컷의 크기이며, 이를 기준선으로 착차를 구분하는 것 입니다.
+                                                
+                                                <div class="comAddGuide">
+                                                    <p class="guide">커서선은 쉽게 알아보기위해 색상을 넣은 실선으로 운영 중이며, 색상은 변경 될 수 있습니다.</p>
+                                                </div>
+                                            </li> -->
+                                        </ul>
+                                        
+                                        <!-- //20241031 수정 -->
+                                    </div> 
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="cptCol3Section">
+                        <div class="sectArea">
+                            
+                            <div class="comTitH2">
+                                <h2>경주진행장비</h2>
+                            </div>
+
+                            <ul class="sectGroup">
+                                <li class="sectItem">
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <img src="../../../images/contents/cont01_03_04_008.png" alt="출발기 장비의 이미지"> <!--20241031 이미지 경로 수정-->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="comTitH3">
-                                    <h3>경주성적</h3>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea sizeM">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>등급변동</th>
-                                                    <th>승률(%)</th>
-                                                    <th>연대율(%)</th>
-                                                    <th>삼연대율(%)</th>
-                                                    <th>출주횟수</th>
-                                                    <th>출주일수</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>B2->A1</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>7</td>
-                                                    <td>10</td>
-                                                    <td>30</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="comTitH3 mgH">
+                                        <h3>출발기</h3>
                                     </div>
-                                </div>
+                                    
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            출발신호총의 전기신호에 의해 작동되며, 모든 출전선수가 동시에 공정하고 안전하게 출발하기 위하여 운영되는 장비입니다.
+                                        </p>
+                                    </div>                                    
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <img src="../../../images/contents/cont01_03_04_009.png" alt="주화판 장비의 이미지"><!--20241031 이미지 경로 수정-->
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <div class="comDataTable">
-                                    <div class="tableArea sizeM">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>최근 3회 종합득점</th>
-                                                    <th>최근 3회 종합순위</th>
-                                                    <th>총 평균 득점</th>
-                                                    <th>총 순위 득점</th>
-                                                    <th>최근 3경주 200m 최고기록</th>
-                                                    <th>훈련지/동창 훈련자</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>81.356</td>
-                                                    <td>538</td>
-                                                    <td>82.402</td>
-                                                    <td>517</td>
-                                                    <td>11”58</td>
-                                                    <td>구미/홍길동</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="comTitH3 mgH">
+                                        <h3>주회판</h3>
                                     </div>
-                                </div>
+                                    
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            경주 중 매 주회 남은 주회수를 주회판을 통해 알리는 장비입니다.
+                                        </p>
+                                    </div>                                    
+                                </li>
+                                <li class="sectItem">
+                                    <div class="comImgWrap">
+                                        <div class="imgGroup">
+                                            <div class="imgArea">
+                                                <img src="../../../images/contents/cont01_03_04_010.png" alt="타종 장비의 이미지"><!--20241031 이미지 경로 수정-->
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                
-                                <div class="comTitH3">
-                                    <h3>입상전법</h3>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="3">선행</th>
-                                                    <th colspan="3">선행</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>1위</th>
-                                                    <th>2위</th>
-                                                    <th>3위</th>
-                                                    <th>1위</th>
-                                                    <th>2위</th>
-                                                    <th>3위</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="comTitH3 mgH">
+                                        <h3>타종</h3>
                                     </div>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                                <col style="width:16.6667%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="3">추입</th>
-                                                    <th colspan="3">마크</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>1위</th>
-                                                    <th>2위</th>
-                                                    <th>3위</th>
-                                                    <th>1위</th>
-                                                    <th>2위</th>
-                                                    <th>3위</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            경주 중 최종 주회가 남았을 때 종을 쳐서 알립니다. 
+                                        </p>
                                     </div>
-                                </div>
-                                
-                                <div class="comTitH3">
-                                    <h3>위반행위 및 낙차사고</h3>
-                                    <div class="right">
-                                        <button type="button" class="txtBtn"  onclick="openPopup('warned')">더 보기</button>
-                                        <div class="comInfoLayerPop" id="warned">
-                                            <div class="popWrap">
-                                                <div class="popHead">
-                                                    <div class="popTit">위반행위 현황</div>
-                                                    <button type="button" class="popClose" onclick="closePopup('warned')">팝업 닫기</button>
-                                                </div>
-                                                <div class="popBody">
-                                                    <!-- 20241031 추가 -->
-                                                    <div class="sumBox">
-                                                        <p class="summary">경주규칙 위반점 잔여점수 : <em>41</em></p>
+
+                                    <div class="comAddGuide space">
+                                        <p class="guide">최종주회 전회 백스트레치라인부터 최종주회가 시작되는 홈스트레치라인 까지의 구간에 타종합니다.</p> <!--20241031 텍스트 수정-->
+                                    </div>                                    
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+
+                    <!-- 20241031 팝업 추가 -->
+                    <div id="equip01" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip01');">닫기</button>
+                                    <div class="popTitle">1. 착순판정카메라</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_03_04_011.png" alt="착순 판정 카메라의 실제 사진">
+                                                        </div>
                                                     </div>
-                                                    <!-- //20241031 추가 -->
-                                                    <!--20241031 ul, li class 수정 / html 일부 수정-->
-                                                    <ul class="warnedList"> 
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">Line Scan Digital Finish Camera</b>
                                                         </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">결승선 수직상단 약23m(2대)와 약30m(1대) 그리고 약35m(1대) 높이에 서로 다른 촬영각도로 정렬되어 고정 위치</i>
                                                         </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
-                                                        </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
-                                                        </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
-                                                        </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
-                                                        </li>
-                                                        <li class="warned"> 
-                                                            <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주</span>
-                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
-                                                            <p class="result">73조 2항 2호 주의 판정</p>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">최대 4K 이상의 고해상도 초고속 스캔(최대33,000/초) 센서를 장착하여 결승선만을 촬영하며, 결승선을 통과하는 사물에 대해 1/2,000초 단위(1초당 2,000장) 촬영</i>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea sizeS">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>실격행위</th>
-                                                    <th>경고행위</th>
-                                                    <th>주의행위</th>
-                                                    <th>낙차기권</th>
-                                                    <th>낙차입</th>
-                                                    <th>사고기권</th>
-                                                    <th>사고입</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                
-                                <div class="comTitH3">
-                                    <h3>경주별 순위</h3>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea sizeS">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:33.3333%;">
-                                                <col style="width:33.3333%;">
-                                                <col style="width:33.3333%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>경주회차</th>
-                                                    <th>출전구분</th>
-                                                    <th>순위</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
-                                                    <td>선발</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
-                                                    <td>선발</td>
-                                                    <td>2</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
-                                                    <td>선발</td>
-                                                    <td>3</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="digramPart">
-                                <div class="comTitH2">
-                                    <h2>기록 그래프</h2>
-                                </div>
-
-                                <div class="comTitH3">
-                                    <h3>착순위 정보</h3>
-                                </div>
-
-                                <div class="comDiagrm">
-                                    <div class="digrmBox">
-                                        <!-- to Dev : PC와 MOB에서 보일 화면이 구분되지 않는다면 pcView / mView 없이 사용하시면 됩니다. -->
-                                        <div class="pcView">
-                                            <img src="../../images/thum/thum_diagram01.png" alt="착순위 정보 도표 임시 이미지">
-                                        </div>
-                                        <div class="mView">
-                                            <img src="../../images/thum/thum_diagram01_m.png" alt="착순위 정보 도표 임시 이미지">
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                                <col style="width:14.2857%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>1위</th>
-                                                    <th>2위</th>
-                                                    <th>3위</th>
-                                                    <th>4위</th>
-                                                    <th>5위</th>
-                                                    <th>6위</th>
-                                                    <th>7위</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                    <td>-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                
-                                <div class="comTitH3">
-                                    <h3>입상전법</h3>
-                                </div>
-
-                                <div class="comDiagrm">
-                                    <div class="digrmBox">
-                                        <div class="pcView">
-                                            <img src="../../images/thum/thum_diagram02.png" alt="착순위 정보 도표 임시 이미지">
-                                        </div>
-                                        <div class="mView">
-                                            <img src="../../images/thum/thum_diagram02_m.png" alt="착순위 정보 도표 임시 이미지">
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="comDataTable">
-                                    <div class="tableArea">
-                                        <table>
-                                            <caption></caption>
-                                            <colgroup>
-                                                <col style="width:25%;">
-                                                <col style="width:25%;">
-                                                <col style="width:25%;">
-                                                <col style="width:25%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>선행</th>
-                                                    <th>젖히기</th>
-                                                    <th>추입</th>
-                                                    <th>마크</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1(25%)</td>
-                                                    <td>1(25%)</td>
-                                                    <td>-</td>
-                                                    <td>2번(50%)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <div class="comTitH2">
-                                    <h2>종합득점 및 종합순위</h2>
-                                </div>
-
-                                <div class="comDiagrm">
-                                    <div class="digrmArea">
-                                        <img src="../../images/thum/thum_diagram03.png" alt="종합득점 및 종합순위 도표 임시 이미지">
-                                    </div>
-                                </div>
-                                <div class="comDiagrm">
-                                    <div class="digrmArea">
-                                        <img src="../../images/thum/thum_diagram04.png" alt="종합득점 및 종합순위 도표 임시 이미지">
-                                    </div>
-                                </div>
-                                <div class="comDiagrm">
-                                    <div class="digrmArea">
-                                        <img src="../../images/thum/thum_diagram05.png" alt="종합득점 및 종합순위 도표 임시 이미지">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div id="equip02" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip02');">닫기</button>
+                                    <div class="popTitle">2. 허상거울</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_03_04_012.png" alt="허상거울의 실제 이미지">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">퇴피로 내 결승선의 연장선에 위치</i>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">촬영 시 카메라에 노출되는 면(실상)의 반대쪽 영상(허상)을 반사하여 나타내는 역할</i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="equip03" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('equip03');">닫기</button>
+                                    <div class="popTitle">3. 광센서</div>
+                                    <div class="popCont">
+                                        <div class="cptSection">
+                                            <div class="sectArea">
+                                                <div class="comImgWrap">
+                                                    <div class="imgGroup">
+                                                        <div class="imgArea">
+                                                            <img src="../../../images/contents/cont01_03_04_013.png" alt="광센서 실제 이미지">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="comBasicList mgH">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            <b class="sTit">설치위치 </b>
+                                                            <i class="sTxt">결승선 직 후방 약 21m 부근 경주로 상단과 하단에 서로 마주하며 위치</i>
+                                                        </li>
+                                                        <li class="item">
+                                                            <b class="sTit">특징 및 기능</b>
+                                                            <i class="sTxt">레이저를 이용한 센서장비로써 광신호를 보내는 발광부와 이를 감지하는 투광부로 구분</i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 20241031 팝업 추가 -->
                 </div>
+
                     
                 <!-- 서브 바텀 (담당자) -->
                 
@@ -1910,10 +1566,10 @@
         <div class="subBtmBox">
             <dl class="manager">
                 <dt>담당자</dt>
-                <dd><span>경륜운영팀</span><b>조준호</b></dd>
+                <dd><span>경륜심판팀</span><b>윤규상</b></dd>
             </dl>
             <ul class="btmList">
-                <li class="phone">02-2067-5711</li>
+                <li class="phone">02-2067-5929</li>
                 <li class="email"><a href="#">이메일 보내기</a></li>
             </ul>
         </div>
