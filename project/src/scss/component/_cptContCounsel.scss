@@ -1,0 +1,72 @@
+.cptContCounsel {
+    width: 100%; margin-top: 60px;
+    .cptArea { 
+        display: flex; flex-wrap: wrap;
+        .itemList {
+            width: 20%;
+            .rowA {
+                text-align: center;
+                .ic {width: 50px; height: 50px; margin: 0 auto;}
+                .icon1 {background: url(../../images/contents/cont06_07_01_icon1.svg) no-repeat center;}
+                .icon2 {background: url(../../images/contents/cont06_07_01_icon2.svg) no-repeat center;}
+                .icon3 {background: url(../../images/contents/cont06_07_01_icon3.svg) no-repeat center;}
+                .icon4 {background: url(../../images/contents/cont06_07_01_icon4.svg) no-repeat center;}
+                .icon5 {background: url(../../images/contents/cont06_07_01_icon5.svg) no-repeat center;}
+                .txt {
+                    margin-top: 10px;
+                    .m1 {font-size: rem(14px); font-weight: 600; color: var(--Point-Primary2); line-height: 1.6;}
+                    .m2 {font-size: rem(18px); font-weight: 700; color: var(--Gray-800); line-height: 1.4;}
+                }
+            }
+            .line {   
+                margin: 16px 0; position: relative; text-align: center;
+                &::before {content:''; position: absolute; top: 8px; left: 0; right: 0; height: 2px; background: url(../../images/contents/cont06_07_01_dashed.svg);}
+                span {width: 18px; height: 18px; border: 4px solid var(--Point-Primary2); background: #FFF; border-radius: 50%; display: block; margin: 0 auto; position: relative;}
+            }
+            .rowB {
+                padding: 10px 20px 0; height: calc(100% - 167px);
+                .in {
+                    padding: 20px 20px; border-radius: 12px; background: var(--Bg-Line-bg-200); position: relative; height: 100%;
+                    &::before {content:''; position: absolute; top: -10px; left: 50%; margin-left: -8px; width: 0; height: 0; border-style: solid; border-width: 0px 8px 10px 8px; border-color: transparent transparent var(--Bg-Line-bg-200) transparent;}
+                    .item {margin-top: 0;}
+                }
+                
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+
+        .cptArea { 
+            display: flex; flex-wrap: wrap;
+            .itemList {
+                width: 100%; position: relative; padding-bottom: 40px;
+                &:last-child {padding-bottom: 0;}                
+                &::before {content:''; position: absolute; top: 25px; left: 8px; bottom: -25px; width: 2px; background: url(../../images/contents/cont06_06_dashed.svg);}
+                &:last-child::before {bottom: 0;}
+                .rowA {
+                    text-align: left; padding-left: 46px; display: flex; align-items: center;
+                    .ic {margin: 0 0;}
+                    .txt {
+                        margin-top: 0; margin-left: 10px;
+                        .m1 {font-size: rem(13px);}
+                        .m2 {font-size: rem(16px);}
+                    }
+                }
+                .line {   
+                    position: absolute; top: 0; left: 0;
+                    &::before {display:none;}
+                }
+                .rowB {
+                    padding: 0; padding-left: 46px; height: auto; margin-top: 14px;
+                    .in {
+                        padding: 12px 14px; border-radius: 12px;
+                        &::before {display: none;}                        
+                    }
+                    
+                }
+            }
+        }        
+    }
+}

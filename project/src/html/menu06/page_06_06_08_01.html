@@ -1,0 +1,310 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '관련사이트',
+                    subText: '도박중독 문제 해결에 도움이 되는<br /><b>관련사이트</b>를 안내해드려요.',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">알아두면 유용한 관련사이트</h2>
+                        <p class="info">도박중독 문제, 혼자 해결이 어렵다면 전문 기관의 도움을 받아보세요.</p>
+                    </div>
+
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="상담센터">상담센터</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="단도박모임">단도박모임</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="유관기관">유관기관</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="해외사이트">해외사이트</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                <div class="comDataTable">
+                                    <div class="tableArea sizeM">
+                                        <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>기관</th>
+                                                    <th>센터명</th>
+                                                    <th>전화번호</th>
+                                                    <th>홈페이지</th>
+                                                    <th>위치</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>한국도박문제예방치유원</td>
+                                                    <td>중앙센터</td>
+                                                    <td>1336</td>
+                                                    <td>
+                                                        <a href="https://www.kcgp.or.kr" target="_blank" class="txtBtn"><b>www.kcgp.or.kr</b></a>
+                                                    </td>
+                                                    <td>서울시 종로구</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>강원랜드</td>
+                                                    <td>강원랜드 중독관리센터 (klacc)</td>
+                                                    <td>080-7575-545</td>
+                                                    <td>
+                                                        <a href="https://klacc.high1.com" target="_blank" class="txtBtn"><b>klacc.high1.com</b></a>
+                                                    </td>
+                                                    <td>서울시 종로구</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>마사회</td>
+                                                    <td>유캔센터</td>
+                                                    <td>080-500-1190</td>
+                                                    <td>
+                                                        <a href="https://www.kra.co.kr" target="_blank" class="txtBtn"><b>www.kra.co.kr</b></a>
+                                                    </td>
+                                                    <td>서울시 종로구</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                <div class="comDataTable">
+                                    <div class="tableArea sizeM">
+                                        <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>모임명</th>
+                                                    <th>대표 전화번호</th>
+                                                    <th>홈페이지</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>한국단도박모임<br />(Gambler Anonymous)</td>
+                                                    <td>02-888-8320</td>
+                                                    <td>
+                                                        <a href="http://www.dandobak.co.kr" target="_blank" class="txtBtn"><b>www.dandobak.co.kr</b></a>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>한국단도박가족모임<br />(Gam-Anon)</td>
+                                                    <td>02-522-8483</td>
+                                                    <td>
+                                                        <a href="http://www.dandobak.co.kr" target="_blank" class="txtBtn"><b>www.dandobak.co.kr</b></a>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>도박중독자가족모임<br />(Gam-anon)</td>
+                                                    <td>02-8888-320</td>
+                                                    <td>
+                                                        <a href="http://www.dandobakfamily.kr" target="_blank" class="txtBtn"><b>www.dandobakfamily.kr</b></a>
+                                                    </td>
+                                                    <td>추가</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                
+                            </div>
+                            <div class="tabCont">
+                                <div class="comDataTable">
+                                    <div class="tableArea sizeM">
+                                        <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>국가</th>
+                                                    <th>기관</th>
+                                                    <th>홈페이지</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>국제 문제성 도박협회(NCPG)</td>
+                                                    <td>
+                                                        <a href="https://www.ncpgambling.org" target="_blank" class="txtBtn"><b>www.ncpgambling.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>단도박 가족모임</td>
+                                                    <td>
+                                                        <a href="https://www.gam-anon.org" target="_blank" class="txtBtn"><b>www.gam-anon.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>단도박 모임</td>
+                                                    <td>
+                                                        <a href="https://www.gamblersanonymous.org" target="_blank" class="txtBtn"><b>www.gamblersanonymous.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>미국정신의학협회</td>
+                                                    <td>
+                                                        <a href="https://www.psychiatry.org" target="_blank" class="txtBtn"><b>www.psychiatry.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>북아메리카 교육 연구소	</td>
+                                                    <td>
+                                                        <a href="https://www.nati.org" target="_blank" class="txtBtn"><b>www.nati.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>책임성 도박 협회</td>
+                                                    <td>
+                                                        <a href="https://www.icrg.org" target="_blank" class="txtBtn"><b>www.icrg.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>NAMI(미국 정신장애 가족협회)</td>
+                                                    <td>
+                                                        <a href="https://www.nami.org" target="_blank" class="txtBtn"><b>www.nami.org</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>NIMH(미국 정신건강협회)</td>
+                                                    <td>
+                                                        <a href="https://www.nimh.nih.gov" target="_blank" class="txtBtn"><b>www.nimh.nih.gov</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>미국</td>
+                                                    <td>WHO(세계보건기구)</td>
+                                                    <td>
+                                                        <a href="https://www.who.int" target="_blank" class="txtBtn"><b>www.who.int</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>영국</td>
+                                                    <td>게임케어</td>
+                                                    <td>
+                                                        <a href="https://www.gamcare.org.uk" target="_blank" class="txtBtn"><b>www.gamcare.org.uk</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>캐나다</td>
+                                                    <td>알버타 알코올 약물 남용 위원회</td>
+                                                    <td>
+                                                        <a href="https://www.albertahealthservices.ca" target="_blank" class="txtBtn"><b>www.albertahealthservices.ca</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>뉴질랜드</td>
+                                                    <td>뉴질랜드 도박문제 방지재단(PGF)</td>
+                                                    <td>
+                                                        <a href="https://www.pgf.nz" target="_blank" class="txtBtn"><b>www.pgf.nz</b></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
