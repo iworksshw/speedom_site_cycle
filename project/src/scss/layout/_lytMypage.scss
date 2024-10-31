@@ -7,8 +7,8 @@
             }
         }
         .layoutContainer{
-            width:100%;
             --lnb-width: 320px;
+            width:100%;
             .layoutCont{
 
             }
@@ -18,14 +18,14 @@
                     display: flex; flex-direction: column-reverse; width: var(--lnb-width); padding-right: 60px;
                     .lnbArea {
                         padding: 32px 40px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-100);
-                        .lnbTit {
-                            margin-bottom: 20px; font-size: rem(20px);
-                        }
+                        .lnbTit {margin-bottom: 20px; font-size: rem(20px);}
                         .lnbMenu {
                             & > li {
                                 margin-top: 16px;
-                                a {display: inline-block;}
-                                &.on > a {
+                                a > span {
+                                    display: inline-block;
+                                }
+                                &.on > a > span {
                                     position: relative;
                                     font-weight: 700;
                                     &::after {
@@ -38,26 +38,19 @@
                     .userArea {
                         margin-bottom: 60px; padding: 24px 40px 24px 24px; font-size: rem(14px); border-radius: 16px; border: 1px solid var(--Bg-Line-line-100);
                         .grade {
-                            display: inline-flex;
-                            height: 22px;
-                            margin-bottom: 8px;
-                            padding: 0 8px;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: rem(12px);
-                            border-radius: 4px;
-                            border: 1px solid var(--Gray-500);
-                            white-space: nowrap;
+                            display: inline-flex; height: 22px; margin-bottom: 8px; padding: 0 8px; justify-content: center; align-items: center; font-size: rem(12px); border-radius: 4px; border: 1px solid var(--Gray-500); white-space: nowrap;
                         }
                         .info {
                             color: var(--Gray-600);
+                            .state {
+                                margin-left: 4px;
+                            }
                             &.user {
                                 font-weight: 500;
                                 strong {
                                     font-size: rem(20px); color: var(--Gray-900);
                                 }
                             }
-                            .tRed {margin-left: 4px;}
                         }
                         .shortcut {
                             display: block; margin-top: 12px;
@@ -74,29 +67,87 @@
                         background-color: transparent;
                         .subTopArea {
                             padding: 0;
-                            .subTitle,
-                            .subText,
-                            .addFunc {display: none;}
                             .location {
                                 margin-top: -60px; padding: 22px 0 20px;
                             }
+                            .subTitle {
+                                display: flex; align-items: center; justify-content: space-between; margin: 0 0 20px;
+                                h1 {
+                                    font-size: rem(24px); color: var(--Grey-900); font-weight: 700; line-height: 1.4; word-break: keep-all;
+                                    &::after {content: none;}
+                                    // h2 {font-size: rem(20px);}
+                                }
+                                .right {
+                                    margin-left: auto;
+                                    .frmBox {
+                                        width: 160px; max-width: 160px;
+                                        .iptSlt {height: 36px; font-size: 14px; background-position: right 16px center;}
+                                    }
+                                    .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
+                                }
+                            }
                         }
-                        & + * {margin-top: 0;}
+                        & + * {
+                            margin-top: 0;
+                        }
                     }
+                    .comGroupTop .tit {
+                        font-size: rem(18px); font-weight: 700;
+                    }
+                    // .cptPersonList .prsnList {
+                    //     justify-content: space-between;
+
+                    //     > li:last-child {
+                    //         margin-right: auto;
+                    //     }
+                    // }
+                    .comBoardInfoBox {
+                        padding: 24px; background-color: transparent; border-radius: 12px; border: 2px solid var(--Gray-900);
+                        .comTitH3 h3 {
+                            padding-left: 0; background: none;
+                        }
+                    }
+                    .cptJoinTable {
+                        margin-top: 60px;
+                        .joinArea {
+                            max-width: 100%; padding-top: 0;
+                            .tbBox {
+                                max-width: 600px;
+                            }
+                                        
+                            @include media('tablet'){
+                                .tbBox {
+                                    max-width: 100%;
+                                }
+                            }   
+                        }
+                    }
+
                     &.myMain {
-                        .location > li:last-child {display: none;}
-                        .cptSection:not(:first-of-type) {margin-top: 100px;}
-                        .cptDataSum + .cptSection {margin-top: 60px;}
-                        .comTitH2 {margin-bottom: 20px;}
+                        .comTitH2 {
+                            margin: 0 0 20px;
+                        }
+                        .cptSection:not(:first-of-type) {
+                            margin-top: 100px;
+                        }
+                        .cptDataSum + .cptSection {
+                            margin-top: 60px;
+                        }
+                        .modTab {
+                            margin-top: 12px;
+                        }
+                        .cptPersonList .prsnList {
+                            gap: 60px 56px;
+                        }
                     }
                 }
 
-                @include media('mobile'){
+                @include media('tablet'){
                     width: 100%; padding: 0 16px;
                     .layoutLnbArea {
                         flex-direction: column; width: 100%; padding-right: 0;
                         .lnbArea {
-                            position: relative; margin: 0 -16px; padding: 0; border-radius: 0; border: 0; border-bottom: 1px solid var(--Bg-Line-line-100);
+                            position: relative; margin: 0 -16px 10px; padding: 0; border-radius: 0; border: 0; border-bottom: 1px solid var(--Bg-Line-line-100);
                             &::after {
                                 content: ""; position: absolute; top: 100%; left: 0; width: 100%; height: 10px; background: #f4f6fa; z-index: -1;
                             }
@@ -107,24 +158,32 @@
                                 display: flex; white-space: nowrap; padding: 0 0 0 16px; overflow-x: auto;
                                 & > li {
                                     margin: 0 20px 0 0;
-                                    &:last-child {margin-right: 16px;}
+                                    &:last-child {
+                                        margin-right: 16px;
+                                    }
                                     a {
                                         display: flex; align-items: center; height: 56px;}
                                 }
                             }
                         }
                         .userArea {
-                            display: flex; flex-wrap: wrap; margin: 32px 0 20px; padding: 20px;
+                            display: flex; flex-wrap: wrap; margin: 32px 0; padding: 20px;
                             .grade {
                                 margin-right: 16px; margin-bottom: 0;
                             }
                             .info { 
                                 margin-right: 8px;
-                                &:last-of-type {margin-right: 32px;}
+                                &:last-of-type {
+                                    margin-right: 32px;
+                                }
                                 &.user {
                                     display: inline-flex; align-items: center; flex-wrap: wrap; width: 100%; margin-bottom: 10px;
-                                    br {display: none;}
-                                    strong {margin-right: 4px;}
+                                    br {
+                                        display: none;
+                                    }
+                                    strong {
+                                        margin-right: 4px;
+                                    }
                                 }
                             }
                             .shortcut {
@@ -135,9 +194,57 @@
                     .layoutContArea {
                         width: 100%;
                         .cptSubTop {
-                            display: none;
+                            .subTopArea {
+                                .location {
+                                    display: none;
+                                }
+                                .subTitle {
+                                    margin: 32px 0 12px;
+                                    h1 {
+                                        font-size: rem(20px);
+                                    }
+                                    .right .frmBox {
+                                        width: 120px;
+                                        max-width: 120px;
+                                    }
+                                }
+                            }
                         }
                     }
+                }
+
+                @include media('mobile'){
+                    .layoutContArea {
+                        .cptBoardList,
+                        .cptSection:not(:first-of-type),
+                        .cptDataSum + .cptSection {
+                            margin-top: 40px;
+                        }
+                        .modTab {
+                            margin-top: 0;
+                            .tabContianer {
+                                margin-top: 40px;
+                            }
+                        }
+                        .comGroupTop {
+                            .alignR .opList {
+                                margin-top: 0;
+                            }
+                            &.reverse {
+                                flex-direction: column;
+                                .alignL {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                        &.myMain {
+                            .cptSection:not(:first-of-type),
+                            .cptDataSum + .cptSection {
+                                margin-top: 60px;
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -146,3 +253,6 @@
         }
     }
 }
+
+// 임시 
+.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}

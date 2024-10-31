@@ -295,7 +295,13 @@ select.iptSlt {
         @include media ('mobile'){
             width:150px !important;
         }
-    } //PC width 150px, Mo width 100%
+    } //PC width 150px, Mo 150px
+    &.pmW180 {
+        width:180px;
+        @include media ('mobile'){
+            width:180px !important;
+        }
+    } //PC width 180px, Mo 180px
 
     //색깔별
     &.Primary {

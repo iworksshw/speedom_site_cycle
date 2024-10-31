@@ -27,6 +27,7 @@
         display: flex;
         .tabMenuGroup {flex: 1;}
         .right {
+            margin-top: auto;
             .frmBox {width: 160px; max-width: 160px;}
         }
         .comTitH2 + & {margin-top: 32px;}

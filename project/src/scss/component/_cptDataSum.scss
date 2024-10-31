@@ -1,0 +1,103 @@
+.cptDataSum {
+	position: relative;
+	.dataSum {
+		padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);
+		> .inner {
+			display: flex; gap: 20px;
+			> li {
+				position: relative; flex: 1; text-align: center;
+				&::before {
+					content: ""; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);
+				}
+				&:first-child::before {
+					display: none;
+				}
+			}
+		}
+		.item {
+			display: inline-block; color: var(--Gray-600); font-size: rem(15px); line-height: 1.4;
+		}
+		.val {
+			display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: rem(20px); font-weight: 700; line-height: 1.4;
+			.unit {
+				font-size: rem(15px); font-style: normal;
+			}
+		}
+		div.val {
+			display: block; margin-left: 0; margin-top: 6px;
+		}
+		.icon {
+			width: 40px; height: 40px; margin: 0 auto 8px;
+		}
+
+		@include media("tablet"){
+			&.tbRow .inner {
+				flex-wrap: wrap; gap: 12px;
+				> li {
+					flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;
+					&::before {
+						content: none;
+					}
+				}
+				div.val {margin-top: 0;}
+				.icon {display: none;}
+			}
+		}
+		@include media("mobile"){
+			.inner {
+				gap: 12px;
+				> li {
+					&::before {left: -6px;}
+					span.val {display: block; margin-left: 0; margin-top: 6px;}
+				}
+			}
+
+			&.mRow .inner {
+				flex-wrap: wrap;
+				> li {
+					flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;
+					&::before {
+						content: none;
+					}
+				}
+				div.val {margin-top: 0;}
+				.icon {display: none;}
+			}
+			
+			.cptDataSum[class*=bg] .addInfo {position: static;}
+		}
+	}
+	.comTitH2 + .dataSum {
+		margin-top: 20px;
+	}
+	.addInfo {
+		display: flex; justify-content: space-between; margin-top: 15px; color: var(--Gray-500);
+		.alignR {
+			margin-left: auto;
+		}
+	}
+	.btnRefresh {
+		min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: rem(14px); background: url(../../images/common/icon_20_refresh.svg) no-repeat center left;
+	}
+
+	&[class*=bg] {
+		.dataSum {
+			border-color: transparent;
+			.item {
+				color: var(--Gray-900);
+			}
+			.val .unit {
+				font-size: unset;
+			}
+		}
+		.addInfo {
+			position: absolute; top: 100%; left: 0; width: 100%;
+		}
+	}
+	&.bg01 {
+		.dataSum {
+			background-color: var(--Bg-Line-bg-100);
+			.inner > li::before {background-color: #eaecf1;}
+		}
+	}
+}

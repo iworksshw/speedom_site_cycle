@@ -1,0 +1,55 @@
+.cptContSelfTest {
+    margin-top: 20px; border-top: 2px solid var(--Gray-900);
+    .testCont {
+        padding: 16px 24px; height: 80px; border-bottom: 1px solid var(--Bg-Line-line-100); display: flex; align-items: center; justify-content: space-between;
+        .subject {
+            display: flex; align-items: center; color: var(--Gray-800); flex: 1; padding-right: 30px;
+            .num {width: 28px; height: 28px; font-size: rem(20px); font-weight: 700; line-height: 1.4; display: flex; align-items: center; justify-content: center;}
+            .txt {font-size: rem(16px); line-height: 1.6; margin-left: 20px; max-width: 654px;}
+        }
+        .clickBox {
+            width: 510px;
+            ul {
+                display: flex; flex-wrap: wrap; gap: 10px;
+                li {
+                    height: 48px;
+                    input[type=radio] {display: block;}
+                    label {font-size: rem(16px); color: var(--Gray-800); line-height: 1.5; width: 120px; height: 48px; background: var(--Bg-Line-white); border: 1px solid var(--Gray-200); border-radius: 8px; display: flex; justify-content: center; align-items: center; cursor: pointer; position: relative;}
+                    label::before {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_check_mini.svg) center no-repeat; display: block; margin-right: 8px;}
+                    input[type=radio]:checked + label {border: 1px solid var(---Primary); background: #F0FAF7; font-weight: 600; color: var(--Gray-900);}
+                    input[type=radio]:checked + label::before {background: url(../../images/common/ic_20_check_mini_on.svg) center no-repeat;}
+                }
+            }
+        }
+    }
+
+    .testCont.bg {background: var(--Gray-50);}
+    .reFresh {width: 110px; padding: 0;}
+    .reFresh::before {content:''; display: inline-block; vertical-align: middle; margin-top: -3px; width: 24px; height: 24px; margin-right: 8px; background: url(../../images/common/ic_24_refresh.svg) center no-repeat;}
+
+    @include media("pcs"){
+        
+    }
+
+    @include media("mobile"){
+        margin: 16px -16px 0;
+        .testCont {
+            padding: 16px 16px; height: auto; flex-direction: column;
+            .subject {
+                padding-right: 0;
+                .num {font-size: rem(18px);}
+                .txt {font-size: rem(15px); margin-left: 10px; flex: 1;}
+            }
+            .clickBox {
+                width: 100%; margin-top: 14px;
+                ul {
+                    li {
+                        width: calc(50% - 5px);
+                        label {width: 100%; font-size: rem(15px);}
+                    }
+                }                
+            }
+        }
+        .comBtnGroup.section {padding: 0 16px;}
+    }
+}

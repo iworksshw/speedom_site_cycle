@@ -29,68 +29,9 @@
 <div class="wrap">
 
 <style>
-	.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
+	/* 퍼블확인용 - 적용X */
+	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
 
-	/* cptDataSum */
-	.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
-	.dataSum .inner {display: flex; gap: 20px;}
-	.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
-	.dataSum .inner > li::before {content: ""; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);}
-	.dataSum .inner > li:first-child::before {display: none;}
-	.dataSum .inner > li .item {display: inline-block; color: var(--Gray-600); font-size: 15px; /* font-size: rem(15px); */ line-height: 1.4;}
-	.dataSum .inner > li .val {display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: 20px; /* font-size: rem(20px); */ font-weight: 700; line-height: 1.4;}
-	.dataSum .inner > li div.val {display: block; margin-left: 0; margin-top: 6px;}
-	.dataSum .inner > li .val .unit {font-size: 15px; font-style: normal;}
-	.dataSum .inner > li .icon {width: 40px; height: 40px; margin: 0 auto 8px;}
-	
-	.cptDataSum {position: relative;}
-	.cptDataSum .comTitH2 + .dataSum {margin-top: 20px;}
-	.cptDataSum .addInfo {display: flex; justify-content: space-between; margin-top: 15px; color: var(--Gray-500);}
-	.cptDataSum .alignR {margin-left: auto;}
-	.cptDataSum .btnRefresh {min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: 14px; /* font-size: rem(14px); */ background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4762 6.05556C12.2126 5.42297 11.8243 4.85685 11.3424 4.38889C10.4567 3.52858 9.25498 3 7.93151 3C5.20791 3 3 5.23858 3 8C3 10.7614 5.20791 13 7.93151 13C9.25498 13 10.4567 12.4714 11.3424 11.6111C11.8243 11.1431 12.2126 10.577 12.4762 9.94445M13 4.11111V6.33333H10.8082' stroke='%232C2C2C' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center left;}
-	
-	.cptDataSum[class*=bg] .dataSum {border-color: transparent;}
-	.cptDataSum[class*=bg] .dataSum .inner > li .item {color: var(--Gray-900);}
-	.cptDataSum[class*=bg] .dataSum .inner > li .val .unit {font-size: unset;}
-	.cptDataSum[class*=bg] .addInfo {position: absolute; top: 100%; left: 0; width: 100%;}
-	.cptDataSum.bg01 .dataSum {background-color: var(--Bg-Line-bg-100);}
-	.cptDataSum.bg01 .dataSum .inner > li::before {background-color: #eaecf1;}
-	
-	/* @include media("tablet"){ */
-	@media screen and (max-width: 1023px) {
-		.dataSum.tbRow .inner {flex-wrap: wrap; gap: 12px;}
-		.dataSum.tbRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
-		.dataSum.tbRow .inner > li::before {content: none;}
-		.dataSum.tbRow .inner > li div.val {margin-top: 0;}
-		.dataSum.tbRow .inner > li .icon {display: none;}
-	}
-	/* @include media("mobile"){ */
-	@media screen and (max-width: 767px) {
-		.dataSum .inner > li span.val {display: block; margin-left: 0; margin-top: 6px;}
-
-		.cptDataSum[class*=bg] .addInfo {position: static;}
-
-		.dataSum.mRow .inner {flex-wrap: wrap; gap: 12px;}
-		.dataSum.mRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
-		.dataSum.mRow .inner > li::before {content: none;}
-		.dataSum.mRow .inner > li div.val {margin-top: 0;}
-		.dataSum.mRow .inner > li .icon {display: none;}
-	}
-
-	/* comTabData */
-	.comTabData .right {margin-top: auto;}
-	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;} /* 이라인은 적용X */
-
-	/* comGroupTop */
-	.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
-	
-	/* @include media("mobile"){ */
-	@media screen and (max-width: 767px) {
-		.comGroupTop.reverse {flex-direction: column;}
-		.comGroupTop.reverse .alignL {margin-bottom: 20px;}
-		.comGroupTop.reverse .alignR .opList {margin-top: 0;}
-	}
-	
 </style>
 
 <!-- 레이아웃 -->
@@ -1145,13 +1086,13 @@
 					<div class="lnbArea">
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
-							<li class="on"><a href="#">나의 모의베팅</a></li>
-							<li><a href="#">나의 활동지수</a></li>
-							<li><a href="#">나의 게시글</a></li>
-							<li><a href="#">나의 스크랩</a></li>
-							<li><a href="#">내알림</a></li>
-							<li><a href="#">내정보 수정</a></li>
-							<li><a href="#">회원탈퇴</a></li>
+							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 게시글</span></a></li>
+							<li><a href="#"><span>나의 스크랩</span></a></li>
+							<li><a href="#"><span>내알림</span></a></li>
+							<li><a href="#"><span>내정보 수정</span></a></li>
+							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
 
@@ -1163,7 +1104,7 @@
 						</div>
 						<div class="info">
 							가입일 : <span>2024.09.15</span>
-							<span class="tRed">경고 : <span>1</span>회</span>
+							<span class="state tRed">경고 : <span>1</span>회</span>
 						</div>
 						
 						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
@@ -1173,31 +1114,16 @@
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
 				<div class="layoutContArea myMain">
 					<!-- 서브 탑 (타이틀) -->
-					
-
-<div class="cptSubTop ">
-    <div class="subTopArea">
-        <ul class="location">
-            <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">마이페이지</a></li>
-            
-            
-        </ul>
-        <div class="subTitle"><h1></h1></div>
-        <div class="subText"><p></p></div>
-        <ul class="addFunc">
-            <li class="item print">
-                <button class="btnPrint">프린트</button>
-            </li>
-            <li class="item share">
-                <button class="btnShare">공유</button>
-            </li>
-        </ul>
-    </div>
-</div>
+                    <div class="cptSubTop">
+                        <div class="subTopArea">
+                            <ul class="location">
+                                <li class="item"><a href="#">홈</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
 					<div class="cptDataSum bg01">
-						<div class="dataSum tbRow">
+						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
 									<div class="icon">
@@ -1265,15 +1191,39 @@
 
 					<div class="cptSection">
                         <div class="sectArea">
-							<div class="comTitH2 bk">
+							<div class="comTitH2 bk mb0">
 								<h2>나의 스크랩</h2>
 								<div class="right">
 									<button type="button" class="txtBtn">더 보기</button>
 								</div>
 							</div>
-							<div class="tempArea">작업중</div>
 						</div>
 					</div>
+
+					<div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">출주표</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">최근성적</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                contents 0-1
+                            </div>
+                            <div class="tabCont">
+                                contents 0-2
+                            </div>
+                        </div>
+                    </div>
 
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
