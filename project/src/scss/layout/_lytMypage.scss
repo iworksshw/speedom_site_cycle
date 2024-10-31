@@ -78,31 +78,26 @@
                                     // h2 {font-size: rem(20px);}
                                 }
                                 .right {
-                                    margin-left: auto;
+                                    display: flex; align-items: center; margin-left: auto;
                                     .frmBox {
                                         width: 160px; max-width: 160px;
                                         .iptSlt {height: 36px; font-size: 14px; background-position: right 16px center;}
                                     }
                                     .txtBtn {padding-right: 16px; text-align: right; font-size: rem(14px); color: var(--Gray-600); background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;}
+                                    .comTooltip:not(:last-child) {margin-right: 6px;}
                                 }
                             }
                         }
-                        & + * {
-                            margin-top: 0;
+                        & + [class^=cpt],
+                        & + .modTab {
+                            margin-top: 0 !important;
                         }
                     }
                     .comGroupTop .tit {
                         font-size: rem(18px); font-weight: 700;
                     }
-                    // .cptPersonList .prsnList {
-                    //     justify-content: space-between;
-
-                    //     > li:last-child {
-                    //         margin-right: auto;
-                    //     }
-                    // }
                     .comBoardInfoBox {
-                        padding: 24px; background-color: transparent; border-radius: 12px; border: 2px solid var(--Gray-900);
+                        width: 100%; margin: 0; padding: 24px; background-color: transparent; border-radius: 12px; border: 2px solid var(--Gray-900);
                         .comTitH3 h3 {
                             padding-left: 0; background: none;
                         }
@@ -127,12 +122,12 @@
                         .comTitH2 {
                             margin: 0 0 20px;
                         }
-                        .cptSection:not(:first-of-type) {
+                        [class^=cpt]:not(.cptSubTop) {
                             margin-top: 100px;
                         }
-                        .cptDataSum + .cptSection {
+                        .cptDataSum + [class^=cpt] {
                             margin-top: 60px;
-                        }
+                        } 
                         .modTab {
                             margin-top: 12px;
                         }
@@ -238,9 +233,11 @@
                             }
                         }
                         &.myMain {
-                            .cptSection:not(:first-of-type),
-                            .cptDataSum + .cptSection {
+                            [class^=cpt]:not(.cptSubTop) {
                                 margin-top: 60px;
+                            }
+                            .cptBoardList .boardListArea .comTitH2 {
+                                display: flex;
                             }
                         }
                     }
@@ -256,3 +253,36 @@
 
 // 임시 
 .tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
+
+// .lytMypage .layoutContArea > [class^=com],
+// .lytMypage .layoutContArea > [class^=cpt],
+// .lytMypage .layoutContArea > .modTab {
+//     position: relative;
+//     &::after {content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 1px dashed red;}
+//     &[class^=com]::after {border-color: blue !important;}
+// }
+
+.comTooltip {
+    position: relative; display: inline-block; vertical-align: middle;
+    .tipBtn {width: 20px; height: 20px; background: url(../../images/common/ico_guide_default.svg) no-repeat center center; text-indent: -99999px; overflow: hidden;}
+    .comInfoLayerPop {
+        left: 50%; width: 300px; transform: translateX(-50%); text-align: left;
+        .popWrap .popHead {margin-bottom: -12px;}
+        .comBasicTxt .txt {
+            font-size: rem(14px);
+            word-break: break-all;
+        }
+    }
+}
+.untitledName {
+    display: flex; flex-wrap: wrap; flex-direction: column; gap: 24px; margin-top: 32px;
+    > div {
+        flex-direction: column; margin-top: 0;
+    }
+}
+.frmBox {
+    .byte {width: 100%; margin-top: 4px; color: var(--Gray-300); font-size: rem(15px); font-weight: 500; line-height: 1.6; text-align: right; display: block;
+        b {color: var(--Gray-800); font-weight: 500;}
+    }
+
+}
