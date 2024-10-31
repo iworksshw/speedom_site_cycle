@@ -7,6 +7,7 @@
   ---Point2:#A7FFEF;
   --Point-Orange: #F97B07;
   --Point-Blue:#0EA3F6;
+  --Point-Blue2:#2E6CFF;
   --Point-Primary2: #28C39E;
   --Point-Primary3: #1F4F82;
   --Point-Red: #f33;
@@ -159,6 +160,7 @@ body.noScrl {height:100vh; overflow:hidden;}
 .tRed {color: var(--Point-Red) !important;}
 .tOrange {color: var(--Point-Orange) !important;}
 .tBlue {color: var(--Point-Blue) !important;}
+.tBlue2 {color: var(--Point-Blue2) !important;}
 .tMint {color: var(--Point-Primary2) !important;}
 .tZoneGreen {color: var(--zone-green) !important;} //광명
 .tZonePink {color: var(--zone-pink) !important;}  //부산

@@ -1,5 +1,5 @@
 .comImgBox {
-    margin-top: 12px; padding: 50px 30px; border: 1px solid var(--Bg-Line-line-200); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;
+    margin-top: 12px; padding: 50px 30px; border: 1px solid var(--Bg-Line-line-200); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; position: relative;
     &:first-child {margin-top: 0;}
 
     .pcView {width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; }
@@ -20,5 +20,39 @@
         .imgWrap { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;}
 
         &.narrow {padding: 16px;}
+    }
+
+    // 컨텐츠 추가 클래스
+    .btnGroup {
+        width: 100%; height: 100%; position: absolute;
+        &.cameraEquip {
+            .ballon {
+                height: 34px; padding: 0 10px 0 12px; border-radius: 17px; font-size: rem(16px); font-weight: 600; color: #1e3b51; background: #d4efff; position: absolute; left: 50%; transform: translateX(-50%);
+                &::after {display: block; content: ""; width: 16px; height: 16px; background: url(../../images/common/ic_16_ballon_tail.svg) center no-repeat; position: absolute; top: -6px; left: -6px; transform: rotate(80deg);}
+                img {margin-left: 3px; margin-top: -3px; vertical-align: middle;}
+                &.num01 {
+                    top: 54px; margin-left: 70px;
+                    &::after {transform: none; top: 22px;}
+                }
+                &.num02 {bottom: 43px;margin-left: -189px;}
+                &.num03 {bottom: 43px;margin-left: 239px;}
+            }
+        }
+
+        @include media("mobile"){
+            &.cameraEquip {
+                .ballon {
+                    height: 26px; padding: 0 10px; border-radius: 13px; font-size: rem(13px); transform: none;
+                    &::after {width: 12px; height: 12px; background-size: 12px; top: -4px; left: -4px;}
+                    img {margin-left: 1px; width: 14px; height: 14px;}
+                    &.num01 {
+                        top: 21px; margin-left: 0; left: 50.5%;
+                        &::after {top: 15px;}
+                    }
+                    &.num02 {bottom: 19px;margin-left: 0; left: 21%;}
+                    &.num03 {bottom: 19px;margin-left: 0; left: 74%;}
+                }
+            }
+        }
     }
 }
