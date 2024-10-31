@@ -28,6 +28,69 @@
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
 
+<style>
+	.tempArea {display: flex; align-items: center; justify-content: center; padding: 64px 0; background-color: #aaa; color: #fff; font-weight: 300; text-transform: uppercase; letter-spacing: 0;}
+
+	/* cptDataSum */
+	.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
+	.dataSum .inner {display: flex; gap: 20px;}
+	.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
+	.dataSum .inner > li::before {content: ""; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);}
+	.dataSum .inner > li:first-child::before {display: none;}
+	.dataSum .inner > li .item {display: inline-block; color: var(--Gray-600); font-size: 15px; /* font-size: rem(15px); */ line-height: 1.4;}
+	.dataSum .inner > li .val {display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: 20px; /* font-size: rem(20px); */ font-weight: 700; line-height: 1.4;}
+	.dataSum .inner > li div.val {display: block; margin-left: 0; margin-top: 6px;}
+	.dataSum .inner > li .val .unit {font-size: 15px; font-style: normal;}
+	.dataSum .inner > li .icon {width: 40px; height: 40px; margin: 0 auto 8px;}
+	
+	.cptDataSum {position: relative;}
+	.cptDataSum .comTitH2 + .dataSum {margin-top: 20px;}
+	.cptDataSum .addInfo {display: flex; justify-content: space-between; margin-top: 15px; color: var(--Gray-500);}
+	.cptDataSum .alignR {margin-left: auto;}
+	.cptDataSum .btnRefresh {min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: 14px; /* font-size: rem(14px); */ background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4762 6.05556C12.2126 5.42297 11.8243 4.85685 11.3424 4.38889C10.4567 3.52858 9.25498 3 7.93151 3C5.20791 3 3 5.23858 3 8C3 10.7614 5.20791 13 7.93151 13C9.25498 13 10.4567 12.4714 11.3424 11.6111C11.8243 11.1431 12.2126 10.577 12.4762 9.94445M13 4.11111V6.33333H10.8082' stroke='%232C2C2C' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center left;}
+	
+	.cptDataSum[class*=bg] .dataSum {border-color: transparent;}
+	.cptDataSum[class*=bg] .dataSum .inner > li .val .unit {font-size: unset;}
+	.cptDataSum[class*=bg] .addInfo {position: absolute; top: 100%; left: 0; width: 100%;}
+	.cptDataSum.bg01 .dataSum {background-color: var(--Bg-Line-bg-100);}
+	.cptDataSum.bg01 .dataSum .inner > li::before {background-color: #eaecf1;}
+	
+	/* @include media("tablet"){ */
+	@media screen and (max-width: 1023px) {
+		.dataSum.tbRow .inner {flex-wrap: wrap; gap: 12px;}
+		.dataSum.tbRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
+		.dataSum.tbRow .inner > li::before {content: none;}
+		.dataSum.tbRow .inner > li div.val {margin-top: 0;}
+		.dataSum.tbRow .inner > li .icon {display: none;}
+	}
+	/* @include media("mobile"){ */
+	@media screen and (max-width: 767px) {
+		.dataSum .inner > li span.val {display: block; margin-left: 0; margin-top: 6px;}
+
+		.cptDataSum[class*=bg] .addInfo {position: static;}
+
+		.dataSum.mRow .inner {flex-wrap: wrap; gap: 12px;}
+		.dataSum.mRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
+		.dataSum.mRow .inner > li::before {content: none;}
+		.dataSum.mRow .inner > li div.val {margin-top: 0;}
+		.dataSum.mRow .inner > li .icon {display: none;}
+	}
+
+	/* comTabData */
+	.comTabData .right {margin-top: auto;}
+	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
+
+	/* comGroupTop */
+	.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
+	
+	/* @include media("mobile"){ */
+	@media screen and (max-width: 767px) {
+		.comGroupTop.reverse {flex-direction: column;}
+		.comGroupTop.reverse .alignL {margin-bottom: 20px;}
+		.comGroupTop.reverse .alignR .opList {margin-top: 0;}
+	}
+</style>
+
 <!-- 레이아웃 -->
 <div class="lytLayout">
 	<div class="layoutArea">
@@ -1076,12 +1139,6 @@
 			<div class="layoutSubCont">
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				
-				<!-- 서브 LNB -->
-				<div class="layoutLnbArea">
-
-				</div>
-
 				<!-- 서브 탑 (타이틀) -->
 				
 
@@ -1112,62 +1169,7 @@
 
 				<div class="layoutContArea">
 
-                    <style>
-						/* cptDataSum */
-						.dataSum {padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);}
-						.dataSum .inner {display: flex; gap: 20px;}
-						.dataSum .inner > li {position: relative; flex: 1; text-align: center;}
-						.dataSum .inner > li::before {content: ""; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);}
-						.dataSum .inner > li:first-child::before {display: none;}
-						.dataSum .inner > li .item {display: inline-block; color: var(--Gray-600); font-size: 15px; /* font-size: rem(15px); */ line-height: 1.4;}
-						.dataSum .inner > li .val {display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: 20px; /* font-size: rem(20px); */ font-weight: 700; line-height: 1.4;}
-						.dataSum .inner > li div.val {display: block; margin-left: 0; margin-top: 6px;}
-						.dataSum .inner > li .val .unit {font-size: 15px; font-style: normal;}
-						.dataSum .inner > li .icon {width: 40px; height: 40px; margin: 0 auto 8px;}
-						
-						.cptDataSum .comTitH2 + .dataSum {margin-top: 20px;}
-						.cptDataSum .addInfo {display: flex; justify-content: space-between; margin-top: 15px; color: var(--Gray-500);}
-						.cptDataSum .alignR {margin-left: auto;}
-						.cptDataSum .btnRefresh {min-width: 24px; height: 20px; padding-left: 20px; color: unset; font-size: 14px; /* font-size: rem(14px); */ background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4762 6.05556C12.2126 5.42297 11.8243 4.85685 11.3424 4.38889C10.4567 3.52858 9.25498 3 7.93151 3C5.20791 3 3 5.23858 3 8C3 10.7614 5.20791 13 7.93151 13C9.25498 13 10.4567 12.4714 11.3424 11.6111C11.8243 11.1431 12.2126 10.577 12.4762 9.94445M13 4.11111V6.33333H10.8082' stroke='%232C2C2C' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center left;}
-						
-						.cptDataSum[class*=bg] .dataSum {border-color: transparent;}
-						.cptDataSum.bg01 .dataSum {background-color: var(--Bg-Line-bg-100);}
-						.cptDataSum.bg01 .dataSum .inner > li::before {background-color: #eaecf1;}
-						
-						/* @include media("mobile"){ */
-						@media screen and (max-width: 767px) {
-							.dataSum .pcView {display: none;}
-
-							.dataSum .inner > li span.val {display: block; margin-left: 0; margin-top: 6px;}
-
-							.dataSum.mRow .inner {flex-wrap: wrap; gap: 12px;}
-							.dataSum.mRow .inner > li {flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;}
-							.dataSum.mRow .inner > li::before {content: none;}
-							.dataSum.mRow .inner > li div.val {margin-top: 0;}
-						}
-
-						/* comTabData */
-						/* .comTabData.addR {display: flex; align-items: flex-end; flex-wrap: wrap; justify-content: space-between;}
-						.comTabData.addR .tabMenuGroup {width: auto;}
-						.comTabData.addR .addTxt {} */
-						/* .comTabData {display: flex; flex-wrap: wrap; justify-content: space-between;}
-						.comTabData .right .frmBox {width: 160px; max-width: 160px;} */
-						.comTabData .right {margin-top: auto;}
-						.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
-
-						/* comGroupTop */
-						.comGroupTop .tit {font-size: 18px; /* font-size: rem(18px); */ font-weight: 700;}
-						
-						/* @include media("mobile"){ */
-						@media screen and (max-width: 767px) {
-							.comGroupTop.reverse {flex-direction: column;}
-							.comGroupTop.reverse .alignL {margin-bottom: 20px;}
-							.comGroupTop.reverse .alignR .opList {margin-top: 0;}
-						}
-						
-					</style>
-
-					<div class="cptDataSum bg01">
+					<div class="cptDataSum">
 						<div class="comTitH2 bk">
 							<h2>내알림</h2>
 							<div class="right">
@@ -1222,43 +1224,18 @@
 						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
-									<div class="icon pcView">
-										<svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect x="0.666748" y="0.5" width="40" height="40" rx="20" fill="#28C39E"/>
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6654 10.7004L17.585 10.7004C17.0433 10.7003 16.6676 10.7002 16.3389 10.7581C14.8131 11.0272 13.6084 12.1939 13.2841 13.6992H12.6654C11.3031 13.6992 10.1987 14.8036 10.1987 16.1659V16.4992C10.1987 18.5979 11.9 20.2992 13.9987 20.2992C14.111 20.2992 14.218 20.2761 14.315 20.2343C15.4532 21.9646 17.3598 23.142 19.554 23.2858C19.6486 23.292 19.7492 23.2956 19.8667 23.2977V26.7H17.6667C16.1203 26.7 14.8667 27.9536 14.8667 29.5V30.5C14.8667 30.9418 15.2249 31.3 15.6667 31.3H25.6667C26.1085 31.3 26.4667 30.9418 26.4667 30.5V29.5C26.4667 27.9536 25.2131 26.7 23.6667 26.7H21.4667V23.2843C23.6513 23.1337 25.5485 21.9584 26.6827 20.234C26.7798 20.276 26.887 20.2992 26.9995 20.2992C29.0982 20.2992 30.7995 18.5979 30.7995 16.4992V16.1659C30.7995 14.8036 29.6951 13.6992 28.3328 13.6992H27.7133C27.389 12.1939 26.1844 11.0272 24.6586 10.7581C24.3298 10.7002 23.9542 10.7003 23.4124 10.7004L23.3321 10.7004H17.6654ZM27.7987 15.2992V16.0004V16.0373V16.0374V16.0375V16.0375C27.7987 16.4666 27.7988 16.7228 27.7842 16.9451C27.7453 17.5387 27.6308 18.1111 27.4501 18.653C28.449 18.4451 29.1995 17.5598 29.1995 16.4992V16.1659C29.1995 15.6872 28.8115 15.2992 28.3328 15.2992H27.7987ZM12.6654 15.2992H13.1987V16.0004L13.1987 16.0373V16.0373V16.0373V16.0373C13.1987 16.4666 13.1987 16.7227 13.2133 16.9451C13.2522 17.5386 13.3667 18.111 13.5473 18.6528C12.5488 18.4446 11.7987 17.5595 11.7987 16.4992V16.1659C11.7987 15.6872 12.1868 15.2992 12.6654 15.2992ZM16.6167 12.3338C16.7889 12.3035 17.012 12.3004 17.6654 12.3004H23.3321C23.9855 12.3004 24.2086 12.3035 24.3808 12.3338C25.2916 12.4944 26.0047 13.2076 26.1653 14.1184C26.1957 14.2906 26.1987 14.5136 26.1987 15.1671V16.0004C26.1987 16.4774 26.1983 16.6772 26.1876 16.8405C26.0169 19.4444 23.9428 21.5186 21.3388 21.6893C21.1755 21.7 20.9757 21.7004 20.4987 21.7004C20.0218 21.7004 19.8219 21.7 19.6586 21.6893C17.0547 21.5186 14.9805 19.4444 14.8099 16.8405C14.7992 16.6772 14.7987 16.4774 14.7987 16.0004V15.1671C14.7987 14.5136 14.8018 14.2906 14.8322 14.1184C14.9928 13.2076 15.7059 12.4944 16.6167 12.3338ZM17.6667 28.3C17.004 28.3 16.4667 28.8373 16.4667 29.5V29.7H24.8667V29.5C24.8667 28.8373 24.3294 28.3 23.6667 28.3H17.6667Z" fill="white"/>
-										</svg>
-									</div>
 									<div class="item">현재 보유 활동지수</div>
 									<div class="val">2,000,000 <i class="unit">P</i></div>
 								</li>
 								<li>
-									<div class="icon pcView">
-										<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect y="0.5" width="40" height="40" rx="20" fill="#0EA3F6"/>
-										<path d="M10.4 25.3L15.776 20.1308L20.384 24.5616L29.6 15.7M29.6 15.7H22.688M29.6 15.7V22.3462" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
-									</div>
 									<div class="item">8월 적립 활동지수</div>
 									<div class="val tBlue">+3,000,500 <i class="unit">P</i></div>
 								</li>
 								<li>
-									<div class="icon pcView">
-										<svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect x="0.333252" y="0.5" width="40" height="40" rx="20" fill="#FF9533"/>
-										<path d="M12.4388 27.6074L11.8038 27.1209H11.8038L12.4388 27.6074ZM13.6018 24.3377L12.8018 24.3312V24.3377H13.6018ZM13.6262 21.3609L14.4262 21.3674V21.3609H13.6262ZM28.2339 27.6233L28.8786 27.1496L28.8786 27.1496L28.2339 27.6233ZM27.1147 24.3377L26.3147 24.331V24.3377H27.1147ZM27.1391 21.4588L27.9391 21.4656V21.4588H27.1391ZM13.0739 28.0939C13.7372 27.2282 14.4018 25.9285 14.4018 24.3377H12.8018C12.8018 25.4756 12.3241 26.4417 11.8038 27.1209L13.0739 28.0939ZM14.4018 24.3443L14.4262 21.3674L12.8262 21.3543L12.8018 24.3312L14.4018 24.3443ZM28.8786 27.1496C28.3804 26.4715 27.9147 25.4947 27.9147 24.3377H26.3147C26.3147 25.9281 26.9519 27.2295 27.5892 28.0969L28.8786 27.1496ZM27.9146 24.3445L27.9391 21.4656L26.3391 21.4521L26.3147 24.331L27.9146 24.3445ZM27.9391 21.4588C27.9391 17.2836 24.5274 13.9105 20.3333 13.9105V15.5105C23.6566 15.5105 26.3391 18.1801 26.3391 21.4588H27.9391ZM27.8266 29.3394C28.4491 29.3394 28.8489 28.9055 29.0134 28.5221C29.1769 28.1413 29.2082 27.5982 28.8786 27.1496L27.5892 28.0969C27.5466 28.0389 27.5353 27.984 27.5336 27.9531C27.5319 27.9243 27.5372 27.905 27.5432 27.8909C27.549 27.8774 27.5656 27.8457 27.609 27.8119C27.6576 27.7741 27.7346 27.7395 27.8266 27.7395V29.3394ZM14.4262 21.3609C14.4262 18.1362 17.0645 15.5105 20.3333 15.5105V13.9105C16.1936 13.9105 12.8262 17.2398 12.8262 21.3609H14.4262ZM12.8409 27.7395C12.9351 27.7395 13.0131 27.7755 13.0615 27.8138C13.1043 27.8478 13.1197 27.8789 13.1247 27.8908C13.1298 27.9032 13.1348 27.9212 13.1328 27.9493C13.1307 27.9794 13.1188 28.0353 13.0739 28.0939L11.8038 27.1209C11.4598 27.5699 11.4877 28.1217 11.6476 28.5058C11.8084 28.8919 12.208 29.3394 12.8409 29.3394V27.7395ZM27.8266 27.7395H12.8409V29.3394H27.8266V27.7395ZM22.7333 28.5395C22.7333 29.6752 21.7185 30.7 20.3333 30.7V32.3C22.4827 32.3 24.3333 30.6738 24.3333 28.5395H22.7333ZM20.3333 30.7C18.948 30.7 17.9333 29.6752 17.9333 28.5395H16.3333C16.3333 30.6738 18.1838 32.3 20.3333 32.3V30.7ZM21.6666 12.6053C21.6666 13.3162 21.0797 13.9105 20.3333 13.9105V15.5105C21.9433 15.5105 23.2666 14.2198 23.2666 12.6053H21.6666ZM20.3333 13.9105C19.5868 13.9105 18.9999 13.3162 18.9999 12.6053H17.3999C17.3999 14.2198 18.7232 15.5105 20.3333 15.5105V13.9105ZM18.9999 12.6053C18.9999 11.8943 19.5868 11.3 20.3333 11.3V9.7C18.7232 9.7 17.3999 10.9908 17.3999 12.6053H18.9999ZM20.3333 11.3C21.0797 11.3 21.6666 11.8943 21.6666 12.6053H23.2666C23.2666 10.9908 21.9433 9.7 20.3333 9.7V11.3Z" fill="white"/>
-										</svg>
-									</div>
 									<div class="item">8월 사용 활동지수</div>
 									<div class="val tRed">-1,000,500 <i class="unit">P</i></div>
 								</li>
 							</ul>
-						</div>
-						<div class="addInfo">
-							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
-							<!-- <div class="alignR">
-								<button type="button" class="btnRefresh" title="새로고침"></button>
-								<span class="info">2024.10.15 20:00 기준</span>
-							</div> -->
 						</div>
 					</div>
 						

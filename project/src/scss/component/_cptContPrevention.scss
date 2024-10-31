@@ -30,13 +30,6 @@
             &::after {display: inline-block; content: ""; vertical-align: text-top; width: 20px; height: 20px; margin-left: 4px; background: url(../../images/common/ic_16_arr_right_w.svg) center no-repeat;}
         }
     }
-    .comDataTable + .comBasicTxt {margin-top: 20px;}
-    .comBasicTxt + .comBasicList {margin-top: 12px;}
-    .mgt16 {margin-top: 16px;}
-    .mgt20 {margin-top: 20px;}
-    .mgt32 {margin-top: 32px;}
-    .comDataTable .tableArea table tbody tr td b {color: var(--Gray-700); display: block;}
-
     
     @include media("mobile"){
         margin-top: 40px;
@@ -56,12 +49,5 @@
 
             }
         }
-
-        .mgt20,
-        .comDataTable + .comBasicTxt,
-        .mgt16 {margin-top: 12px;}   
-        .mgt32 {margin-top: 26px;}
-        .rightBtn {margin-top: 20px;}
-        
     }
 }

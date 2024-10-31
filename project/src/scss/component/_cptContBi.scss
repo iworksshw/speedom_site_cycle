@@ -4,17 +4,13 @@
     .BiInfo {margin-top: 20px;}
     .biBox {        
         .biImg {
-            position: relative;
-            img {width: 100%; height: auto;}
-            .i1 {display: block;}
-            .i1_mo {display: none;}
+            position: relative; height: 403px; background: url(../../../images/contents/cont06_02_bg2.svg) no-repeat center/cover; display: flex; align-items: center; justify-content: center;
         }        
     }
 
     .biDownLoad {
         margin-top: 20px; text-align: center;
-        .btn.gLine {border: 1px solid var(--Gray-600); color: var(--Gray-800);}
-        .btn.lg::before {content:''; width: 20px; height: 20px; display: inline-block; vertical-align: text-top; margin-right: 4px; background: url(../../images/common/ic_20_file_download.svg)}
+        .btn::before {content:''; width: 20px; height: 20px; display: inline-block; vertical-align: text-top; margin-right: 4px; background: url(../../images/common/ic_20_file_download.svg)}
     }
     
     .LogoSignInfo {
@@ -49,8 +45,8 @@
         .BiInfo {margin-top: 16px;}
         .biBox {        
             .biImg {
-                .i1 {display: none;}
-                .i1_mo {display: block; width: 100%; height: auto;}
+                height: 200px;
+                .i2 {height: 116px;}
             }        
         }
         .biDownLoad {margin-top: 16px;}
@@ -70,7 +66,5 @@
                 }
             }
         }
-        .comDataTable .tableArea {width: 100%; margin-left: 0;}
-        .comDataTable .tableArea table tbody tr td {padding: 10px 10px; word-break: keep-all;}
     }
 }
