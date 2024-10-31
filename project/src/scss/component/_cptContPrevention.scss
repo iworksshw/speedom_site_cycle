@@ -5,8 +5,8 @@
         display: flex; flex-wrap: wrap; gap: 40px;
         .item {
             position: relative; width: calc(50% - 20px);
-            &::before {content:""; position: absolute; top: -4px; left: 0; right: 0; bottom: 0; border-radius: 16px 16px 25px 25px; background-image: linear-gradient(to right, rgba(63, 144, 221, 1), rgba(70, 195, 183, 1)); background-origin: border-box; background-clip: content-box, border-box;}
-            a {display: block; padding: 40px 40px 0; min-height: 232px; background: #FFF; border-radius: 16px; border: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 1;}
+            &::before {content:""; position: absolute; top: -4px; left: 0; right: 0; height: 50%; border-radius: 16px 16px 25px 25px; background-image: linear-gradient(to right, rgba(70, 195, 183, 1), rgba(63, 144, 221, 1)); background-origin: border-box; background-clip: content-box, border-box;}
+            a {display: block; padding: 40px 40px; height: 100%; background: #FFF; border-radius: 16px; border: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 1;}
             a:hover {background: linear-gradient(90deg, #EEFAF9 -0.24%, #EDF5FD 99.92%);}
             a:hover .lk {color: var(---Primary);}
             a:hover .lk::after {background: url(../../images/common/ic_12_arr_right_p.svg) no-repeat center;}
@@ -39,7 +39,7 @@
             .item {
                 width: 100%;
                 a {
-                    padding: 32px 24px; min-height: 217px;
+                    padding: 32px 24px;
                     dt {font-size: rem(18px); margin-bottom: 6px;}
                     dd {
                         font-size: rem(14px);
