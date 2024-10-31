@@ -1,4 +1,5 @@
 .cptDataList {
+    position: relative; margin-top: 60px;
 	.dataListBox {
         display: flex; flex-wrap: wrap; gap: 20px;
         > li {
@@ -37,7 +38,7 @@
             .date {color: var(--Gray-300);}
             .tit {color: var(--Gray-400);}
         }
-
+        
         &.col3 > li {
             width: calc(33.3333% - 13.3333px);
             &:last-child {
@@ -54,22 +55,26 @@
             }
         }
     }
-    .comTabData + & {
+    .comTabData + .dataListBox {
         margin-top: 32px;
     }
-    .comAddGuide.alignR {
-        position: relative; display: flex; justify-content: flex-end;
-        .guide {
-            position: absolute;
-            bottom: 100%;
-            right: 0;
-            margin-bottom: 10px;
-        }
+    
+    .txtS {font-size: rem(14px); color: var(--Gray-600); line-height: 1.6;}
+    .addInfo {
+        position: absolute; left: 0; bottom: 100%; display: flex; justify-content: flex-end; width: 100%; margin-bottom: 8px;
+        .txtS {margin-left: auto;}
+    }
         
-        @include media("mobile"){
-            .guide {
-                position: static;
-            }
+    @include media("mobile"){
+		margin-top: 40px;
+        .addInfo {
+            position: static;
+        }
+        .comTabData .right {
+            text-align: right;
+        }
+        .comTabData + .dataListBox {
+            margin-top: 8px;
         }
     }
 }
