@@ -1,0 +1,53 @@
+.modAccordionList {
+    margin-top: 80px;
+
+    .accoList {
+        border-top: 1px solid var(--Bg-Line-line-100);
+        .accoItem {
+            .accoArea {
+                .accoTop {
+                    border-bottom: 1px solid var(--Bg-Line-line-100);
+                    .accoTitle {
+                        padding: 24px 32px; padding-right: 86px; font-size: rem(18px); font-weight: 500; color: var(--Gray-800); line-height: 1.6; position: relative; width: 100%; text-align: left;
+                        &::after {content:''; position: absolute; top: 50%; right: 32px; background: url(../../images/common/ic_20_down_arr.svg) center no-repeat; width: 24px; height: 24px; margin-top: -12px; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease;}
+                    }
+                }
+                .accoBody {
+                    display: none; overflow: hidden; width: 100%; border-bottom: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100);
+                    .accoCont {
+                        font-size: rem(16px); color: var(--Gray-700); line-height: 1.6; padding: 32px 32px;
+                        .mgb12 {margin-bottom: 12px;}
+                        .comContTable table tbody td {background: var(--Bg-Line-white);}
+                    }
+                }
+            }
+            .accoArea.on {
+                .accoTitle {
+                    background: var(--Bg-Line-bg-100);
+                    &::after {transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg);}
+                }
+            }
+        }
+    }    
+
+    @include media("mobile"){
+        margin: 40px -16px 0;
+        .accoList {
+            .accoItem {
+                .accoArea {
+                    .accoTop {
+                        .accoTitle {
+                            padding: 18px 16px; padding-right: 46px; font-size: rem(16px); font-weight: 500; line-height: 1.4;
+                            &::after {background: url(../../images/common/ic_20_down_arr.svg) center/16px no-repeat; right: 12px;}
+                        }
+                    }
+                    .accoBody {
+                        .accoCont {
+                            font-size: rem(15px); color: var(--Gray-700); line-height: 1.6; padding: 24px 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
