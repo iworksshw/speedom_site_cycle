@@ -1103,6 +1103,24 @@
 							<div class="subTitle">
 								<h1>나의 활동지수</h1>
                                 <div class="right">
+									<div class="comTooltip">
+										<button type="button" class="popIcon tipBtn" onclick="openPopup('carrer')">팝업 열기</button>
+
+										<div class="comInfoLayerPop" id="carrer">
+											<div class="popWrap">
+												<div class="popHead">
+													<div class="popTit"></div>
+													<button type="button" class="popClose" onclick="closePopup('carrer')">팝업 닫기</button>
+												</div>
+												<div class="popBody" style="height: auto;">
+													<div class="comBasicTxt">
+														<p class="txt"><em>활동지수 적립/사용 조회</em></p>
+														<p class="txt">최근 6개월까지 적립 사용내역을 조회할 수 있어요.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
                                     <div class="frmBox">
                                         <select class="iptSlt">
                                             <option value="">2024년</option>
@@ -1118,7 +1136,26 @@
 						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
-									<div class="item">현재 보유 활동지수</div>
+									<div class="item">현재 보유 활동지수
+										<div class="comTooltip">
+											<button type="button" class="popIcon tipBtn" onclick="openPopup('carrer2')">팝업 열기</button>
+	
+											<div class="comInfoLayerPop" id="carrer2">
+												<div class="popWrap">
+													<div class="popHead">
+														<div class="popTit"></div>
+														<button type="button" class="popClose" onclick="closePopup('carrer2')">팝업 닫기</button>
+													</div>
+													<div class="popBody" style="height: auto;">
+														<div class="comBasicTxt">
+															<p class="txt"><em>활동지수란?</em></p>
+															<p class="txt">활동지수는 사이트 내 활동을 통해 얻을 수 있는 마일리지를 뜻해요.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="val">2,000,000 <i class="unit">P</i></div>
 								</li>
 								<li>
@@ -1132,153 +1169,147 @@
 							</ul>
 						</div>
                     </div>
-                    
-                    <div class="cptSection">
-						<div class="sectArea">
-						
-							<div class="comTabData">
-								<div class="tabMenuGroup tabDataSwiper">
-									<ul class="tabMenu swiper-wrapper">
-										<li class="tabItem swiper-slide">
-											<button type="button" class="tabName on">전체</button>
-										</li>
-										<li class="tabItem swiper-slide">
-											<button type="button" class="tabName">적립</button>
-										</li>
-										<li class="tabItem swiper-slide">
-											<button type="button" class="tabName">사용</button>
-										</li>
-									</ul>
-								</div>
-								
-								<div class="right">
-									<div class="comAddGuide"> 
-										<p class="guide">활동지수는 매월 1일에 초기화 됩니다.</p>
-									</div>
-								</div>
-							</div>
 
-							<div class="cptDataList">
-								<ul class="dataListBox">
-									<li>
-										<a href="#" class="block">
-											<div class="tit">예상과 후기 사용자 글쓰기</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tRed">
-												<span class="state">사용</span>
-												-50,000 <i class="unit">P</i>
-											</div>
-										</a>
+					<div class="cptDataList">
+						<div class="comTabData">
+							<div class="tabMenuGroup tabDataSwiper">
+								<ul class="tabMenu swiper-wrapper">
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName on">전체</button>
 									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">회원가입 이벤트</div>
-											<div class="date">2024-09-09</div>
-											<div class="val tBlue">
-												<span class="state">적립</span>
-												+1,050,000 <i class="unit">P</i>
-											</div>
-										</a>
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName">적립</button>
 									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">이벤트 적립</div>
-											<div class="date">2024-09-09</div>
-											<div class="val tBlue">
-												<span class="state">적립</span>
-												+500 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">예상과 후기 사용자 글쓰기</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tRed">
-												<span class="state">사용</span>
-												-50,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">[모의베팅] 24회차 05경주 환급</div>
-											<div class="date">2024-09-09</div>
-											<div class="val tBlue">
-												<span class="state">적립</span>
-												+1,050,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">[모의베팅] 24회차 05경주 환급</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tBlue">
-												<span class="state">적립</span>
-												+1,050,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">회원가입 이벤트</div>
-											<div class="date">2024-09-09</div>
-											<div class="val tBlue">
-												<span class="state">적립</span>
-												+1,050,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">예상과 후기 사용자 글쓰기</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tRed">
-												<span class="state">사용</span>
-												-50,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">예상과 후기 사용자 글쓰기</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tRed">
-												<span class="state">사용</span>
-												-50,000 <i class="unit">P</i>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="block">
-											<div class="tit">예상과 후기 사용자 글쓰기</div>
-											<div class="date">2024-09-08</div>
-											<div class="val tRed">
-												<span class="state">사용</span>
-												-50,000 <i class="unit">P</i>
-											</div>
-										</a>
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName">사용</button>
 									</li>
 								</ul>
-								
-								<!-- 페이징 -->
-								<div class="comPaging">
-									<a class="start" href="#"></a>
-									<a class="prev" href="#"></a>
-									<ul class="numList">
-										<li><a href="#">1</a></li>
-										<li class="on"><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">5</a></li>
-									</ul>
-									<a class="next" href="#"></a>
-									<a class="end" href="#"></a>
-								</div>
+							</div>
+							
+							<div class="right">
+								<p class="txtS">활동지수는 매월 1일에 초기화 됩니다.</p>
 							</div>
 						</div>
+						
+						<ul class="dataListBox">
+							<li>
+								<a href="#" class="block">
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">사용</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">회원가입 이벤트</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">적립</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">이벤트 적립</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">적립</span>
+										+500 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">사용</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">적립</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tBlue">
+										<span class="state">적립</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">회원가입 이벤트</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">적립</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">사용</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">사용</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">사용</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+						<!-- 페이징 -->
+						<div class="comPaging">
+							<a class="start" href="#"></a>
+							<a class="prev" href="#"></a>
+							<ul class="numList">
+								<li><a href="#">1</a></li>
+								<li class="on"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+							</ul>
+							<a class="next" href="#"></a>
+							<a class="end" href="#"></a>
+						</div>
 					</div>
+					
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				
