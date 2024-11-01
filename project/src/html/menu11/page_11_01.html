@@ -1,0 +1,79 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <div class="layoutContArea">
+                    <div class="cptJoinTable">
+                        <div class="joinArea">
+                            <div class="certifyTitle alignCenter">
+                                <h2>휴대폰 본인인증을 통해<br class="mView"> 아이디를 확인할 수 있어요.</h2>
+                            </div>
+                            <div class="certifyGroup">
+                                <div class="comBtnGroup">
+                                    <div class="alignC">
+                                        <div class="btnBox min">
+                                            <button class="btn lg Primary">휴대폰 본인인증</button>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="bulletTitle flexCenter">
+                                    <h3 class="bullet"><span>실명인증이 정상적으로 되지 않으세요?</span></h3>
+                                </div>
+                            </div>
+                            <div class="comJoinBtmText">
+                                <div class="textBox">
+                                    <ul class="listGroup color">
+                                        <li class="item">고객님의 개인정보를 신중하게 보호하고 있으며, 회원님의 동의 없이는 기재하신 회원정보가 누출되지 않습니다.</li>
+                                        <li class="item">고객님의 가입여부 및 본인인증을 위하여 이름과 휴대폰 번호를 확인해 주시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

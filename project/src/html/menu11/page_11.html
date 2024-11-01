@@ -1,0 +1,301 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객광장', '약관'],
+                    subTitle: '이용약관',
+                    subText: '공정하고 안전한 서비스 환경을 위해<br class="pcView">경륜경정총괄본부는 <b>약관을 준수</b>합니다.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+                    <div class="cptJoinTable">
+                        <div class="joinArea">
+                            <div class="joinStep">
+                                <ul class="stepGroup">
+                                    <li class="step complete"><span class="txt">본인인증</span></li> <!-- addClass - complete : 입력완료, current : 현재 -->
+                                    <li class="step current"><span class="txt">정보입력 및 약관동의</span></li>
+                                    <li class="step"><span class="txt">가입완료</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="joinTitle">
+                                <h2>소중한 개인정보 보호를 위해 비밀번호를 변경해주세요.</h2>
+                            </div>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    이름
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="이름을 입력해주세요" value="홍길동" disabled />
+                                            <span class="errMsg">메시지 내용</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    휴대폰 번호
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="휴대폰 번호를 입력해주세요" value="010-0987-1234" disabled />
+                                            <span class="errMsg">메시지 내용</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    아이디<span class="required">*</span>
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="아이디를 입력하세요"  />
+                                            <span class="errMsg">메시지 내용</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    현재 비밀번호<span class="required">*</span>
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" />
+                                            <span class="errMsg">메시지 내용</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    새로운 비밀번호<span class="required">*</span>
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error">
+                                            <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" value="012345678" />
+                                            <span class="errMsg">기존 비밀번호는 사용할 수 없어요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">
+                                    비밀번호 확인
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error">
+                                            <input type="password" class="iptText" placeholder="비밀번호를 다시 한번 입력해주세요." value="987654321" />
+                                            <span class="errMsg">비밀번호가 일치하지 않아요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="comBtnGroup">
+                                <div class="alignC">
+                                    <div class="btnBox min">
+                                        <button class="btn lg Primary">휴대폰 본인인증</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comJoinBtmText">
+                                <div class="textBox">
+                                    <ul class="listGroup">
+                                        <li class="item">비밀번호는 최소 9 ~ 최대 12 자 이내로 입력해주세요.</li>
+                                        <li class="item">영문, 숫자, 특수문자를 각 1자리 이상 반드시 포함해주세요.</li>
+                                        <li class="item">특수문자 중 <,>,(,(,#,’,| 는 사용할 수 없어요.</li>
+                                        <li class="item">3자리 이상 동일하거나 연속되는 숫자 또는 문자열은 사용할 수 없어요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comBtnGroup">
+                                <div class="alignC">
+                                    <div class="btnBox reverse">
+                                        <button class="btn lg gLine pcW200">다음에 변경하기</button>
+                                        <button class="btn lg Primary pcW200">비밀번호 변경</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comPrivacyBox">
+                                <dl class="infoBox">
+                                    <dt class="boxTop">
+                                        <div class="frmGroup">
+                                            <div class="frmBox maxCont">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">약관 및 서비스 정보 수신 전체 동의</label>
+                                            </div>
+                                        </div>
+                                    </dt>
+                                    <dd class="boxCont">
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">(필수) 통합회원 이용약관 </label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">(필수) 개인정보 수집 및 이용동의</label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">[선택] 서비스 정보 수신 동의</label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <ul class="miniCheckList">
+                                            <li class="miniItem">
+                                                <div class="listTxt">경륜 자료수신여부</div>
+                                                <div class="miniCheck">
+                                                    <div class="alignL">
+                                                        <div class="frmBox">
+                                                            <input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">휴대폰</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">이메일</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="miniItem">
+                                                <div class="listTxt">경정 자료수신여부</div>
+                                                <div class="miniCheck">
+                                                    <div class="alignL">
+                                                        <div class="frmBox">
+                                                            <input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">휴대폰</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input id="chk108" type="checkbox" class="iptChk"><label for="chk108" class="iptLbl">이메일</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                        <p class="txtTit">
+                                            약관 및 서비스 정보 수신 전체 동의
+                                        </p>
+                                        <p class="txt">
+                                            선수의 등급은 상ㆍ하반기(6개월단위)마다 경주 성적에 따라 등급 심사를 통하여 조정됩니다. 수급반은 매회차 변경됩니다.(S1↔S2)
+                                        </p>
+                                        <ul class="listGroup">
+                                            <li class="item">
+                                                <b class="lineTit">수집 및 이용항목</b>
+                                                <i class="lineTxt">회원가입 필수정보 외 성별, 나이, 이용지점</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="lineTit">수집 및 이용목적</b>
+                                                <i class="lineTxt">일일명예심판 행사 진행 관련</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="lineTit">보유 및 이용기간 : 3년</b>
+                                                <i class="lineTxt">(단, 법령에 따로 정하는 경우는 해당 기간까지 보관)</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="sTit">수집 및 이용목적</b>
+                                                <i class="sTxt">문화교실 운영 관련 수강생 관리</i>
+                                            </li>
+                                            <li class="item">
+                                                <b class="sTit">보유 및 이용기간</b>
+                                                <i class="sTxt">수강기간 내 (단, 법령에 따로 정하는 경우는 해당 기간까지 보관)</i>
+                                            </li>
+                                        </ul>
+                                        <p class="txt">
+                                            선수의 등급은 상ㆍ하반기(6개월단위)마다 경주 성적에 따라 등급 심사를 통하여 조정됩니다. 수급반은 매회차 변경됩니다.(S1↔S2)
+                                        </p>
+                                        <p class="anno">
+                                            ※ 스피존문화교실 회원의 부주의로 발생한 안전사고, 도난 및 분실등에 대해서는 기금조성총괄본부에서 일체 책임지지 않습니다.
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="comBtnGroup">
+                                <div class="alignC">
+                                    <div class="btnBox">
+                                        <button class="btn lg Primary pcW180" disabled>가입하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜시스템',
+                    name: '이윤아',
+                    phone: '02-2067-5824',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>      
