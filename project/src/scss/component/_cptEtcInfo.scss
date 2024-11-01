@@ -41,8 +41,18 @@
                         &:last-child:after {display: none;}
 
                         em {font-size: rem(18px); color: var(---Primary); font-weight: 700; display: block;}
-                        i {margin-top: 4px; font-style: normal; font-size: rem(16px); color: var(--Gray-800); font-weight: 300;display: block;}
+                        i {margin-top: 4px; font-style: normal; font-size: rem(16px); color: var(--Gray-800); font-weight: 300; display: block;}
+                        b {font-weight: 600;}
                     }
+                    .kImg {
+                        margin-top: 255px;
+                        i {font-weight: 400;}
+                        &::before {content:''; position: absolute; top: -255px; left: 0; right: 0; height: 255px;}
+                        &::after {top: -90px;}
+                    }
+                    .step1::before {background: url(../../images/contents/cont06_07_01_step1.png) no-repeat top center / 240px;}
+                    .step2::before {background: url(../../images/contents/cont06_07_01_step2.png) no-repeat top center / 254px;}
+                    .step3::before {background: url(../../images/contents/cont06_07_01_step3.png) no-repeat top center / 240px;}
                 }
 
                 .qnaList {
@@ -82,7 +92,13 @@
     &.col2 {
         dd {display: flex; column-gap: 24px; align-items: center;}
         @include media("mobile"){
-            dd {flex-wrap: wrap; row-gap: 16px;}
+            dd {
+                flex-wrap: wrap; row-gap: 16px;
+                .thumArea {
+                    width: 100%; text-align: center;
+                    img {max-width: 100%;}
+                }
+            }
         }
     }
 
@@ -111,7 +127,17 @@
                         .stepItem {
                             flex: 0 0 100%;
                             &::after {width: 20px; height: 20px; top: auto; right: auto; bottom: -28px; left: 50%; transform: translateX(-50%) rotate(90deg);}
+                            em {font-size: rem(16px);}
+                            i {font-size: rem(15px);}
                         }
+                        .kImg {
+                            margin-top: 102px;
+                            i {font-weight: 400;}
+                            &::before {top: -102px; height: 102px;}
+                        }
+                        .step1::before {background-size: 120px;}
+                        .step2::before {background-size: 127px;}
+                        .step3::before {background-size: 120px;}
                     }
 
                     .qnaList {

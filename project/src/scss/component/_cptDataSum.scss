@@ -1,5 +1,5 @@
 .cptDataSum {
-	position: relative;
+	position: relative; margin-top: 60px;
 	.dataSum {
 		padding: 24px 20px; border-radius: 12px; border: 2px solid var(--Gray-900);
 		> .inner {
@@ -16,6 +16,9 @@
 		}
 		.item {
 			display: inline-block; color: var(--Gray-600); font-size: rem(15px); line-height: 1.4;
+			.comTooltip {
+				position: relative; top: -2px;
+			}
 		}
 		.val {
 			display: inline-block; margin-left: 15px; color: var(--Gray-900); font-size: rem(20px); font-weight: 700; line-height: 1.4;
@@ -63,8 +66,6 @@
 				div.val {margin-top: 0;}
 				.icon {display: none;}
 			}
-			
-			.cptDataSum[class*=bg] .addInfo {position: static;}
 		}
 	}
 	.comTitH2 + .dataSum {
@@ -93,11 +94,19 @@
 		.addInfo {
 			position: absolute; top: 100%; left: 0; width: 100%;
 		}
+		
+		@include media("mobile"){
+			.addInfo {position: static;}
+		}
 	}
 	&.bg01 {
 		.dataSum {
 			background-color: var(--Bg-Line-bg-100);
 			.inner > li::before {background-color: #eaecf1;}
 		}
+	}
+		
+	@include media("mobile"){
+		margin-top: 40px;
 	}
 }

@@ -355,6 +355,20 @@ function openPopup($popName){
 function closePopup($popName){
     document.querySelector("#"+$popName).classList.remove("on");
 }
+// 컨텐츠 레이어팝업 열기
+function openLayerPopup($popName){
+    event.preventDefault();
+    if (document.querySelector("#"+$popName).classList.contains("comInfoLayerPop")) {
+        const lyrPops = document.querySelectorAll(".comInfoLayerPop");
+
+        lyrPops.forEach(function(lyrPop){
+            lyrPop.classList.remove("on");
+        })
+        document.querySelector("#"+$popName).classList.add("on");
+    } else {
+        document.querySelector("#"+$popName).classList.add("on");
+    }
+}
 
 //알럿
 function openAlert($altName){

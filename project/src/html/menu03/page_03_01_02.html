@@ -240,7 +240,7 @@
                                                         <i class="txt">-</i>
                                                     </li>
                                                     <li class="item">
-                                                        <b class="tit">아마경력 <button type="button" class="popIcon" onclick="openPopup('carrer')">팝업 열기</button></b>
+                                                        <b class="tit">아마경력 <button type="button" class="popIcon" onclick="openLayerPopup('carrer')">팝업 열기</button></b> <!--20241031 onclick 함수 수정-->
                                                         <i class="txt">비선수</i>
                                                         <div class="comInfoLayerPop" id="carrer">
                                                             <div class="popWrap">
@@ -300,8 +300,8 @@
                                                         <i class="txt">경남 / 경남</i>
                                                     </li>
                                                     <li class="item">
-                                                        <b class="tit">최신입상내역 <button type="button" class="popIcon" onclick="openPopup('prizing')">팝업 열기</button></b>
-                                                        <i class="txt tMint">부산광역시장배 대상경륜 1위</i>
+                                                        <b class="tit">최신입상내역 <button type="button" class="popIcon" onclick="openLayerPopup('prizing')">팝업 열기</button></b><!--20241031 onclick 함수 수정-->
+                                                        <i class="txt tKey">부산광역시장배 대상경륜 1위</i> <!--20241031 class 변경-->
                                                         <div class="comInfoLayerPop" id="prizing">
                                                             <div class="popWrap">
                                                                 <div class="popHead">
@@ -313,47 +313,49 @@
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">부산광역시장배 대상경륜</span>
-                                                                            <span class="etc">3위</span>
+                                                                            <span class="etc tKey">3위</span> <!--20241031 class 추가 / 'tKey'-->
+                                                                            <!-- to Dev: 순위별 포인트 컬러 class -->
+                                                                            <!-- 1위 : 'tRed' / 2위 : 'tBlue2' / 3위 : 'tKey' -->
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">KSPO 이사장배 왕중왕전 </span>
-                                                                            <span class="etc">1위</span>
+                                                                            <span class="etc tRed">1위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">1위</span>
+                                                                            <span class="etc tRed">1위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                         <li class="carrer">
                                                                             <span class="date">2024. 07</span>
                                                                             <span class="name">제28회 스포츠조선배 대상경륜 </span>
-                                                                            <span class="etc">2위</span>
+                                                                            <span class="etc tBlue2">2위</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -565,46 +567,54 @@
                                                     <button type="button" class="popClose" onclick="closePopup('warned')">팝업 닫기</button>
                                                 </div>
                                                 <div class="popBody">
-                                                    <ul class="carrerList">
-                                                        <li class="carrer">
+                                                    <!-- 20241031 추가 -->
+                                                    <div class="sumBox">
+                                                        <p class="summary">경주규칙 위반점 잔여점수 : <em>41</em></p>
+                                                    </div>
+                                                    <!-- //20241031 추가 -->
+                                                    <!--20241031 ul, li class 수정 / html 일부 수정-->
+                                                    <ul class="warnedList"> 
+                                                        <li class="warned"> 
                                                             <span class="date">2024.07.20</span>
-                                                            <span class="name">28회차 2일차 창원 10경주 73조 2항 2호 주의 판정</span>
-                                                            <span class="etc">특선급</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">제28회 스포츠조선배 대상경륜</span>
-                                                            <span class="etc">특선급 2위</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
-                                                            <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">우수경기선수상</span>
-                                                            <span class="etc">경주사업본부</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">우수경기선수상</span>
-                                                            <span class="etc">경주사업본부</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">우수경기선수상</span>
-                                                            <span class="etc">경주사업본부</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">우수경기선수상</span>
-                                                            <span class="etc">경주사업본부</span>
-                                                        </li>
-                                                        <li class="carrer">
-                                                            <span class="date">2024. 07</span>
-                                                            <span class="name">우수경기선수상</span>
-                                                            <span class="etc">경주사업본부</span>
+                                                        <li class="warned"> 
+                                                            <span class="date">2024.07.20</span>
+                                                            <span class="name">28회차 2일차 창원 10경주</span>
+                                                            <span class="etc"><i class="subTit">위반점수 :</i> 4</span>
+                                                            <p class="result">73조 2항 2호 주의 판정</p>
                                                         </li>
                                                     </ul>
                                                 </div>
