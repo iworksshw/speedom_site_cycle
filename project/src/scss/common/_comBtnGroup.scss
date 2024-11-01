@@ -27,7 +27,11 @@
                 .btn:first-child {width: 30%; min-width: 30%;}
             }
             &.m50 {
-                flex-wrap: nowrap;
+                flex-wrap: nowrap; flex-direction: row;
+                .btn {width: calc(50% - 6px); min-width: calc(50% - 6px);}
+                &.reverse {
+                    flex-direction: row-reverse;
+                }
             }
             &.m70 {
                 flex-wrap: nowrap;
