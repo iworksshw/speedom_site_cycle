@@ -281,6 +281,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //input text reset
+    inputTextReset();
+
     //탭메뉴 (1차)
     tabMenuInit();
 
@@ -804,6 +807,19 @@ function accordionListInit(){
         });
     });
 }
+
+
+// ------------------------------- input text reset 함수 ------------------------------- //
+function inputTextReset(){
+    let btnResets = document.querySelectorAll('.btnReset');
+    btnResets.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            btn.parentNode.querySelector('.iptText').value = "";
+        })
+    })
+}
+
+
 // ------------------------------- 모션 함수 ------------------------------- //
 
 //fade in
