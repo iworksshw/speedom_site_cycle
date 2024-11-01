@@ -573,7 +573,9 @@ function tabMenuInit(){
         //모드탭 내의 메뉴 수
         tabmenus.forEach(function(tabmenu,menuIdx,inElements){
             tabmenu.addEventListener("click", function(event){
-
+                if(this.classList.contains("outlink")){
+                    return;
+                }
                 inElements.forEach(function(inElement){
                     inElement.classList.remove("on");
                     inElement.setAttribute("title", "탭메뉴");
