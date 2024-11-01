@@ -281,6 +281,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //input text reset
+    inputTextReset();
+
     //탭메뉴 (1차)
     tabMenuInit();
 
@@ -351,6 +354,20 @@ function openPopup($popName){
 //팝업 닫기
 function closePopup($popName){
     document.querySelector("#"+$popName).classList.remove("on");
+}
+// 컨텐츠 레이어팝업 열기
+function openLayerPopup($popName){
+    event.preventDefault();
+    if (document.querySelector("#"+$popName).classList.contains("comInfoLayerPop")) {
+        const lyrPops = document.querySelectorAll(".comInfoLayerPop");
+
+        lyrPops.forEach(function(lyrPop){
+            lyrPop.classList.remove("on");
+        })
+        document.querySelector("#"+$popName).classList.add("on");
+    } else {
+        document.querySelector("#"+$popName).classList.add("on");
+    }
 }
 
 //알럿
@@ -804,6 +821,19 @@ function accordionListInit(){
         });
     });
 }
+
+
+// ------------------------------- input text reset 함수 ------------------------------- //
+function inputTextReset(){
+    let btnResets = document.querySelectorAll('.btnReset');
+    btnResets.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            btn.parentNode.querySelector('.iptText').value = "";
+        })
+    })
+}
+
+
 // ------------------------------- 모션 함수 ------------------------------- //
 
 //fade in

@@ -7,13 +7,24 @@
     .imgGroup {
         width: 100%; display: flex; align-items: stretch; 
         .imgArea {
-            flex: 0 0 100%; overflow: hidden; line-height: 1;
-            .imgTxt {margin-top: 12px; font-size: rem(14px); color: var(--Gray-800); line-height: 1.6; text-align: left; word-break: keep-all;}
+            flex: 0 0 100%; overflow: hidden; line-height: 1; text-align: center;
+            .imgTxt {
+                margin-top: 12px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; text-align: left; word-break: keep-all;
+                &.center {text-align: center;}
+            }
         }
     }
     img {max-width: 100%;}
 
     // 컴포넌트 변경 Class
+    // 2열
+    &.col2 {
+        .imgGroup {
+            gap: 80px;
+            .imgArea {flex: 0 0 calc(50% - 40px);}
+        }
+    }
+
     // 3열
     &.col3 {
         .imgGroup {
@@ -27,6 +38,7 @@
         .imgGroup {
             gap: 32px;
             .imgArea {flex: 0 0 calc(25% - 24px);}
+            .imgTxt {font-size: rem(14px);}
         }
     }
 
@@ -38,6 +50,13 @@
             flex-wrap: wrap;
             .imgArea {
                 .imgTxt {margin: 8px 0 4px;}
+            }
+        }
+
+        &.col2 {
+            .imgGroup {
+                gap: 20px;
+                .imgArea {flex: 0 0 100%;}
             }
         }
 

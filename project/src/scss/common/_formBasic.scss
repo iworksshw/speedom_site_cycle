@@ -23,7 +23,7 @@
 
 /* ----- 폼 박스 ----- */
 .frmBox {
-    width: 100%; display: flex; flex-wrap: wrap;
+    width: 100%; display: flex; flex-wrap: wrap; position: relative;
     &.maxCont {width: max-content;}
     &.frmTini {width:auto; min-width:auto;}
     &.frmXs {width:auto; min-width:auto;}
@@ -41,6 +41,13 @@
         }
     }
     &.frmXL {width:auto; min-width:auto;}
+    &:hover .btnReset {
+        display: block;
+    }
+    .btnReset {
+        width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        display: none;
+    }
 }
 
 /* ----- 입력필드 ----- */
@@ -53,9 +60,12 @@
         @include media ('mobile') {
             padding: 0 12px;
         }
+        & + .btnReset {display: block;}
     }
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
     &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
+    &:read-only + .btnReset {display: none !important;}
+    &:disabled + .btnReset {display: none !important;}
     @include media ('mobile') {
         padding: 0 12px;
     }

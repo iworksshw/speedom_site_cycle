@@ -3,9 +3,9 @@
     &:first-child {margin-top: 0;}
 
     .profBox {
-        margin-top: 20px; padding: 40px 40px 40px 80px; background: var(--Bg-Line-bg-50); display: flex; column-gap: 80px; position: relative;
+        margin-top: 20px; padding: 60px 40px 60px 60px; border-radius: 20px; background: var(--Bg-Line-bg-50); display: flex; column-gap: 80px; position: relative;
         .chkArea {
-            position: absolute; top: 20px; left: 20px;
+            position: absolute; top: 24px; right: 40px;
             label {padding-left: 32px; font-size: rem(16px); color: var(--Gray-600); font-weight: 500; line-height: 1.6; background: url(../../images/common/ic_24_chk_star_off.svg) left center no-repeat; cursor: pointer;}
             input[type=checkbox]:checked + label {background-image: url(../../images/common/ic_24_chk_star_on.svg);}
         }
@@ -48,7 +48,10 @@
                             margin-top: 8px; display: flex; position: relative;
                             &:first-child {margin-top: 0;}
                             .tit {min-width: 125px; font-size: rem(16px); color: var(--Gray-700); line-height: 1.6; font-weight: 400; display: inline-block; vertical-align: middle; flex: 1 0 34%;}
-                            .txt {font-size: rem(16px); color: var(--Gray-900); line-height: 1.6; font-weight: 600; font-style: normal; display: inline-block; vertical-align: middle;flex: 1 1 66%;}
+                            .txt {
+                                font-size: rem(16px); color: var(--Gray-900); line-height: 1.6; font-weight: 600; font-style: normal; display: inline-block; vertical-align: middle;flex: 1 1 66%;
+                                &.etc {font-weight: 400;}
+                            }
                             .popIcon {width: 20px; height: 20px; margin-left: 8px; font-size: 0; background: url(../../images/common/ic_20_pop_open.svg) center no-repeat; vertical-align: text-top;}
                             a {text-decoration: underline; text-underline-position: under;}
                         }
@@ -59,7 +62,7 @@
                         flex: 0 0 100%;
                         .dlList {
                             display: flex; column-gap: 80px;
-                            .item {flex: 0 0 calc(50% - 40px);}
+                            .item {flex: 0 0 calc(50% - 40px); margin-top: 0;}
                         }
                     }
                 }
@@ -130,10 +133,21 @@
                         &.full {
                             .dlList {
                                 flex-wrap: wrap;
-                                .item {flex: 0 0 100%;}
+                                .item {
+                                    margin-top: 8px; flex: 0 0 100%;
+                                    &:first-child {margin-top: 0;}
+                                }
                             }
                         }
                     }
+                }
+            }
+            
+            .comInfoLayerPop {
+                width: calc(100% + 46px); left: -23px;
+
+                .popWrap {
+                    .popBody {height: 225px;}
                 }
             }
         }
@@ -153,85 +167,125 @@
     
     // 예외 클래스
     &.inPopup {
-        .sectArea {
-            display: flex; flex-wrap: wrap; gap: 40px 32px; align-items: flex-start;
-            .profPart {
-                flex: 0 0 330px; margin-top: 0; flex-wrap: wrap;
-        
-                .profBox {
-                    width:100%; flex-wrap: wrap;padding: 60px 24px 32px; margin-top: 0; border-radius: 20px; row-gap: 40px; 
-                    
-                    .chkArea {
-                        position: absolute; top: 16px; left: 24px;
-                    }
-                    .photoArea {
-                        flex: 0 1 100%; padding-top: 0;
-                        .thumArea {margin: 0 auto;}
-                        .txtArea {
-                            margin-top: 20px; 
-                            .name {font-size: rem(30px);}
-                        }
-                    }
-            
-                    .infoArea {
-                        flex: 0 1 100%; 
-                        .infoGroup {
-                            gap: 32px;
-                            .infoItem {
-                                flex: 0 0 100%;
-            
-                                .dlList {
-                                    .item {
-                                        .tit {min-width: 120px; font-size: rem(15px);flex: 1 0 42%;}
-                                        .txt {font-size: rem(15px);flex: 1 1 38%;}
-                                    }
-                                }
-            
-                                // 항목 width:100%
-                                &.full {
-                                    flex: 0 0 100%;
-                                    .dlList {
-                                        display: block;
-                                    }
-                                }
+        .profBox {
+            padding: 50px 24px 32px; column-gap: 32px;
+            .chkArea {right: 24px; top: 20px;}
+            .infoArea {
+                .infoGroup {
+                    gap: 40px 32px;
+                    .infoItem {
+                        flex: 0 0 calc(50% - 16px);
+                        .dlList {
+                            .item {
+                                .tit {min-width: 120px; font-size: rem(15px);}
+                                .txt {font-size: rem(15px);}
                             }
                         }
-                    }    
+                        &.full {
+                            flex: 0 0 100%;
+                            .dlList {
+                                column-gap: 32px;
+                            }
+                        }
+                    }
                 }
-                            
-            }
-            .dataPart {
-                flex: 0 1 calc(100% - 362px); margin-top: 0; width: calc(100% - 362px);
-            }
-            .digramPart {
-                margin-top: 0; position: relative;
-                &::before {display: block; content: ""; width: calc(100% + 64px); height: 10px;margin-left: -32px; margin-bottom: 40px; background: #f4f6fa;}
             }
         }
-
         @include media("mobile"){
-            .sectArea {
-                gap: 0;
-                .profPart {
-                    flex: 1 0 100%;  
-                    .profBox {
-                        .infoArea {
-                            .infoGroup {
-                                .infoItem {
-                                    .dlList {
-                                        .item {
-                                            .tit {flex: 1 0 24%;}
-                                        }
-                                    }
-                                }
-                            }
+            .profBox {
+                padding: 20px 24px 32px;
+                .infoArea {
+                    .infoGroup {
+                        gap: 32px;
+                        .infoItem {
+                            flex: 0 0 100%;
                         }
                     }
-                }
-                .dataPart {
-                    flex: 1 0 100%; margin-top: 40px; width: 100%;
                 }
             }
         }
     }
+    // &.inPopup {
+    //     .sectArea {
+    //         display: flex; flex-wrap: wrap; gap: 40px 32px; align-items: flex-start;
+    //         .profPart {
+    //             flex: 0 0 330px; margin-top: 0; flex-wrap: wrap;
+        
+    //             .profBox {
+    //                 width:100%; flex-wrap: wrap;padding: 60px 24px 32px; margin-top: 0; border-radius: 20px; row-gap: 40px; 
+                    
+    //                 .chkArea {
+    //                     position: absolute; top: 16px; left: 24px;
+    //                 }
+    //                 .photoArea {
+    //                     flex: 0 1 100%; padding-top: 0;
+    //                     .thumArea {margin: 0 auto;}
+    //                     .txtArea {
+    //                         margin-top: 20px; 
+    //                         .name {font-size: rem(30px);}
+    //                     }
+    //                 }
+            
+    //                 .infoArea {
+    //                     flex: 0 1 100%; 
+    //                     .infoGroup {
+    //                         gap: 32px;
+    //                         .infoItem {
+    //                             flex: 0 0 100%;
+            
+    //                             .dlList {
+    //                                 .item {
+    //                                     .tit {min-width: 120px; font-size: rem(15px);flex: 1 0 42%;}
+    //                                     .txt {font-size: rem(15px);flex: 1 1 38%;}
+    //                                 }
+    //                             }
+            
+    //                             // 항목 width:100%
+    //                             &.full {
+    //                                 flex: 0 0 100%;
+    //                                 .dlList {
+    //                                     display: block;
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }    
+    //             }
+                            
+    //         }
+    //         .dataPart {
+    //             flex: 0 1 calc(100% - 362px); margin-top: 0; width: calc(100% - 362px);
+    //         }
+    //         .digramPart {
+    //             margin-top: 0; position: relative;
+    //             &::before {display: block; content: ""; width: calc(100% + 64px); height: 10px;margin-left: -32px; margin-bottom: 40px; background: #f4f6fa;}
+    //         }
+    //     }
+
+    //     @include media("mobile"){
+    //         .sectArea {
+    //             gap: 0;
+    //             .profPart {
+    //                 flex: 1 0 100%;  
+    //                 .profBox {
+    //                     .infoArea {
+    //                         .infoGroup {
+    //                             .infoItem {
+    //                                 .dlList {
+    //                                     .item {
+    //                                         .tit {flex: 1 0 24%;}
+    //                                     }
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //             .dataPart {
+    //                 flex: 1 0 100%; margin-top: 40px; width: 100%;
+    //             }
+    //         }
+    //     }
+    // }
+
 }

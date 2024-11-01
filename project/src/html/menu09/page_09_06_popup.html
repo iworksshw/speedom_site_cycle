@@ -1,0 +1,227 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytMypage">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 마이페이지 LNB -->
+				<div class="layoutLnbArea">
+					<div class="lnbArea">
+						<h1 class="lnbTit">마이페이지</h1>
+						<ul class="lnbMenu">
+							<li><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 게시글</span></a></li>
+							<li><a href="#"><span>나의 스크랩</span></a></li>
+							<li class="on"><a href="#"><span>내알림</span></a></li>
+							<li><a href="#"><span>내정보 수정</span></a></li>
+							<li><a href="#"><span>회원탈퇴</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
+                    <div class="cptSubTop">
+                        <div class="subTopArea">
+                            <ul class="location">
+                                <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
+                            </ul>
+							<div class="subTitle">
+								<h1>내알림</h1>
+							</div>
+                        </div>
+                    </div>
+
+					<div class="cptDataSum">
+						<div class="dataSum">
+							<ul class="inner">
+								<li>
+									<span class="item">전체알림</span>
+									<span class="val">23490</span>
+								</li>
+								<li>
+									<span class="item">새알림</span>
+									<span class="val">10</span>
+								</li>
+								<li>
+									<span class="item">확인된 알림</span>
+									<span class="val">23480</span>
+								</li>
+							</ul>
+						</div>
+                    </div>
+                    
+					<div class="cptDataList">
+						<div class="addInfo">
+							<p class="txtS">알림은 최대 30건이 노출됩니다.</p>
+						</div>
+
+						<ul class="dataListBox">
+							<li>
+								<div class="new">새로운 알림</div>
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">음란, 욕설, 개인정보 등 유해 게시글 등록</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li>
+								<div class="new">새로운 알림</div>
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">음란, 욕설, 개인정보 등 유해 게시글 등록</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li>
+								<div class="new">새로운 알림</div>
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">기타 홈페이지상에서의 공공질서에 위배되는 행위반복</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+							<li class="finished">
+								<a href="#" class="block" onclick="openPopup('sample01')">
+									<div class="cate">게시글 신고</div>
+									<div class="tit full">타인비방 및 명예훼손</div>
+									<div class="date">2024.09.25 11:08</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+                    <div id="sample01" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                    <div class="popTitle">게시글 신고</div>
+                                    <div class="popCont">
+                                        <!-- 팝업 컨텐츠 영역 -->
+                                        <div class="cptBoardView">
+                                            <div class="boardViewArea bdNone">
+                                                <div class="viewTop">
+                                                    <h2 class="viewTitle">음란, 욕설, 개인정보 등 유해 게시글 등록</h2>
+                                                    <ul class="info">
+                                                        <li class="item">2024.09.25 11:08</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="viewBody">
+                                                    <div class="viewContArea">
+                                                        <!-- 컨텐츠 영역입니다. -->
+                                                        홍길동 (user1234)님이 작성한 게시글이 사용자들에게 불쾌감을 주게되었다는 안내를 받았습니다.<br>
+                                                        안녕하세요, 고객 여러분. 더 나은 서비스를 제공하기 위해 10월 15일(일) 오전 2시부터 4시까지 시스템 점검을 진행할 예정입니다. <br>
+                                                        점검 중에는 일부 기능 사용이 제한될 수 있으니 양해 부탁드립니다. 불편을 최소화할 수 있도록 최선을 다하겠습니다. <br>
+                                                        이용에 참고해 주시기 바랍니다. 감사합니다.
+                                                        <!-- //컨텐츠 영역입니다. -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //팝업 컨텐츠 영역 -->
+                                    </div>
+                
+                                    <!-- 팝업 하단 영역 -->
+                                    <div class="popBtm">
+                                        <div class="comBtnGroup">
+                                            <div class="alignC">
+                                                <div class="btnBox">
+                                                    <button class="btn lg gLine pcW180">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
