@@ -56,7 +56,15 @@
                             > li {
                                 width: auto; margin-top: 0; color: var(--Gray-600); font-size: rem(15px); font-weight: 300; line-height: 1.6;
                                 &.cate {
-                                    width: 100%; margin-top: 12px;
+                                    display: flex; flex-wrap: wrap; width: 100%; margin-top: 12px;
+                                    & > span {
+                                        height: 18px; padding-left: 18px; position: relative; 
+                                        &:first-child {
+                                            padding-left: 0;
+                                            &::before {display: none;}
+                                        }
+                                        &::before {content: ""; position: absolute; top: 3px; left: 1px; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat;}
+                                    }
                                 }
                             }
                         }
