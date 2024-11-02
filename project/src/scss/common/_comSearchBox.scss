@@ -35,6 +35,24 @@
                 }
             }
         }
+        &.col21Sch {
+            gap: 40px;
+            .condition {
+                &:nth-child(1) {
+                    width: 32.1%; flex-shrink: 0;
+                    .title {
+                        width: 60px;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 100%;
+                    .title {
+                        width: 80px;
+                    }
+                }
+            }
+            .btn {margin-left: 0;}
+        }
         .condition {
             width: 100%; display: flex; 
             .title {
@@ -73,6 +91,24 @@
                 .condition {
                     width: 100%;
                 }
+            }
+            &.col21Sch {
+                flex-wrap: wrap; row-gap: 16px;
+                .condition {
+                    &:nth-child(1) {
+                        width: 100%;
+                        .title {
+                            width: 70px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 100%;
+                        .title {
+                            width: 70px;
+                        }
+                    }
+                }
+                .btn {width: 100%; justify-content: center;}
             }
         }
     }

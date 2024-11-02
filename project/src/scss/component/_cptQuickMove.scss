@@ -115,4 +115,71 @@
             margin-top: 40px;
         }
     }
+
+    // 마이페이지 - 비밀번호 재확인
+    &.login {
+        .comTitH3 h3 {
+            padding-left: 0; background: none;
+        }
+        .comBasicTxt .txt {
+            color: var(--Gray-600);
+        }
+        .boxArea {
+            display: flex; justify-content: center; padding-left: 60px; padding-right: 60px;
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+            .tbBox {
+                position: relative; display: flex; align-items: center;
+                &:not(:first-child) {
+                    margin-left: 120px;
+                    &::before {
+                        content: ""; position: absolute; left: -60px; top: 50%; width: 1px; height: 16px; background-color: var(--Gray-200); transform: translateY(-50%);
+                    }
+                }
+                
+                .tbTitle {
+                    min-width: 90px; padding-right: 40px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+                }
+                .tbCont {
+                    color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+                }
+            }
+        }
+        @include media('pcs'){
+            .boxArea {
+                .tbBox {
+                    &:not(:first-child) {
+                        margin-left: 80px;
+                        &::before {
+                            left: -40px;
+                        }
+                    }
+
+                    .tbTitle {
+                        min-width: 80px; padding-right: 20px; font-size: rem(15px);
+                    }
+                }
+            }
+        }
+        @include media('mobile'){
+            .boxArea {
+                flex-wrap: wrap; justify-content: flex-start; width: 100%; margin: 0; padding-left: 24px; padding-right: 24px;
+                .tbBox {
+                    width: 100%;
+                    &:not(:first-child) {
+                        margin-top: 20px; margin-left: 0;
+                    }
+
+                    .tbCont {
+                        width: 100%;
+                        .frmBox.frmMd {
+                            width: 100%; min-width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
