@@ -9,8 +9,8 @@
         .errMsg {display: block;}
     }
     .errMsg {
-        width: 100%; margin-top:10px; padding-left: 24px; color: var(--system-danger-50); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
-        background: url(../../images/common/ic_20_danger.svg) left center no-repeat; display: none;
+        width: 100%; margin-top:12px; padding-left: 24px; color: var(--system-danger-50); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
+        background: url(../../images/common/ic_20_danger.svg) left 0 no-repeat; display: none;
         &.line {
             margin-left: 5px; margin-top:0; height: 48px; align-content: center;
             &:first-child {margin-left: 0;}
@@ -18,6 +18,7 @@
         // 고객광장 - 고객의 소리 - 쓰기
         &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
     }
+    .helpMsg {margin-top:12px;color: var(--Gray-600, #58595F);font-size: rem(15px);font-weight: 400;line-height: 150%; /* 22.5px */}
     .textBox {margin-left: 5px; height: 48px; align-content: center;}
 }
 
@@ -63,7 +64,7 @@
         & + .btnReset {display: block;}
     }
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
-    &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
+    &:disabled {color: var(--Gray-400); border: 1px solid var(--Gray-200, #CED1D6); background: #F7F7F7;}
     &:read-only + .btnReset {display: none !important;}
     &:disabled + .btnReset {display: none !important;}
     @include media ('mobile') {

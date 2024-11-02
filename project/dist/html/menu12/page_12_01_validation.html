@@ -1079,39 +1079,171 @@
                 <div class="layoutContArea">
                     <div class="cptJoinTable">
                         <div class="joinArea">
-                            <div class="joinTitle">
-                                <h2>경륜·경정 온라인 홈페이지 계정의<br class="mView"> 비밀번호를 재설정합니다.</h2>
+                            <div class="joinStep">
+                                <ul class="stepGroup">
+                                    <li class="step complete"><span class="txt">본인인증</span></li> <!-- addClass - complete : 입력완료, current : 현재 -->
+                                    <li class="step current"><span class="txt">정보입력 및 약관동의</span></li>
+                                    <li class="step"><span class="txt">가입완료</span></li>
+                                </ul>
                             </div>
 
+                            <div class="joinTitle">
+                                <h2>기본정보</h2>
+                            </div>
                             <dl class="tbBox">
-                                <dt class="tbTitle">
-                                    아이디<span class="required">*</span>
-                                </dt>
+                                <dt class="tbTitle">이름</dt>
                                 <dd class="tbCont">
                                     <div class="frmGroup">
                                         <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
-                                            <input type="text" class="iptText" placeholder="아이디를 입력하세요"  />
+                                            <input type="text" class="iptText" placeholder="이름을 입력해주세요" value="홍길동" disabled />
                                             <button class="btnReset">텍스트 지우기</button>
                                             <span class="errMsg">메시지 내용</span>
                                         </div>
                                     </div>
                                 </dd>
                             </dl>
-                            
-                            <div class="comBtnGroup">
-                                <div class="alignC">
-                                    <div class="btnBox min">
-                                        <button class="btn lg Primary">휴대폰 본인인증</button>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">휴대폰 번호</dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="휴대폰 번호를 입력해주세요" value="010-0987-1234" disabled />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="errMsg">메시지 내용</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">아이디<span class="required">*</span></dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error"> <!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="아이디를 입력하세요"  />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="errMsg">아이디를 입력해주세요</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">비밀번호<span class="required">*</span>
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error"><!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="helpMsg">비밀번호는 영문, 숫자, 특수문자가 각 1자리 이상 입력해주세요.</span>
+                                            <span class="errMsg">비밀번호는 영문, 숫자, 특수문자가 각 1자리 이상 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">비밀번호 확인<span class="required">*</span>
+                                </dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error"><!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="password" class="iptText" placeholder="비밀번호를 다시 한번 입력해주세요" />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="helpMsg">위의 비밀번호를 다시 한번 입력해주세요.</span>
+                                            <span class="errMsg">비밀번호가 일치하지 않아요. 다시 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">이메일<span class="required">*</span></dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error"><!-- addClass - error : 에러메시지 노출 -->
+                                            <input type="text" class="iptText" placeholder="이메일을 입력하세요"  />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="errMsg">이메일을 입력해주세요</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <div class="comPrivacyBox">
+                                <dl class="infoBox">
+                                    <dt class="boxTop">
+                                        <div class="frmGroup">
+                                            <div class="frmBox maxCont">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">약관 및 서비스 정보 수신 전체 동의</label>
+                                            </div>
+                                        </div>
+                                    </dt>
+                                    <dd class="boxCont">
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">(필수) 통합회원 이용약관 </label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">(필수) 개인정보 수집 및 이용동의</label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <div class="miniCheck">
+                                            <div class="alignL">
+                                                <div class="frmBox">
+                                                    <input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">[선택] 서비스 정보 수신 동의</label>
+                                                </div>
+                                            </div>
+                                            <div class="alignR">
+                                                <button class="btnLine">내용보기</button>
+                                            </div>
+                                        </div>
+                                        <ul class="miniCheckList">
+                                            <li class="miniItem">
+                                                <div class="listTxt">경륜 자료수신여부</div>
+                                                <div class="miniCheck">
+                                                    <div class="alignL">
+                                                        <div class="frmBox">
+                                                            <input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">휴대폰</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">이메일</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="miniItem">
+                                                <div class="listTxt">경정 자료수신여부</div>
+                                                <div class="miniCheck">
+                                                    <div class="alignL">
+                                                        <div class="frmBox">
+                                                            <input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">휴대폰</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input id="chk108" type="checkbox" class="iptChk"><label for="chk108" class="iptLbl">이메일</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
                             </div>
 
-                            <div class="comJoinBtmText">
-                                <div class="textBox">
-                                    <ul class="listGroup color">
-                                        <li class="item">고객님의 개인정보를 신중하게 보호하고 있으며, 회원님의 동의 없이는 기재하신 회원정보가 누출되지 않습니다.</li>
-                                        <li class="item">고객님의 가입여부 및 본인인증을 위하여 이름과 휴대폰 번호를 확인해 주시기 바랍니다.</li>
-                                    </ul>
+                            <div class="comBtnGroup">
+                                <div class="alignC">
+                                    <div class="btnBox">
+                                        <button class="btn lg Primary pcW180">가입하기</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1206,4 +1338,4 @@
 
 </div>
 </body>
-</html>
+</html>      

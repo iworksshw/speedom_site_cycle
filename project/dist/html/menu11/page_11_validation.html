@@ -30,7 +30,7 @@
 
 <!-- 레이아웃 -->
 <div class="lytLayout">
-    <div class="layoutArea">
+    <div class="layoutArea bgColor">
 
         <!-- 상단영역 -->
         <div class="layoutTop">
@@ -1077,42 +1077,54 @@
 
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <div class="layoutContArea">
-                    <div class="cptJoinTable">
-                        <div class="joinArea">
-                            <div class="joinTitle">
-                                <h2>경륜·경정 온라인 홈페이지 계정의<br class="mView"> 비밀번호를 재설정합니다.</h2>
+                    <div class="cptLogin">
+                        <div class="loginArea">
+                            <div class="loginTitle">
+                                <p>경륜 · 경정 온라인 홈페이지 </p>
+                                <h2>로그인</h2>
                             </div>
 
-                            <dl class="tbBox">
-                                <dt class="tbTitle">
-                                    아이디<span class="required">*</span>
-                                </dt>
-                                <dd class="tbCont">
-                                    <div class="frmGroup">
-                                        <div class="frmBox"> <!-- addClass - error : 에러메시지 노출 -->
-                                            <input type="text" class="iptText" placeholder="아이디를 입력하세요"  />
-                                            <button class="btnReset">텍스트 지우기</button>
-                                            <span class="errMsg">메시지 내용</span>
-                                        </div>
-                                    </div>
-                                </dd>
-                            </dl>
-                            
+                            <div class="frmGroup">
+                                <div class="frmBox inpId"> <!-- addClass - error : 에러메시지 노출 -->
+                                    <input type="text" class="iptText" placeholder="아이디를 입력해주세요" value="honggi" />
+                                    <button class="btnReset">텍스트 지우기</button>
+                                    <span class="errMsg">메시지 내용</span>
+                                </div>
+                            </div>
+
+                            <div class="frmGroup">
+                                <div class="frmBox inpPw error"> <!-- addClass - error : 에러메시지 노출 -->
+                                    <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" value="111111111111" />
+                                    <button class="btnReset">텍스트 지우기</button>
+                                    <span class="errMsg">아이디 또는 비밀번호를 정확하게 입력해주세요.</span>
+                                </div>
+                            </div>
+
                             <div class="comBtnGroup">
                                 <div class="alignC">
-                                    <div class="btnBox min">
-                                        <button class="btn lg Primary">휴대폰 본인인증</button>
+                                    <div class="btnBox">
+                                        <button class="btn lg Primary">로그인</button>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="linkGroup center">
+                                <a href="#"><span>아이디 찾기</span></a>
+                                <a href="#"><span>비밀번호 재설정</span></a>
                             </div>
 
                             <div class="comJoinBtmText">
                                 <div class="textBox">
-                                    <ul class="listGroup color">
-                                        <li class="item">고객님의 개인정보를 신중하게 보호하고 있으며, 회원님의 동의 없이는 기재하신 회원정보가 누출되지 않습니다.</li>
-                                        <li class="item">고객님의 가입여부 및 본인인증을 위하여 이름과 휴대폰 번호를 확인해 주시기 바랍니다.</li>
+                                    <ul class="listGroup">
+                                        <li class="item">고객님의 개인정보보호를 위하여 약 <strong>30분 동안 화면 이동이 없을 경우 자동 로그아웃</strong> 됩니다. 원하시는 서비스를 이용하신 후에는 정보보호를 위하여 반드시 로그아웃 해주십시오.</li>
+                                        <li class="item">비밀번호는 주기적으로 변경하여 관리하시고 타인에게 노출 되지 않도록 주의하시기 바랍니다</li>
                                     </ul>
                                 </div>
+                            </div>
+
+                            <div class="linkGroup">
+                                <span>아직 회원이 아니신가요?</span>
+                                <a href="#"><strong>회원가입 하기</strong></a>
                             </div>
                         </div>
                     </div>
@@ -1206,4 +1218,4 @@
 
 </div>
 </body>
-</html>
+</html>      
