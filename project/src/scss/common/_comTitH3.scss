@@ -61,4 +61,10 @@
 
 //조건
 .comTitH2 + .comTitH3 {margin-top: 20px;}
+.comTitH2 + .comTitH3.mgH40 {
+    margin-top: 40px;
+    @include media("mobile"){
+        margin-top: 24px;
+    }
+} // .comTitH2 + comTitH3 조건에서 margin-top: 40px 로 오는 경우 추가
 .comDataTable + .comTitH3 {margin-top: 40px;}
