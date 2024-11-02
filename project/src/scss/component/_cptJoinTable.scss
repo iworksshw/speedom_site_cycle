@@ -1,4 +1,7 @@
 /* ---------------------- 회원 정보 입력 폼 ---------------------- */
+.layoutArea.loginBox {
+    background: var(--bg-line-bg-100, #F9FAFC);
+}
 .cptJoinTable {
     width: 100%;
     .joinArea {
@@ -50,6 +53,8 @@
                     }
                 }
             }
+            & + .membershipTitle,
+            & + .registrationTitle {margin-top: 104px;}
         }
         .joinTitle {
             width: 100%; margin-top: 60px; padding-bottom: 12px; border-bottom: 1px solid var(--Gray-900);
@@ -66,10 +71,126 @@
             }
             .tbCont {
                 width: 100%; margin-top: 8px;
+                .frmGroup .frmBox {
+                    .iptText {height: 56px;}
+                    .btnReset {top: 16px;}
+                }
             }
         }
         .required {
             margin-left: 5px; color: var(--Point-Red); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+        }
+        .alignCenter {text-align: center;}
+        br.mView {display: none;}
+        .comBtnGroup {margin-top: 60px;}
+        .comJoinBtmText .item:not(:first-child) {margin-top: 12px;}
+        .bulletTitle {
+            &.flexCenter {display: flex;justify-content: center;}
+            h3 {
+                color: var(--Gray-900, #111);font-size: rem(16px);font-weight: 500;line-height: 160%; /* 25.6px */
+                span {display: inline-block;border-bottom: 1px solid var(--Gray-300, #B0B2B7);}
+                &.bullet {
+                    position: relative;padding-left: 30px;
+                    &:after {content: '';position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url('../../images/common/ico_etc_info.svg') no-repeat 0 2px;background-size: 20px;}
+                }
+            }
+            > p {
+                color: var(---Primary, #078B7B);font-size: rem(14px);font-weight: 400;line-height: 160%; /* 22.4px */
+                span {
+                    display: inline-block;
+                    position: relative;padding-left: 20px;
+                    &:after {content: '';position: absolute;top: 3px;left: 0;width: 16px;height: 16px;background: url('../../images/common/ic_16_info.svg') no-repeat;background-size: 16px;}
+                }
+            }
+        }
+        .certifyGroup .comBtnGroup + .bulletTitle {margin-top: 32px;}
+        // 아이디 찾기
+        .certifyTitle {
+            &.color h2 {color: var(---Primary, #078B7B);font-weight: 700;}
+            h2 {color: var(--Gray-900, #111);font-size: rem(24px);font-weight: 500;line-height: 140%; /* 33.6px */}
+            & + .certifyResult {margin-top: 20px;}
+        }
+        // 아이디 찾기 완료
+        .certifyResult {
+            padding: 40px;border-radius: 16px;background: var(--Bg-Line-bg-100, #F9FAFC);
+            .comBasicList .item:not(:first-child) {margin-top: 12px;}
+            & + .comBtnGroup {
+                margin: 60px 0;
+                .btnBox .btn {min-width: 136px; padding: 0;}
+            }
+        }
+        // 회원 가입
+        .membershipTitle {
+            h2 {color: var(--Gray-900, #111);font-size: rem(30px);font-weight: 500;line-height: 140%; /* 42px */}
+            h3 {
+                margin-top: 20px;color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */
+                & + .bulletTitle {margin-top: 8px;}
+            }
+        }
+        // 가입 완료
+        .registrationTitle {
+            h2 {
+                color: var(--Gray-800, #2C2C2C);
+                font-size: rem(32px);
+                font-weight: 300;
+                line-height: 160%; /* 51.2px */
+                strong {
+                    font-weight: 700;
+                }
+            }
+            h3 {
+                margin-top: 32px;color: var(--Gray-800, #2C2C2C);font-size: rem(18px);font-weight: 400;line-height: 160%; /* 28.8px */
+                strong {color: var(---Primary, #078B7B);font-weight: 600;}
+            }
+            & + .comBtnGroup + .linkBoxGroup {margin-top: 100px;}
+        }
+        .linkBoxGroup {
+            display: flex;
+            padding: 32px 0px;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            border-radius: 16px;
+            border: 1px solid #E1E4EA;
+            background: var(--Bg-Line-white, #FFF);
+            > p {
+                color: var(--Gray-800, #2C2C2C);
+                font-size: rem(16px);
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+            }
+            > a {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                height: 42px;
+                position: relative;
+                color: var(--Gray-900, #111);
+                font-size: rem(18px);
+                font-weight: 700;
+                line-height: 160%; /* 28.8px */
+                img {
+                    position: relative;
+                    top: 5px;
+                    flex-shrink: 0;
+                    height: 62px;
+                }
+                span {
+                    position: relative;
+                    padding-right: 26px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        right: 0;
+                        width: 16px;
+                        height: 16px;
+                        background: url('../../images/common/ic_16_arr_right_g.svg') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+            }
         }
     }
     @include media('mobile') {
@@ -112,11 +233,11 @@
                         }
                     }
                 }
+                & + .membershipTitle {margin-top: 60px;}
+                & + .registrationTitle {margin-top: 40px;}
             }
             .joinTitle {
-                h2 {
-                    font-size: rem(18px); font-weight: 600; line-height: 1.3;
-                }
+                h2 {font-size: rem(18px); font-weight: 600; line-height: 1.3;}
                 & + .tbBox {margin-top: 32px;}
             }
             .tbBox {
@@ -124,6 +245,29 @@
                 &:first-child {margin-top: 0;}
                 .tbTitle {
                     font-weight: 600; line-height: 1.6;
+                }
+                & + .comPrivacyBox,
+                & + .comJoinBtmText {margin-top: 40px;}
+            }
+            br.mView {display: block;}
+            .comBtnGroup {margin-top: 40px;}
+            // 아이디 찾기
+            .certifyResult {
+                padding: 40px 16px;
+                & + .comBtnGroup {
+                    margin: 40px 0;
+                }
+            }
+            // 회원 가입
+            .membershipTitle h2 {font-size: rem(22px);font-weight: 600;}
+            .registrationTitle + .comBtnGroup + .linkBoxGroup {margin-top: 60px;}
+            .linkBoxGroup {
+                gap: 24px;
+                > p {text-align: center;font-size: rem(15px);}
+                > a {
+                    gap: 6px;
+                    img {position: relative;top: 5px;flex-shrink: 0;height: 62px;}
+                    span {position: relative;padding-right: 26px;}
                 }
             }
         }

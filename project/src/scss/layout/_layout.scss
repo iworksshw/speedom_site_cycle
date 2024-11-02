@@ -26,6 +26,8 @@
         .layoutFooter{
 
         }
+        // 로그인 페이지 배경 컬러 변경
+        &.bgColor {background: var(--Bg-Line-bg-100, #F9FAFC);}
     }
 }
 
