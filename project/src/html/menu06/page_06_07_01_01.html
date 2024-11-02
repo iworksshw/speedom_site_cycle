@@ -1,0 +1,211 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '길벗 상담안내',
+                    subText: '도움이 필요한<br /><b>무엇이든 물어보세요.</b>',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">길벗 상담안내</h2>
+                        <p class="info">건전한 레저문화의 정착을 위해 일반인 및 청소년 등을 대상으로, 도박 과몰입 교육프로그램 및 예방프로그램, 다양한 정보제공, 홍보활동 및 네트워크 구축을 실시하고 있습니다.</p>
+                    </div>
+                    
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>희망길벗 개인정보 수집 이용동의서 작성절차(온라인)</h2>
+                            </div>
+                            <div class="comTitH3 mgH40">
+                                <h3>본인여부 확인</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comFormTable">
+                        <div class="tableArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width: 232px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>                                    
+                                    <tr>
+                                        <th>이름<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" placeholder="이름을 입력해주세요." value="" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>성별<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup gap40">
+                                                <div class="frmBox maxCont rdoBtn"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">남</label></div>
+                                                <div class="frmBox maxCont rdoBtn"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">여</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmLg">
+                                                    <input type="text" class="iptText" placeholder="읍, 면, 동까지만 기입해주세요." value="" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>생년월일<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" placeholder="생년월일 8자리를 입력해주세요." value="" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>도박자와의 관계<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" placeholder="" value="" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>휴대폰번호<span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmBox frmMd">
+                                                    <input type="text" class="iptText" placeholder="‘-’ 없이 숫자만 입력해주세요." value="" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="comPrivacyBox">
+                        <dl class="infoBox">
+                            <dt class="boxTop">
+                                <div class="frmGroup">
+                                    <div class="frmBox maxCont">
+                                        <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">희망길벗 개인정보 수집 및 이용 전체 동의</label>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd class="boxCont">
+                                <div class="miniCheck">
+                                    <div class="alignL">
+                                        <div class="frmBox">
+                                            <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">[필수] 개인정보 수집 및 이용에 대한 동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="alignR">
+                                        <button class="btnLine">내용보기</button>
+                                    </div>
+                                </div>
+                                <div class="miniCheck">
+                                    <div class="alignL">
+                                        <div class="frmBox">
+                                            <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">[필수] 민감정보 처리에 대한 동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="alignR">
+                                        <button class="btnLine">내용보기</button>
+                                    </div>
+                                </div>
+                                <div class="miniCheck">
+                                    <div class="alignL">
+                                        <div class="frmBox">
+                                            <input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">[선택] 개인정보 제3자 제공안내</label>
+                                        </div>
+                                    </div>
+                                    <div class="alignR">
+                                        <button class="btnLine">내용보기</button>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="comBtnGroup section">
+                        <div class="alignC">
+                            <div class="btnBox m30">
+                                <button class="btn lg gLine">취소</button>
+                                <button class="btn lg Primary pcW180">신청하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

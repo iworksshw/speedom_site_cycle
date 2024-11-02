@@ -52,6 +52,7 @@
     &:hover .btnReset {
         display: block;
     }
+    &.rdoBtn {align-items: center; height: 48px;} // 라디오 버튼 사용시 적용
     .btnReset {
         width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
         display: none;
