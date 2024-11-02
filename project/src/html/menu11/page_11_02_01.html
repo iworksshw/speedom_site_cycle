@@ -1,0 +1,100 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <div class="layoutContArea">
+                    <div class="cptJoinTable">
+                        <div class="joinArea">
+                            <div class="joinTitle">
+                                <h2>새로운 비밀번호를 입력해주세요.</h2>
+                            </div>
+
+                            <dl class="tbBox">
+                                <dt class="tbTitle">새로운 비밀번호</dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error">
+                                            <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" value="012345678" />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="errMsg">비밀번호는 영문, 숫자, 특수문자가 각 1자리 이상 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="tbBox">
+                                <dt class="tbTitle">비밀번호 확인</dt>
+                                <dd class="tbCont">
+                                    <div class="frmGroup">
+                                        <div class="frmBox error">
+                                            <input type="password" class="iptText" placeholder="비밀번호를 입력해주세요" value="012345678" />
+                                            <button class="btnReset">텍스트 지우기</button>
+                                            <span class="errMsg">비밀번호가 일치하지 않아요. 다시 입력해주세요.</span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="comJoinBtmText">
+                                <div class="textBox">
+                                    <ul class="listGroup">
+                                        <li class="item">비밀번호는 최소 9 ~ 최대 12 자 이내로 입력해주세요.</li>
+                                        <li class="item">영문, 숫자, 특수문자를 각 1자리 이상 반드시 포함해주세요.</li>
+                                        <li class="item">특수문자 중 <,>,(,(,#,’,| 는 사용할 수 없어요.</li>
+                                        <li class="item">3자리 이상 동일하거나 연속되는 숫자 또는 문자열은 사용할 수 없어요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comBtnGroup">
+                                <div class="alignC">
+                                    <div class="btnBox">
+                                        <button class="btn lg Primary pcW180">비밀번호 변경</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

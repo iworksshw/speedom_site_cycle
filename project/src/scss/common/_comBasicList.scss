@@ -29,7 +29,8 @@
     }
     // 간격 예외
     .comImgBox + & {margin-top: 32px;}
-
+    // 컬러 변경
+    .listGroup.color .item {color: var(--Gray-600, #58595F);}
 
     @include media("mobile"){
         .item {

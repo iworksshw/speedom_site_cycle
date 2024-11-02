@@ -55,7 +55,8 @@
             }
         }
     }
-    .comTabData + .dataListBox {
+    .comTabData + .dataListBox,
+    .comTabData + .comNoneData {
         margin-top: 32px;
     }
     
@@ -73,7 +74,8 @@
         .comTabData .right {
             text-align: right;
         }
-        .comTabData + .dataListBox {
+        .comTabData + .dataListBox,
+        .comTabData + .comNoneData {
             margin-top: 8px;
         }
     }
