@@ -284,14 +284,6 @@
     }
 }
 
-.cptSection.addBg {
-    position: relative; padding: 80px 0 100px;
-
-    &::after {content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background-color: var(--Bg-Line-bg-100);}
-    .sectArea {position: relative; z-index: 1;}
-    .comImgBox {background-color: #fff;}
-}
-
 .comTooltip {
     position: relative; display: inline-block; vertical-align: middle;
     .tipBtn {width: 20px; height: 20px; background: url(../../images/common/ico_guide_default.svg) no-repeat center center; text-indent: -99999px; overflow: hidden;}
