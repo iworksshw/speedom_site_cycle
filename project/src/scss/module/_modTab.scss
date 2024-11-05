@@ -139,4 +139,13 @@
         .tabCont {display:none;}
         .tabCont.on {display:block;}
     }
+
+    // 모바일 조건 추가
+    @include media('mobile') {
+        &.mView_mgH40 { // margin-top: 40px 인 경우 적용
+            margin-top: 40px;
+            .tabContianer {margin-top: 40px;}
+        } 
+    }
+    
 }
