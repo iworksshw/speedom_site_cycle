@@ -34,7 +34,8 @@
     }
 
     // 4열
-    &.col4 {
+    &.col4,
+    &.col4_2 {
         .imgGroup {
             gap: 32px;
             .imgArea {flex: 0 0 calc(25% - 24px);}
@@ -71,6 +72,13 @@
             .imgGroup {
                 gap: 20px;
                 .imgArea {flex: 0 0 100%;}
+            }
+        }
+
+        &.col4_2 {
+            .imgGroup {
+                gap: 20px;
+                .imgArea {flex: 0 0 calc(50% - 10px);}
             }
         }
     }
