@@ -1,0 +1,31 @@
+.cptinfoPoint {
+    .info {font-size: rem(16px); color: var(--Gray-800);}
+    .pointGroup {
+        margin-top: 24px;
+        .pointItem {
+            width: 100%; padding: 12px 20px; margin-top: 12px; border-radius: 8px; background: var(--Bg-Line-bg-200); display: flex; justify-content: space-between; align-items: center;
+            &:first-child {margin-top: 0;}
+            .act {
+                dt {font-size: rem(16px); color: var(--Gray-800); font-weight: 700;}
+                dd {font-size: rem(14px); color: var(--Gray-600);}
+            }
+            .point {font-size: rem(20px); color: var(---Primary); font-weight: 700;}
+        }
+    }
+
+    // 960 이하부터 모바일 레이아웃 고정
+    @include media(959px){
+        .info {font-size: rem(15px);}
+        .pointGroup {
+            margin-top: 12px;
+            .pointItem {
+                padding: 12px 16px; margin-top: 8px;
+                .act {
+                    dt {font-size: rem(15px);}
+                    dd {font-size: rem(13px);}
+                }
+                .point {font-size: rem(18px); flex: 1 0 auto; text-align: right;}
+            }
+        }
+    }
+}
