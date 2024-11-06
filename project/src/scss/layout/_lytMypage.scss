@@ -287,8 +287,7 @@
     }
 }
 
-/*
-
+/*  sdf*/
 .iptRdo {
     // 추가
     & + .iptLblBtn {}
@@ -297,7 +296,7 @@
     &:disabled:checked + .iptLblBtn {}
 }
 .iptLblBtn {
-    display: flex; align-items: center; justify-content: center; min-width: 82px; height: 48px; padding: 0 16px; font-size: rem(16px); border: 1px solid var(--Gray-200); border-radius: 8px; background-color: #fff;
+    display: flex; align-items: center; justify-content: center; width: 100%; min-width: 82px; height: 48px; padding: 0 16px; font-size: rem(16px); border: 1px solid var(--Gray-200); border-radius: 8px; background-color: #fff;
 }
 
 // formBox lv
@@ -312,14 +311,61 @@
 }
 
 // formGroup lv
-.frmPeriod {
-    display: flex; align-items: center;
+.frmGroup.period {
+    gap: 0;
     .frmDate {
         width: 100%;
     }
     .gap {
-        width: 30px; min-width: 30px; text-align: center;
+        display: flex; align-items: center; justify-content: center; width: 30px; min-width: 30px; height: 48px; text-align: center;
+    }
+}
+.frmGroup.option {
+    gap: 8px;
+    .frmBox {
+        // width: max-content;
     }
 }
 
-*/
+// comSearchBox
+.comSearchBox.untitled {
+    .searchLine .condition {
+        .title {
+            display: block; width: 80px !important; height: 48px;
+        }
+        .conBox {
+            display: flex; flex-wrap: wrap; column-gap: 40px; row-gap: 20px;
+            .txtLbl {
+                display: inline-flex; align-items: center; height: 48px; margin-right: -40px; padding-right: 15px; color: var(--Gray-600); vertical-align: top; white-space: nowrap;
+            }
+            .frmGroup {
+                margin-top: 0;
+                select {
+                    width: max-content; padding-right: 46px;
+                }
+                &.period {
+                    // width: 330px;
+                }
+            }
+        }
+    }
+
+    @include media('mobile'){
+        .searchLine .condition {
+            flex-wrap: wrap;
+            .conBox {
+                .txtLbl {
+                    width: 100%; height: auto;
+                }
+                .frmGroup {
+                    flex-wrap: wrap;
+                    &.period {
+                        flex-wrap: nowrap;
+                        width: 100%;
+                    }
+                }
+    
+            }
+        }
+    }
+}
