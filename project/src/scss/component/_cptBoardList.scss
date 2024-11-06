@@ -101,8 +101,13 @@
                                         color: var(--Gray-500); border-color: transparent; background: var(--Bg-Line-bg-200);
                                     }
                                 }
-                                .btn.sm {
-                                    min-width: 50px; height: 32px; padding: 0 10px; line-height: 30px;
+                                &.func {
+                                    span {
+                                        font-size: rem(15px);
+                                    }
+                                    .btn.sm {
+                                        min-width: 50px; height: 32px; padding: 0 10px; line-height: 30px;
+                                    }
                                 }
                             }
                         }
@@ -158,11 +163,11 @@
                                     }
                                     &.func {
                                         width: 100%; height: auto;
+                                        span {
+                                            margin-top: 4px; font-size: rem(14px);
+                                        }
                                         .btn.sm {
                                             margin-top: 16px;
-                                        }
-                                        .tRed {
-                                            margin-top: 4px;
                                         }
                                     }
                                     &.processing {

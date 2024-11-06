@@ -18,6 +18,23 @@
         h2 {color: var(--Grey-900);}
     }
 
+    // 경륜 알아보기 - 경륜안내
+    &.lg {
+        margin-bottom: 20px; 
+        h2 {
+            font-size: rem(30px); font-weight: 300;
+        }
+        & ~ .comImgBox {
+            margin-top: 20px;
+        }
+        @include media('mobile') {
+            margin-bottom: 12px;
+            h2 {
+                font-size: rem(22px);
+            }
+        }
+    }
+
     @include media("mobile"){
         margin-top: 24px;
         .mgH60 {margin-top: 40px;}
