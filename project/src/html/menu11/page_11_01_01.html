@@ -1,0 +1,89 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <div class="layoutContArea">
+                    <div class="cptJoinTable">
+                        <div class="joinArea">
+                            <div class="certifyTitle color">
+                                <h2>휴대폰 인증이 완료되어<br class="mView"> 일치하는 아이디를 안내해드려요.</h2>
+                            </div>
+                            <div class="certifyResult">
+                                <div class="comBasicList">
+                                    <ul class="listGroup">
+                                        <li class="item">
+                                            <i class="lineTxt">아이디</i>
+                                            <b class="lineTit"> : kbo*****</b>
+                                        </li>
+                                        <li class="item">
+                                            <i class="lineTxt">가입일</i>
+                                            <b class="lineTit"> : 2024.08.16</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="comBtnGroup section">
+                                <div class="alignC">
+                                    <div class="btnBox m50">
+                                        <button class="btn dkLine pcW140">메인으로 이동</button>
+                                        <button class="btn Primary pcW140">로그인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜시스템',
+                    name: '이윤아',
+                    phone: '02-2067-5824',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>      

@@ -1,5 +1,16 @@
 .cptContSelfTest {
-    margin-top: 20px; border-top: 2px solid var(--Gray-900);
+    margin-top: 60px;
+
+    .testContSelect {
+        border-top: 2px solid var(--Gray-900); display: flex; align-items: center; flex-wrap: wrap;                
+        .tit {font-size: rem(16px); color: var(--Gray-800); font-weight: 700; line-height: 1.4; width: 200px;}
+        .cont {flex: 1; height: 48px; display: flex; align-items: center;}
+        .wd100,
+        .wd50 {width: 50%; display: flex; align-items: center; border-bottom: 1px solid var(--Bg-Line-line-100); padding: 16px 32px;}
+        .wd100 {width: 100%;}    
+    }
+    .testContInfoT {margin-top: 60px;}
+    .testContTbl {margin-top: 20px; border-top: 2px solid var(--Gray-900);}
     .testCont {
         padding: 16px 24px; height: 80px; border-bottom: 1px solid var(--Bg-Line-line-100); display: flex; align-items: center; justify-content: space-between;
         .subject {
@@ -28,11 +39,39 @@
     .reFresh::before {content:''; display: inline-block; vertical-align: middle; margin-top: -3px; width: 24px; height: 24px; margin-right: 8px; background: url(../../images/common/ic_24_refresh.svg) center no-repeat;}
 
     @include media("pcs"){
-        
+        .testContSelect {
+            .wd50 {width: 100%;}
+        }
+        .testCont {
+            padding: 16px 16px; height: auto; flex-direction: column;
+            .subject {justify-content: left; width: 100%;}
+            .clickBox {
+                width: 100%; margin-top: 14px;
+                ul {
+                    li {
+                        width: calc(25% - 8px);
+                        label {width: 100%; font-size: rem(15px);}
+                    }
+                }                
+            }
+        }
+        .comBtnGroup.section {padding: 0 16px;}
     }
 
     @include media("mobile"){
-        margin: 16px -16px 0;
+        margin-top: 40px;
+        .testContSelect {
+            padding-top: 32px;
+            .wd50,
+            .wd100 {
+                padding: 16px 0; flex-wrap: wrap; border-bottom: 0;
+                .tit {font-size: rem(16px); font-weight: 600; line-height: 1.3; margin-bottom: 12px; width: 100%;}
+                .cont {flex: none; width: 100%;}
+            }
+            .frmGroup {width: 100%;}
+        }        
+        .testContTbl {margin-left: -16px; margin-right: -16px;}
+        .testContInfoT {margin-top: 40px;}
         .testCont {
             padding: 16px 16px; height: auto; flex-direction: column;
             .subject {
@@ -50,6 +89,6 @@
                 }                
             }
         }
-        .comBtnGroup.section {padding: 0 16px;}
+        
     }
 }

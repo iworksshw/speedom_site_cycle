@@ -35,7 +35,8 @@
                         &.bdTitle {
                             .title {
                                 width:100%; display:flex; align-items: center;
-                                a{
+                                a,
+                                .line1 {
                                     width: max-content; font-weight: 400; color: var(--Gray-900); display:block; @include line1(); 
                                 }
                                 .icons {
@@ -90,9 +91,22 @@
                                         display: inline-block; align-content: center; padding-left: 16px; padding-right: 16px; height: 26px; 
                                         font-size: rem(13px); font-weight: 600; color: var(---Primary);line-height: 26px; border-radius: 20px;border: 1px solid var(---Primary); background: #FFF;
                                     }
-                                    &.progress span {color: var(--Point-Red);border-color: var(--Point-Red);
+                                    &.progress span {
+                                        color: var(--Point-Red);border-color: var(--Point-Red);
                                     }
-                                    &.complete span {color: var(--Gray-500);border-color: var(--Gray-500);
+                                    &.complete span {
+                                        color: var(--Gray-500);border-color: var(--Gray-500);
+                                    }
+                                    &.closed span {
+                                        color: var(--Gray-500); border-color: transparent; background: var(--Bg-Line-bg-200);
+                                    }
+                                }
+                                &.func {
+                                    span {
+                                        font-size: rem(15px);
+                                    }
+                                    .btn.sm {
+                                        min-width: 50px; height: 32px; padding: 0 10px; line-height: 30px;
                                     }
                                 }
                             }
@@ -113,7 +127,8 @@
                                     }
                                     &.bdTitle {
                                         order: 3;margin-top: -26px;text-indent: 38px;height: auto;
-                                        a {height: auto;overflow: visible;white-space: normal;
+                                        a,
+                                        .line1 {height: auto;overflow: visible;white-space: normal;
                                         }
                                     }
                                     &.writing {
@@ -127,6 +142,54 @@
                                     &.processing {
                                         order: 1;
                                         span {height: 24px;padding-left: 10px;padding-right: 10px;font-size: rem(12px);line-height: 24px;}
+                                    }
+                                }
+                            }
+                        }
+
+                        // 고객광장 - 문화교실
+                        &.mInline {
+                            tr {
+                                flex-direction: row;
+                                td {
+                                    @for $i from 1 through 10 {
+                                        &[data-order='#{$i}'] {
+                                            order: #{$i};
+                                        }
+                                    }
+
+                                    &:not(.sort) + .bdTitle {
+                                        margin-top: 0; margin-bottom: 4px; text-indent: 0;
+                                    }
+                                    &.func {
+                                        width: 100%; height: auto;
+                                        span {
+                                            margin-top: 4px; font-size: rem(14px);
+                                        }
+                                        .btn.sm {
+                                            margin-top: 16px;
+                                        }
+                                    }
+                                    &.processing {
+                                        margin-bottom: 8px;
+                                    }
+                                    &.bdInfo {
+                                        &:not(.first) {
+                                            position: relative;
+                                            margin-left: 12px;
+                                            &::before {
+                                                content: ''; position: absolute; left: -10px; top: 50%; width: 1px; height: calc(100% - 12px); max-height: 40px; background-color: var(--Gray-300); transform: translateY(-50%);
+                                            }
+                                        }
+                                    }
+                                    &.writing,
+                                    &.answer,
+                                    &.processing,
+                                    & .btn.sm {
+                                        width: 100%;
+                                    }
+                                    &.pcView {
+                                        display: none;
                                     }
                                 }
                             }
@@ -173,7 +236,8 @@
                                 width: 100%; height: 26px;
                                 .title {
                                     width:100%; display:flex; align-items: center;
-                                    a{
+                                    a,
+                                    .line1 {
                                         height: 26px; padding: 0; font-size: rem(16px); font-weight: 600; 
                                     }
                                     .icons {
@@ -203,6 +267,15 @@
         @include media('mobile'){
             // 고객광장 - 고객의 소리 - 로그인 후 
             .comTitH2 {display: none;}
+        }
+    }
+
+    @include media('mobile'){
+        // 고객광장 - 문화교실
+        .cptSubTop + .layoutContArea &:first-child {
+            .listTable:first-child {
+                width: 100%; margin-left: 0;
+            }
         }
     }
 }

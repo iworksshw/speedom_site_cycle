@@ -9,8 +9,8 @@
         .errMsg {display: block;}
     }
     .errMsg {
-        width: 100%; margin-top:10px; padding-left: 24px; color: var(--system-danger-50); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
-        background: url(../../images/common/ic_20_danger.svg) left center no-repeat; display: none;
+        width: 100%; margin-top:12px; padding-left: 24px; color: var(--system-danger-50); font-size: rem(15px); font-weight: 400; line-height: 1.5; 
+        background: url(../../images/common/ic_20_danger.svg) left 0 no-repeat; display: none;
         &.line {
             margin-left: 5px; margin-top:0; height: 48px; align-content: center;
             &:first-child {margin-left: 0;}
@@ -18,12 +18,20 @@
         // 고객광장 - 고객의 소리 - 쓰기
         &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
     }
+    .helpMsg {margin-top:12px;color: var(--Gray-600, #58595F);font-size: rem(15px);font-weight: 400;line-height: 150%; /* 22.5px */}
     .textBox {margin-left: 5px; height: 48px; align-content: center;}
+    @include media('mobile') {
+        &.email {
+            flex-wrap: wrap;
+            .frmBox:nth-child(1),.frmBox:nth-child(2) {width: calc(50% - 6px); min-width: none;}
+            .frmBox:nth-child(3) {width: 100%; min-width: none;}
+        }
+    }
 }
 
 /* ----- 폼 박스 ----- */
 .frmBox {
-    width: 100%; display: flex; flex-wrap: wrap;
+    width: 100%; display: flex; flex-wrap: wrap; position: relative;
     &.maxCont {width: max-content;}
     &.frmTini {width:auto; min-width:auto;}
     &.frmXs {width:auto; min-width:auto;}
@@ -41,6 +49,14 @@
         }
     }
     &.frmXL {width:auto; min-width:auto;}
+    &:hover .btnReset {
+        display: block;
+    }
+    &.rdoBtn {align-items: center; height: 48px;} // 라디오 버튼 사용시 적용
+    .btnReset {
+        width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
+        display: none;
+    }
 }
 
 /* ----- 입력필드 ----- */
@@ -53,9 +69,12 @@
         @include media ('mobile') {
             padding: 0 12px;
         }
+        & + .btnReset {display: block;}
     }
     &:read-only {padding: 0 16px; color: var(--Gray-600); border: 1px solid var(--Gray-200); background: #F5F5F8;}
-    &:disabled {color: var(--Gray-400); border: 1px solid var(--gray-gray-40); background: #E3E3E3;}
+    &:disabled {color: var(--Gray-400); border: 1px solid var(--Gray-200, #CED1D6); background: #F7F7F7;}
+    &:read-only + .btnReset {display: none !important;}
+    &:disabled + .btnReset {display: none !important;}
     @include media ('mobile') {
         padding: 0 12px;
     }
@@ -124,6 +143,12 @@
     &:checked + .iptLbl {background:url(../../images/common/ic_20_rdo_on.svg) left top no-repeat;}
     &:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_rdo_off_dis.svg) left top no-repeat;}
     &:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_rdo_on_dis.svg) left top no-repeat;}
+
+    &.lg + .iptLbl {padding-left: 32px; line-height: 24px; background:url(../../images/common/ic_24_rdo_off.svg) left top no-repeat;}
+    &.lg:checked + .iptLbl {background:url(../../images/common/ic_24_rdo_on.svg) left top no-repeat;}
+    &.lg:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_24_rdo_off_dis.svg) left top no-repeat;}
+    &.lg:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_24_rdo_on_dis.svg) left top no-repeat;}
+    
 }
 .iptLbl {
     min-height:20px; margin-right:10px; padding-left: 28px; color: var(--Gray-800); font-size: rem(17px); font-weight: 400; word-break: keep-all; line-height: 20px;
@@ -139,6 +164,24 @@
 .iptLblBtn {
     min-height:20px; margin-right:10px; padding-left: 28px; color: var(--Gray-800); font-size: rem(17px); font-weight: 400; word-break: keep-all; line-height: 20px;
     &:last-child {margin-right:0;}
+}
+/* frmCheckList */
+.frmCheckList {
+    display: flex; flex-wrap: wrap; flex-direction: column; gap: 24px; margin-top: 32px;
+    > div {
+        flex-direction: column; margin-top: 0;
+    }
+    .frmBox {
+        .byte {width: 100%; margin-top: 4px; color: var(--Gray-300); font-size: rem(15px); font-weight: 500; line-height: 1.6; text-align: right; display: block;
+            b {color: var(--Gray-800); font-weight: 500;}
+        }
+        .iptTextArea {
+            min-height: 160px;
+        }
+        label + .frmBox {
+            margin-top: 24px;
+        }
+    }
 }
 
 /* ----- file ----- */
