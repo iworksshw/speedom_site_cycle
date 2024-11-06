@@ -274,16 +274,6 @@
 //     &[class^=com]::after {border-color: blue !important;}
 // }
 
-.comTitH2.lg {
-    margin-bottom: 20px; 
-    h2 {
-        font-size: rem(30px); font-weight: 300;
-    }
-    & ~ .comImgBox {
-        margin-top: 20px;
-    }
-}
-
 .comTooltip {
     position: relative; display: inline-block; vertical-align: middle;
     .tipBtn {width: 20px; height: 20px; background: url(../../images/common/ico_guide_default.svg) no-repeat center center; text-indent: -99999px; overflow: hidden;}
@@ -297,7 +287,7 @@
     }
 }
 
-/**/
+/*  sdf*/
 .iptRdo {
     // 추가
     & + .iptLblBtn {}

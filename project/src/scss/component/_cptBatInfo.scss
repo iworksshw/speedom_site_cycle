@@ -1,0 +1,79 @@
+.cptBatInfo {
+    .batTit {
+        margin-bottom: 12px;
+        h3 {font-size: rem(20px); font-weight: 700; color: var(--Gray-800);}
+    }
+    .checkPoint {
+        margin-top: 32px; border-radius: 12px; background: var(---Bg-400); padding: 24px 20px;
+        .check {
+            display: flex; justify-content: space-between; align-items: center;
+            dt {font-size: rem(15px); color: var(--Gray-900); font-weight: 500; line-height: 1.6;}
+            dd {font-size: rem(32px); color: var(---Primary); font-weight: 700; line-height: 1.4;}
+        }
+    }
+    .finalPoint {
+        margin-top: 32px;
+        .finalBox {
+            border-radius: 12px; padding: 24px 20px; background: var(--Bg-Line-bg-200);
+            .finalItem {
+                border-bottom: 1px dashed var(--Bg-Line-line-100);
+                &:last-child {border-bottom: none;}
+                .final {
+                    padding-bottom: 16px;display: flex; justify-content: space-between; align-items: center;
+                    dt {font-size: rem(14px); color: var(--Gray-600); line-height: 1.6;}
+                    dd {font-size: rem(18px); color: var(--Gray-800); line-height: 1.6; font-weight: 600;}
+                }
+                .remain {
+                    padding-top: 10px;display: flex; justify-content: space-between; align-items: center;
+                    dt {font-size: rem(15px); color: var(--Gray-900); line-height: 1.6; font-weight: 500;}
+                    dd {font-size: rem(32px); color: var(---Primary); line-height: 1.6; font-weight: 700;}
+                }
+            }
+        }
+    }
+    .btmTxt {
+        margin: 32px 0 12px;
+        .bold {
+            font-size: rem(18px); font-weight: 700; color: var(--Gray-800); line-height: 1.4; text-align: center;
+        }
+    }
+
+    // 960 이하부터 모바일 레이아웃 고정
+    @include media(959px){
+        .batTit {
+            h3 {font-size: rem(18px); font-weight: 600;}
+        }
+        .checkPoint {
+            margin-top: 16px; padding: 20px 16px;
+            .check {
+                flex-wrap: wrap; justify-content: center; text-align: center;
+                dt {width:100%; font-size: rem(14px);}
+                dd {width:100%; font-size: rem(30px);}
+            }
+        }
+        .finalPoint {
+            margin-top: 16px;
+            .finalBox {
+                padding: 16px 24px;
+                .finalItem {
+                    .final {
+                        padding-bottom: 8px;
+                        dt {font-size: rem(13px);}
+                        dd {font-size: rem(14px);}
+                    }
+                    .remain {
+                        padding-top: 16px; flex-wrap:wrap; justify-content: center; 
+                        dt {font-size: rem(14px);}
+                        dd {font-size: rem(30px);}
+                    }
+                }
+            }
+        }
+        .btmTxt {
+            margin: 28px 0 0;
+            .bold {
+                font-size: rem(16px); 
+            }
+        }
+    }
+}
