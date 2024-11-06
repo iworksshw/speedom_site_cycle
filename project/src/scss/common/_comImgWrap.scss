@@ -14,7 +14,12 @@
             }
         }
     }
-    img {max-width: 100%;}
+
+    img {display: block; width: 100%; /* max-width: 100%; */ border-radius: 20px; /* border-radius: 16px; */ overflow: hidden;}
+    .cptImgGuideBox & img,
+    .cptCol2Section & img,
+    .cptCol3Section & img,
+    &[class*=col] img {border-radius: 12px;}
 
     // 컴포넌트 변경 Class
     // 2열
@@ -53,6 +58,7 @@
                 .imgTxt {margin: 8px 0 4px;}
             }
         }
+        img:not([class*=col]) {border-radius: 16px;}
 
         &.col2 {
             .imgGroup {
