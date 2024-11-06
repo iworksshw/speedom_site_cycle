@@ -313,6 +313,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 경륜정보 > 통계 > 데이터 슬라이드
     imgsDataSlide();
+
+    // 모의베팅
+    // 주간지수 슬라이드
+    recordSlide();
+
+    // 랭킹 슬라이트
+    rankSlide();
+
+    // 경기선택 슬라이드
+    matchSlide();
+
+    // 플로팅 푸터 옵션 toggle
+    batFloating();
 });
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
@@ -836,6 +849,127 @@ function inputTextReset(){
     })
 }
 
+
+
+// ------------------------------- 모의베팅 함수 ------------------------------- //
+// 주간 지수 슬라이드
+function recordSlide() {
+    if (document.querySelector(".rcrdSwiper")) {
+        let recordSwiper = new Swiper(".rcrdSwiper", {
+            navigation: {
+                nextEl: ".rcrdNavi .swiper-button-next",
+                prevEl: ".rcrdNavi .swiper-button-prev",
+            },
+        });
+    }
+}
+
+// 랭킹 슬라이드
+function rankSlide() {
+    let rankSwiper = new Swiper(".rankSwiper", {
+        loop: true,
+        touchRatio:0,
+        pagination: {
+            el: ".rankingBox .swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+}
+
+// 경기 선택 슬라이드
+function matchSlide(){
+    let matchSwiper = new Swiper(".matchSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        centeredSlides: false,
+        navigation: {
+            nextEl: ".matchNavi .swiper-button-next",
+            prevEl: ".matchNavi .swiper-button-prev",
+        },
+    });
+
+    const matchBtns = document.querySelectorAll(".matchSlct .matchBox");
+
+    matchBtns.forEach(function(matchBtn, idx){
+        matchBtn.addEventListener("click", function(){
+            let target = this.parentNode;
+
+            matchBtns.forEach(function(others) {
+                others.classList.remove("on");
+            });
+            if (!matchBtn.classList.contains("disabled")) {
+                this.classList.add("on");
+                swCenter(target);
+            }
+        })
+    })
+
+    function swCenter(target) {
+        const snbWrap = document.querySelector('.matchSwiper .swiper-wrapper');
+        const targetRect = target.getBoundingClientRect(); 
+        const box = document.querySelector('.matchSwiper');
+        const boxHalf = box.clientWidth / 2; 
+        let pos;
+        let listWidth = 0; 
+
+        document.querySelectorAll('.matchSwiper .swiper-wrapper .swiper-slide').forEach(function (slide) {
+            listWidth += slide.offsetWidth;
+        });
+
+        const selectTargetPos = targetRect.left - snbWrap.getBoundingClientRect().left + target.offsetWidth / 2;
+
+        if (selectTargetPos <= boxHalf) {
+            // 왼쪽에 위치한 경우
+            pos = 0;
+        } else if (listWidth - selectTargetPos <= boxHalf) {
+            // 오른쪽에 위치한 경우
+            pos = listWidth - box.clientWidth;
+        } else {
+            // 중앙에 위치한 경우
+            pos = selectTargetPos - boxHalf;
+        }
+
+        // 애니메이션 적용
+        snbWrap.style.transform = 'translateX(' + pos * -1 + 'px)';
+        snbWrap.style.transitionDuration = '500ms';
+    }
+}
+
+// 플로팅 푸터 옵션 toggle
+function batFloating () {
+    if (document.querySelector(".smlFloating")) {
+        const batFoot = document.querySelector(".smlFloating");
+        const batBtn = batFoot.querySelector(".btnSlide");
+        const batDt = batFoot.querySelector(".contBox");
+
+        batBtn.addEventListener("click", function(){
+            batDt.classList.toggle("on");
+        })
+    }
+}
+
+// Tooltip toggle
+function ttOpen(contId) {
+    const ttBox = document.querySelector("#" + contId);
+    const allttBox = document.querySelectorAll(".tooltipBox");
+
+    if (ttBox.classList.contains("on")) {
+        ttBox.classList.remove("on");
+    } else {
+        allttBox.forEach(function(tBox){
+            tBox.classList.remove("on");
+        })
+        ttBox.classList.add("on");
+    }
+}
+function ttClose(contId) {
+    const ttBox = document.querySelector("#" + contId);
+    ttBox.classList.remove("on");
+}
 
 // ------------------------------- 모션 함수 ------------------------------- //
 
