@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
         });
     });
-
+    /*
     //뎁스 2메뉴 오버
     depth2Menus.forEach(function(depth2Menu,idxI, elements){
         depth2Menu.querySelector(".depth2Name").addEventListener("mouseover",function(e){
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     })
+    */
     //GNB - End
 
     //디자인 셀렉트
