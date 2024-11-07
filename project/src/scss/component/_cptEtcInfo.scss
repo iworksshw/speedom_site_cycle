@@ -63,6 +63,10 @@
                             line-height: 1.6;
                             .num {font-size: rem(18px); color: var(---Primary); font-weight: 700;}
                             .txt {font-size: rem(16px); color: var(--Gray-800); }
+                            .bullet {
+                                position: relative;padding-left: 18px;color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 700;line-height: 150%; /* 24px */
+                                &::after {display: block; content: ""; width: 3px; height: 3px; background: var(--Gray-400); position: absolute; left: 7px; top: 8px;}
+                            }
                         }
                         .aTxt {
                             margin-top: 12px; border-radius: 8px; padding: 24px 30px; background: var(--Bg-Line-bg-200);
