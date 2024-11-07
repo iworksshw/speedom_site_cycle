@@ -6,36 +6,43 @@
 
     .mView {display: none;}
 
-    table {
-        width: 100%; border-collapse: collapse; table-layout: fixed; border-top: 2px solid var(--Gray-900);
-        th {
-            padding: 20px 5px;border-bottom: 1px solid var(--Bg-Line-line-200); border-right: 1px solid var(--Bg-Line-line-200); text-align: center; font-size: rem(15px); color: var(--Gray-900); font-weight: 600; line-height: 1.3; background: var(--Bg-Line-bg-100);
-            &:last-child {border-right: none;}
-        }
-        .lineR {border-right-color: var(--Gray-300);}
+    .tableArea {
+        &.sizeS table {min-width: 600px;}
+        &.sizeM table {min-width: 800px;}
+        &.sizeL table {min-width: 1000px;}
+        &.sizeXL table {min-width: 1200px;}    
 
-        thead {
+        table {
+            width: 100%; border-collapse: collapse; table-layout: fixed; border-top: 2px solid var(--Gray-900);
             th {
-                border-bottom: 1px solid var(--Gray-900); border-right: 1px solid var(--Bg-Line-line-200);
-            }
-        }
-        tbody {
-            td {
-                padding: 20px 5px; text-align: center; font-size: rem(15px); color: var(--Gray-700); border-bottom: 1px solid var(--Bg-Line-line-200); border-right: 1px solid var(--Bg-Line-line-200);
+                padding: 20px 5px;border-bottom: 1px solid var(--Bg-Line-line-200); border-right: 1px solid var(--Bg-Line-line-200); text-align: center; font-size: rem(15px); color: var(--Gray-900); font-weight: 600; line-height: 1.3; background: var(--Bg-Line-bg-100);
                 &:last-child {border-right: none;}
+            }
+            .lineR {border-right-color: var(--Gray-300);}
 
-                .mark {
-                    height: 24px; padding: 0 8px; border-radius: 4px; line-height: 24px; font-size: rem(12px); font-weight: 600; color: #fff;display: inline-block; vertical-align: middle;
-                    &.orange {background: var(--Point-Orange);}
-                    &.blue {background: var(--Point-Blue);}
-                    &.mint {background: var(--Point-Primary2);}
+            thead {
+                th {
+                    border-bottom: 1px solid var(--Gray-900); border-right: 1px solid var(--Bg-Line-line-200);
                 }
             }
+            tbody {
+                td {
+                    padding: 20px 5px; text-align: center; font-size: rem(15px); color: var(--Gray-700); border-bottom: 1px solid var(--Bg-Line-line-200); border-right: 1px solid var(--Bg-Line-line-200);
+                    &:last-child {border-right: none;}
+                    .txtBtn {text-decoration: underline; text-underline-position: under;}
+                    .mark {
+                        height: 24px; padding: 0 8px; border-radius: 4px; line-height: 24px; font-size: rem(12px); font-weight: 600; color: #fff;display: inline-block; vertical-align: middle;
+                        &.orange {background: var(--Point-Orange);}
+                        &.blue {background: var(--Point-Blue);}
+                        &.mint {background: var(--Point-Primary2);}
+                    }
+                }
+            }
+            .frm {
+                padding: 13px 5px;
+            }
+            .left {padding-left: 16px; text-align: left;}
         }
-        .frm {
-            padding: 13px 5px;
-        }
-        .left {padding-left: 16px; text-align: left;}
     }
 
     @include media("mobile"){
@@ -45,14 +52,17 @@
         .pcView {display: none;}
         .mView {display: block;}
 
-        table {
-            th {padding: 8px 5px; font-size: rem(14px); word-break: keep-all;}
-            tbody {
-                td {
-                    padding: 8px 5px; font-size: rem(14px);
-    
-                    .mark {
-                        height: 20px; line-height: 20px; 
+        .tableArea { 
+            width: calc(100% + 16px); overflow: auto;
+            table {
+                th {padding: 8px 5px; font-size: rem(14px); word-break: keep-all;}
+                tbody {
+                    td {
+                        padding: 8px 5px; font-size: rem(14px);
+        
+                        .mark {
+                            height: 20px; line-height: 20px; 
+                        }
                     }
                 }
             }

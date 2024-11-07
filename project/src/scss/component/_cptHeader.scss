@@ -33,7 +33,7 @@
                         .depth1Name {
                             color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
                         }
-                        &.on {
+                        &.on, &:hover, &:focus  {
                             .depth1Name {
                                 color: var(---Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
                             }
@@ -79,6 +79,344 @@
                 .item {
                     a {
                         padding-left: 28px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 150%; /* 24px */
+                    }
+                    &.ico01 a {background: url(../../images/common/ic_head_01.svg) left 2px center no-repeat;}
+                    &.ico02 a {background: url(../../images/common/ic_head_02.svg) left 2px center no-repeat;}
+                    &.ico03 a {background: url(../../images/common/ic_head_03.svg) left 2px center no-repeat;}
+                    &.ico04 a {background: url(../../images/common/ic_head_04.svg) left 2px center no-repeat;}
+                }
+            }
+        }
+    }
+    .gnbArea {
+        width:100%; border-top: 1px solid var(--Bg-Line-line-100); border-bottom: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 100;
+        .gnbBox {
+            width: 100%; max-width:1480px; height: 62px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;
+            .depth1Group {
+                width: 824px; height: 100%; margin-right:20px; display: flex; justify-content: space-between; align-items: center; transition: margin-left 0.3s;
+                .depth1Menu {
+                    height: 100%; align-content: center; flex-grow: 1;
+                    .depth1Name {
+                        width: max-content; padding-right:32px; color: var(--Gray-800); font-size: rem(20px); font-weight: 800; line-height: normal; display: flex;
+                        background: url(../../images/common/ic_gnb_dep1_off.svg) right 2px center no-repeat;
+                    }
+                    &.on, &:hover, &:focus {
+                        .depth1Name {
+                            color: var(---Primary); background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
+                        }
+                        .depth2Area {height:470px; display: block; }
+                    }
+                }
+            }
+            .depth2Area {
+                width: 100%; height:0; position: absolute; left: 0; top: 62px; background: #fff; border-top: 1px solid var(--Bg-Line-line-100);
+                box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1); z-index: 99; display:none; overflow: hidden; 
+                .depth2Box {
+                    width: 100%; max-width: 1480px; height: 100%; margin: 0 auto; padding: 12px 20px 40px; display: flex; justify-content: space-between;
+                    .depth2Group{
+                        width: 100%; height: 418px; position: relative; display: flex; flex-wrap: wrap; gap: 40px; flex-direction: column; align-content: flex-start;
+
+                        .depth2Menu {
+                            width: 220px;
+                            &:first-child {margin-top: 0;}
+                            .depth2Name {
+                                width: 100%; padding: 20px; color: var(--Gray-900); font-size: rem(18px); font-weight: 700; line-height: normal; display: block;
+                            }
+                            &:hover {
+                                border-radius: 12px; background: #F9FAFC;
+                            }
+                        }
+                    }
+                    .bnBox {
+                        width: 220px;
+                        .imgBox {
+                            width: 100%; height: 220px; border-radius: 20px; overflow: hidden;
+                        }
+                        .textBox {
+                            width: 100%; margin-top: 16px;
+                            p {
+                                color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: normal;
+                            }
+                        }
+                        .moreBox {
+                            width: 100%; margin-top: 24px;
+                            a {
+                                width: max-content; height: 20px; color: var(--Gray-500); font-size: rem(16px); font-weight: 400; line-height: normal; 
+                                text-transform: capitalize; border-bottom: 1px solid var(--Gray-500); display: block; position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+            .depth3Group {
+                width: 100%;
+                .depth3Menu {
+                    width: 100%;
+                    .depth3Name {
+                        width: 100%; padding: 0 20px 20px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; display: block;
+                        &:hover {
+                            text-decoration: underline; text-underline-position: under;
+                        }
+                    }
+                }
+            }
+            .allMenu {
+                width: 24px; height: 100%; font-size: 0; background: url(../../images/common/ic_all_menu.svg) center no-repeat;
+            }
+        }
+    }
+    @include media('pcs'){
+        .gnbArea {
+            .gnbBox {
+                justify-content: flex-end;
+                .depth1Group {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include media('mobile'){
+        & ,&.on {
+            transform: translateY(-112px); background: #fff;
+            .quickArea .quickBox .guickMenuGroup {display: none;}
+            .headArea {
+                .headBox {
+                    .logoBox {
+                        width: 110px; height: 26px; position: absolute; left: 20px; top: 94px;
+                        .logo g path {fill: #00458D;}
+                    }
+                    .myMenuGroup {
+                        position: absolute; right: 74px; top: 83px; gap: 4px;
+                        .item {
+                            a {
+                                width: 50px; height: 50px; padding-left: 0; padding-top: 34px; font-size: rem(12px); text-align: center; display:block;
+                            }
+                            &.ico01 a {background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;}
+                            &.ico02 {display: none;}
+                            &.ico03 a {background: url(../../images/common/ic_head_03.svg) center 8px no-repeat;}
+                            &.ico04 {display: none;}
+                        }
+                    }
+                }
+            }
+            .gnbArea {
+                border-top: 1px solid #fff; border-bottom: 1px solid var(--Bg-Line-line-100, #E1E4EA);;
+                .gnbBox {
+                    height: 70px;
+                    .depth1Group {
+                        display: none;
+                        .depth1Menu {
+                            .depth1Name {
+                                color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
+                            }
+                        }
+                    }
+                    .allMenu {
+                        width: 50px; height: 50px; padding-top: 34px;
+                        color: var(--Gray-800, #2C2C2C); font-size: rem(12px); font-weight: 700; line-height: normal; 
+                        background: url(../../images/common/ic_all_menu_mo.svg) center 8px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.allMenuArea {
+    width: 100%; height: 100vh; background: #fff; position: fixed; left: 0; top: 0; z-index: 200;
+    @include minWidth('mobile'){
+        *:hover::-webkit-scrollbar-thumb {
+            background: rgba(87, 87, 87, 0.54);
+        }
+        *::-webkit-scrollbar {width:30px; padding:10px;}
+        *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
+        *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
+    }
+    .allTop {
+        width: 100%; height: 86px; background: var(--Point-Primary2);
+        .pcView {
+            width: 100%; max-width: 1480px; padding: 23px 20px; margin: 0 auto;
+        }
+        .moView {
+            display: none;
+        }
+    }
+    .allMenuGroup {
+        width: 100%; height: calc(100vh - 86px); overflow-y: scroll;
+        .allMenuBox {
+            width: 100%; max-width: 1480px; padding: 0 20px; margin: 0 auto; 
+            .depth1Group {
+                width: 100%;
+                .depth1Menu {
+                    width: 100%; padding: 60px 0; border-top: 1px solid var(--Bg-Line-line-100); display: flex;
+
+                    &:first-child {border-top: 0;}
+                    .depth1Name{
+                        width: 23.6%; color: var(---Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
+                    }
+                }
+            }
+            
+            .depth2Group {
+                width: 100%; display: flex; flex-wrap: wrap; gap: 40px 20px;
+                .depth2Menu {
+                    width: calc(20% - 16px); min-width: 160px;
+                    .depth2Name {
+                        color: var(--Gray-900); font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 1.4;
+                    }
+                }
+            }
+            
+            .depth3Group {
+                margin-top: 16px;
+                .depth3Menu {
+                    margin-top: 8px;
+                    &:first-child {margin-top: 0;}
+                    .depth3Name {
+                        color: var(--Gray-800); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+    @include media('mobile'){
+        .allTop {
+            height: 136px;
+            .pcView {
+                display: none;
+            }
+            .moView {
+                width: 100%; padding: 20px 16px;
+            }
+        }
+        .allMenuGroup {
+            height: calc(100vh - 136px);
+            .allMenuBox {
+                height: 100%; padding: 0;
+                .depth1Group {
+                    height: 100%; position: relative;
+                    .depth1Menu {
+                        padding: 0; border-top: 0;
+                        .depth1Name{
+                            width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
+                        }
+                        &.on {
+                            .depth1Name{color: var(---Primary); font-weight: 700;}
+                            .depth2Group {display: flex;}
+                        }
+                    }
+                }
+                .depth2Group {
+                    width: calc(100% - 150px); height: 100%; gap: 0; border-left: 1px solid var(--Bg-Line-line-200); overflow-y: auto; background: #fff; 
+                    position: absolute; top: 0; right: 0; display: none; align-content: baseline;
+                    .depth2Menu {
+                        width: 100%; 
+                        .depth2Name {
+                            width: 100%; padding: 16px 12px 12px; font-size: rem(16px); font-weight: 700; line-height: 1.5; display: block;
+                            background: url(../../images/common/ic_20_allmenu.svg) right 16px top 20px no-repeat;
+                        }
+                        &.on {
+                            background: #F9FAFC;
+                            .depth2Name {background: url(../../images/common/ic_20_allmenu_on.svg) right 16px top 20px no-repeat;}
+                            .depth3Group {display: block;}
+                        }
+                    }
+                }
+                .depth3Group {
+                    margin-top: 0; padding-bottom: 8px; display: none;
+                    .depth3Menu {
+                        margin-top: 0;
+                        .depth3Name {
+                            padding: 8px 12px; font-size: rem(15px); display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+.cptHeader {
+    width:100%; background: #fff; transition: transform 0.2s, background 0.2s; position: fixed; left:0; top:0; z-index: 100;
+
+    &.on {
+        transform: translateY(-112px); background: var(---Primary);
+        .headArea {
+            .headBox {
+                .logoBox {
+                    width: 104px; height: 26px; position: absolute; left: 20px; top: 90px;
+                    .logo g path {fill: #fff;}
+                }
+                .myMenuGroup {
+                    position: absolute; right: 68px; top: 93px; gap: 24px;
+                    .item {
+                        a {
+                            padding-left: 28px; height: 24px; font-size:0; display:block;
+                        }
+                        &.ico01 a {background: url(../../images/common/ic_head_01_on.svg) left 2px center no-repeat;}
+                        &.ico02 a {background: url(../../images/common/ic_head_02_on.svg) left 2px center no-repeat;}
+                        &.ico03 a {background: url(../../images/common/ic_head_03_on.svg) left 2px center no-repeat;}
+                        &.ico04 a {background: url(../../images/common/ic_head_04_on.svg) left 2px center no-repeat;}
+                    }
+                }
+            }
+        }
+        .gnbArea {
+            border-top: 1px solid var(---Primary); border-bottom: 1px solid var(---Primary);
+            .gnbBox {
+                .depth1Group {
+                    margin-left: 215px; margin-right:290px;
+                    .depth1Menu {
+                        .depth1Name {
+                            color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
+                        }
+                        &.on {
+                            .depth1Name {
+                                color: var(---Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
+                            }
+                        }
+                    }
+                }
+                .allMenu {background: url(../../images/common/ic_all_menu_on.svg) center no-repeat;}
+            }
+        }
+    }
+    .quickArea {
+        width: 100%;
+        .quickBox {
+            width: 100%; max-width:1480px; height: 40px; margin: 0 auto; padding: 10px 20px;
+            .guickMenuGroup {
+                width: 100%; height:20px; display:flex; justify-content: flex-end;
+                .item {
+                    padding-left:29px; position: relative;
+                    &::before {content:""; width:1px; height:16px; background: var(--Bg-Line-line-100); display: block; position: absolute; left: 14px; top: 3px;}
+                    &:first-child::before {display: none;}
+                    a {
+                        color: var(--Gray-700); font-size: rem(15px); font-weight: 400; line-height: 150%; display:block;
+                        &[target=_blank] {
+                            padding-right:20px; background: url(../../images/common/ic_link_blank.svg) right 2px center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .headArea {
+        width:100%; position: relative; z-index: 101;
+        .headBox {
+            width: 100%; max-width:1480px; height: 72px; margin: 0 auto; padding: 0 20px 12px; display: flex; justify-content: space-between; align-items: center; position: relative;
+            .logoBox {
+                width:160px;
+                .logo {
+                    width:100%;
+                }
+            }
+            .myMenuGroup {
+                display: flex; justify-content: flex-end; align-items: center; gap: 20px;
+                .item {
+                    a {
+                        padding-left: 28px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 150%;
                     }
                     &.ico01 a {background: url(../../images/common/ic_head_01.svg) left 2px center no-repeat;}
                     &.ico02 a {background: url(../../images/common/ic_head_02.svg) left 2px center no-repeat;}
@@ -265,7 +603,7 @@
             background: rgba(87, 87, 87, 0.54);
         }
         *::-webkit-scrollbar {width:30px; padding:10px;}
-        *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
+        *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2); }
         *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
     }
     .allTop {
@@ -371,3 +709,4 @@
         }
     }
 }
+*/

@@ -1,0 +1,33 @@
+.cptContFull {
+    width: 100%; 
+    .sectArea {
+        max-width: 1480px; margin: 0 auto; padding: 0 20px;
+        .comImgBox {
+            background-color: #fff;
+        }
+    }
+    &[class*=addBg] {
+        padding: 80px 0 100px; background-color: var(--Bg-Line-bg-100);
+    }
+    // &.addBg02 {
+    //     background-color: var(--Bg-Line-bg-200);
+    // }
+    .layoutContArea + & {
+        margin-top: -40px;
+    }
+    & + .layoutContArea {
+        padding-top: 80px !important;
+    }
+
+    @include media("mobile"){
+        &[class*=addBg] {
+            padding: 60px 0;
+        }
+        .layoutContArea + & {
+            margin-top: -60px;
+        }
+        & + .layoutContArea {
+            padding-top: 60px !important;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.cptContKBI {
+    width: 100%; margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    &.mgH32 {margin-top: 32px;}
+
+    .biCont {
+        margin: 20px 0; display: flex; gap: 20px;
+        .wd50 {
+            width: 50%; height: 250px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); display: flex; align-items: center; justify-content: center;
+            .bi {
+                img {display: block;}
+            }
+            &.monoon {background: url(../../../images/contents/cont06_02_bg2.svg) no-repeat center / cover;}
+        }
+ 
+    }
+
+    .downBtn {
+        text-align: center;
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+        &.mgH32 {margin-top: 24px;}
+
+        .biCont {
+            margin: 16px 0; flex-wrap: wrap; gap: 12px;
+            .wd50 {
+                width: 100%; height: 138px; border-radius: 8px;
+                .bi {
+                    img {height: 38px;}
+                }
+            }
+     
+        }
+    }
+}
