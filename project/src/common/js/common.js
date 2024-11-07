@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //특정 엘리먼트 외 클릭 시 동작
     document.addEventListener("mouseup", function(e){
         //메뉴 외 영역 클릭시 메뉴 닫힘
+        /*
         if(document.querySelector(".gnbBox") && !document.querySelector(".gnbBox").contains(e.target)){
             depth1Menus.forEach(function(depth1Menu){
                 if(depth1Menu.classList.contains("on")){
@@ -47,9 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }
+        */
     });
 
     //뎁스 1메뉴 클릭
+    /*
     depth1Menus.forEach(function(depth1Menu, idxI, elements){
         depth1Menu.querySelector(".depth1Name").addEventListener("click",function(e){
             e.preventDefault();
@@ -102,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
         });
     });
+    */
     /*
     //뎁스 2메뉴 오버
     depth2Menus.forEach(function(depth2Menu,idxI, elements){
