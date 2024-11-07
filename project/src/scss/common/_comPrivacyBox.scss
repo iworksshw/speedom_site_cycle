@@ -19,6 +19,7 @@
             }
             .anno {
                 margin-top: 12px; color: var(---Primary); font-size: rem(14px); font-weight: 400; line-height: 1.6;
+                &.point {color: var(--Point-Blue2, #2E6CFF);}
             }
             .listGroup {
                 margin-top: 12px;
@@ -81,6 +82,23 @@
             }
         }
         .intervalBorder {padding-top: 32px;margin-top:32px;border-top: 1px solid var(--Bg-Line-line-100, #E1E4EA);}
+        .orderedList {
+            padding-left: 20px;margin-top: 20px;
+            > li {list-style-type: decimal;}
+            li {
+                color: var(--Gray-800, #2C2C2C);font-size: rem(15px);font-weight: 400;line-height: 160%; /* 24px */
+                .anno {margin-top: 0;}
+                strong.point {color: var(--Point-Red, #F33);}
+            }
+            $korean-markers: ('가', '나', '다', '라', '마', '바', '사', '아', '자', '차', '카', '타', '파', '하');
+            .korean > li {
+                @for $i from 1 through length($korean-markers) {
+                    &:nth-child(#{$i})::marker {
+                    content: nth($korean-markers, $i) + '. ';
+                    }
+                }
+            }
+        }
     }
     @include media('mobile') {
         width: calc(100% + 32px); margin-top: 16px; margin-left: -16px; border-left: 0; border-right: 0; border-radius: 0;
@@ -109,6 +127,9 @@
                         }
                     }
                 }
+            }
+            .orderedList {
+                > li {font-size: rem(14px);}
             }
         }
     }
