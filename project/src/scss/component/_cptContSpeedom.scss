@@ -8,7 +8,7 @@
         }
         .img {
             margin-right: 100px;
-            img {border-radius: 16px; display: block;}
+            img {border-radius: 16px; display: block; max-width: 100%; height: auto;}
         }
         .cont {
             flex: 1;
@@ -22,6 +22,18 @@
                 }                
             }
         }
+        .btnGrp {
+            margin-top: 32px; display: flex; align-items: center; gap: 12px;
+            a {
+                display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 24px; background: var(---Primary); border-radius: 8px; color: #fff; font-size: rem(16px); font-weight: 500; position: relative;
+                &::after {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_link_icon.svg) no-repeat center; margin-left: 4px;}
+            }
+        }
+        .vrInfo {
+            margin-top: 60px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-100); padding: 32px 32px;
+            dt {font-size: rem(18px); font-weight: 600; line-height: 1.6; color: var(--Gray-800);}
+            dd {font-size: rem(16px); line-height: 1.6; color: var(--Gray-800); margin-top: 12px;}
+        }
         .list.bt {
             .img {margin-right: 0; margin-left: 100px;}
         }        
@@ -29,6 +41,32 @@
 
     @include media("mobile"){
         margin-top: 40px;
+        .contArea {
+            .list {margin-top: 60px;}
+            .img {margin-right: 0; width: 100%;}
+            .cont {
+                width: 100%; flex: none; margin-top: 24px;
+                .infoTxt {                   
+                    dl {
+                        dt {width: 100px; font-size: rem(15px); line-height: 1.5;}
+                        dd {font-size: rem(15px);}
+                    }                
+                }
+            }
+            .list.bt {
+                .cont {order: 2;}
+                .img {order: 1; margin-left: 0;}
+            }
+            .btnGrp {
+                margin-top: 40px;
+                a {width: 50%;}
+            }
+            .vrInfo {
+                margin-top: 40px; padding: 20px 20px;
+                dt {font-size: rem(16px);}
+                dd {font-size: rem(15px);}
+            }
+        }       
         
     }
 }

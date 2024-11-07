@@ -10,7 +10,8 @@
     .tabContianer {
         margin-top: 24px;
         .tabCont {display:none;}
-        .tabCont.on {display:block;}
+        .tabCont.on {display:block;}        
+        &.mgH40 {margin-top: 40px;}
     }
 
     @include media('mobile'){
