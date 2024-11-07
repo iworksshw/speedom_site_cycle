@@ -7,10 +7,22 @@
     .imgWrap {width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; }
     
     img {max-width: 100%;}
+    .imgTxt {margin-bottom: 8px; font-size: rem(16px); font-weight: 700; color: var(--Gray-800);}
+
+    .col4 {
+        width: 100%; display: flex; gap: 32px; flex-wrap: wrap;
+        .item {
+            flex: 0 0 calc(25% - 24px);
+            img {width: 100%;}
+        }
+    }
 
     // 컴포넌트 변경 Class
     // 여백 좁은 이미지 박스
     &.narrow {padding: 30px;}
+
+    // 간격 예외
+    .imgBox + & {margin-top: 32px;}
 
     @include media("mobile"){
         padding: 36px 20px; border-radius: 12px; gap: 20px;
@@ -18,8 +30,19 @@
         .pcView {display: none;}
         .mView { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;}
         .imgWrap { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;}
+        .imgTxt {font-size: rem(15px);}
+
+        .col4 {
+            gap: 16px 24px; 
+            .item {
+                flex: 0 0 calc(50% - 12px);
+            }
+        }
 
         &.narrow {padding: 16px;}
+        &.mNoneB {
+            padding: 0; border: none;
+        }
     }
 
     // 컨텐츠 추가 클래스
