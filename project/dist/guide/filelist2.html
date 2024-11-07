@@ -1,0 +1,3987 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="퍼블리싱가이드">
+	<meta property="og:description" content="퍼블리싱가이드">	 
+
+	<title>파일리스트</title>
+<!--
+	<link rel="stylesheet" href="/common/css/default.css" />
+	<link rel="stylesheet" href="/common/css/common.css" />
+	<link rel="stylesheet" href="/common/css/layout.css" />
+	<link rel="stylesheet" href="/common/css/component.css" />
+	<link rel="stylesheet" href="/common/css/main.css" />
+-->
+	<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+
+<style type="text/css">
+* {box-sizing:border-box;}
+html,body {height:100%; margin:0; padding:0; background:#ebedef}
+
+
+@font-face {
+	font-family: 'PretendardGOV';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../common/webfont/PretendardGOVVariable.woff2') format('woff2-variations');
+}
+
+* {box-sizing: border-box; font-family: 'PretendardGOV', sans-serif; letter-spacing: -1px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input, textarea {-webkit-border-radius:0; -webkit-appearance:none;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5; font-family: 'PretendardGOV', sans-serif; color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+caption {font-size: 0;}
+
+input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+
+select {-moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../images/icon_select.png) calc(100% - 9px) center no-repeat;}
+select::-ms-expand {display:none}
+label {font-size: 0;}
+
+.skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
+.skip .quickBtn:focus {height:auto;}
+
+.hide {font-size:0 !important; position:fixed; left:-5000px; top:0;}
+
+.g-wrap {width:100%; height:100%;}
+.g-nav {width:256px; height:100%; background:#3c4b64; position:fixed; left:0; top:0;}
+.g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+.g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+.g-nav .g-menu {}
+.g-nav .g-depth1-group {}
+.g-nav .g-depth1-list {}
+.g-nav .g-depth1-name {padding:10px 10px 10px 20px; margin-top:10px; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; }
+.g-nav .g-depth1-name h2 {letter-spacing:0px;}
+.g-nav .g-depth2-group {}
+.g-nav .g-depth2-list {}
+.g-nav .g-depth2-name {}
+.g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+.g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+.g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+.g-nav .g-menu .close-menu {display:none;}
+
+.g-cont {width:calc(100% - 256px); height:100%; margin-left:256px;}
+.g-cont .g-top {width:calc(100% - 256px); height:56px; background:#fff; position:fixed; left:256px; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+.g-cont .g-top:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-top-menu {width:calc(100% - 300px); float:left;}
+.g-cont .g-top .g-top-menu .open-menu {display:none;}
+.g-cont .g-top .g-menu-group {width:100%; padding-left:20px; }
+.g-cont .g-top .g-menu-group:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-menu-list { float:left;}
+.g-cont .g-top .g-menu-list a {padding:0 20px; font-size:13px; font-weight:400; line-height:54px; color:#999; display:block; letter-spacing:0px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;}
+.g-cont .g-top .g-menu-list.on a {color:#333;}
+.g-cont .g-top .g-menu-list a:hover {color:#333;}
+.g-cont .g-top .g-top-text {width:300px; padding-right:30px; font-size:11px; letter-spacing:0px; font-weight:300; color:#aaa; line-height:54px; text-align:right; float:right;}
+
+.g-cont .g-body {padding:66px 30px 30px;}
+.g-cont .g-body .g-in-body {}
+
+
+.g-chart {}
+.g-chart:after {content:""; display:block; clear:both;}
+.g-chart dl {width:25%; padding-left:20px; letter-spacing:0px; border-left:4px solid #d8dbe0; border-radius:5px; float:left;}
+.g-chart dl.total {border-left-color:#2eb85c;}
+.g-chart dl.complete {border-left-color:#39f;}
+.g-chart dl.uncomplete {border-left-color:#e55353;}
+.g-chart dl.etc {border-left-color:#d8dbe0;}
+.g-chart dt {font-size:12px;}
+.g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+.g-file {}
+.g-file .g-file-title {width:auto; height:46px; padding-left:20px; font-size:14px; line-height:44px; border:1px solid #d8dbe0; border-radius:5px 5px 0 0; font-weight:400; display:block; color:#434343; margin:20px 0 0; background:#fff;}
+.g-file .g-file-cont {width:100%; margin:0; padding:20px; font-size:12px; color:#607d8b; font-weight:400; border:1px solid #d8dbe0; border-top:0; border-radius:0 0 5px 5px; background:#fff; overflow:auto;}
+.g-file .g-table { width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .col1 {width:13%;}
+.g-file .g-table .col2 {width:13%;}
+.g-file .g-table .col3 {width:13%;}
+.g-file .g-table .col4 {width:13%;}
+.g-file .g-table .col5 {}
+.g-file .g-table .col6 {width:60px;}
+.g-file .g-table .col7 {width:150px;}
+.g-file .g-table .col8 {width:10%;}
+.g-file .g-table th {padding:13px; background:#d8dbe0; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500;}
+.g-file .g-table td {padding:8px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px;}
+.g-file .g-table td.link {text-align:left;}
+.g-file .g-table td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table td .btn_worked {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#16d826; display:inline-block;}
+.g-file .g-table td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table td a {font-size:12px; color:#3580db;}
+.g-file .g-table .page .more button {width:50px; padding:1px 5px 2px; font-size:10px; border-radius:3px; background:#3580db;}
+.g-file .g-table .page .more button:after {content:"OPEN"; color:#fff;}
+.g-file .g-table .page.on .more button:after {content:"CLOSE"; color:#fff;}
+.g-file .g-table .page-add {display:none;}
+.g-file .g-table .page-add.on {display:table-row;}
+.g-file .g-table .page-add > td {background:#666;}
+
+.g-file .g-table .g-table-add {width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .g-table-add .col1 {width:30%;}
+.g-file .g-table .g-table-add .col2 {width:30%;}
+.g-file .g-table .g-table-add .col3 {width:auto;}
+.g-file .g-table .g-table-add  th {padding:5px; text-align:center; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500; background:#edeff3;}
+.g-file .g-table .g-table-add  td {padding:5px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px; background:#fff;}
+.g-file .g-table .g-table-add  td:nth-child(2) {text-align:left;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table .g-table-add  td a {font-size:12px; color:#3580db;}
+
+@media screen and (min-width: 100px) and (max-width: 1023px) {
+    .g-nav {width:100%; height:auto; padding-top:56px; background:#3c4b64; position:static;}
+    .g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+    .g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+    .g-nav .g-menu {height:100vh; padding-bottom:30px; background:#3c4b64; position:fixed; left:0; top:0; z-index:1000; display:none;}
+    .g-nav .g-menu.on {display:block;}
+    .g-nav .g-depth1-name {padding:10px; margin-top:0; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; text-align:center;}
+    .g-nav .g-depth1-name h2 {letter-spacing:0px;}
+    .g-nav .g-depth2-group {font-size:0;}
+    .g-nav .g-depth2-list {width:50%; display:inline-block; }
+
+    .g-nav .g-menu .close-menu {width:25px; height:25px; font-size:0; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-nav .g-menu .close-menu:before {content:""; width:21px; height:2px; background:#333; transform: rotate(45deg); position:absolute; left:2px; top:12px;}
+    .g-nav .g-menu .close-menu:after {content:""; width:21px; height:2px; background:#333; transform: rotate(-45deg); position:absolute; left:2px; top:12px;}
+    
+    /*
+    .g-nav .g-depth2-list {width:33.333%; display:inline-block; }
+    .g-nav .g-depth2-name {}
+    .g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+    .g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+    .g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+    */
+    .g-cont {width:100%; height:auto; margin-left:0;}
+    .g-cont .g-top {width:100%; height:56px; background:#fff; position:fixed; left:0; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+    .g-cont .g-top .g-top-menu {width:100%; float:left; position:relative;}
+    .g-cont .g-top .g-menu-list { float:left;}
+    .g-cont .g-top .g-top-menu .open-menu {width:25px; height:25px; font-size:0; border:1px solid #333; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-cont .g-top .g-top-menu .open-menu:before {content:""; width:17px; height:17px; border-radius:50%; background:#333; position:absolute; left:3px; top:3px;}
+    .g-cont .g-top .g-top-menu .open-menu:after {content:""; width:13px; height:13px; border-radius:50%; background:#fff; position:absolute; left:5px; top:5px;}
+
+    .g-cont .g-top .g-top-text {display:none;}
+
+    .g-cont .g-body {padding:20px 20px;}
+    
+    .g-chart dl {width:50%; margin-bottom:10px;}
+    .g-chart dt {font-size:12px;}
+    .g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+    .g-file .g-file-title {background:rgba(48,60,84,0.8); color:#fff;}
+    .g-file .g-file-cont {padding:15px 15px 5px;}
+
+    .g-file .g-table { width:100%; display:block; border:0;}
+    .g-file .g-table thead {display:none;}
+    .g-file .g-table tbody {display:block;}
+    .g-file .g-table tr {width:100%; display:block; margin-bottom:10px; border: 1px solid #d8dbe0;}
+    .g-file .g-table td {display:block; text-align:left;}
+    .g-file .g-table td:last-child {border-bottom:0;}
+    .g-file .g-table td.dep2:before {content:"2차 메뉴명 : ";}
+    .g-file .g-table td.dep3:before {content:"3차 메뉴명 : ";}
+    .g-file .g-table td.dep4:before {content:"4차 메뉴명 : ";}
+    .g-file .g-table td.type:before {content:"Type : ";}
+    .g-file .g-table td.link:before {content:"URL : ";}
+    .g-file .g-table td.cmpt:before {content:"완료여부 : ";}
+    .g-file .g-table td.cmpt span {width:50px; height:20px; margin-left:5px; font-size:13px; line-height:20px; border-radius:3px; text-align:center; vertical-align: middle; display:inline-block;}
+    .g-file .g-table td.modify:before {content:"수정내역 : ";}
+    .g-file .g-table td.more {padding:0;}
+    .g-file .g-table .page .more button {width:100%; height:25px; font-size:13px; border-radius:0;}
+
+
+    .g-file .g-table .page-add {display:none;}
+    .g-file .g-table .page-add.on {display:block;}
+    .g-file .g-table .page-add > td {background:#666; padding-bottom:1px;}
+
+    .g-file .g-table .g-table-add {width:100%; display:block; border:0;}
+    .g-file .g-table .g-table-add tr {border:1px solid #d8dbe0;}
+}
+</style>
+</head>
+<body>
+<div class="g-wrap">
+	<div class="g-nav">
+		<div class="g-logo">
+			<h1>FILELIST</h1>
+		</div>
+		<div class="g-menu">
+			<ul class="g-depth1-group">
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>경정</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('0')" href="#">메인/기타</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('1')" href="#">01 경정 가이드</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('2')" href="#">02 경정정보</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('3')" href="#">03 경정선수</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('4')" href="#">04 경정영상관</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('5')" href="#">05 순위예측</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('6')" href="#">06 희망길벗</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('7')" href="#">07 고객광장</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('8')" href="#">08 총괄본부</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('9')" href="#">09 마이페이지</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('10')" href="#">10 통합검색</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('11')" href="#">11 로그인</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('12')" href="#">12 회원가입</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('99')" href="#">99 샘플페이지</a></h3></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+            <button class="close-menu">바로가기 메뉴 닫기</button>
+		</div>
+	</div>
+	<div class="g-cont">
+		<div class="g-top">
+			<div class="g-top-menu">
+				<ul class="g-menu-group">
+					<li class="g-menu-list on"><a href="filelist2.html">FILELIST</a></li>
+					<li class="g-menu-list"><a href="guide.html">GUIDE</a></li>
+				</ul>
+				<button class="open-menu">바로가기 메뉴 열기</button>
+			</div>
+			<div class="g-top-text">Publishing Guide</div>
+		</div>
+		<div class="g-body">
+			<div class="g-in-body">
+				<div class="g-file">
+					<div class="g-file-title"> PAGE</div>
+					<div class="g-file-cont">
+						<div class="g-chart">
+							<dl class="total">
+								<dt>TOTAL</dt>
+								<dd>30</dd>
+							</dl>
+							<dl class="complete">
+								<dt>COMPLETE</dt>
+								<dd>20</dd>
+							</dl>
+							<dl class="uncomplete">
+								<dt>UNCOMPLETE</dt>
+								<dd>10</dd>
+							</dl>
+							<dl class="etc">
+								<dt>ETC</dt>
+								<dd>0</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_0">메인, 기타</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">메인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/index.html" target="_blank" title="새창">../html/index.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">건전베팅가이드</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu20/page_003.html" target="_blank" title="새창">../html/menu20/page_003.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">404에러</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu20/page_004.html" target="_blank" title="새창">../html/menu20/page_004.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">500에러</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu20/page_005.html" target="_blank" title="새창">../html/menu20/page_005.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">로딩페이지</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu20/page_006.html" target="_blank" title="새창">../html/menu20/page_006.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">이메일</td>
+									<td class="dep3">담당자 이메일 발송</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu20/page_007.html" target="_blank" title="새창">../html/menu20/page_007.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_1">경정 가이드</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">경정 알아보기</td>
+									<td class="dep3">경정안내</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_01_01.html" target="_blank" title="새창">../html/menu21/page_01_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정기초정보</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(5)</td>
+									<td class="link"><a href="../html/menu21/page_01_01_02.html" target="_blank" title="새창">../html/menu21/page_01_01_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 4 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경주진행과정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_01_03.html" target="_blank" title="새창">../html/menu21/page_01_01_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정구성요소</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(4)</td>
+									<td class="link"><a href="../html/menu21/page_01_01_04.html" target="_blank" title="새창">../html/menu21/page_01_01_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+
+								<!-- Tab +page 3 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+
+								<tr class="page">
+									<td class="dep2">경정 즐겨보기</td>
+									<td class="dep3">경주권구매 가이드</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(2)</td>
+									<td class="link"><a href="../html/menu21/page_01_02_01.html" target="_blank" title="새창">../html/menu21/page_01_02_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab +page 1 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">출주표보는법</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_02_02.html" target="_blank" title="새창">../html/menu21/page_01_02_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">배당률보는법</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_02_03.html" target="_blank" title="새창">../html/menu21/page_01_02_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경주권 환급,환불</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_02_04.html" target="_blank" title="새창">../html/menu21/page_01_02_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+                                
+								<!-- Tab +page 1 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">경정 지식쌓기</td>
+									<td class="dep3">경주시행규칙</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_03_01.html" target="_blank" title="새창">../html/menu21/page_01_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정전법</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_03_02.html" target="_blank" title="새창">../html/menu21/page_01_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">심판판정</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(3)</td>
+									<td class="link"><a href="../html/menu21/page_01_03_03.html" target="_blank" title="새창">../html/menu21/page_01_03_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 2 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정용어사전</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(14)</td>
+									<td class="link"><a href="../html/menu21/page_01_03_04.html" target="_blank" title="새창">../html/menu21/page_01_03_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab + page 13 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+                                    </td>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정·경정 관련법 안내</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_03_05.html" target="_blank" title="새창">../html/menu21/page_01_03_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경정예상지</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_04.html" target="_blank" title="새창">../html/menu21/page_01_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">우승선수 예측</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_05.html" target="_blank" title="새창">../html/menu21/page_01_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">모의베팅</td>
+									<td class="dep3">실전! 모의베팅</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu21/page_01_06_01.html" target="_blank" title="새창">../html/menu21/page_01_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">활동지수</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu21/page_01_06_01_popup01.html" target="_blank" title="새창">../html/menu21/page_01_06_01_popup01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">모의베팅하기</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu21/page_01_06_01_popup02.html" target="_blank" title="새창">../html/menu21/page_01_06_01_popup02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">모의베팅 완료</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu21/page_01_06_01_popup01.html" target="_blank" title="새창">../html/menu21/page_01_06_01_popup01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">알럿팝업</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu21/page_01_06_01_popup01.html" target="_blank" title="새창">../html/menu21/page_01_06_01_popup01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_2">경정정보</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">경주일정</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_01.html" target="_blank" title="새창">../html/menu22/page_02_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">종합경주정보</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Tab(7)</td>
+									<td class="link"><a href="../html/menu22/page_02_02.html" target="_blank" title="새창">../html/menu22/page_02_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab +page 5 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">경주출주표</td>
+									<td class="dep3">확정출주표</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_03_01.html" target="_blank" title="새창">../html/menu22/page_02_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">출주표 보는법</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu22/page_02_03_01_popup01.html" target="_blank" title="새창">../html/menu22/page_02_03_01_popup01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">선수정보</td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu22/page_02_03_01_popup02.html" target="_blank" title="새창">../html/menu22/page_02_03_01_popup02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">미확정출주표</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_03_02.html" target="_blank" title="새창">../html/menu22/page_02_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">모터/보트 정보</td>
+									<td class="dep3">경주기록</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(2)</td>
+									<td class="link"><a href="../html/menu22/page_02_04_01.html" target="_blank" title="새창">../html/menu22/page_02_04_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 1 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">모터/보트 정보</td>
+									<td class="dep3">정비기록</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(2)</td>
+									<td class="link"><a href="../html/menu22/page_02_04_02.html" target="_blank" title="새창">../html/menu22/page_02_04_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 1 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">경주결과</td>
+									<td class="dep3">일반경주</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_05_01.html" target="_blank" title="새창">../html/menu22/page_02_05_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경주배당률</td>
+									<td class="dep3">최종배당률</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_06_01.html" target="_blank" title="새창">../html/menu22/page_02_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">확정배당률</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_06_02.html" target="_blank" title="새창">../html/menu22/page_02_06_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">심판판정</td>
+									<td class="dep3">스타트/착순사진</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu22/page_02_07_01_list.html" target="_blank" title="새창">../html/menu22/page_02_07_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu22/page_02_07_01_view.html" target="_blank" title="새창">../html/menu22/page_02_07_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">심판/심의방송</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu22/page_02_07_02_list.html" target="_blank" title="새창">../html/menu22/page_02_07_02_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu22/page_02_07_02_view.html" target="_blank" title="새창">../html/menu22/page_02_07_02_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계데이터</td>
+									<td class="dep3">배당률 통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_09_01.html" target="_blank" title="새창">../html/menu22/page_02_09_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">매출액 통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_09_02.html" target="_blank" title="새창">../html/menu22/page_02_09_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">고배당 순위</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_09_03.html" target="_blank" title="새창">../html/menu22/page_02_09_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">코스별 승률</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu22/page_02_09_04.html" target="_blank" title="새창">../html/menu22/page_02_09_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_3">경정선수</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">선수조회</td>
+									<td class="dep3">검색</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_01_01.html" target="_blank" title="새창">../html/menu23/page_03_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">선수조회</td>
+									<td class="dep3">검색결과 없음</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_01_01_nolist.html" target="_blank" title="새창">../html/menu23/page_03_01_01_nolist.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">상세(선수프로필)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_01_02.html" target="_blank" title="새창">../html/menu23/page_03_01_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">선수전적비교</td>
+									<td class="dep3">조회/검색</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_02_01.html" target="_blank" title="새창">../html/menu23/page_03_02_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">비교결과</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_02_02.html" target="_blank" title="새창">../html/menu23/page_03_02_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">비교결과</td>
+									<td class="dep4"></td>
+									<td class="type">popup</td>
+									<td class="link"><a href="../html/menu23/page_03_02_02_popup.html" target="_blank" title="새창">../html/menu23/page_03_02_02_popup.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">신인선수 정보</td>
+									<td class="dep3">예행연습 경주</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_03_01.html" target="_blank" title="새창">../html/menu23/page_03_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">졸업기념 경주</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_03_02.html" target="_blank" title="새창">../html/menu23/page_03_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">선수현황</td>
+									<td class="dep3">종합현황</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_01.html" target="_blank" title="새창">../html/menu23/page_03_04_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">제재선수</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_02.html" target="_blank" title="새창">../html/menu23/page_03_04_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">부상선수</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_03.html" target="_blank" title="새창">../html/menu23/page_03_04_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">기타결장</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_04.html" target="_blank" title="새창">../html/menu23/page_03_04_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">출발위반 현황</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_05.html" target="_blank" title="새창">../html/menu23/page_03_04_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">연도별 주선보류 현황</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_04_06.html" target="_blank" title="새창">../html/menu23/page_03_04_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">특별승강급</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu23/page_03_04_07_list.html" target="_blank" title="새창">../html/menu23/page_03_04_07_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu23/page_03_04_07_view.html" target="_blank" title="새창">../html/menu23/page_03_04_07_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">순위정보</td>
+									<td class="dep3">전체성적순위</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_05_01.html" target="_blank" title="새창">../html/menu23/page_03_05_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">다승 순위</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_05_02.html" target="_blank" title="새창">../html/menu23/page_03_05_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">그랑프리 포인트</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_05_03.html" target="_blank" title="새창">../html/menu23/page_03_05_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">상금정보</td>
+									<td class="dep3">상금지급정보</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_06_01.html" target="_blank" title="새창">../html/menu23/page_03_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">전체상금순위</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu23/page_03_06_02.html" target="_blank" title="새창">../html/menu23/page_03_06_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_4">경정영상관</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu24/page_04.html" target="_blank" title="새창">../html/menu24/page_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List(검색결과)</td>
+									<td class="link"><a href="../html/menu24/page_04_list.html" target="_blank" title="새창">../html/menu24/page_04_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View(경주)</td>
+									<td class="link"><a href="../html/menu24/page_04_view_01.html" target="_blank" title="새창">../html/menu24/page_04_view_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View(기타)</td>
+									<td class="link"><a href="../html/menu24/page_04_view_02.html" target="_blank" title="새창">../html/menu24/page_04_view_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경주동영상</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu24/page_04_01_list.html" target="_blank" title="새창">../html/menu24/page_04_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu24/page_04_01_view.html" target="_blank" title="새창">../html/menu24/page_04_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경정뉴스</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu24/page_04_02_list.html" target="_blank" title="새창">../html/menu24/page_04_02_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu24/page_04_02_view.html" target="_blank" title="새창">../html/menu24/page_04_02_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경정인사이트</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu24/page_04_03_list.html" target="_blank" title="새창">../html/menu24/page_04_03_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu24/page_04_03_view.html" target="_blank" title="새창">../html/menu24/page_04_03_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대상 경정방송</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu24/page_04_04_list.html" target="_blank" title="새창">../html/menu24/page_04_04_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu24/page_04_04_view.html" target="_blank" title="새창">../html/menu24/page_04_04_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_5">순위예측</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Tab(3)</td>
+									<td class="link"><a href="../html/menu25/page_05.html" target="_blank" title="새창">../html/menu25/page_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 2 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_6">희망길벗</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">희망길벗 소개</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_01.html" target="_blank" title="새창">../html/menu26/page_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">희망길벗 연혁</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_02.html" target="_blank" title="새창">../html/menu26/page_06_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">도박중독의 이해</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03.html" target="_blank" title="새창">../html/menu26/page_06_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박, 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_01.html" target="_blank" title="새창">../html/menu26/page_06_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독이란?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_02.html" target="_blank" title="새창">../html/menu26/page_06_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박, 어떻게 진행되나요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_03.html" target="_blank" title="새창">../html/menu26/page_06_03_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독의 증상은 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_04.html" target="_blank" title="새창">../html/menu26/page_06_03_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독의 원인은 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_05.html" target="_blank" title="새창">../html/menu26/page_06_03_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독의 단계와 유형에 대해 알려주세요</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_06.html" target="_blank" title="새창">../html/menu26/page_06_03_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독자 가족의 증상은 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_07.html" target="_blank" title="새창">../html/menu26/page_06_03_07.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">공동의존이란 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_08.html" target="_blank" title="새창">../html/menu26/page_06_03_08.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독은 어떻게 치유될까요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_09.html" target="_blank" title="새창">../html/menu26/page_06_03_09.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독 예방을 위한 방밥은 무엇인가요?</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_03_10.html" target="_blank" title="새창">../html/menu26/page_06_03_10.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가진단</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_04.html" target="_blank" title="새창">../html/menu26/page_06_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">도박중독 FAQ</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_05.html" target="_blank" title="새창">../html/menu26/page_06_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">프로그램안내</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06.html" target="_blank" title="새창">../html/menu26/page_06_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">자제력 회복 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_01.html" target="_blank" title="새창">../html/menu26/page_06_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">가족치유 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_02.html" target="_blank" title="새창">../html/menu26/page_06_06_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">집단 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_03.html" target="_blank" title="새창">../html/menu26/page_06_06_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">위기개입 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_04.html" target="_blank" title="새창">../html/menu26/page_06_06_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">도박중독 예방 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_05.html" target="_blank" title="새창">../html/menu26/page_06_06_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">종사자 교육 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_06.html" target="_blank" title="새창">../html/menu26/page_06_06_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">상담사 교육 프로그램</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_06_07.html" target="_blank" title="새창">../html/menu26/page_06_06_07.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">관련사이트</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(4)</td>
+									<td class="link"><a href="../html/menu26/page_06_06_08_01.html" target="_blank" title="새창">../html/menu26/page_06_06_08_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab +page 2 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">상담안내</td>
+									<td class="dep3">상담정보</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_07_01.html" target="_blank" title="새창">../html/menu26/page_06_07_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">개인정보 수집 이용 동의 작성하기</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu26/page_06_07_01_01.html" target="_blank" title="새창">../html/menu26/page_06_07_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">희망길벗 아카이브</td>
+									<td class="dep3">안내영상</td>
+									<td class="dep4"></td>
+									<td class="type">List/Tab(3)</td>
+									<td class="link"><a href="../html/menu26/page_06_08_list.html" target="_blank" title="새창">../html/menu26/page_06_08_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab +page 2 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu26/page_06_08_view.html" target="_blank" title="새창">../html/menu26/page_06_08_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_7">고객광장</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">예상과 후기</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu27/page_07_01_list.html" target="_blank" title="새창">../html/menu27/page_07_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Nolist</td>
+									<td class="link"><a href="../html/menu27/page_07_01_nolist.html" target="_blank" title="새창">../html/menu27/page_07_01_nolist.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_01_view.html" target="_blank" title="새창">../html/menu27/page_07_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Write</td>
+									<td class="link"><a href="../html/menu27/page_07_01_write.html" target="_blank" title="새창">../html/menu27/page_07_01_write.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">문화교실</td>
+									<td class="dep3">지점별 안내</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_list.html" target="_blank" title="새창">../html/menu27/page_07_02_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_view.html" target="_blank" title="새창">../html/menu27/page_07_02_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">위치안내</td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_view_popup.html" target="_blank" title="새창">../html/menu27/page_07_02_01_view_popup.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">신청하기</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_view_01.html" target="_blank" title="새창">../html/menu27/page_07_02_01_view_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">신청내역 확인</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_view_02.html" target="_blank" title="새창">../html/menu27/page_07_02_01_view_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">신청내역 조회</td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_02_01_view_03.html" target="_blank" title="새창">../html/menu27/page_07_02_01_view_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">공지사항</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu27/page_07_03_list.html" target="_blank" title="새창">../html/menu27/page_07_03_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Nolist</td>
+									<td class="link"><a href="../html/menu27/page_07_03_nolist.html" target="_blank" title="새창">../html/menu27/page_07_03_nolist.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_03_view.html" target="_blank" title="새창">../html/menu27/page_07_03_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">고객의 소리</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List / 로그인 전</td>
+									<td class="link"><a href="../html/menu27/page_07_04_list_before.html" target="_blank" title="새창">../html/menu27/page_07_04_list_before.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List / 로그인 후</td>
+									<td class="link"><a href="../html/menu27/page_07_04_list_after.html" target="_blank" title="새창">../html/menu27/page_07_04_list_after.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_04_view.html" target="_blank" title="새창">../html/menu27/page_07_04_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Write</td>
+									<td class="link"><a href="../html/menu27/page_07_04_write.html" target="_blank" title="새창">../html/menu27/page_07_04_write.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Privacy</td>
+									<td class="link"><a href="../html/menu27/page_07_04_privacy.html" target="_blank" title="새창">../html/menu27/page_07_04_privacy.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자주묻는질문</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_05.html" target="_blank" title="새창">../html/menu27/page_07_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">명예심판</td>
+									<td class="dep3">신청서 작성</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_06_01.html" target="_blank" title="새창">../html/menu27/page_07_06_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">신청완료</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_06_02.html" target="_blank" title="새창">../html/menu27/page_07_06_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">행사안내</td>
+									<td class="dep3">이벤트</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu27/page_07_07_01_list.html" target="_blank" title="새창">../html/menu27/page_07_07_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_07_01_view.html" target="_blank" title="새창">../html/menu27/page_07_07_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">알림</td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu27/page_07_07_02_list.html" target="_blank" title="새창">../html/menu27/page_07_07_02_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu27/page_07_07_02_view.html" target="_blank" title="새창">../html/menu27/page_07_07_02_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경륜경정 신고센터</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08.html" target="_blank" title="새창">../html/menu27/page_07_08.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">분실경주권신고</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_01.html" target="_blank" title="새창">../html/menu27/page_07_08_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">부정행위자신고</td>
+									<td class="dep4">신고접수안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_02_01.html" target="_blank" title="새창">../html/menu27/page_07_08_02_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">이메일 신고하기</td>
+									<td class="link"><a href="../html/menu27/page_07_08_02_01_report.html" target="_blank" title="새창">../html/menu27/page_07_08_02_01_report.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">행위·포상금 지급 안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_02_02.html" target="_blank" title="새창">../html/menu27/page_07_08_02_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">불법행위자신고</td>
+									<td class="dep4">신고접수안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_03_01.html" target="_blank" title="새창">../html/menu27/page_07_08_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">이메일 신고하기</td>
+									<td class="link"><a href="../html/menu27/page_07_08_03_01_report.html" target="_blank" title="새창">../html/menu27/page_07_08_03_01_report.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">행위·포상금 지급 안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_03_02.html" target="_blank" title="새창">../html/menu27/page_07_08_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">불법사이트신고</td>
+									<td class="dep4">신고접수안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_04_01.html" target="_blank" title="새창">../html/menu27/page_07_08_04_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">이메일 신고하기</td>
+									<td class="link"><a href="../html/menu27/page_07_08_04_01_report.html" target="_blank" title="새창">../html/menu27/page_07_08_04_01_report.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">행위·포상금 지급 안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_08_04_02.html" target="_blank" title="새창">../html/menu27/page_07_08_04_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">약관</td>
+									<td class="dep3">이용약관</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_01.html" target="_blank" title="새창">../html/menu27/page_07_09_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경정·경정 승자투표</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_03.html" target="_blank" title="새창">../html/menu27/page_07_09_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">그린카드 서비스 이용약관</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_04.html" target="_blank" title="새창">../html/menu27/page_07_09_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">사주경주권처리지침</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_05.html" target="_blank" title="새창">../html/menu27/page_07_09_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">저작권정보</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_06.html" target="_blank" title="새창">../html/menu27/page_07_09_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">자료무단복제금지</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu27/page_07_09_07.html" target="_blank" title="새창">../html/menu27/page_07_09_07.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_8">총괄본부</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">보도자료</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">List</td>
+									<td class="link"><a href="../html/menu28/page_08_01_list.html" target="_blank" title="새창">../html/menu28/page_08_01_list.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu28/page_08_01_view.html" target="_blank" title="새창">../html/menu28/page_08_01_view.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">BI소개</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">View</td>
+									<td class="link"><a href="../html/menu28/page_08_02.html" target="_blank" title="새창">../html/menu28/page_08_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">지점안내</td>
+									<td class="dep3">전체</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_03_01.html" target="_blank" title="새창">../html/menu28/page_08_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">서울</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_03_02.html" target="_blank" title="새창">../html/menu28/page_08_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">경기인천</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_03_03.html" target="_blank" title="새창">../html/menu28/page_08_03_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">충남</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_03_04.html" target="_blank" title="새창">../html/menu28/page_08_03_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">마사경정공원</td>
+									<td class="dep3">경정공원 소개</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_04_01.html" target="_blank" title="새창">../html/menu28/page_08_04_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">시설안내</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(3)</td>
+									<td class="link"><a href="../html/menu28/page_08_04_02.html" target="_blank" title="새창">../html/menu28/page_08_04_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<!-- Tab +page 2 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">오시는 길</td>
+									<td class="dep4">자가용 이용 / 주차안내</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_04_03_01.html" target="_blank" title="새창">../html/menu28/page_08_04_03_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">대중교통이용</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_04_03_02.html" target="_blank" title="새창">../html/menu28/page_08_04_03_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">경정훈련원</td>
+									<td class="dep3">소개</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_05_01.html" target="_blank" title="새창">../html/menu28/page_08_05_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">선수 로드맵</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_05_02.html" target="_blank" title="새창">../html/menu28/page_08_05_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">교육과정 안내</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_05_03.html" target="_blank" title="새창">../html/menu28/page_08_05_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">후보생졸업현황</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_05_04.html" target="_blank" title="새창">../html/menu28/page_08_05_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">오시는 길</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_05_05.html" target="_blank" title="새창">../html/menu28/page_08_05_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">지정좌석실</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu28/page_08_06.html" target="_blank" title="새창">../html/menu28/page_08_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_9">마이페이지</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_01.html" target="_blank" title="새창">../html/menu29/page_09_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">나의 모의배팅 현황</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_02.html" target="_blank" title="새창">../html/menu29/page_09_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">나의 활동지수 현황</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_03.html" target="_blank" title="새창">../html/menu29/page_09_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">나의 활동지수 현황</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Nolist</td>
+									<td class="link"><a href="../html/menu29/page_09_03_nolist.html" target="_blank" title="새창">../html/menu29/page_09_03_nolist.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">나의 게시글 현황</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_04.html" target="_blank" title="새창">../html/menu29/page_09_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">나의 스크랩</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Tab(2)</td>
+									<td class="link"><a href="../html/menu29/page_09_05.html" target="_blank" title="새창">../html/menu29/page_09_05.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">내알림</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_06.html" target="_blank" title="새창">../html/menu29/page_09_06.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_06_nolist.html" target="_blank" title="새창">../html/menu29/page_09_06_nolist.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/menu29/page_09_06_popup.html" target="_blank" title="새창">../html/menu29/page_09_06_popup.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">내정보 수정</td>
+									<td class="dep3">비밀번호 입력</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_07_01.html" target="_blank" title="새창">../html/menu29/page_09_07_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">정보 수정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_07_02.html" target="_blank" title="새창">../html/menu29/page_09_07_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">회원탈퇴</td>
+									<td class="dep3">비밀번호 입력</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_08_01.html" target="_blank" title="새창">../html/menu29/page_09_08_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">탈퇴사유 선택</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu29/page_09_08_02.html" target="_blank" title="새창">../html/menu29/page_09_08_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_10">통합검색</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">검색</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu30/page_10_01.html" target="_blank" title="새창">../html/menu30/page_10_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">상세</td>
+									<td class="dep4"></td>
+									<td class="type">Tab(7)</td>
+									<td class="link"><a href="../html/menu30/page_10_01_01.html" target="_blank" title="새창">../html/menu30/page_10_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<!-- Tab +page 6 -->
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+								<tr class="page" style="display:none;">
+									<td class="cmpt" rowspan="8">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_11">로그인</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">로그인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11.html" target="_blank" title="새창">../html/menu31/page_11.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">validation</td>
+									<td class="link"><a href="../html/menu31/page_11_validation.html" target="_blank" title="새창">../html/menu31/page_11_validation.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">아이디 찾기</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_01.html" target="_blank" title="새창">../html/menu31/page_11_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">아이디 찾기 완료</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_01_01.html" target="_blank" title="새창">../html/menu31/page_11_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">비밀번호 재설정</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_02.html" target="_blank" title="새창">../html/menu31/page_11_02.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3">비밀번호 재설정 입력</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_02_01.html" target="_blank" title="새창">../html/menu31/page_11_02_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4">비밀번호 재설정 완료</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_02_01_01.html" target="_blank" title="새창">../html/menu31/page_11_02_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!-- <span class="btn_worked">미</span> -->
+										<span class="btn_working">미</span>
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">비밀번호 변경 안내</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_03.html" target="_blank" title="새창">../html/menu31/page_11_03.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">일시정지회원</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu31/page_11_04.html" target="_blank" title="새창">../html/menu31/page_11_04.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_12">회원가입</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu32/page_12.html" target="_blank" title="새창">../html/menu32/page_12.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">기본정보</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu32/page_12_01.html" target="_blank" title="새창">../html/menu32/page_12_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2"></td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">validation</td>
+									<td class="link"><a href="../html/menu32/page_12_01_validation.html" target="_blank" title="새창">../html/menu32/page_12_01_validation.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">회원가입 완료</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/menu32/page_12_01_01.html" target="_blank" title="새창">../html/menu32/page_12_01_01.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_finish">완</span> -->
+										<!--<span class="btn_worked">미</span>-->
+										<span class="btn_working">미</span>
+                                    </td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_99">샘플 페이지</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="">
+									<td class="dep2">콤포넌트 템플릿</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/sample/templete/text_list.html" target="_blank" title="새창">../html/sample/templete/text_list.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="">
+									<td class="dep2">서브 레이아웃</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/sample/sub_layout.html" target="_blank" title="새창">../html/sample/sub_layout.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="">
+									<td class="dep2">팝업</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/sample/popup.html" target="_blank" title="새창">../html/sample/popup.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="">
+									<td class="dep2">게시판</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">리스트</td>
+									<td class="link"><a href="../html/sample/board_list.html" target="_blank" title="새창">../html/sample/board_list.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="">
+									<td class="dep2">게시판</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">상세</td>
+									<td class="link"><a href="../html/sample/board_view.html" target="_blank" title="새창">../html/sample/board_view.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="">
+									<td class="dep2">게시판</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type">쓰기</td>
+									<td class="link"><a href="../html/sample/board_write.html" target="_blank" title="새창">../html/sample/board_write.html</a></td>
+									<td class="cmpt"></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$ (document).ready(function(){
+	var menu = $('#nav');
+	var con = $('.scroll');
+	var mlink = $('#nav a');
+	$(document).scroll(function(){
+		if ( $(document).scrollTop() > $('#nav').scrollTop() ){
+			$('.pg-top').css('display','block');
+		}
+		else{
+			$('.pg-top').css('display','none');
+		}
+	});
+	$(".g-chart .total dd").html($(".page").length);
+	$(".g-chart .complete dd").html($(".btn_finish").length);
+	$(".g-chart .uncomplete dd").html($(".btn_working").length + $(".btn_worked").length);
+	$(".g-chart .etc dd").html($(".page").length - $(".btn_finish").length - $(".btn_working").length - $(".btn_worked").length);
+
+	$(".more").on("click",function(){
+		$(this).parent().next().toggleClass("on");
+		$(this).parent().toggleClass("on");
+	});
+
+    $(".open-menu").on("click",function(){
+		$(".g-menu").addClass("on");
+	});
+    $(".close-menu").on("click",function(){
+		$(".g-menu").removeClass("on");
+	});
+});
+function fnMove(seq) {
+	event.preventDefault();
+	var offset = $("#PCSV_" + seq ).offset();
+	$('html, body').animate({scrollTop : (offset.top - 60)}, 400);
+    $(".g-menu").removeClass("on");
+}
+</script>
+</body>
+</html>
