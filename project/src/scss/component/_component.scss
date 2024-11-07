@@ -66,6 +66,9 @@
 @import 'cptReportingReceipt';  // 고객광장 - 신고접수안내
 @import 'cptTerms';             // 고객광장 - 이용약관
 
+@import 'cptSendEmail.scss';    // 기타 - 담당자 이메일 발송
+@import 'cptErrorPage.scss';    // 기타 - 에러페이지
+
 @import 'cptContFull';  //풀사이즈 컨텐츠 단락
 
 @import 'cptBatSimul';      // 모의배팅 윈도우 팝업 영역
