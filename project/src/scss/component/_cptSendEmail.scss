@@ -1,0 +1,73 @@
+/* --------------------------- 담당자 이메일 발송 (윈도우 팝업) --------------------------- */
+.cptSendEmail {
+    width: 100%;max-width: 600px;margin: 0 auto;padding: 32px;background: #fff;
+    .sectArea {
+        .titleBox {
+            display: flex;justify-content: center;align-items: center;padding: 20px 10px;background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
+            h1 {color: var(---Primary, #078B7B);font-size: rem(30px);font-weight: 600;line-height: 140%; /* 42px */}
+            & ~ .comTitH3,
+            & ~ .comBtnGroup {margin-top: 60px;}
+        }
+        .comTitH3 + .comFormTable {margin-top: 20px;}
+        .comFormTable {
+            .tableArea {
+                border-top-width: 1px;
+                table tbody {
+                    tr {
+                        width: 100%;padding: 20px 0;display: flex;flex-wrap: wrap;
+                        th, td {width: 100%;padding: 0;border: 0 none;}
+                        td {
+                            margin-top: 8px;
+                            .iptText {
+                                height: 56px;
+                                & + .btnReset {top: 16px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .comPrivacyBox {
+            .infoBox .boxCont {
+                .txtTit {color: var(--Gray-900, #111);font-size: rem(18px);}
+                .txt {font-size: rem(16px);}
+                .orderedList > li {font-size: rem(16px);}
+            }
+        }
+    }
+    @include media('mobile') {
+        padding: 20px 16px;
+        .sectArea {
+            .titleBox ~ .comBtnGroup {margin-top: 40px;}
+            .comTitH3 + .comFormTable {margin-top: 12px;}
+            .comFormTable {
+                & + .comTitH3,
+                & + .comPrivacyBox {margin-top: 40px;}
+                .tableArea {
+                    border-top-width: 1px;
+                    table tbody {
+                        tr {
+                            padding: 12px 0;
+                            &:first-child {margin-top: 20px;}
+                            th, td {width: 100%;padding: 0;border: 0 none;}
+                            td {
+                                margin-top: 8px;
+                                .iptText {
+                                    height: 56px;
+                                    & + .btnReset {top: 16px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .comPrivacyBox {
+                .infoBox .boxCont {
+                    .txtTit {font-size: rem(16px);}
+                    .txt {font-size: rem(15px);}
+                    .orderedList > li {font-size: rem(15px);}
+                }
+            }
+        }
+    }
+}
