@@ -31,7 +31,7 @@
 <style>
 	/* 퍼블확인용 - 적용X */
 	.comTabData .tabMenuGroup:not(.swiper-initialized) .tabItem {margin-right: 12px;}
-
+	
 </style>
 
 <!-- 레이아웃 -->
@@ -1111,6 +1111,280 @@
 </div>
 
 				<div class="layoutContArea">
+					<div class="tempArea">경륜영상관 상단 검색영역(=통합검색)</div>
+
+					<!-- 검색 박스 -->
+                    <div class="comSearchBox untitled">
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">경주회차</dt>
+								<dd class="conBox">
+									<div class="frmGroup">
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">연도 전체</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">경주회차 전체</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">선수정보</dt>
+								<dd class="conBox">
+									<div class="txtLbl">선수명</div>
+									<div class="frmGroup">
+										<div class="frmBox">
+											<input type="text" class="iptText" placeholder="" value="">
+										</div>
+									</div>
+									<div class="txtLbl">연도</div>
+									<div class="frmGroup">
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">전체</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+									</div>
+									<div class="txtLbl">경주회차</div>
+									<div class="frmGroup">
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">전체</option>
+												<option value="">드롭다운드롭다운</option>
+											</select>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">경주일</dt>
+								<dd class="conBox">
+									<div class="frmGroup period">
+										<div class="frmDate">
+											<input type="text" class="iptText" placeholder="YY.MM.DD">
+											<button type="button" title="날짜 선택"></button>
+										</div>
+										<div class="gap">-</div>
+										<div class="frmDate">
+											<input type="text" class="iptText" placeholder="YY.MM.DD">
+											<button type="button" title="날짜 선택"></button>
+										</div>
+									</div>
+									
+									<div class="txtLbl">직접입력</div>
+									<div class="frmGroup option">
+										<div class="frmBox">
+											<input id="periodGroup1_1" type="radio" class="iptRdo" name="periodGroup1" checked>
+											<label for="periodGroup1_1" class="iptLblBtn">오늘</label>
+										</div>
+										<div class="frmBox">
+											<input id="periodGroup1_2" type="radio" class="iptRdo" name="periodGroup1">
+											<label for="periodGroup1_2" class="iptLblBtn">최근 1주</label>
+										</div>
+										<div class="frmBox">
+											<input id="periodGroup1_3" type="radio" class="iptRdo" name="periodGroup1">
+											<label for="periodGroup1_3" class="iptLblBtn">최근 1달</label>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">경주일</dt>
+								<dd class="conBox">
+									<div class="frmGroup period">
+										<div class="frmDate">
+											<input type="text" class="iptText" placeholder="YY.MM.DD">
+											<button type="button" title="날짜 선택"></button>
+										</div>
+										<div class="gap">-</div>
+										<div class="frmDate">
+											<input type="text" class="iptText" placeholder="YY.MM.DD">
+											<button type="button" title="날짜 선택"></button>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class="condition">
+								<dt class="title">직접입력</dt>
+								<dd class="conBox">
+									<div class="frmGroup option">
+										<div class="frmBox">
+											<input id="periodGroup1_1" type="radio" class="iptRdo" name="periodGroup1" checked>
+											<label for="periodGroup1_1" class="iptLblBtn">오늘</label>
+										</div>
+										<div class="frmBox">
+											<input id="periodGroup1_2" type="radio" class="iptRdo" name="periodGroup1">
+											<label for="periodGroup1_2" class="iptLblBtn">최근 1주</label>
+										</div>
+										<div class="frmBox">
+											<input id="periodGroup1_3" type="radio" class="iptRdo" name="periodGroup1">
+											<label for="periodGroup1_3" class="iptLblBtn">최근 1달</label>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">경기등급</dt>
+								<dd class="conBox">
+									<div class="frmGroup option">
+										<div class="frmBox">
+											<input id="srchCondGroup1_1" type="radio" class="iptRdo" name="srchCondGroup1" checked>
+											<label for="srchCondGroup1_1" class="iptLblBtn">전체</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup1_2" type="radio" class="iptRdo" name="srchCondGroup1">
+											<label for="srchCondGroup1_2" class="iptLblBtn">선발(결승포함)</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup1_3" type="radio" class="iptRdo" name="srchCondGroup1">
+											<label for="srchCondGroup1_3" class="iptLblBtn">우수(결승포함)</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup1_4" type="radio" class="iptRdo" name="srchCondGroup1">
+											<label for="srchCondGroup1_4" class="iptLblBtn">특선(결승포함)</label>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">전법</dt>
+								<dd class="conBox">
+									<div class="frmGroup option">
+										<div class="frmBox">
+											<input id="srchCondGroup2_1" type="radio" class="iptRdo" name="srchCondGroup2" checked>
+											<label for="srchCondGroup2_1" class="iptLblBtn">전체</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup2_2" type="radio" class="iptRdo" name="srchCondGroup2">
+											<label for="srchCondGroup2_2" class="iptLblBtn">선행</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup2_3" type="radio" class="iptRdo" name="srchCondGroup2">
+											<label for="srchCondGroup2_3" class="iptLblBtn">젖히기</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup2_4" type="radio" class="iptRdo" name="srchCondGroup2">
+											<label for="srchCondGroup2_4" class="iptLblBtn">추입</label>
+										</div>
+										<div class="frmBox">
+											<input id="srchCondGroup2_5" type="radio" class="iptRdo" name="srchCondGroup2">
+											<label for="srchCondGroup2_5" class="iptLblBtn">마크</label>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="cptSection">
+                        <div class="sectArea">
+							<div class="srchTotal" style="font-weight: 300; font-size: 30px; line-height: 1.4;"><b>‘선수’</b> 에 관한 전체 <b>20</b>개의 검색 결과입니다.</div>
+						</div>
+					</div> 
+
+					<div class="modTab">
+                        <div class="tabMenuGroup tabSwiper toAll">
+                            <ul class="tabMenu swiper-wrapper">
+								<li class="tabItem swiper-slide"><button class="tabName on" title="탭메뉴">전체(<span>100</span>)</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경주(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">스피돔소식(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">이벤트경륜(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">대상경륜방송(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">기획프로그램(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경륜선수(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경륜정보(<span>20</span>)</button></li>
+								<li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경륜지식쌓기(<span>20</span>)</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="cptSection">
+                        <div class="sectArea">
+							<div class="comTitH2 bk">
+								<h2>메뉴 <b class="tKey">20</b></h2>
+								<div class="right">
+									<button type="button" class="txtBtn">더 보기</button>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="cptSection">
+                        <div class="sectArea">
+							<div class="comTitH2 bk">
+								<h2>내알림</h2>
+								<div class="right">
+									<div class="frmGroup">
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">20개</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">오름차순</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- /////////////////////////////////////// -->
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="frmCheckList">
+								<div class="frmBox"><input id="rdoGroup1_1" type="radio" class="iptRdo" name="rdoGroup1" checked><label for="rdoGroup1_1" class="iptLbl">사이트 이용 불편</label></div>
+								<div class="frmBox"><input id="rdoGroup1_2" type="radio" class="iptRdo" name="rdoGroup1"><label for="rdoGroup1_2" class="iptLbl">정보제공 불충분</label></div>
+								<div class="frmBox"><input id="rdoGroup1_3" type="radio" class="iptRdo" name="rdoGroup1"><label for="rdoGroup1_3" class="iptLbl">이용빈도 낮음</label></div>
+								<div class="frmBox"><input id="rdoGroup1_4" type="radio" class="iptRdo" name="rdoGroup1"><label for="rdoGroup1_4" class="iptLbl">늦은 정보 업데이트 속도</label></div>
+								<div class="frmBox">
+									<input id="rdoGroup1_5" type="radio" class="iptRdo" name="rdoGroup1"><label for="rdoGroup1_5" class="iptLbl">직접 입력</label>
+									<div class="frmBox">
+										<textarea class="iptTextArea" name="" id="" placeholder="회원님의 소중한 의견 부탁 드립니다."></textarea>
+										<span class="byte"><b>50</b> / 500 Byte</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<div class="cptDataSum">
 						<div class="comTitH2 bk">
@@ -1575,7 +1849,11 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>경륜선수</span>
+														<span>선수조회</span>
+														<span>신인선수 시범경주</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1590,7 +1868,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1605,7 +1886,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1620,7 +1904,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1635,7 +1922,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1650,7 +1940,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1665,7 +1958,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1680,7 +1976,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1695,7 +1994,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1710,7 +2012,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1725,7 +2030,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1740,7 +2048,10 @@
 												<ul class="info">
 													<li class="item date">2024.07.24</li>
 													<li class="item">조회수 : 200</li>
-													<li class="item cate">플레이존 > 예상과후기</li>
+													<li class="item cate">
+														<span>플레이존</span>
+														<span>예상과후기</span>
+													</li>
 												</ul>
 											</div>
 										</a>
@@ -1773,6 +2084,7 @@
 									<button type="button" class="txtBtn">더 보기</button>
 								</div>
 							</div>
+							<div class="tempArea mt20">영역</div>
 
 							<div class="comTitH3">
 								<h3>위반행위 및 낙차사고</h3>
@@ -1780,6 +2092,7 @@
 									<button type="button" class="txtBtn">더 보기</button>
 								</div>
 							</div>
+							<div class="tempArea mt20">영역</div>
 
 							<div class="comTitH3">
 								<h3>위반행위 및 낙차사고</h3>
@@ -1792,6 +2105,7 @@
 									</div>
 								</div>
 							</div>
+							<div class="tempArea mt20">영역</div>
 
                         </div>
                     </div>

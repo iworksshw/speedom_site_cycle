@@ -52,6 +52,7 @@
     &:hover .btnReset {
         display: block;
     }
+    &.rdoBtn {align-items: center; height: 48px;} // 라디오 버튼 사용시 적용
     .btnReset {
         width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_24_input_re.svg) center no-repeat; position: absolute; right: 16px; top: 12px;
         display: none;
@@ -331,6 +332,7 @@ select.iptSlt {
     //가로 너비 예외
     &.pcW180 {width:180px} //PC width 180px, Mo width 100%
     &.pcW140 {width:140px} //PC width 140px, Mo width 100%
+    &.pcW128 {width:128px} //PC width 128px
     &.pcW200 {width:200px} //PC width 200px, Mo width 100%
     &.pmW150 {
         width:150px;
@@ -369,6 +371,10 @@ select.iptSlt {
         &:hover {color: #111; border: 1px solid var(--Gray-500);}
         &:active {border: 1px solid var(--Gray-500); background: var(--Bg-Line-bg-100);}
         &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
+    }
+    &.downIcon {
+        position: relative; padding: 0 12px;
+        &::before {content:''; width: 20px; height: 20px; display: inline-block; vertical-align: text-top; margin-right: 4px; background: url(../../images/common/ic_20_file_download.svg);}
     }
 }
 
