@@ -136,7 +136,7 @@
         *:hover::-webkit-scrollbar-thumb {
             background: rgba(87, 87, 87, 0.54);
         }
-        *::-webkit-scrollbar {width:30px; padding:10px}
+        *::-webkit-scrollbar {width:30px; padding:10px; background-color: #fff;}
         *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
         *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
     }
