@@ -26,154 +26,273 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
-                    location: ['경륜', '통계데이터'],
-                    subTitle: '매출액 통계',
-                    subText: '<b>회차별, 일차별, 경주별로 <br/> 최대 매출</b>을 알려드려요 ',
+                    location: ['경륜가이드', '경륜선수'],
+                    subTitle: '선수전적비교',
+                    subText: '<b>비교하고 싶은 선수를 검색</b>하여<br/>결과를 확인하세요.',
                     url: "../../",
-                    visualClass: "bg02",
+                    visualClass: "bg03",
                 }) %>
 
                 <div class="layoutContArea">
-
-                    <div class="comSubInfo">
-                        <h2 class="infoTit">경주의 최고 매출액을 통계내어 순위로 안내합니다.</h2>
-                        <p class="info">연도를 선택하셔서 회차별, 일차별, 경주별로 최고 매출액을 확인하세요.</p>
-                    </div>
-
-                    <div class="cptSection">
+                    <div class="cptCompareData">
                         <div class="sectArea">
-                            <div class="comTitH2 mRow"><!--20241031 class 추가-->
-                                <h2>매출액 통계</h2>
+                            <div class="alertArea">
+                                <p class="txt">비교선수를 선택하여 <br class="mView"/> 선수 상대 전적을 비교해보세요.</p>
+                                <div class="comBtnGroup">
+                                    <div class="alignC">
+                                        <div class="btnBox min">
+                                            <button class="btn Primary">선수 전적 다시 비교하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comTitH2">
+                                <h2>선수 간 전적비교</h2>
                                 <div class="right">
                                     <div class="frmBox">
                                         <select class="iptSlt">
-                                            <option value="">통계 연도 전체</option>
                                             <option value="">2024년</option>
                                             <option value="">2023년</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
+                            <div class="compareBox">
+                                <ul class="cpList">
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div class="comTitH3">
-                                <h3>회차별 최고 매출액</h3>
+                                <h3>경주 성적비교</h3>
                             </div>
 
                             <div class="comDataTable both">
-                                <div class="tableArea sizeS">
+                                <div class="tableArea">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>순위</th>
-                                                <th>회차</th>
-                                                <th>매출액(단위 : 원)</th>
+                                                <th>선수명</th>
+                                                <th>강동국</th>
+                                                <th>강동규</th>
+                                                <th>강동진</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>1</th>
-                                                <td>2017년 38회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th>등급정보</th>
+                                                <td>A1</td>
+                                                <td>S1</td>
+                                                <td>B1</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>2017년 50회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th>승률(%)</th>
+                                                <td>5</td>
+                                                <td>30</td>
+                                                <td>5</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>2017년 49회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th>연대율(%)</th>
+                                                <td>0</td>
+                                                <td>10</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>삼연대율(%)</th>
+                                                <td>1</td>
+                                                <td>15</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <th>출주횟수</th>
+                                                <td>10</td>
+                                                <td>15</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <th>출주일수</th>
+                                                <td>30</td>
+                                                <td>40</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <th>최근 3회 종합득점</th>
+                                                <td>81.356</td>
+                                                <td>81.356</td>
+                                                <td>81.356</td>
+                                            </tr>
+                                            <tr>
+                                                <th>최근 3회 종합순위</th>
+                                                <td>438</td>
+                                                <td>15</td>
+                                                <td>438</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총 평균 득점</th>
+                                                <td>82.402</td>
+                                                <td>115.402</td>
+                                                <td>115.402</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총 순위 득점</th>
+                                                <td>517</td>
+                                                <td>850</td>
+                                                <td>130</td>
+                                            </tr>
+                                            <tr>
+                                                <th>최근 3경주 200m 최고기록</th>
+                                                <td>11”58</td>
+                                                <td>11”58</td>
+                                                <td>11”58</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-
                             
                             <div class="comTitH3">
-                                <h3>일차별 최고 매출액</h3>
+                                <h3>상대 전적 결과</h3>
                             </div>
 
                             <div class="comDataTable both">
-                                <div class="tableArea sizeS">
+                                <div class="tableArea sizeM" style="height: 590px;">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>순위</th>
-                                                <th>회차</th>
-                                                <th>매출액(단위 : 원)</th>
+                                                <th>경주회차</th>
+                                                <th>선수 1(순위)</th>
+                                                <th>선수 2(순위)</th>
+                                                <th>선수 3(순위)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>1</th>
-                                                <td>2017년 38회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>
+                                                    <span class="rating red">강동규 (1위)</span>
+                                                </td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>2017년 50회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button> </th>
+                                                <td>강동국 (6위)</td>
+                                                <td>
+                                                    <span class="rating blue">강동규 (2위)</span>
+                                                </td>
+                                                <td>-</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>2017년 49회차(2017-10-06~2017-10-09)</td>
-                                                <td><b>75,171,317,800</b></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            
-                            <div class="comTitH3">
-                                <h3>경주별 최고 매출액</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeS">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>회차</th>
-                                                <th>매출액(단위 : 원)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2017년 38회차(2017-10-06~2017-10-09)</a></td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>
+                                                    <span class="rating mint">강동규 (3위)</span>
+                                                </td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2017년 38회차(2017-10-06~2017-10-09)</a></td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2017년 38회차(2017-10-06~2017-10-09)</a></td>
-                                                <td><b>75,171,317,800</b></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
+                                            </tr>
+                                            <tr>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -182,7 +301,6 @@
                         </div>
                     </div>
 
-                    <!-- 경주결과 팝업 -->
                     <div id="raceResult01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
@@ -313,7 +431,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num01">1</span><a href="#none" class="player">김상인</a></div>
+                                                                            <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -329,7 +447,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num02">2</span><a href="#none" class="player">강동진</a></div>
+                                                                            <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -345,7 +463,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num03">3</span><a href="#none" class="player">김광진</a></div>
+                                                                            <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -361,7 +479,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num04">4</span><a href="#none" class="player">곽훈신</a></div>
+                                                                            <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -377,7 +495,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num05">5</span><a href="#none" class="player">정언열</a></div>
+                                                                            <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -393,7 +511,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num06">6</span><a href="#none" class="player">오성균</a></div>
+                                                                            <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -409,7 +527,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num07">7</span><a href="#none" class="player">허남</a></div>
+                                                                            <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -566,11 +684,10 @@
                         </div>
                     </div>
                 </div>
-
                     
                 <!-- 서브 바텀 (담당자) -->
                 <%- include('../_ejs/sub_btm.ejs', {
-                    team: '경륜기획팀',
+                    team: '경륜운영팀',
                     name: '조준호',
                     phone: '02-2067-5711',
                     url: "../../",

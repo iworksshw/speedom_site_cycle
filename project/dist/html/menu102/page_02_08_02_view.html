@@ -472,18 +472,18 @@
                 <!-- 서브 탑 (타이틀) -->
                 
 
-<div class="cptSubTop bg02">
+<div class="cptSubTop bg03">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">경륜</a></li>
+            <li class="item"><a href="#">경륜가이드</a></li>
             
-            <li class="item"><a href="#">통계데이터</a></li>
+            <li class="item"><a href="#">경륜선수</a></li>
             
             
         </ul>
-        <div class="subTitle"><h1>고배당 순위</h1></div>
-        <div class="subText"><p><b>승식별 <br/>고배당 순위</b>를 알려드려요 </p></div>
+        <div class="subTitle"><h1>선수전적비교</h1></div>
+        <div class="subText"><p><b>비교하고 싶은 선수를 검색</b>하여<br/>결과를 확인하세요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -496,225 +496,159 @@
 </div>
 
                 <div class="layoutContArea">
-
-                    <div class="comSubInfo">
-                        <h2 class="infoTit">승식별로 경주의 최고 배당률을 통계내어 순위로 안내합니다.</h2>
-                        <p class="info">연도를 선택하셔서 승식별 고배당 순위을 확인하세요.</p>
-                    </div>
-
-                    <div class="cptSection">
+                    <div class="cptCompareData">
                         <div class="sectArea">
-                            <div class="comTitH2 mRow"><!--20241031 class 추가-->
-                                <h2>고배당 순위</h2>
+                            <div class="alertArea">
+                                <p class="txt">비교선수를 선택하여 <br class="mView"/> 선수 상대 전적을 비교해보세요.</p>
+                                <div class="comBtnGroup">
+                                    <div class="alignC">
+                                        <div class="btnBox min">
+                                            <button class="btn Primary">선수 전적 다시 비교하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comTitH2">
+                                <h2>선수 간 전적비교</h2>
                                 <div class="right">
                                     <div class="frmBox">
                                         <select class="iptSlt">
-                                            <option value="">통계 연도 전체</option>
                                             <option value="">2024년</option>
                                             <option value="">2023년</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
+                            <div class="compareBox">
+                                <ul class="cpList">
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cpItem">
+                                        <div class="thumArea">
+                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
+                                        </div>
+                                        <div class="txtArea">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div class="comTitH3">
-                                <h3>단승식</h3>
+                                <h3>경주 성적비교</h3>
                             </div>
 
                             <div class="comDataTable both">
-                                <div class="tableArea sizeM">
+                                <div class="tableArea">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
+                                                <th>선수명</th>
+                                                <th>강동국</th>
+                                                <th>강동규</th>
+                                                <th>강동진</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>등급정보</th>
+                                                <td>A1</td>
+                                                <td>S1</td>
+                                                <td>B1</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>승률(%)</th>
+                                                <td>5</td>
+                                                <td>30</td>
+                                                <td>5</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>연대율(%)</th>
+                                                <td>0</td>
+                                                <td>10</td>
+                                                <td>0</td>
                                             </tr>
                                             <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>삼연대율(%)</th>
+                                                <td>1</td>
+                                                <td>15</td>
+                                                <td>1</td>
                                             </tr>
                                             <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="comTitH3">
-                                <h3>연승식</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>출주횟수</th>
+                                                <td>10</td>
+                                                <td>15</td>
+                                                <td>10</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>출주일수</th>
+                                                <td>30</td>
+                                                <td>40</td>
+                                                <td>30</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>최근 3회 종합득점</th>
+                                                <td>81.356</td>
+                                                <td>81.356</td>
+                                                <td>81.356</td>
                                             </tr>
                                             <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>최근 3회 종합순위</th>
+                                                <td>438</td>
+                                                <td>15</td>
+                                                <td>438</td>
                                             </tr>
                                             <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="comTitH3">
-                                <h3>쌍승식</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>총 평균 득점</th>
+                                                <td>82.402</td>
+                                                <td>115.402</td>
+                                                <td>115.402</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>총 순위 득점</th>
+                                                <td>517</td>
+                                                <td>850</td>
+                                                <td>130</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th>최근 3경주 200m 최고기록</th>
+                                                <td>11”58</td>
+                                                <td>11”58</td>
+                                                <td>11”58</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -722,271 +656,105 @@
                             </div>
                             
                             <div class="comTitH3">
-                                <h3>복승식</h3>
+                                <h3>상대 전적 결과</h3>
                             </div>
 
                             <div class="comDataTable both">
-                                <div class="tableArea sizeM">
+                                <div class="tableArea sizeM" style="height: 590px;">
                                     <table>
                                         <caption></caption>
                                         <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
                                                 <th>경주회차</th>
-                                                <th>경주 동영상</th>
+                                                <th>선수 1(순위)</th>
+                                                <th>선수 2(순위)</th>
+                                                <th>선수 3(순위)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button></th>
+                                                <td>강동국 (6위)</td>
                                                 <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
+                                                    <span class="rating red">강동규 (1위)</span>
                                                 </td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button> </th>
+                                                <td>강동국 (6위)</td>
                                                 <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
+                                                    <span class="rating blue">강동규 (2위)</span>
                                                 </td>
+                                                <td>-</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
                                                 <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
+                                                    <span class="rating mint">강동규 (3위)</span>
                                                 </td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div class="comTitH3">
-                                <h3>삼복승식</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div class="comTitH3">
-                                <h3>쌍복승식</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                             <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div class="comTitH3">
-                                <h3>삼쌍승식</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                            <col style="width:25%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>순위</th>
-                                                <th>배당률(%)</th>
-                                                <th>경주회차</th>
-                                                <th>경주 동영상</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1</th>
-                                                <td>788.6</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <td>251.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <td>245.8</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <td>234.5</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>5</th>
-                                                <td>206.3</td>
-                                                <td><a href="#" class="player" onclick="openPopup('raceResult01');">2024년 04월 07일 29회차 1일차 06경주</a></td>
-                                                <td>
-                                                    <button type="button" class="btn xs dkLine" onclick="openPopup('moviePopup')">경기동영상 보기 <img src="../../images/common/ic_12_arr_right_g.svg" alt="바로가기"></button>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
+                                                <td>강동국 (6위)</td>
+                                                <td>-</td>
+                                                <td>강동진 (5위)</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -995,7 +763,6 @@
                         </div>
                     </div>
 
-                    <!-- 경주결과 팝업 -->
                     <div id="raceResult01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
@@ -1057,6 +824,26 @@
                                                             </table>
                                                         </div>
                                                     </div>
+
+                                                    <div class="comTitH3">
+                                                        <h3>경주영상</h3>
+                                                    </div>
+                                                    
+                                                    <div class="comMovieBox">
+                                                        <div class="boxArea">
+                                                            <ul class="movieList">
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림">5주회 경주영상</a>
+                                                                </li>
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림">선두유도원 퇴피 후 동영상 보기</a>
+                                                                </li>
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림" class="disabled">느린화면 동영상 보기</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -1106,7 +893,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num01">1</span><a href="#none" class="player">김상인</a></div>
+                                                                            <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1122,7 +909,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num02">2</span><a href="#none" class="player">강동진</a></div>
+                                                                            <div class="name"><span class="sign num02">2</span><a href="#" class="player">강동진</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1138,7 +925,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num03">3</span><a href="#none" class="player">김광진</a></div>
+                                                                            <div class="name"><span class="sign num03">3</span><a href="#" class="player">김광진</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1154,7 +941,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num04">4</span><a href="#none" class="player">곽훈신</a></div>
+                                                                            <div class="name"><span class="sign num04">4</span><a href="#" class="player">곽훈신</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1170,7 +957,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num05">5</span><a href="#none" class="player">정언열</a></div>
+                                                                            <div class="name"><span class="sign num05">5</span><a href="#" class="player">정언열</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1186,7 +973,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num06">6</span><a href="#none" class="player">오성균</a></div>
+                                                                            <div class="name"><span class="sign num06">6</span><a href="#" class="player">오성균</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1202,7 +989,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>
-                                                                            <div class="name"><span class="sign num07">7</span><a href="#none" class="player">허남</a></div>
+                                                                            <div class="name"><span class="sign num07">7</span><a href="#" class="player">허남</a></div>
                                                                         </th>
                                                                         <td>3</td>
                                                                         <td>3/4B</td>
@@ -1358,34 +1145,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- 경기동영상보기 팝업 -->
-                    <div id="moviePopup" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupInMotion">
-                                <div class="popupContainer">
-                                    <div class="popupContArea">
-                                        <button class="btnPopClose" onclick="closePopup('moviePopup');">닫기</button>
-                                        <div class="popTitle">경기 동영상</div>
-                                        <div class="popCont">
-                                            <!-- 팝업 컨텐츠 영역 -->
-                                            <div class="cptSection">
-                                                <div class="sectArea">
-                                                    <!-- to Dev: 동영상 영역에는 임시 이미지만 채워두었습니다. -->
-                                                    <img src="../../images/thum/thum_movie.png" alt="경기 동영상 임시 이미지" style="width: 100%;">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- //팝업 컨텐츠 영역 -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
                     
                 <!-- 서브 바텀 (담당자) -->
                 
@@ -1395,7 +1155,7 @@
         <div class="subBtmBox">
             <dl class="manager">
                 <dt>담당자</dt>
-                <dd><span>경륜기획팀</span><b>조준호</b></dd>
+                <dd><span>경륜운영팀</span><b>조준호</b></dd>
             </dl>
             <ul class="btmList">
                 <li class="phone">02-2067-5711</li>
