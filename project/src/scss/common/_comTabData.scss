@@ -61,4 +61,28 @@
             margin-top: 24px !important;
         }
     }
+
+    //조건 - 우측 링크 박스 스타일 (총괄본부 - 지점안내 참고)
+    &.posRelative {position: relative;}
+    .rightLink {
+        position: absolute; right: 0; top: 14px; z-index: 1;
+        ul {
+            display: flex; flex-wrap: wrap; gap: 8px;
+            li {
+                a {
+                    display: flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 6px; border: 1px solid var(--Gray-300); background: #fff; font-size: rem(14px); color: var(--Gray-600);
+                    &:hover {color: #000; border: 1px solid #000;}
+                    &:active {border: 1px solid #000; background: var(--Bg-Line-bg-100);}
+                    &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
+                }
+            }
+        }
+        @include media('mobile'){
+            position: static; margin-top: 40px; padding: 0 16px;
+            ul {
+                gap: 12px 8px;
+            }
+            
+        }
+    }
 }
