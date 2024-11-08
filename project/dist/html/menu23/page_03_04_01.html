@@ -12,7 +12,7 @@
 	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
 	<!-- <meta name="theme-color" content="#4285f4"> -->
 
-	<title>KCYCLE 경륜</title>
+	<title>KBOAT 경정</title>
 
 	<link rel="stylesheet" href="../../common/css/swiper.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
@@ -29,13 +29,13 @@
 <div class="wrap">
 
 <!-- 레이아웃 -->
-<div class="lytMypage">
-	<div class="layoutArea">
+<div class="lytLayout">
+    <div class="layoutArea">
 
-		<!-- 상단영역 -->
-		<div class="layoutTop">
-			<!-- Top -->
-			
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
             <div class="cptHeader">
                 <div class="quickArea">
                     <div class="quickBox">
@@ -459,464 +459,276 @@
                 </div>
             </div>
 
-		</div>
-		<!-- //상단영역 -->
+        </div>
+        <!-- //상단영역 -->
 
-		<!-- 중단영역 -->
-		<div class="layoutContainer" id="container">
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
 
-			<!-- 서브 콘텐츠 영역 -->
-			<div class="layoutSubCont">
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
 
-				<!-- 마이페이지 LNB -->
-				<div class="layoutLnbArea">
-					<div class="lnbArea">
-						<h1 class="lnbTit">마이페이지</h1>
-						<ul class="lnbMenu">
-							<li><a href="#"><span>나의 모의베팅</span></a></li>
-							<li><a href="#"><span>나의 활동지수</span></a></li>
-							<li><a href="#"><span>나의 게시글</span></a></li>
-							<li><a href="#"><span>나의 스크랩</span></a></li>
-							<li><a href="#"><span>내알림</span></a></li>
-							<li><a href="#"><span>내정보 수정</span></a></li>
-							<li><a href="#"><span>회원탈퇴</span></a></li>
-						</ul>
-					</div>
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                
 
-					<div class="userArea">
-						<div class="info user">
-							<span class="grade">일반회원</span><br>
-							<strong>홍길동</strong>
-							<span class="id">(user1234)</span>
-						</div>
-						<div class="info">
-							가입일 : <span>2024.09.15</span>
-							<span class="state tRed">경고 : <span>1</span>회</span>
-						</div>
-						
-						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
-					</div>
-				</div>
+<div class="cptSubTop bg03">
+    <div class="subTopArea">
+        <ul class="location">
+            <li class="item"><a href="#">홈</a></li>
+            <li class="item"><a href="#">경정선수</a></li>
+            
+            <li class="item"><a href="#">선수현황</a></li>
+            
+            
+        </ul>
+        <div class="subTitle"><h1>종합현황</h1></div>
+        <div class="subText"><p>기수별 선수들의 <br><b>종합현황</b>을 알려드려요.</p></div>
+        <ul class="addFunc">
+            <li class="item print">
+                <button class="btnPrint">프린트</button>
+            </li>
+            <li class="item share">
+                <button class="btnShare">공유</button>
+            </li>
+        </ul>
+    </div>
+</div>
+                
 
-				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<div class="layoutContArea myMain">
-					<!-- 서브 탑 (타이틀) -->
-                    <div class="cptSubTop">
-                        <div class="subTopArea">
-                            <ul class="location">
-                                <li class="item"><a href="#">홈</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-					<div class="cptDataSum bg01">
-						<div class="dataSum mRow">
-							<ul class="inner">
-								<li>
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_betting.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_betting_m.svg" alt=""></div>
-									</div>
-									<div class="item">모의베팅 순위</div>
-									<div class="val">158위</div>
-								</li>
-								<li>
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_activity.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_activity_m.svg" alt=""></div>
-									</div>
-									<div class="item">현재 보유 활동지수
-										<div class="comTooltip">
-											<button type="button" class="popIcon tipBtn" onclick="openPopup('carrer2')">팝업 열기</button>
-	
-											<div class="comInfoLayerPop" id="carrer2">
-												<div class="popWrap">
-													<div class="popHead">
-														<div class="popTit"></div>
-														<button type="button" class="popClose" onclick="closePopup('carrer2')">팝업 닫기</button>
-													</div>
-													<div class="popBody" style="height: auto;">
-														<div class="comBasicTxt">
-															<p class="txt"><em>활동지수란?</em></p>
-															<p class="txt">활동지수는 사이트 내 활동을 통해 얻을 수 있는 마일리지를 뜻해요.</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="val">350,000 <i class="unit">P</i></div>
-								</li>
-								<li>
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_notify.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_notify_m.svg" alt=""></div>
-									</div>
-									<div class="item">새알림</div>
-									<div class="val">30</div>
-								</li>
-							</ul>
-						</div>
-						<div class="addInfo">
-							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
-						</div>
-					</div>
-
-					<div class="cptDataList">
-						<div class="comTitH2 bk">
-							<h2>나의 모의베팅</h2>
-							<div class="right">
-								<button type="button" class="txtBtn">더 보기</button>
-							</div>
-						</div>
-						
-						<ul class="dataListBox col3">
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
-									<div class="date">2024-09-09</div>
-									<div class="val tBlue">
-										<span class="state">환급</span>
-										+1,050,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">구매</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[부산01] 삼복승 2-4-5</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">환불</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="cptDataList">
-						<div class="comTitH2 bk">
-							<h2>나의 활동지수</h2>
-							<div class="right">
-								<button type="button" class="txtBtn">더 보기</button>
-							</div>
-						</div>
-
-						<ul class="dataListBox col3">
-							<li>
-								<a href="#" class="block">
-									<div class="tit">회원가입 이벤트</div>
-									<div class="date">2024-09-09</div>
-									<div class="val tBlue">
-										<span class="state">적립</span>
-										+1,050,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">예상과 후기 사용자 글쓰기</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">사용</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">예상과 후기 사용자 글쓰기</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">사용</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="cptBoardList">
-                        <div class="boardListArea">
-							<div class="comTitH2 bk">
-								<h2>나의 게시글</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-
-                            <!-- 게시판 리스트 -->
-                            <div class="listTable">
-                                <table>
-                                    <caption></caption>
-                                    <colgroup>
-                                        <col style="width:120px;">
-                                        <col style="width:auto;">
-                                        <col style="width:100px;">
-                                        <col style="width:120px;">
-                                        <col style="width:140px;">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">0</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 목록 리스트 총 15개 노출</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                <div class="layoutContArea">
 
 					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk mb0">
-								<h2>나의 스크랩</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="modTab">
-                        <div class="tabMenuGroup tabSwiper">
-                            <ul class="tabMenu swiper-wrapper">
-                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">선호선수</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경륜 동영상</button></li>
-                            </ul>
-                        </div>
-                        <div class="tabDirection">
-                            <div class="tabBtn alignL">
-                                <button class="prev">이전</button>
-                            </div>
-                            <div class="tabBtn alignR">
-                                <button class="next">다음</button>
-                            </div>
-                        </div>
-                        <div class="tabContianer">
-                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
-                                <div class="cptPersonList">
-                                    <div class="sectArea">
-                                        <ul class="prsnList">
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <!-- to Dev : 이미지 자료 없을 시에는 하단의 basic 이미지가 들어가도록 해주세요 -->
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span> <!--기본 gray / class : 'blue', 'mint', 'orange'-->
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/thum/thum_person_list.png" alt="선수 강동국 사진">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate mint">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate orange">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+						<div class="sectArea">
+							<div class="comDataTable">
+                                <div class="tableArea sizeM">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:auto;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>기수</th>
+                                                <th>등록인원</th>
+                                                <th>제재인원</th>
+                                                <th>부상인원</th>
+                                                <th>기타결장</th>
+                                                <th>계(주선제외)</th>
+                                                <th>가용인원</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td>22</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>20</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>합계</th>
+                                                <td>149</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                                <td>131</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-                            </div>
-                            <div class="tabCont">
-                                <div class="cptGalleryList">
-                                    <div class="galleryListArea">
-										<div class="listBoard col3_1">
-											<ul class="listGroup">
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">스피드온_챔피언십_시즌1_1주차</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">도박 중독의 과정 알아가기</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
                             </div>
                         </div>
                     </div>
+					
+                </div>
 
-				</div>
-				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
-				
-			</div>
-			<!-- //서브 콘텐츠 영역 -->
+                <!-- 서브 바텀 (담당자) -->
+                
 
-		</div>
-		<!-- //중단영역 -->
+<div class="cptSubBtm">
+    <div class="subBtmArea">
+        <div class="subBtmBox">
+            <dl class="manager">
+                <dt>담당자</dt>
+                <dd><span>경정기획팀</span><b>최동훈</b></dd>
+            </dl>
+            <ul class="btmList">
+                <li class="phone">031-790-8306</li>
+                <li class="email"><a href="#">이메일 보내기</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-		<!-- 하단영역 -->
-		<div class="layoutFooter">
-			<!-- Footer -->
-			
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
 
 <div class="cptFooter">
     <div class="footArea">
@@ -983,10 +795,10 @@
         </div>
     </div>
 </div>
-		</div>
-		<!-- //하단영역 -->
+        </div>
+        <!-- //하단영역 -->
 
-	</div>
+    </div>
 </div>
 
 
