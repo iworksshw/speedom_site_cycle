@@ -26,287 +26,1705 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
-                    location: ['경륜', '통계데이터'],
-                    subTitle: '배당률 통계',
-                    subText: '<b>경주 승식별 최고 배당률</b>과 <br/><b>전체 배당률 분포</b>에 대해 알려드려요 ',
+                    location: ['경륜가이드','경주정보'],
+                    subTitle: '경주일정',
+                    subText: '<b>경륜 경주일정</b>에 대해<br/>알려드립니다.',
                     url: "../../",
                     visualClass: "bg02",
                 }) %>
 
                 <div class="layoutContArea">
-
-                    <div class="comSubInfo">
-                        <h2 class="infoTit">모든 경주의 승률을 백분율로 나타내 배당률 통계를 안내합니다.</h2>
-                        <p class="info">연도를 선택하셔서 승식별 최고 배당률과 전체 배당률 분포를 확인하세요.</p>
-                    </div>
-
-                    <div class="cptSection">
+                    
+                    <div class="cptCalendar">
                         <div class="sectArea">
-                            <div class="comTitH2 mRow"> <!--20241031 class 추가-->
-                                <h2>배당률 통계</h2>
-                                <div class="right">
-                                    <div class="frmBox">
-                                        <select class="iptSlt">
-                                            <option value="">통계 연도 전체</option>
-                                            <option value="">2024년</option>
-                                            <option value="">2023년</option>
-                                        </select>
-                                    </div>
+                            <div class="calenInfo">
+                                <ul class="markInfo">
+                                    <li class="item">
+                                        <div class="mark mint">경륜시행일</div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="mark blue">대상(특별)경륜</div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="mark yellow">지방경주 전면수신일</div>
+                                    </li>
+                                </ul>
+                                <div class="comAddGuide">
+                                    <p class="guide">경륜은 크게 일반경륜, 특별(대상)경륜으로 진행되며 상세 경주일정은 경주 운영 세부시행계획에 따라 변경됩니다.</p>
                                 </div>
                             </div>
 
-                            <div class="comTitH3">
-                                <h3>승식별 최고 배당률</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeS">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                            <col style="width:33.3333%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>승식</th>
-                                                <th>최고 배당률(%)</th>
-                                                <th>경주일자/회차</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>단승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>연승식</th>
-                                                <td>116.7</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>쌍승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>복승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>삼복승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>쌍복승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                            <tr>
-                                                <th>삼쌍승식</th>
-                                                <td>788.6</td>
-                                                <td>2005년 29회차 1일차 제 06경주(09/09)</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="calenWrap">
+                                <div class="yearData">
+                                    <button type="button" class="yearArw prev">이전 연도</button>
+                                    <p class="yearTxt">2024년</p>
+                                    <button type="button" class="yearArw next">다음 연도</button>
                                 </div>
+
+                                <ul class="yearGroup">
+                                    <li class="yearItem"> <!--class 'nowMonth' : 현재 달 표시-->
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>01</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>02</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>03</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>04</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt none">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">6</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">7</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">6</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">7</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">8</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>05</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>06</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>07</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem nowMonth"> <!--class 'nowMonth' : 현재 달 표시-->
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>08</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>09</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>10</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>11</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="yearItem">
+                                        <div class="comCalendar">
+                                            <div class="monthData">
+                                                <b>12</b>
+                                            </div>
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
 
-                            
-                            <div class="comTitH3">
-                                <h3>전체 배당률 분포</h3>
-                            </div>
+                        </div>
 
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeL">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:100px">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:8%">
-                                            <col style="width:auto;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th rowspan="2" class="btmLine">승식</th>
-                                                <th colspan="2">10배 미만</th>
-                                                <th colspan="2">10배 이상 ~ 20배 미만</th>
-                                                <th colspan="2">20배 이상 ~ 50배 미만</th>
-                                                <th colspan="2">50배 이상 ~ 100배 미만</th>
-                                                <th colspan="2">100배 이상</th>
-                                                <th rowspan="2" class="btmLine">합계(건수)</th>
-                                            </tr>
-                                            <tr>
-                                                <th class="noStand">건수</th>
-                                                <th>%</th>
-                                                <th>건수</th>
-                                                <th>%</th>
-                                                <th>건수</th>
-                                                <th>%</th>
-                                                <th>건수</th>
-                                                <th>%</th>
-                                                <th>건수</th>
-                                                <th class="noStand">%</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>단승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>연승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>쌍승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>복승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>삼복승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>쌍복승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                            <tr>
-                                                <th>삼쌍승식</th>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>49,521</td>
-                                                <td>90.4%</td>
-                                                <td>54,767</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                        <!-- 캘린더 팝업 영역 -->
+                        <div class="calenPopup">
+                            <div class="popWrap">
+                                <div class="popHead">
+                                    <div class="popTit">경주 상세 일정</div>
+                                    <button type="button" class="popClose">팝업 닫기</button>
                                 </div>
-                            </div>
-
-                            <div class="comDataSwiper">
-                                <div class="dataWrap">
-                                    <div class="dataBox imgDataSwiper">
-                                        <ul class="dataGroup swiper-wrapper">
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram03.png" alt="">
-                                            </li>
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram04.png" alt="">
-                                            </li>
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram05.png" alt="">
-                                            </li>
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram03.png" alt="">
-                                            </li>
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram04.png" alt="">
-                                            </li>
-                                            <li class="dataItem swiper-slide">
-                                                <img src="../../images/thum/thum_diagram05.png" alt="">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="swiperUnit">
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-next"></div>
+                                <div class="popBody">
+                                    <!-- to Dev : 내부 텍스트는 해당 일정 클릭 시 업데이트 해주세요 -->
+                                    <div class="dateTit">2024년 01월 05일(금)</div>
+                                    <div class="dateDesc">
+                                        <p class="category mint">경륜시행일</p>
+                                        <p class="desc">제 10회차 01일째</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
                     
                 <!-- 서브 바텀 (담당자) -->
                 <%- include('../_ejs/sub_btm.ejs', {
-                    team: '경륜기획팀',
+                    team: '경륜운영팀',
                     name: '조준호',
                     phone: '02-2067-5711',
                     url: "../../",

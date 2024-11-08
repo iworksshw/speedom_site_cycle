@@ -26,19 +26,17 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs/sub_top.ejs', {
-                    location: ['경륜경정 총괄본부 소개'],
-                    subTitle: '공지사항',
-                    subText: '<b>경륜경정총괄본부</b>에서<br>주요 정보를 알려드려요.',
+                    location: ['경륜가이드', '경주정보', '심판판정'],
+                    subTitle: '심판방송',
+                    subText: '경주 중 <b>낙차, 사고 등의 경주상황</b>을<br/><b>심판방송</b>으로 안내드립니다.',
                     url: "../../",
-                    visualClass: "bg05",
+                    visualClass: "bg02",
                 }) %>
 
                 <div class="layoutContArea">
                     
                     <div class="cptBoardList">
                         <div class="boardListArea">
-
-
                             <!-- 게시판 리스트 상단 -->
                             <div class="comGroupTop">
                                 <div class="alignL">
@@ -48,8 +46,20 @@
                                     <ul class="opList">
                                         <li class="item">
                                             <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">연도전체</option>
+                                                        <option value="">2024</option>
+                                                        <option value="">2023</option>
+                                                        <option value="">2022</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="frmGroup">
                                                 <div class="frmSearch">
-                                                    <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                    <input type="text" class="iptText" placeholder="검색어를 입력해주세요.">
                                                     <button class="btnSearch">검색</button>
                                                 </div>
                                             </div>
@@ -70,190 +80,172 @@
                                         <col style="width:140px;">
                                     </colgroup>
                                     <tbody>
-                                        <tr class="noti">
-                                            <td class="num"><span class="top">공지</span></td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글</a>
-                                                    <span class="icons">
-                                                        <span class="icon new">새로운 글</span>
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr class="noti">
-                                            <td class="num"><span class="top">공지</span></td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="icon new">새로운 글</span>
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
                                         <tr>
-                                            <td class="num">01</td>
+                                            <td class="num">1014</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="icon new">새로운 글</span>
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">02</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                     <span class="icons">
                                                         <span class="icon new">새로운 글</span>
                                                     </span>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">03</td>
+                                            <td class="num">1013</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 목록 리스트 총 15개 노출</a>
-                                                    <span class="icons">
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">04</td>
+                                            <td class="num">1012</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="icon file">첨부파일</span>
-                                                    </span>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">05</td>
+                                            <td class="num">1011</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">06</td>
+                                            <td class="num">1010</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">07</td>
+                                            <td class="num">1009</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">08</td>
+                                            <td class="num">1008</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">09</td>
+                                            <td class="num">1007</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">10</td>
+                                            <td class="num">1006</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">11</td>
+                                            <td class="num">1005</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">12</td>
+                                            <td class="num">1004</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                         <tr>
-                                            <td class="num">13</td>
+                                            <td class="num">1003</td>
                                             <td class="bdTitle left">
                                                 <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
                                                 </div>
                                             </td>
                                             <td>2024.07.05</td>
-                                            <td>경륜심판팀</td>
+                                            <td>경륜기획팀</td>
+                                            <td class="views">35125</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">1002</td>
+                                            <td class="bdTitle left">
+                                                <div class="title">
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
+                                                </div>
+                                            </td>
+                                            <td>2024.07.05</td>
+                                            <td>경륜기획팀</td>
+                                            <td class="views">35125</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">1001</td>
+                                            <td class="bdTitle left">
+                                                <div class="title">
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
+                                                </div>
+                                            </td>
+                                            <td>2024.07.05</td>
+                                            <td>경륜기획팀</td>
+                                            <td class="views">35125</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">1001</td>
+                                            <td class="bdTitle left">
+                                                <div class="title">
+                                                    <a href="#">2024년 27회차 3일자 15경주(07월 12일)</a>
+                                                </div>
+                                            </td>
+                                            <td>2024.07.05</td>
+                                            <td>경륜기획팀</td>
                                             <td class="views">35125</td>
                                         </tr>
                                     </tbody>
@@ -266,8 +258,8 @@
                                 <a class="start" href="#"></a>
                                 <a class="prev" href="#"></a>
                                 <ul class="numList">
-                                    <li><a href="#">1</a></li>
-                                    <li class="on"><a href="#">2</a></li>
+                                    <li class="on"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
                                     <li><a href="#">3</a></li>
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">5</a></li>
@@ -281,6 +273,14 @@
                     
                 </div>
 
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜심판팀',
+                    name: '이선애',
+                    phone: '02-2067-5909',
+                    url: "../../",
+                }) %>
+                
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 
             </div>
