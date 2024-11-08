@@ -1,5 +1,6 @@
 .cptFacInfo {
     &.mgH20 {margin-top: 20px;}
+    &.mgH32 {margin-top: 32px;}
     .list {
         display: flex; flex-wrap: wrap; margin-top: 80px;
         &:first-child {margin-top: 0;}
@@ -41,6 +42,7 @@
     }
         
     @include media("mobile"){
+        &.mgH32 {margin-top: 20px;}
         .list {
             margin-top: 60px;
             .img {

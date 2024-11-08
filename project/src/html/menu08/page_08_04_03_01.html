@@ -1,0 +1,373 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['총괄본부','광명스피돔','시설안내'],
+                    subTitle: '오시는 길',
+                    subText: '다양한 방법으로 광명스피돔까지<br><b>오시는 길</b>을 알려드릴게요.',
+                    url: "../../",
+                    visualClass: "bg01",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptLocation">
+                        <div class="comTitH2">
+                            <h2>광명스피돔 위치</h2>
+                        </div>
+                        <div class="kkoMap">
+                            <!-- 카카오맵 -->
+                            <div id="daumRoughmapContainer1731066273963" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp" : "1731066273963",
+                                    "key" : "2m6si",
+                                    "mapWidth" : "100%",
+                                    "mapHeight" : "500"
+                                }).render();
+                            </script>
+                        </div>
+                        <div class="comBasicTxt">
+                            <p class="txt">
+                                경기도 광명시 광명로 721(광명동)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="modTab mView_mgH40">
+                        <div class="tabMenuGroup tabSwiper toMob">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="자가용 이용 · 주차안내">자가용 이용 · 주차안내</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="대중교통 이용안내">대중교통 이용안내</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <!-- 자가용 이용 · 주차안내 -->
+                            <div class="tabCont on">
+                                <div class="comTitH2">
+                                    <h2>자가용 이용</h2>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>성남 및 분당지역 수도권 제1순환고속도로 이용</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        청계요금소에서 안현분기점까지 직진 -> 제2경인국도 광명방향으로 변경(안현분기점) -> 광명IC에서 나와 광명시청방면으로 우회전 -> 첫째 사거리(능촌)에서 직진 -> 둘째 사거리(밤일)에서 직진 -> 왼쪽으로 광명돔경륜장이 보이는 셋째 사거리(광남)에서 U턴후 광명문으로 진입(광명IC -> 광명스피돔 : 3.0km)
+                                    </p>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>강북(마포, 신촌방면)</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        성산대교 -> 서부간선도로 진입지점에서 목동방향으로 고가를 타고 우회전 -> 고가에서 내려온후 좌회전 -> 길 끝에서 좌회전 -> 길끝에서 우회전(목동병원을 끼고) -> 직진(광명 이정표 있음) -> 광명시청 방향으로 우회전 -> 광명시청 삼거리에서 우회전 -> 광명사거리역에서 좌회전 -> 광명돔경륜장(1.6km)
+                                    </p>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>서울숲, 성수대교 북단방향</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        강변북로(일산방향) -> 양화대교 횡단 -> 경인고속도로 입구(우회전) -> 서부간선도로 진입광명대교 진입(우회전) -> 현충로 삼거리(철산주공 8단지 앞, 좌회전) -> 광명시청아프 삼거리(광명시민회관앞, 우회전) -> 광명사거리(광명IC방면으로 좌회전) -> 광명스피돔 도착
+                                    </p>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>사당방면</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        봉천사거리에서 서울대방향(좌회전) -> 서울대 지나서 미림여고방향 좌회전 -> 경인교대 반대방향으로 제2경인국도 -> 광명IC도착광명IC에서 나와 광명시청방면으로 우회전 -> 첫째 사거리(능 촌)에서 직진 -> 둘째 사거리(밤일)에서 직진 -> 왼쪽으로 광명돔경륜장이 보이는 셋째 사거리(광남)에서 U턴후 광명문으로 진입(광명IC -> 광명스피돔 : 3.0km)
+                                    </p>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>봉촌, 신림동 방향</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        봉천사거리에서 서울대방향(좌회전) -> 서울대 지나서 미림여고방향 좌회전 -> 경인교대 반대방향으로 제2경인국도 -> 광명IC도착광명IC에서 나와 광명시청방면으로 우회전 -> 첫째 사거리(능 촌)에서 직진 -> 둘째 사거리(밤일)에서 직진 -> 왼쪽으로 광명돔경륜장이 보이는 셋째 사거리(광남)에서 U턴후 광명문으로 진입(광명IC -> 광명스피돔 : 3.0km)
+                                    </p>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3>영등포, 구로지역</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        남부수환도로 오류IC ->> 오류동방향 -> 고가차도 통과후 오른쪽 교통안전공단(자동차검사소)를 지나 200m 통과 후 광명방향 좌회전 -> 천왕역 -> 광명교에서 우회전 -> 광남사거리
+                                    </p>
+                                </div>
+                                <div class="cptLocation">
+                                    <div class="comTitH2">
+                                        <h2>주차안내</h2>
+                                    </div>
+                                    <div class="comTitH3">
+                                        <h3>주차대수 및 주차요금</h3>
+                                    </div>
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            2,256대 / 무료
+                                        </p>
+                                    </div>
+                                    <div class="comTitH3">
+                                        <h3>이용시간</h3>
+                                    </div>
+                                    <div class="comBasicTxt space">
+                                        <p class="txt">
+                                            09:00 ~ 20:00 (계절 및 상황에 따라 변경될 수 있습니다.)
+                                        </p>
+                                    </div>
+                                    <div class="parkInfo">
+                                        <div class="img">
+                                            <img src="../../images/contents/cont08_04_03_01_park.jpg" alt="광명스피돔 주차안내">
+                                        </div>
+                                        <div class="txtInfo">
+                                            <div class="list">
+                                                <div class="comBasicList space">
+                                                    <ul class="listGroup">
+                                                        <li class="item"><b class="lineTit">광명문으로 진입</b></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="comBasicTxt space">
+                                                    <p class="txt">
+                                                        제1주차장(P1)과 제2주차장(P2)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="list">
+                                                <div class="comBasicList space">
+                                                    <ul class="listGroup">
+                                                        <li class="item"><b class="lineTit">광남문으로 진입</b></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="comBasicTxt space">
+                                                    <p class="txt">
+                                                        제4주차장(P4)과 제5주차장(P5) 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="list">
+                                                <div class="comBasicList space">
+                                                    <ul class="listGroup">
+                                                        <li class="item"><b class="lineTit">목감문으로 진입</b></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="comBasicTxt space">
+                                                    <p class="txt">
+                                                        제3주차장(P3)과 제4주차장(P4)
+                                                    </p>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 대중교통 이용안내 -->
+                            <div class="tabCont">
+                                <div class="comTitH2">
+                                    <h2>지하철 안내</h2>
+                                </div>
+                                <div class="comTitH3">
+                                    <h3 class="metro">7호선 광명사거리역 하차 4번출구</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        버스이용 시 도보 230m 직진 후 한신아파트 버스정류장에서 광명스피돔 방면 탑승 (약 15분~20분 소요)
+                                    </p>
+                                </div>
+                                <div class="comTitH3 mgH20">
+                                    <h3 class="metro">7호선 광명사거리역 하차 6번출구</h3>
+                                </div>
+                                <div class="comBasicTxt space">
+                                    <p class="txt">
+                                        버스이용 시 도보 180m 직진 후 버스정류장에서 광명스피돔 방면 탑승 (약 15분~20분 소요)
+                                    </p>
+                                </div>
+                                <div class="comTitH2 mgH60">
+                                    <h2>버스 안내</h2>
+                                </div>
+                                <div class="comBasicTxt">
+                                    <p class="txt">
+                                        광명스피돔(경륜장) 하차
+                                    </p>
+                                </div>
+                                <div class="comTitH3 mgH40">
+                                    <h3>경기·일반버스</h3>
+                                </div>
+                                <div class="comContTable">
+                                    <div class="tableArea sizeL">
+                                        <table>
+                                            <caption>경기·일반버스 : 노선번호, 기점, 주요경유지, 배차간격 항목을 포함한 표</caption>
+                                            <colgroup>
+                                                <col style="width:140px;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:140px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>노선번호</th>
+                                                    <th>기점</th>
+                                                    <th>주요경유지</th>
+                                                    <th>배차간격</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>11번</td>
+                                                    <td>광명돔경륜장.광남문 ↔ 안양역</td>
+                                                    <td>경륜장, 광명사거리, 학온동, 안양역</td>
+                                                    <td>15분~35분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11-1번</td>
+                                                    <td>중앙하이츠아파트 ↔ 여의도환승센터(1번승강장)</td>
+                                                    <td>경륜장, 광명사거리, 광명시청, 철산동, 영등포역, 여의도 환승센터</td>
+                                                    <td>8분~13분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12번</td>
+                                                    <td>중앙하이츠아파트 ↔ 안양역</td>
+                                                    <td>경륜장, 광명사거리, 하안동, 소하동, 광명역</td>
+                                                    <td>5분~10분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21번</td>
+                                                    <td>광명돔경륜장.광남문 ↔ 7호선 가산디지털단지역</td>
+                                                    <td>경륜장, 광명사거리, 구도로, 광명성애병원, 가산디지털단지역</td>
+                                                    <td>8분~10분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22번</td>
+                                                    <td>광명 종합터미널 ↔ 개봉역</td>
+                                                    <td>경륜장, 광명사거리역, 철산역, 소하동, 개봉역</td>
+                                                    <td>10분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>27번</td>
+                                                    <td>광명돔경륜장.광남문 ↔ 독산역</td>
+                                                    <td>경륜장, 광명사거리역, 철산동, 하안동, 독산역</td>
+                                                    <td>10분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>77번</td>
+                                                    <td>광명스피돔 ↔ 광명동굴</td>
+                                                    <td>경륜장, 광명사거리역, 소하동, 광명동굴</td>
+                                                    <td>30분~45분</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>530번</td>
+                                                    <td>능곡공영차고지 ↔ 여의도환승센터(1번승강장)</td>
+                                                    <td>경륜장, 광명사거리, 개봉동, 구로역, 영등포역, 여의도역</td>
+                                                    <td>40분</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="comTitH3 mgH40">
+                                    <h3>지선버스</h3>
+                                </div>
+                                <div class="comContTable">
+                                    <div class="tableArea sizeL">
+                                        <table>
+                                            <caption>지선버스 : 노선번호, 기점, 주요경유지, 배차간격 항목을 포함한 표</caption>
+                                            <colgroup>
+                                                <col style="width:140px;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:140px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>노선번호</th>
+                                                    <th>기점</th>
+                                                    <th>주요경유지</th>
+                                                    <th>배차간격</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>6637번</td>
+                                                    <td>노온사동 ↔ 목동</td>
+                                                    <td>경륜장, 광명사거리, 구로역, 영등포</td>
+                                                    <td>4분~10분</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="comBasicTxt">
+                                    <p class="txt tKey">
+                                        ※ 기후동행카드 사용 가능
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜서비스팀',
+                    name: '신동헌',
+                    phone: '02-2067-5822',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

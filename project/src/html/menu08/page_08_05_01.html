@@ -1,0 +1,620 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['총괄본부','경륜훈련원'],
+                    subTitle: '경륜훈련원 안내',
+                    subText: '대한민국 경륜선수 육성의 요람,<br><b>경륜훈련원을 소개</b>합니다.',
+                    url: "../../",
+                    visualClass: "bg01",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptContSpeedom">
+                        <div class="contArea">
+                            <div class="list">
+                                <div class="img"><img src="../../images/contents/cont08_05_01_img1.jpg" alt="경륜훈련원"></div>
+                                <div class="cont">
+                                    <div class="comTitH2 mRow">
+                                        <h2>경륜훈련원</h2>
+                                        <p class="rightTxt">Kcycle Training Center</p>
+                                    </div>
+                                    <div class="comBasicTxt">
+                                        <p class="txt">
+                                            경륜훈련원은 <em>꿈을 향해 달리는 선수후보생들이 모여 혹독한 훈련을 거치며 최고의 경륜 선수로 성장하는 장소</em>입니다. <br />
+                                            고객과 소외계층, 꿈나무들에게 보다 실질적인 도움을 주고 새로운 시작을 독려하기 위해 사회환원 프로젝트인 <em>ReSTART 운동</em>을 전개하여 소망을 심고 희망을 키웠습니다.
+                                        </p>
+                                    </div>
+                                    <div class="infoTxt">
+                                        <dl>
+                                            <dt>연혁</dt>
+                                            <dd>
+                                                1997년 07월 14일 : 부지지정 계획 수립 <br />
+                                                1999년 04월 30일 : 부지매입완료 <br />
+                                                2000년 09월 21일 : 훈련원 신축공사 기공식 <br />
+                                                2002년 11월 14일 : 훈련원 준공 및 개원식
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>위치</dt>
+                                            <dd>
+                                                경상북도 영주시 순흥면 소백로 2384-30
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>면적</dt>
+                                            <dd>
+                                                전체면적: 116,019평(383,536㎡) <br />
+                                                건축면적: 3,793평(12,539㎡)
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>주요시설</dt>
+                                            <dd>
+                                                본관, 생활관, 실내연습장, 벨로드롬(250m, 333m), 등판주로(280m), 수평주로(300m), 순환주로(2km)
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>수용인원</dt>
+                                            <dd>
+                                                152명(4인용 38개실)
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>주차대수</dt>
+                                            <dd>
+                                                60대
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="comTitH2 mgH80">
+                        <h2>훈련 교육시설</h2>
+                    </div> 
+                    <div class="cptFacInfo mgH32">
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img2.jpg" alt="333m 피스타(벨로드롬)">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>333m 피스타(벨로드롬)</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            2,900평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>너비</dt>
+                                        <dd>
+                                            9m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>경사도</dt>
+                                        <dd>
+                                            8˚ ~ 35˚
+                                        </dd>
+                                    </dl>                                    
+                                    <dl>
+                                        <dt>좌석</dt>
+                                        <dd>
+                                            126석
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>재질</dt>
+                                        <dd>
+                                            아프젤리아 원목
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            사진판정장비 외 10종
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            스피드훈련, 경주 기초훈련,댓쉬훈련, 지구력 및 회전력 향상, 경주로의 주행기술 습득, 자세교정, 경주훈련, 각근력 향상, 스타트훈련
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img3.jpg" alt="250m 피스타(벨로드롬)">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>250m 피스타(벨로드롬)</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            2,100평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>너비</dt>
+                                        <dd>
+                                            7.5m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>경사도</dt>
+                                        <dd>
+                                            11.5˚ ~ 40˚
+                                        </dd>
+                                    </dl>                                    
+                                    <dl>
+                                        <dt>재질</dt>
+                                        <dd>
+                                            아프젤리아 원목
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            스피드훈련, 경주 기초훈련,댓쉬훈련, 지구력 및 회전력 향상, 경주로의 주행기술 습득, 자세교정, 경주훈련, 각근력 향상, 스타트훈련
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img4.jpg" alt="동판주로">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>동판주로</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>길이</dt>
+                                        <dd>
+                                            280m (직선-200, 등판-80)
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>폭</dt>
+                                        <dd>
+                                            9m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>경사도</dt>
+                                        <dd>
+                                            14.5˚
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            최대근력 및 순발력 양성을 위한 각 근력 강화, 내리막 회전력 훈련
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img5.jpg" alt="수평주로">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>수평주로</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>길이</dt>
+                                        <dd>
+                                            300m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>폭</dt>
+                                        <dd>
+                                            9m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            직선주로 스타트 및 스피드 강화 훈련, 기본자세 교정
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img6.jpg" alt="순환주로">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>순환주로</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>길이</dt>
+                                        <dd>
+                                            2Km
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>너비</dt>
+                                        <dd>
+                                            6m
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            지구력 강화훈련, 도로훈련
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img7.jpg" alt="롤러연습장">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>롤러연습장</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            250평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>시설</dt>
+                                        <dd>
+                                            수동롤러 30대
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>
+                                            30명
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            지구력 강화훈련, 자전거 기초훈련, 자세교정, 회전력 훈련
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img8.jpg" alt="운동종합기능 측정실">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>운동종합기능 측정실</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            83평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            와트바이크 10대
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            체력측정 및 평가, 운동처방
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img9.jpg" alt="웨이트 트레이닝장">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>웨이트 트레이닝장</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            62평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            런닝머신 외 42종
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>
+                                            40명
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            지구력, 스피드 파워 보강을 위한 근력강화
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img10.jpg" alt="대강의실">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>대강의실</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            53평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>시설</dt>
+                                        <dd>
+                                            시청각시설 (A/V System 1식)
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>
+                                            100명
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            학과교육 및 세미나실
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img11.jpg" alt="소강의실">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>소강의실</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            34평 (2실)
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>시설</dt>
+                                        <dd>
+                                            시청각시설 (A/V System 1식)
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>
+                                            50명
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            경주규칙, 초청교육 등
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img12.jpg" alt="실내체육관">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>실내체육관</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            247평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            농구대 외 23종
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>수용인원</dt>
+                                        <dd>
+                                            100명
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            배구, 배드민턴, 레크레이션, 농구 등
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img13.jpg" alt="자전거정비 실습장">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>자전거정비 실습장</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            96평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            가력검사기, 회전검사기, 정반 핸들교정기, 검차공구 등
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>용도</dt>
+                                        <dd>
+                                            자전거 정비, 분해조립
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="img">
+                                <img src="../../images/contents/cont08_05_01_img14.jpg" alt="의무실">
+                            </div>
+                            <div class="cont">
+                                <div class="rowA">
+                                    <dl>
+                                        <dt>의무실</dt>
+                                    </dl>
+                                </div>
+                                <div class="rowB">
+                                    <dl>
+                                        <dt>면적</dt>
+                                        <dd>
+                                            17평
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>장비</dt>
+                                        <dd>
+                                            물리치료기(초음파치료기, 전기치료기, 적외선치료기, 핫팩) 등
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜훈련원',
+                    name: '박성호',
+                    phone: '054-630-1615',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
