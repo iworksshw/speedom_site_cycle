@@ -1,0 +1,1404 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KBOAT 경정",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경정선수', '선수현황'],
+                    subTitle: '출발위반 현황',
+                    subText: '선수의 <b>출발위반 현황</b>을 <br>알려드립니다.',
+                    url: "../../",
+                    visualClass: "bg03",
+                }) %>
+                
+
+                <div class="layoutContArea">
+					
+					<div class="comSubInfo">
+						<h2 class="infoTit">출반위반에 의한 주선보류에 대해 알려드려요.</h2>
+						<p class="info">출발위반 주선보류 제재처분일로부터 6반기 동안 출발위반이 없는 경우 주선보류가 소멸됩니다. <br>
+                        출발위반 제재확정일로부터 2년간 출발위반이 없는 경우 해당 출발위반이 소멸됩니다.</p>
+					</div>
+
+                    <!-- 검색 박스 -->
+					<div class="comSearchBox">
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">경주회차</dt>
+								<dd class="conBox">
+									<div class="frmGroup">
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">연도 전체</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+										<div class="frmBox">
+											<select class="iptSlt">
+												<option value="">경주회차 전체</option>
+												<option value="">드롭다운</option>
+											</select>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="searchLine">
+							<dl class="condition">
+								<dt class="title">검색어</dt>
+								<dd class="conBox">
+									<div class="frmGroup">
+										<div class="frmBox">
+											<input type="text" class="iptText" placeholder="검색어를 입력해주세요">
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<button class="btn Primary search">검색</button>
+						</div>
+					</div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+                            <div class="comGroupTop">
+                                <div class="alignR">
+                                    <div class="btnList">
+                                        <div class="alignR moL">
+                                            <div class="btnBox min">
+                                                <button type="button" class="btn xs gLine">엑셀저장 <img src="../../images/common/ic_16_file_download.svg" alt="파일 다운로드"> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+							<div class="comDataTable">
+								<div class="tableArea sizeM">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col style="width:8.4%;">
+											<col style="width:12.5%;">
+											<col style="width:8.4%;">
+											<col style="width:8.4%;">
+											<col style="width:8.4%;">
+											<col style="width:auto;">
+											<col style="width:8.4%;">
+											<col style="width:12.5%;">
+											<col style="width:8.4%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>No.</th>
+												<th>선수정보</th>
+												<th>등급</th>
+												<th>횟수</th>
+												<th>사유</th>
+												<th>해당경주</th>
+												<th>정번</th>
+												<th>제재 확정일자</th>
+												<th>소멸일자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기<br>02-019</a></td>
+												<td>B1</td>
+												<td>1</td>
+												<td>F</td>
+												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('raceResult01')">7회차 2일 17경주</a></td>
+                                                <td>5</td>
+                                                <td>2024-02-16</td>
+                                                <td>-</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<!-- 페이징 -->
+							<div class="comPaging">
+								<a class="start" href="#"></a>
+								<a class="prev" href="#"></a>
+								<ul class="numList">
+									<li><a href="#">1</a></li>
+									<li class="on"><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+								</ul>
+								<a class="next" href="#"></a>
+								<a class="end" href="#"></a>
+							</div>
+                        </div>
+                    </div>
+
+                    <!-- 선수정보 팝업 -->
+                    <div id="playerData01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('playerData01');">닫기</button>
+                                        <div class="popTitle">선수프로필</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+
+                                            <div class="cptPersonDesc inPopup"> <!--class 'inPopup' : 레이어 팝업 내부에서 쓰일 때 클래스 추가-->
+                                                <div class="sectArea">
+                                                    <div class="profPart">
+                                                        <div class="profBox">
+                                                            <div class="photoArea">
+                                                                <div class="thumArea">
+                                                                    <div class="thumWrap">
+                                                                        <img src="../../images/thum/thum_person_detail.png" alt="강동국 선수 프로필 이미지">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="txtArea">
+                                                                    <b class="name">강동국</b>
+                                                                    <i class="date">19990041</i>
+                                                                    <div class="cateGroup">
+                                                                        <span class="cate blue">A1</span>
+                                                                        <span class="cate">06기</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoArea">
+                                                                <ul class="infoGroup">
+                                                                    <li class="infoItem">
+                                                                        <div class="infoTit">신체정보</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">출생년도</b>
+                                                                                <i class="txt">1974년 02월 21일</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">신장/체중</b>
+                                                                                <i class="txt">176cm / 76kg</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">시력</b>
+                                                                                <i class="txt">좌 1.0 / 우 1.2</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">혈액형</b>
+                                                                                <i class="txt">A형</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">가슴둘레</b>
+                                                                                <i class="txt">101cm</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">대퇴부 둘레</b>
+                                                                                <i class="txt">위좌 60cm / 위우 60cm</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">하퇴부 둘레</b>
+                                                                                <i class="txt">위좌 38cm / 위우 38cm</i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="infoItem">
+                                                                        <div class="infoTit">개인정보</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">결혼</b>
+                                                                                <i class="txt">기혼</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">흡연여부</b>
+                                                                                <i class="txt">무</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">고등학교</b>
+                                                                                <i class="txt">거창종합</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">대학교</b>
+                                                                                <i class="txt">-</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">아마경력 <button type="button" class="popIcon" onclick="openPopup('carrer')">팝업 열기</button></b>
+                                                                                <i class="txt">비선수</i>
+                                                                                <div class="comInfoLayerPop" id="carrer">
+                                                                                    <div class="popWrap">
+                                                                                        <div class="popHead">
+                                                                                            <div class="popTit">아마추어 주요경력</div>
+                                                                                            <button type="button" class="popClose" onclick="closePopup('carrer')">팝업 닫기</button>
+                                                                                        </div>
+                                                                                        <div class="popBody">
+                                                                                            <ul class="carrerList">
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">2017 페어플레이상</span>
+                                                                                                    <span class="etc">특선급</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜</span>
+                                                                                                    <span class="etc">특선급 2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
+                                                                                                    <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">우수경기선수상</span>
+                                                                                                    <span class="etc">경주사업본부</span>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">출신지/출신팀</b>
+                                                                                <i class="txt">경남 / 경남</i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">최신입상내역 <button type="button" class="popIcon" onclick="openPopup('prizing')">팝업 열기</button></b>
+                                                                                <i class="txt tMint">부산광역시장배 대상경륜 1위</i>
+                                                                                <div class="comInfoLayerPop" id="prizing">
+                                                                                    <div class="popWrap">
+                                                                                        <div class="popHead">
+                                                                                            <div class="popTit">입상내역</div>
+                                                                                            <button type="button" class="popClose" onclick="closePopup('prizing')">팝업 닫기</button>
+                                                                                        </div>
+                                                                                        <div class="popBody">
+                                                                                            <ul class="carrerList">
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">부산광역시장배 대상경륜</span>
+                                                                                                    <span class="etc">3위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">KSPO 이사장배 왕중왕전 </span>
+                                                                                                    <span class="etc">1위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">1위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                                <li class="carrer">
+                                                                                                    <span class="date">2024. 07</span>
+                                                                                                    <span class="name">제28회 스포츠조선배 대상경륜 </span>
+                                                                                                    <span class="etc">2위</span>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="infoItem full">
+                                                                        <div class="infoTit">기타</div>
+                                                                        <ul class="dlList">
+                                                                            <li class="item">
+                                                                                <b class="tit">친인척 관계</b>
+                                                                                <i class="txt"><a href="#">강동진(12기)</a> / 형 </i>
+                                                                            </li>
+                                                                            <li class="item">
+                                                                                <b class="tit">기타사항</b>
+                                                                                <i class="txt etc">기타사항이 있는 경우에 작성되는 곳입니다.</i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="dataPart">
+                                                        <div class="comTitH2">
+                                                            <h2>경주 기록정보</h2>
+                                                            <div class="right">
+                                                                <div class="frmBox">
+                                                                    <select class="iptSlt">
+                                                                        <option value="">2024년</option>
+                                                                        <option value="">2023년</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comTitH3">
+                                                            <h3>경주성적</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>등급변동</th>
+                                                                            <th>승률(%)</th>
+                                                                            <th>연대율(%)</th>
+                                                                            <th>삼연대율(%)</th>
+                                                                            <th>출주횟수</th>
+                                                                            <th>출주일수</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>B2->A1</td>
+                                                                            <td>0</td>
+                                                                            <td>3</td>
+                                                                            <td>7</td>
+                                                                            <td>10</td>
+                                                                            <td>30</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>최근 3회 종합득점</th>
+                                                                            <th>최근 3회 종합순위</th>
+                                                                            <th>총 평균 득점</th>
+                                                                            <th>총 순위 득점</th>
+                                                                            <th>최근 3경주 200m 최고기록</th>
+                                                                            <th>훈련지/동창 훈련자</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>81.356</td>
+                                                                            <td>538</td>
+                                                                            <td>82.402</td>
+                                                                            <td>517</td>
+                                                                            <td>11”58</td>
+                                                                            <td>구미/홍길동</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>입상전법</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="3">선행</th>
+                                                                            <th colspan="3">선행</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                        <col style="width:16.6667%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="3">추입</th>
+                                                                            <th colspan="3">마크</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>위반행위 및 낙차사고</h3>
+                                                            <div class="right">
+                                                                <button type="button" class="txtBtn"  onclick="openPopup('warned')">더 보기</button>
+                                                                <div class="comInfoLayerPop" id="warned">
+                                                                    <div class="popWrap">
+                                                                        <div class="popHead">
+                                                                            <div class="popTit">위반행위 현황</div>
+                                                                            <button type="button" class="popClose" onclick="closePopup('warned')">팝업 닫기</button>
+                                                                        </div>
+                                                                        <div class="popBody">
+                                                                            <ul class="carrerList">
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024.07.20</span>
+                                                                                    <span class="name">28회차 2일차 창원 10경주 73조 2항 2호 주의 판정</span>
+                                                                                    <span class="etc">특선급</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">제28회 스포츠조선배 대상경륜</span>
+                                                                                    <span class="etc">특선급 2위</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">제17회 스포츠조선배 대상경륜 두줄은 아래로 떨어짐</span>
+                                                                                    <span class="etc">경주사업본부 상금 1,000,000원(특선)</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                                <li class="carrer">
+                                                                                    <span class="date">2024. 07</span>
+                                                                                    <span class="name">우수경기선수상</span>
+                                                                                    <span class="etc">경주사업본부</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>실격행위</th>
+                                                                            <th>경고행위</th>
+                                                                            <th>주의행위</th>
+                                                                            <th>낙차기권</th>
+                                                                            <th>낙차입</th>
+                                                                            <th>사고기권</th>
+                                                                            <th>사고입</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>경주별 순위</h3>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:auto;">
+                                                                        <col style="width:18%;">
+                                                                        <col style="width:18%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>경주회차</th>
+                                                                            <th>출전구분</th>
+                                                                            <th>순위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>1</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>2</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><button type="button" class="txtBtn">28회차 2일차 창원 10경주(2024.07.20) </button></td>
+                                                                            <td>선발</td>
+                                                                            <td>3</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="digramPart">
+                                                        <div class="comTitH2">
+                                                            <h2>기록 그래프</h2>
+                                                        </div>
+                        
+                                                        <div class="comTitH3">
+                                                            <h3>착순위 정보</h3>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmBox">
+                                                                <!-- to Dev : PC와 MOB에서 보일 화면이 구분되지 않는다면 pcView / mView 없이 사용하시면 됩니다. -->
+                                                                <div class="pcView">
+                                                                    <img src="../../images/thum/thum_diagram01.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                                <div class="mView">
+                                                                    <img src="../../images/thum/thum_diagram01_m.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                        <col style="width:14.2857%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>1위</th>
+                                                                            <th>2위</th>
+                                                                            <th>3위</th>
+                                                                            <th>4위</th>
+                                                                            <th>5위</th>
+                                                                            <th>6위</th>
+                                                                            <th>7위</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="comTitH3">
+                                                            <h3>입상전법</h3>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmBox">
+                                                                <div class="pcView">
+                                                                    <img src="../../images/thum/thum_diagram02.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                                <div class="mView">
+                                                                    <img src="../../images/thum/thum_diagram02_m.png" alt="착순위 정보 도표 임시 이미지">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="comDataTable">
+                                                            <div class="tableArea">
+                                                                <table>
+                                                                    <caption></caption>
+                                                                    <colgroup>
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                        <col style="width:25%;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>선행</th>
+                                                                            <th>젖히기</th>
+                                                                            <th>추입</th>
+                                                                            <th>마크</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1(25%)</td>
+                                                                            <td>1(25%)</td>
+                                                                            <td>-</td>
+                                                                            <td>2번(50%)</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="comTitH2">
+                                                            <h2>종합득점 및 종합순위</h2>
+                                                        </div>
+                        
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram03.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram04.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                        <div class="comDiagrm">
+                                                            <div class="digrmArea">
+                                                                <img src="../../images/thum/thum_diagram05.png" alt="종합득점 및 종합순위 도표 임시 이미지">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 경주결과 팝업 -->
+                    <div id="raceResult01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('raceResult01');">닫기</button>
+                                        <div class="popTitle">경주결과</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+                                            <div class="cptSection">
+                                                <div class="sectArea">
+                                                    <div class="comTitH2 mRow">
+                                                        <h2>광명 14경주 (선발 11:22)</h2>
+                                                        <p class="etcAdds">2011년 12월 25일 49회차 3회차</p>
+                                                    </div>
+
+                                                    <div class="comDataTable both">
+                                                        <div class="tableArea sizeM">
+                                                            <table>
+                                                                <caption></caption>
+                                                                <colgroup>
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>시간</th>
+                                                                        <th>날씨</th>
+                                                                        <th>풍향</th>
+                                                                        <th>풍속</th>
+                                                                        <th>기온</th>
+                                                                        <th>습도</th>
+                                                                        <th>우량</th>
+                                                                        <th>200M</th>
+                                                                        <th>최종주회</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>11:20</th>
+                                                                        <td>비</td>
+                                                                        <td>북서</td>
+                                                                        <td>1.8m/s</td>
+                                                                        <td>25.3℃</td>
+                                                                        <td>91%</td>
+                                                                        <td>1mm</td>
+                                                                        <td>11”70</td>
+                                                                        <td>19”64</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="comTitH3">
+                                                        <h3>경주영상</h3>
+                                                    </div>
+                                                    
+                                                    <div class="comMovieBox">
+                                                        <div class="boxArea">
+                                                            <ul class="movieList">
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림">5주회 경주영상</a>
+                                                                </li>
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림">선두유도원 퇴피 후 동영상 보기</a>
+                                                                </li>
+                                                                <li class="movieItem">
+                                                                    <a href="#" target="_blank" title="새창열림" class="disabled">느린화면 동영상 보기</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cptSection">
+                                                <div class="sectArea">
+                                                    <div class="comTitH3 mRow">
+                                                        <h3>착차</h3>
+                                                        <div class="right">
+                                                            <p class="addTxt"><b>SD : </b>근소차 <b>T : </b>타이어차 <b>W : </b>바퀴차 <b>B : </b>자전거차 <b>TD : </b>10차신이상</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="comDataTable both">
+                                                        <div class="tableArea sizeL">
+                                                            <table>
+                                                                <caption></caption>
+                                                                <colgroup>
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:auto;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>선수명</th>
+                                                                        <th>순위</th>
+                                                                        <th>착차</th>
+                                                                        <th>주행시간</th>
+                                                                        <th>승부수</th>
+                                                                        <th>실격</th>
+                                                                        <th>경고</th>
+                                                                        <th>주의</th>
+                                                                        <th>기권구분</th>
+                                                                        <th>골인구분</th>
+                                                                        <th>200M<br>선수별 기록</th>
+                                                                        <th>200M<br>평균시속</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num01">1</span><a href="#none" class="player">김상인</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num02">2</span><a href="#none" class="player">강동진</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num03">3</span><a href="#none" class="player">김광진</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num04">4</span><a href="#none" class="player">곽훈신</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num05">5</span><a href="#none" class="player">정언열</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num06">6</span><a href="#none" class="player">오성균</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num07">7</span><a href="#none" class="player">허남</a></div>
+                                                                        </th>
+                                                                        <td>3</td>
+                                                                        <td>3/4B</td>
+                                                                        <td>2:27:9725</td>
+                                                                        <td>마크</td>
+                                                                        <td>-</td>
+                                                                        <td>1</td>
+                                                                        <td>1</td>
+                                                                        <td>-</td>
+                                                                        <td>-</td>
+                                                                        <td>10"71</td>
+                                                                        <td>61.80</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="comTitH3">
+                                                        <h3>심판판정내용</h3>
+                                                    </div>
+
+                                                    <div class="comDataTable both colLineDel">
+                                                        <div class="tableArea sizeL">
+                                                            <table>
+                                                                <caption></caption>
+                                                                <colgroup>
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                    <col style="width: 14.2857%;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>선수</th>
+                                                                        <th>위반시기</th>
+                                                                        <th>위반장소</th>
+                                                                        <th>저촉조</th>
+                                                                        <th>저촉항</th>
+                                                                        <th>저촉호</th>
+                                                                        <th>판정구분</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
+                                                                        </th>
+                                                                        <td>4주회</td>
+                                                                        <td>HS</td>
+                                                                        <td>73</td>
+                                                                        <td>4</td>
+                                                                        <td></td>
+                                                                        <td>주의</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>경주규칙</th>
+                                                                        <td colspan="6" class="left">
+                                                                            <b>외선내 진입금지</b><br/>
+                                                                            선수는 내선과 외선 사이를 주행하고 있는 선수와 나란히 달리는 상태에서 외선의 안쪽으로 진입하거나 다른 선수로 하여금 외선의 안쪽으로 들어가게 하여서는 아니된다.
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="comTitH3">
+                                                        <h3>배당률 안내</h3>
+                                                    </div>
+
+                                                    <div class="comDataTable both">
+                                                        <div class="tableArea">
+                                                            <table>
+                                                                <caption></caption>
+                                                                <colgroup>
+                                                                    <col style="width: 33.3333%;">
+                                                                    <col style="width: 33.3333%;">
+                                                                    <col style="width: 33.3333%;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>승식</th>
+                                                                        <th>승자</th>
+                                                                        <th>평균확정배당률</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>단승식</th>
+                                                                        <td><span class="sign num04">4</span></td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>연승식</th>
+                                                                        <td><span class="sign num01">1</span></td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>연승식</th>
+                                                                        <td><span class="sign num06">6</span></td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>복승식</th>
+                                                                        <td>
+                                                                            <span class="sign num06">6</span> · <span class="sign num04">4</span>
+                                                                        </td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>쌍승식</th>
+                                                                        <td>
+                                                                            <span class="sign num06">6</span> · <span class="sign num04">4</span>
+                                                                        </td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>삼복승식</th>
+                                                                        <td>
+                                                                            <span class="sign num04">4</span> · <span class="sign num06">6</span> · <span class="sign num07">7</span>
+                                                                        </td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>쌍복승식</th>
+                                                                        <td>
+                                                                            <span class="sign num04">4</span> · <span class="sign num06">6</span> · <span class="sign num07">7</span>
+                                                                        </td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>삼쌍승식</th>
+                                                                        <td>
+                                                                            <span class="sign num04">4</span> · <span class="sign num06">6</span> · <span class="sign num07">7</span>
+                                                                        </td>
+                                                                        <td>1.5</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경정기획팀',
+                    name: '최동훈',
+                    phone: '031-790-8306',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

@@ -1,0 +1,272 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜'],
+                    subTitle: '경주진행과정',
+                    subText: '짜릿한 자전거 경주!<br/>경륜, <b>어떻게 진행될까요?</b>',
+                    url: "../../",
+                    visualClass : "bg01",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경륜은 능력 비슷한 선수들이 전략으로 결승선 순위를 겨루는 3분짜리 짜릿한 벨로드롬 자전거 경주입니다.</h2>
+                         <p class="info">경륜은 기록경주가 아닌 순위경주로서 가장 빠른 선수를 가리는 기록경주가 아니며, 능력과 기량이 비슷한 선수들이 벨로드롬에서 각자의 전법을 구사하여 결승선에 도착하는 경주입니다.</p>
+                    </div>
+
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>경주 진행과정</h2>
+                            </div>
+
+                            <div class="comBasicTxt">
+                                <p class="txt">
+                                    출발 신호 후 출발기로부터 출발한 선수들은 <em>5바퀴(1,691m)를 주행</em>하여 레이스를 펼치는데 선두유도원이 풍압을 막아주기 위하여 앞에서 끌어주고 <em>선두유도원이 퇴피한 뒤 결승선 도착 1바퀴 반 지점에서 타종이 시작되면 본격적인 레이스</em>가 펼쳐지게됩니다.
+                                </p>
+                            </div>
+
+                            <div class="comAddGuide"> 
+                                <p class="guide">결승전까지는약 3분 정도 시간이 소요되며 이 시간 동안 상당한 박진감을 동시에 맛보실 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cptOrderGuide">
+                        <div class="guideArea">
+                            <div class="comTitH3">
+                                <h3>경주 전 - 선수선발</h3>
+                            </div>
+
+                            <div class="imgGuide">
+                                <ul class="guideGroup">
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">01</span>
+                                            <span class="txt">출전 선수 확정</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_001.png" alt="출전 선수 확정의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">02</span>
+                                            <span class="txt">시합 전 확정검사</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_002.png" alt="시합 전 확정검사의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">03</span>
+                                            <span class="txt">출전 선수 소개</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_003.png" alt="출전 선수 소개의 예시 이미지">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cptOrderGuide">
+                        <div class="guideArea">
+                            <div class="comTitH3">
+                                <h3>경주 전 - 발매 진행 </h3>
+                            </div>
+
+                            <div class="imgGuide">
+                                <ul class="guideGroup">
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">04</span>
+                                            <span class="txt">경주권 구매</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_004.png" alt="경주권 구매의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">05</span>
+                                            <span class="txt">배당률 게시</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_005.png" alt="배당률 게시의 예시 이미지">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cptOrderGuide">
+                        <div class="guideArea">
+                            <div class="comTitH3">
+                                <h3>경주 진행</h3>
+                            </div>
+
+                            <div class="imgGuide">
+                                <ul class="guideGroup">
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">06</span>
+                                            <span class="txt">선수입장</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_006.png" alt="선수입장의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">07</span>
+                                            <span class="txt">경주 출발</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_007.png" alt="경주 출발의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">08</span>
+                                            <span class="txt">경주 진행</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_008.png" alt="경주 진행의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">09</span>
+                                            <span class="txt">선두유도원 퇴피</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_009.png" alt="선두유도원 퇴피의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">10</span>
+                                            <span class="txt">타종</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_010.png" alt="타종의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">11</span>
+                                            <span class="txt">전력질주</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_011.png" alt="전력질주의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">12</span>
+                                            <span class="txt">결승전 도착</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_012.png" alt="결승전 도착의 예시 이미지">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cptOrderGuide">
+                        <div class="guideArea">
+                            <div class="comTitH3">
+                                <h3>경주 종료</h3>
+                            </div>
+
+                            <div class="imgGuide">
+                                <ul class="guideGroup">
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">13</span>
+                                            <span class="txt">순위 확정 및 확정배당률 게시</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_013.png" alt="순위 확정 및 확정배당률 게시의 예시 이미지">
+                                        </div>
+                                    </li>
+                                    <li class="guideItem">
+                                        <p class="tit">
+                                            <span class="num">14</span>
+                                            <span class="txt">배당환급금 수령</span>
+                                        </p>
+                                        <div class="imgArea">
+                                            <img src="../../images/contents/cont01_01_01_03_014.png" alt="배당환급금 수령의 예시 이미지">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜기획팀',
+                    name: '조준호',
+                    phone: '02-2067-5711',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

@@ -8,7 +8,7 @@
     width: 100%; margin-top: 60px; position: relative;
     &:first-child {margin-top:0;}
     .tabMenuGroup{
-        width: 100%; overflow: hidden;
+        width: 100%; padding: 0 20px; overflow: hidden;
         .tabMenu {
             width: 100%; display: flex;
             .tabItem {
@@ -67,7 +67,7 @@
             &.toAll {
                 .tabMenu {
                     .tabItem {
-                        width: 180px; min-width: 180px;
+                        width: 180px;
                     }
                 }
             } 
