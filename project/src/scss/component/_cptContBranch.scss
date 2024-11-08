@@ -1,0 +1,75 @@
+.cptContBranch {
+    ul {
+        display: flex; flex-wrap: wrap; margin: 0 -20px;
+        li {
+            width: 33.33333333%; padding: 0 20px; margin-top: 40px;
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3) {margin-top: 0;}
+            .inCont {
+                padding: 36px 32px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-100); background: #fff; height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+                .rowA {}
+                .rowB {
+                    display: flex; gap: 10px; margin-top: 40px;
+                    .linkBtn {
+                        cursor: pointer; border-radius: 6px; background: #EEF6FC; display: flex; align-items: center; justify-content: center; gap: 4px; width: 50%; height: 48px; font-size: rem(16px); font-weight: 500; color: var(---Secondary);
+                        &::before {content: ''; width: 20px; height: 20px;}
+                        &.a1 {
+                            &::before {background: url(../../images/contents/cont08_03_01_cald.svg);}
+                        }
+                        &.a2 {
+                            &::before {background: url(../../images/contents/cont08_03_01_loc.svg);}
+                        }
+                    }
+                }
+                .addrTxt {font-size: rem(18px); line-height: 1.6; color: var(--Gray-800); margin-top: 12px;}
+                .branchInfo {
+                    margin-top: 24px;
+                    dl {
+                        margin-top: 8px; display: flex; font-size: rem(16px); line-height: 1.6;
+                        &:first-child {margin-top: 0;}
+                        dt {color: var(--Gray-800); font-weight: 600; width: 100px;}
+                        dd {
+                            flex: 1; color: var(--Gray-600);
+                            b {color: var(---Secondary); font-weight: 600;}
+                        }
+                    }
+                }
+            }
+            .comTitH2.bk h2 {
+                display: flex; align-items: center; gap: 8px;
+                &::before {content:''; display: block; width: 20px; height: 24px; background: url(../../images/contents/cont08_03_01_branchIcon.svg) no-repeat center;}
+            }
+        }
+    }
+    
+    @include media("mobile"){
+       ul {
+        margin: 0 0;
+        li {
+            width: 100%; padding: 0 0; margin-top: 0;
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3) {margin-top: 0;}
+            .inCont {
+                padding: 32px 0; border: 0; border-bottom: 1px solid var(--Bg-Line-line-100); border-radius: 0;
+                .addrTxt {font-size: rem(16px); margin-top: 8px;}
+                .branchInfo {
+                    margin-top: 20px;
+                    dl {
+                        margin-top: 4px;
+                        font-size: rem(15px);
+                        dt {width: 80px;}
+                    }
+                }
+                .rowB {
+                    margin-top: 36px;
+                    .linkBtn {
+                        height: 36px; font-size: rem(15px);
+                    }
+                }
+            }
+        }
+       }
+    }
+}
