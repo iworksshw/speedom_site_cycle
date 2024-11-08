@@ -20,6 +20,8 @@
             &:last-child {border-right: none;}
         }
         .lineR {border-right-color: var(--Gray-300);}
+        // rowspan 일 경우 td:last-child border-right 적용
+        .rowLineR {border-right: 1px solid var(--Bg-Line-line-200) !important;}
 
         thead {
             th {
