@@ -1,0 +1,74 @@
+.cptFacInfo {
+    &.mgH20 {margin-top: 20px;}
+    .list {
+        display: flex; flex-wrap: wrap; margin-top: 80px;
+        &:first-child {margin-top: 0;}
+        .img {
+            margin-right: 100px;
+            img {max-width: 100%; height: auto; display: block; border-radius: 16px;}
+        }
+        .cont {
+            flex: 1;
+            .rowA {
+                dl {
+                    dt {
+                        font-size: rem(20px); color: var(--Gray-900); font-weight: 700; line-height: 1.4; display: flex; align-items: center;
+                        .rightTxt {display: flex; align-items: center; height: 24px; padding: 0 10px; font-size: rem(12px); color: var(---Secondary); font-weight: 600; border-radius: 20px; border: 1px solid var(--Point-Primary3); margin-left: 20px; line-height: normal;}
+                    }
+                    dd {font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; margin-top: 16px;}
+                }
+            }
+            .rowB {
+                padding-top: 16px; margin-top: 16px; border-top: 1px solid var(--Bg-Line-line-100);
+                dl {                    
+                    display: flex; margin-top: 12px;
+                    &:first-child {margin-top: 0;}
+                    dt {width: 120px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 700;}
+                    dd {
+                        flex: 1; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6;
+                        &.flexAlign {display: flex; align-items: center;}
+                        b {font-weight: 600;}
+                        .tKey {margin-left: 20px;}
+                        .popMap {
+                            font-size: rem(15px); color: var(---Primary); cursor: pointer; margin-left: 20px; position: relative; display: inline-flex; align-items: center; border-bottom: 1px solid var(---Primary); line-height: 20px; font-weight: 500;
+                            &::before {content:''; width: 16px; height: 16px; background: url(../../images/contents/cont08_04_02_mapIcon.svg) no-repeat center;}
+                        }
+                        .popUseInfo {font-size: rem(15px); color: var(---Primary); cursor: pointer; position: relative; display: inline-flex; align-items: center; line-height: 20px; font-weight: 500; text-decoration-line: underline; text-decoration-style: solid; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto; text-underline-position: from-font;}
+                    }
+                }
+            }
+        }
+    }
+        
+    @include media("mobile"){
+        .list {
+            margin-top: 60px;
+            .img {
+                margin-right: 0px;                
+            }
+            .cont {
+                flex: none; width: 100%; margin-top: 24px;
+                .rowA {
+                    dl {
+                        dt {
+                            font-size: rem(18px); font-weight: 600; line-height: 1.3;
+                        }
+                        dd {font-size: rem(15px); line-height: 1.6; margin-top: 12px;}
+                    }
+                }
+                .rowB {                    
+                    dl {
+                        dt {width: 90px; font-size: rem(15px); line-height: 1.5;}
+                        dd {
+                            &.flexAlign {flex-wrap: wrap; flex-direction: column; align-items: baseline;}
+                            .popMap {margin-left: 0; margin-top: 4px;}
+                            font-size: rem(15px);
+                            .tKey {margin-left: 20px;}
+                            .blk {display: block;}                      
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
