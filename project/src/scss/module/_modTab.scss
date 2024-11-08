@@ -145,6 +145,7 @@
         &.mView_mgH40 { // margin-top: 40px 인 경우 적용
             margin-top: 40px;
             .tabContianer {margin-top: 40px;}
+            &.mView_mgH40:first-child {margin-top: 0;}
         } 
     }
     
