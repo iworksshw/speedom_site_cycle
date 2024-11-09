@@ -1,0 +1,276 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['총괄본부','경륜훈련원'],
+                    subTitle: '후보생 졸업현황',
+                    subText: '경륜 후보생<br><b>졸업현황</b>을 알려드립니다.',
+                    url: "../../",
+                    visualClass: "bg01",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">혹독한 훈련과 치열한 경쟁 속에서 이루어낸 선수후보생 졸업현황을 안내합니다.</h2>
+                        <p class="info">
+                            경륜훈련원에서 진행한 선수후보생들의 교육기간 및 졸업인원에 대해 안내합니다.
+                        </p>
+                    </div>
+
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>선수 후보생 졸업현황</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comContTable">
+                        <table class="basic">
+                            <caption>선수 후보생 졸업현황 : 기수, 교육기간, 졸업인원, 내용 항목을 포함한 표</caption>
+                            <colgroup>
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>기수</th>
+                                    <th>교육기간</th>
+                                    <th>졸업인원</th>
+                                    <th>내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>28기</td>
+                                    <td>2023. 02. 06 ~ 2023. 11. 30</td>
+                                    <td>18명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>27기</td>
+                                    <td>2022. 02. 07 ~ 2022. 12. 08</td>
+                                    <td>18명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>26기</td>
+                                    <td>2020. 06. 22 ~ 2021. 05. 27</td>
+                                    <td>22명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>25기</td>
+                                    <td>2019. 02. 11 ~ 2019. 12. 13</td>
+                                    <td>21명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>24기</td>
+                                    <td>2018. 01. 15 ~ 2018. 12. 07</td>
+                                    <td>22명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>23기</td>
+                                    <td>2017. 01. 05 ~ 2017. 11. 30</td>
+                                    <td>26명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>22기</td>
+                                    <td>2016. 01. 05 ~ 2016. 11. 30</td>
+                                    <td>17명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>21기</td>
+                                    <td>2014. 05. 27 ~ 2015. 04. 29</td>
+                                    <td>16명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>20기</td>
+                                    <td>2012. 11. 06 ~ 2013. 10. 02</td>
+                                    <td>30명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>19기</td>
+                                    <td>2011. 11. 01 ~ 2012. 09. 27</td>
+                                    <td>23명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>18기</td>
+                                    <td>2010. 11. 02 ~ 2011. 09. 29</td>
+                                    <td>22명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>17기</td>
+                                    <td>2009. 11. 02 ~ 2010. 09. 30</td>
+                                    <td>23명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>16기</td>
+                                    <td>2008. 11. 24 ~ 2009. 10. 21</td>
+                                    <td>30명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>15기</td>
+                                    <td>2007. 10. 22 ~ 2008. 10. 16</td>
+                                    <td>28명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>14기</td>
+                                    <td>2006. 11. 20 ~ 2007. 09. 19</td>
+                                    <td>27명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>13기</td>
+                                    <td>2005. 10. 24 ~ 2006. 08. 23</td>
+                                    <td>36명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>12기</td>
+                                    <td>2004. 10. 04 ~ 2005. 08. 03</td>
+                                    <td>68명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>11기</td>
+                                    <td>2003. 10. 03 ~ 2004. 07. 28</td>
+                                    <td>100명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>10기</td>
+                                    <td>2002. 11. 18 ~ 2003. 09. 24</td>
+                                    <td>80명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>09기</td>
+                                    <td>2001. 09. 03 ~ 2002. 06. 27</td>
+                                    <td>60명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>08기</td>
+                                    <td>2000. 12. 10 ~ 2001. 09. 30</td>
+                                    <td>48명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>07기</td>
+                                    <td>2000. 01. 10 ~ 2000. 10. 30</td>
+                                    <td>55명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>06기</td>
+                                    <td>1998. 11. 02 ~ 1999. 09. 14</td>
+                                    <td>40명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>05기</td>
+                                    <td>1997. 10. 27 ~ 1998. 07. 21</td>
+                                    <td>53명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>04기</td>
+                                    <td>1996. 10. 15 ~ 1997. 07. 22</td>
+                                    <td>67명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>03기</td>
+                                    <td>1995. 08. 21 ~ 1996. 05. 09</td>
+                                    <td>42명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>02기</td>
+                                    <td>1994. 10. 07 ~ 1995. 03. 24</td>
+                                    <td>82명</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>01기</td>
+                                    <td>1994. 03. 21 ~ 1994. 09. 08</td>
+                                    <td>112명</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜훈련원',
+                    name: '박성호',
+                    phone: '054-630-1615',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
