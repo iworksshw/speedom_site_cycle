@@ -1,0 +1,472 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KBOAT 경정",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경정 라이브러리', '경정 즐겨보기'],
+                    subTitle: '경주권 환급·환불',
+                    subText: '경주권을 구매해서 <b>적중</b>했다면, <br/> <b>경주권 환급을 통해 환급금</b>을 받으세요.',
+                    url: "../../",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        <h2 class="infoTit">경주환급금은 경기에서 베팅이 적중하면 지급되는 금액입니다.</h2>
+                        <p class="info">경주권을 구매하여 적중하면 당첨금을 받게 되는데 이를 "환급금" 이라고 합니다. <br/>
+                            구매한 경주권이 적중하였다면 투표금액에 배당률을 곱한 금액을 환급받게 됩니다.</p>
+                    </div>
+
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">환급안내</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">환불안내</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                    
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <div class="comTitH2">
+                                            <h2>환급금 지급안내</h2>
+                                        </div>
+
+                                        <div class="comBasicTxt">
+                                            <p class="txt">
+                                                환급금은 전산처리를 통해 자동으로 산출되어 적중 경주권에 대한 해당금액을 현금 또는 10만원 이하 구매권으로 교부합니다.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="comTitH2 bk">
+                                            <h2>환급금 지급 일시</h2>
+                                        </div>
+                                        
+                                        <div class="comTitH3">
+                                            <h3>경주일</h3>
+                                        </div>
+                
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">
+                                                매 경주 순위확정 후 발매창구에서 환급 받을 수 있습니다. 신속한 경주권 발매를 위해 발매마감 7분 전부터 다음 경주 발주 전까지는 환급 업무를 수행하지 않습니다.
+                                            </p>
+                                        </div>
+
+                                        <div class="comTitH3">
+                                            <h3>비경주일</h3>
+                                        </div>
+                
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">
+                                                경정장 휴장일을 제외한 비경주일에도 환급이 가능합니다. 적중경주권 · 구매권 시효기간은 발행일로부터 1년입니다.
+                                            </p>
+                                        </div>
+                                        <div class="comTitH3">
+                                            <h3>비경주일 환급</h3>
+                                        </div>
+                
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">
+                                                경정본장(미사리) 관람동 경정서비스팀, 금요일 13:00 ~ 16:00
+                                            </p>
+                                        </div>
+
+                                        <div class="comTitH3">
+                                            <h3>환급 요령</h3>
+                                        </div>
+                                        <div class="comBasicList space">
+                                            <ul class="listGroup">
+                                                <li class="item">적중경주권에 대한 해당금액은 현금 또는 10만원이하 구매권으로 환급 받을 수 있습니다.</li>
+                                                <li class="item">환급을 받으면 반드시 그 자리에서 금액을 확인하시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+            
+                                        <div class="comAddGuide space"> 
+                                            <p class="guide">해당 경주에 적중자가 없는 승식에 대해서는 매출액 중 수득금과 제세를 제외하고 고객에게 환급합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="cptEtcInfo">
+                                    <div class="infoBox">
+                                        <dl class="info">
+                                            <dt>
+                                                <em class="tit">매출액의 일부는 다양한 곳에 사용돼요.</em>
+                                                <span class="subTit">경주 환급금 운영 안내</span>
+                                            </dt>
+                                            <dd>
+                                                <div class="infoList">
+                                                    <ul class="listGroup">
+                                                        <li class="item">
+                                                            환급금은 총 매출액의 72% (단승, 연승식 81%)를 당첨된 팬들에게 각각 구매금액에 비례하여 지급되며, 나머지 28% 중 16%는 각종 세금으로, 12%는 선수상금, 경주운영 등 개최경비와 체육진흥기금, 청소년 육성기금, 지방재정확충 등에 쓰이게 됩니다.
+                                                        </li>
+                                                        <li class="item">
+                                                            환급률이 100배 이상인 경우와 적중한 개별투표당 환급금이 200만원 이상인 경우에는 기타소득세 20%와 주민세 (기타 소득세의 10%)를 원천징수한후 환급금을 지급합니다.
+                                                        </li>
+                                                    </ul>
+                                                </div> 
+                                                
+                                                <div class="comAddGuide"> 
+                                                    <p class="guide">근거:소득세법 제84조(기타소득의 과세최저한)에 의거</p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+            
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <div class="comTitH2 bk">
+                                            <h2>환급금 산출방법</h2>
+                                        </div>
+                                
+                                        <div class="comBasicTxt">
+                                            <p class="txt">
+                                                환급금 산출방식은 모든 승식에 동일하게 적용되며, 발매 중에 산출되는 예상 배당률과 순위판정 이후의 확정배당률에도 구분없이 적용되고, 발매도중 표출되는 예상배당률은 아래 산출과정을 통해 계산된 수치입니다.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="comTitH3">
+                                            <h3>배당률 계산식</h3>
+                                        </div>
+                                        
+                                        <div class="comFomulBox">
+                                            <div class="pcView">
+                                                <img src="../../../images/contents/cont01_01_02_04_001.png" alt="수식: 환급금 총액 / 해당경주권매출액">
+                                            </div>
+                                            <div class="mView">
+                                                <img src="../../../images/contents/cont01_01_02_04_001_m.png" alt="수식: 환급금 총액 / 해당경주권매출액">
+                                            </div>
+                                        </div>
+            
+                                        <div class="comContTable">
+                                            <table class="basic">
+                                                <caption>배당률 계산 표 : 승식과 환급금총액을 포함한 표</caption>
+                                                <colgroup>
+                                                    <col style="width:50%;">
+                                                    <col style="width:50%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th>환급금총액</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>단, 연승식</td>
+                                                        <td>매출액 81%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>복승,쌈승,삼복승식,삼쌍승식,쌍복승식</td>
+                                                        <td>매출액 72%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> 
+
+                                        <div class="comBasicTxt">
+                                            <p class="txt">
+                                                환급금 산출방식은 모든 승식에 동일하게 적용되며, 발매 중에 산출되는 예상 배당률과 순위판정 이후의 확정배당률에도 구분없이 적용되고, 발매 도중 표출되는 예상배당률은 아래 산출과정을 통해 계산된 수치입니다.                                </p>
+                                        </div>
+            
+                                        <div class="comTitH3">
+                                            <h3>기타소득세 과세여부</h3>
+                                        </div>
+                                        
+                                        <div class="comContTable">
+                                            <table class="basic">
+                                                <caption>기타소득세 과세여부 표 : 개별투표당 환급금액, 배당율 100배 이하/초과 항목을 포함한 표</caption>
+                                                <colgroup>
+                                                    <col style="width:33.3333%;">
+                                                    <col style="width:33.3333%;">
+                                                    <col style="width:33.3333%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th>배당률 100배 이하</th>
+                                                        <th>배당률 100배 초과</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>0원~100,000원이하</td>
+                                                        <td>미과세</td>
+                                                        <td>미과세</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>100,100원 ~ 2,000,000원 이하</td>
+                                                        <td>미과세</td>
+                                                        <td>과세</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2,000,100원 이상</td>
+                                                        <td>과세</td>
+                                                        <td>과세</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                        
+                                        <div class="comAddGuide"> 
+                                            <p class="guide">개별 투표당 환급금액이 200만원 이상인 경우 지급명세서 작성</p>
+                                            <p class="guide">지급명세서 관련출처 :  소득세법 제164조(지급명세서 제출), 시행규칙 제97조(제출의무 면제)</p>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="cptQuickMove">
+                                    <div class="boxArea">
+                                        <div class="quickBox">
+                                            <div class="txtArea">
+                                                <em class="point">경주권을 분실한 경우 신고접수하세요</em>
+                                                <p class="desc">도난 되거나 분실된 경주권은 <b>고객센터 > 경륜경정 신고센터 > 분실경주권 신고</b>를 이용해주세요.</p>
+                                            </div>
+                                            <div class="btnArea">
+                                                <a href="#" class="btn Primary">분실경주권 신고하기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabCont">
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <div class="comTitH2">
+                                            <h2>환불안내</h2>
+                                        </div>
+                                        
+                                        <div class="comContTable">
+                                            <div class="pcView">
+                                                <table class="basic">
+                                                    <caption>환불안내 표 : 환불 구분, 내용, 환불 여부를 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:21%;">
+                                                        <col style="width:19%;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:21%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>구분</th>
+                                                            <th colspan="2">내용</th>
+                                                            <th>환불여부</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="left">출주제외</td>
+                                                            <td class="left" colspan="2">대기행동 시 전복, 낙수 등으로 출주제외가 된 경우 또는 출발 시 사전출발(F), 출발지체(L) 된 경우</td>
+                                                            <td class="left">해당 선수 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">투표의 무효</td>
+                                                            <td class="left" colspan="2">
+                                                                <div class="comBasicList">
+                                                                    <ul class="listGroup">
+                                                                        <li class="item">출주한 선수가 1인이거나 없을 때</li>
+                                                                        <li class="item">경주가 성립되지 않았을 때</li>
+                                                                        <li class="item">경주에서 승자가 없었을 때</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                            <td class="left">전승식</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left" rowspan="6">식의 무효</td>
+                                                            <td class="left" colspan="2">경주에 출주한 선수가 2인 이하인 경우</td>
+                                                            <td class="left">연, 복, 쌍, 삼복, 삼쌍승,쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left" colspan="2">경주에 출주한 선수가 3인 이하인 경우</td>
+                                                            <td class="left">연승, 삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left" colspan="2">경주에 출주한 선수가 4인 이하인 경우</td>
+                                                            <td class="left">연승 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left" rowspan="3">5척 이상 정상 출발 했을 때</td>
+                                                            <td class="left">1척도 결승선을 통과하지 않았을 때</td>
+                                                            <td class="left">전승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">1척만 결승선을 통과 했을 때</td>
+                                                            <td class="left">복, 쌍, 삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">2척만 결승선을 통과했을 때</td>
+                                                            <td class="left">삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">실격</td>
+                                                            <td class="left" colspan="2">모터보트가 정상적으로 출발선을 통과 한 후에는 전복, 낙수, 침몰 및 기타 사유로 인해 결승선을 통과하지 못하였다 하더라도 해당 보트와 관련된 경주권은 환불되지 않음. 이런 경우에는 경주규칙에 의거하여 선수는 실격으로 처리되며, 공정차원에서 고의성 등 선수의 책임유무를 엄밀히 조사하여 추후 출전정지 등의 제재를 가하게 됨</td>
+                                                            <td class="left">환불하지 않음</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="mView">
+                                                <table class="basic">
+                                                    <caption>환불안내 표 : 환불 구분, 내용, 환불 여부를 포함한 표</caption>
+                                                    <colgroup>
+                                                        <col style="width:26%;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:26%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>구분</th>
+                                                            <th>내용</th>
+                                                            <th>환불여부</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>출주제외</td>
+                                                            <td class="left">대기행동 시 전복, 낙수 등으로 출주제외가 된 경우 또는 출발 시 사전출발(F), 출발지체(L) 된 경우</td>
+                                                            <td>해당 선수 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>투표의 무효</td>
+                                                            <td class="left">
+                                                                <div class="comBasicList">
+                                                                    <ul class="listGroup">
+                                                                        <li class="item">출주한 선수가 1인이거나 없을 때</li>
+                                                                        <li class="item">경주가 성립되지 않았을 때</li>
+                                                                        <li class="item">경주에서 승자가 없었을 때</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                            <td>전승식</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">식의 무효 (4척 이하 출주시)</td>
+                                                            <td class="left">경주에 출주한 선수가 2인 이하인 경우</td>
+                                                            <td>연, 복, 쌍, 삼복, 삼쌍승,쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">경주에 출주한 선수가 3인 이하인 경우</td>
+                                                            <td>연승, 삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">경주에 출주한 선수가 4인 이하인 경우</td>
+                                                            <td>연승 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">식의 무효 (5척 이하 출발시)</td>
+                                                            <td class="left">1척도 결승선을 통과하지 않았을 때</td>
+                                                            <td>전승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">1척만 결승선을 통과 했을 때</td>
+                                                            <td>복, 쌍, 삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="left">2척만 결승선을 통과했을 때</td>
+                                                            <td>삼복, 삼쌍승, 쌍복승식 환불</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>실격</td>
+                                                            <td class="left">모터보트가 정상적으로 출발선을 통과 한 후에는 전복, 낙수, 침몰 및 기타 사유로 인해 결승선을 통과하지 못하였다 하더라도 해당 보트와 관련된 경주권은 환불되지 않음. 이런 경우에는 경주규칙에 의거하여 선수는 실격으로 처리되며, 공정차원에서 고의성 등 선수의 책임유무를 엄밀히 조사하여 추후 출전정지 등의 제재를 가하게 됨</td>
+                                                            <td>환불하지 않음</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div class="cptEtcInfo">
+                                    <div class="infoBox">
+                                        <dl class="info">
+                                            <dt>
+                                                <em class="tit">놓치지 마세요!</em>
+                                                <span class="subTit">경주권 유의사항</span>
+                                            </dt>
+                                            <dd>
+                                                <div class="infoList">
+                                                    <ul class="listGroup">
+                                                        <li class="item">정상적으로 스타트하여 경주중 발생한 사고에 대하여는 환불이 되지 않습니다.</li>
+                                                        <li class="item">심의 경주 또한 경주중에 발생한 사고로 환불은 되지 않음을 말씀드립니다.</li>
+                                                        <li class="item">경주권이 손상 되어 원형을 식별하지 못하는 경우는 환불이 불가능 하오니 보관에 주의가 필요합니다.</li>
+                                                    </ul>
+                                                </div> 
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                    
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경정서비스팀',
+                    name: '최성욱',
+                    phone: '02-790-8404',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
