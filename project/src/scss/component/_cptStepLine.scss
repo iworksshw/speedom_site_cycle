@@ -1,0 +1,81 @@
+.cptStepLine {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+
+    .stepGroup {
+        .stepItem { 
+            width: calc(100% - 22px); border-left: 2px dashed var(--Gray-300); margin-left: 22px; padding: 56px 0 60px 40px; position: relative;
+            &:last-child {border-left: none;}
+
+            .stepTit {
+                display: flex; position: absolute; top: 0; left: -18px; z-index: 9;
+                .num {width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-size: rem(16px); color: #fff; font-weight: 700; background: var(--Point-Blue); display: inline-block; vertical-align: middle;}
+                .tit {margin-left: 20px; font-size: rem(24px); color: var(--Gray-800); font-weight: 700;}
+            }
+
+            .stepCont {
+                padding: 24px 32px; border-radius: 12px; background: var(--Bg-Line-bg-100);
+                .txt {font-size: rem(16px); color: var(--Gray-800);}
+                .subTit {
+                    margin-top: 24px; font-size: rem(18px); font-weight: 700; color: var(---Primary);
+                    &:first-child {margin-top:0;}
+                }
+                .listGroup {
+                    margin-top:12px;
+                    &:first-child {margin-top:0;}
+                    .item {
+                        margin-top: 8px; padding-left: 11px; font-size: rem(16px); color: var(--Gray-800); text-align: left; position: relative; word-break: keep-all;
+                        em {font-weight: 600;}
+                        .adds {color: var(--Point-Blue2); font-weight: 500;}
+                        &:first-child {margin-top: 0;}
+                        &::after {display: block; content: ""; width: 3px; height: 3px; background: var(--Gray-400); position: absolute; left: 0; top: 10px;}
+                    }
+
+                    &.contTit {
+                        .item {
+                            display: flex; column-gap: 3px;
+                            .tit {font-weight: 700;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+    
+        .stepGroup {
+            .stepItem { 
+                width: 100%; border-left: none; margin-left: 0; padding: 0; margin-bottom: 40px;
+                &:last-child {margin-bottom: 0;}
+    
+                .stepTit {
+                    margin-bottom: 12px; display: flex; position: static; 
+                    .num {width: 32px; height: 32px; margin: 0 4px; line-height: 32px; font-size: rem(15px);}
+                    .tit {margin-left: 8px; font-size: rem(20px);}
+                }
+    
+                .stepCont {
+                    padding: 16px 20px;
+                    .txt {font-size: rem(15px);}
+                    .subTit {
+                        margin-top: 10px; font-size: rem(16px); 
+                    }
+                    .listGroup {
+                        margin-top:8px;
+                        .item {
+                            font-size: rem(15px);
+                        }
+    
+                        &.contTit {
+                            .item {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

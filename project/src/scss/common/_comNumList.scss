@@ -11,6 +11,20 @@
             .number {width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--Gray-300); margin-right: 6px; text-align: center; line-height: 17px; font-size: rem(11px); color: var(--Gray-600); font-weight: 700; line-height: 1.6; display: inline-block; vertical-align: middle; flex: 0 0 auto;}
             .txt {margin-top: -4px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; display: inline-block; vertical-align: middle;}
             &.space {padding-left: 22px;margin-top: 0;}
+            .addList {
+                @extend .comBasicList;
+                width: 100%; margin-top: 8px;
+                .item {
+                    display: block; padding-left: 23px;
+                    &::after {left: 12px;}
+                    .orderList {padding-left: 2px; margin-bottom: 10px;}
+                }
+                & > .orderList {margin-top: 0;}
+            }
+            &:has(.addList) {
+                flex-wrap: wrap;
+                .txt {width: calc(100% - 24px);}
+            }
         }
     }
     .orderedList {
