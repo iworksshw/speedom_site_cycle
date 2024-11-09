@@ -44,6 +44,11 @@
         margin-bottom:8px; flex-wrap: wrap; flex-direction: column-reverse;
         .alignR {
             padding: 0 0 20px; justify-content: flex-start;
+            &:first-child:last-child {
+                .opList {
+                    margin-top: 0;
+                }
+            }
         }
         .unit {
             .text {font-size:rem(15px);}

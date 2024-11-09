@@ -1,7 +1,8 @@
 .comTitH2 {
     margin-top: 40px;display: flex; align-items: center;
     &:first-child {margin-top: 0;} 
-    .mgH60 {margin-top: 60px;}
+    &.mgH60 {margin-top: 60px;}
+    &.mgH80 {margin-top: 80px;}
     h2 {font-size: rem(24px); color: var(---Primary); font-weight: 700; line-height: 1.4; word-break: keep-all;}
     .etcAdds {margin-left: 16px; font-size: rem(18px); color: var(--Gray-800); align-self: flex-end;}
     .rightTxt {margin-left: 20px; font-size: rem(16px); font-weight: 300; line-height: 1.5; color: var(--Gray-600);}
@@ -38,7 +39,8 @@
 
     @include media("mobile"){
         margin-top: 24px;
-        .mgH60 {margin-top: 40px;}
+        &.mgH60 {margin-top: 40px;}
+        &.mgH80 {margin-top: 60px;}
         h2 {font-size: rem(20px);}
         .etcAdds {font-size: rem(16px);}
         .right {
