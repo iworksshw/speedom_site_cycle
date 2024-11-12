@@ -51,9 +51,11 @@
 							<div class="subTitle">
 								<h1>나의 모의베팅</h1>
                                 <div class="right">
-                                    2024년 9월 2주
-                                    <button type="button">이전</button>
-                                    <button type="button">다음</button>
+                                    <div class="selectDate">
+										<div class="val">2024년 9월 2주</div>
+										<button type="button" class="prev">이전</button>
+										<button type="button" class="next">다음</button>
+									</div>
                                 </div>
 							</div>
                         </div>
@@ -64,13 +66,13 @@
                             <div class="total">
                                 <div class="item">현재 보유 활동지수
                                     <div class="comTooltip">
-                                        <button type="button" class="popIcon tipBtn" onclick="openPopup('carrer2')">팝업 열기</button>
+                                        <button type="button" class="popIcon tipBtn" onclick="openPopup('tip1')">팝업 열기</button>
 
-                                        <div class="comInfoLayerPop" id="carrer2">
+                                        <div class="comInfoLayerPop" id="tip1">
                                             <div class="popWrap">
                                                 <div class="popHead">
                                                     <div class="popTit"></div>
-                                                    <button type="button" class="popClose" onclick="closePopup('carrer2')">팝업 닫기</button>
+                                                    <button type="button" class="popClose" onclick="closePopup('tip1')">팝업 닫기</button>
                                                 </div>
                                                 <div class="popBody" style="height: auto;">
                                                     <div class="comBasicTxt">
@@ -99,7 +101,26 @@
 									<span class="val">123,456 <i class="unit">개</i></span>
 								</li>
 								<li>
-									<span class="item">나의 적중률</span>
+									<span class="item">나의 적중률
+										<div class="comTooltip">
+											<button type="button" class="popIcon tipBtn" onclick="openPopup('tip2')">팝업 열기</button>
+	
+											<div class="comInfoLayerPop" id="tip2">
+												<div class="popWrap">
+													<div class="popHead">
+														<div class="popTit"></div>
+														<button type="button" class="popClose" onclick="closePopup('tip2')">팝업 닫기</button>
+													</div>
+													<div class="popBody" style="height: auto;">
+														<div class="comBasicTxt">
+															<p class="txt"><em>나의 적중률</em></p>
+															<p class="txt">내용 없음</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</span>
 									<span class="val">99.99 <i class="unit">%</i></span>
 								</li>
 							</ul>
