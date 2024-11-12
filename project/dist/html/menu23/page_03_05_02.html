@@ -478,12 +478,12 @@
             <li class="item"><a href="#">홈</a></li>
             <li class="item"><a href="#">경정선수</a></li>
             
-            <li class="item"><a href="#">선수현황</a></li>
+            <li class="item"><a href="#">순위정보</a></li>
             
             
         </ul>
-        <div class="subTitle"><h1>연도별 주선보류현황</h1></div>
-        <div class="subText"><p>경정선수의 <b>주선보류현황</b>을 <br>알려드려요.</p></div>
+        <div class="subTitle"><h1>다승순위</h1></div>
+        <div class="subText"><p>1,2,3착 기준으로 산출한 <br><b>다승 순위</b>에 대해 알려드려요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -500,57 +500,224 @@
 
 					<div class="cptSection">
 						<div class="sectArea">
-                            <!-- 게시판 리스트 상단 -->
-                            <div class="comGroupTop">
-                                <div class="alignR">
-                                    <ul class="opList">
-                                        <li class="item">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt sm">
-                                                        <option value="">2024</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-							<div class="comDataTable mt0">
-								<div class="tableArea sizeM">
+							<div class="comTitH2 mRow">
+								<h2>경정선수 다승순위</h2>
+								<div class="right">
+									<div class="frmBox">
+										<select class="iptSlt">
+											<option value="">2024년</option>
+											<option value="">드롭다운</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="comDataTable">
+								<div class="tableArea sizeXL">
 									<table>
 										<caption></caption>
 										<colgroup>
-											<col style="width:13.5%;">
-											<col style="width:24%;">
-											<col style="width:20%;">
-											<col style="width:13.5%;">
+											<col style="width:5.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
+											<col style="width:7.1428%;">
 											<col style="width:auto;">
+											<col style="width:auto;">
+											<col style="width:5.1428%;">
+											<col style="width:5.1428%;">
 										</colgroup>
 										<thead>
 											<tr>
-                                                <th>No</th>
-												<th>주선제외기간</th>
-												<th>결장선수</th>
-												<th>구분</th>
-												<th>주선제외 사유</th>
+                                                <th>순위</th>
+                                                <th>선수명</th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">등급</button></th><!-- class="sortIco up" title="오름차순으로 정렬" -->
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">출주횟수</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">1착횟수</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">2착횟수</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">3착횟수</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">승률</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">연대율</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">삼연대율</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">평균득점(6회)</button></th>
+                                                <th><button type="button" class="sortIco" title="내림차순으로 정렬">평균득점(전체)</button></th>
+                                                <th>F</th>
+                                                <th>L</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>1</td>
-												<td>20240101 ~ 20240114</td>
-												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기 02-019</a></td>
-												<td>성적불량</td>
-                                                <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.82)</td>
+                                                <td>1</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
 											</tr>
+											<tr>
+												<td>2</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>3</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>4</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>5</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>6</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>7</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>8</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>9</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<tr>
+												<td>10</td>
+                                                <td>심상철</td>
+                                                <td>A1</td>
+                                                <td>58</td>
+                                                <td>34</td>
+                                                <td>9</td>
+                                                <td>8</td>
+                                                <td>58.6%</td>
+                                                <td>74.1%</td>
+                                                <td>87.9%</td>
+                                                <td>8.1</td>
+                                                <td>8.034483</td>
+                                                <td>0</td>
+                                                <td>0</td>
+											</tr>
+											<!-- 순위 리스트는 50개로 노출 -->
 										</tbody>
 									</table>
 								</div>
 							</div>
-
+					
 							<!-- 페이징 -->
 							<div class="comPaging">
 								<a class="start" href="#"></a>
@@ -565,62 +732,7 @@
 								<a class="next" href="#"></a>
 								<a class="end" href="#"></a>
 							</div>
-                        </div>
-                    </div>
 
-                    <!-- 선수별 주선보류현황 팝업 -->
-                    <div id="raceResult01" class="modPopup lg on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupInMotion">
-                                <div class="popupContainer">
-                                    <div class="popupContArea">
-                                        <button class="btnPopClose" onclick="closePopup('raceResult01');">닫기</button>
-                                        <div class="popTitle">선수별 주선보류현황</div>
-                                        <div class="popCont">
-                                            <!-- 팝업 컨텐츠 영역 -->
-                                            <div class="cptSection">
-                                                <div class="sectArea">
-                                                    <div class="comTitH2">
-                                                        <h2>김태영 선수(15-005) 주선보류현황</h2>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea sizeM">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:13.5%;">
-                                                                    <col style="width:24%;">
-                                                                    <col style="width:20%;">
-                                                                    <col style="width:auto;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>번호</th>
-                                                                        <th>주선보류기간</th>
-                                                                        <th>구분</th>
-                                                                        <th>주선보류 사유</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>20240701 ~ 20240714</td>
-                                                                        <td>성적불량</td>
-                                                                        <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.66)</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //팝업 컨텐츠 영역 -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 					
