@@ -1,0 +1,316 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KBOAT 경정",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경정선수', '상금정보'],
+                    subTitle: '상금 지급 정보',
+                    subText: '<b>선수 상금 지급 정보</b>에 <br>대해 알려드려요.',
+                    url: "../../",
+                    visualClass: "bg03",
+                }) %>
+                
+
+                <div class="layoutContArea">
+					
+					<div class="comSubInfo">
+						<h2 class="infoTit">경정 선수는 매 경기마다 순위에 따라 상금을 지급받으며 경기의 등급과 경기 규모에 따라 상금의 지급액이 달라집니다.</h2>
+						<p class="info">경기의 상금 규모는 일반경주와 대상경주, 특선경주에 따라 다르며 등급과 순위에 따라 상금 지급액이 결정됩니다.</p>
+					</div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>일반경주 상금 지급액</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
+							
+                            <div class="comDataTable both">
+								<div class="tableArea sizeM">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col style="width:auto;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="bdrBold">구분</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <th>일반</th>
+                                                <td>1,280,000</td>
+                                                <td>1,010,000</td>
+                                                <td>810,000</td>
+                                                <td>610,000</td>
+                                                <td>465,000</td>
+                                                <td>290,000</td>
+											</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>이벤트경주 및 회차・특별・대상 특선경주 상금 지급액</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
+							
+                            <div class="comDataTable both">
+								<div class="tableArea sizeM">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col style="width:auto;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="bdrBold">구분</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <th>이벤트 및 특선</th>
+                                                <td>1,500,000</td>
+                                                <td>1,200,000</td>
+                                                <td>900,000</td>
+                                                <td>700,000</td>
+                                                <td>530,000</td>
+                                                <td>310,000</td>
+											</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="comAddGuide point">
+                                <p class="guide">예선전, 준결승, 결승일 동일</p>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>이사장배 및 그랑프리 특선경주</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
+							
+                            <div class="comDataTable both">
+								<div class="tableArea sizeM">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col style="width:auto;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="bdrBold">구분</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <th>일반</th>
+                                                <td>1,900,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,200,000</td>
+                                                <td>800,000</td>
+                                                <td>600,000</td>
+                                                <td>400,000</td>
+											</tr>
+											<tr>
+                                                <th>결승일</th>
+                                                <td>2,500,000</td>
+                                                <td>2,000,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,100,000</td>
+                                                <td>900,000</td>
+                                                <td>600,000</td>
+											</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="cptSection">
+						<div class="sectArea">
+							<div class="comTitH2">
+								<h2>결승경주</h2>
+								<div class="right">
+									<p>(단위 : 원)</p>
+								</div>
+							</div>
+							
+                            <div class="comDataTable both">
+								<div class="tableArea sizeM">
+									<table>
+										<caption></caption>
+										<colgroup>
+											<col style="width:auto;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+											<col style="width:14.2857%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="bdrBold">구분</th>
+												<th>1위</th>
+												<th>2위</th>
+												<th>3위</th>
+												<th>4위</th>
+												<th>5위</th>
+												<th>6위</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+                                                <th>여왕전 신인왕전</th>
+                                                <td>5,000,000</td>
+                                                <td>3,000,000</td>
+                                                <td>2,000,000</td>
+                                                <td>1,500,000</td>
+                                                <td>1,300,000</td>
+                                                <td>1,000,000</td>
+											</tr>
+                                            <tr>
+                                                <th>언론사배 쿠리하라배</th>
+                                                <td>10,000,000</td>
+                                                <td>7,000,000</td>
+                                                <td>5,000,000</td>
+                                                <td>3,500,000</td>
+                                                <td>2,500,000</td>
+                                                <td>2,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>이사장배</th>
+                                                <td>15,000,000</td>
+                                                <td>10,000,000</td>
+                                                <td>7,000,000</td>
+                                                <td>5,000,000</td>
+                                                <td>4,000,000</td>
+                                                <td>3,000,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>그랑프리</th>
+                                                <td>30,000,000</td>
+                                                <td>20,000,000</td>
+                                                <td>14,000,000</td>
+                                                <td>10,000,000</td>
+                                                <td>9,000,000</td>
+                                                <td>7,000,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                </div>
+				
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경정기획팀',
+                    name: '전정린',
+                    phone: '031-790-8305',
+                    url: "../../",
+                }) %>
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

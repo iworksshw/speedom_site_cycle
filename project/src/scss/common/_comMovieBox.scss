@@ -18,6 +18,16 @@
                 }
             }
         }
+
+        &.gap {
+            border-radius: 0; padding: 0; background: none;
+            .movieList {
+                gap: 16px; flex-wrap: wrap;
+                .movieItem {
+                    flex: none; width: calc(33.3333% - 11px); padding: 20px 32px; border-right: none;  background: #f0faf7; border-radius: 12px;
+                }
+            }
+        }
     }
 
     @include media("mobile"){
@@ -36,10 +46,23 @@
                     }
                 }
             }
+
+            &.gap {
+                .movieList {
+                    gap: 16px 0;
+                    .movieItem {
+                        width: 100%; padding: 24px;
+                        a {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
         }
     }
 
     // 간격 예외
+    .comTitH2 + &,
     .comTitH3 + & {
         margin-top: 20px;
         @include media("mobile"){

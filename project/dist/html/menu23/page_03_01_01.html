@@ -478,12 +478,10 @@
             <li class="item"><a href="#">홈</a></li>
             <li class="item"><a href="#">경정선수</a></li>
             
-            <li class="item"><a href="#">선수현황</a></li>
-            
             
         </ul>
-        <div class="subTitle"><h1>연도별 주선보류현황</h1></div>
-        <div class="subText"><p>경정선수의 <b>주선보류현황</b>을 <br>알려드려요.</p></div>
+        <div class="subTitle"><h1>선수조회</h1></div>
+        <div class="subText"><p>선수 프로필 · 경주별 기록 등을 <br><b>상세한 선수의 정보</b>를 조회할 수 있습니다.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -497,130 +495,710 @@
                 
 
                 <div class="layoutContArea">
+                    
+                    <div class="cptWordFilter">
+                        <div class="sectArea">
+                            <div class="btnArea">
+                                <ul class="btnGroup">
+                                    <li class="btnItem">
+                                        <button type="button" class="btn Primary">전체</button> <!--선택 탭 class : Primary-->
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄱ</button> 
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄴ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㄷ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㄹ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine" disabled>ㅁ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅂ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅅ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅇ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅈ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅊ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅋ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅌ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅍ</button>
+                                    </li>
+                                    <li class="btnItem">
+                                        <button type="button" class="btn gLine">ㅎ</button>
+                                    </li>
+                                </ul>
+                            </div>
 
-					<div class="cptSection">
-						<div class="sectArea">
-                            <!-- 게시판 리스트 상단 -->
-                            <div class="comGroupTop">
-                                <div class="alignR">
-                                    <ul class="opList">
-                                        <li class="item">
+                            <div class="comSearchBox">
+                                <div class="searchLine col2">
+                                    <dl class="condition">
+                                        <dt class="title">등급</dt>
+                                        <dd class="conBox">
                                             <div class="frmGroup">
                                                 <div class="frmBox">
-                                                    <select class="iptSlt sm">
-                                                        <option value="">2024</option>
+                                                    <select class="iptSlt">
+                                                        <option value="">전체</option>
                                                         <option value="">드롭다운</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </dd>
+                                    </dl>
+                                    <dl class="condition">
+                                        <dt class="title">기수</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">전체</option>
+                                                        <option value="">드롭다운</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchLine">
+                                    <dl class="condition">
+                                        <dt class="title">검색어</dt>
+                                        <dd class="conBox">
+                                            <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <input type="text" class="iptText" placeholder="선수번호, 선수명으로 검색하세요.">
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <button class="btn Primary search">검색</button>
                                 </div>
                             </div>
-                            
-							<div class="comDataTable mt0">
-								<div class="tableArea sizeM">
-									<table>
-										<caption></caption>
-										<colgroup>
-											<col style="width:13.5%;">
-											<col style="width:24%;">
-											<col style="width:20%;">
-											<col style="width:13.5%;">
-											<col style="width:auto;">
-										</colgroup>
-										<thead>
-											<tr>
-                                                <th>No</th>
-												<th>주선제외기간</th>
-												<th>결장선수</th>
-												<th>구분</th>
-												<th>주선제외 사유</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>20240101 ~ 20240114</td>
-												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기 02-019</a></td>
-												<td>성적불량</td>
-                                                <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.82)</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<!-- 페이징 -->
-							<div class="comPaging">
-								<a class="start" href="#"></a>
-								<a class="prev" href="#"></a>
-								<ul class="numList">
-									<li><a href="#">1</a></li>
-									<li class="on"><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-								</ul>
-								<a class="next" href="#"></a>
-								<a class="end" href="#"></a>
-							</div>
                         </div>
                     </div>
 
-                    <!-- 선수별 주선보류현황 팝업 -->
-                    <div id="raceResult01" class="modPopup lg on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupInMotion">
-                                <div class="popupContainer">
-                                    <div class="popupContArea">
-                                        <button class="btnPopClose" onclick="closePopup('raceResult01');">닫기</button>
-                                        <div class="popTitle">선수별 주선보류현황</div>
-                                        <div class="popCont">
-                                            <!-- 팝업 컨텐츠 영역 -->
-                                            <div class="cptSection">
-                                                <div class="sectArea">
-                                                    <div class="comTitH2">
-                                                        <h2>김태영 선수(15-005) 주선보류현황</h2>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea sizeM">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:13.5%;">
-                                                                    <col style="width:24%;">
-                                                                    <col style="width:20%;">
-                                                                    <col style="width:auto;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>번호</th>
-                                                                        <th>주선보류기간</th>
-                                                                        <th>구분</th>
-                                                                        <th>주선보류 사유</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>20240701 ~ 20240714</td>
-                                                                        <td>성적불량</td>
-                                                                        <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.66)</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //팝업 컨텐츠 영역 -->
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="cptPersonList">
+                        <div class="sectArea">
+                            <div class="listTit">
+                                <h2>ㄱ</h2>
                             </div>
+
+                            <ul class="prsnList">
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <!-- to Dev : 이미지 자료 없을 시에는 하단의 basic 이미지가 들어가도록 해주세요 -->
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span> <!--기본 gray / class : 'blue', 'mint', 'orange'-->
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/thum/thum_person_list.png" alt="선수 강동국 사진">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate mint">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate orange">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="listTit">
+                                <h2>ㄴ</h2>
+                            </div>
+
+                            <ul class="prsnList">
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <!-- to Dev : 이미지 자료 없을 시에는 하단의 basic 이미지가 들어가도록 해주세요 -->
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/thum/thum_person_list.png" alt="선수 강동국 사진">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate mint">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate orange">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="prsnItem">
+                                    <a href="#" class="prsn">
+                                        <div class="thumWrap">
+                                            <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
+                                        </div>
+                                        <div class="txtWrap">
+                                            <b class="name">강동국</b>
+                                            <div class="cateGroup">
+                                                <span class="cate blue">A1</span>
+                                                <span class="cate">06기</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 					
