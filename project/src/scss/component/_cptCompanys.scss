@@ -16,7 +16,7 @@
                 dd {
                     min-width: 355px; display: flex; gap: 0 40px; flex-wrap: wrap; justify-content: flex-start; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 500; flex: 0 1 auto;
                     .person {padding-left: 24px; background: url(../../images/common/ic_16_person.svg) left 5px no-repeat;}
-                    .number {padding-left: 24px; background: url(../../images/common/ic_16_number.svg) left 5px no-repeat;}
+                    .number {padding-left: 24px; background: url(../../images/common/ic_16_number.svg) left 5px no-repeat; text-align: right;}
                 }
             }
         }
@@ -35,7 +35,13 @@
                     }
                     dd {
                         min-width: auto; gap: 4px 0; justify-content: flex-start; font-size: rem(15px); flex: 0 0 100%;
-                        & > div {width: 100%;}
+                        & > div {
+                            width: 100%;
+                            &.number {
+                                text-align: left;
+                                br {display: none;}
+                            }
+                        }
                     }
                 }
             }

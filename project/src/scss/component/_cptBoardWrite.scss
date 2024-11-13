@@ -8,10 +8,16 @@
 
     //조건
     .comFormTable {
-        .tableTop {margin-bottom: 12px;}
+        .tableTop {
+            margin-bottom: 12px;
+            .normalTxt + .btnBox {margin-left: 12px;}
+        }
         
         .tableArea {
             border-top: 1px solid var(--Bg-Line-line-100);
         }
+    }
+    @include media('mobile') {
+        .comFormTable .tableTop .alignR {justify-content: flex-end;}
     }
 }
