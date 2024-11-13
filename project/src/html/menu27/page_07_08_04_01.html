@@ -1,0 +1,145 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객광장', '경륜경정신고센터'],
+                    subTitle: '불법 사이트 신고',
+                    subText: '모두가 즐기고 지킬 수 있는<br class="mView"> <b>건강한 레저문화</b>를 위해<br><b>경륜·경정 신고센터</b>가<br class="mView"> 함께 합니다.',
+                    url: "../../",
+                    visualClass: "bg05",
+                }) %>
+
+                <div class="layoutContArea">
+                    <div class="cptReportingReceipt">
+                        <div class="sectArea">
+                            <div class="comTitH2">
+                                <h2>신고접수안내</h2>
+                            </div>
+                            <div class="comBasicTxt">
+                                <p class="txt">신고접수는 방문, 전화(유선), 팩스, 이메일, 온라인으로 신고가 가능합니다.</p>
+                            </div>
+
+                            <div class="receiptList">
+                                <ul>
+                                    <li>
+                                        <div class="comTitH3">
+                                            <h3>전화</h3>
+                                        </div>
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">경륜·경정 불법신고센터 : 1899-0707</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="comTitH3">
+                                            <h3>방문</h3>
+                                        </div>
+                                        <div class="comBasicList space">
+                                            <ul class="listGroup">
+                                                <li class="item">
+                                                    <b class="lineTit">경륜</b>
+                                                    <i class="lineTxt"> : 경기도 광명시 광명로 721, 2층 경륜경정불법신고센터</i>
+                                                </li>
+                                                <li class="item">
+                                                    <b class="lineTit">경정</b>
+                                                    <i class="lineTxt"> : 경기도 하남시 미사대로 505, 관람동 1층 외곽(외4문) 경륜경정불법신고센터</i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="comTitH3">
+                                            <h3>팩스</h3>
+                                        </div>
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">02-2067-5267</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="comTitH3">
+                                            <h3>이메일</h3>
+                                        </div>
+                                        <div class="comBasicTxt space">
+                                            <p class="txt">singo@kspo.or.kr</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="cptQuickMove">
+                                <div class="boxArea">
+                                    <div class="quickBox">
+                                        <div class="txtArea">
+                                            <em class="point">온라인 신고하기</em>
+                                            <p class="desc">경륜·경정 홈페이지에서도 부정·불법신고가 가능합니다.</p>
+
+                                            <div class="comAddGuide point">
+                                                <p class="guide">팩스, 이메일, 온라인의 경우 첨부된 신고접수 양식을 작성하셔서 보내주세요.</p>
+                                            </div>
+                                        </div>
+                                        <div class="btnArea multiBtn">
+                                            <button type="button" class="btn gLine download"><span>신고서 다운로드</span></button>
+                                            <a href="#" class="btn Primary"><span>온라인 신고서 작성하기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '이욱',
+                    phone: '02-2067-5802',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
