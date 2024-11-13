@@ -1,0 +1,292 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytMypage">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 마이페이지 LNB -->
+				<div class="layoutLnbArea">
+					<div class="lnbArea">
+						<h1 class="lnbTit">마이페이지</h1>
+						<ul class="lnbMenu">
+							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 게시글</span></a></li>
+							<li><a href="#"><span>나의 스크랩</span></a></li>
+							<li><a href="#"><span>내알림</span></a></li>
+							<li><a href="#"><span>내정보 수정</span></a></li>
+							<li><a href="#"><span>회원탈퇴</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
+                    <div class="cptSubTop">
+                        <div class="subTopArea">
+                            <ul class="location">
+                                <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
+                            </ul>
+							<div class="subTitle">
+								<h1>나의 모의베팅</h1>
+                                <div class="right">
+                                    <div class="selectDate">
+										<div class="val">2024년 9월 2주</div>
+										<button type="button" class="prev">이전</button>
+										<button type="button" class="next">다음</button>
+									</div>
+                                </div>
+							</div>
+                        </div>
+                    </div>
+
+					<div class="cptDataSum">
+						<div class="dataSum totalSum mRow">
+                            <div class="total">
+                                <div class="item">현재 보유 활동지수
+                                    <div class="comTooltip">
+                                        <button type="button" class="popIcon tipBtn" onclick="openPopup('tip1')">팝업 열기</button>
+
+                                        <div class="comInfoLayerPop" id="tip1">
+                                            <div class="popWrap">
+                                                <div class="popHead">
+                                                    <div class="popTit"></div>
+                                                    <button type="button" class="popClose" onclick="closePopup('tip1')">팝업 닫기</button>
+                                                </div>
+                                                <div class="popBody" style="height: auto;">
+                                                    <div class="comBasicTxt">
+                                                        <p class="txt"><em>활동지수란?</em></p>
+                                                        <p class="txt">활동지수는 사이트 내 활동을 통해 얻을 수 있는 마일리지를 뜻해요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="val">2,000,000 <i class="unit">P</i></div>
+                            </div>
+                            
+							<ul class="inner">
+								<li>
+									<span class="item">나의 랭킹</span>
+									<span class="val">1,223 <i class="unit">위</i></span>
+								</li>
+								<li>
+									<span class="item">획득한 활동지수</span>
+									<span class="val">123,456 <i class="unit">P</i></span>
+								</li>
+								<li>
+									<span class="item">참여한 경주수</span>
+									<span class="val">123,456 <i class="unit">개</i></span>
+								</li>
+								<li>
+									<span class="item">나의 적중률
+										<div class="comTooltip">
+											<button type="button" class="popIcon tipBtn" onclick="openPopup('tip2')">팝업 열기</button>
+	
+											<div class="comInfoLayerPop" id="tip2">
+												<div class="popWrap">
+													<div class="popHead">
+														<div class="popTit"></div>
+														<button type="button" class="popClose" onclick="closePopup('tip2')">팝업 닫기</button>
+													</div>
+													<div class="popBody" style="height: auto;">
+														<div class="comBasicTxt">
+															<p class="txt"><em>나의 적중률</em></p>
+															<p class="txt">내용 없음</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</span>
+									<span class="val">99.99 <i class="unit">%</i></span>
+								</li>
+							</ul>
+						</div>
+                    </div>
+
+					<div class="cptDataList">
+						<div class="comTabData">
+							<div class="tabMenuGroup tabDataSwiper">
+								<ul class="tabMenu swiper-wrapper">
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName on">전체</button>
+									</li>
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName">구매</button>
+									</li>
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName">환급</button>
+									</li>
+									<li class="tabItem swiper-slide">
+										<button type="button" class="tabName">기타</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<ul class="dataListBox">
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[부산01] 삼복승 2-4-5</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">이벤트 적립</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+500 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[부산01] 삼복승 2-4-5</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+						<!-- 페이징 -->
+						<div class="comPaging">
+							<a class="start" href="#"></a>
+							<a class="prev" href="#"></a>
+							<ul class="numList">
+								<li><a href="#">1</a></li>
+								<li class="on"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+							</ul>
+							<a class="next" href="#"></a>
+							<a class="end" href="#"></a>
+						</div>
+					</div>
+					
+				</div>
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

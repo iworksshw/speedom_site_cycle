@@ -1,0 +1,1932 @@
+<!-- Header -->
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>KCYCLE 경륜</title>
+
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/style.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../../common/js/swiper.min.js"></script>
+	<script src="../../common/js/common.js"></script>
+	<!--
+    <script src="../common/js/basic.js"></script>
+    -->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+                
+                <!-- 모의베팅 윈도우 팝업 -->
+                <div class="cptBatSimul">
+                    <!-- 팝업 헤더 -->
+                    <div class="smlHead">
+                        <h1 class="headTit">
+                            <img src="../../images/common/logo_kcycle_w.svg" alt="KCYCLE">
+                            <span class="txt">모의베팅</span>
+                        </h1>
+                    </div>
+
+                    <!-- 컨텐츠 영역 -->
+                    <div class="smlCont">
+                        
+                        <div class="noticeArea">
+                            <p class="notice">매월 1일~말일까지 적립한 활동지수는 익월 1일 초기화 됩니다. </p>
+                        </div>
+
+                        <!-- 개요 -->
+                        <div class="smryArea">
+                            <div class="smryBox">
+                                <div class="userData">
+                                    <div class="userName">
+                                        <em class="name">홍길동</em>님,<br/>모의베팅에 참여해보세요!
+                                    </div>
+                                    <div class="userPoint">
+                                        <h2>나의 활동지수 <button type="button" class="tooltip" onclick="ttOpen('tooltip01')">이용안내 툴팁</button> </h2>
+                                        <em class="point">12,345,678 P</em>
+                                        <button type="button" class="btnReload">지수 새로고침</button>
+                                        
+                                        <div class="tooltipBox" id="tooltip01"> <!--class 'on' : 툴팁 오픈 -->
+                                            <button type="button" class="btnClose" onclick="ttClose('tooltip01')">툴팁 닫기</button>
+                                            <p class="txt">활동지수는 사이트내 활동을 통해 얻을 수 있습니다. <button type="button" class="btnMore" onclick="openPopup('infoActivity');">자세히보기</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="userRecord">
+                                    <!-- 주간 기록 스와이퍼 -->
+                                    <div class="swiper rcrdSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="rcrdWeek">2024년 9월 2주</div>
+                                                <ul class="rcrdGroup">
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 랭킹</dt>
+                                                            <dd>1,234위</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>획득한 활동지수</dt>
+                                                            <dd>123,456P</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>참여한 경주수</dt>
+                                                            <dd>123,456</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 적중률 <button type="button" class="tooltip" onclick="ttOpen('tooltip02')">이용안내 툴팁</button></dt>
+                                                            <dd>99.99%</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rcrdWeek">2024년 9월 3주</div>
+                                                <ul class="rcrdGroup">
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 랭킹</dt>
+                                                            <dd>1,234위</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>획득한 활동지수</dt>
+                                                            <dd>123,456P</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>참여한 경주수</dt>
+                                                            <dd>123,456</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 적중률 <button type="button" class="tooltip" onclick="ttOpen('tooltip02')">이용안내 툴팁</button></dt>
+                                                            <dd>99.99%</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rcrdWeek">2024년 9월 4주</div>
+                                                <ul class="rcrdGroup">
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 랭킹</dt>
+                                                            <dd>1,234위</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>획득한 활동지수</dt>
+                                                            <dd>123,456P</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>참여한 경주수</dt>
+                                                            <dd>123,456</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 적중률 <button type="button" class="tooltip" onclick="ttOpen('tooltip02')">이용안내 툴팁</button></dt>
+                                                            <dd>99.99%</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="rcrdWeek">2024년 10월 1주</div>
+                                                <ul class="rcrdGroup">
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 랭킹</dt>
+                                                            <dd>1,234위</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>획득한 활동지수</dt>
+                                                            <dd>123,456P</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>참여한 경주수</dt>
+                                                            <dd>123,456</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li class="rcrdItem">
+                                                        <dl class="rcrd">
+                                                            <dt>나의 적중률 <button type="button" class="tooltip" onclick="ttOpen('tooltip02')">이용안내 툴팁</button></dt>
+                                                            <dd>99.99%</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rcrdNavi">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+
+                                    <div class="rcrdLink">
+                                        <a href="#" target="_blank" title="새창열림" class="hotlink">내역보기</a>
+                                    </div>
+                                    
+                                    <div class="tooltipBox" id="tooltip02"> <!--class 'on' : 툴팁 오픈 -->
+                                        <button type="button" class="btnClose" onclick="ttClose('tooltip02')">툴팁 닫기</button>
+                                        <p class="txt">적중한 베팅건수를 참여한 총 베팅 건수로 나누어 백분율로 나타낸 것입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rankingBox">
+                                <h2 class="rankTit">
+                                    <div class="titArea">모의베팅 랭킹 <button type="button" class="tooltip"  onclick="ttOpen('tooltip03')">이용안내 툴팁</button></div>
+                                    <div class="pageArea">
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    
+                                    <div class="tooltipBox"  id="tooltip03"> <!--class 'on' : 툴팁 오픈 -->
+                                        <button type="button" class="btnClose" onclick="ttClose('tooltip03')">툴팁 닫기</button>
+                                        <p class="txt">현재 보유하고 있는 총 활동지수에 대한 순위입니다.</p>
+                                    </div>
+                                </h2>
+                                <div class="swiper rankSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <ul class="rankList">
+                                                <li class="rankItem ranker"> <!--class 'ranker' : 순위권 (1, 2, 3) 선수 표시-->
+                                                    <div class="num">1</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">1,234,567,89P</div>
+                                                </li>
+                                                <li class="rankItem ranker">
+                                                    <div class="num">2</div>
+                                                    <div class="id">id123412</div>
+                                                    <div class="point">934,567,89P</div>
+                                                </li>
+                                                <li class="rankItem ranker">
+                                                    <div class="num">3</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">834,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">4</div>
+                                                    <div class="id">idid1234</div>
+                                                    <div class="point">634,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">5</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">34,567,89P</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <ul class="rankList">
+                                                <li class="rankItem">
+                                                    <div class="num">6</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">1,234,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">7</div>
+                                                    <div class="id">id123412</div>
+                                                    <div class="point">934,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">8</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">834,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">9</div>
+                                                    <div class="id">idid1234</div>
+                                                    <div class="point">634,567,89P</div>
+                                                </li>
+                                                <li class="rankItem">
+                                                    <div class="num">10</div>
+                                                    <div class="id">id1234</div>
+                                                    <div class="point">34,567,89P</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="rankInfo">매일 오전 5시 업데이트</p>
+                            </div>
+                        </div>
+
+                        <!-- 경기 선택 스와이퍼 -->
+                        <div class="matchSlct">
+                            <div class="swiper matchSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox disabled"> <!--class 'disabled' : 선택 불가 경기-->
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox on"> <!-- class 'on' : 현재 선택 경기-->
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">우수</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 03</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="matchBox">
+                                            <div class="matchTit">광명 12</div>
+                                            <div class="matchTag">선발결승</div>
+                                            <p class="matchTime">13:15</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <div class="matchNavi">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+
+                        <!-- 경기상세 -->
+                        <!-- to Dev : 슬라이드 탭 선택 시 하위 영역 데이터 변경해주세요. -->
+                        <div class="matchDetail">
+
+                            <!-- 경주 타이틀 -->
+                            <div class="mtchTit">
+                                <h3 class="tit">광명 04경주</h3>
+                                <div class="tag">선발</div>
+                                <p class="etc">5주회 선두고정(1691m) 출발시간 13:15</p>
+                            </div>
+
+                            <!-- 경주 디테일 -->
+                            <div class="mtchDt">
+                                <div class="modTab">
+                                    <div class="tabMenuGroup tabSwiper toMob swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                        <ul class="tabMenu swiper-wrapper" id="swiper-wrapper-d73cad9b8c9d4fef" aria-live="polite">
+                                            <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">단승</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">연승</button></li>
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">복승</button></li>
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">쌍승</button></li>
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">삼복승</button></li>
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">쌍복승</button></li>
+                                            <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">삼쌍승</button></li>
+                                        </ul>
+                                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                    </div>
+                                    <div class="tabDirection">
+                                        <div class="tabBtn alignL">
+                                            <button class="prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-d73cad9b8c9d4fef" aria-disabled="true">이전</button>
+                                        </div>
+                                        <div class="tabBtn alignR">
+                                            <button class="next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-d73cad9b8c9d4fef" aria-disabled="false">다음</button>
+                                        </div>
+                                    </div>
+                                    <div class="tabContianer">
+                                        <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                            <dl class="batInfo">
+                                                <dt><em>단승식</em>(적중확률 <span class="tMint">1/7</span>) : </dt>
+                                                <dd>1위 선수 1명을 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo201" disabled/>
+                                                        <label for="rdo201"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo202" disabled/>
+                                                        <label for="rdo202"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo203" disabled/>
+                                                        <label for="rdo203"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo204" disabled/>
+                                                        <label for="rdo204"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo205" disabled/>
+                                                        <label for="rdo205"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo206" disabled/>
+                                                        <label for="rdo206"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo207" disabled/>
+                                                        <label for="rdo207"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요." disabled>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>연승식</em>(적중확률 <span class="tMint">2/7</span>) : </dt>
+                                                <dd>1-2위 선수 중 1명을 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo301"/>
+                                                        <label for="rdo301">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo302"/>
+                                                        <label for="rdo302">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo303"/>
+                                                        <label for="rdo303">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo304"/>
+                                                        <label for="rdo304">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo305"/>
+                                                        <label for="rdo305">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo306"/>
+                                                        <label for="rdo306">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo03" id="rdo307"/>
+                                                        <label for="rdo307">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo401"/>
+                                                        <label for="rdo401"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo402"/>
+                                                        <label for="rdo402"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo403"/>
+                                                        <label for="rdo403"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo404"/>
+                                                        <label for="rdo404"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo405"/>
+                                                        <label for="rdo405"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo406"/>
+                                                        <label for="rdo406"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo04" id="rdo407"/>
+                                                        <label for="rdo407"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>복승식</em>(적중확률 <span class="tMint">1/21</span>) : </dt>
+                                                <dd>1·2위 선수 2명을 순위에 관계없이 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo701"/>
+                                                        <label for="rdo701">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo702"/>
+                                                        <label for="rdo702">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo703"/>
+                                                        <label for="rdo703">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo704"/>
+                                                        <label for="rdo704">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo705"/>
+                                                        <label for="rdo705">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo706"/>
+                                                        <label for="rdo706">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo07" id="rdo707"/>
+                                                        <label for="rdo707">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+
+                                                <h5 class="slctTit">2위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo801"/>
+                                                        <label for="rdo801">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo802"/>
+                                                        <label for="rdo802">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo803"/>
+                                                        <label for="rdo803">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo804"/>
+                                                        <label for="rdo804">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo805"/>
+                                                        <label for="rdo805">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo806"/>
+                                                        <label for="rdo806">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo08" id="rdo807"/>
+                                                        <label for="rdo807">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo901"/>
+                                                        <label for="rdo901"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo902"/>
+                                                        <label for="rdo902"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo903"/>
+                                                        <label for="rdo903"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo904"/>
+                                                        <label for="rdo904"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo905"/>
+                                                        <label for="rdo905"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo906"/>
+                                                        <label for="rdo906"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo09" id="rdo907"/>
+                                                        <label for="rdo907"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>쌍승식</em>(적중확률 <span class="tMint">1/42</span>) : </dt>
+                                                <dd>1-2위 선수 중 2명을 순위에 맞게 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1001"/>
+                                                        <label for="rdo1001">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1002"/>
+                                                        <label for="rdo1002">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1003"/>
+                                                        <label for="rdo1003">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1004"/>
+                                                        <label for="rdo1004">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1005"/>
+                                                        <label for="rdo1005">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1006"/>
+                                                        <label for="rdo1006">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo10" id="rdo1007"/>
+                                                        <label for="rdo1007">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">2위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1102"/>
+                                                        <label for="rdo1102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1103"/>
+                                                        <label for="rdo1103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1104"/>
+                                                        <label for="rdo1104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1105"/>
+                                                        <label for="rdo1105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1106"/>
+                                                        <label for="rdo1106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo11" id="rdo1107"/>
+                                                        <label for="rdo1107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1201"/>
+                                                        <label for="rdo1201"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1202"/>
+                                                        <label for="rdo1202"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1203"/>
+                                                        <label for="rdo1203"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1204"/>
+                                                        <label for="rdo1204"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1205"/>
+                                                        <label for="rdo1205"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1206"/>
+                                                        <label for="rdo1206"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo12" id="rdo1207"/>
+                                                        <label for="rdo1207"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>삼복승식</em>(적중확률 <span class="tMint">1/35</span>) : </dt>
+                                                <dd>1-2-3위 선수 3명을 순위에 관계없이 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">2위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">3위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo201"/>
+                                                        <label for="rdo201"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo202"/>
+                                                        <label for="rdo202"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo203"/>
+                                                        <label for="rdo203"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo204"/>
+                                                        <label for="rdo204"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo205"/>
+                                                        <label for="rdo205"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo206"/>
+                                                        <label for="rdo206"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo207"/>
+                                                        <label for="rdo207"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>쌍복승식</em>(적중확률 <span class="tMint">1/105</span>) : </dt>
+                                                <dd> 1위 선수 1명을 순위에 맞게, 2·3위 선수 2명은 순위에 관계없이 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">2위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">3위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo201"/>
+                                                        <label for="rdo201"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo202"/>
+                                                        <label for="rdo202"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo203"/>
+                                                        <label for="rdo203"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo204"/>
+                                                        <label for="rdo204"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo205"/>
+                                                        <label for="rdo205"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo206"/>
+                                                        <label for="rdo206"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo207"/>
+                                                        <label for="rdo207"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="tabCont">
+                                            <dl class="batInfo">
+                                                <dt><em>삼쌍승식</em>(적중확률 <span class="tMint">1/210</span>) : </dt>
+                                                <dd> 1-2-3위 선수 중 3명을 순위에 맞게 적중시키는 방식</dd>
+                                            </dl>
+
+                                            <div class="batSection">
+                                                <h4 class="sctTit">순위선택</h4>
+
+                                                <h5 class="slctTit">1위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">2위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <h5 class="slctTit">3위</h5>
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo101"/>
+                                                        <label for="rdo101">
+                                                            <span class="number num01">1</span>
+                                                            <b class="name">김상인</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo102"/>
+                                                        <label for="rdo102">
+                                                            <span class="number num02">2</span>
+                                                            <b class="name">강동진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo103"/>
+                                                        <label for="rdo103">
+                                                            <span class="number num03">3</span>
+                                                            <b class="name">김광진</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo104"/>
+                                                        <label for="rdo104">
+                                                            <span class="number num04">4</span>
+                                                            <b class="name">곽훈신</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo105"/>
+                                                        <label for="rdo105">
+                                                            <span class="number num05">5</span>
+                                                            <b class="name">정언열</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo106"/>
+                                                        <label for="rdo106">
+                                                            <span class="number num06">6</span>
+                                                            <b class="name">줄눈박이</b>
+                                                        </label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo01" id="rdo107"/>
+                                                        <label for="rdo107">
+                                                            <span class="number num07">7</span>
+                                                            <b class="name">허준</b>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="batSection">
+                                                <h4 class="sctTit">베팅할 활동지수</h4>
+
+                                                <ul class="batGroup">
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo201"/>
+                                                        <label for="rdo201"><b class="name">100</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo202"/>
+                                                        <label for="rdo202"><b class="name">500</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo203"/>
+                                                        <label for="rdo203"><b class="name">1,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo204"/>
+                                                        <label for="rdo204"><b class="name">2,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo205"/>
+                                                        <label for="rdo205"><b class="name">5,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo206"/>
+                                                        <label for="rdo206"><b class="name">10,000</b></label>
+                                                    </li>
+                                                    <li class="batItem">
+                                                        <input type="radio" name="rdo02" id="rdo207"/>
+                                                        <label for="rdo207"><b class="name">50,000</b></label>
+                                                    </li>
+                                                    <li class="batItem full">
+                                                        <input type="text" placeholder="베팅할 활동지수를 입력하세요.">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 배너 -->
+                        <div class="bannerArea">
+                            <div class="bannerBox">
+                                <div class="txtArea">
+                                    <b>스피드온을 이용하여 경륜·경정을 더욱 즐겁게 즐기세요!</b>
+                                    <i>스피드온을 통해 경주권 구매, 라이브 중계 등을 확인 할 수 있습니다.</i>
+                                </div>
+                                <div class="btnArea">
+                                    <a href="#" target="_blank" title="새창열기"><img src="../../images/common/logo_speedon_w.png" alt="스피드온"> 바로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 플로팅 푸터 -->
+                    <div class="smlFloating">
+                        <div class="contBox"> <!--class 'on' : 옵션 상세 열기-->
+                            <button type="button" class="btnSlide">옵션 선택</button>
+                            <div class="contArea">
+                                <h2 class="contTit">내가 베팅한 선수</h2>
+                                <ul class="contDt">
+                                    <li class="contItem">
+                                        <dl class="batCont">
+                                            <dt>1위</dt>
+                                            <dd>
+                                                <span class="number num01">1</span>
+                                                <span class="number num02">2</span>
+                                                <span class="number num03">3</span>
+                                                <span class="number num04">4</span>
+                                                <span class="number num05">5</span>
+                                                <span class="number num06">6</span>
+                                                <span class="number num07">7</span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="contItem">
+                                        <dl class="batCont">
+                                            <dt>2위</dt>
+                                            <dd>
+                                                <span class="number num01">1</span>
+                                                <span class="number num02">2</span>
+                                                <span class="number num03">3</span>
+                                                <span class="number num04">4</span>
+                                                <span class="number num05">5</span>
+                                                <span class="number num06">6</span>
+                                                <span class="number num07">7</span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="contItem">
+                                        <dl class="batCont">
+                                            <dt>3위</dt>
+                                            <dd>
+                                                <span class="number num01">1</span>
+                                                <span class="number num02">2</span>
+                                                <span class="number num03">3</span>
+                                                <span class="number num04">4</span>
+                                                <span class="number num05">5</span>
+                                                <span class="number num06">6</span>
+                                                <span class="number num07">7</span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="unitArea">
+                            <ul class="numUnit">
+                                <li class="numItem">
+                                    <dl>
+                                        <dt>매수</dt>
+                                        <dd>1,234</dd>
+                                    </dl>
+                                </li>
+                                <li class="numItem">
+                                    <dl>
+                                        <dt>합계</dt>
+                                        <dd><em class="result">12,345,678 P</em></dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <div class="btnArea">
+                                <button type="button" class="btnReload">초기화</button>
+                                <button type="button" class="btnBatting" onclick="openPopup('batting')">베팅하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //모의베팅 윈도우 팝업 -->
+
+                <!-- 활동영역 팝업 -->
+                <div id="infoActivity" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div class="popupDim">딤영역</div>
+                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button class="btnPopClose" onclick="closePopup('infoActivity');">닫기</button>
+                                <div class="popTitle">활동지수</div>
+                                <div class="popCont">
+                                    <!-- 팝업 컨텐츠 영역 -->
+                                    <div class="cptinfoPoint">
+                                        <p class="info">활동지수가 부족한 경우 다음과 같은 방법으로 획득할 수 있습니다.</p>
+                                        <ul class="pointGroup">
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>로그인</dt>
+                                                    <dd>일일 로그인 보너스</dd>
+                                                </dl>
+                                                <div class="point">+1,000 P</div>
+                                            </li>
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>게시글 작성</dt>
+                                                    <dd>하루 최대 3회/최소 200자</dd>
+                                                </dl>
+                                                <div class="point">+5,000 P</div>
+                                            </li>
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>댓글 작성</dt>
+                                                    <dd>하루 최대 10회/최소 20자</dd>
+                                                </dl>
+                                                <div class="point">+1,000 P</div>
+                                            </li>
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>설문조사/투표 작성</dt>
+                                                    <dd>[고객광장>공지시항] 설문조사/투표 참여 및 작성</dd>
+                                                </dl>
+                                                <div class="point">+5,000 P</div>
+                                            </li>
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>명예심판 신청</dt>
+                                                    <dd>[고객광장>명예심판] 명예심판 신청</dd>
+                                                </dl>
+                                                <div class="point">+5,000 P</div>
+                                            </li>
+                                            <li class="pointItem">
+                                                <dl class="act">
+                                                    <dt>명예심판 후기</dt>
+                                                    <dd>하루 최대 10회/최소 20자</dd>
+                                                </dl>
+                                                <div class="point">+1,000 P</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- //팝업 컨텐츠 영역 -->
+                                </div>
+            
+                                <!-- 팝업 하단 영역 -->
+                                <div class="popBtm">
+                                    <div class="comBtnGroup">
+                                        <div class="alignC">
+                                            <div class="btnBox">
+                                                <button type="button" class="btn lg Primary pcW180" onclick="closePopup('infoActivity');">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 모의베팅하기 팝업 -->
+                <div id="batting" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div class="popupDim">딤영역</div>
+                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button class="btnPopClose" onclick="closePopup('batting');">닫기</button>
+                                <div class="popTitle">모의베팅하기</div>
+                                <div class="popCont">
+                                    <!-- 팝업 컨텐츠 영역 -->
+                                    <div class="cptBatInfo">
+                                        <div class="batTit">
+                                            <h3>광명 04경주 <span class="tKey">쌍복승</span></h3>
+                                        </div>
+
+                                        <div class="comDataTable colLineDel">
+                                            <div class="tableArea">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수</th>
+                                                            <th>활동지수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1-2-3</td>
+                                                            <td>123,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1-2-3</td>
+                                                            <td>123,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="checkPoint">
+                                            <dl class="check">
+                                                <dt>총 모의베팅한 활동지수</dt>
+                                                <dd>246,000 P</dd>
+                                            </dl>
+                                        </div>
+
+                                        <div class="btmTxt">
+                                            <p class="bold">위 내역으로 모의베팅을 하시겠습니까?</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- //팝업 컨텐츠 영역 -->
+                                </div>
+            
+                                <!-- 팝업 하단 영역 -->
+                                <div class="popBtm">
+                                    <div class="comBtnGroup">
+                                        <div class="alignC">
+                                            <div class="btnBox m50">
+                                                <button type="button" class="btn lg gLine pcW180" onclick="closePopup('batting');">취소</button>
+                                                <button type="button" class="btn lg Primary pcW180" onclick="openPopup('finalBatting');">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 모의베팅완료 팝업 -->
+                <div id="finalBatting" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div class="popupDim">딤영역</div>
+                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button class="btnPopClose" onclick="closePopup('finalBatting');">닫기</button>
+                                <div class="popTitle">모의베팅완료</div>
+                                <div class="popCont">
+                                    <!-- 팝업 컨텐츠 영역 -->
+                                    <div class="cptBatInfo">
+                                        <div class="batTit">
+                                            <h3>광명 04경주 <span class="tKey">쌍복승</span></h3>
+                                        </div>
+
+                                        <div class="comDataTable colLineDel">
+                                            <div class="tableArea">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                        <col style="width:auto;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선수</th>
+                                                            <th>활동지수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1-2-3</td>
+                                                            <td>123,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1-2-3</td>
+                                                            <td>123,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="finalPoint">
+                                            <ul class="finalBox">
+                                                <li class="finalItem">
+                                                    <dl class="final">
+                                                        <dt>총 모의베팅한 활동지수</dt>
+                                                        <dd>246,000 P</dd>
+                                                    </dl>
+                                                </li>
+                                                <li class="finalItem">
+                                                    <dl class="remain">
+                                                        <dt>구매후 잔여 활동지수</dt>
+                                                        <dd>12,345,678 P</dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="btmTxt">
+                                            <p class="bold tKey">위 내역으로 모의베팅을 완료했습니다.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- //팝업 컨텐츠 영역 -->
+                                </div>
+            
+                                <!-- 팝업 하단 영역 -->
+                                <div class="popBtm">
+                                    <div class="comBtnGroup">
+                                        <div class="alignC">
+                                            <div class="btnBox">
+                                                <button type="button" class="btn lg Primary pcW180" onclick="closePopup('finalBatting');">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alert 팝업 -->
+                <div id="battingAlert" class="modAlertPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div class="popupDim">딤영역</div>
+                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                        <div class="popupInMotion">
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('battingAlert');">닫기</button>
+                                    <div class="popCont">
+                                        <!-- 팝업 컨텐츠 영역 -->
+                                        <div class="alertTit">
+                                            모의베팅 안내
+                                        </div>
+                                        <p class="alertDt">
+                                            모의베팅은 로그인 후 사용이 가능합니다.<br/>
+                                            로그인 하시겠습니까? 
+                                        </p>
+                                        <!-- //팝업 컨텐츠 영역 -->
+                                    </div>
+                
+                                    <!-- 팝업 하단 영역 -->
+                                    <div class="popBtm">
+                                        <button class="btn Primary">로그인하러 가기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+
+</div>
+</body>
+</html>

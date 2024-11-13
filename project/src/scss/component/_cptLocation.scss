@@ -1,0 +1,36 @@
+.cptLocation {
+    margin-top: 60px;
+    &:first-child {margin-top: 0;}
+    .kkoMap {
+        margin: 20px 0;
+        .root_daum_roughmap .map {border-radius: 16px;}
+        .root_daum_roughmap .map_border {display: none;}
+    }
+    .parkInfo {
+        margin-top: 32px; padding: 32px 32px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200);
+        .img {
+            img {width: 100%; height: auto; border-radius: 16px; display: block;}
+        }
+        .txtInfo {
+            margin-top: 20px; display: flex; padding: 32px 120px; justify-content: space-between; align-items: center; border-radius: 12px; background: var(--Bg-Line-bg-200); 
+            .list {}            
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+        .kkoMap {
+            .root_daum_roughmap .wrap_map {height: 300px !important;}
+        }
+        .parkInfo {
+            margin-top: 24px; padding: 12px 12px;
+            .txtInfo {
+                margin-top: 12px; padding: 20px 20px; flex-wrap: wrap;
+                .list {
+                    width: 100%; margin-top: 12px;
+                    &:first-child {margin-top: 0;}
+                }
+            }
+        }  
+    }
+}

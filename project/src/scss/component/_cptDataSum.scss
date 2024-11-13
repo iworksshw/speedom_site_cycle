@@ -31,6 +31,8 @@
 		}
 		.icon {
 			width: 40px; height: 40px; margin: 0 auto 8px;
+			img {vertical-align: top;}
+			.mView {display: none;}
 		}
 
 		@include media("tablet"){
@@ -42,7 +44,7 @@
 						content: none;
 					}
 				}
-				div.val {margin-top: 0;}
+				.val {margin-top: 0;}
 				.icon {display: none;}
 			}
 		}
@@ -63,8 +65,57 @@
 						content: none;
 					}
 				}
-				div.val {margin-top: 0;}
-				.icon {display: none;}
+				.item {margin-right: auto;}
+				.val {margin-top: 0;}
+				.icon {
+					display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; margin: 0 8px 0 0;
+					.pcView {display: none;}
+					.mView {display: block; line-height: 1;}
+				}
+			}
+		}
+
+		&.totalSum {
+			display: flex; gap: 80px;
+			.total {
+				display: flex; flex-direction: column; align-items: center; justify-content: center; width: calc(33.3333% - 40px); min-width: 290px; padding: 12px; background-color: var(--Bg-Line-bg-200); border-radius: 6px;
+			}
+			> .inner {
+				flex: 1; flex-wrap: wrap; gap: 16px 80px; margin-right: 40px;
+				> li {
+					flex: none; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; width: calc(50% - 40px);
+					&::before {
+						content: none;
+					}
+					.val {margin-left: auto;}
+				}
+			}
+
+			@include media("pcs"){
+				gap: 40px;
+				> .inner {
+					flex-wrap: wrap; gap: 12px; margin-right: 20px;
+					> li {
+						flex: none; display: flex; align-items: center; justify-content: space-between; width: 100%;
+						&::before {
+							content: none;
+						}
+					}
+				}
+			}
+
+			@include media("mobile"){
+				flex-wrap: wrap; gap: 16px 0;
+				.total {
+					display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; width: 100%; padding: 20px 12px;
+					.val {
+						margin-top: 0;
+						margin-left: auto;
+					}
+				}
+				> .inner {
+					margin: 0 12px;
+				}
 			}
 		}
 	}

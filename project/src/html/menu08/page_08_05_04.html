@@ -1,0 +1,211 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['총괄본부','경륜훈련원'],
+                    subTitle: '오시는 길',
+                    subText: '다양한 방법으로 경륜훈련원까지<br><b>오시는 길</b>을 알려드릴게요.',
+                    url: "../../",
+                    visualClass: "bg01",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptLocation">
+                        <div class="comTitH2">
+                            <h2>경룬훈련원 위치</h2>
+                        </div>
+                        <div class="kkoMap">
+                            <!-- 카카오맵 -->
+                            <div id="daumRoughmapContainer1731121361133" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp" : "1731121361133",
+                                    "key" : "2m6ts",
+                                    "mapWidth" : "100%",
+                                    "mapHeight" : "500"
+                                }).render();
+                            </script>
+                        </div>
+                        <div class="comBasicTxt">
+                            <p class="txt">
+                                경북 영주시 순흥면 소백로 2384-30
+                            </p>
+                        </div>
+                        <div class="comTitH2">
+                            <h2>자가용 이용</h2>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>서울</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                중부고속도로 → 초월JC → 광주원주고속도로 → 신평JC → 중앙고속도로 -> 풍기IC (2시간)
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>대구·부산</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                경부고속도로(금호분기점) → 중앙 고속도로 → 풍기IC (2시간 30분)
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>전남 광주</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                88고속도로(금호분기점) → 중앙고속도로 → 풍기IC (3시간)
+                            </p>
+                        </div>
+                        <div class="comTitH2 mgH60">
+                            <h2>시외 · 고속버스 이용</h2>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>서울</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                동서울ㆍ강남 ↔ 영주·풍기(1일 26회) 2시간 10분
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>대구</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                동대구 중앙고속터미널 ↔ 영주(1일 15회) 1시간 30분
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>부산</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                부산 동부터미널 ↔영주 (1일 9회) 2시간 50분 <br />
+                                <span class="tKey">※ 고속버스안내 : 서울 (02)446-8000, 455-2111. 영주 (054)631-1006, 3264, 635-8927</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comTitH2 mgH60">
+                        <h2>시외 · 고속버스 이용</h2>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>서울</h3>
+                    </div>
+                    <div class="comBasicTxt space">
+                        <p class="txt">
+                            동서울ㆍ강남 ↔ 영주·풍기(1일 26회) 2시간 10분
+                        </p>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>대구</h3>
+                    </div>
+                    <div class="comBasicTxt space">
+                        <p class="txt">
+                            동대구 중앙고속터미널 ↔ 영주(1일 15회) 1시간 30분
+                        </p>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>부산</h3>
+                    </div>
+                    <div class="comBasicTxt space">
+                        <p class="txt">
+                            부산 동부터미널 ↔영주 (1일 9회) 2시간 50분 <br />
+                            <span class="tKey">※ 고속버스안내 : 서울 (02)446-8000, 455-2111. 영주 (054)631-1006, 3264, 635-8927</span>
+                        </p>
+                    </div>
+                    <div class="comTitH2 mgH60">
+                        <h2>기차이용</h2>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>중앙선</h3>
+                    </div>
+                    <div class="comBasicList space">
+                        <ul class="listGroup">
+                            <li class="item">서울역 ↔ 풍기ㆍ영주(1일 3회) KTX</li>
+                            <li class="item">청량리 ↔ 풍기ㆍ영주(1일 10회) KTX, ITX, 무궁화호</li>
+                            <li class="item">대구ㆍ동대구 ↔ 풍기ㆍ영주(1일 2회) 무궁화호</li>
+                            <li class="item">
+                                부산 ↔ 오송 ↔ 풍기 (1일 3회) <br />
+                                <span class="tKey">※ 부산 ↔ 풍기ㆍ영주는 직통없음</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>영동선</h3>
+                    </div>
+                    <div class="comBasicTxt space">
+                        <p class="txt">
+                            강릉 ↔ 서원주 ↔ 풍기(1일 3회) <br />
+                            <span class="tKey">※ 강릉 ↔ 풍기ㆍ영주는 직통없음</span>
+                        </p>
+                    </div>
+                    <div class="comTitH3">
+                        <h3>경북선</h3>
+                    </div>
+                    <div class="comBasicTxt space">
+                        <p class="txt">
+                            김천 ↔ 풍기ㆍ영주(1일 2회) 무궁화호
+                        </p>
+                    </div>
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '경륜서비스팀',
+                    name: '신동헌',
+                    phone: '02-2067-5822',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

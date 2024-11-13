@@ -28,7 +28,7 @@
                     .tagWrap {
                         margin-left: 12px;
                         .tag {
-                            height: 24px; padding: 0 10px; border-radius: 12px; line-height: 22px; font-size: rem(12px); font-weight: 600; display: inline-block; vertical-align: middle;
+                            height: 24px; padding: 0 10px; margin-right: 4px; border-radius: 12px; line-height: 22px; font-size: rem(12px); font-weight: 600; display: inline-block; vertical-align: middle;
                             &.mint {color: var(---Primary); border: 1px solid var(---Primary);}
                             &.blue {color: var(--Point-Primary3); border: 1px solid var(--Point-Primary3);}
                         }

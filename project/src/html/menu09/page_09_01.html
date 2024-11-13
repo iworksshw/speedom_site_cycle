@@ -68,23 +68,51 @@
 						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
+									<!--20241112 모바일 아이콘 추가-->
 									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_betting.svg" alt="">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_betting.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_betting_m.svg" alt=""></div>
 									</div>
+									<!--// 20241112 모바일 아이콘 추가-->
 									<div class="item">모의베팅 순위</div>
 									<div class="val">158위</div>
 								</li>
 								<li>
+									<!--20241112 모바일 아이콘, 툴팁 추가-->
 									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_activity.svg" alt="">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_activity.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_activity_m.svg" alt=""></div>
 									</div>
-									<div class="item">현재 보유 활동지수</div>
+									<div class="item">현재 보유 활동지수
+										<div class="comTooltip">
+											<button type="button" class="popIcon tipBtn" onclick="openPopup('tip1')">팝업 열기</button>
+	
+											<div class="comInfoLayerPop" id="tip1">
+												<div class="popWrap">
+													<div class="popHead">
+														<div class="popTit"></div>
+														<button type="button" class="popClose" onclick="closePopup('tip1')">팝업 닫기</button>
+													</div>
+													<div class="popBody" style="height: auto;">
+														<div class="comBasicTxt">
+															<p class="txt"><em>활동지수란?</em></p>
+															<p class="txt">활동지수는 사이트 내 활동을 통해 얻을 수 있는 마일리지를 뜻해요.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--// 20241112 모바일 아이콘, 툴팁 추가-->
 									<div class="val">350,000 <i class="unit">P</i></div>
 								</li>
 								<li>
+									<!--20241112 모바일 아이콘 추가-->
 									<div class="icon">
-										<img src="../../images/common/ic_mypage_sum_notify.svg" alt="">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_notify.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_notify_m.svg" alt=""></div>
 									</div>
+									<!--// 20241112 모바일 아이콘 추가-->
 									<div class="item">새알림</div>
 									<div class="val">30</div>
 								</li>
@@ -95,17 +123,49 @@
 						</div>
 					</div>
 
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk">
-								<h2>나의 모의베팅</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
+					<!--20241112 모의베팅 목록 추가 : cptDataList으로 클래스 변경 div.sectArea 삭제 -->
+					<div class="cptDataList">
+						<div class="comTitH2 bk">
+							<h2>나의 모의베팅</h2>
+							<div class="right">
+								<button type="button" class="txtBtn">더 보기</button>
 							</div>
-							<div class="tempArea">작업중</div>
 						</div>
+						
+						<ul class="dataListBox col3">
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-09</div>
+									<div class="val tBlue">
+										<span class="state">환급</span>
+										+1,050,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">구매</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="block">
+									<div class="tit">[부산01] 삼복승 2-4-5</div>
+									<div class="date">2024-09-08</div>
+									<div class="val tRed">
+										<span class="state">환불</span>
+										-50,000 <i class="unit">P</i>
+									</div>
+								</a>
+							</li>
+						</ul>
 					</div>
+					<!--// 20241112 모의베팅 목록 추가-->
 
 					<div class="cptDataList">
 						<div class="comTitH2 bk">
@@ -348,7 +408,7 @@
 												<li class="listItem">
 													<a href="#" class="itemLink">
 														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../../images/thum/thum_16_9_video.png);"></div>
+															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
 														</div>
 														<div class="infoBox">
 															<div class="title">스피드온_챔피언십_시즌1_1주차</div>
@@ -366,7 +426,7 @@
 												<li class="listItem">
 													<a href="#" class="itemLink">
 														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../../images/thum/thum_16_9_video.png);"></div>
+															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
 														</div>
 														<div class="infoBox">
 															<div class="title">도박 중독의 과정 알아가기</div>
@@ -384,7 +444,7 @@
 												<li class="listItem">
 													<a href="#" class="itemLink">
 														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../../images/thum/thum_16_9_video.png);"></div>
+															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
 														</div>
 														<div class="infoBox">
 															<div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
