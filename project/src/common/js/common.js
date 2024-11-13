@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         afterScrlT = scrlT;
     })
 
+    //All Menu -Start
+    all1MenuAction();
 
     //GNB - Start
     const depth1Menus = document.querySelectorAll(".gnbArea .depth1Menu");
@@ -170,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //GNB - End
 
     //디자인 셀렉트
-    designSelect();
+    //designSelect();
 
     //파일찾기
     const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
@@ -331,6 +333,72 @@ document.addEventListener("DOMContentLoaded", function () {
     // 플로팅 푸터 옵션 toggle
     batFloating();
 });
+
+
+
+// ------------------------------- 전체 메뉴 ------------------------------- //
+function all1MenuAction(){
+    const btnAllMenu = document.querySelector(".allMenu");
+    const btnCloseAllMenus = document.querySelectorAll(".allMenuArea .btnClose");
+    const all1Menus = document.querySelectorAll(".allMenuArea .depth1Name");
+    const all2Menus = document.querySelectorAll(".allMenuArea .depth2Name");
+    const parent1Menus = document.querySelectorAll(".allMenuArea .depth1Menu");
+    const parent2Menus = document.querySelectorAll(".allMenuArea .depth2Menu");
+    
+    const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
+
+    btnAllMenu.addEventListener("click", function(e){
+        document.querySelector(".allMenuArea").classList.add("on");
+    });
+    btnCloseAllMenus.forEach(function(btn){
+        btn.addEventListener("click", function(e){
+            document.querySelector(".allMenuArea").classList.remove("on");
+        });
+    });
+
+    all1Menus.forEach(function(all1Menu){
+        all1Menu.addEventListener("click", function(e){
+            e.preventDefault();
+            if(tabMo.matches) {
+                parent1Menus.forEach(function(menu){
+                    menu.classList.remove("on");
+                });
+                parent2Menus.forEach(function(menu){
+                    menu.classList.remove("on");
+                });
+                all1Menu.parentNode.classList.add("on");
+            }
+        });
+    });
+
+    
+    all2Menus.forEach(function(all2Menu){
+        all2Menu.addEventListener("click", function(e){
+            e.preventDefault();
+            if(tabMo.matches) {
+                if(!all2Menu.nextElementSibling){return;}
+                all2Menu.parentNode.classList.toggle("on");
+                if(all2Menu.parentNode.classList.contains("on")){
+                    slideDown(all2Menu.nextElementSibling, 200);
+                }else{
+                    slideUp(all2Menu.nextElementSibling, 200);
+                }
+            }
+        });
+    });
+
+    //BreakPoint
+    tabMo.addListener(function(){
+        if(!tabMo.matches) {
+            parent2Menus.forEach(function(menu){
+                menu.classList.remove("on");
+                if(menu.querySelector(".depth3Group")){
+                    menu.querySelector(".depth3Group").removeAttribute("style");
+                }
+            });
+        }
+    });
+}
 
 // ------------------------------- 디자인 셀렉트 함수 ------------------------------- //
 function designSelect() {
