@@ -1,6 +1,7 @@
 /* ------------------------ 2뎁스 탭 (데이터) ------------------------ */
 .comTabData {
     width: 100%; margin-top: 60px;
+    &:first-child {margin-top: 0;}
     .tabMenuGroup {
         width: 100%; overflow: hidden;
         .tabMenu {    
