@@ -1,0 +1,85 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 통합검색 -->
+        <div class="cptSchHd">
+            <div class="schDim"></div>
+            <div class="cptArea">
+                <div class="schHdClose"></div>
+                <div class="inCont">
+                    <h2><b>찾으시는 정보</b>를 <span class="blk"></span> 입력해주세요.</h2>
+                    <form action="">
+                        <div class="schBox">
+                            <input type="text" required placeholder="검색어를 입력하세요." />
+                            <button>검색</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- //통합검색 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['희망길벗'],
+                    subTitle: '길벗 상담안내',
+                    subText: '도움이 필요한<br /><b>무엇이든 물어보세요.</b>',
+                    url: "../../",
+                    visualClass: "bg04",
+                }) %>
+
+                
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
