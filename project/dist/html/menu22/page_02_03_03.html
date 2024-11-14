@@ -734,16 +734,18 @@
                 <!-- 서브 탑 (타이틀) -->
                 
 
-<div class="cptSubTop bg03">
+<div class="cptSubTop bg02">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
             <li class="item"><a href="#">경정선수</a></li>
             
+            <li class="item"><a href="#">경주 출주표</a></li>
+            
             
         </ul>
-        <div class="subTitle"><h1>선수전적비교</h1></div>
-        <div class="subText"><p><b>비교하고 싶은 선수를 검색</b>하여<br/>결과를 확인하세요.</p></div>
+        <div class="subTitle"><h1>지정연습 출주표</h1></div>
+        <div class="subText"><p><b>현명한 베팅</b>을 위한 전략,<br><b>지정연습출주표</b>에 대해 알아봐요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -757,275 +759,655 @@
                 
 
                 <div class="layoutContArea">
+
+                    <div class="comSubInfo">
+                        
+                        <h2 class="infoTit">지정연습출주표는 선수들의 연습 경기 정보를 미리 확인할 수 있는 표입니다.</h2>
+                        <p class="info">지정연습을 앞둔 선수들의 등급, 모터, 보트 정보를 확인해보세요.</p>
+                    </div>
                     
-                    <div class="cptCompareData">
+                    <div class="cptDateSelect">
                         <div class="sectArea">
-                            <div class="alertArea">
-                                <p class="txt">비교선수를 선택하여 <br class="mView"/> 선수 상대 전적을 비교해보세요.</p>
-                                <div class="comBtnGroup">
-                                    <div class="alignC">
-                                        <div class="btnBox min">
-                                            <button class="btn Primary">선수 전적 다시 비교하기</button>
+                            <div class="comGroupTop">
+                                <div class="alignL">
+                                    <button type="button" class="btnReload">새로고침</button>
+                                </div>
+                                <div class="alignR">
+                                    <div class="btnList">
+                                        <div class="alignR moL">
+                                            <div class="btnBox min">
+                                                <button type="button" class="btn xs gLine">텍스트 출주표</button>
+                                                <button type="button" class="btn xs gLine">엑셀저장 <img src="../../images/common/ic_16_file_download.svg" alt="파일 다운로드"> </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="comTitH2">
-                                <h2>선수 간 전적비교</h2>
-                                <div class="right">
+                            <!-- 날짜 선택 박스영역 -->
+                            <div class="selectBox">
+                                <div class="frmGroup">
+                                    <div class="frmBox frmMd">
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024</option>
+                                            <option value="">2023</option>
+                                            <option value="">2022</option>
+                                            <option value="">2021</option>
+                                            <option value="">2020</option>
+                                        </select>
+                                    </div>
                                     <div class="frmBox">
-                                        <select class="iptSlt">
-                                            <option value="">2024년</option>
-                                            <option value="">2023년</option>
+                                        <select class="iptSlt typeLine">
+                                            <option value="">2024년 07월 21일 28회 3일차</option>
+                                            <option value="">2024년 07월 21일 28회 4일차</option>
+                                            <option value="">2024년 07월 21일 28회 5일차</option>
+                                            <option value="">2024년 07월 21일 28회 6일차</option>
+                                            <option value="">2024년 07월 21일 28회 7일차</option>
+                                            <option value="">2024년 07월 21일 28회 8일차</option>
+                                            <option value="">2024년 07월 21일 28회 9일차</option>
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="compareBox">
-                                <ul class="cpList">
-                                    <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
+
+                                <button type="button" class="calendarBtn" onclick="openPopup('calendarPop')">달력으로 날짜 선택</button>
+
+                                <div class="layerPopup" id="calendarPop"> <!--class 'on' : 팝업 열림-->
+                                    <div class="popHead">
+                                        <h3>달력조회</h3>
+                                        <button type="button" class="popClose"  onclick="closePopup('calendarPop')">팝업 닫기</button>
+                                    </div>
+                                    <div class="popCont">
+                                        <div class="dateSetting">
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn first">이전 해로 이동</button>
+                                                <button type="button" class="setBtn prev">이전 달로 이동</button>
+                                            </div>
+                                            <div class="date">
+                                                <span>2024년</span>
+                                                <span>12월</span>
+                                            </div>
+                                            <div class="btnGroup">
+                                                <button type="button" class="setBtn next">다음 달로 이동</button>
+                                                <button type="button" class="setBtn last">다음 해로 이동</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
 
-                            <div class="comTitH3">
-                                <h3>경주 성적비교</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>선수명</th>
-                                                <th>강동국</th>
-                                                <th>강동규</th>
-                                                <th>강동진</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>등급정보</th>
-                                                <td>A1</td>
-                                                <td>S1</td>
-                                                <td>B1</td>
-                                            </tr>
-                                            <tr>
-                                                <th>승률(%)</th>
-                                                <td>5</td>
-                                                <td>30</td>
-                                                <td>5</td>
-                                            </tr>
-                                            <tr>
-                                                <th>연대율(%)</th>
-                                                <td>0</td>
-                                                <td>10</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr>
-                                                <th>삼연대율(%)</th>
-                                                <td>1</td>
-                                                <td>15</td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <th>출전횟수</th>
-                                                <td>10</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <th>출주일수</th>
-                                                <td>30</td>
-                                                <td>40</td>
-                                                <td>30</td>
-                                            </tr>
-                                            <tr>
-                                                <th>최근 6회 평균 착순점</th>
-                                                <td>3.67</td>
-                                                <td>-</td>
-                                                <td>5.72</td>
-                                            </tr>
-                                            <tr>
-                                                <th>최근 6회 평균 득점</th>
-                                                <td>3.67</td>
-                                                <td>-</td>
-                                                <td>5.72</td>
-                                            </tr>
-                                            <tr>
-                                                <th>최근 6회 평균 ST/OST</th>
-                                                <td>3.67</td>
-                                                <td>-</td>
-                                                <td>5.72</td>
-                                            </tr>
-                                            <tr>
-                                                <th>평균 착순점</th>
-                                                <td>3.67</td>
-                                                <td>-</td>
-                                                <td>5.72</td>
-                                            </tr>
-                                            <tr>
-                                                <th>평균 ST/OST</th>
-                                                <td>0.25 / 18.27</td>
-                                                <td>-</td>
-                                                <td>0.24 / 18.06</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div class="comTitH3">
-                                <h3>상대 전적 결과</h3>
-                            </div>
-
-                            <div class="comDataTable both">
-                                <div class="tableArea sizeM" style="height: 590px;">
-                                    <table>
-                                        <caption></caption>
-                                        <colgroup>
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                            <col style="width:25%;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>경주회차</th>
-                                                <th>선수 1(순위)</th>
-                                                <th>선수 2(순위)</th>
-                                                <th>선수 3(순위)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating red">강동규 (1위)</span>
-                                                </td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button> </th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating blue">강동규 (2위)</span>
-                                                </td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating mint">강동규 (3위)</span>
-                                                </td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                            <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>-</td>
-                                                <td>강동진 (5위)</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        <div class="comCalendar inPop"> <!--class 'inPop' : 레이어팝업 내부에 들어올 때-->
+                                            <ul class="weekDays">
+                                                <li class="dayItem"><p>월</p></li>
+                                                <li class="dayItem"><p>화</p></li>
+                                                <li class="dayItem"><p>수</p></li>
+                                                <li class="dayItem"><p>목</p></li>
+                                                <li class="dayItem"><p>금</p></li>
+                                                <li class="dayItem"><p>토</p></li>
+                                                <li class="dayItem"><p class="sun">일</p></li>
+                                            </ul>
+                                            <ul class="dayGroup">
+                                                <li class="dayItem">
+                                                    <span class="txt">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">4</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">5</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">6</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">7</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">8</span>
+                                                </li>
+                                                <li class="dayItem today"> <!--class 'today' : 오늘 날짜 표시-->
+                                                    <span class="txt">9</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">10</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">11</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">12</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">13</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark blue">14</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">15</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">16</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">17</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">18</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">19</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">20</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">21</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">22</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">23</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">24</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">25</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">26</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark mint">27</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="mark yellow">28</span>
+                                                    
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">29</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">30</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt">31</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">1</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">2</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">3</span>
+                                                </li>
+                                                <li class="dayItem">
+                                                    <span class="txt none">4</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 경주결과 팝업 -->
+                    <div class="cptSection">
+                        <!-- 일별달력 슬라이드  -->
+                        <div class="comDateSwiper sticky">
+                            <div class="swiper dateSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue on" onclick="scrlMoveTo('boat01', this)"> <!--class 'on' : 현재 날짜-->
+                                            <span class="region">경정</span>
+                                            <span class="date">01</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue" onclick="scrlMoveTo('boat02', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">02</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox blue" onclick="scrlMoveTo('boat03', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">03</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red" onclick="scrlMoveTo('boat04', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">04</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green" onclick="scrlMoveTo('boat05', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">05</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green" onclick="scrlMoveTo('boat06', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">06</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green" onclick="scrlMoveTo('boat07', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">07</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green" onclick="scrlMoveTo('boat08', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">08</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox green" onclick="scrlMoveTo('boat09', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">09</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red" onclick="scrlMoveTo('boat10', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">10</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red" onclick="scrlMoveTo('boat11', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">11</span>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button type="button" class="dateBox red" onclick="scrlMoveTo('boat12', this)">
+                                            <span class="region">경정</span>
+                                            <span class="date">12</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next selectDate"></div>
+                                <div class="swiper-button-prev selectDate"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modLinkScroll">
+                        <div class="cptLinkSection" id="boat01">
+                            <div class="sectArea">
+                                <div class="comTitH2 mRow">
+                                    <h2>제 01경주</h2>
+                                </div>
+                                <div class="comDataTable both">
+                                    <div class="tableArea sizeXL">
+                                        <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>정번</th>
+                                                    <th>선수명</th>
+                                                    <th>등급</th>
+                                                    <th>모터</th>
+                                                    <th>보트</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>전두식</td>
+                                                    <td>A2</td>
+                                                    <td>73</td>
+                                                    <td>39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>정훈민</td>
+                                                    <td>A3</td>
+                                                    <td>82</td>
+                                                    <td>14</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>서화모</td>
+                                                    <td>A1</td>
+                                                    <td>104</td>
+                                                    <td>38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>이현지</td>
+                                                    <td>B2</td>
+                                                    <td>14</td>
+                                                    <td>108</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>손유정</td>
+                                                    <td>B2</td>
+                                                    <td>51</td>
+                                                    <td>106</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>김종목</td>
+                                                    <td>B1</td>
+                                                    <td>40</td>
+                                                    <td>83</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cptLinkSection" id="boat02">
+                            <div class="sectArea">
+                                <div class="comTitH2 mRow">
+                                    <h2>제 02경주</h2>
+                                </div>
+                                <div class="comDataTable both">
+                                    <div class="tableArea sizeXL">
+                                        <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>정번</th>
+                                                    <th>선수명</th>
+                                                    <th>등급</th>
+                                                    <th>모터</th>
+                                                    <th>보트</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>전두식</td>
+                                                    <td>A2</td>
+                                                    <td>73</td>
+                                                    <td>39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>정훈민</td>
+                                                    <td>A3</td>
+                                                    <td>82</td>
+                                                    <td>14</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>서화모</td>
+                                                    <td>A1</td>
+                                                    <td>104</td>
+                                                    <td>38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>이현지</td>
+                                                    <td>B2</td>
+                                                    <td>14</td>
+                                                    <td>108</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>손유정</td>
+                                                    <td>B2</td>
+                                                    <td>51</td>
+                                                    <td>106</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>김종목</td>
+                                                    <td>B1</td>
+                                                    <td>40</td>
+                                                    <td>83</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 출주표 보는 법 안내 팝업 -->
+                    <div id="infoChulju" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('infoChulju');">닫기</button>
+                                        <div class="popTitle">출주표 보는법</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+                                            <div class="cptNumbGuide">
+                                                <div class="guideArea">
+                                                    <div class="imgArea">
+                                                        <img src="../../images/contents/cont01_01_02_02_001.png" alt="경주 출주표. 상세 하단 참조" class="pcView">
+                                                        <img src="../../images/contents/cont01_01_02_02_001_m.png" alt="경주 출주표. 상세 하단 참조" class="mView">
+                                                    </div>
+                                                    <div class="descArea">
+                                                        <ul class="numGroup">
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">01</span>
+                                                                    <span class="txt">경주정보구분</span>
+                                                                </div>
+                                                                <div class="desc">시간대별로 경주 및 출발시간을 안내하고 경주등급(신인, 일반)과  경주종류를 안내합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">02</span>
+                                                                    <span class="txt">체중</span>
+                                                                </div>
+                                                                <div class="desc">선수 체중을 측정하여 중량부과기준(남자 55kg, 여자51kg) 미만 선수는 중량을 부과하여 경주에 출주합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">03</span>
+                                                                    <span class="txt">최근 6회차성적</span>
+                                                                </div>
+                                                                <div class="desc">최근 출전한 6회차의 평균착순점, 평균득점, 승률, 연대율, 삼연대율, 평균ST/OST 기록을 안내합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">04</span>
+                                                                    <span class="txt">최근 8경주착순</span>
+                                                                </div>
+                                                                <div class="desc">최근 출전한 8경주의 착순 기록으로 좌측부터 최근 성적순으로 표기합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">05</span>
+                                                                    <span class="txt">연간누적성적</span>
+                                                                </div>
+                                                                <div class="desc">연간 누적 평균착순점, 연대율을 의미합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">06</span>
+                                                                    <span class="txt">F/L</span>
+                                                                </div>
+                                                                <div class="desc">등급심사기간의 출발위반 횟수를 표기하고, 반기단위로 기록합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">07</span>
+                                                                    <span class="txt">평균 사고점</span>
+                                                                </div>
+                                                                <div class="desc">등급심사시간의 평균사고점을 의미합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">08</span>
+                                                                    <span class="txt">금일출주경주</span>
+                                                                </div>
+                                                                <div class="desc">해당 경주를 제외한 금일 출주 경주번호를 안내합니다.</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">09</span>
+                                                                    <span class="txt">전일성적</span>
+                                                                </div>
+                                                                <div class="desc">전일 출전한 경주, 착순, 코스를 안내합니다.</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="cptNumbGuide">
+                                                <div class="guideArea">
+                                                    <div class="imgArea">
+                                                        <img src="../../images/contents/cont01_01_02_02_002.png" alt="경주 출주표. 상세 하단 참조" class="pcView">
+                                                        <img src="../../images/contents/cont01_01_02_02_002_m.png" alt="경주 출주표. 상세 하단 참조" class="mView">
+                                                    </div>
+                                                    <div class="descArea">
+                                                        <ul class="numGroup">
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">10</span>
+                                                                    <span class="txt">6개월 코스별 연대율/코스별 출주횟수</span>
+                                                                </div>
+                                                                <div class="desc">최근 6개월 동안 발생한 선수의 코스 연대율 및 코스별 출주횟수</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">11</span>
+                                                                    <span class="txt">모터성적</span>
+                                                                </div>
+                                                                <div class="desc">번호, 평균 착순점, 연대율</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">12</span>
+                                                                    <span class="txt">보트성적</span>
+                                                                </div>
+                                                                <div class="desc">번호, 평균 착순점, 연대율</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="cptNumbGuide">
+                                                <div class="guideArea">
+                                                    <div class="imgArea"></div>
+                                                    <div class="descArea">
+                                                        <ul class="numGroup">
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">평균착순점</span>
+                                                                </div>
+                                                                <div class="desc">경주 착순에 따라 주어지는 착순점의 합계를 출주횟수로 나눈 점수로 선수의 경주능력을 가장 쉽게 알 수 있는 객관적인 수치</div>
+                                                                <!-- 
+                                                                경주등급
+                                                                착순
+                                                                1위
+                                                                2위
+                                                                3위
+                                                                4위
+                                                                5위
+                                                                6위
+                                                                일반∙이벤트 경주
+                                                                10점
+                                                                8점
+                                                                6점
+                                                                4점
+                                                                2점
+                                                                1점
+                                                                일반∙이벤트 경주외
+                                                                11점
+                                                                9점
+                                                                7점
+                                                                5점
+                                                                3점
+                                                                2점
+                                                                ! 동착발생 시 모두 해당 착순점을 부여 -->
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">평균득점</span>
+                                                                </div>
+                                                                <div class="desc">평균착순점(착순점합계÷출주횟수) 에서 평균사고점(사고점합계÷출주횟수) 을 뺀 점수</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">승률(연대율)ㆍ(삼연대율)</span>
+                                                                </div>
+                                                                <div class="desc">1위(1ㆍ2위)(1ㆍ2ㆍ3위)로 골인한 횟수를 출주횟수로 나누어 백분율로 나타낸 것</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">평균ST(Start Time)</span>
+                                                                </div>
+                                                                <div class="desc">플라잉스타트 경주에서 대시계가 0초를 가리키고 난 후 보트의 출발선 통과 시간을 알리는 수치로 낮을수록 빠른 출발을 나타냄</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">평균OST(OnlineStart Time)</span>
+                                                                </div>
+                                                                <div class="desc">온라잉스타트 경주에서 출주신호 이후 출발기 기계장치가 풀려 계류장을 출발하는 시점부터 플라잉스타트라인까지(335m 거리) 통과 시간을 알리는 수치로 낮을수록 빠른 출발을 나타냄</div>
+                                                            </li>
+                                                            <li class="numItem">
+                                                                <div class="tit">
+                                                                    <span class="num">??</span>
+                                                                    <span class="txt">평균사고점</span>
+                                                                </div>
+                                                                <div class="desc">해당등급심사기간의 사고점의 합계를 출추횟수로 나눈 점수</div>
+                                                                <div class="comAddGuide"> 
+                                                                    <p class="guide">사고점이란 경주중 실격, 경고, 주의 등으로 선수에게 주어지는 감점</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 모터성적 정보 팝업 -->
                     <div id="raceResult01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
@@ -1033,396 +1415,320 @@
                                 <div class="popupContainer">
                                     <div class="popupContArea">
                                         <button class="btnPopClose" onclick="closePopup('raceResult01');">닫기</button>
-                                        <div class="popTitle">경주결과</div>
+                                        <div class="popTitle">모터성적 정보</div>
                                         <div class="popCont">
                                             <!-- 팝업 컨텐츠 영역 -->
                                             <div class="cptSection">
                                                 <div class="sectArea">
-                                                    <div class="comTitH2 mRow">
-                                                        <h2>제 06경주 (출발시간 11:40)</h2>
-                                                        <p class="etcAdds">2024년 08월 22일 34회 2일차</p>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea sizeM">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>경정종류</th>
-                                                                        <th>경주등급</th>
-                                                                        <th>출발시간</th>
-                                                                        <th>거리</th>
-                                                                        <th>경주상황</th>
-                                                                        <th>특이사항</th>
-                                                                        <th>결과</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>대상경정</td>
-                                                                        <td>일반</td>
-                                                                        <td>11:40</td>
-                                                                        <td>1200m</td>
-                                                                        <td>성립</td>
-                                                                        <td>-</td>
-                                                                        <td>확정</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea sizeM">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                    <col style="width:14.2857%;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>날씨</th>
-                                                                        <th>기온</th>
-                                                                        <th>풍향</th>
-                                                                        <th>풍속</th>
-                                                                        <th>습도</th>
-                                                                        <th>수온</th>
-                                                                        <th>수위</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>비</td>
-                                                                        <td>32℃</td>
-                                                                        <td>동</td>
-                                                                        <td>4㎧</td>
-                                                                        <td>76%</td>
-                                                                        <td>30℃</td>
-                                                                        <td>249㎝</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:33.3333%;">
-                                                                    <col style="width:33.3333%;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>1주회</th>
-                                                                        <th>2주회</th>
-                                                                        <th>3주회</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>0:37.85</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="comTitH3">
-                                                        <h3>경주영상</h3>
-                                                    </div>
-                                                    
-                                                    <div class="comMovieBox">
-                                                        <div class="boxArea">
-                                                            <ul class="movieList">
-                                                                <li class="movieItem">
-                                                                    <a href="#" target="_blank" title="새창열림">전체 경주 영상 보기</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    
                                                     <div class="comTitH3 mRow">
-                                                        <h3>착순</h3>
+                                                        <h3>경주기록표</h3>
                                                     </div>
 
+                                                    <div class="comDataTable">
+                                                        <div class="tableArea sizeM">
+                                                            <table>
+                                                                <caption></caption>
+                                                                <colgroup>
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>번호</th>
+                                                                        <th>출주횟수</th>
+                                                                        <th>출전회차<br>(년도/회차)</th>
+                                                                        <th>1착</th>
+                                                                        <th>2착</th>
+                                                                        <th>3착</th>
+                                                                        <th>평균착순점</th>
+                                                                        <th>연대율</th>
+                                                                        <th>최고타임</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>104</td>
+                                                                        <td>2024/37</td>
+                                                                        <td>43</td>
+                                                                        <td>9</td>
+                                                                        <td>8</td>
+                                                                        <td>6</td>
+                                                                        <td>5.44</td>
+                                                                        <td>39.5</td>
+                                                                        <td>1:14.782</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="comTitH3 mRow">
+                                                        <h3>경주별 순위기록</h3>
+                                                    </div>
+    
                                                     <div class="comDataTable both">
                                                         <div class="tableArea sizeM">
                                                             <table>
                                                                 <caption></caption>
                                                                 <colgroup>
                                                                     <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
-                                                                    <col style="width:auto;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
                                                                 </colgroup>
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>경주회차</th>
                                                                         <th>착순</th>
-                                                                        <th>선수정보</th>
+                                                                        <th>정번</th>
+                                                                        <th>진입코스</th>
                                                                         <th>모터</th>
                                                                         <th>보트</th>
                                                                         <th>소개항주</th>
-                                                                        <th>진입코스</th>
-                                                                        <th>ST</th>
-                                                                        <th>항주시간</th>
-                                                                        <th>위반행위</th>
+                                                                        <th>ST/OST</th>
                                                                         <th>틸트각</th>
-                                                                        <th>전법</th>
-                                                                        <th>비고</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <!-- to Dev: 순위별 포인트 컬러 class -->
+                                                                    <!-- 1위 : 'tRed' / 2위 : 'tOrange' / 3위 : 'tKey' -->
                                                                     <tr>
-                                                                        <th>1</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num01">1</span><a href="#none" class="player">김상인</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tRed tBold">1</span></td>
+                                                                        <td>황민주</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
                                                                         <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>2</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num02">2</span><a href="#none" class="player">강동진</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tOrange tBold">2</span></td>
+                                                                        <td>류석현</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
                                                                         <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>3</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num03">3</span><a href="#none" class="player">김광진</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tKey tBold">3</span></td>
+                                                                        <td>손근성</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
                                                                         <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>4</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num04">4</span><a href="#none" class="player">곽훈신</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tBold">4</span></td>
+                                                                        <td>정경호</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
                                                                         <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>5</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num05">5</span><a href="#none" class="player">정언열</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tBold">5</span></td>
+                                                                        <td>이태희</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
                                                                         <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>6</th>
-                                                                        <td>
-                                                                            <div class="name"><span class="sign num06">6</span><a href="#none" class="player">오성균</a></div>
-                                                                        </td>
-                                                                        <td>66</td>
-                                                                        <td>102</td>
-                                                                        <td>6.94</td>
-                                                                        <td>2</td>
-                                                                        <td>0.23</td>
-                                                                        <td>1:16.785</td>
-                                                                        <td>-</td>
-                                                                        <td>+1.5</td>
-                                                                        <td>휘감기</td>
-                                                                        <td>-</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                                    <div class="comTitH3">
-                                                        <h3>심판판정내용</h3>
+                    <!-- 보트성적 정보 팝업 -->
+                    <div id="raceResult02" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('raceResult02');">닫기</button>
+                                        <div class="popTitle">보트성적 정보</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+                                            <div class="cptSection">
+                                                <div class="sectArea">
+                                                    <div class="comTitH3 mRow">
+                                                        <h3>경주기록표</h3>
                                                     </div>
 
-                                                    <div class="comDataTable both colLineDel">
+                                                    <div class="comDataTable">
                                                         <div class="tableArea sizeM">
                                                             <table>
                                                                 <caption></caption>
                                                                 <colgroup>
-                                                                    <col style="width: 11%;">
-                                                                    <col style="width: 11%;">
-                                                                    <col style="width: 11%;">
-                                                                    <col style="width: 15%;">
-                                                                    <col style="width: 11%;">
-                                                                    <col style="width: auto;">
-                                                                    <col style="width: 11%;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
+                                                                    <col style="width:11.1111%;">
                                                                 </colgroup>
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>선수</th>
-                                                                        <th>주회수</th>
-                                                                        <th>장소</th>
-                                                                        <th>적용조항</th>
-                                                                        <th>판정</th>
-                                                                        <th>판정내용</th>
-                                                                        <th>사고종류</th>
+                                                                        <th>번호</th>
+                                                                        <th>출주횟수</th>
+                                                                        <th>출전회차<br>(년도/회차)</th>
+                                                                        <th>1착</th>
+                                                                        <th>2착</th>
+                                                                        <th>3착</th>
+                                                                        <th>평균착순점</th>
+                                                                        <th>연대율</th>
+                                                                        <th>최고타임</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <th>
-                                                                            <div class="name"><span class="sign num01">1</span><a href="#" class="player">김상인</a></div>
-                                                                        </th>
-                                                                        <td>1주</td>
-                                                                        <td>1턴마크</td>
-                                                                        <td>60조(접촉금지)</td>
-                                                                        <td>경고</td>
-                                                                        <td class="left">1주회 1턴마크 선회시 조타불량 실속 4,6호정 방해.</td>
-                                                                        <td>-</td>
+                                                                        <td>104</td>
+                                                                        <td>2024/37</td>
+                                                                        <td>43</td>
+                                                                        <td>9</td>
+                                                                        <td>8</td>
+                                                                        <td>6</td>
+                                                                        <td>5.44</td>
+                                                                        <td>39.5</td>
+                                                                        <td>1:14.782</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
 
-                                                    <div class="comTitH3">
-                                                        <h3>배당률 안내</h3>
+                                                    <div class="comTitH3 mRow">
+                                                        <h3>경주별 순위기록</h3>
                                                     </div>
-
+    
                                                     <div class="comDataTable both">
-                                                        <div class="tableArea">
+                                                        <div class="tableArea sizeM">
                                                             <table>
                                                                 <caption></caption>
                                                                 <colgroup>
-                                                                    <col style="width: 33.3333%;">
-                                                                    <col style="width: 33.3333%;">
-                                                                    <col style="width: 33.3333%;">
+                                                                    <col style="width:auto;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
+                                                                    <col style="width:9.0909%;">
                                                                 </colgroup>
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>승식</th>
-                                                                        <th>승자</th>
-                                                                        <th>평균확정배당률</th>
+                                                                        <th>경주회차</th>
+                                                                        <th>착순</th>
+                                                                        <th>정번</th>
+                                                                        <th>진입코스</th>
+                                                                        <th>모터</th>
+                                                                        <th>보트</th>
+                                                                        <th>소개항주</th>
+                                                                        <th>ST/OST</th>
+                                                                        <th>틸트각</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <!-- to Dev: 순위별 포인트 컬러 class -->
+                                                                    <!-- 1위 : 'tRed' / 2위 : 'tOrange' / 3위 : 'tKey' -->
                                                                     <tr>
-                                                                        <th>단승식</th>
-                                                                        <td><span class="sign num02">2</span></td>
-                                                                        <td>1.3</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tRed tBold">1</span></td>
+                                                                        <td>황민주</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
+                                                                        <td>+1.5</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>연승식</th>
-                                                                        <td><span class="sign num02">2</span></td>
-                                                                        <td>1.0</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tOrange tBold">2</span></td>
+                                                                        <td>류석현</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
+                                                                        <td>+1.5</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>연승식</th>
-                                                                        <td><span class="sign num03">3</span></td>
-                                                                        <td>2.1</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tKey tBold">3</span></td>
+                                                                        <td>손근성</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
+                                                                        <td>+1.5</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>복승식</th>
-                                                                        <td>
-                                                                            <span class="sign num02">2</span> · <span class="sign num03">3</span>
-                                                                        </td>
-                                                                        <td>2.6</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tBold">4</span></td>
+                                                                        <td>정경호</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
+                                                                        <td>+1.5</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>쌍승식</th>
-                                                                        <td>
-                                                                            <span class="sign num02">2</span> · <span class="sign num03">3</span>
-                                                                        </td>
-                                                                        <td>2.3</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>삼복승식</th>
-                                                                        <td>
-                                                                            <span class="sign num02">2</span> · <span class="sign num03">3</span> · <span class="sign num05">5</span>
-                                                                        </td>
-                                                                        <td>4.2</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>쌍복승식</th>
-                                                                        <td>
-                                                                            <span class="sign num02">2</span> · <span class="sign num03">3</span> · <span class="sign num05">5</span>
-                                                                        </td>
-                                                                        <td>4.4</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>삼쌍승식</th>
-                                                                        <td>
-                                                                            <span class="sign num02">2</span> · <span class="sign num03">3</span> · <span class="sign num05">5</span>
-                                                                        </td>
-                                                                        <td>6.1</td>
+                                                                        <th>24회차 2일차 03경주(2024.06.13)</th>
+                                                                        <td><span class="tBold">5</span></td>
+                                                                        <td>이태희</td>
+                                                                        <td>4</td>
+                                                                        <td>98</td>
+                                                                        <td>99</td>
+                                                                        <td>6.93</td>
+                                                                        <td>0.31</td>
+                                                                        <td>+1.5</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                             <!-- //팝업 컨텐츠 영역 -->

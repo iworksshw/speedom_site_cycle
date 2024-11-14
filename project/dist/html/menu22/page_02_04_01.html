@@ -734,18 +734,18 @@
                 <!-- 서브 탑 (타이틀) -->
                 
 
-<div class="cptSubTop bg03">
+<div class="cptSubTop bg02">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">경정선수</a></li>
+            <li class="item"><a href="#">경정 정보</a></li>
             
-            <li class="item"><a href="#">선수현황</a></li>
+            <li class="item"><a href="#">모터/보트정보</a></li>
             
             
         </ul>
-        <div class="subTitle"><h1>연도별 주선보류현황</h1></div>
-        <div class="subText"><p>경정선수의 <b>주선보류현황</b>을 <br>알려드려요.</p></div>
+        <div class="subTitle"><h1>경주기록</h1></div>
+        <div class="subText"><p><b>모터와 보트의 경주기록</b>을<br>확인해보세요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -759,126 +759,624 @@
                 
 
                 <div class="layoutContArea">
+                    
 
-					<div class="cptSection">
-						<div class="sectArea">
-                            <!-- 게시판 리스트 상단 -->
-                            <div class="comGroupTop">
-                                <div class="alignR">
-                                    <ul class="opList">
-                                        <li class="item">
-                                            <div class="frmGroup">
-                                                <div class="frmBox">
-                                                    <select class="iptSlt sm">
-                                                        <option value="">2024</option>
-                                                        <option value="">드롭다운</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-							<div class="comDataTable mt0">
-								<div class="tableArea sizeM">
-									<table>
-										<caption></caption>
-										<colgroup>
-											<col style="width:13.5%;">
-											<col style="width:24%;">
-											<col style="width:20%;">
-											<col style="width:13.5%;">
-											<col style="width:auto;">
-										</colgroup>
-										<thead>
-											<tr>
-                                                <th>No</th>
-												<th>주선제외기간</th>
-												<th>결장선수</th>
-												<th>구분</th>
-												<th>주선제외 사유</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>20240101 ~ 20240114</td>
-												<td><a href="javascript:void(0);" class="txtBtn" onclick="openPopup('playerData01')">박석문/02기 02-019</a></td>
-												<td>성적불량</td>
-                                                <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.82)</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<!-- 페이징 -->
-							<div class="comPaging">
-								<a class="start" href="#"></a>
-								<a class="prev" href="#"></a>
-								<ul class="numList">
-									<li><a href="#">1</a></li>
-									<li class="on"><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-								</ul>
-								<a class="next" href="#"></a>
-								<a class="end" href="#"></a>
-							</div>
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">모터</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">보트</button></li>
+                            </ul>
                         </div>
-                    </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <!-- 검색 박스 -->
+                                        <div class="comSearchBox">
+                                            <div class="searchLine col21Sch">
+                                                <dl class="condition">
+                                                    <dt class="title">연도</dt>
+                                                    <dd class="conBox">
+                                                        <div class="frmGroup">
+                                                            <div class="frmBox">
+                                                                <select class="iptSlt">
+                                                                    <option value="">2024(신형)</option>
+                                                                    <option value="">드롭다운</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="condition">
+                                                    <dt class="title">모터번호</dt>
+                                                    <dd class="conBox">
+                                                        <div class="frmGroup">
+                                                            <div class="frmBox">
+                                                                <input type="text" class="iptText" placeholder="모터번호를 입력해주세요.">
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <button class="btn Primary search">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <!-- 선수별 주선보류현황 팝업 -->
-                    <div id="raceResult01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupInMotion">
-                                <div class="popupContainer">
-                                    <div class="popupContArea">
-                                        <button class="btnPopClose" onclick="closePopup('raceResult01');">닫기</button>
-                                        <div class="popTitle">선수별 주선보류현황</div>
-                                        <div class="popCont">
-                                            <!-- 팝업 컨텐츠 영역 -->
-                                            <div class="cptSection">
-                                                <div class="sectArea">
-                                                    <div class="comTitH2">
-                                                        <h2>김태영 선수(15-005) 주선보류현황</h2>
-                                                    </div>
-
-                                                    <div class="comDataTable">
-                                                        <div class="tableArea sizeM">
-                                                            <table>
-                                                                <caption></caption>
-                                                                <colgroup>
-                                                                    <col style="width:13.5%;">
-                                                                    <col style="width:24%;">
-                                                                    <col style="width:20%;">
-                                                                    <col style="width:auto;">
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>번호</th>
-                                                                        <th>주선보류기간</th>
-                                                                        <th>구분</th>
-                                                                        <th>주선보류 사유</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>20240701 ~ 20240714</td>
-                                                                        <td>성적불량</td>
-                                                                        <td>1 ~ 15 기수 선수중 경주성적불량 최하위 7%(2.66)</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <div class="comGroupTop">
+                                            <div class="alignR">
+                                                <div class="btnList">
+                                                    <div class="alignR moL">
+                                                        <div class="btnBox min">
+                                                            <button type="button" class="btn xs gLine">엑셀저장 <img src="../../images/common/ic_16_file_download.svg" alt="파일 다운로드"> </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+
+                                        <div class="comDataTable">
+                                            <div class="tableArea sizeM">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:8.8%;">
+                                                        <col style="width:8.8%;">
+                                                        <col style="width:8.8%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th rowspan="2" class="btmLine">모터번호</th>
+                                                            <th rowspan="2" class="btmLine">출전회차<br>(년도 / 회차)</th>
+                                                            <th rowspan="2" class="btmLine">출주횟수</th>
+                                                            <th rowspan="2" class="btmLine">1착</th>
+                                                            <th rowspan="2" class="btmLine">2착</th>
+                                                            <th rowspan="2" class="btmLine">3착</th>
+                                                            <th rowspan="2" class="btmLine">평균착순점</th>
+                                                            <th rowspan="2" class="btmLine">연대율</th>
+                                                            <th colspan="3">최고타임</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>3주회</th>
+                                                            <th>2주회(온라인)</th>
+                                                            <th>2주회(플라잉)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- 페이징 -->
+                                        <div class="comPaging">
+                                            <a class="start" href="#"></a>
+                                            <a class="prev" href="#"></a>
+                                            <ul class="numList">
+                                                <li><a href="#">1</a></li>
+                                                <li class="on"><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                            </ul>
+                                            <a class="next" href="#"></a>
+                                            <a class="end" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <!-- 검색 박스 -->
+                                        <div class="comSearchBox">
+                                            <div class="searchLine col21Sch">
+                                                <dl class="condition">
+                                                    <dt class="title">연도</dt>
+                                                    <dd class="conBox">
+                                                        <div class="frmGroup">
+                                                            <div class="frmBox">
+                                                                <select class="iptSlt">
+                                                                    <option value="">2024(신형)</option>
+                                                                    <option value="">드롭다운</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="condition">
+                                                    <dt class="title">보트번호</dt>
+                                                    <dd class="conBox">
+                                                        <div class="frmGroup">
+                                                            <div class="frmBox">
+                                                                <input type="text" class="iptText" placeholder="보트번호를 입력해주세요.">
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <button class="btn Primary search">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cptSection">
+                                    <div class="sectArea">
+                                        <div class="comGroupTop">
+                                            <div class="alignR">
+                                                <div class="btnList">
+                                                    <div class="alignR moL">
+                                                        <div class="btnBox min">
+                                                            <button type="button" class="btn xs gLine">엑셀저장 <img src="../../images/common/ic_16_file_download.svg" alt="파일 다운로드"> </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="comDataTable">
+                                            <div class="tableArea sizeM">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:auto;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:9%;">
+                                                        <col style="width:8.8%;">
+                                                        <col style="width:8.8%;">
+                                                        <col style="width:8.8%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th rowspan="2" class="btmLine">보트번호</th>
+                                                            <th rowspan="2" class="btmLine">출전회차<br>(년도 / 회차)</th>
+                                                            <th rowspan="2" class="btmLine">출주횟수</th>
+                                                            <th rowspan="2" class="btmLine">1착</th>
+                                                            <th rowspan="2" class="btmLine">2착</th>
+                                                            <th rowspan="2" class="btmLine">3착</th>
+                                                            <th rowspan="2" class="btmLine">평균착순점</th>
+                                                            <th rowspan="2" class="btmLine">연대율</th>
+                                                            <th colspan="3">최고타임</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>3주회</th>
+                                                            <th>2주회(온라인)</th>
+                                                            <th>2주회(플라잉)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>2024 / 36</td>
+                                                            <td>37</td>
+                                                            <td>7</td>
+                                                            <td>6</td>
+                                                            <td>5</td>
+                                                            <td>5.38</td>
+                                                            <td>35.1%</td>
+                                                            <td>-</td>
+                                                            <td>1:33.058</td>
+                                                            <td>1:13.909</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- 페이징 -->
+                                        <div class="comPaging">
+                                            <a class="start" href="#"></a>
+                                            <a class="prev" href="#"></a>
+                                            <ul class="numList">
+                                                <li><a href="#">1</a></li>
+                                                <li class="on"><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                            </ul>
+                                            <a class="next" href="#"></a>
+                                            <a class="end" href="#"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -896,10 +1394,10 @@
         <div class="subBtmBox">
             <dl class="manager">
                 <dt>담당자</dt>
-                <dd><span>경정기획팀</span><b>최동훈</b></dd>
+                <dd><span>경정기획팀</span><b>손창권</b></dd>
             </dl>
             <ul class="btmList">
-                <li class="phone">031-790-8306</li>
+                <li class="phone">031-790-8509</li>
                 <li class="email"><a href="#">이메일 보내기</a></li>
             </ul>
         </div>
