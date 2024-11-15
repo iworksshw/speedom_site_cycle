@@ -1,0 +1,117 @@
+.comSchDetail {
+    .schBox {
+        display: flex; gap: 14px;
+        .schFrmIpt {width: 100%; height: 100%; border: 0; background: #FFF; border-radius: 8px; padding: 0 20px; font-size: rem(18px); font-weight: 600; color: var(--Gray-900);}
+        .schFrmIpt::placeholder {color: var(--Gray-400); font-weight: 400;}
+        .schFrmIpt:focus-visible {outline: none;}
+
+        .schSelc {            
+            flex: 1; height: 60px; position: relative; border: 3px solid transparent; border-radius: 8px; background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #2E5680 0%, #3AB4A5 100%); background-origin: border-box; background-clip: content-box, border-box;
+            .box {
+                display: flex; align-items: center; height: 100%;
+                .selc {width: 160px; height: 48px; font-size: rem(18px); color: var(---Gray-600); line-height: 1.6; padding-left: 20px; margin-right: 20px; border: 0; border-radius: 0; background: #fff url(../../images/common/ic_24_down_arr.svg) center right no-repeat;}
+                .ipt {width: 100%; flex: 1; font-size: rem(18px); font-weight: 600; color: var(--Gray-900); height: 100%; border: 0; border-radius: 8px;}
+                .ipt::placeholder {color: var(--Gray-400); font-weight: 400;}
+                .selc:focus-visible,
+                .ipt:focus-visible {outline: none;}
+            }
+        }
+        .schBtn {
+            button {
+                width: 120px; height: 60px; font-size: rem(18px); font-weight: 500; color: #FFF; display: flex; gap: 8px; align-items: center; justify-content: center; border-radius: 8px; background: var(---Primary); line-height: 1.6;
+                &::before {content:''; width: 24px; height: 24px; background: url(../../images/common/ic_24_search_white.svg) center no-repeat;}
+            }            
+        }
+        .schDet {
+            width: 135px; height: 60px; font-size: rem(18px); font-weight: 500; color: var(--Gray-500); border: 1px solid var(--Gray-300); display: flex; gap: 8px; align-items: center; justify-content: center; border-radius: 8px; background: #FFF; line-height: 1.6; cursor: pointer;
+            &::after {content:''; width: 24px; height: 24px; background: url(../../images/common/ic_24_down_arr_g.svg) center no-repeat;}
+        }    
+    }
+    .rstRe {
+        margin-top: 16px; display: flex; justify-content: right;
+        .iptLbl {font-size: rem(16px); color: var(--Gray-800); font-weight: 600;}
+    }
+    .detBox {
+        display:none; margin-top: 20px; padding: 32px 40px; border-radius: 12px; border: 1px solid var(--Bg-Line-line-200); background: var(--Bg-Line-bg-100);
+        .list {
+            display: flex; flex-wrap: wrap; margin-top: 24px; gap: 40px;
+            &:first-child {margin-top: 0;}
+            dl {
+                display: flex; align-items: center; gap: 8px; width: calc(50% - 20px);
+                dt {
+                    width: 70px; font-size: rem(16px); font-weight: 600; line-height: 1.6; color: var(--Gray-800);
+                    &.gray {color: var(--Gray-600); font-weight: 400;}
+                }
+                dd {
+                    flex: 1; display: flex; gap: 8px;
+                    .dBtn {
+                        height: 48px; flex: 1; display: flex; align-items: center; justify-content: center; font-size: rem(16px); color: var(--Gray-800); line-height: 1.5; border-radius: 8px; border: 1px solid var(--Gray-200); background: #FFF; cursor: pointer;
+                        &.on {color: var(--Gray-900); font-weight: 600; border: 1px solid var(---Primary); background: #F0FAF7;}
+                    }
+                    .datePick {
+                        display: flex; align-items: center;
+                        li {
+                            input {width: 100%; height: 48px; font-size: rem(16px); color: var(--Gray-600); line-height: 1.6; border-radius: 8px; border: 1px solid var(--Gray-200); padding: 0 16px; background: url(../../images/common/ic_20_calendar.svg) #FFF no-repeat 91% center;}
+                            &.hpn {margin: 0 8px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 600;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.detOpen {
+        .schDet {
+            color: var(---Primary); border: 1px solid var(---Primary);
+            &::after {background: url(../../images/common/ic_24_up_arr_p.svg) center no-repeat;}
+        }
+        .detBox {display: block;}
+    }
+
+    @include media("mobile"){
+        .schBox {
+            gap: 12px; flex-wrap: wrap;
+            .schSelc {
+                width: 100%; height: 48px; flex: none; border: 2px solid transparent;
+                .box {
+                    .selc {height: 100%; width: 80px; font-size: rem(16px); border-radius: 8px; background-size: 16px;}
+                    .ipt {font-size: rem(16px);}
+                }
+            }
+            .schBtn {
+                width: calc(50% - 6px);
+                button {
+                    width: 100%; height: 48px; font-size: rem(16px);
+                    &::before {width: 20px; height: 20px; background-size: 16px;}
+                }
+            }
+            .schDet {
+                height: 48px; font-size: rem(16px); width: calc(50% - 6px);
+                &::after {width: 20px; height: 20px; background-size: 16px;}
+            }
+        }
+        .rstRe {
+            .iptLbl {font-size: rem(15px);}
+        }
+        .detBox {
+            padding: 20px 16px;
+            .list {
+                 margin-top: 20px; gap: 0; display: block;
+                dl {
+                    display: block; width: auto;
+                    dt {
+                        width: auto; margin-bottom: 8px;
+                        &.gray {margin-top: 16px;}
+                    }
+                    dd {
+                        .datePick {
+                            li {
+                                input {font-size: rem(15px);}
+                                &.hpn {margin: 0 4px; font-size: rem(15px);}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
