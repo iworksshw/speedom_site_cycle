@@ -17,7 +17,14 @@
                 }
             }
         }
-        .rstRi {width: 240px;}
+        .rstRi {
+            width: 240px;
+            .comPopularStx {
+                .listTen {
+                    ul {gap: 16px;}
+                }
+            } 
+        }
     }
 
     @include media("mobile"){        
