@@ -738,252 +738,30 @@
 							<li><a href="#"><span>나의 모의베팅</span></a></li>
 							<li><a href="#"><span>나의 활동지수</span></a></li>
 							<li><a href="#"><span>나의 게시글</span></a></li>
-							<li><a href="#"><span>나의 스크랩</span></a></li>
+							<li class="on"><a href="#"><span>나의 스크랩</span></a></li>
 							<li><a href="#"><span>내알림</span></a></li>
 							<li><a href="#"><span>내정보 수정</span></a></li>
 							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
-
-					<div class="userArea">
-						<div class="info user">
-							<span class="grade">일반회원</span><br>
-							<strong>홍길동</strong>
-							<span class="id">(user1234)</span>
-						</div>
-						<div class="info">
-							가입일 : <span>2024.09.15</span>
-							<span class="state tRed">경고 : <span>1</span>회</span>
-						</div>
-						
-						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
-					</div>
 				</div>
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<div class="layoutContArea myMain">
-					<!-- 서브 탑 (타이틀) -->
+				<div class="layoutContArea">
+                    <!-- 서브 탑 (타이틀) -->
                     <div class="cptSubTop">
                         <div class="subTopArea">
                             <ul class="location">
                                 <li class="item"><a href="#">홈</a></li>
+                                <li class="item"><a href="#">마이페이지</a></li>
                             </ul>
+							<div class="subTitle">
+								<h1>나의 스크랩</h1>
+							</div>
                         </div>
                     </div>
 
-					<div class="cptDataSum bg01">
-						<div class="dataSum mRow">
-							<ul class="inner">
-								<li>
-									<!--20241112 모바일 아이콘 추가-->
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_betting.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_betting_m.svg" alt=""></div>
-									</div>
-									<!--// 20241112 모바일 아이콘 추가-->
-									<div class="item">모의베팅 순위</div>
-									<div class="val">158위</div>
-								</li>
-								<li>
-									<!--20241112 모바일 아이콘, 툴팁 추가-->
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_activity.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_activity_m.svg" alt=""></div>
-									</div>
-									<div class="item">현재 보유 활동지수
-										<!--20241116 모달팝업으로 변경-->
-										<button type="button" class="popIcon" onclick="openPopup('infoActivityGuide')">팝업 열기</button>
-										<!--// 20241116 모달팝업으로 변경-->
-									</div>
-									<!--// 20241112 모바일 아이콘, 툴팁 추가-->
-									<div class="val">350,000 <i class="unit">P</i></div>
-								</li>
-								<li>
-									<!--20241112 모바일 아이콘 추가-->
-									<div class="icon">
-										<div class="pcView"><img src="../../images/common/ic_mypage_sum_notify.svg" alt=""></div>
-										<div class="mView"><img src="../../images/common/ic_mypage_sum_notify_m.svg" alt=""></div>
-									</div>
-									<!--// 20241112 모바일 아이콘 추가-->
-									<div class="item">새알림</div>
-									<div class="val">30</div>
-								</li>
-							</ul>
-						</div>
-						<div class="addInfo">
-							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
-						</div>
-					</div>
-
-					<!--20241112 모의베팅 목록 추가 : cptDataList으로 클래스 변경 div.sectArea 삭제 -->
-					<div class="cptDataList">
-						<div class="comTitH2 bk">
-							<h2>나의 모의베팅</h2>
-							<div class="right">
-								<button type="button" class="txtBtn">더 보기</button>
-							</div>
-						</div>
-						
-						<ul class="dataListBox col3">
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
-									<div class="date">2024-09-09</div>
-									<div class="val tBlue">
-										<span class="state">환급</span>
-										+1,050,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">구매</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">[부산01] 삼복승 2-4-5</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">환불</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!--// 20241112 모의베팅 목록 추가-->
-
-					<div class="cptDataList">
-						<div class="comTitH2 bk">
-							<h2>나의 활동지수</h2>
-							<div class="right">
-								<button type="button" class="txtBtn">더 보기</button>
-							</div>
-						</div>
-
-						<ul class="dataListBox col3">
-							<li>
-								<a href="#" class="block">
-									<div class="tit">회원가입 이벤트</div>
-									<div class="date">2024-09-09</div>
-									<div class="val tBlue">
-										<span class="state">적립</span>
-										+1,050,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">예상과 후기 사용자 글쓰기</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">사용</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="block">
-									<div class="tit">예상과 후기 사용자 글쓰기</div>
-									<div class="date">2024-09-08</div>
-									<div class="val tRed">
-										<span class="state">사용</span>
-										-50,000 <i class="unit">P</i>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="cptBoardList">
-                        <div class="boardListArea">
-							<div class="comTitH2 bk">
-								<h2>나의 게시글</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-
-                            <!-- 게시판 리스트 -->
-                            <div class="listTable">
-                                <table>
-                                    <caption></caption>
-                                    <colgroup>
-                                        <col style="width:120px;">
-                                        <col style="width:auto;">
-                                        <col style="width:100px;">
-                                        <col style="width:120px;">
-                                        <col style="width:140px;">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">0</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 2024 상반기 경륜 7대 뉴스, ‘광명스피돔에서 생긴 일’ 새 글 경륜 7대 뉴스 2024 상반기 경륜 7대 뉴스, 한글50자 까지 나열됩니다</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                        <span class="icon new">새로운 글</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="num">예상과후기</td>
-                                            <td class="bdTitle left">
-                                                <div class="title">
-                                                    <a href="#">[경륜] 목록 리스트 총 15개 노출</a>
-                                                    <span class="icons">
-                                                        <span class="read">[130]</span>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                            <td class="recom"><span class="recommend">123</span></td>
-                                            <td>2024.07.05</td>
-                                            <td class="views">35125</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-					<div class="cptSection">
-                        <div class="sectArea">
-							<div class="comTitH2 bk mb0">
-								<h2>나의 스크랩</h2>
-								<div class="right">
-									<button type="button" class="txtBtn">더 보기</button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="modTab">
+                    <div class="modTab">
                         <div class="tabMenuGroup tabSwiper">
                             <ul class="tabMenu swiper-wrapper">
                                 <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">선호선수</button></li> <!-- addClass - on : 메뉴 선택됨 -->
@@ -1002,247 +780,64 @@
                             <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
                                 <div class="cptPersonList">
                                     <div class="sectArea">
-                                        <ul class="prsnList">
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <!-- to Dev : 이미지 자료 없을 시에는 하단의 basic 이미지가 들어가도록 해주세요 -->
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span> <!--기본 gray / class : 'blue', 'mint', 'orange'-->
-                                                            <span class="cate">06기</span>
+                                        <!-- 리스트 상단 -->
+                                        <div class="comGroupTop">
+                                            <div class="alignL">
+                                                <div class="unit"><span class="text">나의 선호선수</span></div>
+                                            </div>
+                                            <div class="alignR">
+                                                <ul class="opList">
+                                                    <li class="item">
+                                                        <div class="frmGroup">
+                                                            <div class="frmSearch">
+                                                                <input type="text" class="iptText" placeholder="선수명을 입력해주세요.">
+                                                                <button class="btnSearch">검색</button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/thum/thum_person_list.png" alt="선수 강동국 사진">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate mint">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate orange">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="prsnItem">
-                                                <a href="#" class="prsn">
-                                                    <div class="thumWrap">
-                                                        <img src="../../images/common/thum_person_basic.png" alt="인물사진 기본 썸네일">
-                                                    </div>
-                                                    <div class="txtWrap">
-                                                        <b class="name">강동국</b>
-                                                        <div class="cateGroup">
-                                                            <span class="cate blue">A1</span>
-                                                            <span class="cate">06기</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- 선수 리스트 -->
+                                        <div class="comNoneData">
+                                            <p class="noneTxt">선호선수 목록이 없습니다.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tabCont">
                                 <div class="cptGalleryList">
                                     <div class="galleryListArea">
-										<div class="listBoard col3_1">
-											<ul class="listGroup">
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">스피드온_챔피언십_시즌1_1주차</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">도박 중독의 과정 알아가기</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-												<li class="listItem">
-													<a href="#" class="itemLink">
-														<div class="imgBox">
-															<div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
-														</div>
-														<div class="infoBox">
-															<div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
-															<ul class="info">
-																<li class="item date">2024.07.24</li>
-																<li class="item">조회수 : 200</li>
-																<li class="item cate">
-																	<span>플레이존</span>
-																	<span>예상과후기</span>
-																</li>
-															</ul>
-														</div>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-					<!--20241116 모달팝업 추가-->
-                    <div id="infoActivityGuide" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupContainer">
-                                <div class="popupContArea">
-                                    <button class="btnPopClose" onclick="closePopup('infoActivityGuide');">닫기</button>
-                                    <div class="popTitle">활동지수 이용안내</div>
-                                    <div class="popCont">
-                                        <!-- 팝업 컨텐츠 영역 -->
-                                        <div class="cptQuickMove">
-											<div class="boxArea bgKey">
-												<div class="quickBox">
-													<div class="txtArea">
-														<em class="point">경륜경정 홈페이지 이용활성화를 위해 아래 회원활동에 따라 <br class="pcView">
-														활동지수가 적립되고 이용할 수 있습니다.</em>
-													</div>
-												</div>
-											</div>
-
-											<div class="comTitH2 mRow">
-												<h2>활동지수는 아래 활동 항목에 따라 제공합니다.</h2>
-												<p class="rightTxt">* 단위는 P(포인트)라고 합니다.</p>
-											</div>
-
-											<div class="comTitH3">
-												<h3>가입</h3>
-											</div>
-											<div class="comBasicList space">
-												<ul class="listGroup">
-													<li class="item">신규회원가입 시 <em class="tBold">50,000P</em>를 제공</li>
-													<li class="item">기존회원은 홈페이지 오픈 시 일괄 <em class="tBold">100,000P</em>를 제공</li>
-													<li class="item">신규회원가입 후 첫 로그인 시 <em class="tBold">50,000P</em>를 일일 1회 제공</li>
-													<li class="item">매일 로그인 시 <em class="tBold">10,000P</em>를 일일 1회 제공</li>
-												</ul>
-											</div>
-
-											<div class="comTitH3">
-												<h3>참여</h3>
-											</div>
-											<div class="comBasicList space">
-												<ul class="listGroup">
-													<li class="item">예상과 후기의 게시글 작성 시 <em class="tBold">10,000P</em>를 일일 최대 5회 제공</li>
-													<li class="item">예상과 후기의 댓글 작성 시 <em class="tBold">5,000P</em>를 일일 최대 10회 제공</li>
-													<li class="item">예상과 후기의 게시글 추천 시 <em class="tBold">1,000P</em>를 일일 최대 10회 제공</li>
-												</ul>
-											</div>
-										</div>
-
-										<div class="cptEtcInfo">
-											<div class="infoBox">
-												<div class="comBasicList">
-													<ul class="listGroup">
-														<li class="item">
-															<b class="sTit">포인트 사용 규정</b>
-															<i class="sTxt">활동지수 포인트는 모의베팅 사용 시 적립된 포인트로 사용이 가능합니다.</i>
-														</li>
-														<li class="item">
-															<b class="sTit">포인트 유효 기간</b>
-															<i class="sTxt">경륜경정 홈페이지에서 진행되는 활동지수이벤트를 통해 당첨자 선정 후 모든 회원은 일괄 초기화되며 활동에 따라 재적립 됩니다.</i>
-														</li>
-														<li class="item">
-															<b class="sTit">포인트 소멸 기준</b>
-															<i class="sTxt">회원탈퇴 시 보유한 활동지수는 즉시 소멸됩니다.</i>
-														</li>
-														<li class="item">
-															<b class="sTit">포인트 지급 정지</b>
-															<i class="sTxt">부정행위/경고/신고 대상 회원은 활동지수 지급이 해제 시까지 정됩니다.</i>
-														</li>
-														<li class="item">
-															<b class="sTit">포인트 확인 및 관리</b>
-															<i class="sTxt">회원은 활동지수현황에서 활동지수 내역을 실시간으로 확인합니다.</i>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-                                        <!-- //팝업 컨텐츠 영역 -->
+                                        <!-- 게시판 리스트 상단 -->
+                                        <div class="comGroupTop">
+                                            <div class="alignL">
+                                                <div class="unit"><span class="text">나의 경륜 동영상</span></div>
+                                            </div>
+                                            <div class="alignR">
+                                                <ul class="opList">
+                                                    <li class="item">
+                                                        <div class="frmGroup">
+                                                            <div class="frmSearch">
+                                                                <input type="text" class="iptText" placeholder="동영상 제목을 입력해주세요.">
+                                                                <button class="btnSearch">검색</button>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+            
+                                        <!-- 리스트 영역 -->
+                                        <div class="comNoneData">
+                                            <p class="noneTxt">경륜 동영상 목록이 없습니다.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<!--// 20241116 모달팝업 추가-->
+
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				

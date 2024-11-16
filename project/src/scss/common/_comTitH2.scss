@@ -55,6 +55,9 @@
         .rightTxt {font-size: rem(15px); margin-left: 12px;}
         &.mRow {
             width: 100%; flex-wrap: wrap; 
+            h2 {
+                width: 100%;
+            }
             .right {
                 width: 100%; margin-top: 24px;
                 .frmBox {

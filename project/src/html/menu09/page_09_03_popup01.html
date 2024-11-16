@@ -28,8 +28,8 @@
 					<div class="lnbArea">
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
-							<li class="on"><a href="#"><span>나의 모의베팅</span></a></li>
-							<li><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 모의베팅</span></a></li>
+							<li class="on"><a href="#"><span>나의 활동지수</span></a></li>
 							<li><a href="#"><span>나의 게시글</span></a></li>
 							<li><a href="#"><span>나의 스크랩</span></a></li>
 							<li><a href="#"><span>내알림</span></a></li>
@@ -49,49 +49,40 @@
                                 <li class="item"><a href="#">마이페이지</a></li>
                             </ul>
 							<div class="subTitle">
-								<h1>나의 모의베팅</h1>
+								<h1>나의 활동지수</h1>
                                 <div class="right">
-                                    <div class="selectDate">
-										<div class="val">2024년 9월 2주</div>
-										<button type="button" class="prev">이전</button>
-										<button type="button" class="next">다음</button>
-									</div>
+									<!--20241116 모달팝업으로 변경-->
+									<button type="button" class="popIcon" onclick="openPopup('infoHistory')">팝업 열기</button>
+									<!--// 20241116 모달팝업으로 변경-->
+                                    <div class="frmBox">
+                                        <select class="iptSlt">
+                                            <option value="">2024년</option>
+                                            <option value="">2023년</option>
+                                        </select>
+                                    </div>
                                 </div>
 							</div>
                         </div>
                     </div>
 
 					<div class="cptDataSum">
-						<div class="dataSum totalSum mRow">
-                            <div class="total">
-                                <div class="item">현재 보유 활동지수
-									<!--20241116 모달팝업으로 변경-->
-									<button type="button" class="popIcon" onclick="openPopup('infoActivityGuide')">팝업 열기</button>
-									<!--// 20241116 모달팝업으로 변경-->
-                                </div>
-                                <div class="val">2,000,000 <i class="unit">P</i></div>
-                            </div>
-                            
+						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
-									<span class="item">나의 랭킹</span>
-									<span class="val">1,223 <i class="unit">위</i></span>
-								</li>
-								<li>
-									<span class="item">획득한 활동지수</span>
-									<span class="val">123,456 <i class="unit">P</i></span>
-								</li>
-								<li>
-									<span class="item">참여한 경주수</span>
-									<span class="val">123,456 <i class="unit">개</i></span>
-								</li>
-								<li>
-									<span class="item">나의 적중률
+									<div class="item">현재 보유 활동지수
 										<!--20241116 모달팝업으로 변경-->
-										<button type="button" class="popIcon" onclick="openPopup('infoAccuracy')">팝업 열기</button>
+										<button type="button" class="popIcon" onclick="openPopup('infoActivityGuide')">팝업 열기</button>
 										<!--// 20241116 모달팝업으로 변경-->
-									</span>
-									<span class="val">99.99 <i class="unit">%</i></span>
+									</div>
+									<div class="val">2,000,000 <i class="unit">P</i></div>
+								</li>
+								<li>
+									<div class="item">8월 적립 활동지수</div>
+									<div class="val tBlue">+3,000,500 <i class="unit">P</i></div>
+								</li>
+								<li>
+									<div class="item">8월 사용 활동지수</div>
+									<div class="val tRed">-1,000,500 <i class="unit">P</i></div>
 								</li>
 							</ul>
 						</div>
@@ -105,35 +96,36 @@
 										<button type="button" class="tabName on">전체</button>
 									</li>
 									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName">구매</button>
+										<button type="button" class="tabName">적립</button>
 									</li>
 									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName">환급</button>
-									</li>
-									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName">기타</button>
+										<button type="button" class="tabName">사용</button>
 									</li>
 								</ul>
+							</div>
+							
+							<div class="right">
+								<p class="txtS">활동지수 포인트는 회원의 활동지표로 사용되며 <span class="tBold">현금 전환이 되지 않습니다.</span></p><!--20241116 span.tBold 추가-->
 							</div>
 						</div>
 						
 						<ul class="dataListBox">
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tRed">
-										<span class="state">구매</span>
+										<span class="state">사용</span>
 										-50,000 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[부산01] 삼복승 2-4-5</div>
+									<div class="tit">회원가입 이벤트</div>
 									<div class="date">2024-09-09</div>
 									<div class="val tBlue">
-										<span class="state">환급</span>
+										<span class="state">적립</span>
 										+1,050,000 <i class="unit">P</i>
 									</div>
 								</a>
@@ -143,17 +135,17 @@
 									<div class="tit">이벤트 적립</div>
 									<div class="date">2024-09-09</div>
 									<div class="val tBlue">
-										<span class="state">환급</span>
+										<span class="state">적립</span>
 										+500 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tRed">
-										<span class="state">구매</span>
+										<span class="state">사용</span>
 										-50,000 <i class="unit">P</i>
 									</div>
 								</a>
@@ -163,7 +155,7 @@
 									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
 									<div class="date">2024-09-09</div>
 									<div class="val tBlue">
-										<span class="state">환급</span>
+										<span class="state">적립</span>
 										+1,050,000 <i class="unit">P</i>
 									</div>
 								</a>
@@ -173,47 +165,47 @@
 									<div class="tit">[모의베팅] 24회차 05경주 환급</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tBlue">
-										<span class="state">환급</span>
+										<span class="state">적립</span>
 										+1,050,000 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[부산01] 삼복승 2-4-5</div>
+									<div class="tit">회원가입 이벤트</div>
 									<div class="date">2024-09-09</div>
 									<div class="val tBlue">
-										<span class="state">환급</span>
+										<span class="state">적립</span>
 										+1,050,000 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tRed">
-										<span class="state">구매</span>
+										<span class="state">사용</span>
 										-50,000 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tRed">
-										<span class="state">구매</span>
+										<span class="state">사용</span>
 										-50,000 <i class="unit">P</i>
 									</div>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="block">
-									<div class="tit">[광명05] 연승 5-1</div>
+									<div class="tit">예상과 후기 사용자 글쓰기</div>
 									<div class="date">2024-09-08</div>
 									<div class="val tRed">
-										<span class="state">구매</span>
+										<span class="state">사용</span>
 										-50,000 <i class="unit">P</i>
 									</div>
 								</a>
@@ -235,9 +227,9 @@
 							<a class="end" href="#"></a>
 						</div>
 					</div>
-                    
+					
 					<!--20241116 모달팝업 추가-->
-                    <div id="infoActivityGuide" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div id="infoActivityGuide" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
                             <div class="popupContainer">
@@ -320,16 +312,18 @@
                         </div>
                     </div>
 
-                    <div id="infoAccuracy" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div id="infoHistory" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
                             <div class="popupContainer">
                                 <div class="popupContArea">
-                                    <button class="btnPopClose" onclick="closePopup('infoAccuracy');">닫기</button>
-                                    <div class="popTitle">나의 적중률</div>
+                                    <button class="btnPopClose" onclick="closePopup('infoHistory');">닫기</button>
+                                    <div class="popTitle">활동지수 적립/사용 조회</div>
                                     <div class="popCont">
                                         <!-- 팝업 컨텐츠 영역 -->
-                                        <div class="tempArea">내용없음</div>
+										<div class="comBasicTxt">
+											<p class="txt">최근 6개월까지 적립 사용내역을 조회할 수 있어요.</p>
+										</div>
                                         <!-- //팝업 컨텐츠 영역 -->
                                     </div>
                                 </div>
@@ -337,7 +331,7 @@
                         </div>
                     </div>
 					<!--// 20241116 모달팝업 추가-->
-					
+
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				
