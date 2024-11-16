@@ -3,6 +3,7 @@
 .frmGroup {
     margin-top:12px; display:flex; align-items:flex-start; gap: 12px;
     &:first-child {margin-top:0;}
+    &.full {flex-wrap: wrap;}
     &.gap40 {gap: 40px}
     &.error, .error {
         .iptText {padding-left: 16px; border: 1px solid var(--system-danger-50);}
