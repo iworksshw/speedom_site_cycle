@@ -1,6 +1,7 @@
 .comPopularStx {
     margin-top: 40px;
     &:first-child {margin-top: 0;}
+    &.mView {display: none;}
     .listTen {
         ul {
             display: flex; flex-wrap: wrap; gap: 20px 40px;
@@ -46,6 +47,8 @@
 
     @include media("mobile"){
         margin-top: 36px;
+        &.mView {display: block; margin: 100px -16px 0; padding: 0 16px; padding-top: 40px; border-top: 10px solid #F4F6FA;}
+        &.pcView {display: none;}
         .listTen {
             ul {
                 gap: 20px 0;
