@@ -45,7 +45,9 @@
             }
         }
     }
-
+    @include media("tablet"){
+        .stepGrp {display: none;}
+    }
     @include media("mobile"){
         margin-top: 40px;
         .stepGrp {display: none;}
