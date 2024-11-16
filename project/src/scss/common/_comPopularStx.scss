@@ -1,0 +1,73 @@
+.comPopularStx {
+    margin-top: 40px;
+    &:first-child {margin-top: 0;}
+    &.mView {display: none;}
+    .listTen {
+        ul {
+            display: flex; flex-wrap: wrap; gap: 20px 40px;
+            li {
+                width: calc(50% - 20px); display: flex; align-items: center; gap: 8px; min-width: 0;
+                .num {display: flex; width: 22px; height: 22px; justify-content: center; align-items: center; color: var(--Gray-600); font-size: rem(14px); border-radius: 4px; background: var(--Bg-Line-bg-300); line-height: 1.6; font-weight: 600;} 
+                .pTxt {flex: 1; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; overflow: hidden; min-width: 0;}
+                &:nth-of-type(1) {order: 1;}
+                &:nth-of-type(2) {order: 3;}
+                &:nth-of-type(3) {order: 5;}
+                &:nth-of-type(4) {order: 7;}
+                &:nth-of-type(5) {order: 9;}
+                &:nth-of-type(6) {order: 2;}
+                &:nth-of-type(7) {order: 4;}
+                &:nth-of-type(8) {order: 6;}
+                &:nth-of-type(9) {order: 8;}
+                &:nth-of-type(10) {order: 10;}
+            }
+            .rank .num {color: #FFF; background: var(--Point-Primary2);} 
+            // 조건 인기 검색어 순서가 100% 인 경우
+            &.wd100 {
+                li {width: 100%; order: initial;}
+            }          
+        }
+    }
+
+    .schStx {
+        .schTit {
+            display: flex; align-items: center; justify-content: space-between;
+            h3 {font-size: rem(20px); color: var(--Gray-900); font-weight: 700; line-height: 1.4;}
+            .ri {font-size: rem(15px); color: var(--Gray-600); line-height: 1.6;}
+            .del {cursor: pointer;}
+            .time {
+                display: flex; align-items: center; gap: 2px;
+                 &::before {content:''; width: 16px; height: 16px; background: url(../../images/common/ic_16_clock_g.svg) no-repeat center;}
+            }
+        }
+        .schStxRst {
+            margin-top: 20px;
+            .noStxRst {font-size: rem(16px); color: var(--Gray-600); line-height: 1.6;}
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 36px;
+        &.mView {display: block; margin: 100px -16px 0; padding: 0 16px; padding-top: 40px; border-top: 10px solid #F4F6FA;}
+        &.pcView {display: none;}
+        .listTen {
+            ul {
+                gap: 20px 0;
+                li {
+                    width: 100%; order: initial !important;
+                    .num {font-size: rem(13px);}
+                    .pTxt {font-size: rem(15px);}
+                }
+            }
+        }
+        .schStx {
+            .schTit {
+                h3 {font-size: rem(18px); font-weight: 600; line-height: 1.3;}
+                .ri {font-size: rem(14px); line-height: 1.6;}
+            }
+            .schStxRst {
+                margin-top: 16px;
+                .noStxRst {font-size: rem(15px);}
+            }
+        }
+    }
+}

@@ -735,46 +735,138 @@
                 <div class="schHdClose"></div>
                 <div class="inCont">
                     <h2><b>찾으시는 정보</b>를 <span class="blk"></span> 입력해주세요.</h2>
-                    <div class="schBox">
-                        <input type="text" class="schFrmIpt" required placeholder="검색어를 입력하세요." />
-                        <button class="schFrmIptBtn">검색</button>
-                        <div class="schBoxRel">
-                            <ul>
-                                <li><strong>선</strong>두</li>
-                                <li><strong>선</strong>수간 친인척 관계</li>
-                                <li><strong>선</strong>수이름</li>
-                                <li><strong>선</strong>수정보</li>
-                                <li><strong>선</strong>수상금</li>
-                                <li>제재<strong>선</strong>수</li>
-                                <li><strong>선</strong>수정보</li>
-                                <li><strong>선</strong>수상금</li>
-                                <li>제재<strong>선</strong>수</li>
-                                <li><strong>선</strong>수 자동완성 최대 10개까지 노출</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="comSchStx">
-                        <div class="schStx">
-                            <div class="schTit">
-                                <h3>최근 검색어</h3>
-                                <div class="ri del">전체삭제</div>
-                            </div>
-                            <div class="schStxRst">
-                                <p class="noStxRst">최근 검색어가 없습니다.</p>
+                    <form action="">
+                        <div class="schBox">
+                            <input type="text" class="schFrmIpt" required placeholder="검색어를 입력하세요." />
+                            <button class="schFrmIptBtn">검색</button>
+                            <div class="schBoxRel">
+                                <ul>
+                                    <li><strong>선</strong>두</li>
+                                    <li><strong>선</strong>수간 친인척 관계</li>
+                                    <li><strong>선</strong>수이름</li>
+                                    <li><strong>선</strong>수정보</li>
+                                    <li><strong>선</strong>수상금</li>
+                                    <li>제재<strong>선</strong>수</li>
+                                    <li><strong>선</strong>수정보</li>
+                                    <li><strong>선</strong>수상금</li>
+                                    <li>제재<strong>선</strong>수</li>
+                                    <li><strong>선</strong>수 자동완성 최대 10개까지 노출</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="comPopularStx">
-                        <div class="schStx">
-                            <div class="schTit">
-                                <h3>인기 검색어</h3>
-                                <div class="ri time">24.07.25 23:55</div>
-                            </div>
-                            <div class="schStxRst">
-                                <p class="noStxRst">인기 검색어가 없습니다.</p>
+
+                        <div class="comSchStx">
+                            <div class="schStx">
+                                <div class="schTit">
+                                    <h3>최근 검색어</h3>
+                                    <div class="ri del">전체삭제</div>
+                                </div>
+                                <div class="schStxRst">
+                                    <div class="swiper-container schStxSlide">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="schStxSlidePage">
+                                            <button class="prev">이전</button>
+                                            <button class="next">다음</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="comPopularStx">
+                            <div class="schStx">
+                                <div class="schTit">
+                                    <h3>인기 검색어</h3>
+                                    <div class="ri time">24.07.25 23:55</div>
+                                </div>
+                                <div class="schStxRst">
+                                    <div class="listTen">
+                                        <ul>
+                                            <li class="rank">
+                                                <div class="num">1</div>
+                                                <div class="pTxt">출주표</div>
+                                            </li>
+                                            <li class="rank">
+                                                <div class="num">2</div>
+                                                <div class="pTxt">배당률</div>
+                                            </li>
+                                            <li class="rank">
+                                                <div class="num">3</div>
+                                                <div class="pTxt">경륜</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">4</div>
+                                                <div class="pTxt">희망길벗</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">5</div>
+                                                <div class="pTxt">경주결과</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">6</div>
+                                                <div class="pTxt">순위예측</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">7</div>
+                                                <div class="pTxt">영상관</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">8</div>
+                                                <div class="pTxt">선수</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">9</div>
+                                                <div class="pTxt">스피돔</div>
+                                            </li>
+                                            <li>
+                                                <div class="num">10</div>
+                                                <div class="pTxt">베팅</div>
+                                            </li>                                            
+                                        </ul>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
                 </div>
             </div>
         </div>

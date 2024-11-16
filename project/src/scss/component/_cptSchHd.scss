@@ -1,5 +1,6 @@
 .cptSchHd {
     .schDim {width: 100%; height: 100%; font-size: 0; background: rgba(0, 0, 0, 0.5); position: fixed; left: 0; top: 0; z-index: 2;}
+    .mView {display: none;}
     .cptArea {
         padding: 80px 0; background: var(--Bg-Line-bg-100); position: relative; z-index: 3;
         .schHdClose {position: absolute; top: 36px; right: 36px; width: 28px; height: 28px; background: url(../../images/common/ic_28_close.svg) no-repeat center; cursor: pointer;}
@@ -12,11 +13,48 @@
             }
             .schBox {
                 margin-top: 28px; height: 64px; position: relative; border: 3px solid transparent; border-radius: 8px; background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #2E5680 0%, #3AB4A5 100%); background-origin: border-box; background-clip: content-box, border-box;
-                input {width: 100%; height: 100%; border: 0; background: #FFF; border-radius: 8px; padding: 0 20px; font-size: rem(18px); font-weight: 600; color: var(--Gray-900);}
-                input::placeholder {color: var(--Gray-400); font-weight: 400;}
-                input:focus-visible {outline: none;}
-                button {font-size: 0; position: absolute; top: 0; right: 0; width: 68px; height: 60px; background: url(../../images/common/ic_28_search.svg) no-repeat center; z-index: 1;}
-            }
+                .schFrmIpt {width: 100%; height: 100%; border: 0; background: #FFF; border-radius: 8px; padding: 0 20px; font-size: rem(18px); font-weight: 600; color: var(--Gray-900);}
+                .schFrmIpt::placeholder {color: var(--Gray-400); font-weight: 400;}
+                .schFrmIpt:focus-visible {outline: none;}
+                .schFrmIptBtn {font-size: 0; position: absolute; top: 0; right: 0; width: 68px; height: 60px; background: url(../../images/common/ic_28_search.svg) no-repeat center; z-index: 1;}
+                .schBoxRel {
+                    display:none; position: absolute; top: 70px; left: -3px; width: 318px; border-radius: 12px; padding: 10px 0; border: 1px solid var(--Gray-800); background: #FFF; box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10); z-index: 3;
+                    ul {
+                        li {
+                            font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; padding: 6px 16px;
+                            strong {color: var(---Primary); font-weight: 600;}
+                            &:hover {background: var(--Bg-Line-bg-300); cursor: pointer; font-weight: 600;}
+                        }
+                    }
+                }
+                .schFrmIpt:focus + .schFrmIptBtn + .schBoxRel {display: block;}
+            }         
         }
-    }   
-}
+    }
+
+    @include media("mobile"){
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 100; padding-top: 68px; overflow: auto;
+        .mView {
+            display: flex; background: #FFF; height: 68px; align-items: center; padding: 0 16px; position: fixed; top: 0; left: 0; right: 0; z-index: 5; border-bottom: 1px solid var(--Bg-Line-line-100);
+            .mTit {font-size: rem(20px); font-weight: 700; line-height: 1.4;}
+            .mSchHdClose {position: absolute; top: 20px; right: 16px; width: 24px; height: 24px; z-index: 1; background: url(../../images/common/ic_28_close.svg) no-repeat center; cursor: pointer;}
+        }
+        .cptArea {
+            padding: 40px 0;
+            .schHdClose {display: none;}
+            .inCont {
+                padding: 0 16px;
+                h2 {
+                    font-size: rem(28px); font-weight: 300;
+                    .blk {display: block;}
+                }
+                .schBox {
+                    margin-top: 20px; height: 56px; border: 2px solid transparent;
+                    .schFrmIpt {font-size: rem(16px); padding: 0 12px;}
+                    .schFrmIptBtn {height: 52px; width: 52px; background-size: 24px;}
+                    .schBoxRel {top: 62px; left: 0; width: 100%;}
+                }                
+            }            
+        }
+    }
+} 

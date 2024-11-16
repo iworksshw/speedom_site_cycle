@@ -724,76 +724,6 @@
         </div>
         <!-- //상단영역 -->
 
-        <!-- 통합검색 -->
-        <div class="cptSchHd">
-            <div class="mView">
-                <div class="mTit">통합검색</div>
-                <div class="mSchHdClose"></div>
-            </div>            
-            <div class="schDim"></div>
-            <div class="cptArea">
-                <div class="schHdClose"></div>
-                <div class="inCont">
-                    <h2><b>찾으시는 정보</b>를 <span class="blk"></span> 입력해주세요.</h2>
-                    <div class="schBox">
-                        <input type="text" class="schFrmIpt" required placeholder="검색어를 입력하세요." />
-                        <button class="schFrmIptBtn">검색</button>
-                        <div class="schBoxRel">
-                            <ul>
-                                <li><strong>선</strong>두</li>
-                                <li><strong>선</strong>수간 친인척 관계</li>
-                                <li><strong>선</strong>수이름</li>
-                                <li><strong>선</strong>수정보</li>
-                                <li><strong>선</strong>수상금</li>
-                                <li>제재<strong>선</strong>수</li>
-                                <li><strong>선</strong>수정보</li>
-                                <li><strong>선</strong>수상금</li>
-                                <li>제재<strong>선</strong>수</li>
-                                <li><strong>선</strong>수 자동완성 최대 10개까지 노출</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="comSchStx">
-                        <div class="schStx">
-                            <div class="schTit">
-                                <h3>최근 검색어</h3>
-                                <div class="ri del">전체삭제</div>
-                            </div>
-                            <div class="schStxRst">
-                                <p class="noStxRst">최근 검색어가 없습니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comPopularStx">
-                        <div class="schStx">
-                            <div class="schTit">
-                                <h3>인기 검색어</h3>
-                                <div class="ri time">24.07.25 23:55</div>
-                            </div>
-                            <div class="schStxRst">
-                                <p class="noStxRst">인기 검색어가 없습니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //통합검색 -->
-
-        <!-- 최근 검색어 swiper -->
-        <script>
-            var swiper = new Swiper('.schStxSlide', {
-                slidesPerView: 'auto',
-                freeMode: true,
-                loop: true,
-                navigation: {
-                    prevEl: ".schStxSlidePage .prev",
-                    nextEl: ".schStxSlidePage .next",
-                },
-            });
-        </script>
-        <!-- //최근 검색어 swiper -->
-
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
 
@@ -804,16 +734,16 @@
                 <!-- 서브 탑 (타이틀) -->
                 
 
-<div class="cptSubTop bg04">
+<div class="cptSubTop bg05">
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">희망길벗</a></li>
+            <li class="item"><a href="#"></a></li>
             
             
         </ul>
-        <div class="subTitle"><h1>길벗 상담안내</h1></div>
-        <div class="subText"><p>도움이 필요한<br /><b>무엇이든 물어보세요.</b></p></div>
+        <div class="subTitle"><h1>통합검색</h1></div>
+        <div class="subText"><p><b>경륜</b>의 모든 것,<br />통합검색으로 한 번에 확인하세요.</p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -825,30 +755,281 @@
     </div>
 </div>
 
-                
+                <div class="layoutContArea">
+                    <div class="cptSchRst">
+                        <div class="schRstArea">
+                            <!-- 좌측 검색 영역  -->
+                            <div class="rstLe">
+                                <div class="comSchDetail">
+                                    <div class="schBox">
+                                        <div class="schSelc">
+                                            <div class="box">
+                                                <select name="" id="" class="selc">
+                                                    <option value="">전체</option>
+                                                    <option value="">-</option>
+                                                    <option value="">-</option>
+                                                </select>
+                                                <input type="text" class="ipt" required placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="schBtn">
+                                            <button>검색</button>
+                                        </div>
+                                        <div class="schDet">상세검색</div>
+                                    </div>
+                                    <div class="rstRe">
+                                        <div class="frmGroup">
+                                            <div class="frmBox maxCont">
+                                                <input id="chk101" type="checkbox" class="iptChk" />
+                                                <label for="chk101" class="iptLbl">결과내 재검색</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detBox">
+                                        <div class="list">
+                                            <dl>
+                                                <dt>검색대상</dt>
+                                                <dd>
+                                                    <div class="dBtn on" id="">전체</div>
+                                                    <div class="dBtn" id="">제목</div>
+                                                    <div class="dBtn" id="">내용</div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="list">
+                                            <dl>
+                                                <dt>검색기간</dt>
+                                                <dd>
+                                                    <div class="dBtn on" id="">전체</div>
+                                                    <div class="dBtn" id="">최근1주</div>
+                                                    <div class="dBtn" id="">최근1달</div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="gray">직접입력</dt>
+                                                <dd>
+                                                    <ul class="datePick">
+                                                        <li>
+                                                            <input type="text" placeholder="2024.01.01" />
+                                                        </li>
+                                                        <li class="hpn">-</li>
+                                                        <li>
+                                                            <input type="text" placeholder="2024.03.01" />
+                                                        </li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comSchStx mgH32">
+                                    <div class="schStx">
+                                        <div class="schTit">
+                                            <h3>최근 검색어</h3>
+                                            <div class="ri del">전체삭제</div>
+                                        </div>
+                                        <div class="schStxRst">
+                                            <div class="schStxSlide">
+                                                <div class="noSlide">                                                    
+                                                    <div class="sTxt">선수<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">출주표<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">배당률<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">선수출주표<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">스피돔지점<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">베팅<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">선수<span class="sDel"></span></div>                                                
+                                                    <div class="sTxt">출주표<span class="sDel"></span></div>
+                                                    <div class="sTxt">배당률<span class="sDel"></span></div>
+                                                    <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                                    <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                                    <div class="sTxt">베팅<span class="sDel"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schRstEmpty">
+                                    <h3>
+                                        <strong>‘선수’</strong>에 관한 검색결과가 없습니다.
+                                    </h3>                                    
+                                </div>
+                            </div>
+                            <!-- //좌측 검색 영역  -->
 
-                <!-- 서브 바텀 (담당자) -->
-                
+                            <!-- 우측 인기 검색어 영역  -->
+                            <div class="rstRi">
+                                <div class="comPopularStx">
+                                    <div class="schStx">
+                                        <div class="schTit">
+                                            <h3>인기 검색어</h3>
+                                            <div class="ri time">24.07.25 23:55</div>
+                                        </div>
+                                        <div class="schStxRst">
+                                            <div class="listTen">
+                                                <ul class="wd100">
+                                                    <li class="rank">
+                                                        <div class="num">1</div>
+                                                        <div class="pTxt">출주표</div>
+                                                    </li>
+                                                    <li class="rank">
+                                                        <div class="num">2</div>
+                                                        <div class="pTxt">배당률</div>
+                                                    </li>
+                                                    <li class="rank">
+                                                        <div class="num">3</div>
+                                                        <div class="pTxt">경륜</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">4</div>
+                                                        <div class="pTxt">희망길벗</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">5</div>
+                                                        <div class="pTxt">경주결과</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">6</div>
+                                                        <div class="pTxt">순위예측</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">7</div>
+                                                        <div class="pTxt">영상관</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">8</div>
+                                                        <div class="pTxt">선수</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">9</div>
+                                                        <div class="pTxt">스피돔</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="num">10</div>
+                                                        <div class="pTxt">베팅</div>
+                                                    </li>                                            
+                                                </ul>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //우측 인기 검색어 영역  -->
 
-<div class="cptSubBtm">
-    <div class="subBtmArea">
-        <div class="subBtmBox">
-            <dl class="manager">
-                <dt>담당자</dt>
-                <dd><span>건전화운영팀</span><b>조철희</b></dd>
-            </dl>
-            <ul class="btmList">
-                <li class="phone">02-2067-5577</li>
-                <li class="email"><a href="#">이메일 보내기</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+                        </div>
+                    </div>
 
-                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                    <!-- 검색 결과 7개 탭 -->
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper toMob">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName" title="전체(0)">전체(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="메뉴(0)">메뉴(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="콘텐츠(0)">콘텐츠(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="경주정보(0)">경주정보(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="선수정보(0)">선수정보(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="게시글(0)">게시글(0)</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="영상(0)">영상(0)</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont">
+                                전체
+                            </div>
+                            <div class="tabCont on">
+                                <div class="cptSchRstCont">
+                                    <div class="topSort">
+                                        <div class="sortTit">메뉴 <span class="tKey">0</span></div>
+                                        <div class="sortSelect">
+                                            <div class="comGroupTop">
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="">10개</option>
+                                                            <option value="">15개</option>
+                                                            <option value="">30개</option>
+                                                            <option value="">50개</option>
+                                                            <option value="">100개</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="">최신순</option>
+                                                            <option value="">조회수</option>
+                                                            <option value="">정확도</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comNoneData">
+                                    <p class="noneTxt">'<span class="tKey">선수</span>' 검색결과가 없습니다.</p>
+                                    <p class="noneTxtBottom">
+                                        입력하신 검색어가 정확한지 확인해 주세요. <br />
+                                        비슷한 다른 검색어를 입력해 보세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                콘텐츠
+                            </div>
+                            <div class="tabCont">
+                                경주정보
+                            </div>
+                            <div class="tabCont">
+                                선수정보
+                            </div>
+                            <div class="tabCont">
+                                게시글
+                            </div>
+                            <div class="tabCont">
+                                영상
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //검색 결과 7개 탭 -->
+
+                </div>
                 
             </div>
             <!-- //서브 콘텐츠 영역 -->
+             
+            <!-- 상세검색 토글 , 검색대상/검색기간 토글  -->
+            <script>
+                // 상세검색 버튼 토글 
+                document.addEventListener('DOMContentLoaded', () => {
+                    const schDetButton = document.querySelector('.schDet');
+                    const comSchDetail = document.querySelector('.comSchDetail');
+
+                    schDetButton.addEventListener('click', () => {
+                        comSchDetail.classList.toggle('detOpen');
+                    });
+                });
+                // 검색대상/검색기간 토글
+                document.addEventListener('DOMContentLoaded', () => {
+                    const dBtns = document.querySelectorAll('.dBtn');
+
+                    dBtns.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const parent = button.parentElement;
+                            const siblings = parent.querySelectorAll('.dBtn');
+
+                            siblings.forEach(sibling => sibling.classList.remove('on'));
+                            button.classList.add('on');
+                        });
+                    });
+                });
+            </script>
+            <!-- //상세검색 토글 , 검색대상/검색기간 토글  -->
 
         </div>
         <!-- //중단영역 -->
