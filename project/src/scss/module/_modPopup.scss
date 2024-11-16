@@ -199,7 +199,27 @@
                     img {max-width: 100%; height: auto; display: block;}
                 }          
                 // 시설안내 안내 팝업 중 font-size:20px인 타이틀
-                .modMdPopup_Tit20 {font-size: rem(20px); font-size: 700; line-height: 1.4; margin-bottom: 32px; color: var(---Primary); font-weight: 700;} 
+                .modMdPopup_Tit20 {font-size: rem(20px); font-size: 700; line-height: 1.4; margin-bottom: 32px; color: var(---Primary); font-weight: 700;}
+
+                // 마이페이지 - 활동지수 이용안내
+                [class^=cpt]:not(:first-child) {
+                    margin-top: 32px;
+                }
+                .cptQuickMove .boxArea {
+                    padding: 20px;
+                }
+                .cptEtcInfo .infoBox {
+                    padding: 20px 24px;
+                }
+                .comTitH2 {
+                    margin-top: 32px; flex-wrap: wrap;
+                    h2 {
+                        font-size: rem(18px);
+                    }
+                    .rightTxt {
+                        font-size: rem(14px);
+                    }
+                }
             }
             .popBtm {
                 padding:20px 32px 0; display:flex; justify-content:flex-end;
@@ -238,6 +258,26 @@
                     }
                     // 시설안내 안내 팝업 중 font-size:20px인 타이틀
                     .modMdPopup_Tit20 {font-size: rem(18px); margin-bottom: 24px;}
+                    
+
+                    // 마이페이지 - 활동지수 이용안내
+                    [class^=cpt]:not(:first-child) {
+                        margin-top: 24px;
+                    }
+                    .cptQuickMove .boxArea {
+                        width: calc(100% + 40px);
+                        margin-left: -20px;
+                        padding: 20px;
+                    }
+                    .cptEtcInfo .infoBox {
+                        padding: 20px 16px;
+                    }
+                    .comTitH2 {
+                        margin-top: 16px;
+                        .rightTxt {
+                            margin-left: 0;
+                        }
+                    }
                 }
                 .popBtm {
                     padding:24px 24px 0; display:flex; justify-content:flex-end;
