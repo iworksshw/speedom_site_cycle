@@ -2,9 +2,10 @@
     margin-top: 60px;
     &:first-child {margin-top: 0;}
     .topSort {
-        display: flex; align-items: center; justify-content: space-between;
+        display: flex; align-items: center; justify-content: space-between; min-height: 48px;
         .sortTit {font-size: rem(24px); font-weight: 700; color: var(--Gray-900); line-height: 1.4;}
         .sortSelect {
+            .comGroupTop {margin-bottom: 0;}
             .frmBox {width: 210px; min-width: 210px;}            
         }    
     }
@@ -34,15 +35,15 @@
         .rstContent {
             font-size: rem(15px); color: var(--Gray-600); line-height: 1.6; margin-top: 4px;  text-overflow: ellipsis; overflow: hidden; display: block; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
             .dot {width: 4px; height: 4px; display: inline-block; border-radius: 50%; background: var(--Gray-300); margin: 3px 8px;}
-            a {display: inline-block; color: var(--Gray-600);}
+            a {color: var(--Gray-600); a {text-overflow: ellipsis; overflow: hidden; display: block; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}}
         }
         .bbsFile {
             margin-top: 12px;
             .fileAdd {
                 padding: 12px 12px; background: var(--Bg-Line-bg-200); border-radius: 12px;
                 a {
-                    display: flex; align-items: center; gap: 8px; font-size: rem(16px); color: var(--Gray-900); line-height: 1.6;
-                    &::before {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_file.svg) center no-repeat;}
+                    display: block; font-size: rem(16px); color: var(--Gray-900); line-height: 1.6;
+                    &::before {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_file.svg) center no-repeat; display: inline-block; vertical-align: text-top; margin-right: 8px;}
                 }
             }
             .bbsCont {
@@ -95,6 +96,94 @@
     }
 
     @include media("mobile"){
-        margin-top: 40px;
+        margin-top: 40px;        
+        .topSort {
+            min-height: 36px; margin-bottom: 8px;
+            .sortTit {font-size: rem(20px);}
+            .sortSelect {
+                .frmBox {
+                    width: 110px; min-width: 110px;
+                    select.iptSlt {height: 36px; font-size: rem(14px); padding: 0 12px; background-size: 16px; background-position: 80px center;}
+                }
+            }    
+        }
+        .sortMore {font-size: rem(14px);}
+        .ctt {
+            .link {padding: 16px 0;}
+            dl {
+                dt {
+                    font-size: rem(16px);
+                }
+                dd {}
+            }
+            .btInfo {margin-top: 8px;}
+            .locTxt {
+                display: flex;
+                li {
+                    font-size: rem(14px);
+                    &::after {width: 12px; height: 12px; top: 4px; right: 2px;}
+                }
+            }
+            .bbsDate {
+                display: flex; gap: 16px;
+                li {font-size: rem(14px);}
+            }
+            .rstContent {
+                font-size: rem(14px);
+                .dot {margin: 3px 4px;}
+                a {text-overflow: ellipsis; overflow: hidden; display: block; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+            }
+            .bbsFile {
+                margin-top: 12px;
+                .fileAdd {
+                    a {
+                        font-size: rem(15px); gap: 0;
+                        &::before {margin-right: 8px;}
+                    }
+                }
+                .bbsCont {
+                    padding: 12px 12px; background: var(--Bg-Line-bg-200); border-radius: 12px; margin-top: 8px;
+                    a {font-size: rem(16px); color: var(--Gray-600); line-height: 1.6; text-overflow: ellipsis; overflow: hidden; display: block; white-space: normal; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+                }
+            }
+            .stxLine {
+                position: relative; color: var(--Gray-800); z-index: 1; font-weight: 600;
+                &::before {content:''; position: absolute; left: 0; right: 0; bottom: 0; height: 37%; background: #A1F4C7; z-index: -1;}
+            }
+            .playerRst {
+                display: flex; align-items: center;
+                .pic {
+                    width: 84px;
+                    img {width: 100%; height: 100%; object-fit: cover; display: block;}
+                }
+                dl {
+                    margin-left: 16px;
+                    .playerName {
+                        .nTxt {}
+                        .cateGroup {
+                            .cate {
+                                height: 20px; line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .thumGall {
+            margin: 24px -12px 0; gap: 24px 0;
+            .list {
+                width: 50%; padding: 0 12px;
+                a {
+                    display: block;
+                    .thum {
+                        margin-bottom: 4px;
+                        img {display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover;}
+                    }
+                    .thumTit {font-size: rem(16px);  margin-bottom: 4px;}
+                    .bbsDate {margin-bottom: 4px;}
+                }
+            }
+        }
     }
 }
