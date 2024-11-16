@@ -57,6 +57,9 @@
                 background-image: url('../../images/common/ic_16_arr_right_g.svg');
             }
         }
+        &.bgKey {
+            background-color: #f0faf7;
+        }
         &.interval {
             padding: 24px 40px;
         }
@@ -72,6 +75,7 @@
     
     @include media("mobile"){
         margin-top: 40px;
+        .pcView {display: none;}
         .boxArea {
             width: calc(100% + 32px); margin-left: -16px; border-radius: 0; padding: 24px;
             .quickBox {
