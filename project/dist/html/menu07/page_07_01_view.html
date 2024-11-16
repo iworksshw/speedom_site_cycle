@@ -805,7 +805,7 @@
                                         <div class="alignC">
                                             <div class="btnBox min">
                                                 <button class="btn sm gLine recom">추천하기</button>
-                                                <button class="btn sm gLine report">신고하기</button>
+                                                <button class="btn sm gLine report" onclick="openPopup('sample01');">신고하기</button>
                                             </div>
                                         </div>
                                     </div>
@@ -865,7 +865,7 @@
                                                     <b class="cmtName">공정불법대응센터</b><i class="date">2023.08.02</i>
                                                 </div>
                                                 <div class="alignR">
-                                                    <button class="btnReport">신고</button>
+                                                    <button class="btnReport" onclick="openPopup('sample01');">신고</button>
                                                 </div>
                                             </div>
 
@@ -899,6 +899,45 @@
 
                         </div>
                     </div>
+                    
+                    <!-- 20241116 신고하기 팝업 추가 -->
+                    <div id="sample01" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupContainer">
+                                <div class="popupContArea">
+                                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                    <div class="popTitle">신고하기</div>
+                                    <div class="popCont">
+                                        <!-- 팝업 컨텐츠 영역 -->
+                                        <div class="frmGroup full">
+                                            <div class="frmBox"><input id="rdo101" type="checkbox" class="iptRdo lg" name="rdo101" checked><label for="rdo101" class="iptLbl">음란, 욕설, 개인정보 등 유해 게시글 등록</label></div>
+                                            <div class="frmBox"><input id="rdo102" type="checkbox" class="iptRdo lg" name="rdo101"><label for="rdo102" class="iptLbl">타인비방 및 명예훼손</label></div>
+                                            <div class="frmBox"><input id="rdo103" type="checkbox" class="iptRdo lg" name="rdo101"><label for="rdo103" class="iptLbl">불법 광고 글 반복게시</label></div>
+                                            <div class="frmBox"><input id="rdo104" type="checkbox" class="iptRdo lg" name="rdo101"><label for="rdo104" class="iptLbl">명의도용</label></div>
+                                            <div class="frmBox"><input id="rdo105" type="checkbox" class="iptRdo lg" name="rdo101"><label for="rdo105" class="iptLbl">기타 홈페이지상에서 공공질서에 위배되는 행위반복</label></div>
+                                        </div>
+                                        <div class="comAddGuide point mgH">
+                                            <p class="guide">허위 신고일 경우 신고자에게 불이익이 돌아갈 수도 있으니 신중히 결정 해주시기 바랍니다.</p>
+                                        </div>
+                                        <!-- //팝업 컨텐츠 영역 -->
+                                    </div>
+                
+                                    <!-- 팝업 하단 영역 -->
+                                    <div class="popBtm">
+                                        <div class="comBtnGroup">
+                                            <div class="alignC">
+                                                <div class="btnBox">
+                                                    <button class="btn lg Primary pcW180">신고하기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //20241116 신고하기 팝업 추가 -->
                     
                 </div>
 

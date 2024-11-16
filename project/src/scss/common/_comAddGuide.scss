@@ -1,6 +1,7 @@
 .comAddGuide {
     margin-top: 12px;
     &:first-child {margin-top: 0;}
+    &.mgH {margin-top: 24px; }
     .guide {
         padding-left: 20px; margin-top: 4px; font-size: rem(14px); color: var(--Gray-600); line-height: 1.6; background: url(../../images/common/ico_guide_default.svg) left 5px no-repeat;
         &:first-child {margin-top: 0;}
