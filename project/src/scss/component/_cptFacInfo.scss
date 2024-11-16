@@ -31,12 +31,20 @@
                         b {font-weight: 600;}
                         .tKey {margin-left: 20px;}
                         .popMap {
-                            font-size: rem(15px); color: var(---Primary); cursor: pointer; margin-left: 20px; position: relative; display: inline-flex; align-items: center; border-bottom: 1px solid var(---Primary); line-height: 20px; font-weight: 500;
+                            font-size: rem(15px); color: var(---Primary); cursor: pointer; margin-left: 20px; position: relative; display: inline-flex; 
+                            align-items: center; border-bottom: 1px solid var(---Primary); line-height: 20px; font-weight: 500; flex-shrink: 0;
                             &::before {content:''; width: 16px; height: 16px; background: url(../../images/contents/cont08_04_02_mapIcon.svg) no-repeat center;}
                         }
                         .popUseInfo {font-size: rem(15px); color: var(---Primary); cursor: pointer; position: relative; display: inline-flex; align-items: center; line-height: 20px; font-weight: 500; text-decoration-line: underline; text-decoration-style: solid; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto; text-underline-position: from-font;}
                     }
                 }
+            }
+        }
+    }
+    @include media("tablet"){
+        .list {
+            .cont {
+                width: 100%; margin-top: 24px; flex: none; 
             }
         }
     }

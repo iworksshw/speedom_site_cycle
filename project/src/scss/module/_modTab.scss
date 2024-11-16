@@ -45,7 +45,8 @@
             &.toTab {
                 .tabMenu {
                     .tabItem {
-                        width: 250px; min-width: 240px;
+                        //width: 250px; min-width: 240px;
+                        width: 250px; min-width: max-content;
                     }
                 }
                 & ~ .tabDirection {display: block;}
@@ -67,21 +68,21 @@
             &.toAll {
                 .tabMenu {
                     .tabItem {
-                        width: 180px;
+                        width: 180px; min-width: max-content;
                     }
                 }
             } 
             &.toTab {
                 .tabMenu {
                     .tabItem {
-                        width: 180px; min-width: 180px;
+                        width: 100%;
                     }
                 }
             }
             &.toMob {
                 .tabMenu {
                     .tabItem {
-                        width: 180px; min-width: 180px;
+                        width: 180px; min-width: max-content;
                     }
                 }
                 & ~ .tabDirection {display: block;}

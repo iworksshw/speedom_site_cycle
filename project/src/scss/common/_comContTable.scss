@@ -7,6 +7,7 @@
     .mView {display: none;}
 
     .tableArea {
+        overflow: auto;
         &.sizeS table {min-width: 600px;}
         &.sizeM table {min-width: 800px;}
         &.sizeL table {min-width: 1000px;}
