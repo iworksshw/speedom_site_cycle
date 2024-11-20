@@ -2,4 +2,34 @@
     padding: 100px 0;
     .noneTxt {padding-top: 84px; text-align: center; font-size: rem(18px); font-weight: 700; color: var(--Gray-800); line-height: 1.4; background: url(../../images/common/ic_64_none_data.svg) top center no-repeat;}
     .noneTxtBottom {margin-top: 12px; font-size: rem(16px); color: var(--Gray-600); line-height: 1.6; text-align: center;}
+
+    &.inline {
+        display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; padding: 0; text-align: center;
+        &::before {content: ''; display: inline-block; width: 32px; height: 32px; background: url(../../images/common/ic_32_none_data.svg) top center no-repeat; vertical-align: middle;}
+        .noneTxt {
+            display: inline-block; padding-top: 0; background: none; font-size: rem(16px); font-weight: 400; vertical-align: middle;
+        }
+        
+        // case
+        .cptBoardList & {
+            padding: 40px 0; border-top: 1px solid var(--Gray-900);
+        }
+        .cptDataList & {
+            padding: 36px 20px; border-radius: 12px; background: var(--Bg-Line-bg-100);
+        }
+        .modTab & {
+            margin-top: -60px; padding: 40px 0;
+        }
+        
+        @include media('mobile'){
+            .noneTxt {
+                font-size: rem(15px);
+            }
+        
+            // case
+            .modTab & {
+                margin-top: -40px;
+            }
+        }
+    }
 }
