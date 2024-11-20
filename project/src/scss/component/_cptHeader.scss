@@ -91,14 +91,75 @@
             .myMenuGroup {
                 display: flex; justify-content: flex-end; align-items: center; gap: 20px;
                 .item {
-                    a {
+                    position: relative;
+                    .myLink {
                         padding-left: 28px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 150%; /* 24px */
                     }
-                    &.ico01 a {background: url(../../images/common/ic_head_01.svg) left 2px center no-repeat;}
-                    &.ico02 a {background: url(../../images/common/ic_head_02.svg) left 2px center no-repeat;}
-                    &.ico03 a {background: url(../../images/common/ic_head_03.svg) left 2px center no-repeat;}
-                    &.ico04 a {background: url(../../images/common/ic_head_04.svg) left 2px center no-repeat;}
-                    &.ico05 a {background: url(../../images/common/ic_head_05.svg) left 2px center no-repeat;}
+                    &.ico01 .myLink {background: url(../../images/common/ic_head_01.svg) left 2px center no-repeat;}
+                    &.ico02 {
+                        .myLink {background: url(../../images/common/ic_head_02.svg) left 2px center no-repeat;}
+                        .myMenuArea {
+                            left: calc(50% - 89px);
+                            .myMenuBox {
+                                &::after {
+                                    right: 98px;
+                                }
+                            }
+                        }
+                    } 
+                    &.ico03 .myLink {background: url(../../images/common/ic_head_03.svg) left 2px center no-repeat;}
+                    &.ico04 .myLink {background: url(../../images/common/ic_head_04.svg) left 2px center no-repeat;}
+                    &.ico05 {
+                        .myLink {background: url(../../images/common/ic_head_05.svg) left 2px center no-repeat;}
+                        .myMenuArea {left: auto; right: 0;}
+                    }
+                    &:hover {
+                        .myMenuArea {display: block;}
+                    }
+                    .myMenuArea {
+                        width: 210px; padding-top: 20px; position: absolute; left: 0; top: 20px; filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.12)); display: none;
+                        .myMenuBox {
+                            width: 100%; padding-top: 2px; background: #fff; border-radius: 12px; filter: drop-shadow(0px 0px 1px #ededed);
+                            &::after {
+                                content:""; width: 0; height: 0; border: 9px solid transparent; border-bottom: 15px solid #fff; display: block; 
+                                position: absolute; right:33px; top: -20px;
+                            }
+                            .myInfo {
+                                width: 100%; padding: 16px 28px 11px; border-bottom: 1px solid var(--Bg-Line-line-200);
+                                .name {
+                                    color: var(--Gray-900); font-size: rem(18px); font-style: normal; font-weight: 700; line-height: 1.4; display: block;
+                                }
+                                .timeTxt {
+                                    margin-top: 8px; color: var(--Gray-600); font-size: rem(14px); font-style: normal; font-weight: 300; line-height: 1.6; display: block;
+                                }
+                                .timeBox {
+                                    width: 100%; margin-top: 8px; display: flex;
+                                    .time {
+                                        padding-left: 20px; color: #254962; font-size: rem(14px); font-style: normal; font-weight: 400; line-height: 1.6;
+                                        background: url(../../images/common/ic_16_clock.svg) left center no-repeat;
+                                    }
+                                    .btnOvertime {
+                                        height: 24px; padding: 0 8px; margin-left: 16px; color: #254962; font-size: rem(12px); font-weight: 700;
+                                        border-radius: 4px; background: #EFF6FF;
+                                    }
+                                }
+                            }
+                            .menuBox {
+                                width: 100%; padding-top: 8px; 
+                                .subItem{
+                                    width: 100%;
+                                    a {
+                                        width: 100%; padding: 12px 24px; color: var(--Gray-900); font-size: rem(16px); font-weight: 500; display: block;
+                                        &:hover {background: var(--Bg-Line-bg-200);}
+                                    }
+                                }
+                            }
+                            .btnLogout {
+                                width: 100%; margin-top: 8px; padding: 16px 24px 18px 48px; color: var(---Primary); font-size: rem(15px); font-weight: 500; text-align: left; display: block;
+                                border-top: 1px solid var(--Bg-Line-bg-200); background: url(../../images/common/ic_16_logout_green.svg) 24px center no-repeat;
+                            }
+                        }
+                    }
                 }
             }
         }
