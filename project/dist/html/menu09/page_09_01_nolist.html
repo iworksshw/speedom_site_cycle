@@ -773,7 +773,7 @@
 						<h1 class="lnbTit">마이페이지</h1>
 						<ul class="lnbMenu">
 							<li><a href="#"><span>나의 모의베팅</span></a></li>
-							<li class="on"><a href="#"><span>나의 활동지수</span></a></li>
+							<li><a href="#"><span>나의 활동지수</span></a></li>
 							<li><a href="#"><span>나의 게시글</span></a></li>
 							<li><a href="#"><span>나의 스크랩</span></a></li>
 							<li><a href="#"><span>내알림</span></a></li>
@@ -781,85 +781,170 @@
 							<li><a href="#"><span>회원탈퇴</span></a></li>
 						</ul>
 					</div>
+
+					<div class="userArea">
+						<div class="info user">
+							<span class="grade">일반회원</span><br>
+							<strong>홍길동</strong>
+							<span class="id">(user1234)</span>
+						</div>
+						<div class="info">
+							가입일 : <span>2024.09.15</span>
+							<span class="state tRed">경고 : <span>1</span>회</span>
+						</div>
+						
+						<span class="shortcut"><a href="" class="txtBtn">내정보수정</a></span>
+					</div>
 				</div>
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
-				<div class="layoutContArea">
-                    <!-- 서브 탑 (타이틀) -->
+				<div class="layoutContArea myMain">
+					<!-- 서브 탑 (타이틀) -->
                     <div class="cptSubTop">
                         <div class="subTopArea">
                             <ul class="location">
                                 <li class="item"><a href="#">홈</a></li>
-                                <li class="item"><a href="#">마이페이지</a></li>
                             </ul>
-							<div class="subTitle">
-								<h1>나의 활동지수</h1>
-                                <div class="right">
-									<!--20241116 모달팝업으로 변경-->
-									<button type="button" class="popIcon" onclick="openPopup('infoHistory')">팝업 열기</button>
-									<!--// 20241116 모달팝업으로 변경-->
-                                    <div class="frmBox">
-                                        <select class="iptSlt">
-                                            <option value="">2024년</option>
-                                            <option value="">2023년</option>
-                                        </select>
-                                    </div>
-                                </div>
-							</div>
                         </div>
                     </div>
 
-					<div class="cptDataSum">
+					<div class="cptDataSum bg01">
 						<div class="dataSum mRow">
 							<ul class="inner">
 								<li>
+									<!--20241112 모바일 아이콘 추가-->
+									<div class="icon">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_betting.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_betting_m.svg" alt=""></div>
+									</div>
+									<!--// 20241112 모바일 아이콘 추가-->
+									<div class="item">모의베팅 순위</div>
+									<div class="val">158위</div>
+								</li>
+								<li>
+									<!--20241112 모바일 아이콘, 툴팁 추가-->
+									<div class="icon">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_activity.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_activity_m.svg" alt=""></div>
+									</div>
 									<div class="item">현재 보유 활동지수
 										<!--20241116 모달팝업으로 변경-->
 										<button type="button" class="popIcon" onclick="openPopup('infoActivityGuide')">팝업 열기</button>
 										<!--// 20241116 모달팝업으로 변경-->
 									</div>
-									<div class="val">2,000,000 <i class="unit">P</i></div>
+									<!--// 20241112 모바일 아이콘, 툴팁 추가-->
+									<div class="val">350,000 <i class="unit">P</i></div>
 								</li>
 								<li>
-									<div class="item">8월 적립 활동지수</div>
-									<div class="val tBlue">+3,000,500 <i class="unit">P</i></div>
-								</li>
-								<li>
-									<div class="item">8월 사용 활동지수</div>
-									<div class="val tRed">-1,000,500 <i class="unit">P</i></div>
+									<!--20241112 모바일 아이콘 추가-->
+									<div class="icon">
+										<div class="pcView"><img src="../../images/common/ic_mypage_sum_notify.svg" alt=""></div>
+										<div class="mView"><img src="../../images/common/ic_mypage_sum_notify_m.svg" alt=""></div>
+									</div>
+									<!--// 20241112 모바일 아이콘 추가-->
+									<div class="item">새알림</div>
+									<div class="val">30</div>
 								</li>
 							</ul>
 						</div>
-                    </div>
+						<div class="addInfo">
+							<button type="button" class="btnRefresh alignR" title="새로고침">2024.10.15 20:00 기준</button>
+						</div>
+					</div>
 
+					<!--20241112 모의베팅 목록 추가 : cptDataList으로 클래스 변경 div.sectArea 삭제 -->
 					<div class="cptDataList">
-						<div class="comTabData">
-							<div class="tabMenuGroup tabDataSwiper">
-								<ul class="tabMenu swiper-wrapper">
-									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName on">전체</button>
-									</li>
-									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName">적립</button>
-									</li>
-									<li class="tabItem swiper-slide">
-										<button type="button" class="tabName">사용</button>
-									</li>
-								</ul>
-							</div>
-							
+						<div class="comTitH2 bk">
+							<h2>나의 모의베팅</h2>
 							<div class="right">
-								<p class="txtS">활동지수 포인트는 회원의 활동지표로 사용되며 <span class="tBold">현금 전환이 되지 않습니다.</span></p><!--20241116 span.tBold 추가-->
+								<button type="button" class="txtBtn">더 보기</button>
 							</div>
 						</div>
 						
-						<div class="comNoneData">
-                            <p class="noneTxt">활동지수 적립/사용 내역이 없습니다.</p>
+                        <div class="comNoneData inline">
+                            <p class="noneTxt">활동지수 내역이 없습니다.</p>
                         </div>
 					</div>
-					
+					<!--// 20241112 모의베팅 목록 추가-->
+
+					<div class="cptDataList">
+						<div class="comTitH2 bk">
+							<h2>나의 활동지수</h2>
+							<div class="right">
+								<button type="button" class="txtBtn">더 보기</button>
+							</div>
+						</div>
+						
+                        <div class="comNoneData inline">
+                            <p class="noneTxt">활동지수 내역이 없습니다.</p>
+                        </div>
+					</div>
+
+					<div class="cptBoardList">
+                        <div class="boardListArea">
+							<div class="comTitH2 bk">
+								<h2>나의 게시글</h2>
+								<div class="right">
+									<button type="button" class="txtBtn">더 보기</button>
+								</div>
+							</div>
+						
+                            <div class="comNoneData inline">
+                                <p class="noneTxt">게시글이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="cptSection">
+                        <div class="sectArea">
+							<div class="comTitH2 bk mb0">
+								<h2>나의 스크랩</h2>
+								<div class="right">
+									<button type="button" class="txtBtn">더 보기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modTab">
+                        <div class="tabMenuGroup tabSwiper">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">선호선수</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경륜 동영상</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                <div class="cptPersonList">
+                                    <div class="sectArea">
+                                        <div class="comNoneData inline">
+                                            <p class="noneTxt">선호선수 목록이 없습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+                                <div class="cptGalleryList">
+                                    <div class="galleryListArea">
+                                        <div class="comNoneData inline">
+                                            <p class="noneTxt">경륜 동영상 목록이 없습니다.</p>
+                                        </div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    
 					<!--20241116 모달팝업 추가-->
-                    <div id="infoActivityGuide" class="modMdPopup on"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div id="infoActivityGuide" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
                         <div class="popupDim">딤영역</div>
                         <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
                             <div class="popupContainer">
@@ -941,27 +1026,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="infoHistory" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
-                        <div class="popupDim">딤영역</div>
-                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-                            <div class="popupContainer">
-                                <div class="popupContArea">
-                                    <button class="btnPopClose" onclick="closePopup('infoHistory');">닫기</button>
-                                    <div class="popTitle">활동지수 적립/사용 조회</div>
-                                    <div class="popCont">
-                                        <!-- 팝업 컨텐츠 영역 -->
-										<div class="comBasicTxt">
-											<p class="txt">최근 6개월까지 적립 사용내역을 조회할 수 있어요.</p>
-										</div>
-                                        <!-- //팝업 컨텐츠 영역 -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 					<!--// 20241116 모달팝업 추가-->
-					
 				</div>
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				
