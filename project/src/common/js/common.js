@@ -347,9 +347,11 @@ function all1MenuAction(){
     
     const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
 
-    btnAllMenu.addEventListener("click", function(e){
-        document.querySelector(".allMenuArea").classList.add("on");
-    });
+    if(btnAllMenu){
+        btnAllMenu.addEventListener("click", function(e){
+            document.querySelector(".allMenuArea").classList.add("on");
+        });
+    }
     btnCloseAllMenus.forEach(function(btn){
         btn.addEventListener("click", function(e){
             document.querySelector(".allMenuArea").classList.remove("on");
