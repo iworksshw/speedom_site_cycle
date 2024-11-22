@@ -14,14 +14,20 @@
                     //position: absolute; right: 68px; top: 93px; gap: 24px;
                     position: absolute; right: 59px; top: 93px; gap: 16px;
                     .item {
-                        a {
+                        .myLink {
                             padding-left: 28px; height: 24px; font-size:0; display:block;
                         }
-                        &.ico01 a {background: url(../../images/common/ic_head_01_on.svg) left 2px center no-repeat;}
-                        &.ico02 a {background: url(../../images/common/ic_head_02_on.svg) left 2px center no-repeat;}
-                        &.ico03 a {background: url(../../images/common/ic_head_03_on.svg) left 2px center no-repeat;}
-                        &.ico04 a {background: url(../../images/common/ic_head_04_on.svg) left 2px center no-repeat;}
-                        &.ico05 a {background: url(../../images/common/ic_head_05_on.svg) left 2px center no-repeat;}
+                        &.ico01 .myLink {background: url(../../images/common/ic_head_01_on.svg) left 2px center no-repeat;}
+                        &.ico02 {
+                            .myLink {background: url(../../images/common/ic_head_02_on.svg) left 2px center no-repeat;}
+                            .myMenuArea {left: calc(50% - 105px)}
+                        } 
+                        &.ico03 .myLink {background: url(../../images/common/ic_head_03_on.svg) left 2px center no-repeat;}
+                        &.ico04 .myLink {background: url(../../images/common/ic_head_04_on.svg) left 2px center no-repeat;}
+                        &.ico05 {
+                            .myLink {background: url(../../images/common/ic_head_05_on.svg) left 2px center no-repeat;}
+                            .myMenuArea {left: auto; right: -26px;}
+                        } 
                     }
                 }
             }
@@ -274,12 +280,14 @@
                     .myMenuGroup {
                         position: absolute; right: 74px; top: 83px; gap: 4px;
                         .item {
-                            a {
+                            .myLink {
                                 width: 50px; height: 50px; padding-left: 0; padding-top: 34px; font-size: rem(12px); text-align: center; display:block;
                             }
-                            &.ico01 a {background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;}
+                            &.ico01 .myLink {
+                                background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;
+                            }
                             &.ico02 {display: none;}
-                            &.ico03 a {background: url(../../images/common/ic_head_03.svg) center 8px no-repeat;}
+                            &.ico03 {display: none;}
                             &.ico04 {display: none;}
                             &.ico05 {display: none;}
                         }
