@@ -602,6 +602,16 @@
                                     flex: 1 1 auto;
                                 }
                             }
+                            &.mFull{
+                                .batItem {
+                                    flex: 1 0 calc(33.3333% - 5.3333px);
+                                    
+                                    &.full {
+                                        flex: 1 1 auto;
+                                    }
+                                }
+                            }
+
                         }
                     }
     
