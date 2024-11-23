@@ -190,7 +190,7 @@
 
 
 // 소팅탭 임시
-.tabMenuGroup {
+.cptTheater .tabMenuGroup {
     position: relative;
     &::before {content:''; width: 100%; height: 1px; background: var(--Gray-150); position: absolute; left: 0; bottom: 0; }
     .sortTab {
@@ -248,7 +248,7 @@
 
 
 // 갤러리 임시
-.listBoard {
+.cptTheater .listBoard {
     .listGroup {
         width:100%; display: flex; flex-wrap: wrap; gap: 40px;
         .listItem {
