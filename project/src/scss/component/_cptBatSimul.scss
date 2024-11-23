@@ -380,6 +380,7 @@
                 }
                 .btnBatting {
                     width: 253px; height: 56px; margin-left: 7px; border-radius: 8px; line-height: 55px; text-align: center; font-size: rem(18px); font-weight: 500; color: #fff; background: linear-gradient(90deg, #18C1AC 0%, #3D5B95 100%);
+                    &:disabled {background: var(--Gray-150); color: var(--Gray-300);}
                 }
             }
         }
@@ -688,7 +689,9 @@
                 .btnArea {
                     flex: 0 0 100%;
                     .btnReload {width: 100px;}
-                    .btnBatting {width: calc(100% - 112px); margin-left: 7px;}
+                    .btnBatting {
+                        width: calc(100% - 112px); margin-left: 7px;
+                    }
                 }
             }
         }
