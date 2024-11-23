@@ -332,6 +332,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 플로팅 푸터 옵션 toggle
     batFloating();
+    
+    // 아코디언함수
+    contSlideOpen();
 });
 
 
@@ -347,9 +350,11 @@ function all1MenuAction(){
     
     const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
 
-    btnAllMenu.addEventListener("click", function(e){
-        document.querySelector(".allMenuArea").classList.add("on");
-    });
+    if(btnAllMenu){
+        btnAllMenu.addEventListener("click", function(e){
+            document.querySelector(".allMenuArea").classList.add("on");
+        });
+    }
     btnCloseAllMenus.forEach(function(btn){
         btn.addEventListener("click", function(e){
             document.querySelector(".allMenuArea").classList.remove("on");
@@ -908,6 +913,19 @@ function accordionListInit(){
             });
         });
     });
+}
+
+// 컨텐츠 아코디언 슬라이드 함수
+function contSlideOpen() {
+    if(document.querySelector(".cptContSlide")) {
+        const slideBtns = document.querySelectorAll(".cptContSlide .slideTit");
+
+        slideBtns.forEach(function(slideBtn){
+            slideBtn.addEventListener("click", function(){
+                slideBtn.closest(".slideItem").classList.toggle("slideOn");
+            })
+        })
+    }
 }
 
 

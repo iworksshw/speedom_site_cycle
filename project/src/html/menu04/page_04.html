@@ -1,0 +1,539 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+		<div class="layoutContainer" id="container">
+
+			<!-- 서브 콘텐츠 영역 -->
+			<div class="layoutSubCont">
+
+				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
+				<div class="cptTheater">
+					<div class="topArea tempArea">상단영역</div>
+
+                    <div class="sectArea">
+                        <div class="comSchDetail">
+                            <div class="schBox">
+                                <div class="schSelc">
+                                    <div class="box">
+                                        <input type="text" class="ipt" required placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="schBtn">
+                                    <button>검색</button>
+                                </div>
+                                <div class="schDet">상세검색</div>
+                            </div>
+                            <div class="detBox">
+                                <div class="list">
+                                    <dl>
+                                        <dt>검색대상</dt>
+                                        <dd>
+                                            <div class="dBtn on" id="">전체</div>
+                                            <div class="dBtn" id="">제목</div>
+                                            <div class="dBtn" id="">내용</div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="list">
+                                    <dl>
+                                        <dt>검색기간</dt>
+                                        <dd>
+                                            <div class="dBtn on" id="">전체</div>
+                                            <div class="dBtn" id="">최근1주</div>
+                                            <div class="dBtn" id="">최근1달</div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="gray">직접입력</dt>
+                                        <dd>
+                                            <ul class="datePick">
+                                                <li>
+                                                    <input type="text" placeholder="2024.01.01" />
+                                                </li>
+                                                <li class="hpn">-</li>
+                                                <li>
+                                                    <input type="text" placeholder="2024.03.01" />
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comSchStx">
+                            <div class="schStx">
+                                <div class="schTit">
+                                    <h3>인기 검색어</h3>
+                                </div>
+                                <div class="schStxRst">
+                                    <div class="swiper-container schStxSlide">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="schStxSlidePage">
+                                            <button type="button" class="prev">이전</button>
+                                            <button type="button" class="next">다음</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sectArea">
+                        <div class="sectTit">
+                            <div class="subTit">
+                                <div class="icon"><img src="../../images/common/ic_movie_tit_hot.svg" alt=""></div>
+                                개인별 맞춤 추천
+                            </div>
+                            <h2 class="tit">지금 뜨는 영상</h2>
+                        </div>
+
+                        <div class="listBoard col3_1">
+                            <ul class="listGroup">
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[경륜훈련원 홍보 영상] 프로의 시작</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li> -->
+                            </ul>
+                            
+                            <div class="swiper-control">
+                                <div class="swiper-number">
+                                    <span class="swiper-pagination-current">1</span>
+                                    /
+                                    <span class="swiper-pagination-total">2</span>
+                                </div>
+                                <button type="button" class="btnPrev">이전</button>
+                                <button type="button" class="btnNext">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sectArea addBg01">
+                        <div class="inner">
+                            <div class="sectTit">
+                                <div class="subTit">경륜 이모저모</div>
+                                <h2 class="tit">경륜 인사이트</h2>
+                            
+                                <div class="tabMenuGroup tabSwiper toMob">
+                                    <ul class="sortTab swiper-wrapper">
+                                        <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                        <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">특집 프로그램</button></li>
+                                        <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">선수들의 영상이야기</button></li>
+                                        <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">경륜궁금타파</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="listBoard theaterSwiper">
+                                <ul class="listGroup">
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[2024 스피돔뉴스 9편] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[경륜훈련원 홍보 영상] 프로의 시작</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btnMore">더보기</button>
+                        </div>
+                    </div>
+                    
+                    <div class="sectArea">
+                        <div class="sectTit">
+                            <div class="subTit">최근 가장 많이 본</div>
+                            <h2 class="tit">인기 영상</h2>
+    
+                            <div class="sortBtn">
+                                <button type="button" class="on">이번주</button>
+                                <button type="button">이번달</button>
+                            </div>
+                        </div>
+
+                        <div class="listBoard theaterSwiper">
+                            <ul class="listGroup">
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[경륜훈련원 홍보 영상] 프로의 시작</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="sectArea">
+                        <div class="sectTit notice">
+                            <div class="subTit">알려드립니다</div>
+                            <h2 class="tit">스피돔소식</h2>
+                        </div>
+
+                        <div class="listBoard col3_1 theaterSwiper">
+                            <ul class="listGroup">
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">스피드온_챔피언십_시즌1_1주차</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">도박 중독의 과정 알아가기</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">잘못된 신념 사례를 잘못된 신념으로 잘못된 신념을 알아보기</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button type="button" class="btnMore">더보기</button>
+                    </div>
+
+					<div class="bottomArea">
+                        <div class="eventNoti">
+                            <div class="inner">
+                                <div class="sectTit">
+                                    <div class="subTit">다 같이 함께해요!</div>
+                                    <h2 class="tit">이벤트경륜</h2>
+                                </div>
+                                
+                                <div class="listEvent">
+                                    <div class="listGroup">
+                                        <div class="listItem">
+                                            <div class="infoBox">
+                                                <div class="title">2023년 경륜 28기 신인 경륜선수 시범경주 2023년 경륜 28기 신인 경륜선수 시범경주2023년 경륜 28기 신인 경륜선수 시범경주</div>
+                                                <div class="date">2024.07.24</div>
+                                            </div>
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/board_temp_event.png);"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="txtMore">더보기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				
+				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+                <!-- 최근 검색어 swiper, 상세검색 토글 , 검색대상/검색기간 토글  -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        /* 엄차장님 (s) */
+                        // 최근 검색어 swiper
+                        var swiper = new Swiper('.schStxSlide', {
+                            slidesPerView: 'auto',
+                            freeMode: true,
+                            // loop: true,
+                            navigation: {
+                                prevEl: ".schStxSlidePage .prev",
+                                nextEl: ".schStxSlidePage .next",
+                            },
+                        });
+
+                        // 상세검색 버튼 토글 
+                        const schDetButton = document.querySelector('.schDet');
+                        const comSchDetail = document.querySelector('.comSchDetail');
+
+                        schDetButton.addEventListener('click', () => {
+                            comSchDetail.classList.toggle('detOpen');
+                        });
+
+                        // 검색대상/검색기간 토글
+                        const dBtns = document.querySelectorAll('.dBtn');
+
+                        dBtns.forEach(button => {
+                            button.addEventListener('click', () => {
+                                const parent = button.parentElement;
+                                const siblings = parent.querySelectorAll('.dBtn');
+
+                                siblings.forEach(sibling => sibling.classList.remove('on'));
+                                button.classList.add('on');
+                            });
+                        });
+                        /* 엄차장님 (e) */
+
+                        // 갤러리 swiper
+                        document.querySelectorAll(".theaterSwiper").forEach(function(swiperTarget){
+                            console.log( swiperTarget );
+                            swiperTarget.classList.add('swiper-container');
+                            swiperTarget.querySelector('.listGroup').classList.add('swiper-wrapper');
+                            /* var swiper = new Swiper(swiperTarget, {
+                                // slidesPerView: 'auto',
+                                // freeMode: true,
+                                loop: true,
+                                // navigation: {
+                                //     prevEl: ".schStxSlidePage .prev",
+                                //     nextEl: ".schStxSlidePage .next",
+                                // },
+                            }); */
+                        });
+
+                    });
+                    function theaterInit() {
+
+                    }
+                    function theaterSwiper() {
+                        
+                    }
+                </script>
+                <!-- //최근 검색어 swiper, 상세검색 토글 , 검색대상/검색기간 토글  -->
+				
+			</div>
+			<!-- //서브 콘텐츠 영역 -->
+
+		</div>
+		<!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

@@ -1,0 +1,33 @@
+.cptMission {
+    margin-top:60px;
+    &:first-child {margin-top:0;}
+
+    .mssnGroup {
+        margin-top: 12px; display: flex; gap: 40px; align-items: stretch;
+        &:first-child {margin-top: 0;}
+        .mssnItem {
+            flex: 0 0 calc(33.3333% - 26.6667px); border-radius: 12px; border: 1px solid var(--Point-Primary2); padding: 24px 30px 20px;
+            dt {
+                padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--Bg-Line-line-200); text-align: center;
+                .num {width: 30px; height: 30px; border-radius: 50%; background: var(---Primary); color: #fff; font-size: 16px; font-weight: 700; line-height: 30px; display: inline-block;}
+                b {margin-top: 12px; font-size: rem(20px); color: var(---Primary); font-weight: 700; display: block;}
+            }
+            dd {font-size: rem(16px); color: var(--Gray-800); word-break: keep-all;}
+        }
+    }
+    @include media("mobile"){
+        margin-top:40px;
+
+        .mssnGroup {
+            flex-wrap: wrap; gap: 24px;
+            .mssnItem {
+                flex: 0 0 100%; padding: 20px 16px 16px;
+                dt {
+                    padding-bottom: 16px; margin-bottom: 16px;
+                    b {font-size: rem(18px);}
+                }
+                dd {font-size: rem(15px);}
+            }
+        }
+    }
+}
