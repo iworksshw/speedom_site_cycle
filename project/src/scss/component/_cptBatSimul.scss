@@ -515,18 +515,25 @@
                                 .matchTag {margin-top: 4px; font-size: rem(13px);}
                                 .matchTime {font-size: rem(14px);}
                                 
-                                &.on {
-                                    width: 101px; height: 122px; box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.10);
-                                }
-
                                 &:hover {
                                     width: 93px; height: 114px; box-shadow: none; background: #fff;
                                     .matchTit {padding-top: 0; color:var(--Gray-800); background-position: center -24px;}
                                     .matchTag {color: var(---Primary); background: rgba(7, 139, 123, 0.10); }
                                     .matchTime {color: var(--Gray-600);}
-                                }                                
+                                }  
+
+                                &.on {
+                                    width: 101px; height: 122px; box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.10);background:linear-gradient(180deg, #18C3AD 0%, #226B95 100%); 
+                                    .matchTit {padding-top: 24px; color: #fff; background-position: top center;}
+                                    .matchTag {color: var(---Point2); background: rgba(0, 0, 0, 0.30); }
+                                    .matchTime {color: #fff;}
+                                }
+
                                 &.disabled {
                                     width: 93px; height:114px;
+                                    .matchTit {color: var(--Gray-300);}
+                                    .matchTag {background: var(--Gray-100); color: var(--Gray-300);}
+                                    .matchTime {color: var(--Gray-300);}
                                 }
                             }
                         }
@@ -556,7 +563,7 @@
                         .tabMenuGroup { 
                             .tabMenu {
                                 .tabItem {
-                                    width: 75px; min-width:75px;
+                                    min-width:75px;
                                     .tabName {height: 56px; padding: 0 16px;}
                                 }
                             }

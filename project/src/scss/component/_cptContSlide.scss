@@ -1,0 +1,147 @@
+.cptContSlide {
+    margin-top: 60px;
+    .slideItem {
+        margin-bottom: 12px;
+        &:last-child {margin-bottom: 0;}
+        .contBox {
+            border-radius: 12px; border: 1px solid var(--Bg-Line-line-200); background-color: var(--Bg-Line-bg-50);
+            .slideTit {
+                width: 100%; border-bottom: none; padding: 24px 32px; position: relative; text-align: left;
+                .tit {font-size: rem(18px); font-weight: 700; color: var(--Gray-800);}
+                &::after {display: block; content: ""; width: 24px; height: 24px; background: url(../../images/common/ic_20_arw_btm_k.svg) center no-repeat; position: absolute; right: 32px; top: 24px; transition: all 0.3s;}
+            }
+            .slideCont {
+                padding: 0 32px; overflow: hidden; max-height: 0; transition: all 0.3s;
+                .paragraph {
+                    margin-top: 32px;
+                    &:first-child {margin-top:0;}
+                }
+                .basicTxt {font-size: rem(16px); color: var(--Gray-800); font-weight: 700;}
+                .basicList {
+                    margin-top:10px;
+                    &:first-child {margin-top: 0;}
+                    .listItem {
+                        padding-left: 11px; margin-top: 8px; font-size: rem(16px); color: var(--Gray-800); position: relative;
+                        &:first-child {margin-top:0;}
+                        &::after {display: block; content: ""; width: 3px; height: 3px; position: absolute; top: 11px; left: 0; background: var(--Gray-400);}
+                        .lineTit {font-weight: 700;}
+                        em {font-weight: 700;}
+                    }
+                }
+                .dashList {
+                    margin-top:8px;
+                    &:first-child {margin-top: 0;}
+                    .listItem {
+                        padding-left: 11px; margin-top: 8px; font-size: rem(14px); color: var(--Gray-700); position: relative;
+                        &:first-child {margin-top:0;}
+                        &::after {display: block; content: ""; width: 4px; height: 1px; position: absolute; top: 9px; left: 0; background: var(--Gray-300);}
+                        .lineTit {font-weight: 700;}
+                        .sTit {font-weight: 700; display: block;}
+                    }
+                }
+                .imgList {
+                    margin-top:12px; display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;
+                    &:first-child {margin-top:0;}
+                    .imgItem {
+                        flex: 0 0 calc(50% - 20px);
+                        .imgArea {
+                            border-radius: 12px; overflow: hidden;
+                            img {width: 100%;}
+                        }
+                        .txtArea {
+                            margin-top:5px;
+                            .imgTit {
+                                margin-bottom: 10px;
+                                .num {font-size: rem(20px); color: var(--Gray-300); font-weight: 600; display: inline-block; vertical-align: middle;}
+                                .txt {font-size: rem(16px); color: var(--Gray-800); font-weight: 700; display: inline-block; vertical-align: middle;}
+                            }
+                        }
+                    }
+                }
+                .imgWrap {
+                    margin-top: 12px;
+                    &:first-child {margin-top: 0;}
+                    img {max-width: 100%;}
+                }
+                .comAddGuide {margin-top:8px;}
+            }
+        }
+
+        &.slideOn {
+            .slideTit {
+                border-bottom: 1px solid var(--Bg-Line-line-200);
+                &::after {transform: rotate(180deg);}
+            }
+            .slideCont {
+                padding: 36px 32px; max-height: 1250px;
+            }
+        }
+    }
+
+    @include media("mobile"){
+        margin-top: 40px;
+        .slideItem {
+            margin-bottom: 0; width: calc(100% + 32px); margin-left: -16px;
+            .contBox {
+                border-radius: 0; border: none; border-top: 1px solid var(--Bg-Line-line-200); background: none;
+                .slideTit {
+                    padding:18px 38px 18px 16px; background: #fff; transition: background-color 0.2s;
+                    .tit {font-size: rem(16px);}
+                    .mSm {font-size: rem(14px); transition: font-size 0.3s;}
+                    &::after {width: 20px; height: 20px; right: 12px; top: 20px; background-size: 16px;}
+                }
+                .slideCont {
+                    padding: 0px 16px; background-color: var(--Bg-Line-bg-50);
+                    .paragraph {
+                        margin-top: 24px;
+                    }
+                    .basicTxt {font-size: rem(15px); font-weight: 600;}
+                    .basicList {
+                        margin-top:8px;
+                        .listItem {
+                            font-size: rem(15px); 
+                            &::after {top: 11px;}
+                            .lineTit {font-weight: 600;}
+                            em {font-weight: 600;}
+                        }
+                    }
+                    .dashList {
+                        .listItem {
+                            font-size: rem(13px);
+                            .lineTit {font-weight: 600;}
+                            .sTit {font-weight: 600;}
+                        }
+                    }
+                    .imgList {
+                        margin-top:8px; gap: 24px; 
+                        .imgItem {
+                            flex: 0 0 100%;
+                            .txtArea {
+                                margin-top:12px;
+                                .imgTit {
+                                    margin-bottom: 8px;
+                                    .num {font-size: rem(15px);}
+                                    .txt {font-size: rem(15px);font-weight: 600;}
+                                }
+                            }
+                        }
+                    }
+                    .imgWrap {
+                        margin-top: 8px;
+                    }
+                }
+            }
+            &:last-child .contBox {border-bottom: 1px solid var(--Bg-Line-line-200);}
+
+            &.slideOn {
+                .slideTit {
+                    border-bottom: 1px solid var(--Bg-Line-line-200); background-color: var(--Bg-Line-bg-50);
+                    .mSm {font-size: rem(16px);}
+                }
+                .slideCont {
+                    padding: 24px 16px; max-height: 2225px;
+                }
+            }
+        }
+    }
+}
