@@ -1,0 +1,358 @@
+/*========= 영상관 =========*/
+// 레이아웃 임시
+// .cptTheater [class^=com] {position: relative;}
+// .cptTheater [class^=com]::after {content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; border: 1px dashed red; z-index: -1;}
+
+.cptTheater {
+    overflow: hidden;
+    .sectArea {
+        position: relative; max-width: 1480px; margin: 100px auto; padding: 0 20px;
+        .btnMore {
+            display: block; width: 160px; height: 48px; margin: 40px auto 0; padding: 0 24px; font-size: rem(16px); font-weight: 500; border-radius: 8px; line-height: 46px;
+            color: var(---Primary); border: 1px solid var(---Primary);
+            &:hover {color: #077265; border-color: #077265; background-color: rgba(0, 0, 0, 0.025);}
+            &:active {color: #05665B; border-color: #05665B;}
+            &:disabled {color: var(--Gray-300); border: 1px solid var(--Gray-200); background: var(--Gray-100);}
+        }
+        &[class*=addBg] {
+            position: relative; max-width: 100%; padding: 80px 0; z-index: 0; overflow: hidden;
+            &::before {
+                content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 1780px; max-width: 100%; border-radius: 0px 100px; z-index: -1; transform: translateX(-50%);
+            }
+            &.addBg01::before {
+                // background: linear-gradient(92deg, #EBF8FA 1.1%, #EDF9F4 62.91%);
+                opacity: 0.3;
+                background: linear-gradient(270deg, #C8F4E0 0%, #B7DBF4 100%);
+            }
+            & > .inner {
+                position: relative; max-width: 1480px; margin: 0 auto; padding: 0 20px;
+            }
+        }
+    }
+    .swiper-control {
+        display: flex; align-items: center; justify-content: center; margin-top: 40px;
+        button {
+            width: 50px; height: 50px; font-size: 0; border-radius: 50%; border: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 1; box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.20);
+            & + button {
+                margin-left: 12px;
+            }
+        }
+        .btnPrev {background: #fff url(../../images/common/ic_20_tab_left.svg) center no-repeat; background-size: 28px auto;}
+        .btnNext {background: #fff url(../../images/common/ic_20_tab_right.svg) center no-repeat; background-size: 28px auto;}
+    }
+    .swiper-number {
+        margin-right: 40px; /* font-size: 0; */
+        & > span {
+            font-size: rem(20px); font-weight: 400; color: var(--Gray-600);
+        }
+        .swiper-pagination-current {
+            font-weight: 600; color: var(--Gray-700);
+        }
+    }
+    
+    // 검색영역
+    .comSchStx {
+        .schStx {
+            display: flex; align-items: center; column-gap: 20px;
+            .schTit {
+                font-size: rem(20px);
+                white-space: nowrap;
+            }
+            .schStxRst {
+                margin-top: 0;
+            }
+            .schStxSlidePage::before {
+                background: linear-gradient(90deg, rgba(249, 250, 252, 0.30) -8.6%, #fff 30.4%);
+            }
+        }
+    }
+
+    // 이벤트경륜
+    .eventNoti {
+        background: linear-gradient(90deg, #EFFFFA 0%, #E7F3FC 100%);
+        & > .inner {
+            position: relative; max-width: 1480px; margin: 0 auto; padding: 60px 375px 60px 360px;
+            
+            &::after {
+                content: ''; position: absolute; bottom: 0; right: -30px; width: 120px; height: 120px; background: url(../../images/common/hodol_bbs_event.svg) center no-repeat;
+            }
+        }
+        .sectTit {
+            position: absolute; top: 50%; left: 20px; margin: 0; padding-top: 2px; transform: translateY(-50%);
+            .subTit {
+                width: auto; margin-right: 16px; font-size: rem(18px);
+            }
+            .tit {
+                font-size: rem(36px);
+            }
+        }
+        .listEvent {
+            position: relative; padding-right: 100px;
+            .infoBox {
+                display: flex; column-gap: 20px;
+                .title {
+                    width: 100%; @include line1(); 
+                }
+            }
+            .imgBox {
+                position: absolute; left: calc(100% + 54px); bottom: calc(100% - 50px); display: flex; width: 262px; height: 154px; padding: 6px; border-radius: 8px; background-color: #A3D3E7;
+                .bg {
+                    width: 100%; border-radius: 8px;
+                }
+            }
+            .txtMore {
+                position: absolute; top: 0; right: 0; color: var(---Primary);
+                &::before {
+                    content: '+ ';
+                }
+            }
+        }
+    }
+
+    @include media('mobile') {
+        .sectArea {
+            .btnMore {
+                width: 100%;
+            }
+            &[class*=addBg] {
+                &::before {
+                    border-radius: 0px 60px;
+                }
+            }
+        }
+    }
+}
+
+
+// 타이틀 임시
+.sectTit {
+    display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 40px;
+    .subTit {
+        display: flex; align-items: center; gap: 8px; width: 100%; font-size: rem(20px); font-weight: 600; color: var(---Primary);
+    }
+    .tit {
+        font-size: rem(40px); font-weight: 600; color: var(--Gray-800);
+    }
+    .icon img {
+        vertical-align: top;
+    }
+    .tabMenuGroup {
+        margin-left: auto;
+    }
+
+    // 따로 분리할지?
+    .sortBtn {
+        display: flex; height: 45px; margin-left: 20px; padding: 4px; border-radius: 24px; background-color: var(---Primary);
+        button {
+            height: 37px; padding: 0 20px; font-size: rem(18px); color: #fff; border-radius: 20px;
+            &.on {
+                color: var(---Primary); background-color: #fff;
+            }
+        }
+    }
+
+    &.notice {
+        position: absolute; top: 0; left: 20px; flex-direction: column; align-items: flex-start; width: 360px; min-height: 304px; padding: 40px; border-radius: 0px 80px 0px 0px; background-color: var(---Primary);
+        &::after {
+            content: ''; position: absolute; bottom: -50px; left: 30px; width: 150px; height: 160px; background: url(../../images/common/hodol_bbs_news.svg) center no-repeat;
+        }
+        .subTit {
+            color: rgba(255, 255, 255, 0.70);
+        }
+        .tit {
+            color: #fff;
+        }
+        & ~ .listBoard {
+            position: relative; padding: 78px 0 0 236px; z-index: 1;
+            .listGroup {
+                align-items: flex-start;
+                & > li {
+                    &:nth-child(1) {
+                        margin-bottom: 82px; transform: translateY(82px);
+                    }
+                    &:nth-child(3) {
+                        margin-bottom: 42px; transform: translateY(42px);
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media('mobile') {
+        .tabMenuGroup {
+            width: 100%;
+        }
+        .sortBtn {
+            margin-left: auto;
+        }
+    }
+}
+
+
+// 소팅탭 임시
+.tabMenuGroup {
+    position: relative;
+    &::before {content:''; width: 100%; height: 1px; background: var(--Gray-150); position: absolute; left: 0; bottom: 0; }
+    .sortTab {
+        width: 100%; display: flex;
+        .tabItem {
+            width: 100%; flex-shrink: 1; display: flex; justify-content: center;
+            .tabName {
+                width: 100%; height: 52px; padding: 0 20px; color: var(--Gray-600); font-size: rem(20px); font-weight: 400; line-height: 1.6;
+                border-bottom: 1px solid var(--Gray-150); align-content: center; position: relative; white-space: nowrap;
+            }
+            .tabName.on {
+                font-weight: 700;  color: var(---Primary);
+                &::before {content:''; width: 100%; height: 4px; background: var(---Primary); position: absolute; left: 0; bottom: 0; }
+            }
+            .tabName.outlink {
+                &::after {content:''; width: 16px; height: 16px; margin-left: 4px; vertical-align: middle; background: url(../../images/common/ic_link_blank.svg) center no-repeat; display: inline-block; }
+            }
+        }
+    }
+    @include media('mobile') {   
+        .sortTab {
+            .tabItem {
+                .tabName {
+                    padding: 0 16px; font-size: rem(16px); border-bottom: 1px solid var(--Gray-150); white-space: normal;
+                }
+                .tabName.on {
+                    &::after {height: 2px; bottom: -1px; }
+                }
+            }   
+        }
+        &.toAll {
+            .sortTab {
+                .tabItem {
+                    width: 180px; min-width: max-content;
+                }
+            }
+        } 
+        &.toTab {
+            .sortTab {
+                .tabItem {
+                    width: 100%;
+                }
+            }
+        }
+        &.toMob {
+            .sortTab {
+                .tabItem {
+                    width: 180px; min-width: max-content;
+                }
+            }
+            & ~ .tabDirection {display: block;}
+        }
+    }
+}
+
+
+// 갤러리 임시
+.listBoard {
+    .listGroup {
+        width:100%; display: flex; flex-wrap: wrap; gap: 40px;
+        .listItem {
+            width: calc(25% - 30px); display: flex; flex-wrap: wrap;
+            .itemLink {
+                width: 100%; display: block;
+            }
+            .imgBox {
+                width: 100%; padding-top: calc(100% / 16 * 9); border-radius: 12px; position: relative; overflow: hidden;
+                img {
+                    width: 100%; height: 100%; position: absolute; left: 0; top: 0;
+                }
+                .bg {
+                    width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-repeat: no-repeat; background-size: cover; background-position: top center;
+                }
+            }
+            .infoBox {
+                width: 100%; margin-top: 8px; 
+                .title {
+                    width: 100%; color: var(--Gray-800); font-size: rem(18px); font-weight: 400; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+                }
+                .progress {
+                    width: 100%; height: 24px; margin-top: 4px; display: flex; gap: 4px;
+                    .mark {
+                        width: max-content; height: 24px; padding: 0 10px; font-size: rem(12px); font-weight: 600; border-radius: 20px; line-height: 22px; display: block;
+                        &.ing {
+                            color: #fff; border: 1px solid var(--Point-Primary2); background: var(--Point-Primary2);
+                        }
+                        &.end {
+                            color: var(--Gray-500); border: 1px solid var(--Gray-500); background: #fff;
+                        }
+                        &.line {
+                            color: var(---Primary); border: 1px solid var(---Primary); background: #fff;
+                        }
+                    }
+                }
+                .context {
+                    display: none;
+                }
+                .date {
+                    width:100%; margin-top: 8px; color: var(--Gray-600); font-size: rem(15px); font-weight: 300; line-height: 1.6;
+                    & + .date {margin-top:0;}
+                }
+                ul.info {
+                    display: flex; flex-wrap: wrap; column-gap: 24px; margin-top: 8px;
+                    > li {
+                        width: auto; margin-top: 0; color: var(--Gray-600); font-size: rem(15px); font-weight: 300; line-height: 1.6;
+                        &.cate {
+                            display: flex; flex-wrap: wrap; width: 100%; margin-top: 12px;
+                            & > span {
+                                height: 18px; padding-left: 18px; position: relative; 
+                                &:first-child {
+                                    padding-left: 0;
+                                    &::before {display: none;}
+                                }
+                                &::before {content: ""; position: absolute; top: 3px; left: 1px; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.col3_1 {
+        .listGroup {
+            .listItem {
+                width: calc(33.3333% - 26.6667px);
+                &:last-child {
+                    width: calc(33.3333% - 26.6666px);
+                }
+                .imgBox {
+                    padding-top: 56.25%;
+                }
+            }
+        }
+    }
+
+    @include media('mobile') {
+        .listGroup {
+            gap: 32px 24px;
+            .listItem {
+                width: calc(50% - 12px); 
+                
+                .infoBox {
+                    width: 100%; margin-top: 8px; 
+                    .title {
+                        font-size: rem(15px); font-weight: 600; 
+                    }
+                    .progress {
+                        margin-top: 8px;
+                    }
+                    .date {
+                        color: var(--Gray-700); font-size: rem(13px);
+                    }
+                }
+            }
+        }
+        
+        &.col3_1 {
+            .listGroup {
+                .listItem {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
