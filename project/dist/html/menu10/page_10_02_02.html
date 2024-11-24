@@ -827,9 +827,18 @@
                                             <dl>
                                                 <dt>검색대상</dt>
                                                 <dd>
-                                                    <div class="dBtn on" id="">전체</div>
-                                                    <div class="dBtn" id="">제목</div>
-                                                    <div class="dBtn" id="">내용</div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget1" name="schTarget" checked />
+                                                        <label for="schTarget1">전체</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget2" name="schTarget" />
+                                                        <label for="schTarget2">제목</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget3" name="schTarget" />
+                                                        <label for="schTarget3">내용</label>
+                                                    </div>
                                                 </dd>
                                             </dl>
                                         </div>
@@ -837,9 +846,18 @@
                                             <dl>
                                                 <dt>검색기간</dt>
                                                 <dd>
-                                                    <div class="dBtn on" id="">전체</div>
-                                                    <div class="dBtn" id="">최근1주</div>
-                                                    <div class="dBtn" id="">최근1달</div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate1" name="schDate" checked />
+                                                        <label for="schDate1">전체</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate2" name="schDate" />
+                                                        <label for="schDate2">최근1주</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate3" name="schDate" />
+                                                        <label for="schDate3">최근1달</label>                                                        
+                                                    </div>
                                                 </dd>
                                             </dl>
                                             <dl>
@@ -863,23 +881,23 @@
                                     <div class="schStx">
                                         <div class="schTit">
                                             <h3>최근 검색어</h3>
-                                            <div class="ri del">전체삭제</div>
+                                            <button class="ri del">전체삭제</button>
                                         </div>
                                         <div class="schStxRst">
                                             <div class="schStxSlide">
                                                 <div class="noSlide">                                                    
-                                                    <div class="sTxt">선수<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">출주표<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">배당률<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">선수출주표<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">스피돔지점<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">베팅<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">선수<span class="sDel"></span></div>                                                
-                                                    <div class="sTxt">출주표<span class="sDel"></span></div>
-                                                    <div class="sTxt">배당률<span class="sDel"></span></div>
-                                                    <div class="sTxt">선수출주표<span class="sDel"></span></div>
-                                                    <div class="sTxt">스피돔지점<span class="sDel"></span></div>
-                                                    <div class="sTxt">베팅<span class="sDel"></span></div>
+                                                    <div class="sTxt">선수<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">출주표<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">배당률<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">선수출주표<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">스피돔지점<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">베팅<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">선수<button class="sDel"></button></div>                                                
+                                                    <div class="sTxt">출주표<button class="sDel"></button></div>
+                                                    <div class="sTxt">배당률<button class="sDel"></button></div>
+                                                    <div class="sTxt">선수출주표<button class="sDel"></button></div>
+                                                    <div class="sTxt">스피돔지점<button class="sDel"></button></div>
+                                                    <div class="sTxt">베팅<button class="sDel"></button></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -905,46 +923,66 @@
                                             <div class="listTen">
                                                 <ul class="wd100">
                                                     <li class="rank">
-                                                        <div class="num">1</div>
-                                                        <div class="pTxt">출주표</div>
+                                                        <a href="#">
+                                                            <div class="num">1</div>
+                                                            <div class="pTxt">출주표</div>
+                                                        </a>
                                                     </li>
                                                     <li class="rank">
-                                                        <div class="num">2</div>
-                                                        <div class="pTxt">배당률</div>
+                                                        <a href="#">
+                                                            <div class="num">2</div>
+                                                            <div class="pTxt">배당률</div>
+                                                        </a>
                                                     </li>
                                                     <li class="rank">
-                                                        <div class="num">3</div>
-                                                        <div class="pTxt">경륜</div>
+                                                        <a href="">
+                                                            <div class="num">3</div>
+                                                            <div class="pTxt">경륜</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">4</div>
-                                                        <div class="pTxt">희망길벗</div>
+                                                        <a href="">
+                                                            <div class="num">4</div>
+                                                            <div class="pTxt">희망길벗</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">5</div>
-                                                        <div class="pTxt">경주결과</div>
+                                                        <a href="">
+                                                            <div class="num">5</div>
+                                                            <div class="pTxt">경주결과</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">6</div>
-                                                        <div class="pTxt">순위예측</div>
+                                                        <a href="">
+                                                            <div class="num">6</div>
+                                                            <div class="pTxt">순위예측</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">7</div>
-                                                        <div class="pTxt">영상관</div>
+                                                        <a href="">
+                                                            <div class="num">7</div>
+                                                            <div class="pTxt">영상관</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">8</div>
-                                                        <div class="pTxt">선수</div>
+                                                        <a href="">
+                                                            <div class="num">8</div>
+                                                            <div class="pTxt">선수</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">9</div>
-                                                        <div class="pTxt">스피돔</div>
+                                                        <a href="">
+                                                            <div class="num">9</div>
+                                                            <div class="pTxt">스피돔</div>
+                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <div class="num">10</div>
-                                                        <div class="pTxt">베팅</div>
+                                                        <a href="">
+                                                            <div class="num">10</div>
+                                                            <div class="pTxt">베팅</div>
+                                                        </a>
                                                     </li>                                            
-                                                </ul>  
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -1040,9 +1078,8 @@
             </div>
             <!-- //서브 콘텐츠 영역 -->
              
-            <!-- 상세검색 토글 , 검색대상/검색기간 토글  -->
+            <!-- 상세검색 토글 -->
             <script>
-                // 상세검색 버튼 토글 
                 document.addEventListener('DOMContentLoaded', () => {
                     const schDetButton = document.querySelector('.schDet');
                     const comSchDetail = document.querySelector('.comSchDetail');
@@ -1051,22 +1088,8 @@
                         comSchDetail.classList.toggle('detOpen');
                     });
                 });
-                // 검색대상/검색기간 토글
-                document.addEventListener('DOMContentLoaded', () => {
-                    const dBtns = document.querySelectorAll('.dBtn');
-
-                    dBtns.forEach(button => {
-                        button.addEventListener('click', () => {
-                            const parent = button.parentElement;
-                            const siblings = parent.querySelectorAll('.dBtn');
-
-                            siblings.forEach(sibling => sibling.classList.remove('on'));
-                            button.classList.add('on');
-                        });
-                    });
-                });
             </script>
-            <!-- //상세검색 토글 , 검색대상/검색기간 토글  -->
+            <!-- //상세검색 토글 -->
 
         </div>
         <!-- //중단영역 -->
