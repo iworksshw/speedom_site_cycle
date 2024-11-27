@@ -801,18 +801,18 @@
                                     <div class="schBox">
                                         <div class="schSelc">
                                             <div class="box">
-                                                <select name="" id="" class="selc">
+                                                <!-- <select name="" id="" class="selc"> 20241127 삭제
                                                     <option value="">전체</option>
                                                     <option value="">-</option>
                                                     <option value="">-</option>
-                                                </select>
+                                                </select> -->
                                                 <input type="text" class="ipt" required placeholder="" />
                                             </div>
                                         </div>
                                         <div class="schBtn">
-                                            <button>검색</button>
+                                            <button type="button">검색</button> <!-- 20241127 수정 -->
                                         </div>
-                                        <div class="schDet">상세검색</div>
+                                        <button type="button" class="schDet">상세검색</button> <!-- 20241127 수정 -->
                                     </div>
                                     <div class="rstRe">
                                         <div class="frmGroup">
@@ -827,6 +827,7 @@
                                             <dl>
                                                 <dt>검색대상</dt>
                                                 <dd>
+                                                    <!-- 20241127 수정 -->
                                                     <div class="dBtn">
                                                         <input type="radio" id="schTarget1" name="schTarget" checked />
                                                         <label for="schTarget1">전체</label>
@@ -839,6 +840,7 @@
                                                         <input type="radio" id="schTarget3" name="schTarget" />
                                                         <label for="schTarget3">내용</label>
                                                     </div>
+                                                    <!-- //20241127 수정 -->
                                                 </dd>
                                             </dl>
                                         </div>
@@ -846,6 +848,7 @@
                                             <dl>
                                                 <dt>검색기간</dt>
                                                 <dd>
+                                                    <!-- 20241127 수정 -->
                                                     <div class="dBtn">
                                                         <input type="radio" id="schDate1" name="schDate" checked />
                                                         <label for="schDate1">전체</label>
@@ -858,6 +861,7 @@
                                                         <input type="radio" id="schDate3" name="schDate" />
                                                         <label for="schDate3">최근1달</label>                                                        
                                                     </div>
+                                                    <!-- //20241127 수정 -->
                                                 </dd>
                                             </dl>
                                             <dl>
@@ -881,23 +885,23 @@
                                     <div class="schStx">
                                         <div class="schTit">
                                             <h3>최근 검색어</h3>
-                                            <button class="ri del">전체삭제</button>
+                                            <button type="button" class="ri del">전체삭제</button> <!-- 20241127 수정 -->
                                         </div>
                                         <div class="schStxRst">
                                             <div class="schStxSlide">
                                                 <div class="noSlide">                                                    
-                                                    <div class="sTxt">선수<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">출주표<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">배당률<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">선수출주표<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">스피돔지점<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">베팅<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">선수<button class="sDel"></button></div>                                                
-                                                    <div class="sTxt">출주표<button class="sDel"></button></div>
-                                                    <div class="sTxt">배당률<button class="sDel"></button></div>
-                                                    <div class="sTxt">선수출주표<button class="sDel"></button></div>
-                                                    <div class="sTxt">스피돔지점<button class="sDel"></button></div>
-                                                    <div class="sTxt">베팅<button class="sDel"></button></div>
+                                                    <div class="sTxt">선수<button type="button" class="sDel"></button></div>       <!-- 20241127 삭제버튼 button으로 수정 -->                                            
+                                                    <div class="sTxt">출주표<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">배당률<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">선수출주표<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">스피돔지점<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">베팅<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">선수<button type="button" class="sDel"></button></div>                                                
+                                                    <div class="sTxt">출주표<button type="button" class="sDel"></button></div>
+                                                    <div class="sTxt">배당률<button type="button" class="sDel"></button></div>
+                                                    <div class="sTxt">선수출주표<button type="button" class="sDel"></button></div>
+                                                    <div class="sTxt">스피돔지점<button type="button" class="sDel"></button></div>
+                                                    <div class="sTxt">베팅<button type="button" class="sDel"></button></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -997,21 +1001,21 @@
                     <div class="modTab">
                         <div class="tabMenuGroup tabSwiper toMob">
                             <ul class="tabMenu swiper-wrapper">
-                                <li class="tabItem swiper-slide"><button class="tabName" title="전체(0)">전체(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName on" title="메뉴(0)">메뉴(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="콘텐츠(0)">콘텐츠(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="경주정보(0)">경주정보(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="선수정보(0)">선수정보(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="게시글(0)">게시글(0)</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="영상(0)">영상(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="전체(0)">전체(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="메뉴(0)">메뉴(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="콘텐츠(0)">콘텐츠(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="경주정보(0)">경주정보(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="선수정보(0)">선수정보(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="게시글(0)">게시글(0)</button></li>
+                                <li class="tabItem swiper-slide"><button type="button" class="tabName" title="영상(0)">영상(0)</button></li>
                             </ul>
                         </div>
                         <div class="tabDirection">
                             <div class="tabBtn alignL">
-                                <button class="prev">이전</button>
+                                <button type="button" class="prev">이전</button>
                             </div>
                             <div class="tabBtn alignR">
-                                <button class="next">다음</button>
+                                <button type="button" class="next">다음</button>
                             </div>
                         </div>
                         <div class="tabContianer">
