@@ -1,9 +1,9 @@
-.cptSchHd {
-    .schDim {width: 100%; height: 100%; font-size: 0; background: rgba(0, 0, 0, 0.5); position: fixed; left: 0; top: 0; z-index: 2;}
+.cptSchHd {    
+    .schDim {width: 100%; height: 100%; font-size: 0; background: #FFF; position: fixed; left: 0; top: 0; z-index: 2;}
     .mView {display: none;}
+    .schHdClose {position: fixed; top: 176px; right: 0; width: 60px; height: 60px; background: url(../../images/common/ic_28_close.svg) no-repeat left bottom; cursor: pointer; z-index: 4;}
     .cptArea {
-        padding: 80px 0; background: var(--Bg-Line-bg-100); position: relative; z-index: 3;
-        .schHdClose {position: absolute; top: 36px; right: 36px; width: 28px; height: 28px; background: url(../../images/common/ic_28_close.svg) no-repeat center; cursor: pointer;}
+        padding: 80px 0; background: var(--Bg-Line-bg-100); position: relative; z-index: 3; overflow-y: auto; height: calc(100vh - 176px);        
         .inCont {
             max-width: 960px; padding: 0 80px; margin:0 auto;
             h2 {
@@ -34,13 +34,14 @@
 
     @include media("mobile"){
         position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 100; padding-top: 68px; overflow: auto;
+        .schHdClose {display: none;}
         .mView {
             display: flex; background: #FFF; height: 68px; align-items: center; padding: 0 16px; position: fixed; top: 0; left: 0; right: 0; z-index: 5; border-bottom: 1px solid var(--Bg-Line-line-100);
             .mTit {font-size: rem(20px); font-weight: 700; line-height: 1.4;}
             .mSchHdClose {position: absolute; top: 20px; right: 16px; width: 24px; height: 24px; z-index: 1; background: url(../../images/common/ic_28_close.svg) no-repeat center; cursor: pointer;}
         }
         .cptArea {
-            padding: 40px 0;
+            padding: 40px 0; height: calc(100vh - 68px);
             .schHdClose {display: none;}
             .inCont {
                 padding: 0 16px;
@@ -58,3 +59,9 @@
         }
     }
 } 
+
+// 통합검색 창 호출 시 html 스크롤 막기
+.fixScroll {
+    overflow: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+ 
+}

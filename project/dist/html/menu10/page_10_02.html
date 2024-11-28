@@ -801,18 +801,18 @@
                                     <div class="schBox">
                                         <div class="schSelc">
                                             <div class="box">
-                                                <select name="" id="" class="selc">
+                                                <!-- <select name="" id="" class="selc"> 20241127 삭제
                                                     <option value="">전체</option>
                                                     <option value="">-</option>
                                                     <option value="">-</option>
-                                                </select>
+                                                </select> -->
                                                 <input type="text" class="ipt" required placeholder="" />
                                             </div>
                                         </div>
                                         <div class="schBtn">
-                                            <button>검색</button>
+                                            <button type="button">검색</button> <!-- 20241127 수정 -->
                                         </div>
-                                        <div class="schDet">상세검색</div>
+                                        <button type="button" class="schDet">상세검색</button> <!-- 20241127 수정 -->
                                     </div>
                                     <div class="rstRe">
                                         <div class="frmGroup">
@@ -827,9 +827,20 @@
                                             <dl>
                                                 <dt>검색대상</dt>
                                                 <dd>
-                                                    <div class="dBtn on" id="">전체</div>
-                                                    <div class="dBtn" id="">제목</div>
-                                                    <div class="dBtn" id="">내용</div>
+                                                    <!-- 20241127 수정 -->
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget1" name="schTarget" checked />
+                                                        <label for="schTarget1">전체</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget2" name="schTarget" />
+                                                        <label for="schTarget2">제목</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schTarget3" name="schTarget" />
+                                                        <label for="schTarget3">내용</label>
+                                                    </div>
+                                                    <!-- //20241127 수정 -->
                                                 </dd>
                                             </dl>
                                         </div>
@@ -837,9 +848,20 @@
                                             <dl>
                                                 <dt>검색기간</dt>
                                                 <dd>
-                                                    <div class="dBtn on" id="">전체</div>
-                                                    <div class="dBtn" id="">최근1주</div>
-                                                    <div class="dBtn" id="">최근1달</div>
+                                                    <!-- 20241127 수정 -->
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate1" name="schDate" checked />
+                                                        <label for="schDate1">전체</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate2" name="schDate" />
+                                                        <label for="schDate2">최근1주</label>
+                                                    </div>
+                                                    <div class="dBtn">
+                                                        <input type="radio" id="schDate3" name="schDate" />
+                                                        <label for="schDate3">최근1달</label>                                                        
+                                                    </div>
+                                                    <!-- //20241127 수정 -->
                                                 </dd>
                                             </dl>
                                             <dl>
@@ -863,7 +885,7 @@
                                     <div class="schStx">
                                         <div class="schTit">
                                             <h3>최근 검색어</h3>
-                                            <div class="ri del">전체삭제</div>
+                                            <button type="button" class="ri del">전체삭제</button> <!-- 20241127 수정 -->
                                         </div>
                                         <div class="schStxRst">
                                             <p class="noStxRst">최근 검색어가 없습니다.</p>
@@ -902,9 +924,8 @@
             </div>
             <!-- //서브 콘텐츠 영역 -->
              
-            <!-- 상세검색 토글 , 검색대상/검색기간 토글  -->
+            <!-- 상세검색 토글 -->
             <script>
-                // 상세검색 버튼 토글 
                 document.addEventListener('DOMContentLoaded', () => {
                     const schDetButton = document.querySelector('.schDet');
                     const comSchDetail = document.querySelector('.comSchDetail');
@@ -913,22 +934,8 @@
                         comSchDetail.classList.toggle('detOpen');
                     });
                 });
-                // 검색대상/검색기간 토글
-                document.addEventListener('DOMContentLoaded', () => {
-                    const dBtns = document.querySelectorAll('.dBtn');
-
-                    dBtns.forEach(button => {
-                        button.addEventListener('click', () => {
-                            const parent = button.parentElement;
-                            const siblings = parent.querySelectorAll('.dBtn');
-
-                            siblings.forEach(sibling => sibling.classList.remove('on'));
-                            button.classList.add('on');
-                        });
-                    });
-                });
             </script>
-            <!-- //상세검색 토글 , 검색대상/검색기간 토글  -->
+            <!-- //상세검색 토글 -->
 
         </div>
         <!-- //중단영역 -->

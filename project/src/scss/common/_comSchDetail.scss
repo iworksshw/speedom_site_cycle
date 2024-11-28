@@ -10,7 +10,7 @@
             .box {
                 display: flex; align-items: center; height: 100%;
                 .selc {width: 160px; height: 48px; font-size: rem(18px); color: var(---Gray-600); line-height: 1.6; padding-left: 20px; margin-right: 20px; border: 0; border-radius: 0; background: #fff url(../../images/common/ic_24_down_arr.svg) center right no-repeat;}
-                .ipt {width: 100%; flex: 1; font-size: rem(18px); font-weight: 600; color: var(--Gray-900); height: 100%; border: 0; border-radius: 8px;}
+                .ipt {width: 100%; padding-left: 10px; flex: 1; font-size: rem(18px); font-weight: 600; color: var(--Gray-900); height: 100%; border: 0; border-radius: 8px;}
                 .ipt::placeholder {color: var(--Gray-400); font-weight: 400;}
                 .selc:focus-visible,
                 .ipt:focus-visible {outline: none;}
@@ -45,8 +45,10 @@
                 dd {
                     flex: 1; display: flex; gap: 8px;
                     .dBtn {
-                        height: 48px; flex: 1; display: flex; align-items: center; justify-content: center; font-size: rem(16px); color: var(--Gray-800); line-height: 1.5; border-radius: 8px; border: 1px solid var(--Gray-200); background: #FFF; cursor: pointer;
-                        &.on {color: var(--Gray-900); font-weight: 600; border: 1px solid var(---Primary); background: #F0FAF7;}
+                        width: 33.333333%;
+                        input {display: none;}
+                        label {height: 48px; flex: 1; display: flex; align-items: center; justify-content: center; font-size: rem(16px); color: var(--Gray-800); line-height: 1.5; border-radius: 8px; border: 1px solid var(--Gray-200); background: #FFF; cursor: pointer;}
+                        input:checked + label {color: var(--Gray-900); font-weight: 600; border: 1px solid var(---Primary); background: #F0FAF7;}
                     }
                     .datePick {
                         display: flex; align-items: center;
