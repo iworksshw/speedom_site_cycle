@@ -95,7 +95,7 @@
                     display: flex;gap: 8px;height: 66px;
                     > button {
                         &[class*=btnPlay] {
-                            min-width: 76px;display: flex;flex-direction: column;justify-content: end;align-items: center;gap: 4px;padding: 12px 12px 8px;border-radius: 8px;border: 1px solid var(--Bg-Line-line-100, #E1E4EA);background: var(--Bg-Line-bg-200, #F3F5F8);
+                            min-width: 74px;display: flex;flex-direction: column;justify-content: end;align-items: center;gap: 4px;padding: 12px 0px 8px;border-radius: 8px;border: 1px solid var(--Bg-Line-line-100, #E1E4EA);background: var(--Bg-Line-bg-200, #F3F5F8);
                             span {color: var(--Gray-700, #414347);font-size: rem(14px);font-weight: 500;line-height: 160%; /* 22.4px */}
                             &:before {content: '';flex-shrink: 0;width: 20px;height: 20px;}
                         }

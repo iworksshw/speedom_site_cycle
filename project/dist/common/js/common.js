@@ -335,6 +335,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // 아코디언함수
     contSlideOpen();
+
+    // 경륜영상관 - 검색 박스 - 체크박스 이벤트
+    inputCheckBoxAll();
 });
 
 
@@ -1223,3 +1226,34 @@ function timePickerTo(startIpt, startCont, endIpt, endCont){
 }
 
 //datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+
+
+// 경륜영상관 - 검색 박스 - 체크박스 이벤트
+function inputCheckBoxAll(){
+    if (document.querySelector(".searchOptionBox")){
+        document.querySelectorAll('.searchOptionBox .frmGroup').forEach((form) => {
+            const checkboxes = Array.from(form.querySelectorAll('.iptRdoChk[type=checkbox]'));
+            const chkAll = checkboxes.find((el) => el.classList.contains('chkAll'));
+            const otherCheckboxes = checkboxes.filter((el) => el !== chkAll);
+
+            if (checkboxes.length > 1) {
+                checkboxes.forEach((checkbox) => {
+                    checkbox.addEventListener('change', (e) => {
+                        handleCheckboxChange(e.target, chkAll, otherCheckboxes);
+                    });
+                });
+            }
+        });
+
+        function handleCheckboxChange(target, chkAll, checkboxes) {
+            if (target === chkAll) {
+                checkboxes.forEach((checkbox) => {
+                    checkbox.checked = chkAll.checked;
+                });
+            } else {
+                const allChecked = checkboxes.every((checkbox) => checkbox.checked);
+                chkAll.checked = allChecked;
+            }
+        }
+    }
+}

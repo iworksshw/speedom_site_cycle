@@ -325,35 +325,6 @@
                 
             </div>
             <!-- //서브 콘텐츠 영역 -->
-
-            <!-- 상세검색 토글 , 검색대상/검색기간 토글  -->
-            <script>
-                // 상세검색 버튼 토글 
-                document.addEventListener('DOMContentLoaded', () => {
-                    const schDetButton = document.querySelector('.schDet');
-                    const comSchDetail = document.querySelector('.comSchDetail');
-
-                    schDetButton.addEventListener('click', () => {
-                        comSchDetail.classList.toggle('detOpen');
-                    });
-                });
-                // 검색대상/검색기간 토글
-                document.addEventListener('DOMContentLoaded', () => {
-                    const dBtns = document.querySelectorAll('.dBtn');
-
-                    dBtns.forEach(button => {
-                        button.addEventListener('click', () => {
-                            const parent = button.parentElement;
-                            const siblings = parent.querySelectorAll('.dBtn');
-
-                            siblings.forEach(sibling => sibling.classList.remove('on'));
-                            button.classList.add('on');
-                        });
-                    });
-                });
-            </script>
-            <!-- //상세검색 토글 , 검색대상/검색기간 토글  -->
-
         </div>
         <!-- //중단영역 -->
 

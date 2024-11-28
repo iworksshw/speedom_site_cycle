@@ -798,24 +798,8 @@
                             <!-- 좌측 검색 영역  -->
                             <div class="rstLe">
                                 <div class="comSchDetail">
-                                    <div class="schBox">
-                                        <div class="schSelc">
-                                            <div class="box">
-                                                <select name="" id="" class="selc">
-                                                    <option value="">전체</option>
-                                                    <option value="">-</option>
-                                                    <option value="">-</option>
-                                                </select>
-                                                <input type="text" class="ipt" required placeholder="" />
-                                            </div>
-                                        </div>
-                                        <div class="schBtn">
-                                            <button>검색</button>
-                                        </div>
-                                        <div class="schDet">상세검색</div>
-                                    </div>
-                                    <div class="detBox">
-                                        <div class="searchBox">
+                                    <div class="detBox toggleMenu"><!-- toggleMenu로 스타일 변형 -->
+                                        <div class="searchOptionBox">
                                             <dl>
                                                 <dt>경주일</dt>
                                                 <dd>
@@ -844,27 +828,26 @@
                                                                 <li><input type="text" placeholder="2024.03.01" /></li>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <div class="innerBox">
                                                         <div class="subMenu">
-                                                            <p>직접입력</p>
-                                                            <ul class="datePick">
-                                                                <li><input type="text" placeholder="2024.01.01" /></li>
-                                                                <li class="hpn">-</li>
-                                                                <li><input type="text" placeholder="2024.03.01" /></li>
-                                                            </ul>
+                                                            <div class="schBox">
+                                                                <div class="schBtn"><button type="button">검색</button></div>
+                                                                <button type="button" class="schDet">상세검색</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </dd>
                                             </dl>
-                                            
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
-                                                <dt>경기등급<span>(중복선택가능)</span></dt>
+                                                <dt>경기등급<span>중복선택가능</span></dt>
                                                 <dd>
                                                     <div class="innerBox">
                                                         <div class="frmGroup gridItem2"><!-- 모바일에서 기본은 3단배열, 그 외에 2, 4단 배열일 경우 gridItem2, gridItem4 -->
                                                             <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-1" class="iptRdoChk lg" />
+                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-1" class="iptRdoChk lg chkAll" />
                                                                 <label for="rdo2-1">전체</label>
                                                             </div>
                                                             <div class="frmBox">
@@ -884,14 +867,14 @@
                                                 </dd>
                                             </dl>
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
-                                                <dt>전법<span>(중복선택가능)</span></dt>
+                                                <dt>전법<span>중복선택가능</span></dt>
                                                 <dd>
                                                     <div class="innerBox">
                                                         <div class="frmGroup">
                                                             <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-1" class="iptRdoChk" />
+                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-1" class="iptRdoChk chkAll" />
                                                                 <label for="rdo3-1">전체</label>
                                                             </div>
                                                             <div class="frmBox">
@@ -915,14 +898,14 @@
                                                 </dd>
                                             </dl>
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
-                                                <dt>경기장<span>(중복선택가능)</span></dt>
+                                                <dt>경기장<span>중복선택가능</span></dt>
                                                 <dd>
                                                     <div class="innerBox">
                                                         <div class="frmGroup">
                                                             <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup4" id="rdo4-1" class="iptRdoChk" />
+                                                                <input type="checkbox" name="rdoGroup4" id="rdo4-1" class="iptRdoChk chkAll" />
                                                                 <label for="rdo4-1">전체</label>
                                                             </div>
                                                             <div class="frmBox">
@@ -938,7 +921,7 @@
                                                 </dd>
                                             </dl>
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
                                                 <dt>선수정보</dt>
                                                 <dd>
@@ -980,7 +963,7 @@
                                                 </dd>
                                             </dl>
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
                                                 <dt>기수정보</dt>
                                                 <dd>
@@ -998,14 +981,14 @@
                                                 </dd>
                                             </dl>
                                         </div>
-                                        <div class="searchBox">
+                                        <div class="searchOptionBox">
                                             <dl>
-                                                <dt>배당률<span>(중복선택가능)</span></dt>
+                                                <dt>배당률<span>중복선택가능</span></dt>
                                                 <dd class="noWrap">
                                                     <div class="innerBox">
                                                         <div class="frmGroup gridItem2">
                                                             <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup5" id="rdo5-1" class="iptRdoChk lg" />
+                                                                <input type="checkbox" name="rdoGroup5" id="rdo5-1" class="iptRdoChk lg chkAll" />
                                                                 <label for="rdo5-1">전체</label>
                                                             </div>
                                                             <div class="frmBox">
@@ -1024,7 +1007,7 @@
                                                             <p>승식<span>(중복선택가능)</span></p>
                                                             <div class="frmGroup gridItem4">
                                                                 <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-1" class="iptRdoChk" />
+                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-1" class="iptRdoChk chkAll" />
                                                                     <label for="rdo6-1">전체</label>
                                                                 </div>
                                                                 <div class="frmBox">
@@ -1401,24 +1384,10 @@
                 // 상세검색 버튼 토글 
                 document.addEventListener('DOMContentLoaded', () => {
                     const schDetButton = document.querySelector('.schDet');
-                    const comSchDetail = document.querySelector('.comSchDetail');
+                    const toggleMenu = document.querySelector('.detBox.toggleMenu');
 
                     schDetButton.addEventListener('click', () => {
-                        comSchDetail.classList.toggle('detOpen');
-                    });
-                });
-                // 검색대상/검색기간 토글
-                document.addEventListener('DOMContentLoaded', () => {
-                    const dBtns = document.querySelectorAll('.dBtn');
-
-                    dBtns.forEach(button => {
-                        button.addEventListener('click', () => {
-                            const parent = button.parentElement;
-                            const siblings = parent.querySelectorAll('.dBtn');
-
-                            siblings.forEach(sibling => sibling.classList.remove('on'));
-                            button.classList.add('on');
-                        });
+                        toggleMenu.classList.toggle('active');
                     });
                 });
             </script>
