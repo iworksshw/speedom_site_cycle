@@ -645,8 +645,8 @@
             }
         }
     }
-
-    @media screen and (min-width: 1440px) {
+    // @media screen and (min-width: 1440px) {
+    @include minWidth('pcl') {
         .inner {
             transform: translateX(-80px);
         }
