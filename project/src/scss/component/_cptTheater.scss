@@ -736,10 +736,10 @@
 
             &::before,
             &::after {
-                content: ''; position: absolute; top: -324px; right: -228px; width: 600px; height: 600px; background: url(../../images/common/deco_top_visual.svg) no-repeat 0 0; background-size: cover;
+                content: ''; position: absolute; top: -324px; right: -228px; width: 600px; height: 600px; background: url(../../images/common/deco_top_visual_2.svg) no-repeat 0 0; background-size: cover;
             }
             &::after {
-                left: auto; top: 199px; left: -205px; width: 480px; height: 480px;
+                left: auto; top: 199px; left: -205px; width: 480px; height: 480px; background: url(../../images/common/deco_top_visual.svg) no-repeat 0 0; background-size: cover;
             }
         }
     }
