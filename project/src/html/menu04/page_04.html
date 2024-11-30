@@ -419,7 +419,7 @@
                             <h2 class="tit">지금 뜨는 영상</h2>
                         </div>
 
-                        <div class="listGallery col3_1 theaterSwiper" data-per-view="3,3,2,1" id="theaterSwiper_1">
+                        <div class="listGallery col3_1 theaterSwiper" id="theaterSwiper_1">
                             <ul class="listGroup listSwiper">
                                 <li class="listItem">
                                     <a href="#" class="itemLink">
@@ -527,7 +527,7 @@
                                 </div>
                             </div>
 
-                            <div class="listGallery theaterSwiper" data-per-view="4,4,3,1"  id="theaterSwiper_2">
+                            <div class="listGallery theaterSwiper" id="theaterSwiper_2">
                                 <ul class="listGroup listSwiper">
                                     <li class="listItem">
                                         <a href="#" class="itemLink">
@@ -852,7 +852,7 @@
 
 
                         // 지금 뜨는 영상
-                        theaterSwiper("#theaterSwiper_1"); // swiper 실행 : 데이터 바인딩 후 호출
+                        theaterSwiper("#theaterSwiper_1", "3,3,2,1"); // swiper 실행 : 데이터 바인딩 후 호출
                         // 경륜 인사이트
                         insightInit("#theaterSwiper_2");
                     });
@@ -916,7 +916,7 @@
                     }
                     
                     function insightInit(_target) {
-                        theaterSwiper(_target); // swiper 실행 : 데이터 바인딩 후 호출
+                        theaterSwiper(_target, "4,4,3,1"); // swiper 실행 : 데이터 바인딩 후 호출
                         
                         // tab event
                         var tBtns = document.querySelectorAll('#insightTab .tabName');
@@ -935,7 +935,8 @@
                             });
                         });
                     }
-                    function theaterSwiper(_target) {
+                    function theaterSwiper(_target, _perview) {
+                        // console.log(_perview);
                         document.querySelectorAll(_target).forEach(function(swiperTarget){
                             // setting
                             swiperTarget.classList.add('swiper-container');
@@ -959,9 +960,8 @@
                                     nextEl: swiperTarget.querySelector(".btnNext"),
                                 },
                             }
-                            if( swiperTarget.getAttribute('data-per-view') != undefined ) {
-                                // swiperPerview = swiperTarget.getAttribute('data-per-view');
-                                swiperPerview = swiperTarget.getAttribute('data-per-view').split(',');
+                            if( _perview != undefined ) {
+                                swiperPerview = _perview.split(',');
                                 swiperOpt.breakpoints = {
                                     1480: {
                                         slidesPerView: swiperPerview[0],
