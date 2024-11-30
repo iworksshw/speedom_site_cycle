@@ -73,7 +73,7 @@
                                 <!-- text -->
                                 <div class="galleryText">
                                     <ul>
-                                        <li class="active">
+                                        <!-- <li class="active">
                                             <div class="galleryTit">경륜 개장 30주년 기념
                                             일간스포츠배 대상경륜 시상식 
                                             및 우승선수 인터뷰</div>
@@ -90,7 +90,7 @@
                                         <li>
                                             <div class="galleryTit">2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
                                             <div class="galleryDate">2024.07.05</div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -860,6 +860,13 @@
                     function videoGallery() {
                         const cptVideoGallery = document.querySelector(".videoGallery");
                         if (cptVideoGallery) {
+                            document.querySelectorAll('.videoGallerySwiper .swiper-slide').forEach(function(slideItem){
+                                var itemLi = document.createElement('li');
+                                itemLi.innerHTML = slideItem.innerHTML;
+                                itemLi.querySelector('.movieBox').remove();
+                                cptVideoGallery.querySelector('.galleryText ul').append(itemLi);
+                            });
+                            cptVideoGallery.querySelectorAll('.galleryText ul > li')[0].classList.add('active');
                     
                             const mobile = window.matchMedia('(max-width: 767px)');
                             const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1280px)');
@@ -983,7 +990,7 @@
                             swiper.init();
 
                             if( swiper != undefined ) {
-                                console.log( swiperTarget.id );
+                                // console.log( swiperTarget.id );
                                 window['ui' + swiperTarget.id ] = swiper;
                             }
                         });
