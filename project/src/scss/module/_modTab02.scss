@@ -7,6 +7,11 @@
 .modTab02 {
     @extend .comTabData;
 
+    .tabMenuGroup {
+        .tabMenu.auto {
+            flex-wrap: wrap; gap: 12px;
+        }
+    }
     .tabContianer {
         margin-top: 24px;
         .tabCont {display:none;}
@@ -15,6 +20,16 @@
     }
 
     @include media('mobile'){
+        .tabMenuGroup {
+            .tabMenu.auto {
+                gap: 8px;
+                .tabItem {
+                    .tabName {
+                        height: 36px; line-height: 36px;
+                    }
+                }
+            }
+        }
         .tabContianer {
             width: 100%; padding: 0 16px;
         }

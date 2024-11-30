@@ -1,0 +1,976 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['고객광장'],
+                    subTitle: '자주 묻는 질문',
+                    subText: '경륜경정에 대해<br> <b>궁금한 점</b>을 검색해보세요.',
+                    url: "../../",
+                    visualClass: "bg05",
+                }) %>
+
+                <div class="layoutContArea">
+
+                    <!-- 2뎁스 탭 (데이터) -->
+                    <div class="modTab02">
+                        <div class="tabMenuGroup">
+                            <ul class="tabMenu auto">
+                                <li class="tabItem">
+                                    <button type="button" class="tabName on">전체</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">전법</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">환급</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">배당</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">교차</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">착순</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">등급</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">승강</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">훈련</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">경륜</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">자전거</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">지점</button>
+                                </li>
+                                <li class="tabItem">
+                                    <button type="button" class="tabName">경주</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabContianer">
+                            <div class="tabCont on">
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">소극적경주에 대한 제재는 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        소극적경주를 유발한 선수는 경륜시행 규정에 따라 심판에서 주의, 경고, 실격의 제재를 가하고 있으며, 소극적경주를 다각도로 분석하여 사안의 경중과 공정경륜에 위반되는 문제점이 발견되면 제재심의위원회에 상정하여 추가로 제재(출전정지)를 하고 있습니다, 또한 광명, 창원, 부산경륜장에서 소극적경주로 실격된 선수는 3박4일간 영주 경륜훈련원에 입소시켜 특별교육을 실시하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">상습적인 소극적경주 유발선수에 대한 가중처벌제도는 있는지요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        제재심의위원회운영규칙 제10조의3(위원회는 제재처분을 받은날로 부터 1년이내에 동일한 사안에 해당하는 행위를 한 선수에게는 가중제재를 할 수 있다)에 의거 가중처벌제도를 운영하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에서 시행하고 있는 사업공헌활동은 어떤것이 있나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하십니까. 저희 경륜경정사업본부에서는 광명본장 및 훈련원을 포함한 17개 지점에서 전사적으로 사회공헌활동을 통해 공익기업으로써 역할수행에 최선을 다하고 있습니다.
+                                                        <br>주요 사회공헌활동 내용을 말씀드리면,
+                                                        <br>o 전국 차상위계층(불우청소년 및 독거노인 등) 생활비 지원
+                                                        <br>o 사회복지시설(장애인시설, 노인시설, 불우아동시설, 새터민시설 등) 지원
+                                                        <br>o 1사1촌 자매결연마을 돕기(농번기 일손돕기, 불우어린이 장학금지원, 무료건강검진 등)
+                                                        <br>o 전국 불우 사이클꿈나무 장학금지원
+                                                        <br>o 자전거타기 활성화 캠페인
+                                                        <br>o 사회복지시설 노력봉사(무료급식소,장애아동목욕시키기,차상위계층 주거환경개선 등)
+                                                        <br>o 태안 유류유출사고 유류제거작업 등
+                                                        <br>저희 경륜경정사업본부에서는 앞으로도 도움의 손길이 필요한 곳에 빛과 사랑을 전할 수 있도록 더욱 노력할 예정이오니 고객님의 지속적인 관심과 성원을 부탁드립니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에 근무하고 싶은데 급여수준 및 체계는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜 경주종사원의 급여체계는 일급제이며 일급 외 교통비, 중식비 등이 별도로 지급됩니다. 발매 직원의 일급은 61,800원(직무수당 포함)이며, 타 보직의 일급 또한 발매직원과 비슷한 수준이오니 참고하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">발매직원, 안내요원, 질서유지원 등의 채용기준 및 규모는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하세요. 경주사업본부 사업지원팀입니다.
+                                                        <br>
+                                                        현재 경주사업본부에서 근무하고 있는 경주종사원의 규모는 약 1,000명 수준이나,
+                                                        발매원이나 매점판매원 등 대부분의 보직은 이직률이 낮아 추가 수요가 거의 없는 편입니다.
+                                                        신규채용이 있다고 하더라도, 정기 채용이 아니라 결원 발생 시에만 진행하고 있으므로,
+                                                        발매원 보직에 관심이 있으신 분은,
+                                                        국민체육진흥공단 홈페이지(<a href="www.kspo.or.kr" target="_blank">www.kspo.or.kr</a>)나,
+                                                        경주사업본부 홈페이지(<a href="http://www.krace.or.kr/" target="_blank">http://www.krace.or.kr/</a>)의 채용공고를 확인해주시면 감사드리겠습니다.
+                                                        <br>
+                                                        그러나, 광명본장(경륜) 및 미사리본장(경정)의 질서유지원, 고객안내원 등의 보직의 경우,
+                                                        결원이 잦아 수시로 채용을 진행하고 있사오니,
+                                                        이 보직에 관심이 있으신 분은, 안전팀(경륜, 02-2067-5824),
+                                                        <br>
+                                                        경정발매팀(경정, 031-790-8403)으로 문의주시면 보다 빠르게 확인하실 수 있습니다.
+                                                        <br>
+                                                        보다 자세한 사항은 경주사업본부 사업지원팀(02-2067-5402)으로 문의하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">정기 등급심사에 대하여</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">□ 주요내용<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp; o 시행방법<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp;&nbsp; - 연간 총 2회 (상반기, 하반기) 실시</font></span></p>
+                                                        <p class="HStyle0">
+                                                        </p>
+                                                        <table style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" border="1">
+                                                            <tbody>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="106" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">구 분</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="529" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">세 부 일 정</font></span></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">상반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;해당연도 6월말일 기준 14일전부터 12월말일 기준 <br>15일 전까지</span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;성적으로 심사 및 1월 초 적용 </span></font></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">하반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;전년도 12월말일 기준 14일전부터 해당연도 6월말일 <br>기준 15일 </span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">전까지 성적으로 심사 및 7월 초 적용</span></font></p></td></tr></tbody>
+                                                        </table>
+                                                        <p></p>
+                                                        <p><br>□&nbsp;등급심사에 필요한 평가점 산출방식<br><br>&nbsp;&nbsp; o 대상기간의 평가점 = 평균경주득점 + 입상점 - 위반점 <br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 평균경주득점 : 등급심사 대상기간 동안의 경주성적의 평균점<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 입상점 : 등급심사 대상기간 동안의 1, 2, 3착을 점수(1착 2점, 2착 1점, 3착 0.5점)로 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 환산 후&nbsp; 출전일수로 나눈 값<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 위반점 : 실격 1회당 1점<br><br></p>
+                                                        <p>&nbsp;위의 내용으로 등급심사의 과정을 거쳐 년2회 선수들의 등급이 부여되고 있습니다.<br><br>참고로 이러한 등급심사시 적용되는 급별, 경륜장별 운영규모가 등급심사 마다 다르게 <br>적용됨으로 선발급에서 우수급, 우수급에서 특선급으로의 승급, 특선에서 우수로, 우수에서 <br>선발급으로의 강급 등 급별 커트라인이라는 절대적인 점수가 정해질 수 없으며, <br>등급심사 시 등급별 커트라인이 다르게 나타나고 있습니다.</p>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">주행중 낙차등으로 인해 결승선에 1명만 골인한 경우 환급금은 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        ㅇ 쌍승식, 복승식 : 결승선에 도착한 2명을 승자로 하므로 1명으로 승자 불성립되어 전체 경주권에 대해 환불(100%)
+                                                        <br>ㅇ 단승식 : 결승선에 도착한 1위 1명을 승자로 하므로 정상적으로 환급금이 산출되어 환급처리
+                                                        <br>ㅇ 연승식 : 결승선에 도착한 1위, 2위를 각각 승자로 처리하나, 결승선에 1명만 도착하였으므로, 2위 적중자에게 지금될 환급금까지 1위에 지급되어 실제 단승식과 같은 개념으로 환급금 산출 지급
+                                                        <br>ㅇ 삼복승식, 쌍복승식, 삼쌍승식 : 결승선에 도착한 3명을 승자로 하므로, 승자가 1명인 경우 승식이 성립되지 않아 전체 경주권에 대해 환불(100%)
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">지점 매점 등 편익시설을 운영하고 싶은데..</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜지점매점은 저렴한 가격대로 고객님들께 다양한 먹거리 제공을 위하여 현재 직영으로 운영하고 있습니다. 아울러 경륜운영본부에서는 지점매점에 대하여 위탁운영계획이 없음을 알려드립니다. 감사합니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">전라도 및 강원도에는 경륜지점이 왜 없나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜의 지점 개설은 설치지역에 대한 정부의 사전승인과 설치건물에 대한 정부의 허가를 통해 이루어지고 있습니다. 현재 동지역에 지점개설 승인이 없어 현재의 여건에서는 검토가 된 바 없으나, 향후 지점개설시 지역여건 등을 고려하여 개설 검토하도록 하겠습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">적중된 경주권을 잃어버렸을 경우 어떻게 해요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        적중된 경주권이나 구매권을 소지하고 있다가 분실했을 경우는
+                                                        우선 구매한 장소와 구매내용을 대략적으론 알고 계셔야 합니다.
+                                                        <br><br>
+                                                        분실시 제일 먼저 조치할 사항은 경주일인 경우는 오픈되어 있는
+                                                        발매창구를 방문하시어 분실신고를 합니다.
+                                                        이때 직원에게 구매경주권의 대략적인 내용을 알려 주셔야 전산조회를
+                                                        통해 확인이 가능합니다.
+                                                        <br><br>
+                                                        경주권 구매확인이 되면 발매전산팀에서 곧바로 경주권에 대한 지불을 정지
+                                                        시키는 작업을 수행합니다.
+                                                        이렇게 전산상에 지불정지 작업이 이루어지면 다른 사람이 분실된 경주권을
+                                                        습득, 환급을 받으려 해도 환급이 불가능합니다.
+                                                        <br><br>
+                                                        그런데 한가지 유념할 사항은, 분실신고 이전에 다른 사람이 습득, 환급을
+                                                        이미 받았다면 환급금액을 찾을 방법이 없게 됩니다.
+                                                        <br><br>
+                                                        그러기에 이를 꼭 인지하셔서 최대한 빠른시간에 분실신고를 하는게 가장
+                                                        중요합니다.
+                                                        <br><br>
+                                                        마지막으로 분실된 경주권을 습득한 사람이 없는 상태에서 신고 접수후
+                                                        전산상 지불정지 처리가 정상적으로 이루어진 경우 분실 신고된 경주권 금액을
+                                                        곧바로 되돌려 받을순 없습니다.
+                                                        물론 분실된 경주권을 찾았을 경우는 곧바로 현금환급이 가능하겠지만
+                                                        분실로 인해 경주권이 존재하지 않기 때문에 1년이란 유예기간을 둡니다.
+                                                        오늘날짜(2008. 3. 28) 발행 경주권을 분실, 신고시 되찾을 수 있는 날짜는
+                                                        2009. 3. 27일이 됩니다. 보통 만료일 일주일전 신고고객님께 연락을 드리고
+                                                        있습니다.
+                                                        <br><br>
+                                                        이 유예기간이 지나면 전산상 완전히 소멸되므로 이를 반드시 인지,
+                                                        고객님 개인에 불이익이 없도록 유의하시길 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">적중자가 없을때의 환급금은 어떻게 하나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경주가 정상적으로 이루어져 1, 2, 3위 각 승식별 승자가 분명 존재하는데 이를 맞춘 고객이
+                                                        전무한 상태라면 공제금액을 제외한 나머지 금액을 해당경주 구매고객에게 균분한 금액으로
+                                                        환급하도록 경륜.경정법에 명시되어있습니다.
+                                                        <br><br>
+                                                        이에, 단승/연승의 경우 환급금액이 81%이고 쌍승/복승/삼복승/쌍복승/삼쌍승의 경우는 72%가 됩니다.
+                                                        그런데 실제 적중자 부재시 환급률을 계산해 보면 단/연승의 경우는 10원미만의 단수가 있는 경우
+                                                        사사오입이 적용, 실제 단승/연승의 환급률은 81%가 아닌 80%가 됩니다.
+                                                        <br><br>
+                                                        참고로 '94년 경륜개장이후 단승식에서 적중고객이 없는 경우가 몇차례 발생한 경우가 있었습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">광명돔경륜장의 주차료는 얼마인가요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        2007년도 무료주차에 이어서, 경륜장을 찾는 고객님의 성원에 보답하기 위하여 '2010년도에도 1년간 연장' 하여 무료주차를 시행하오니 많은이용 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">분당지점에서 받은 당첨경품권으로 다른지점에서 찾아갈수 있나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        문의사항
+                                                        <br>대상경륜 고객사은행사에 분당지점에서 받은 경품권이 2등에 당첨되었습니다.
+                                                        <br>이것을 다른지점에 가서 찾을수 있나요?
+                                                        <br>
+                                                        <br>답변
+                                                        <br>안녕하세요. 고객님.
+                                                        <br>대상경륜 고객사은행사에 관심을 가져주셔서 감사드립니다.
+                                                        <br>문의하신 경품 수령방법에 대해 답변드립니다.
+                                                        <br>매 회 대상경륜마다 경품의 종류가 바뀝니다.
+                                                        <br>배송으로 경품을 받으시는 경우에는 지점에 상관없이 가능하오나(제세금 납부의 경우 납부후),
+                                                        <br>직접 찾아가시는 경품의 경우에는 해당지점으로 직접 가셔야 합니다.
+                                                        <br>따라서 먼저 행사내용을 확인해 보시고, 해당지점으로 문의를 해보시길 바랍니다.
+                                                        <br>감사합니다.             
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">광명돔경륜장 입장시 입장료는 얼마인가요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하세요 고객님^^
+                                                        <br>
+                                                        국민체육진흥공단 경륜경정사업본부에서는
+                                                        지난해까지 400원의 입장료를 징수하였으나
+
+                                                        2014. 1. 1일부터
+                                                        문화체육관광부령 제 13조,
+                                                        경륜경정 시행규칙 제 8조에 의거하여
+                                                        1인당 1일 기준 1,000원으로 부과하고 있습니다.
+                                                        <br>
+                                                        언제나 즐거운 하루 보내시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>                                 
+                                </div>
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">적중자가 없을때의 환급금은 어떻게 하나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경주가 정상적으로 이루어져 1, 2, 3위 각 승식별 승자가 분명 존재하는데 이를 맞춘 고객이
+                                                        전무한 상태라면 공제금액을 제외한 나머지 금액을 해당경주 구매고객에게 균분한 금액으로
+                                                        환급하도록 경륜.경정법에 명시되어있습니다.
+                                                        <br><br>
+                                                        이에, 단승/연승의 경우 환급금액이 81%이고 쌍승/복승/삼복승/쌍복승/삼쌍승의 경우는 72%가 됩니다.
+                                                        그런데 실제 적중자 부재시 환급률을 계산해 보면 단/연승의 경우는 10원미만의 단수가 있는 경우
+                                                        사사오입이 적용, 실제 단승/연승의 환급률은 81%가 아닌 80%가 됩니다.
+                                                        <br><br>
+                                                        참고로 '94년 경륜개장이후 단승식에서 적중고객이 없는 경우가 몇차례 발생한 경우가 있었습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">광명돔경륜장의 주차료는 얼마인가요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        2007년도 무료주차에 이어서, 경륜장을 찾는 고객님의 성원에 보답하기 위하여 '2010년도에도 1년간 연장' 하여 무료주차를 시행하오니 많은이용 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">소극적경주에 대한 제재는 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        소극적경주를 유발한 선수는 경륜시행 규정에 따라 심판에서 주의, 경고, 실격의 제재를 가하고 있으며, 소극적경주를 다각도로 분석하여 사안의 경중과 공정경륜에 위반되는 문제점이 발견되면 제재심의위원회에 상정하여 추가로 제재(출전정지)를 하고 있습니다, 또한 광명, 창원, 부산경륜장에서 소극적경주로 실격된 선수는 3박4일간 영주 경륜훈련원에 입소시켜 특별교육을 실시하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">상습적인 소극적경주 유발선수에 대한 가중처벌제도는 있는지요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        제재심의위원회운영규칙 제10조의3(위원회는 제재처분을 받은날로 부터 1년이내에 동일한 사안에 해당하는 행위를 한 선수에게는 가중제재를 할 수 있다)에 의거 가중처벌제도를 운영하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에서 시행하고 있는 사업공헌활동은 어떤것이 있나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하십니까. 저희 경륜경정사업본부에서는 광명본장 및 훈련원을 포함한 17개 지점에서 전사적으로 사회공헌활동을 통해 공익기업으로써 역할수행에 최선을 다하고 있습니다.
+                                                        <br>주요 사회공헌활동 내용을 말씀드리면,
+                                                        <br>o 전국 차상위계층(불우청소년 및 독거노인 등) 생활비 지원
+                                                        <br>o 사회복지시설(장애인시설, 노인시설, 불우아동시설, 새터민시설 등) 지원
+                                                        <br>o 1사1촌 자매결연마을 돕기(농번기 일손돕기, 불우어린이 장학금지원, 무료건강검진 등)
+                                                        <br>o 전국 불우 사이클꿈나무 장학금지원
+                                                        <br>o 자전거타기 활성화 캠페인
+                                                        <br>o 사회복지시설 노력봉사(무료급식소,장애아동목욕시키기,차상위계층 주거환경개선 등)
+                                                        <br>o 태안 유류유출사고 유류제거작업 등
+                                                        <br>저희 경륜경정사업본부에서는 앞으로도 도움의 손길이 필요한 곳에 빛과 사랑을 전할 수 있도록 더욱 노력할 예정이오니 고객님의 지속적인 관심과 성원을 부탁드립니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에 근무하고 싶은데 급여수준 및 체계는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜 경주종사원의 급여체계는 일급제이며 일급 외 교통비, 중식비 등이 별도로 지급됩니다. 발매 직원의 일급은 61,800원(직무수당 포함)이며, 타 보직의 일급 또한 발매직원과 비슷한 수준이오니 참고하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">발매직원, 안내요원, 질서유지원 등의 채용기준 및 규모는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하세요. 경주사업본부 사업지원팀입니다.
+                                                        <br>
+                                                        현재 경주사업본부에서 근무하고 있는 경주종사원의 규모는 약 1,000명 수준이나,
+                                                        발매원이나 매점판매원 등 대부분의 보직은 이직률이 낮아 추가 수요가 거의 없는 편입니다.
+                                                        신규채용이 있다고 하더라도, 정기 채용이 아니라 결원 발생 시에만 진행하고 있으므로,
+                                                        발매원 보직에 관심이 있으신 분은,
+                                                        국민체육진흥공단 홈페이지(<a href="www.kspo.or.kr" target="_blank">www.kspo.or.kr</a>)나,
+                                                        경주사업본부 홈페이지(<a href="http://www.krace.or.kr/" target="_blank">http://www.krace.or.kr/</a>)의 채용공고를 확인해주시면 감사드리겠습니다.
+                                                        <br>
+                                                        그러나, 광명본장(경륜) 및 미사리본장(경정)의 질서유지원, 고객안내원 등의 보직의 경우,
+                                                        결원이 잦아 수시로 채용을 진행하고 있사오니,
+                                                        이 보직에 관심이 있으신 분은, 안전팀(경륜, 02-2067-5824),
+                                                        <br>
+                                                        경정발매팀(경정, 031-790-8403)으로 문의주시면 보다 빠르게 확인하실 수 있습니다.
+                                                        <br>
+                                                        보다 자세한 사항은 경주사업본부 사업지원팀(02-2067-5402)으로 문의하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">정기 등급심사에 대하여</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">□ 주요내용<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp; o 시행방법<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp;&nbsp; - 연간 총 2회 (상반기, 하반기) 실시</font></span></p>
+                                                        <p class="HStyle0">
+                                                        </p>
+                                                        <table style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" border="1">
+                                                            <tbody>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="106" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">구 분</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="529" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">세 부 일 정</font></span></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">상반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;해당연도 6월말일 기준 14일전부터 12월말일 기준 <br>15일 전까지</span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;성적으로 심사 및 1월 초 적용 </span></font></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">하반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;전년도 12월말일 기준 14일전부터 해당연도 6월말일 <br>기준 15일 </span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">전까지 성적으로 심사 및 7월 초 적용</span></font></p></td></tr></tbody>
+                                                        </table>
+                                                        <p></p>
+                                                        <p><br>□&nbsp;등급심사에 필요한 평가점 산출방식<br><br>&nbsp;&nbsp; o 대상기간의 평가점 = 평균경주득점 + 입상점 - 위반점 <br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 평균경주득점 : 등급심사 대상기간 동안의 경주성적의 평균점<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 입상점 : 등급심사 대상기간 동안의 1, 2, 3착을 점수(1착 2점, 2착 1점, 3착 0.5점)로 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 환산 후&nbsp; 출전일수로 나눈 값<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 위반점 : 실격 1회당 1점<br><br></p>
+                                                        <p>&nbsp;위의 내용으로 등급심사의 과정을 거쳐 년2회 선수들의 등급이 부여되고 있습니다.<br><br>참고로 이러한 등급심사시 적용되는 급별, 경륜장별 운영규모가 등급심사 마다 다르게 <br>적용됨으로 선발급에서 우수급, 우수급에서 특선급으로의 승급, 특선에서 우수로, 우수에서 <br>선발급으로의 강급 등 급별 커트라인이라는 절대적인 점수가 정해질 수 없으며, <br>등급심사 시 등급별 커트라인이 다르게 나타나고 있습니다.</p>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">주행중 낙차등으로 인해 결승선에 1명만 골인한 경우 환급금은 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        ㅇ 쌍승식, 복승식 : 결승선에 도착한 2명을 승자로 하므로 1명으로 승자 불성립되어 전체 경주권에 대해 환불(100%)
+                                                        <br>ㅇ 단승식 : 결승선에 도착한 1위 1명을 승자로 하므로 정상적으로 환급금이 산출되어 환급처리
+                                                        <br>ㅇ 연승식 : 결승선에 도착한 1위, 2위를 각각 승자로 처리하나, 결승선에 1명만 도착하였으므로, 2위 적중자에게 지금될 환급금까지 1위에 지급되어 실제 단승식과 같은 개념으로 환급금 산출 지급
+                                                        <br>ㅇ 삼복승식, 쌍복승식, 삼쌍승식 : 결승선에 도착한 3명을 승자로 하므로, 승자가 1명인 경우 승식이 성립되지 않아 전체 경주권에 대해 환불(100%)
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">지점 매점 등 편익시설을 운영하고 싶은데..</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜지점매점은 저렴한 가격대로 고객님들께 다양한 먹거리 제공을 위하여 현재 직영으로 운영하고 있습니다. 아울러 경륜운영본부에서는 지점매점에 대하여 위탁운영계획이 없음을 알려드립니다. 감사합니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">전라도 및 강원도에는 경륜지점이 왜 없나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜의 지점 개설은 설치지역에 대한 정부의 사전승인과 설치건물에 대한 정부의 허가를 통해 이루어지고 있습니다. 현재 동지역에 지점개설 승인이 없어 현재의 여건에서는 검토가 된 바 없으나, 향후 지점개설시 지역여건 등을 고려하여 개설 검토하도록 하겠습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">적중된 경주권을 잃어버렸을 경우 어떻게 해요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        적중된 경주권이나 구매권을 소지하고 있다가 분실했을 경우는
+                                                        우선 구매한 장소와 구매내용을 대략적으론 알고 계셔야 합니다.
+                                                        <br><br>
+                                                        분실시 제일 먼저 조치할 사항은 경주일인 경우는 오픈되어 있는
+                                                        발매창구를 방문하시어 분실신고를 합니다.
+                                                        이때 직원에게 구매경주권의 대략적인 내용을 알려 주셔야 전산조회를
+                                                        통해 확인이 가능합니다.
+                                                        <br><br>
+                                                        경주권 구매확인이 되면 발매전산팀에서 곧바로 경주권에 대한 지불을 정지
+                                                        시키는 작업을 수행합니다.
+                                                        이렇게 전산상에 지불정지 작업이 이루어지면 다른 사람이 분실된 경주권을
+                                                        습득, 환급을 받으려 해도 환급이 불가능합니다.
+                                                        <br><br>
+                                                        그런데 한가지 유념할 사항은, 분실신고 이전에 다른 사람이 습득, 환급을
+                                                        이미 받았다면 환급금액을 찾을 방법이 없게 됩니다.
+                                                        <br><br>
+                                                        그러기에 이를 꼭 인지하셔서 최대한 빠른시간에 분실신고를 하는게 가장
+                                                        중요합니다.
+                                                        <br><br>
+                                                        마지막으로 분실된 경주권을 습득한 사람이 없는 상태에서 신고 접수후
+                                                        전산상 지불정지 처리가 정상적으로 이루어진 경우 분실 신고된 경주권 금액을
+                                                        곧바로 되돌려 받을순 없습니다.
+                                                        물론 분실된 경주권을 찾았을 경우는 곧바로 현금환급이 가능하겠지만
+                                                        분실로 인해 경주권이 존재하지 않기 때문에 1년이란 유예기간을 둡니다.
+                                                        오늘날짜(2008. 3. 28) 발행 경주권을 분실, 신고시 되찾을 수 있는 날짜는
+                                                        2009. 3. 27일이 됩니다. 보통 만료일 일주일전 신고고객님께 연락을 드리고
+                                                        있습니다.
+                                                        <br><br>
+                                                        이 유예기간이 지나면 전산상 완전히 소멸되므로 이를 반드시 인지,
+                                                        고객님 개인에 불이익이 없도록 유의하시길 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">적중자가 없을때의 환급금은 어떻게 하나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경주가 정상적으로 이루어져 1, 2, 3위 각 승식별 승자가 분명 존재하는데 이를 맞춘 고객이
+                                                        전무한 상태라면 공제금액을 제외한 나머지 금액을 해당경주 구매고객에게 균분한 금액으로
+                                                        환급하도록 경륜.경정법에 명시되어있습니다.
+                                                        <br><br>
+                                                        이에, 단승/연승의 경우 환급금액이 81%이고 쌍승/복승/삼복승/쌍복승/삼쌍승의 경우는 72%가 됩니다.
+                                                        그런데 실제 적중자 부재시 환급률을 계산해 보면 단/연승의 경우는 10원미만의 단수가 있는 경우
+                                                        사사오입이 적용, 실제 단승/연승의 환급률은 81%가 아닌 80%가 됩니다.
+                                                        <br><br>
+                                                        참고로 '94년 경륜개장이후 단승식에서 적중고객이 없는 경우가 몇차례 발생한 경우가 있었습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">광명돔경륜장의 주차료는 얼마인가요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        2007년도 무료주차에 이어서, 경륜장을 찾는 고객님의 성원에 보답하기 위하여 '2010년도에도 1년간 연장' 하여 무료주차를 시행하오니 많은이용 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">분당지점에서 받은 당첨경품권으로 다른지점에서 찾아갈수 있나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        문의사항
+                                                        <br>대상경륜 고객사은행사에 분당지점에서 받은 경품권이 2등에 당첨되었습니다.
+                                                        <br>이것을 다른지점에 가서 찾을수 있나요?
+                                                        <br>
+                                                        <br>답변
+                                                        <br>안녕하세요. 고객님.
+                                                        <br>대상경륜 고객사은행사에 관심을 가져주셔서 감사드립니다.
+                                                        <br>문의하신 경품 수령방법에 대해 답변드립니다.
+                                                        <br>매 회 대상경륜마다 경품의 종류가 바뀝니다.
+                                                        <br>배송으로 경품을 받으시는 경우에는 지점에 상관없이 가능하오나(제세금 납부의 경우 납부후),
+                                                        <br>직접 찾아가시는 경품의 경우에는 해당지점으로 직접 가셔야 합니다.
+                                                        <br>따라서 먼저 행사내용을 확인해 보시고, 해당지점으로 문의를 해보시길 바랍니다.
+                                                        <br>감사합니다.             
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">광명돔경륜장 입장시 입장료는 얼마인가요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하세요 고객님^^
+                                                        <br>
+                                                        국민체육진흥공단 경륜경정사업본부에서는
+                                                        지난해까지 400원의 입장료를 징수하였으나
+
+                                                        2014. 1. 1일부터
+                                                        문화체육관광부령 제 13조,
+                                                        경륜경정 시행규칙 제 8조에 의거하여
+                                                        1인당 1일 기준 1,000원으로 부과하고 있습니다.
+                                                        <br>
+                                                        언제나 즐거운 하루 보내시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">소극적경주에 대한 제재는 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        소극적경주를 유발한 선수는 경륜시행 규정에 따라 심판에서 주의, 경고, 실격의 제재를 가하고 있으며, 소극적경주를 다각도로 분석하여 사안의 경중과 공정경륜에 위반되는 문제점이 발견되면 제재심의위원회에 상정하여 추가로 제재(출전정지)를 하고 있습니다, 또한 광명, 창원, 부산경륜장에서 소극적경주로 실격된 선수는 3박4일간 영주 경륜훈련원에 입소시켜 특별교육을 실시하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">상습적인 소극적경주 유발선수에 대한 가중처벌제도는 있는지요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        제재심의위원회운영규칙 제10조의3(위원회는 제재처분을 받은날로 부터 1년이내에 동일한 사안에 해당하는 행위를 한 선수에게는 가중제재를 할 수 있다)에 의거 가중처벌제도를 운영하고 있습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에서 시행하고 있는 사업공헌활동은 어떤것이 있나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하십니까. 저희 경륜경정사업본부에서는 광명본장 및 훈련원을 포함한 17개 지점에서 전사적으로 사회공헌활동을 통해 공익기업으로써 역할수행에 최선을 다하고 있습니다.
+                                                        <br>주요 사회공헌활동 내용을 말씀드리면,
+                                                        <br>o 전국 차상위계층(불우청소년 및 독거노인 등) 생활비 지원
+                                                        <br>o 사회복지시설(장애인시설, 노인시설, 불우아동시설, 새터민시설 등) 지원
+                                                        <br>o 1사1촌 자매결연마을 돕기(농번기 일손돕기, 불우어린이 장학금지원, 무료건강검진 등)
+                                                        <br>o 전국 불우 사이클꿈나무 장학금지원
+                                                        <br>o 자전거타기 활성화 캠페인
+                                                        <br>o 사회복지시설 노력봉사(무료급식소,장애아동목욕시키기,차상위계층 주거환경개선 등)
+                                                        <br>o 태안 유류유출사고 유류제거작업 등
+                                                        <br>저희 경륜경정사업본부에서는 앞으로도 도움의 손길이 필요한 곳에 빛과 사랑을 전할 수 있도록 더욱 노력할 예정이오니 고객님의 지속적인 관심과 성원을 부탁드립니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">경륜에 근무하고 싶은데 급여수준 및 체계는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜 경주종사원의 급여체계는 일급제이며 일급 외 교통비, 중식비 등이 별도로 지급됩니다. 발매 직원의 일급은 61,800원(직무수당 포함)이며, 타 보직의 일급 또한 발매직원과 비슷한 수준이오니 참고하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">발매직원, 안내요원, 질서유지원 등의 채용기준 및 규모는?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        안녕하세요. 경주사업본부 사업지원팀입니다.
+                                                        <br>
+                                                        현재 경주사업본부에서 근무하고 있는 경주종사원의 규모는 약 1,000명 수준이나,
+                                                        발매원이나 매점판매원 등 대부분의 보직은 이직률이 낮아 추가 수요가 거의 없는 편입니다.
+                                                        신규채용이 있다고 하더라도, 정기 채용이 아니라 결원 발생 시에만 진행하고 있으므로,
+                                                        발매원 보직에 관심이 있으신 분은,
+                                                        국민체육진흥공단 홈페이지(<a href="www.kspo.or.kr" target="_blank">www.kspo.or.kr</a>)나,
+                                                        경주사업본부 홈페이지(<a href="http://www.krace.or.kr/" target="_blank">http://www.krace.or.kr/</a>)의 채용공고를 확인해주시면 감사드리겠습니다.
+                                                        <br>
+                                                        그러나, 광명본장(경륜) 및 미사리본장(경정)의 질서유지원, 고객안내원 등의 보직의 경우,
+                                                        결원이 잦아 수시로 채용을 진행하고 있사오니,
+                                                        이 보직에 관심이 있으신 분은, 안전팀(경륜, 02-2067-5824),
+                                                        <br>
+                                                        경정발매팀(경정, 031-790-8403)으로 문의주시면 보다 빠르게 확인하실 수 있습니다.
+                                                        <br>
+                                                        보다 자세한 사항은 경주사업본부 사업지원팀(02-2067-5402)으로 문의하시기 바랍니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabCont">
+
+                                <div class="modAccordionList">
+                                    <ul class="accoList">
+                                        
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">정기 등급심사에 대하여</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">□ 주요내용<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 33.9pt; TEXT-INDENT: -33.9pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp; o 시행방법<!--StartFragment-->&nbsp;</font></span></p>
+                                                        <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">&nbsp;&nbsp;&nbsp; - 연간 총 2회 (상반기, 하반기) 실시</font></span></p>
+                                                        <p class="HStyle0">
+                                                        </p>
+                                                        <table style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" border="1">
+                                                            <tbody>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="106" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">구 분</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt double" valign="center" width="529" bgcolor="#f1f1f1" height="29">
+                                                            <p class="HStyle0" style="TEXT-ALIGN: center"><span style="FONT-WEIGHT: bold; FONT-SIZE: 13pt; LINE-HEIGHT: 160%; FONT-FAMILY: '굴림'"><font size="2">세 부 일 정</font></span></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">상반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 1.1pt double; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 0.4pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;해당연도 6월말일 기준 14일전부터 12월말일 기준 <br>15일 전까지</span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;성적으로 심사 및 1월 초 적용 </span></font></p></td></tr>
+                                                            <tr>
+                                                            <td style="BORDER-RIGHT: #000000 0.4pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 1.1pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="106" height="51">
+                                                            <p class="HStyle0" style="LINE-HEIGHT: 130%; TEXT-ALIGN: center"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'"><font size="2">하반기</font></span></p></td>
+                                                            <td style="BORDER-RIGHT: #000000 1.1pt solid; PADDING-RIGHT: 1.4pt; BORDER-TOP: #000000 0.4pt solid; PADDING-LEFT: 1.4pt; PADDING-BOTTOM: 1.4pt; BORDER-LEFT: #000000 0.4pt solid; PADDING-TOP: 1.4pt; BORDER-BOTTOM: #000000 1.1pt solid" valign="center" width="529" height="51">
+                                                            <p class="HStyle0" style="MARGIN-LEFT: 34pt; TEXT-INDENT: -34pt; LINE-HEIGHT: 130%"><font size="2"><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">&nbsp;전년도 12월말일 기준 14일전부터 해당연도 6월말일 <br>기준 15일 </span><span style="FONT-SIZE: 13pt; LINE-HEIGHT: 130%; FONT-FAMILY: '굴림'">전까지 성적으로 심사 및 7월 초 적용</span></font></p></td></tr></tbody>
+                                                        </table>
+                                                        <p></p>
+                                                        <p><br>□&nbsp;등급심사에 필요한 평가점 산출방식<br><br>&nbsp;&nbsp; o 대상기간의 평가점 = 평균경주득점 + 입상점 - 위반점 <br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 평균경주득점 : 등급심사 대상기간 동안의 경주성적의 평균점<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 입상점 : 등급심사 대상기간 동안의 1, 2, 3착을 점수(1착 2점, 2착 1점, 3착 0.5점)로 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 환산 후&nbsp; 출전일수로 나눈 값<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; - 위반점 : 실격 1회당 1점<br><br></p>
+                                                        <p>&nbsp;위의 내용으로 등급심사의 과정을 거쳐 년2회 선수들의 등급이 부여되고 있습니다.<br><br>참고로 이러한 등급심사시 적용되는 급별, 경륜장별 운영규모가 등급심사 마다 다르게 <br>적용됨으로 선발급에서 우수급, 우수급에서 특선급으로의 승급, 특선에서 우수로, 우수에서 <br>선발급으로의 강급 등 급별 커트라인이라는 절대적인 점수가 정해질 수 없으며, <br>등급심사 시 등급별 커트라인이 다르게 나타나고 있습니다.</p>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">주행중 낙차등으로 인해 결승선에 1명만 골인한 경우 환급금은 어떻게 되나요</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        ㅇ 쌍승식, 복승식 : 결승선에 도착한 2명을 승자로 하므로 1명으로 승자 불성립되어 전체 경주권에 대해 환불(100%)
+                                                        <br>ㅇ 단승식 : 결승선에 도착한 1위 1명을 승자로 하므로 정상적으로 환급금이 산출되어 환급처리
+                                                        <br>ㅇ 연승식 : 결승선에 도착한 1위, 2위를 각각 승자로 처리하나, 결승선에 1명만 도착하였으므로, 2위 적중자에게 지금될 환급금까지 1위에 지급되어 실제 단승식과 같은 개념으로 환급금 산출 지급
+                                                        <br>ㅇ 삼복승식, 쌍복승식, 삼쌍승식 : 결승선에 도착한 3명을 승자로 하므로, 승자가 1명인 경우 승식이 성립되지 않아 전체 경주권에 대해 환불(100%)
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">지점 매점 등 편익시설을 운영하고 싶은데..</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜지점매점은 저렴한 가격대로 고객님들께 다양한 먹거리 제공을 위하여 현재 직영으로 운영하고 있습니다. 아울러 경륜운영본부에서는 지점매점에 대하여 위탁운영계획이 없음을 알려드립니다. 감사합니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="accoItem">
+                                            <dl class="accoArea">
+                                                <dt class="accoTop">
+                                                    <button class="accoTitle">전라도 및 강원도에는 경륜지점이 왜 없나요?</button>
+                                                </dt>
+                                                <dd class="accoBody">
+                                                    <div class="accoCont">
+                                                        경륜의 지점 개설은 설치지역에 대한 정부의 사전승인과 설치건물에 대한 정부의 허가를 통해 이루어지고 있습니다. 현재 동지역에 지점개설 승인이 없어 현재의 여건에서는 검토가 된 바 없으나, 향후 지점개설시 지역여건 등을 고려하여 개설 검토하도록 하겠습니다.
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+
+                <script>
+                    accordionListInit(); //모드 아코디언 리스트 함수
+                </script>
+
+                <!-- 서브 바텀 (담당자) -->
+                <%- include('../_ejs/sub_btm.ejs', {
+                    team: '건전화운영팀',
+                    name: '조철희',
+                    phone: '02-2067-5577',
+                    url: "../../",
+                }) %>
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
