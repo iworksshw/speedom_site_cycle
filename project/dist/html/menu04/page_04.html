@@ -817,7 +817,7 @@
                                 <!-- text -->
                                 <div class="galleryText">
                                     <ul>
-                                        <li class="active">
+                                        <!-- <li class="active">
                                             <div class="galleryTit">경륜 개장 30주년 기념
                                             일간스포츠배 대상경륜 시상식 
                                             및 우승선수 인터뷰</div>
@@ -834,7 +834,7 @@
                                         <li>
                                             <div class="galleryTit">2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
                                             <div class="galleryDate">2024.07.05</div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -1163,7 +1163,7 @@
                             <h2 class="tit">지금 뜨는 영상</h2>
                         </div>
 
-                        <div class="listGallery col3_1 theaterSwiper" data-per-view="3,3,2,1" id="theaterSwiper_1">
+                        <div class="listGallery col3_1 theaterSwiper" id="theaterSwiper_1">
                             <ul class="listGroup listSwiper">
                                 <li class="listItem">
                                     <a href="#" class="itemLink">
@@ -1271,7 +1271,7 @@
                                 </div>
                             </div>
 
-                            <div class="listGallery theaterSwiper" data-per-view="4,4,3,1"  id="theaterSwiper_2">
+                            <div class="listGallery theaterSwiper" id="theaterSwiper_2">
                                 <ul class="listGroup listSwiper">
                                     <li class="listItem">
                                         <a href="#" class="itemLink">
@@ -1393,7 +1393,7 @@
                         </div>
                     </div>
                     
-                    <div class="sectArea">
+                    <div class="sectArea popularInfo">
                         <div class="sectTit">
                             <div class="subTit">최근 가장 많이 본</div>
                             <h2 class="tit">인기 영상</h2>
@@ -1466,8 +1466,8 @@
                         </div>
                     </div>
                     
-                    <div class="sectArea">
-                        <div class="sectTit notice">
+                    <div class="sectArea newsInfo">
+                        <div class="sectTit">
                             <div class="subTit">알려드립니다</div>
                             <h2 class="tit">스피돔소식</h2>
                         </div>
@@ -1596,7 +1596,7 @@
 
 
                         // 지금 뜨는 영상
-                        theaterSwiper("#theaterSwiper_1"); // swiper 실행 : 데이터 바인딩 후 호출
+                        theaterSwiper("#theaterSwiper_1", "3,3,2,1"); // swiper 실행 : 데이터 바인딩 후 호출
                         // 경륜 인사이트
                         insightInit("#theaterSwiper_2");
                     });
@@ -1604,6 +1604,13 @@
                     function videoGallery() {
                         const cptVideoGallery = document.querySelector(".videoGallery");
                         if (cptVideoGallery) {
+                            document.querySelectorAll('.videoGallerySwiper .swiper-slide').forEach(function(slideItem){
+                                var itemLi = document.createElement('li');
+                                itemLi.innerHTML = slideItem.innerHTML;
+                                itemLi.querySelector('.movieBox').remove();
+                                cptVideoGallery.querySelector('.galleryText ul').append(itemLi);
+                            });
+                            cptVideoGallery.querySelectorAll('.galleryText ul > li')[0].classList.add('active');
                     
                             const mobile = window.matchMedia('(max-width: 767px)');
                             const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1280px)');
@@ -1660,7 +1667,7 @@
                     }
                     
                     function insightInit(_target) {
-                        theaterSwiper(_target); // swiper 실행 : 데이터 바인딩 후 호출
+                        theaterSwiper(_target, "4,4,3,1"); // swiper 실행 : 데이터 바인딩 후 호출
                         
                         // tab event
                         var tBtns = document.querySelectorAll('#insightTab .tabName');
@@ -1679,7 +1686,8 @@
                             });
                         });
                     }
-                    function theaterSwiper(_target) {
+                    function theaterSwiper(_target, _perview) {
+                        // console.log(_perview);
                         document.querySelectorAll(_target).forEach(function(swiperTarget){
                             // setting
                             swiperTarget.classList.add('swiper-container');
@@ -1703,9 +1711,8 @@
                                     nextEl: swiperTarget.querySelector(".btnNext"),
                                 },
                             }
-                            if( swiperTarget.getAttribute('data-per-view') != undefined ) {
-                                // swiperPerview = swiperTarget.getAttribute('data-per-view');
-                                swiperPerview = swiperTarget.getAttribute('data-per-view').split(',');
+                            if( _perview != undefined ) {
+                                swiperPerview = _perview.split(',');
                                 swiperOpt.breakpoints = {
                                     1480: {
                                         slidesPerView: swiperPerview[0],
@@ -1727,7 +1734,7 @@
                             swiper.init();
 
                             if( swiper != undefined ) {
-                                console.log( swiperTarget.id );
+                                // console.log( swiperTarget.id );
                                 window['ui' + swiperTarget.id ] = swiper;
                             }
                         });
