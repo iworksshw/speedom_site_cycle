@@ -1,5 +1,6 @@
 .modAccordionList {
     margin-top: 80px;
+    &.mgH40 {margin-top: 40px;}
 
     .accoList {
         border-top: 1px solid var(--Bg-Line-line-100);
@@ -32,6 +33,7 @@
 
     @include media("mobile"){
         margin: 40px -16px 0;
+        &.mgH40 {margin-top: 24px;}
         .accoList {
             .accoItem {
                 .accoArea {
