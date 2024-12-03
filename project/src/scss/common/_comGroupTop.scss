@@ -38,7 +38,12 @@
         @extend .comBtnGroup;
     }
 
-    .btnReload {padding-left: 20px; font-size: rem(14px); color: var(--Gray-700); background: url(../../images/common/ic_16_reload.svg) left center no-repeat;}
+    .btnReload {
+        padding-left: 20px; font-size: rem(14px); color: var(--Gray-700); background: url(../../images/common/ic_16_reload.svg) left center no-repeat;
+        &.color {color: var(--Gray-500, #6F7176);background-image: url('../../images/common/ic_16_reload_b.svg');}
+    }
+
+    &.prediction {margin-top: 60px;}
 
     @include media('mobile'){
         margin-bottom:8px; flex-wrap: wrap; flex-direction: column-reverse;
@@ -70,6 +75,11 @@
                 }
             }
             &:first-child.division {margin-top: 0;}
+        }
+        &.prediction {
+            margin-top: 40px;
+            > div {padding-bottom: 12px;}
+            .alignR {justify-content: right;}
         }
     }
 

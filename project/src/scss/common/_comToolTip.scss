@@ -1,0 +1,72 @@
+.comToolTip {
+    display: inline-block;
+    position: relative;
+    .tooltip {
+        width: 16px;
+        height: 26px;
+        font-size: 0;
+        background: url(../../images/common/ic_16_tooltip_g.svg) center no-repeat;
+    }
+    .tooltipBox {
+        display: none;
+        width: 280px;
+        position: absolute;
+        top: 40px;
+        left: -100px;
+        padding: 16px 23px 16px 16px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid var(--Point-Primary2);
+        box-shadow: 10px 10px 10px 0px rgba(40, 195, 158, 0.10);
+        .btnClose {
+            width: 16px;
+            height: 16px;
+            font-size: 0;
+            background: url(../../images/common/ic_12_close.svg) center no-repeat;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+        .txt {
+            font-size: rem(15px);
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--Gray-800);
+            text-align: left;
+        }
+        .btnMore {
+            display: inline;
+            font-size: rem(15px);
+            color: var(--Gray-800);
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 16px;
+                height: 16px;
+                margin-left: 2px;
+                background: url(../../images/common/ic_16_new_window_mint.svg) center no-repeat;
+                vertical-align: text-top;
+            }
+        }
+        &::after {
+            display: block;
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: url(../../images/common/ic_14_ballon_tail.svg) center no-repeat;
+            position: absolute;
+            top: -12px;
+            left: 100px;
+            z-index: 1;
+        }
+        &.on {display: block;}
+    }
+    &.right .tooltipBox {
+        left: auto;
+        right: -80px;
+        &:after {
+            left: auto;
+            right: 80px;
+        }
+    }
+}

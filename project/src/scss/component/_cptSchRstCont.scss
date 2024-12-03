@@ -102,6 +102,7 @@
                 .thum {
                     position: relative; padding-bottom: 56.25%; margin-bottom: 8px;
                     img {display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: cover;}
+                    & + .videoPlayback {margin-top: 20px;}
                 }
                 .thumTit {font-size: rem(18px); color: var(--Gray-800); font-weight: 600; line-height: 1.6; position: relative; z-index: 1; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; overflow: hidden; margin-bottom: 8px;}
                 .bbsDate {margin-bottom: 8px;}
@@ -231,6 +232,18 @@
                 gap:28px;margin: 0;
                 .list {
                     width: 100%; padding: 0;
+                    a {
+                        .thum + .videoPlayback {margin-top: 12px;}
+                        .videoPlayback {
+                            height: 40px;
+                            > button {
+                                &[class*=btnPlay] {
+                                    min-width: auto;flex-direction: row;justify-content: center;padding: 0 8px;
+                                    span {font-size: rem(13px);font-weight: 400;}
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
