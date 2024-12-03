@@ -1,0 +1,944 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+	title: "KCYCLE 경륜",
+	url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+	<div class="layoutArea">
+
+		<!-- 상단영역 -->
+		<div class="layoutTop">
+			<!-- Top -->
+			<%- include('../_ejs/header.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //상단영역 -->
+
+		<!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs/sub_top.ejs', {
+                    location: ['경륜영상관'],
+                    subTitle: '대상경륜방송',
+                    subText: '<b>최고의 전문 해설위원</b>들의 <br class="mView">해설 방송,<br class="pcView">선수 인터뷰와 경주 영상을 보실 수 있어요.',
+                    url: "../../",
+                    visualClass: "bg05",
+                }) %>
+
+                <div class="layoutContArea">
+                    <div class="modTab">
+                        <div class="tabMenuGroup tabSwiper toMob">
+                            <ul class="tabMenu swiper-wrapper">
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">스피돔포커스</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">대상경륜 인터뷰</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">대상경주동영상</button></li>
+                            </ul>
+                        </div>
+                        <div class="tabDirection">
+                            <div class="tabBtn alignL">
+                                <button class="prev">이전</button>
+                            </div>
+                            <div class="tabBtn alignR">
+                                <button class="next">다음</button>
+                            </div>
+                        </div>
+                        <div class="tabContianer">
+                            <!-- 스피돔포커스 -->
+                            <div class="tabCont on"> <!-- addClass - on : 컨텐츠 노출 -->
+                                <div class="comGroupTop">
+                                    <div class="alignL">
+                                        <div class="unit"><span class="text">전체 <span class="total">99</span> 건</span></div>
+                                    </div>
+                                    <div class="alignR">
+                                        <ul class="opList division"><!-- division으로 가로 분할 스타일로 변경 -->
+                                            <li class="item fixedItem"><!-- 추가로 fixedItem로 고정 메뉴 지정 -->
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="">전체</option>
+                                                            <option value="">드롭다운</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="frmGroup">
+                                                    <div class="frmSearch">
+                                                        <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                        <button class="btnSearch">검색</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="cptSchRstCont">
+                                    <div class="ctt">
+                                        <div class="thumGall fullSize">
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>11111111111스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                        </div> 
+                                    </div>
+                                    <div class="comPaging">
+                                        <a class="start" href="#"></a>
+                                        <a class="prev" href="#"></a>
+                                        <ul class="numList">
+                                            <li><a href="#">1</a></li>
+                                            <li class="on"><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                        </ul>
+                                        <a class="next" href="#"></a>
+                                        <a class="end" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 대상경륜 인터뷰 -->
+                            <div class="tabCont">
+                                <div class="comGroupTop">
+                                    <div class="alignL">
+                                        <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
+                                    </div>
+                                    <div class="alignR">
+                                        <ul class="opList division"><!-- division으로 가로 분할 스타일로 변경 -->
+                                            <li class="item fixedItem"><!-- 추가로 fixedItem로 고정 메뉴 지정 -->
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="">전체</option>
+                                                            <option value="">드롭다운</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="frmGroup">
+                                                    <div class="frmSearch">
+                                                        <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                        <button class="btnSearch">검색</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="cptSchRstCont">
+                                    <div class="ctt">
+                                        <div class="thumGall fullSize">
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>22222222222222222스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                        </div> 
+                                    </div>
+                                    <div class="comPaging">
+                                        <a class="start" href="#"></a>
+                                        <a class="prev" href="#"></a>
+                                        <ul class="numList">
+                                            <li><a href="#">1</a></li>
+                                            <li class="on"><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                        </ul>
+                                        <a class="next" href="#"></a>
+                                        <a class="end" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 대상경주동영상 -->
+                            <div class="tabCont">
+                                <div class="comGroupTop">
+                                    <div class="alignL">
+                                        <div class="unit"><span class="text">전체 <span class="total">9999</span> 건</span></div>
+                                    </div>
+                                    <div class="alignR">
+                                        <ul class="opList division"><!-- division으로 가로 분할 스타일로 변경 -->
+                                            <li class="item fixedItem"><!-- 추가로 fixedItem로 고정 메뉴 지정 -->
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="">전체</option>
+                                                            <option value="">드롭다운</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="frmGroup">
+                                                    <div class="frmSearch">
+                                                        <input type="text" class="iptText" placeholder="내용을 입력하세요">
+                                                        <button class="btnSearch">검색</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="cptSchRstCont">
+                                    <div class="ctt">
+                                        <div class="thumGall fullSize">
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>3333333333333스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div> 
+                                            <div class="list">
+                                                <a href="#">
+                                                    <div class="thum">
+                                                        <img src="../../images/contents/cont10_02_03.png" alt="영상 썸네일">
+                                                    </div>
+                                                    <div class="thumTit">
+                                                        <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
+                                                    </div>
+                                                    <ul class="bbsDate">
+                                                        <li>2024.07.05</li>
+                                                        <li>조회수 : 200</li>
+                                                    </ul>
+            
+                                                </a>     
+                                            </div>  
+                                        </div> 
+                                    </div>
+                                    <div class="comPaging">
+                                        <a class="start" href="#"></a>
+                                        <a class="prev" href="#"></a>
+                                        <ul class="numList">
+                                            <li><a href="#">1</a></li>
+                                            <li class="on"><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                        </ul>
+                                        <a class="next" href="#"></a>
+                                        <a class="end" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+		<!-- 하단영역 -->
+		<div class="layoutFooter">
+			<!-- Footer -->
+			<%- include('../_ejs/footer.ejs', {
+				url: "../../"
+			}) %>
+		</div>
+		<!-- //하단영역 -->
+
+	</div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>

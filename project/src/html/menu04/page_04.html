@@ -25,53 +25,330 @@
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
 				<div class="cptTheater">
-					<div class="topArea tempArea">상단영역</div>
+					<div class="topArea">
+                        <div class="videoGallery">
+                            <div class="inner">
+                                <div class="title">
+                                    <h2>경륜영상관</h2>
+                                </div>
+        
+                                <!-- movie -->
+                                <div class="swiper videoGallerySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="movieBox" style="background-image: url(../../images/thum/thum_lg_video.png);"></div>
+                                            <div class="galleryTit">경륜 개장 30주년 기념
+                                            일간스포츠배 대상경륜 시상식 
+                                            및 우승선수 인터뷰</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="movieBox" style="background-image: url(../../images/thum/thum_lg_video.png);"></div>
+                                            <div class="galleryTit">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="movieBox" style="background-image: url(../../images/thum/thum_lg_video.png);"></div>
+                                            <div class="galleryTit">[경륜훈련원 홍보 영상] 프로의 시작 프로의 시작 [경륜훈련원 홍보 영상] 프로의 시작 프로의 시작 [경륜훈련원 홍보 영상] 프로의 시작</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="movieBox" style="background-image: url(../../images/thum/thum_lg_video.png);"></div>
+                                            <div class="galleryTit">2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </div>
+                                    </div>
+                                    <!-- button -->
+                                    <div class="swiperPageBtn">
+                                        <div class="swiperpage">
+                                            <span class="current">1</span>
+                                            <span class="last"></span>
+                                        </div>
+                                        <div class="swiperbtn">
+                                            <button type="button" class="btnPrev">이전</button>
+                                            <button type="button" class="btnNext">다음</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- text -->
+                                <div class="galleryText">
+                                    <ul>
+                                        <!-- <li class="active">
+                                            <div class="galleryTit">경륜 개장 30주년 기념
+                                            일간스포츠배 대상경륜 시상식 
+                                            및 우승선수 인터뷰</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </li>
+                                        <li>
+                                            <div class="galleryTit">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </li>
+                                        <li>
+                                            <div class="galleryTit">[경륜훈련원 홍보 영상] 프로의 시작 프로의 시작 [경륜훈련원 홍보 영상] 프로의 시작 프로의 시작 [경륜훈련원 홍보 영상] 프로의 시작</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </li>
+                                        <li>
+                                            <div class="galleryTit">2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일) 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <div class="galleryDate">2024.07.05</div>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg">
+                                <span class="deco"></span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="sectArea">
                         <div class="comSchDetail">
                             <div class="schBox">
                                 <div class="schSelc">
                                     <div class="box">
-                                        <input type="text" class="ipt" required placeholder="" />
+                                        <input type="text" class="ipt" required placeholder="보고 싶은 영상을 검색해 보세요." />
                                     </div>
                                 </div>
                                 <div class="schBtn">
                                     <button>검색</button>
                                 </div>
-                                <div class="schDet">상세검색</div>
+                                <button type="button" class="schDet">상세검색</button>
                             </div>
                             <div class="detBox">
-                                <div class="list">
+                                <div class="searchOptionBox">
                                     <dl>
-                                        <dt>검색대상</dt>
+                                        <dt>경주일</dt>
                                         <dd>
-                                            <div class="dBtn on" id="">전체</div>
-                                            <div class="dBtn" id="">제목</div>
-                                            <div class="dBtn" id="">내용</div>
+                                            <div class="innerBox">
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <input type="radio" name="rdoGroup1" id="rdo1-1" class="iptRdoChk" />
+                                                        <label for="rdo1-1">오늘</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="radio" name="rdoGroup1" id="rdo1-2" class="iptRdoChk" />
+                                                        <label class="rdo1-2">최근1주</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="radio" name="rdoGroup1" id="rdo1-3" class="iptRdoChk" />
+                                                        <label class="rdo1-3">최근1달</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="innerBox">
+                                                <div class="subMenu">
+                                                    <p>직접입력</p>
+                                                    <ul class="datePick">
+                                                        <li><input type="text" placeholder="2024.01.01" /></li>
+                                                        <li class="hpn">-</li>
+                                                        <li><input type="text" placeholder="2024.03.01" /></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    
+                                </div>
+                                <div class="searchOptionBox">
+                                    <dl>
+                                        <dt>경기등급<span>(중복선택가능)</span></dt>
+                                        <dd>
+                                            <div class="innerBox">
+                                                <div class="frmGroup gridItem2"><!-- 모바일에서 기본은 3단배열, 그 외에 2, 4단 배열일 경우 gridItem2, gridItem4 -->
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup2" id="rdo2-1" class="iptRdoChk lg chkAll" />
+                                                        <label for="rdo2-1">전체</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup2" id="rdo2-2" class="iptRdoChk lg" />
+                                                        <label class="rdo2-2">선발(결승포함)</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup2" id="rdo2-3" class="iptRdoChk lg" />
+                                                        <label class="rdo2-3">우스(결승포함)</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup2" id="rdo2-4" class="iptRdoChk lg" />
+                                                        <label class="rdo2-4">특선(결승포함)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </dd>
                                     </dl>
                                 </div>
-                                <div class="list">
+                                <div class="searchOptionBox">
                                     <dl>
-                                        <dt>검색기간</dt>
+                                        <dt>전법<span>(중복선택가능)</span></dt>
                                         <dd>
-                                            <div class="dBtn on" id="">전체</div>
-                                            <div class="dBtn" id="">최근1주</div>
-                                            <div class="dBtn" id="">최근1달</div>
+                                            <div class="innerBox">
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup3" id="rdo3-1" class="iptRdoChk chkAll" />
+                                                        <label for="rdo3-1">전체</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup3" id="rdo3-2" class="iptRdoChk" />
+                                                        <label class="rdo3-2">선행</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup3" id="rdo3-3" class="iptRdoChk" />
+                                                        <label class="rdo3-3">젖히기</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup3" id="rdo3-4" class="iptRdoChk" />
+                                                        <label class="rdo3-4">추입</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup3" id="rdo3-5" class="iptRdoChk" />
+                                                        <label class="rdo3-5">마크</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </dd>
                                     </dl>
+                                </div>
+                                <div class="searchOptionBox">
                                     <dl>
-                                        <dt class="gray">직접입력</dt>
+                                        <dt>경기장<span>(중복선택가능)</span></dt>
                                         <dd>
-                                            <ul class="datePick">
-                                                <li>
-                                                    <input type="text" placeholder="2024.01.01" />
-                                                </li>
-                                                <li class="hpn">-</li>
-                                                <li>
-                                                    <input type="text" placeholder="2024.03.01" />
-                                                </li>
-                                            </ul>
+                                            <div class="innerBox">
+                                                <div class="frmGroup">
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup4" id="rdo4-1" class="iptRdoChk chkAll" />
+                                                        <label for="rdo4-1">전체</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup4" id="rdo4-2" class="iptRdoChk" />
+                                                        <label class="rdo4-2">광명</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup4" id="rdo4-3" class="iptRdoChk" />
+                                                        <label class="rdo4-3">부산</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchOptionBox">
+                                    <dl>
+                                        <dt>선수정보</dt>
+                                        <dd>
+                                            <div class="innerBox">
+                                                <div class="subMenu">
+                                                    <p>선수명</p>
+                                                    <div class="frmBox">
+                                                        <input type="text" class="iptText" placeholder="선수명을 입력하세요." value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="innerBox">
+                                                <div class="subMenu">
+                                                    <p>전법</p>
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="전체">전체</option>
+                                                            <option value="선행">선행</option>
+                                                            <option value="젖히기">젖히기</option>
+                                                            <option value="추입">추입</option>
+                                                            <option value="마크">마크</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="subMenu">
+                                                    <p>훈련지</p>
+                                                    <div class="frmBox">
+                                                        <select class="iptSlt">
+                                                            <option value="전체">전체</option>
+                                                            <option value="선행">선행</option>
+                                                            <option value="젖히기">젖히기</option>
+                                                            <option value="추입">추입</option>
+                                                            <option value="마크">마크</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchOptionBox">
+                                    <dl>
+                                        <dt>기수정보</dt>
+                                        <dd>
+                                            <div class="innerBox">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="전체">전체</option>
+                                                        <option value="선행">선행</option>
+                                                        <option value="젖히기">젖히기</option>
+                                                        <option value="추입">추입</option>
+                                                        <option value="마크">마크</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="searchOptionBox">
+                                    <dl>
+                                        <dt>배당률<span>(중복선택가능)</span></dt>
+                                        <dd class="noWrap">
+                                            <div class="innerBox">
+                                                <div class="frmGroup gridItem2">
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup5" id="rdo5-1" class="iptRdoChk lg chkAll" />
+                                                        <label for="rdo5-1">전체</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup5" id="rdo5-2" class="iptRdoChk lg" />
+                                                        <label class="rdo5-2">저배당(10미만)</label>
+                                                    </div>
+                                                    <div class="frmBox">
+                                                        <input type="checkbox" name="rdoGroup5" id="rdo5-3" class="iptRdoChk lg" />
+                                                        <label class="rdo5-3">고배당(10이상)</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="innerBox">
+                                                <div class="subMenu">
+                                                    <p>승식<span>(중복선택가능)</span></p>
+                                                    <div class="frmGroup gridItem4">
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-1" class="iptRdoChk chkAll" />
+                                                            <label for="rdo6-1">전체</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-2" class="iptRdoChk" />
+                                                            <label for="rdo6-2">단승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-3" class="iptRdoChk" />
+                                                            <label for="rdo6-3">연승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-4" class="iptRdoChk" />
+                                                            <label for="rdo6-4">복승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-5" class="iptRdoChk" />
+                                                            <label for="rdo6-5">쌍승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-6" class="iptRdoChk" />
+                                                            <label for="rdo6-6">심복승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-7" class="iptRdoChk" />
+                                                            <label for="rdo6-7">쌍복승</label>
+                                                        </div>
+                                                        <div class="frmBox">
+                                                            <input type="checkbox" name="rdoGroup6" id="rdo6-8" class="iptRdoChk" />
+                                                            <label for="rdo6-8">삼쌍승</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </dd>
                                     </dl>
                                 </div>
@@ -87,40 +364,40 @@
                                     <div class="swiper-container schStxSlide">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">선수</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">출주표</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">배당률</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">선수출주표</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">스피돔지점</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">베팅</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">선수<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">선수</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">출주표<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">출주표</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">배당률<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">배당률</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">선수출주표<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">선수출주표</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">스피돔지점<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">스피돔지점</button>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="sTxt">베팅<span class="sDel"></span></div>
+                                                <button type="button" class="sTxt">베팅</button>
                                             </div>
                                         </div>
                                         <div class="schStxSlidePage">
@@ -142,8 +419,8 @@
                             <h2 class="tit">지금 뜨는 영상</h2>
                         </div>
 
-                        <div class="listBoard col3_1">
-                            <ul class="listGroup">
+                        <div class="listGallery col3_1 theaterSwiper" id="theaterSwiper_1">
+                            <ul class="listGroup listSwiper">
                                 <li class="listItem">
                                     <a href="#" class="itemLink">
                                         <div class="imgBox">
@@ -186,7 +463,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <!-- <li class="listItem">
+                                <li class="listItem">
                                     <a href="#" class="itemLink">
                                         <div class="imgBox">
                                             <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
@@ -199,18 +476,38 @@
                                             </ul>
                                         </div>
                                     </a>
-                                </li> -->
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="listItem">
+                                    <a href="#" class="itemLink">
+                                        <div class="imgBox">
+                                            <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                        </div>
+                                        <div class="infoBox">
+                                            <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                            <ul class="info">
+                                                <li class="item date">2024.07.24</li>
+                                                <li class="item">조회수 : 200</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
-                            
-                            <div class="swiper-control">
-                                <div class="swiper-number">
-                                    <span class="swiper-pagination-current">1</span>
-                                    /
-                                    <span class="swiper-pagination-total">2</span>
-                                </div>
-                                <button type="button" class="btnPrev">이전</button>
-                                <button type="button" class="btnNext">다음</button>
-                            </div>
+                            <button type="button" class="btnPrev">이전</button>
+                            <button type="button" class="btnNext">다음</button>
                         </div>
                     </div>
                     
@@ -220,7 +517,7 @@
                                 <div class="subTit">경륜 이모저모</div>
                                 <h2 class="tit">경륜 인사이트</h2>
                             
-                                <div class="tabMenuGroup tabSwiper toMob">
+                                <div class="tabMenuGroup tabSwiper toMob" id="insightTab">
                                     <ul class="sortTab swiper-wrapper">
                                         <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
                                         <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">특집 프로그램</button></li>
@@ -230,8 +527,64 @@
                                 </div>
                             </div>
 
-                            <div class="listBoard theaterSwiper">
-                                <ul class="listGroup">
+                            <div class="listGallery theaterSwiper" id="theaterSwiper_2">
+                                <ul class="listGroup listSwiper">
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[2024 스피돔뉴스 9편] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[대신 물어봐드립니다 3편] 광명 신라호텔 가봄?</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[경륜훈련원 홍보 영상] 프로의 시작</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="listItem">
+                                        <a href="#" class="itemLink">
+                                            <div class="imgBox">
+                                                <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                            </div>
+                                            <div class="infoBox">
+                                                <div class="title">[2024 스피돔뉴스 9편] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                                <ul class="info">
+                                                    <li class="item date">2024.07.24</li>
+                                                    <li class="item">조회수 : 200</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
                                     <li class="listItem">
                                         <a href="#" class="itemLink">
                                             <div class="imgBox">
@@ -289,12 +642,14 @@
                                         </a>
                                     </li>
                                 </ul>
+                                <button type="button" class="btnPrev">이전</button>
+                                <button type="button" class="btnNext">다음</button>
                             </div>
                             <button type="button" class="btnMore">더보기</button>
                         </div>
                     </div>
                     
-                    <div class="sectArea">
+                    <div class="sectArea popularInfo">
                         <div class="sectTit">
                             <div class="subTit">최근 가장 많이 본</div>
                             <h2 class="tit">인기 영상</h2>
@@ -305,7 +660,7 @@
                             </div>
                         </div>
 
-                        <div class="listBoard theaterSwiper">
+                        <div class="listGallery">
                             <ul class="listGroup">
                                 <li class="listItem">
                                     <a href="#" class="itemLink">
@@ -367,13 +722,13 @@
                         </div>
                     </div>
                     
-                    <div class="sectArea">
-                        <div class="sectTit notice">
+                    <div class="sectArea newsInfo">
+                        <div class="sectTit">
                             <div class="subTit">알려드립니다</div>
                             <h2 class="tit">스피돔소식</h2>
                         </div>
 
-                        <div class="listBoard col3_1 theaterSwiper">
+                        <div class="listGallery col3_1 mColumn">
                             <ul class="listGroup">
                                 <li class="listItem">
                                     <a href="#" class="itemLink">
@@ -433,7 +788,7 @@
                                 
                                 <div class="listEvent">
                                     <div class="listGroup">
-                                        <div class="listItem">
+                                        <a href="#" class="listItem">
                                             <div class="infoBox">
                                                 <div class="title">2023년 경륜 28기 신인 경륜선수 시범경주 2023년 경륜 28기 신인 경륜선수 시범경주2023년 경륜 28기 신인 경륜선수 시범경주</div>
                                                 <div class="date">2024.07.24</div>
@@ -441,7 +796,7 @@
                                             <div class="imgBox">
                                                 <div class="bg" style="background-image: url(../../images/thum/board_temp_event.png);"></div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
 
                                     <button type="button" class="txtMore">더보기</button>
@@ -456,11 +811,12 @@
                 <!-- 최근 검색어 swiper, 상세검색 토글 , 검색대상/검색기간 토글  -->
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        /* 엄차장님 (s) */
+                        /* 통합검색 : 엄차장님 (s) */
                         // 최근 검색어 swiper
                         var swiper = new Swiper('.schStxSlide', {
                             slidesPerView: 'auto',
-                            freeMode: true,
+                            // freeMode: true,
+                            focusableElements: false,
                             // loop: true,
                             navigation: {
                                 prevEl: ".schStxSlidePage .prev",
@@ -488,30 +844,281 @@
                                 button.classList.add('on');
                             });
                         });
-                        /* 엄차장님 (e) */
+                        /* 통합검색 : 엄차장님 (e) */
 
-                        // 갤러리 swiper
-                        document.querySelectorAll(".theaterSwiper").forEach(function(swiperTarget){
-                            console.log( swiperTarget );
-                            swiperTarget.classList.add('swiper-container');
-                            swiperTarget.querySelector('.listGroup').classList.add('swiper-wrapper');
-                            /* var swiper = new Swiper(swiperTarget, {
-                                // slidesPerView: 'auto',
-                                // freeMode: true,
-                                loop: true,
-                                // navigation: {
-                                //     prevEl: ".schStxSlidePage .prev",
-                                //     nextEl: ".schStxSlidePage .next",
-                                // },
-                            }); */
-                        });
 
+                        // 상단 슬라이드 : 오차장님
+                        videoGallery();
+
+
+                        // 지금 뜨는 영상
+                        theaterSwiper("#theaterSwiper_1", "3,3,2,1"); // swiper 실행 : 데이터 바인딩 후 호출
+                        // 경륜 인사이트
+                        insightInit("#theaterSwiper_2");
                     });
-                    function theaterInit() {
 
+                    function videoGallery() {
+                        const cptVideoGallery = document.querySelector(".videoGallery");
+                        if (cptVideoGallery) {
+                            document.querySelectorAll('.videoGallerySwiper .swiper-slide').forEach(function(slideItem){
+                                var itemLi = document.createElement('li');
+                                itemLi.innerHTML = slideItem.innerHTML;
+                                itemLi.querySelector('.movieBox').remove();
+                                cptVideoGallery.querySelector('.galleryText ul').append(itemLi);
+                            });
+                            cptVideoGallery.querySelectorAll('.galleryText ul > li')[0].classList.add('active');
+                    
+                            const mobile = window.matchMedia('(max-width: 767px)');
+                            const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1280px)');
+                            const desktop = window.matchMedia('(min-width: 1281px)');
+                            let videoGallerySwiper;
+                            let currentIndex;
+                    
+                            function initializeSwiper(config) {
+                                // 기존 swiper 인스턴스가 있으면 제거
+                                if (videoGallerySwiper) videoGallerySwiper.destroy(true, true);
+                    
+                                // 새로운 swiper 생성
+                                videoGallerySwiper = new Swiper(".videoGallerySwiper", {
+                                    loop: true,
+                                    navigation: {
+                                        nextEl: ".videoGallerySwiper .btnNext",
+                                        prevEl: ".videoGallerySwiper .btnPrev",
+                                    },
+                                    ...config, // 전달된 설정 추가
+                                    on: {
+                                        slideChange: function () {
+                                            currentIndex = this.realIndex;
+                                            if (desktop.matches) {
+                                                const galleryText = cptVideoGallery.querySelectorAll('.galleryText > ul > li');
+                                                galleryText.forEach((text)=>{
+                                                    text === galleryText[currentIndex] ? text.classList.add('active') : text.classList.remove('active');
+                                                });
+                                            }
+                                            cptVideoGallery.querySelector('.swiperpage .current').innerHTML = currentIndex+1;
+                                        },
+                                    },
+                                });
+                                cptVideoGallery.querySelector('.swiperpage .last').innerHTML = videoGallerySwiper.slides.length;
+                            }
+                    
+                            function handleScreenChange() {
+                                if (mobile.matches) {
+                                    initializeSwiper({spaceBetween: 20, slidesPerView: 1, autoHeight: true});
+                                } else if (tablet.matches) {
+                                    initializeSwiper({spaceBetween: 20, slidesPerView: 2, autoHeight: true});
+                                } else if (desktop.matches) {
+                                    initializeSwiper({spaceBetween: 0, slidesPerView: 1, allowTouchMove: false});
+                                }
+                            }
+                    
+                            // 초기 상태 확인
+                            handleScreenChange();
+                    
+                            // 화면 크기 변경 감지
+                            [mobile, tablet, desktop].forEach(mediaQuery => {
+                                mediaQuery.addEventListener("change", handleScreenChange);
+                            });
+                        }
                     }
-                    function theaterSwiper() {
+                    
+                    function insightInit(_target) {
+                        theaterSwiper(_target, "4,4,3,1"); // swiper 실행 : 데이터 바인딩 후 호출
                         
+                        // tab event
+                        var tBtns = document.querySelectorAll('#insightTab .tabName');
+                        tBtns.forEach(button => {
+                            button.addEventListener('click', () => {
+                                var siblings = button.closest('ul').querySelectorAll('.tabName');
+                                siblings.forEach(sibling => sibling.classList.remove('on'));
+                                button.classList.add('on');
+
+                                // empty and append
+                                theaterSwiperRemove(_target);
+                                document.querySelector(_target).removeChild( document.querySelector(_target).children[0] );
+                                
+                                document.querySelector(_target).innerHTML = dummyData( button.innerText );
+                                theaterSwiper(_target, "4,4,3,1"); // swiper 실행
+                            });
+                        });
+                    }
+                    function theaterSwiper(_target, _perview) {
+                        // console.log(_perview);
+                        document.querySelectorAll(_target).forEach(function(swiperTarget){
+                            // setting
+                            swiperTarget.classList.add('swiper-container');
+                            swiperTarget.querySelector('.listSwiper').classList.add('swiper-wrapper');
+                            swiperTarget.querySelectorAll('.listSwiper > li').forEach(function(slideItem){
+                                slideItem.classList.add('swiper-slide');
+                            });
+                            
+                            if( swiperTarget.querySelector('.btnPrev') == null || swiperTarget.querySelector('.btnNext') == null ) {
+                                swiperTarget.insertAdjacentHTML('beforeend', '<button type="button" class="btnPrev">이전</button><button type="button" class="btnNext">다음</button>');
+                            }
+
+                            var swiperPerview = 1;
+                            var swiperOpt = {
+                                init: false,
+                                slidesPerView: swiperPerview,
+                                // freeMode: true,
+                                loop: false,
+                                navigation: {
+                                    prevEl: swiperTarget.querySelector(".btnPrev"),
+                                    nextEl: swiperTarget.querySelector(".btnNext"),
+                                },
+                            }
+                            if( _perview != undefined ) {
+                                swiperPerview = _perview.split(',');
+                                swiperOpt.breakpoints = {
+                                    1480: {
+                                        slidesPerView: swiperPerview[0],
+                                    },
+                                    1280:{
+                                        slidesPerView: swiperPerview[1],
+                                    },
+                                    1024:{
+                                        slidesPerView: swiperPerview[2],
+                                    },
+                                    768: {
+                                        slidesPerView: swiperPerview[3],
+                                    },
+                                }
+                            }
+
+                            var swiper = new Swiper(swiperTarget, swiperOpt);
+                            
+                            swiper.init();
+
+                            if( swiper != undefined ) {
+                                // console.log( swiperTarget.id );
+                                window['ui' + swiperTarget.id ] = swiper;
+                            }
+                        });
+                    }
+                    function theaterSwiperRemove(_target) {
+                        window['ui' + document.querySelector(_target).id ].destroy();
+                        document.querySelector(_target).classList.remove('swiper-container','swiper-backface-hidden');
+                        document.querySelector(_target).querySelector('.listSwiper').classList.remove('swiper-wrapper');
+                        document.querySelector(_target).querySelectorAll('.listSwiper > li').forEach(function(slideItem){
+                            slideItem.classList.remove('swiper-slide');
+                        });
+                    }
+                    function dummyData(_cate) {
+                        let str = `<ul class="listGroup listSwiper">
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 광명 신라호텔 가봄?</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 프로의 시작</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 정종진의 선행을 활용한 임채빈 영광의 챔피언 등극</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 광명 신라호텔 가봄?</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 프로의 시작</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="listItem">
+                            <a href="#" class="itemLink">
+                                <div class="imgBox">
+                                    <div class="bg" style="background-image: url(../../images/thum/thum_16_9_video.png);"></div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="title">[`+_cate+`] 2024 문화체육관광부장관배 그랑프리 경륜 12.29(금)~31(일)</div>
+                                    <ul class="info">
+                                        <li class="item date">2024.07.24</li>
+                                        <li class="item">조회수 : 200</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        </ul>`;
+                        return str;
                     }
                 </script>
                 <!-- //최근 검색어 swiper, 상세검색 토글 , 검색대상/검색기간 토글  -->

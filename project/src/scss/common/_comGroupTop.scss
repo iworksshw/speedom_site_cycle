@@ -62,6 +62,14 @@
                 .frmBox {width: 100%; min-width: 100%;}
                 .frmSearch {width: 100%; min-width: 100%;}
             }
+            &.division {
+                gap: 8px;
+                .item {
+                    &.fixedItem {width: 100px;}
+                    &:not(.fixedItem) {flex: 1;margin-top: 0;}
+                }
+            }
+            &:first-child.division {margin-top: 0;}
         }
     }
 

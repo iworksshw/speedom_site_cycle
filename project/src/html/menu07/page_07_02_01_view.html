@@ -55,7 +55,7 @@
                                         <tbody>
                                             <tr>
                                                 <th>지역</th>
-                                                <td class="left frm">장안<button class="btn xs gLine ml8">위치보기</button></td>
+                                                <td class="left frm">장안<button class="btn xs gLine ml8"  onclick="openPopup('sample01')">위치보기</button></td>
                                                 <th>강의실</th>
                                                 <td class="left">관람동</td>
                                             </tr>
@@ -88,7 +88,7 @@
                                         <tbody>
                                             <tr>
                                                 <th>지역</th>
-                                                <td class="left">장안<button class="btn xs gLine ml8">위치보기</button></td>
+                                                <td class="left">장안<button type="button" class="btn xs gLine ml8" onclick="openPopup('sample01')">위치보기</button></td>
                                             </tr>
                                             <tr>
                                                 <th>강좌기간</th>
@@ -182,6 +182,32 @@
                         </div>
                     </div>
 
+                </div>
+                
+                <!-- 위치보기 모달 -->
+                <div id="sample01" class="modMdPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                    <div class="popupDim">딤영역</div>
+                    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                        <div class="popupContainer">
+                            <div class="popupContArea">
+                                <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                <div class="popTitle">위치보기</div>
+                                <div class="popCont">
+                                    <div class="modMdPopupBranch">
+                                        <div class="comTitH2 bk">
+                                            <h2>장안지점(경륜경정)</h2>
+                                        </div>
+                                        <div class="addrTxt">
+                                            서울특별시 동대문구 장한로2길 33 (장안동, (구)두봉백화점 2층~5층)
+                                        </div>
+                                        <div class="mapInfo"> <!-- 위치 예시 이미지 -->
+                                            <img src="../../images/contents/cont08_03_01_sampleMap.jpg" alt="지점 위치보기">
+                                        </div>
+                                    </div>                                    
+                                </div>           
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 서브 바텀 (담당자) -->

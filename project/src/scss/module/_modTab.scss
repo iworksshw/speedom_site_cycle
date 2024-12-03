@@ -25,6 +25,7 @@
                     &::after {content:''; width: 16px; height: 16px; margin-left: 4px; vertical-align: middle; background: url(../../images/common/ic_link_blank.svg) center no-repeat; display: inline-block; }
                 }
             }
+            &.interval .tabItem .tabName {padding: 0 20px;}
         }
         &.toAll {
             .tabMenu {
