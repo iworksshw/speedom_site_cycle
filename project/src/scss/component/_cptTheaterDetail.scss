@@ -243,6 +243,9 @@
             }
             .funcArea {
                 position: static; width: 100%; height: auto;
+                & + .infoArea {
+                    padding-top: 28px;
+                }
             }
             .bottomArea {
                 .copy {
