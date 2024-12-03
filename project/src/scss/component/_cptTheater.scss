@@ -146,7 +146,7 @@
     .eventNoti {
         background: linear-gradient(90deg, #EFFFFA 0%, #E7F3FC 100%);
         & > .inner {
-            position: relative; max-width: 1480px; margin: 0 auto; padding: 60px 375px 60px 360px;
+            position: relative; max-width: 1480px; margin: 0 auto; padding: 60px 375px 60px 340px;
             
             &::after {
                 content: ''; position: absolute; bottom: 0; right: -30px; width: 120px; height: 120px; background: url(../../images/common/hodol_bbs_event.svg) center no-repeat;
@@ -158,7 +158,7 @@
                 width: auto; margin-right: 16px; font-size: rem(18px);
             }
             .tit {
-                font-size: rem(36px);
+                font-size: rem(32px);
             }
         }
         .listEvent {
@@ -239,47 +239,16 @@
         // 하단영역 - 이벤트경륜
         .eventNoti {
             & > .inner {
-                // position: relative; max-width: 1480px; margin: 0 auto; padding: 60px 375px 60px 360px;
                 padding-left: 220px; padding-right: 113px;
-                
-                &::after {
-                    // content: ''; position: absolute; bottom: 0; right: -30px; width: 120px; height: 120px; background: url(../../images/common/hodol_bbs_event.svg) center no-repeat;
-                }
             }
             .sectTit {
-                // position: absolute; top: 50%; left: 20px; margin: 0; padding-top: 2px; transform: translateY(-50%);
                 .subTit {
-                    // width: auto; margin-right: 16px; font-size: rem(18px);
                     display: none;
-                }
-                .tit {
-                    // font-size: rem(36px);
                 }
             }
             .listEvent {
-                // position: relative; padding-right: 100px;
-                .infoBox {
-                    // display: flex; column-gap: 20px;
-                    .title {
-                        // width: 100%; @include line1(); 
-                    }
-                    .date {
-                        // color: var(--Gray-600);
-                    }
-                }
                 .imgBox {
                     display: none;
-                    // position: absolute; left: calc(100% + 54px); bottom: calc(100% - 50px); display: flex; width: 262px; height: 154px; padding: 6px; border-radius: 8px; background-color: #A3D3E7; 
-                    // box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.20);
-                    .bg {
-                        // width: 100%; border-radius: 8px; background-size: cover;
-                    }
-                }
-                .txtMore {
-                    // position: absolute; top: 0; right: 0; color: var(---Primary);
-                    &::before {
-                        // content: '+ ';
-                    }
                 }
             }
         }
@@ -736,10 +705,10 @@
 
             &::before,
             &::after {
-                content: ''; position: absolute; top: -324px; right: -228px; width: 600px; height: 600px; background: url(../../images/common/deco_top_visual.svg) no-repeat 0 0; background-size: cover;
+                content: ''; position: absolute; top: -324px; right: -228px; width: 600px; height: 600px; background: url(../../images/common/deco_top_visual_2.svg) no-repeat 0 0; background-size: cover;
             }
             &::after {
-                left: auto; top: 199px; left: -205px; width: 480px; height: 480px;
+                left: auto; top: 199px; left: -205px; width: 480px; height: 480px; background: url(../../images/common/deco_top_visual.svg) no-repeat 0 0; background-size: cover;
             }
         }
     }

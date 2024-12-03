@@ -288,6 +288,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Top 버튼 동작
+    const btnTop = document.querySelector(".cptQuickMenu .btnTop");
+    btnTop.addEventListener("click", function(){
+        window.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
+    })
+
     //input text reset
     inputTextReset();
 

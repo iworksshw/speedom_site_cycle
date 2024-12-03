@@ -100,7 +100,10 @@
                     .frmGroup {gap: 8px; margin-top: 0;}
                     .subMenu {
                         display: flex; align-items: center;gap: 20px;
-                        > p {flex-shrink: 0; color: var(--Gray-600, #58595F);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */}
+                        > p {
+                            flex-shrink: 0; color: var(--Gray-600, #58595F);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */
+                            span {margin-left: 4px; color: var(--Gray-600, #58595F);font-size: rem(14px);font-weight: 300;line-height: 160%; /* 22.4px */}
+                        }
                         .schBox {
                             .schBtn button {
                                 width: 104px;
