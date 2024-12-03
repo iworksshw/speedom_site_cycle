@@ -1,0 +1,43 @@
+.cptQuickMenu {
+    width: 110px; border-radius: 14px; background: #fff; position: fixed; left: 50%; margin-left: 780px; top: 200px; box-shadow:  0px 7px 15px 0px rgba(0, 0, 0, 0.07); overflow: hidden; z-index: 999; transition: opacity 0.3s;
+    .quickHead {
+        width: 100%; padding: 12px 3px; text-align: center; background: var(---Primary);
+        .headTit {margin-bottom: 6px; font-size: rem(14px); color: #fff; font-weight: 600;}
+        .point {font-size: rem(16px); font-weight: 600; color: #a7ffef;}
+        .linkLogin {
+            padding-left: 4px; font-size: rem(16px); font-weight: 600; color: #a7ffef; display: inline-block;
+            &::after {display: inline-block; vertical-align: middle; content: ""; width: 16px; height: 16px; background: url(../../images/common/ic_quick_arr.svg) center no-repeat;}
+        }
+    }
+    .quickBtns {
+        width: 100%; padding: 12px 12px 20px; text-align: center;
+        .quickItem {
+            margin-bottom: 16px; 
+            &:last-child {margin-bottom: 0;}
+            .quickIco {
+                padding-top: 50px; background: center 10px no-repeat; font-size: rem(16px); color: var(--Gray-800); display: inline-block;
+                &.ico01 {background-image: url(../../images/common/ic_quick_cal.svg);}
+                &.ico02 {background-image: url(../../images/common/ic_quick_movie.svg);}
+                &.ico03 {background-image: url(../../images/common/ic_quick_report.svg);}
+                &.ico04 {background-image: url(../../images/common/ic_quick_coins.svg);}
+                &.ico05 {background-image: url(../../images/common/ic_quick_board.svg);}
+                &.ico06 {background-image: url(../../images/common/ic_quick_info.svg);}
+            }
+        }
+    }
+    .btnTop {width: 100%; height: 38px; text-align: center; font-size: rem(17px); color: #fff; font-weight: 700; background: var(--Point-Primary2);}
+
+    @include media(1790px){
+        &:not(.inMain) {
+            opacity: 0.5;
+        }
+        &.inMain {
+            
+        }
+    }
+    @include media(1575px){
+        &:not(.inMain) {
+            display: none;
+        }
+    }
+}

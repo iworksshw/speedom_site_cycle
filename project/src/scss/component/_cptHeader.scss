@@ -257,63 +257,73 @@
             }
         }
     }
-    @include media('pcs'){
-        .gnbArea {
-            .gnbBox {
-                justify-content: flex-end;
-                .depth1Group {
-                    display: none;
-                }
-            }
-        }
+
+    &.inMain {
+        min-width: 1480px;
     }
-    @include media('mobile'){
-        & ,&.on {
-            transform: translateY(-112px); background: #fff;
-            .quickArea .quickBox .guickMenuGroup {display: none;}
-            .headArea {
-                .headBox {
-                    .logoBox {
-                        width: 110px; height: 26px; position: absolute; left: 20px; top: 94px;
-                        .logo g path {fill: #00458D;}
-                    }
-                    .myMenuGroup {
-                        position: absolute; right: 74px; top: 83px; gap: 4px;
-                        .item {
-                            .myLink {
-                                width: 50px; height: 50px; padding-left: 0; padding-top: 34px; font-size: rem(12px); text-align: center; display:block;
-                            }
-                            &.ico01 .myLink {
-                                background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;
-                            }
-                            &.ico02 {display: none;}
-                            &.ico03 {display: none;}
-                            &.ico04 {display: none;}
-                            &.ico05 {display: none;}
-                        }
-                    }
-                }
-            }
+    @include media('pcs'){
+        &:not(.inMain) {
             .gnbArea {
-                border-top: 1px solid #fff; border-bottom: 1px solid var(--Bg-Line-line-100, #E1E4EA);;
                 .gnbBox {
-                    height: 70px;
+                    justify-content: flex-end;
                     .depth1Group {
                         display: none;
-                        .depth1Menu {
-                            .depth1Name {
-                                color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
-                            }
-                        }
-                    }
-                    .allMenu {
-                        width: 50px; height: 50px; padding-top: 34px;
-                        color: var(--Gray-800, #2C2C2C); font-size: rem(12px); font-weight: 700; line-height: normal; 
-                        background: url(../../images/common/ic_all_menu_mo.svg) center 8px no-repeat;
                     }
                 }
             }
         }
+        
+    }
+    @include media('mobile'){
+        &:not(.inMain) {
+            & ,&.on {
+                transform: translateY(-112px); background: #fff;
+                .quickArea .quickBox .guickMenuGroup {display: none;}
+                .headArea {
+                    .headBox {
+                        .logoBox {
+                            width: 110px; height: 26px; position: absolute; left: 20px; top: 94px;
+                            .logo g path {fill: #00458D;}
+                        }
+                        .myMenuGroup {
+                            position: absolute; right: 74px; top: 83px; gap: 4px;
+                            .item {
+                                .myLink {
+                                    width: 50px; height: 50px; padding-left: 0; padding-top: 34px; font-size: rem(12px); text-align: center; display:block;
+                                }
+                                &.ico01 .myLink {
+                                    background: url(../../images/common/ic_head_01.svg) center 8px no-repeat;
+                                }
+                                &.ico02 {display: none;}
+                                &.ico03 {display: none;}
+                                &.ico04 {display: none;}
+                                &.ico05 {display: none;}
+                            }
+                        }
+                    }
+                }
+                .gnbArea {
+                    border-top: 1px solid #fff; border-bottom: 1px solid var(--Bg-Line-line-100, #E1E4EA);;
+                    .gnbBox {
+                        height: 70px;
+                        .depth1Group {
+                            display: none;
+                            .depth1Menu {
+                                .depth1Name {
+                                    color: #fff; background: url(../../images/common/ic_gnb_dep1_at.svg) right 2px center no-repeat;
+                                }
+                            }
+                        }
+                        .allMenu {
+                            width: 50px; height: 50px; padding-top: 34px;
+                            color: var(--Gray-800, #2C2C2C); font-size: rem(12px); font-weight: 700; line-height: normal; 
+                            background: url(../../images/common/ic_all_menu_mo.svg) center 8px no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 
@@ -324,12 +334,15 @@
         @keyframes openAllMenu { 0% {opacity:0;} 100% {opacity:1;} }
     }
     @include minWidth('mobile'){
-        *:hover::-webkit-scrollbar-thumb {
-            background: rgba(87, 87, 87, 0.54);
+        &:not(.inMain) { 
+            *:hover::-webkit-scrollbar-thumb {
+                background: rgba(87, 87, 87, 0.54);
+            }
+            *::-webkit-scrollbar {width:30px; padding:10px; background: #fff;}
+            *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
+            *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
         }
-        *::-webkit-scrollbar {width:30px; padding:10px; background: #fff;}
-        *::-webkit-scrollbar-thumb {padding:10px; border: 12px solid #fff; border-radius: 15px; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ }
-        *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
+        
     }
     .allTop {
         width: 100%; height: 86px; background: var(--Point-Primary2);
@@ -412,90 +425,93 @@
         }
     }
     @include media('mobile'){
-        transform: translateY(112px);
-        .allTop {
-            height: 65px;
-            .pcView {
-                display: none;
+        &:not(.inMain) {
+            transform: translateY(112px);
+            .allTop {
+                height: 65px;
+                .pcView {
+                    display: none;
+                }
+                .moView {
+                    width: 100%; padding: 20px 16px; display: flex; justify-content: space-between;
+                    .profile {
+                        display: flex;
+                        .name {
+                            height: 25px; padding: 0 20px 0 24px; color: #fff; font-size: rem(19px); font-weight: 400; line-height: 1.3; position: relative;
+                            &::before {
+                                content:""; width: 20px; height: 20px; display: block; background: url(../../images/common/ic_head_05_on.svg) center no-repeat;
+                                position: absolute; left: 0; top: 1px;
+                            }
+                            &::after {
+                                content:""; width: 20px; height: 20px; display: block; background: url(../../images/common/ic_16_profile.svg) center no-repeat;
+                                position: absolute; right: 0; top: 2px;
+                            }
+                            b {font-weight: 600;}
+                        }
+                        .btnLogout {
+                            height: 25px; margin-left: 20px; padding: 1px 8px 0; color: #fff; font-size: rem(12px); font-weight: 500; line-height: 24px; border-radius: 4px; 
+                            background: rgba(0, 0, 0, 0.18); display: block;
+                        }
+                    }
+                    .btnClose {
+                        width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_40_close.svg) center / 24px no-repeat; 
+                    }
+                }
             }
-            .moView {
-                width: 100%; padding: 20px 16px; display: flex; justify-content: space-between;
-                .profile {
-                    display: flex;
-                    .name {
-                        height: 25px; padding: 0 20px 0 24px; color: #fff; font-size: rem(19px); font-weight: 400; line-height: 1.3; position: relative;
-                        &::before {
-                            content:""; width: 20px; height: 20px; display: block; background: url(../../images/common/ic_head_05_on.svg) center no-repeat;
-                            position: absolute; left: 0; top: 1px;
-                        }
-                        &::after {
-                            content:""; width: 20px; height: 20px; display: block; background: url(../../images/common/ic_16_profile.svg) center no-repeat;
-                            position: absolute; right: 0; top: 2px;
-                        }
-                        b {font-weight: 600;}
-                    }
-                    .btnLogout {
-                        height: 25px; margin-left: 20px; padding: 1px 8px 0; color: #fff; font-size: rem(12px); font-weight: 500; line-height: 24px; border-radius: 4px; 
-                        background: rgba(0, 0, 0, 0.18); display: block;
-                    }
-                }
-                .btnClose {
-                    width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ic_40_close.svg) center / 24px no-repeat; 
-                }
-            }
-        }
-        .allMenuGroup {
-            height: calc(100vh - 65px); overflow-y: auto;
-            .allMenuBox {
-                height: 100%; padding: 0;
-                .depth1Group {
-                    height: 100%; position: relative;
-                    .depth1Menu {
-                        padding: 0; border-top: 0;
-                        .depth1Name{
-                            width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
-                        }
-                        &.on {
-                            .depth1Name{color: var(---Primary); font-weight: 700;}
-                            .depth2Group {display: flex;}
-                        }
-                    }
-                }
-                .depth2Group {
-                    width: calc(100% - 150px); height: 100%; gap: 0; border-left: 1px solid var(--Bg-Line-line-200); overflow-y: auto; background: #fff; 
-                    position: absolute; top: 0; right: 0; z-index: 10; display: none; align-content: baseline;
-                    .depth2Menu {
-                        width: 100%; 
-                        .depth2Name {
-                            width: 100%; padding: 16px 12px 12px; font-size: rem(16px); font-weight: 700; line-height: 1.5; display: block;
-                        }
-                        &.on {
-                            background: #F9FAFC;
-                            .depth3Group {display: block;}
-                        }
-                        &:has(.depth3Group) {
-                            .depth2Name {
-                                background: url(../../images/common/ic_20_allmenu.svg) right 16px top 20px no-repeat;
+            .allMenuGroup {
+                height: calc(100vh - 65px); overflow-y: auto;
+                .allMenuBox {
+                    height: 100%; padding: 0;
+                    .depth1Group {
+                        height: 100%; position: relative;
+                        .depth1Menu {
+                            padding: 0; border-top: 0;
+                            .depth1Name{
+                                width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
                             }
                             &.on {
-                                .depth2Name {background: url(../../images/common/ic_20_allmenu_on.svg) right 16px top 20px no-repeat;}
+                                .depth1Name{color: var(---Primary); font-weight: 700;}
+                                .depth2Group {display: flex;}
                             }
                         }
                     }
-                }
-                .depth3Group {
-                    margin-top: 0; padding-bottom: 8px; display: none; overflow: hidden;
-                    .depth3Menu {
-                        margin-top: 0;
-                        .depth3Name {
-                            padding: 8px 12px; font-size: rem(15px); display: block;
-                            &::after {display: none;}
+                    .depth2Group {
+                        width: calc(100% - 150px); height: 100%; gap: 0; border-left: 1px solid var(--Bg-Line-line-200); overflow-y: auto; background: #fff; 
+                        position: absolute; top: 0; right: 0; z-index: 10; display: none; align-content: baseline;
+                        .depth2Menu {
+                            width: 100%; 
+                            .depth2Name {
+                                width: 100%; padding: 16px 12px 12px; font-size: rem(16px); font-weight: 700; line-height: 1.5; display: block;
+                            }
+                            &.on {
+                                background: #F9FAFC;
+                                .depth3Group {display: block;}
+                            }
+                            &:has(.depth3Group) {
+                                .depth2Name {
+                                    background: url(../../images/common/ic_20_allmenu.svg) right 16px top 20px no-repeat;
+                                }
+                                &.on {
+                                    .depth2Name {background: url(../../images/common/ic_20_allmenu_on.svg) right 16px top 20px no-repeat;}
+                                }
+                            }
                         }
                     }
+                    .depth3Group {
+                        margin-top: 0; padding-bottom: 8px; display: none; overflow: hidden;
+                        .depth3Menu {
+                            margin-top: 0;
+                            .depth3Name {
+                                padding: 8px 12px; font-size: rem(15px); display: block;
+                                &::after {display: none;}
+                            }
+                        }
+                    }
+                    .quickLink {display: block;}
                 }
-                .quickLink {display: block;}
             }
         }
+        
     }
 }
 
