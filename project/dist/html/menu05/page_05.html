@@ -775,12 +775,12 @@
     <div class="subTopArea">
         <ul class="location">
             <li class="item"><a href="#">홈</a></li>
-            <li class="item"><a href="#">경륜영상관</a></li>
+            <li class="item"><a href="#"></a></li>
             
             
         </ul>
-        <div class="subTitle"><h1>경주동영상</h1></div>
-        <div class="subText"><p>박진감 넘치는 경주 경기<br><b>영상으로 만나보세요.</b></p></div>
+        <div class="subTitle"><h1>순위예측</h1></div>
+        <div class="subText"><p>다양한 분석 모델을 활용한 정보를 기반으로<br><b>적중률 100%에 도전해 보세요.</b></p></div>
         <ul class="addFunc">
             <li class="item print">
                 <button class="btnPrint">프린트</button>
@@ -793,606 +793,721 @@
 </div>
 
                 <div class="layoutContArea">
-                    <div class="cptSchRst">
-                        <div class="schRstArea">
-                            <!-- 좌측 검색 영역  -->
-                            <div class="rstLe">
-                                <div class="comSchDetail">
-                                    <div class="detBox toggleMenu"><!-- toggleMenu로 스타일 변형 -->
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>경주일</dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="frmGroup">
-                                                            <div class="frmBox">
-                                                                <input type="radio" name="rdoGroup1" id="rdo1-1" class="iptRdoChk" />
-                                                                <label for="rdo1-1">오늘</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="radio" name="rdoGroup1" id="rdo1-2" class="iptRdoChk" />
-                                                                <label class="rdo1-2">최근1주</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="radio" name="rdoGroup1" id="rdo1-3" class="iptRdoChk" />
-                                                                <label class="rdo1-3">최근1달</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="innerBox">
-                                                        <div class="subMenu">
-                                                            <p>직접입력</p>
-                                                            <ul class="datePick">
-                                                                <li><input type="text" placeholder="2024.01.01" /></li>
-                                                                <li class="hpn">-</li>
-                                                                <li><input type="text" placeholder="2024.03.01" /></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="innerBox">
-                                                        <div class="subMenu">
-                                                            <div class="schBox">
-                                                                <div class="schBtn"><button type="button">검색</button></div>
-                                                                <button type="button" class="schDet">상세검색</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>경기등급<span>중복선택가능</span></dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="frmGroup gridItem2"><!-- 모바일에서 기본은 3단배열, 그 외에 2, 4단 배열일 경우 gridItem2, gridItem4 -->
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-1" class="iptRdoChk lg chkAll" />
-                                                                <label for="rdo2-1">전체</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-2" class="iptRdoChk lg" />
-                                                                <label class="rdo2-2">선발(결승포함)</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-3" class="iptRdoChk lg" />
-                                                                <label class="rdo2-3">우스(결승포함)</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup2" id="rdo2-4" class="iptRdoChk lg" />
-                                                                <label class="rdo2-4">특선(결승포함)</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>전법<span>중복선택가능</span></dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="frmGroup">
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-1" class="iptRdoChk chkAll" />
-                                                                <label for="rdo3-1">전체</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-2" class="iptRdoChk" />
-                                                                <label class="rdo3-2">선행</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-3" class="iptRdoChk" />
-                                                                <label class="rdo3-3">젖히기</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-4" class="iptRdoChk" />
-                                                                <label class="rdo3-4">추입</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup3" id="rdo3-5" class="iptRdoChk" />
-                                                                <label class="rdo3-5">마크</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>경기장<span>중복선택가능</span></dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="frmGroup">
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup4" id="rdo4-1" class="iptRdoChk chkAll" />
-                                                                <label for="rdo4-1">전체</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup4" id="rdo4-2" class="iptRdoChk" />
-                                                                <label class="rdo4-2">광명</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup4" id="rdo4-3" class="iptRdoChk" />
-                                                                <label class="rdo4-3">부산</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>선수정보</dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="subMenu">
-                                                            <p>선수명</p>
-                                                            <div class="frmBox">
-                                                                <input type="text" class="iptText" placeholder="" value="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                    <div class="cptSection">
+                        <div class="sectArea">
+                            <div class="comSubInfo">
+                                <h2 class="infoTit">모든 정보는 절대적 예측 결과는 아니며, 베팅에 대한 책임은 고객에게 있습니다.</h2>
+                                <p class="info">순위예측 서비스는 AI 예측 모델과 고객의 구매 패턴, 경륜 전문가의 분석 정보 기반으로 제공되며, 절대적 예측 결과는 아니며, 베팅에 대한 책임은 고객에게 있습니다.</p>
+                            </div>
 
-                                                    <div class="innerBox">
-                                                        <div class="subMenu">
-                                                            <p>전법</p>
-                                                            <div class="frmBox">
-                                                                <select class="iptSlt">
-                                                                    <option value="전체">전체</option>
-                                                                    <option value="선행">선행</option>
-                                                                    <option value="젖히기">젖히기</option>
-                                                                    <option value="추입">추입</option>
-                                                                    <option value="마크">마크</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="subMenu">
-                                                            <p>훈련지</p>
-                                                            <div class="frmBox">
-                                                                <select class="iptSlt">
-                                                                    <option value="전체">전체</option>
-                                                                    <option value="선행">선행</option>
-                                                                    <option value="젖히기">젖히기</option>
-                                                                    <option value="추입">추입</option>
-                                                                    <option value="마크">마크</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </dd>
-                                            </dl>
+                            <div class="cptDateSelect">
+                                <div class="sectArea">
+                                    <!-- 날짜 선택 박스영역 -->
+                                    <div class="selectBox">
+                                        <div class="frmGroup">
+                                            <div class="frmBox frmMd">
+                                                <select class="iptSlt typeLine">
+                                                    <option value="">2024</option>
+                                                    <option value="">2023</option>
+                                                    <option value="">2022</option>
+                                                    <option value="">2021</option>
+                                                    <option value="">2020</option>
+                                                </select>
+                                            </div>
+                                            <div class="frmBox">
+                                                <select class="iptSlt typeLine">
+                                                    <option value="">2024년 07월 21일 28회 3일차</option>
+                                                    <option value="">2024년 07월 21일 28회 4일차</option>
+                                                    <option value="">2024년 07월 21일 28회 5일차</option>
+                                                    <option value="">2024년 07월 21일 28회 6일차</option>
+                                                    <option value="">2024년 07월 21일 28회 7일차</option>
+                                                    <option value="">2024년 07월 21일 28회 8일차</option>
+                                                    <option value="">2024년 07월 21일 28회 9일차</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>기수정보</dt>
-                                                <dd>
-                                                    <div class="innerBox">
-                                                        <div class="frmBox">
-                                                            <select class="iptSlt">
-                                                                <option value="전체">전체</option>
-                                                                <option value="선행">선행</option>
-                                                                <option value="젖히기">젖히기</option>
-                                                                <option value="추입">추입</option>
-                                                                <option value="마크">마크</option>
-                                                            </select>
-                                                        </div>
+        
+                                        <button type="button" class="calendarBtn" onclick="openPopup('calendarPop')">달력으로 날짜 선택</button>
+        
+                                        <div class="layerPopup" id="calendarPop"> <!--class 'on' : 팝업 열림-->
+                                            <div class="popHead">
+                                                <h3>달력조회</h3>
+                                                <button type="button" class="popClose"  onclick="closePopup('calendarPop')">팝업 닫기</button>
+                                            </div>
+                                            <div class="popCont">
+                                                <div class="dateSetting">
+                                                    <div class="btnGroup">
+                                                        <button type="button" class="setBtn first">이전 해로 이동</button>
+                                                        <button type="button" class="setBtn prev">이전 달로 이동</button>
                                                     </div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="searchOptionBox">
-                                            <dl>
-                                                <dt>배당률<span>중복선택가능</span></dt>
-                                                <dd class="noWrap">
-                                                    <div class="innerBox">
-                                                        <div class="frmGroup gridItem2">
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup5" id="rdo5-1" class="iptRdoChk lg chkAll" />
-                                                                <label for="rdo5-1">전체</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup5" id="rdo5-2" class="iptRdoChk lg" />
-                                                                <label class="rdo5-2">저배당(10미만)</label>
-                                                            </div>
-                                                            <div class="frmBox">
-                                                                <input type="checkbox" name="rdoGroup5" id="rdo5-3" class="iptRdoChk lg" />
-                                                                <label class="rdo5-3">고배당(10이상)</label>
-                                                            </div>
-                                                        </div>
+                                                    <div class="date">
+                                                        <span>2024년</span>
+                                                        <span>12월</span>
                                                     </div>
-
-                                                    <div class="innerBox">
-                                                        <div class="subMenu">
-                                                            <p>승식<span>(중복선택가능)</span></p>
-                                                            <div class="frmGroup gridItem4">
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-1" class="iptRdoChk chkAll" />
-                                                                    <label for="rdo6-1">전체</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-2" class="iptRdoChk" />
-                                                                    <label for="rdo6-2">단승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-3" class="iptRdoChk" />
-                                                                    <label for="rdo6-3">연승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-4" class="iptRdoChk" />
-                                                                    <label for="rdo6-4">복승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-5" class="iptRdoChk" />
-                                                                    <label for="rdo6-5">쌍승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-6" class="iptRdoChk" />
-                                                                    <label for="rdo6-6">심복승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-7" class="iptRdoChk" />
-                                                                    <label for="rdo6-7">쌍복승</label>
-                                                                </div>
-                                                                <div class="frmBox">
-                                                                    <input type="checkbox" name="rdoGroup6" id="rdo6-8" class="iptRdoChk" />
-                                                                    <label for="rdo6-8">삼쌍승</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="btnGroup">
+                                                        <button type="button" class="setBtn next">다음 달로 이동</button>
+                                                        <button type="button" class="setBtn last">다음 해로 이동</button>
                                                     </div>
-                                                </dd>
-                                            </dl>
+                                                </div>
+        
+                                                <div class="comCalendar inPop"> <!--class 'inPop' : 레이어팝업 내부에 들어올 때-->
+                                                    <ul class="weekDays">
+                                                        <li class="dayItem"><p>월</p></li>
+                                                        <li class="dayItem"><p>화</p></li>
+                                                        <li class="dayItem"><p>수</p></li>
+                                                        <li class="dayItem"><p>목</p></li>
+                                                        <li class="dayItem"><p>금</p></li>
+                                                        <li class="dayItem"><p>토</p></li>
+                                                        <li class="dayItem"><p class="sun">일</p></li>
+                                                    </ul>
+                                                    <ul class="dayGroup">
+                                                        <li class="dayItem">
+                                                            <span class="txt">1</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">2</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">3</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">4</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">5</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">6</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">7</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">8</span>
+                                                        </li>
+                                                        <li class="dayItem today"> <!--class 'today' : 오늘 날짜 표시-->
+                                                            <span class="txt">9</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">10</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">11</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark blue">12</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark blue">13</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark blue">14</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">15</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">16</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">17</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">18</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">19</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">20</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">21</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">22</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">23</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">24</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">25</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">26</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark mint">27</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="mark yellow">28</span>
+                                                            
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">29</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">30</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt">31</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt none">1</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt none">2</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt none">3</span>
+                                                        </li>
+                                                        <li class="dayItem">
+                                                            <span class="txt none">4</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- //좌측 검색 영역  -->
-                        </div>
-                    </div>
-                    
-                    <div class="cptSchRstCont">
-                        <div class="ctt">
-                            <div class="thumGall fullSize">
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
+
+                            <div class="comGroupTop prediction">
+                                <div class="alignR">
+                                    <button type="button" class="btnReload color">2024.10.11 04:12:15 기준</button>
                                 </div>
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div>
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div>  
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div> 
-                                <div class="list">
-                                    <a href="#">
-                                        <div class="thum">
-                                            <img src="../../images/contents/cont04_04_01_01.png" alt="영상 썸네일">
-                                        </div>
-                                        <div class="videoPlayback">
-                                            <button type="button" class="btnPlayAll"><span>전체재생</span></button>
-                                            <button type="button" class="btnPlayAfter"><span>선수유도원 퇴피후</span></button>
-                                            <button type="button" class="btnPlaySlow"><span>느린화면</span></button>
-                                        </div>
-                                        <div class="thumTit">
-                                            <strong>선수</strong>스피드온_챔피언십_시즌1_1주차 스피드온_챔피언십_시즌1_1주차
-                                        </div>
-                                        <ul class="bbsDate">
-                                            <li>2024.07.05</li>
-                                            <li>조회수 : 200</li>
-                                        </ul>
-                                    </a>     
-                                </div>  
                             </div>
-                            <div class="comPaging">
-                                <a class="start" href="#"></a>
-                                <a class="prev" href="#"></a>
-                                <ul class="numList">
-                                    <li><a href="#">1</a></li>
-                                    <li class="on"><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                </ul>
-                                <a class="next" href="#"></a>
-                                <a class="end" href="#"></a>
+
+                            <div class="comDataTable both predictionTbl"><!-- addClass - row: th가 body에 존재, both: th가 thead와 body에 존재 -->
+                                <div class="tableArea sizeL">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>경주</th>
+                                                <th>AI 예측
+                                                    <div class="comToolTip">
+                                                        <button type="button" class="tooltip" onclick="ttOpen('tooltip01')">이용안내 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip01"><!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip01')">툴팁 닫기</button>
+                                                            <p class="txt">AI 예측 모델을 활용한 선수별 우승 확률입니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>인기배당률
+                                                    <div class="comToolTip">
+                                                        <button type="button" class="tooltip" onclick="ttOpen('tooltip02')">이용안내 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip02"><!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip02')">툴팁 닫기</button>
+                                                            <p class="txt">승식별 배당률이 낮은 순으로 마감 3분전까지만 제공됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>적중률 5% 선택
+                                                    <div class="comToolTip">
+                                                        <button type="button" class="tooltip" onclick="ttOpen('tooltip03')">이용안내 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip03"><!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip03')">툴팁 닫기</button>
+                                                            <p class="txt">적중률(=적중건/베팅건x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>환급률 5% 선택
+                                                    <div class="comToolTip">
+                                                        <button type="button" class="tooltip" onclick="ttOpen('tooltip04')">이용안내 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip04"><!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip04')">툴팁 닫기</button>
+                                                            <p class="txt">환급률(=환급금/베팅금x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>결과 (1위-2위-3위)</th>
+                                                <th>전문가 분석
+                                                    <div class="comToolTip right">
+                                                        <button type="button" class="tooltip" onclick="ttOpen('tooltip05')">이용안내 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip05"><!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip05')">툴팁 닫기</button>
+                                                            <p class="txt">경륜 전문가의 경주별 분석 정보입니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="mark blue">창원01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num05">5</span>
+                                                        <span class="sign num03">3</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark blue">창원01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span>-</span>
+                                                        <span class="sign num02">2</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark blue">창원01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark pink">부산01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num04">4</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num05">5</span>
+                                                        <span class="sign num03">3</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark pink">부산01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num04">4</span>
+                                                        <span>-</span>
+                                                        <span class="sign num05">5</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark pink">부산01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num04">4</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num05">5</span>
+                                                        <span class="sign num03">3</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction">
+                                                        <span class="sign num07">7</span>
+                                                        <span class="sign num01">1</span>
+                                                        <span class="sign num04">4</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="prediction interval4">
+                                                        <span class="sign num07">7</span>
+                                                        <span>-</span>
+                                                        <span class="sign num04">4</span>
+                                                        <span class="sign num02">2</span>
+                                                        <span>-</span>
+                                                        <span class="sign num05">5</span>
+                                                        <span class="sign num03">3</span>
+                                                        <span class="sign num06">6</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left">
+                                                    <p>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고<br> 작전구사도 다양하므로 우승 기대된다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="mark green">광명01</span></th>
+                                                <td>
+                                                    <div class="prediction interval12">
+                                                        <div><span class="sign num07">7</span><span class="winningRate red">30%</span></div>
+                                                        <div><span class="sign num03">3</span><span class="winningRate">20%</span></div>
+                                                        <div><span class="sign num05">5</span><span class="winningRate">12%</span></div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="left"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
             <!-- //서브 콘텐츠 영역 -->
-
-            <!-- 상세검색 토글 , 검색대상/검색기간 토글  -->
-            <script>
-                // 상세검색 버튼 토글 
-                document.addEventListener('DOMContentLoaded', () => {
-                    const schDetButton = document.querySelector('.schDet');
-                    const toggleMenu = document.querySelector('.detBox.toggleMenu');
-
-                    schDetButton.addEventListener('click', () => {
-                        toggleMenu.classList.toggle('active');
-                    });
-                });
-            </script>
-            <!-- //상세검색 토글 , 검색대상/검색기간 토글  -->
-
         </div>
         <!-- //중단영역 -->
 
