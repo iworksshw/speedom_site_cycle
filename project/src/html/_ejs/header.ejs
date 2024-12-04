@@ -2,7 +2,7 @@
 var url = locals.url ? locals.url : '../../';
 var mainClass = locals.mainClass ? locals.mainClass : '../../';
 %>
-            <div class="cptHeader <%= mainClass %>">
+            <div class="cptHeader <%= mainClass %>"> <!--20241204 class 'inMain' : main에서만 사용되는 클래스-->
                 <div class="quickArea">
                     <div class="quickBox">
                         <ul class="guickMenuGroup">
@@ -724,8 +724,9 @@ var mainClass = locals.mainClass ? locals.mainClass : '../../';
                 </div>
             </div>
 
+            <!-- 20241204 추가 -->
             <!-- 퀵메뉴 -->
-            <div class="cptQuickMenu <%= mainClass %>">
+            <div class="cptQuickMenu <%= mainClass %>"> <!-- class 'inMain' : main에서만 사용되는 클래스-->
                 <div class="quickHead">
                     <div class="headTit">나의 활동지수</div>
                     <p class="point">146,000,000</p> <!-- 로그인 시 노출 -->
@@ -753,4 +754,5 @@ var mainClass = locals.mainClass ? locals.mainClass : '../../';
                 </ul>
                 <button type="button" class="btnTop">TOP</button>
             </div>
+            <!-- //20241204 추가 -->
 

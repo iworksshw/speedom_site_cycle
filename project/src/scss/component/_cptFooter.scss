@@ -54,7 +54,7 @@
                         }
                     }
                     .sns {
-                        width: max-content; margin-top: 16px; display: flex; gap: 8px;
+                        width: max-content; margin: -50px 0 24px auto; display: flex; gap: 8px;
                         li {
                             width: 40px; height: 40px;
                             a {
@@ -66,6 +66,9 @@
                             &.fb a {background: url(../../images/common/img_sns_facebook.svg) center no-repeat;}
                             &.blog a {background: url(../../images/common/img_sns_blog.svg) center no-repeat;}
                         }
+                    }
+                    .ciGroup {
+                        display: flex; gap: 20px; align-items: center;
                     }
                 }
             }
