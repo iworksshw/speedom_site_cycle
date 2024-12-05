@@ -2,7 +2,7 @@
 .cptHeader {
     width:100%; background: #fff; transition: transform 0.2s, background 0.2s; position: fixed; left:0; top:0; z-index: 100;
 
-    &.on {
+    &:not(.inMain).on {
         transform: translateY(-112px); background: var(---Primary);
         .headArea {
             .headBox {
@@ -259,7 +259,13 @@
     }
 
     &.inMain {
-        min-width: 1480px;
+        min-width: 1610px; position: relative;
+        .headArea{
+            .headBox {max-width: 1610px; padding-right: 130px;}
+        }
+        .gnbArea {
+            .gnbBox {max-width: 1610px;padding-right: 130px;}
+        }
     }
     @include media('pcs'){
         &:not(.inMain) {

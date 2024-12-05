@@ -27,12 +27,14 @@
     }
     .btnTop {width: 100%; height: 38px; text-align: center; font-size: rem(17px); color: #fff; font-weight: 700; background: var(--Point-Primary2);}
 
+    
+    &.inMain {
+        display: none;
+    }
+
     @include media(1790px){
         &:not(.inMain) {
             opacity: 0.5;
-        }
-        &.inMain {
-            
         }
     }
     @include media(1575px){
