@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // 메인 배너 슬라이드
     var swiper = new Swiper(".bannerSwiper", {
+        autoplay : {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".bannerSwiper .swiper-pagination",
         },
     });
 
