@@ -105,25 +105,25 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     
     // 퀵메뉴 / 헤더 스크롤 보정
-    let lastScrollX = 0;
-    window.addEventListener("scroll", function(){
-        const currentScrollX = window.scrollX;
+    // let lastScrollX = 0;
+    // window.addEventListener("scroll", function(){
+    //     const currentScrollX = window.scrollX;
 
-        if(currentScrollX !== lastScrollX) {
-            // 퀵메뉴
-            const quickMenu = document.querySelector(".cptQuickMenu");
-            console.log(window.innerWidth);
-            if(window.innerWidth < 1400) {
-                quickMenu.style.marginLeft = (860 - currentScrollX) + 'px';
-            } else {
-                quickMenu.style.marginLeft = (780 - currentScrollX) + 'px';
-            }
+    //     if(currentScrollX !== lastScrollX) {
+    //         // 퀵메뉴
+    //         const quickMenu = document.querySelector(".cptQuickMenu");
+    //         console.log(window.innerWidth);
+    //         if(window.innerWidth < 1400) {
+    //             quickMenu.style.marginLeft = (860 - currentScrollX) + 'px';
+    //         } else {
+    //             quickMenu.style.marginLeft = (780 - currentScrollX) + 'px';
+    //         }
             
 
-            // 헤더
-            const header = document.querySelector(".cptHeader");
-            header.style.left = ( - currentScrollX) + 'px';
-        }
-    })
+    //         // 헤더
+    //         const header = document.querySelector(".cptHeader");
+    //         header.style.left = ( - currentScrollX) + 'px';
+    //     }
+    // })
 
 })
