@@ -5,6 +5,150 @@
         }
         .layoutContainer{
             width: 100%;
+            .mainLayoutWrap {
+                width: 100%; padding: 0 16px 40px; background: #d5f2ed url(../../images/main/main_m_bg.png) center -47px / 100% no-repeat;
+                &:has(.racingBanner) {
+                    background-position: center top;
+                }
+
+                .racingBanner {
+                    width: calc(100% + 32px); margin-left: -16px; padding: 10px 16px; background: #027769; display: flex; justify-content: space-between; align-items: center;
+                    .nowGame {
+                        font-size: rem(15px); color: #fff;
+                        i {font-style: normal;}
+                        b {margin-left: 8px; font-weight: 700;}
+                    }
+                    .nowBtn {
+                        height: 27px; padding: 0 14px; border-radius: 13.5px; line-height: 27px; font-size: rem(13px); color: #fff; font-weight: 700; background: #00ba8d; display: inline-block;
+                    }
+                }
+
+                .mainBannerArea {
+                    .bannerSwiper {
+                        overflow: hidden;position: relative;
+                        .bannerArea {
+                            width: 100%; height: 80px; margin: 16px 0 14px; padding:0 12px; display: flex; align-items: center; justify-content: space-between; column-gap: 20px;
+                            .txtArea {
+                                .tit {font-size: rem(18px); font-weight: 700; color: var(--Gray-800);}
+                                .date {margin-top: 4px; font-style: normal; font-size: rem(14px); color: var(--Gray-600); display: inline-block;}
+                            }
+                            .imgArea {
+                                img {max-height: 100%;}
+                            }
+                        }
+                        .swiper-pagination {
+                            bottom: -6px;left: 50%;transform: translateX(-50%);
+                            .swiper-pagination-bullet {
+                                width: 6px; height: 6px; margin-right: 4px; border-radius: 3px; opacity: 1; background: var(--Gray-300); transition: width 0.3s;
+                                &:last-child {margin-right: 0;}
+                                &.swiper-pagination-bullet-active {width: 16px; background: var(--Point-Primary2);}
+                            }
+                        }
+                    }
+                }
+
+                .quickMenuArea {
+                    margin-top: 28px;
+                    .menuGroup {
+                        display: flex; align-items: center; justify-content: space-between; gap: 10px;
+                        .menuItem {
+                            flex: 0 0 calc(33.3333% - 6.6667px);
+                            .menuBtn {
+                                width: 100%; height: 132px; padding: 16px; border-radius: 12px; display: block; background: #fff calc(100% - 16px) calc(100% - 10px) no-repeat; box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.05);
+                                &.icon01 {background-image: url(../../images/main/main_m_quickIco01.png);}
+                                &.icon02 {background-image: url(../../images/main/main_m_quickIco02.png);}
+                                &.icon03 {background-image: url(../../images/main/main_m_quickIco03.png);}
+                                b {font-size: rem(16px); color: var(--Gray-800); font-weight: 700; display: block;}
+                                i {margin-top: 2px; font-size :rem(13px); color: var(--Gray-600); font-weight: 400; font-style: normal; display: block;}
+                            }
+                        }
+                    }
+                }
+                .basicMenuArea {
+                    margin-top:28px;
+                    .menuGroup {
+                        width: 100%; display: flex; row-gap: 20px; flex-wrap: wrap;
+                        .menuItem {
+                            padding: 0 4px; flex: 0 0 25%;
+                            .menuBtn {
+                                display: block; width: 100%; text-align: center; font-size: rem(14px); color: var(--Gray-800); font-weight: 500;
+                                &::before {display: block; content: ""; width: 48px; height:48px; border-radius: 12px; margin: 0 auto 8px; background: rgba(255,255,255,0.7) center no-repeat;}
+                                &.icon01::before {background-image: url(../../images/main/main_m_basicIco01.svg);}
+                                &.icon02::before {background-image: url(../../images/main/main_m_basicIco02.svg);}
+                                &.icon03::before {background-image: url(../../images/main/main_m_basicIco03.svg);}
+                                &.icon04::before {background-image: url(../../images/main/main_m_basicIco04.svg);}
+                                &.icon05::before {background-image: url(../../images/main/main_m_basicIco05.svg);}
+                                &.icon06::before {background-image: url(../../images/main/main_m_basicIco06.svg);}
+                                &.icon07::before {background-image: url(../../images/main/main_m_basicIco07.svg);}
+                                &.icon08::before {background-image: url(../../images/main/main_m_basicIco08.svg);}
+                            }
+                            
+                        }
+                    }
+                }
+
+                .boardMenuArea {
+                    margin-top: 32px;
+                    .menuGroup {
+                        width: 100%; padding: 16px; border-radius: 12px; background: #fff; display: flex; align-items: center; flex-wrap: wrap; row-gap: 16px;
+                        .menuItem {
+                            flex: 0 0 33.3333%;
+                            .menuBtn {
+                                display: inline-block; padding: 0 10px 0 34px; line-height: 20px; font-size: rem(13px); color: var(--Gray-800); font-weight: 500; background: 10px center no-repeat; position: relative;
+                                &.new::after {display: block; content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--Point-Primary2); position: absolute; top: 2px; right: 3px;}
+                                &.icon01 {background-image: url(../../images/main/main_m_boardIco01.svg);}
+                                &.icon02 {background-image: url(../../images/main/main_m_boardIco02.svg);}
+                                &.icon03 {background-image: url(../../images/main/main_m_boardIco03.svg);}
+                                &.icon04 {background-image: url(../../images/main/main_m_boardIco04.svg);}
+                                &.icon05 {background-image: url(../../images/main/main_m_boardIco05.svg);}
+                                &.icon06 {background-image: url(../../images/main/main_m_boardIco06.svg);}
+                            }
+                        }
+                    }
+                }
+
+                .eventArea {
+                    margin-top: 28px;
+                    .tabBtnGroup {
+                        display: flex; align-items: center; gap: 12px;
+                        .btnItem {
+                            .tabBtn {
+                                width: 100%; height: 37px;padding: 0 2px; font-size: rem(18px); color: var(--Gray-600); font-weight: 500; position: relative;
+                                &::before {display: block; content: ""; width: 0; height: 3px; background: var(--Point-Primary2); transition: width 0.3s; position: absolute; bottom: 0; left: 0;}
+                                &.on {
+                                    color: var(--Gray-900); font-weight: 700;
+                                    &::before {width:100%;}
+                                }
+                                &.new {
+                                    &::after {display: block; content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--Point-Primary2); position: absolute; top: 8px; right: -4px;}
+                                }
+                            }
+                        }
+                    }
+
+                    .tabContGroup {
+                        margin-top: 20px;
+                        .tabCont {
+                            display: none;
+                            &.on {display: block;}
+                            .swiper {
+                                width: 100%; overflow: hidden;
+                                .swiper-slide {
+                                    width: 150px; height: 150px;
+                                    .eventItem {
+                                        border-radius: 8px; overflow: hidden; display: inline-block; line-height: 0;
+                                        img {width: 100%; height: 100%; object-fit: cover;}
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
         }
+        .modAlertPopup .btn {width: 150px;}
     }
 }

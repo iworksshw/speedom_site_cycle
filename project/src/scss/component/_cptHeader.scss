@@ -260,11 +260,17 @@
 
     &.inMain {
         min-width: 1610px; position: relative;
+        .quickArea {
+            .quickBox {
+                width: 1740px; max-width:1740px; padding: 10px 150px;
+            }
+        }
         .headArea{
-            .headBox {max-width: 1610px; padding-right: 130px;}
+            .headBox {max-width: 1740px; width: 1740px; padding: 0 150px 12px;}
         }
         .gnbArea {
-            .gnbBox {max-width: 1610px;padding-right: 130px;}
+            min-width: 1760px;
+            .gnbBox {max-width: 1740px; width: 1740px; padding: 0 150px;}
         }
     }
     @include media('pcs'){
