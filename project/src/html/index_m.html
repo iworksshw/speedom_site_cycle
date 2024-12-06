@@ -104,19 +104,19 @@
                 <div class="quickMenuArea">
                     <ul class="menuGroup">
                         <li class="menuItem">
-                            <a href="#" class="menuBtn icon01">
+                            <a href="#" class="menuBtn icon01" onclick="openPopup('infoAlert');"> <!--경주없는 날일 시 안내 팝업-->
                                 <b>순위예측</b>
                                 <i>AI를 활용한<br/>선수순위예측</i>
                             </a>
                         </li>
                         <li class="menuItem">
-                            <a href="#" class="menuBtn icon02">
+                            <a href="#" class="menuBtn icon02" onclick="openPopup('infoAlert');">
                                 <b>모의베팅</b>
                                 <i>활동지수로<br/>모의베팅하기</i>
                             </a>
                         </li>
                         <li class="menuItem">
-                            <a href="#" class="menuBtn icon03">
+                            <a href="#" class="menuBtn icon03" onclick="openPopup('infoAlert');">
                                 <b>실시간영상</b>
                                 <i>현장의 열기를<br/>느껴보세요</i>
                             </a>
@@ -209,12 +209,37 @@
                                                 <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
                                             </a>
                                         </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="tabCont">
                                 <div class="swiper event02Swiper">
                                     <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
                                         <div class="swiper-slide">
                                             <a href="#" class="eventItem">
                                                 <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
@@ -236,6 +261,11 @@
                             <li class="tabCont">
                                 <div class="swiper event03Swiper">
                                     <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
                                         <div class="swiper-slide">
                                             <a href="#" class="eventItem">
                                                 <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
@@ -261,6 +291,35 @@
             
         </div>
         <!-- //본문영역 -->
+
+        <!-- 안내 팝업 -->
+        <div id="infoAlert" class="modAlertPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+            <div class="popupDim">딤영역</div>
+            <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                <div class="popupInMotion">
+                    <div class="popupContainer">
+                        <div class="popupContArea">
+                            <button class="btnPopClose" onclick="closePopup('infoAlert');">닫기</button>
+                            <div class="popCont">
+                                <!-- 팝업 컨텐츠 영역 -->
+                                <div class="alertTit">
+                                    안내
+                                </div>
+                                <p class="alertDt">
+                                    해당 서비스는 경주일에만 제공됩니다 
+                                </p>
+                                <!-- //팝업 컨텐츠 영역 -->
+                            </div>
+        
+                            <!-- 팝업 하단 영역 -->
+                            <div class="popBtm">
+                                <button type="button" class="btn Primary">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 하단영역 -->
         <div class="layoutFooter">

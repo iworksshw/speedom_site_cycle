@@ -6,7 +6,10 @@
         .layoutContainer{
             width: 100%;
             .mainLayoutWrap {
-                width: 100%; padding: 0 16px 40px; background: #d5f2ed url(../../images/main/main_m_bg.png) center top / 100% no-repeat;
+                width: 100%; padding: 0 16px 40px; background: #d5f2ed url(../../images/main/main_m_bg.png) center -47px / 100% no-repeat;
+                &:has(.racingBanner) {
+                    background-position: center top;
+                }
 
                 .racingBanner {
                     width: calc(100% + 32px); margin-left: -16px; padding: 10px 16px; background: #027769; display: flex; justify-content: space-between; align-items: center;
@@ -130,7 +133,14 @@
                             &.on {display: block;}
                             .swiper {
                                 width: 100%; overflow: hidden;
-                                .eventItem {display: inline-block; line-height: 0;}
+                                .swiper-slide {
+                                    width: 150px; height: 150px;
+                                    .eventItem {
+                                        border-radius: 8px; overflow: hidden; display: inline-block; line-height: 0;
+                                        img {width: 100%; height: 100%; object-fit: cover;}
+                                    }
+                                }
+                                
                             }
                         }
                     }
@@ -139,5 +149,6 @@
             }
 
         }
+        .modAlertPopup .btn {width: 150px;}
     }
 }
