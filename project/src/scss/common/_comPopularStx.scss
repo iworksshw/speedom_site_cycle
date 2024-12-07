@@ -46,10 +46,22 @@
         }
     }
 
+    @include media("pcs"){
+        &.mView {display: block; margin: 100px -16px 0; padding: 0 16px; padding-top: 40px; border-top: 10px solid #F4F6FA;}
+        &.pcView {display: none;}        
+        .listTen {
+            ul {
+                &.wd100 {
+                    li {
+                        width: calc(50% - 20px);          
+                    }
+                }
+            }
+        }
+    }
+
     @include media("mobile"){
         margin-top: 36px;
-        &.mView {display: block; margin: 100px -16px 0; padding: 0 16px; padding-top: 40px; border-top: 10px solid #F4F6FA;}
-        &.pcView {display: none;}
         .listTen {
             ul {
                 gap: 20px 0;
@@ -57,6 +69,11 @@
                     width: 100%; order: initial !important;
                     .num {font-size: rem(13px);}
                     .pTxt {font-size: rem(15px);}
+                }
+                &.wd100 {
+                    li {
+                        width: 100%;          
+                    }
                 }
             }
         }
