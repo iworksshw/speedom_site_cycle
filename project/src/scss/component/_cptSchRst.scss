@@ -29,6 +29,13 @@
         .mView {display: none;}
     }
 
+    @include media("pcs"){ 
+        .rstRi {
+            &.pcView {display: none;}
+        }
+        .mView {display: block;}
+    }
+
     @include media("mobile"){        
         .schRstArea {
             gap: 0; display: block;
@@ -49,9 +56,8 @@
             }
             .rstRi {
                 width: auto; margin: 100px -16px 0; padding: 0 16px; padding-top: 40px; border-top: 10px solid #F4F6FA;
-                &.pcView {display: none;}
             }
-            .mView {display: block;}
+            
         }        
     }
 }
