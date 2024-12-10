@@ -8,6 +8,12 @@
         &.sizeM table {min-width: 800px;}
         &.sizeL table {min-width: 1000px;}
         &.sizeXL table {min-width: 1200px;}
+        &.popScrl {
+            height: 302.5px;
+            @include media("mobile"){
+                height: 196px;
+            }
+        }
         table {
             width:100%; border-spacing: 0; border-collapse: separate; /*table-layout: fixed;*/
             thead {

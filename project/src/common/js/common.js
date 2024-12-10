@@ -351,6 +351,20 @@ document.addEventListener("DOMContentLoaded", function () {
     inputCheckBoxAll();
 });
 
+// 모의배팅 init
+function battingInit() {
+    // 주간지수 슬라이드
+    recordSlide();
+
+    // 랭킹 슬라이트
+    rankSlide();
+
+    // 경기선택 슬라이드
+    matchSlide();
+
+    // 플로팅 푸터 옵션 toggle
+    batFloating();
+}
 
 
 // ------------------------------- 전체 메뉴 ------------------------------- //
@@ -996,6 +1010,7 @@ function matchSlide(){
         },
     });
 
+    // ON 변경
     const matchBtns = document.querySelectorAll(".matchSlct .matchBox");
 
     matchBtns.forEach(function(matchBtn, idx){
@@ -1007,10 +1022,18 @@ function matchSlide(){
             });
             if (!matchBtn.classList.contains("disabled")) {
                 this.classList.add("on");
-                swCenter(target);
+                // swCenter(target);
             }
         })
-    })
+    });
+
+    // 시작 시 ON 으로 이동
+    const onMatchBtn = document.querySelector(".matchBox.on");
+    const matchSlide = onMatchBtn.closest(".swiper-slide");
+    const matchSlides = Array.from(matchSlide.parentNode.children);  
+    const sdindex = matchSlides.indexOf(matchSlide); 
+    matchSwiper.slideTo(sdindex);
+    swCenter(sdindex)
 
     function swCenter(target) {
         const snbWrap = document.querySelector('.matchSwiper .swiper-wrapper');
