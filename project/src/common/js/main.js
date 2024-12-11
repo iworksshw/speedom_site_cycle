@@ -89,9 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 바닥배너 슬라이드
     var btmBannerSwiper = new Swiper(".btmSlide", {
-        navigation: {
-            nextEl: ".bannerBtm .swiper-button-next",
-            prevEl: ".bannerBtm .swiper-button-prev",
+        pagination: {
+            el: ".bannerBtm .swiper-pagination",
+        },
+        autoplay: {
+            delay: 4000,
         },
     });
 
