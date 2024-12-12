@@ -4,8 +4,8 @@
             width:100%; height:176px; background: #EDF5F2; /*position: sticky; left: 0; top: 0; z-index: 100;*/
         }
         .layoutContainer{
-            width: 1740px; margin: 0 auto 20px; padding-left: 150px;
-            .mainLayoutWrap {width: 1610px; padding: 20px 20px 0; position: relative; display: flex; gap: 20px; flex-wrap: wrap;}
+            width: 1740px; margin: 0 auto 20px; padding-left: 130px;
+            .mainLayoutWrap {width: 100%; padding: 20px 20px 0; position: relative; display: flex; gap: 20px; flex-wrap: wrap;}
             .leftSide {width: 1086px; flex: 0 0 1086px; order: 0;}
             .rightSide {width: 334px; flex: 0 0 334px;order: 0;}
             .bottomSide {
@@ -542,6 +542,17 @@
                             width: 100%; height: 100%; padding: 34px 80px; position: absolute; top: 0; left:0;
                             .tit {font-size: rem(30px); color: #fff; font-weight: 700; display: block;}
                             .period {font-style: normal; margin-top: 5px; font-size: rem(18px); color: #fff; font-weight: 500;display: block;}
+                        }
+                    }
+                    .swiperUnit {
+                        position: absolute; top: 11px; right: 24px; z-index: 99;
+                        .swiper-pagination {
+                            position: static;
+                            .swiper-pagination-bullet {
+                                width: 8px; height: 8px; margin-right: 4px; border-radius: 4px; opacity: 1; background: var(--Gray-300); transition: width 0.3s;
+                                &:last-child {margin-right: 0;}
+                                &.swiper-pagination-bullet-active {width: 18px; background: #2f9bd8;}
+                            }
                         }
                     }
                 }
