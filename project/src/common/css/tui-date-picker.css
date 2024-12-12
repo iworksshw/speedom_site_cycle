@@ -290,8 +290,25 @@
     border: 1px solid #aaa;
     background-color: white;
     position: absolute;
+    right: 0;
+    top: 48px;
     z-index: 100;
 }
+
+@media screen and (max-width: 767px) {
+    .tui-datepicker-input > div {
+        
+    }
+    .tui-datepicker {
+        border: 1px solid #aaa;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 48px;
+        z-index: 100;
+    }
+}
+
 
 .tui-datepicker * {
     -webkit-box-sizing: border-box;
@@ -377,7 +394,7 @@
 
 .tui-datepicker-input {    
     width:100%;
-    height: 34px;   
+    height: 48px;   
     margin-left: 5px;
     position: relative;
     /*
@@ -411,11 +428,11 @@
 .tui-datepicker-input > input {
     width:100%;
     height: 100%;
-    padding-left: 12px;
-    font-size: 14px;
-    border: 1px solid #bbbbbb;
-    border-radius: 4px;
-    background: #fff url(../../images/common/ic_textfield_calendar.svg) right 10px center no-repeat !important;
+    padding: 0 32px 0 16px;
+    font-size: 16px;
+    border: 1px solid #ced1d6;
+    border-radius: 8px;
+    background: #fff url(../../images/common/ic_textfield_calendar.svg) right 16px center no-repeat !important;
     /*
     width: 100%;
     height: 100%;
