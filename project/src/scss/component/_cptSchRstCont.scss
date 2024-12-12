@@ -239,7 +239,7 @@
                             > button {
                                 &[class*=btnPlay] {
                                     min-width: auto;flex-direction: row;justify-content: center;padding: 0 8px;
-                                    span {font-size: rem(13px);font-weight: 400;}
+                                    span {font-size: rem(13px);font-weight: 400;line-height: 1;}
                                 }
                             }
                         }
