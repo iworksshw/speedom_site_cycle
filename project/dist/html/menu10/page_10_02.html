@@ -15,10 +15,12 @@
 	<title>KCYCLE 경륜</title>
 
 	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
 	<script src="../../common/js/swiper.min.js"></script>
+	<script src="../../common/js/tui-date-picker.js"></script>
 	<script src="../../common/js/common.js"></script>
 	<!--
     <script src="../common/js/basic.js"></script>
@@ -900,15 +902,26 @@
                                             <dl>
                                                 <dt class="gray">직접입력</dt>
                                                 <dd>
+                                                    <!-- 20241212 수정 -->
                                                     <ul class="datePick">
                                                         <li>
-                                                            <input type="text" placeholder="2024.01.01" />
+                                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmBox">
+                                                                <input id="startpicker-input02" type="text" aria-label="Date">
+                                                                <div id="startpicker-container02" style="margin-left: -1px;"></div>
+                                                            </div>
                                                         </li>
                                                         <li class="hpn">-</li>
                                                         <li>
-                                                            <input type="text" placeholder="2024.03.01" />
+                                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmBox">
+                                                                <input id="endpicker-input02" type="text" aria-label="Date">
+                                                                <div id="endpicker-container02" style="margin-left: -1px;"></div>
+                                                            </div>
                                                         </li>
                                                     </ul>
+                                                    <script>
+                                                        datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
+                                                    </script>
+                                                    <!-- //20241212 수정 -->
                                                 </dd>
                                             </dl>
                                         </div>
