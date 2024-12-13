@@ -478,7 +478,7 @@
                                 width: 60px; height: 60px; border-radius: 50%; margin: 0 auto; padding: 4px; background: #fff; overflow: hidden; position: relative;
                                 &::before {display: block; content: ""; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(120deg, #28c39e 0%, #1c6ec3 100%); ; opacity: 0.2; position: absolute; top: 0; left:0; z-index: 0;}
                                 &::after {display: block; content: ""; width: 52px; height: 52px; border-radius: 50%; background: #fff; position: absolute; top: 4px; left:4px; z-index: 0;}
-                                img {height: 100%; object-position: center top; border-radius: 26px; position: relative;z-index: 1;}
+                                img {width: 100%; height: 100%; object-fit: contain; object-position: center top; border-radius: 26px; position: relative;z-index: 1;}
                             }
                             .infoArea {
                                 margin-top: 4px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 10px;
