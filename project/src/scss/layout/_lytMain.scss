@@ -230,6 +230,7 @@
                                 
                                 .tooltipBox {
                                     width: 280px; padding: 16px 23px 16px 16px; border-radius: 8px; border: 1px solid var(--Point-Primary2); background: #fff; position: absolute; z-index: 99; display: none; box-shadow: 10px 10px 10px 0px rgba(40, 195, 158, 0.10); top: 33px; left:42px;
+                                    &.ai {top: 53px; left: 32px;}
                                     .btnClose {width: 16px; height: 16px; font-size: 0; background: url(../../images/common/ic_12_close.svg) center no-repeat; position: absolute; top: 8px; right: 8px;}
                                     .txt {font-size: rem(15px); font-weight: 500; line-height: 1.6; color: var(--Gray-800); text-align: left;}
                                     .btnMore {
@@ -285,7 +286,23 @@
 
                             .analay {
                                 height: 34px; margin-top: 12px; padding: 0 12px; border-radius: 8px; background: #fff; display: flex; align-items: center; column-gap: 20px;
-                                dt {padding-left: 30px; font-size: rem(15px); color: var(---Primary); font-weight: 700; background: url(../../images/main/ic_20_analy.svg) left center no-repeat;}
+                                dt {
+                                    padding-left: 30px; font-size: rem(15px); color: var(---Primary); font-weight: 700; background: url(../../images/main/ic_20_analy.svg) left center no-repeat; position: relative;
+                                    .tooltip {
+                                        width: 16px; height: 16px; font-size: 0; background: url(../../images/main/ic_12_info_mint.svg) center no-repeat; vertical-align: text-bottom;
+                                    }
+                                    .tooltipBox {
+                                        width: 280px; padding: 16px 23px 16px 16px; border-radius: 8px; border: 1px solid var(--Point-Primary2); background: #fff; position: absolute; z-index: 99; display: none; box-shadow: 10px 10px 10px 0px rgba(40, 195, 158, 0.10); top: 33px; left:73px;
+                                        .btnClose {width: 16px; height: 16px; font-size: 0; background: url(../../images/common/ic_12_close.svg) center no-repeat; position: absolute; top: 8px; right: 8px;}
+                                        .txt {font-size: rem(15px); font-weight: 500; line-height: 1.6; color: var(--Gray-800); text-align: left;}
+                                        .btnMore {
+                                            display: inline; font-size: rem(15px); color: var(---Primary);
+                                            &::after {display: inline-block; content: ""; width: 16px; height: 16px; margin-left: 2px; background: url(../../images/common/ic_16_new_window_mint.svg) center no-repeat; vertical-align: text-top;}
+                                        }
+                                        &::after {display: block; content: ""; width: 14px; height: 14px; background: url(../../images/common/ic_14_ballon_tail.svg) center no-repeat; position: absolute; top: -12px; left: 30px; z-index: 1;}
+                                        &.on {display: block;}
+                                    }
+                                }
                                 dd {font-size: rem(15px); color: var(--Gray-800); font-weight: 500;}
                             }
                             & > .info {display: inline-block; padding-left: 20px; font-size: rem(13px); color: var(--Gray-600); position: absolute; bottom: -23px; right: 3px; background: url(../../images/common/ic_16_info.svg) left center no-repeat;}
@@ -413,7 +430,7 @@
                 @extend .newsflashArea;
                 margin-top: 20px;
                 .boardArea {
-                    background: var(--Bg-Line-line-200);
+                    background: var(--Bg-Line-bg-200);
                 }
             }
 
@@ -458,8 +475,10 @@
                         .plItem {
                             flex: 0 0 33.3333%; text-align: center;
                             .thumArea {
-                                width: 60px; height: 60px; border-radius: 50%; margin: 0 auto; border: 4px solid #28C39E; background: #fff; overflow: hidden;
-                                img {height: 106%; object-position: center top;}
+                                width: 60px; height: 60px; border-radius: 50%; margin: 0 auto; padding: 4px; background: #fff; overflow: hidden; position: relative;
+                                &::before {display: block; content: ""; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(120deg, #28c39e 0%, #1c6ec3 100%); ; opacity: 0.2; position: absolute; top: 0; left:0; z-index: 0;}
+                                &::after {display: block; content: ""; width: 52px; height: 52px; border-radius: 50%; background: #fff; position: absolute; top: 4px; left:4px; z-index: 0;}
+                                img {height: 100%; object-position: center top; border-radius: 26px; position: relative;z-index: 1;}
                             }
                             .infoArea {
                                 margin-top: 4px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 10px;
@@ -485,7 +504,7 @@
                                 img {width: 100%; height: 100%; object-fit: cover;}
                             }
                             .titArea{
-                                width: 100%; height: 40px; padding: 0 10px; background: rgba(0,0,0,0.8); position: absolute; bottom:6px; left: 0; display: flex; align-items: center;
+                                width: 100%; height: 40px; padding: 0 10px; background: rgba(0,0,0,0.8); position: absolute; bottom:0; left: 0; display: flex; align-items: center;
                                 p {font-size: rem(16px); font-weight: 500; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
                             }
                         }

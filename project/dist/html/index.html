@@ -836,7 +836,7 @@
                                 <div class="titArea">
                                     <span class="date">2024년 11월 23일 (토)</span>
                                     <div class="race">
-                                        <b class="tit">창원 1경주 (선발 11:20) 43회차 2일차</b> <!--20241211 회차 일자 추가-->
+                                        <b class="tit">(일반) 광명 제 03 경주 43회차 2일차</b> <!--20241211 회차 일자 추가 / 20241213 경주 타이틀 양식 변경-->
                                         <span class="tag before">발매전</span> <!-- class 'before' : 발매 전-->
                                         <span class="tag ing">발매중</span> <!-- class 'ing' : 발매 중-->
                                         <span class="tag end">발매마감</span> <!-- class 'end' : 발매 마감-->
@@ -1027,7 +1027,14 @@
                                                                     <div class="th">선수명</div>
                                                                 </li>
                                                                 <li class="rowItem">
-                                                                    <div class="th">AI예측</div>
+                                                                    <div class="th">AI예측 <button type="button" class="tooltip" onclick="ttOpen('tooltip04')">AI예측 툴팁</button></div> <!--20241213 툴팁 버튼 추가-->
+                                                                    
+                                                                    <!-- 20241213 추가 -->
+                                                                    <div class="tooltipBox ai" id="tooltip04"> <!--class 'on' : 툴팁 오픈 -->
+                                                                        <button type="button" class="btnClose" onclick="ttClose('tooltip04')">툴팁 닫기</button>
+                                                                        <p class="txt">AI 예측 모델을 활용한 선수별 우승 확률입니다. AI예측결과의 최대값은 일반경주 30%, 슈퍼특선경주 50% 입니다.</p>
+                                                                    </div>
+                                                                    <!-- //20241213 추가 -->
                                                                 </li>
                                                                 <li class="rowItem">
                                                                     <div class="th">평균득점</div>
@@ -1040,7 +1047,7 @@
                                                                     
                                                                     <div class="tooltipBox" id="tooltip01"> <!--class 'on' : 툴팁 오픈 -->
                                                                         <button type="button" class="btnClose" onclick="ttClose('tooltip01')">툴팁 닫기</button>
-                                                                        <p class="txt">승식별 배당률이 낮은 순으로 마감 3분전까지만 제공됩니다.</p>
+                                                                        <p class="txt">삼쌍승식 기준 가장 배당률이 낮은 선수 번호로 마감 3분전까지만 제공됩니다.</p> <!--20241213 문구 변경-->
                                                                     </div>
                                                                 </li>
                                                                 <li class="rowItem">
@@ -1048,7 +1055,7 @@
                                                                     
                                                                     <div class="tooltipBox" id="tooltip02"> <!--class 'on' : 툴팁 오픈 -->
                                                                         <button type="button" class="btnClose" onclick="ttClose('tooltip02')">툴팁 닫기</button>
-                                                                        <p class="txt">적중률(=적중건/베팅건x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p>
+                                                                        <p class="txt">스피드온 적중률(=적중건/베팅건x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p><!--20241213 문구 변경-->
                                                                     </div>
                                                                 </li>
                                                                 <li class="rowItem">
@@ -1056,7 +1063,7 @@
                                                                     
                                                                     <div class="tooltipBox" id="tooltip03"> <!--class 'on' : 툴팁 오픈 -->
                                                                         <button type="button" class="btnClose" onclick="ttClose('tooltip03')">툴팁 닫기</button>
-                                                                        <p class="txt">환급률(=환급금/베팅금x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p>
+                                                                        <p class="txt">스피드온 환급률(=환급금/베팅금x100) 상위5% 고객 기준으로 마감 3분전까지만 제공됩니다.</p><!--20241213 문구 변경-->
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -1327,7 +1334,14 @@
                                                 </div>
 
                                                 <dl class="analay">
-                                                    <dt>전문가 분석</dt>
+                                                    <!-- 20241213 툴팁 버튼 / 툴팁 추가 -->
+                                                    <dt>전문가 분석 <button type="button" class="tooltip" onclick="ttOpen('tooltip05')">전문가 분석 툴팁</button>
+                                                        <div class="tooltipBox" id="tooltip05"> <!--class 'on' : 툴팁 오픈 -->
+                                                            <button type="button" class="btnClose" onclick="ttClose('tooltip05')">툴팁 닫기</button>
+                                                            <p class="txt">경륜 전문가의 경주별 분석 정보입니다.</p>
+                                                        </div>
+                                                    </dt>
+                                                    <!-- //20241213 툴팁 버튼 / 툴팁 추가 -->
                                                     <dd>4번 홍나동 우세 4번 홍나동이 탄탄한 지구력을 갖췄고 작전구사도 다양하므로 우승 기대된다.</dd>
                                                 </dl>
 
