@@ -129,6 +129,12 @@
                             &.hpn {width: auto; margin: 0 8px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; font-weight: 600;}
                         }
                     }
+                    .frmGroup {
+                        .frmBox.tui-datepicker-input {
+                            width: 150px;
+                            @include media("mobile"){width: auto;}
+                        }
+                    }
                     .iptSlt,
                     .iptText {width: 200px;}
                 }
