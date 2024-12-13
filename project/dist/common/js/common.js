@@ -1003,38 +1003,40 @@ function rankSlide() {
 
 // 경기 선택 슬라이드
 function matchSlide(){
-    const onMatchBtn = document.querySelector(".matchBox.on");
-    const matchSlide = onMatchBtn.closest(".swiper-slide");
-    const matchSlides = Array.from(matchSlide.parentNode.children);  
-    const sdindex = matchSlides.indexOf(matchSlide); 
+    if(document.querySelector(".cptBatSimul")){
+        const onMatchBtn = document.querySelector(".matchBox.on");
+        const matchSlide = onMatchBtn.closest(".swiper-slide");
+        const matchSlides = Array.from(matchSlide.parentNode.children);  
+        const sdindex = matchSlides.indexOf(matchSlide); 
 
-    let matchSwiper = new Swiper(".matchSwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 12,
-        centeredSlides: false,
-        initialSlide: sdindex,
-        navigation: {
-            nextEl: ".matchNavi .swiper-button-next",
-            prevEl: ".matchNavi .swiper-button-prev",
-        },
-    });
-
-    // ON 변경
-    const matchBtns = document.querySelectorAll(".matchSlct .matchBox");
-
-    matchBtns.forEach(function(matchBtn, idx){
-        matchBtn.addEventListener("click", function(){
-            let target = this.parentNode;
-
-            matchBtns.forEach(function(others) {
-                others.classList.remove("on");
-            });
-            if (!matchBtn.classList.contains("disabled")) {
-                this.classList.add("on");
-                // swCenter(target);
-            }
-        })
-    });
+        let matchSwiper = new Swiper(".matchSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 12,
+            centeredSlides: false,
+            initialSlide: sdindex,
+            navigation: {
+                nextEl: ".matchNavi .swiper-button-next",
+                prevEl: ".matchNavi .swiper-button-prev",
+            },
+        });
+    
+        // ON 변경
+        const matchBtns = document.querySelectorAll(".matchSlct .matchBox");
+    
+        matchBtns.forEach(function(matchBtn, idx){
+            matchBtn.addEventListener("click", function(){
+                let target = this.parentNode;
+    
+                matchBtns.forEach(function(others) {
+                    others.classList.remove("on");
+                });
+                if (!matchBtn.classList.contains("disabled")) {
+                    this.classList.add("on");
+                    // swCenter(target);
+                }
+            })
+        });
+    }
 
     // 시작 시 ON 으로 이동
     /*
