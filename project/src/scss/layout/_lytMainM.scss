@@ -15,11 +15,11 @@
                     width: calc(100% + 32px); margin-left: -16px; padding: 10px 16px; background: #027769; display: flex; justify-content: space-between; align-items: center;
                     .nowGame {
                         font-size: rem(15px); color: #fff;
-                        i {font-style: normal;}
-                        b {margin-left: 8px; font-weight: 700;}
+                        i {font-style: normal;margin-right: 4px;}
+                        b { font-weight: 700; display: inline-block;}
                     }
                     .nowBtn {
-                        height: 27px; padding: 0 14px; border-radius: 13.5px; line-height: 27px; font-size: rem(13px); color: #fff; font-weight: 700; background: #00ba8d; display: inline-block;
+                        height: 27px; padding: 0 14px; border-radius: 13.5px; line-height: 27px; font-size: rem(13px); color: #fff; font-weight: 700; background: #00ba8d; display: inline-block; flex: 0 0 auto;
                     }
                 }
 
