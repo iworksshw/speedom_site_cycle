@@ -1,7 +1,7 @@
 .cptTheaterDetail {
     position: relative; display: flex; min-height: 100vh; padding-right: 320px; background-color: var(--Bg-Line-bg-300);
     .theaterDetail {
-        display: flex; flex-direction: column; background-color: #fff;
+        width: 100%; display: flex; flex-direction: column; background-color: #fff;
         .videoArea {
             img {
                 width: 100%; vertical-align: top;
