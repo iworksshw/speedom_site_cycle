@@ -28,8 +28,8 @@
             }
             dd {
                 width: calc(100% - 90px); font-size: rem(15px);
-                a {width: calc(100% - 90px); font-size: rem(15px);}
-                .date {width: 90px; font-size: rem(15px);}
+                a {width: 100%; font-size: rem(15px);}
+                .date {display: none;}
             }
         }
     }
