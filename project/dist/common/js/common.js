@@ -174,6 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
     //디자인 셀렉트
     //designSelect();
 
+    // Footer site btn
+    const footerBtns = document.querySelectorAll(".cptFooter .depth1Btn");
+    if(footerBtns) {
+        footerBtns.forEach(function(footerBtn){
+            footerBtn.addEventListener("click", function(){
+                if(footerBtn.classList.contains("on")) {
+                    footerBtn.classList.remove("on");
+                } else {
+                    footerBtns.forEach(function(others){
+                        others.classList.remove("on");
+                    })
+                    footerBtn.classList.add("on");
+                }
+            })
+        })
+    }
+
     //파일찾기
     const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
     /*
