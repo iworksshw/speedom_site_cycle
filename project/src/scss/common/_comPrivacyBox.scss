@@ -5,6 +5,15 @@
         .boxTop {
             padding: 24px 32px; 
             .frmGroup .iptLbl {font-size: rem(18px); font-weight: 700;}
+            .anno {
+                margin-top: 20px; color: var(--Gray-800); font-size: rem(16px); font-weight: 400; line-height: 1.6;
+                &:first-child {margin-top: 0;}
+            }
+            .txt {
+                margin-top: 8px; color: var(---Primary); font-size: rem(16px); font-weight: 700; line-height: 1.6;
+                &.point {color: var(--Point-Blue2, #2E6CFF);}
+                &:first-child {margin-top: 0;}
+            }
         }
         .boxCont {
             padding: 32px 32px 36px; border-top: 1px solid var(--Bg-Line-line-200);

@@ -27,6 +27,7 @@
                         .sortIco {
                             position: relative; padding-right: 16px; font-weight: 600; font-size: unset;
                             &::before {content: ''; position: absolute; top: 50%; right: 0; width: 16px; height: 16px; transform: translateY(-50%); background: url(../../images/common/ic_16_tbl_sort.svg) no-repeat center center;}
+                            &.btm::before {top: 110%; right: 50%;}
                             &.up::before {transform: translateY(-50%) rotate(180deg) !important;}
                             &.tRed::before {background: url(../../images/common/ic_16_tbl_sort_red.svg) no-repeat center center;}
                         }
@@ -309,6 +310,9 @@
         &.blue {color: var(--Point-Blue); font-weight: 600;}        //우결
         &.orange {color: var(--Point-Orange); font-weight: 600;}    //결승
         &.red {color: #f00; font-weight: 600;}                    //특우
+        &.fst {color: #ff3333; font-weight: 600;}
+        &.snd {color: #FF9533; font-weight: 600;}
+        &.trd {color: #2E6CFF; font-weight: 600;}
     }
     .winningRate {
         color: var(--Gray-800, #2C2C2C);

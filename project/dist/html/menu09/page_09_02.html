@@ -866,9 +866,16 @@
 								</li>
 								<li>
 									<span class="item">나의 적중률
-										<!--20241116 모달팝업으로 변경-->
+										<!--20241116 모달팝업으로 변경 20231213 삭제
 										<button type="button" class="popIcon" onclick="openPopup('infoAccuracy')">팝업 열기</button>
-										<!--// 20241116 모달팝업으로 변경-->
+										-->
+										<!-- 20241213 다시 툴팁으로 변경 -->
+										<button type="button" class="popIcon" onclick="ttOpen('tooltip01')">팝업 열기</button>
+										<div class="tooltipBox point01" id="tooltip01">
+											<button type="button" class="btnClose" onclick="ttClose('tooltip01')">툴팁 닫기</button>
+											<p class="txt">적중한 베팅건수를 참여한 총 베팅 건수로 나누어 백분율로 나타낸 것입니다.</p>
+										</div>
+										<!-- //20241213 다시 툴팁으로 변경 -->
 									</span>
 									<span class="val">99.99 <i class="unit">%</i></span>
 								</li>
