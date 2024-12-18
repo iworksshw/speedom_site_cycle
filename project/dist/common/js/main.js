@@ -99,12 +99,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 배너 on/off
     const btmBanner = document.querySelector(".bannerBtm");
-    const bannerClose = btmBanner.querySelector(".btnClose");
-
-    btmBanner.classList.add("on");
-    bannerClose.addEventListener("click", function(){
-        btmBanner.classList.remove("on");
-    })
+    // 20241213 영문 메인 대응 태그 없을 경우 추가
+    if (btmBanner) {
+        const bannerClose = btmBanner.querySelector(".btnClose");
+    
+        btmBanner.classList.add("on");
+        bannerClose.addEventListener("click", function(){
+            btmBanner.classList.remove("on");
+        })
+    }
     
     // 퀵메뉴 / 헤더 스크롤 보정
     // let lastScrollX = 0;
@@ -127,5 +130,86 @@ document.addEventListener("DOMContentLoaded", function () {
     //         header.style.left = ( - currentScrollX) + 'px';
     //     }
     // })
-
 })
+
+function mainVisual() {
+    const cptmainVisual = document.querySelector(".lytMainEng .mainVisual");
+    if (cptmainVisual) {
+        const mobile = window.matchMedia('(max-width: 767px)');
+        const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1280px)');
+        const desktop = window.matchMedia('(min-width: 1281px)');
+
+        let cycleVisualSwiper;
+        let boatVisualSwiper;
+        let cycleCurrentIndex;
+        let boatCurrentIndex;
+
+        function initializeSwiper(config) {
+            // 기존 swiper 인스턴스가 있으면 제거
+            if (cycleVisualSwiper) cycleVisualSwiper.destroy(true, true);
+            if (boatVisualSwiper) cycleVisualSwiper.destroy(true, true);
+
+
+            // 새로운 swiper 생성
+            cycleVisualSwiper = new Swiper(".cycleVisualSwiper", {
+                loop: false,
+                effect: "fade",
+                // autoplay: {
+                //     delay: 3000
+                // },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"><span></span></span>';
+                    },
+                },
+            });
+            
+            boatVisualSwiper = new Swiper(".boatVisualSwiper", {
+                loop: false,
+                effect: "fade",
+                // autoplay: {
+                //     delay: 3000
+                // },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"><span></span></span>';
+                    },
+                },
+            });
+        }
+
+        function handleScreenChange() {
+            if (mobile.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (tablet.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (desktop.matches) {
+                initializeSwiper({allowTouchMove: false});
+            }
+        }
+
+        // 초기 상태 확인
+        handleScreenChange();
+
+        // 화면 크기 변경 감지
+        [mobile, tablet, desktop].forEach(mediaQuery => {
+            mediaQuery.addEventListener("change", handleScreenChange);
+        });
+
+        mainVisualBtnEvent();
+        function mainVisualBtnEvent(){
+            let mainVisualBtns = cptmainVisual.querySelectorAll('.btnWrap button');
+            let target = cptmainVisual.querySelector('.innerWrap .visualWrap')
+            mainVisualBtns.forEach((btn)=>{
+                btn.addEventListener('click', (e)=>{
+                    let title = e.target.closest('button').className;
+                    title === 'btnBoating' ? target.classList.add('active') : target.classList.remove('active')
+                });
+            });
+        }
+    }
+}
