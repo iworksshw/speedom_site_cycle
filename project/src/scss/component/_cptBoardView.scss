@@ -178,6 +178,9 @@
     .modMdPopup & {
         .boardViewArea {
             .viewTop {
+                .eyebrow {
+                    margin-bottom: 12px; color: var(---Primary); font-size: rem(16px); font-style: normal; font-weight: 700; line-height: 1.4; display: block;
+                }
                 .viewTitle {
                     font-size: rem(18px);
                 }
