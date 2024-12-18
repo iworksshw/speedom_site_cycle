@@ -137,11 +137,26 @@
                                             <div class="innerBox">
                                                 <div class="subMenu">
                                                     <p>직접입력</p>
+                                                    <!-- 20241212 수정 -->
                                                     <ul class="datePick">
-                                                        <li><input type="text" placeholder="2024.01.01" /></li>
+                                                        <li>
+                                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmBox">
+                                                                <input id="startpicker-input02" type="text" aria-label="Date">
+                                                                <div id="startpicker-container02" style="margin-left: -1px;"></div>
+                                                            </div>
+                                                        </li>
                                                         <li class="hpn">-</li>
-                                                        <li><input type="text" placeholder="2024.03.01" /></li>
+                                                        <li>
+                                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmBox">
+                                                                <input id="endpicker-input02" type="text" aria-label="Date">
+                                                                <div id="endpicker-container02" style="margin-left: -1px;"></div>
+                                                            </div>
+                                                        </li>
                                                     </ul>
+                                                    <script>
+                                                        datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
+                                                    </script>
+                                                    <!-- //20241212 수정 -->
                                                 </div>
                                             </div>
                                         </dd>
@@ -517,14 +532,16 @@
                                 <div class="subTit">경륜 이모저모</div>
                                 <h2 class="tit">경륜 인사이트</h2>
                             
+                                <!-- 20241213 삭제
                                 <div class="tabMenuGroup tabSwiper toMob" id="insightTab">
                                     <ul class="sortTab swiper-wrapper">
-                                        <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                                        <li class="tabItem swiper-slide"><button type="button" class="tabName on" title="선택 된 탭메뉴">전체</button></li>
                                         <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">특집 프로그램</button></li>
                                         <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">선수들의 영상이야기</button></li>
                                         <li class="tabItem swiper-slide"><button type="button" class="tabName" title="탭메뉴">경륜궁금타파</button></li>
                                     </ul>
                                 </div>
+                                -->
                             </div>
 
                             <div class="listGallery theaterSwiper" id="theaterSwiper_2">
@@ -654,10 +671,12 @@
                             <div class="subTit">최근 가장 많이 본</div>
                             <h2 class="tit">인기 영상</h2>
     
+                            <!-- 20241213 삭제
                             <div class="sortBtn">
                                 <button type="button" class="on">이번주</button>
                                 <button type="button">이번달</button>
-                            </div>
+                            </div> 
+                            -->
                         </div>
 
                         <div class="listGallery">

@@ -867,19 +867,21 @@
 												<th rowspan="2" class="btmLine">등급</th>
 												<th colspan="4">평균득점</th>
 												<th colspan="4">최근 3회득점</th>
-												<th rowspan="2" class="btmLine">승률<br>(%)</th>
-												<th rowspan="2" class="btmLine">연대율<br>(%)</th>
-												<th rowspan="2" class="btmLine">삼연대율<br>(%)</th>
+												<!-- 20241213 내림차순 아이콘 추가-->
+												<th rowspan="2" class="btmLine"><button type="button" class="sortIco btm" title="내림차순으로 정렬">승률<br>(%)</button></th>
+												<th rowspan="2" class="btmLine"><button type="button" class="sortIco btm" title="내림차순으로 정렬">연대율<br>(%)</button></th>
+												<th rowspan="2" class="btmLine"><button type="button" class="sortIco btm" title="내림차순으로 정렬">삼연대율<br>(%)</button></th>
+												<!-- //20241213 내림차순 아이콘 추가-->
 											</tr>
 											<tr>
 												<th><button type="button" class="sortIco tRed" title="내림차순으로 정렬">종합</button></th>
+												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
+												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th><!-- class="sortIco up" title="오름차순으로 정렬" -->
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">종합</button></th>
-												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">광명</button></th>
 												<th><button type="button" class="sortIco" title="내림차순으로 정렬">창원</button></th>
+												<th><button type="button" class="sortIco" title="내림차순으로 정렬">부산</button></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -1115,9 +1117,36 @@
     <div class="footArea">
         <div class="siteArea">
             <ul class="siteGroup">
-                <li class="item"><a href="">신고센터 안내</a></li>
-                <li class="item"><a href="">패밀리사이트</a></li>
-                <li class="item"><a href="">연관사이트</a></li>
+                <!-- 20241214 2depth 추가 -->
+                <li class="item">
+                    <button type="button" class="depth1Btn">신고센터 안내</button> <!--class 'on' : 버튼 열림--> <!--20241214 a > button 변경, class 추가--> 
+                    <ul class="depth2Group">
+                        <li class="depth2Item"><a href="#" class="depth2Link">분실경주권 신고</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link">부정행위자 신고</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link">불법행위자 신고</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link">불법사이트 신고</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">부조리 신고센터</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link">예산낭비 신고센터</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <button type="button" class="depth1Btn">패밀리사이트</button>
+                    <ul class="depth2Group">
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">서울올림픽파크텔</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">에콜리안골프장</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">한국스포츠정책과학원</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">한국체육산업개발(주)</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <button type="button" class="depth1Btn">연관사이트</button>
+                    <ul class="depth2Group">
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">스포원</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">창원레포츠파크</a></li>
+                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">사행산업통합감독위원회 불법사행산업감시신고센터</a></li>
+                    </ul>
+                </li>
+                <!-- //20241214 2depth 추가 -->
             </ul>
         </div>
         <div class="addressArea">

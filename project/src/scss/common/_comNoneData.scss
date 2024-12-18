@@ -32,4 +32,17 @@
             }
         }
     }
+
+    .grayTxt {
+        width: 100%; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: 1.6; text-align: center;
+    }
+    .grayTxt + .btnBox {
+        width: 100%; margin-top: 24px; display: flex; justify-content: center;
+        a[target=_blank]::before {
+            content: ""; width: 24px; height: 24px; margin-right: 5px; margin-top: -1px; background: url(../../images/common/ic_24_link_blank.svg) center no-repeat; 
+            vertical-align: middle; display: inline-block;
+        }
+    }
+
+
 }

@@ -296,16 +296,17 @@
 }
 
 @media screen and (max-width: 767px) {
-    .tui-datepicker-input > div {
-        
-    }
     .tui-datepicker {
-        border: 1px solid #aaa;
-        background-color: white;
-        position: absolute;
-        right: 0;
-        top: 48px;
-        z-index: 100;
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0,0,0,0.8); 
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        position: fixed; 
+        left: 0;
+        top: 0;
+        z-index: 2000;
     }
 }
 

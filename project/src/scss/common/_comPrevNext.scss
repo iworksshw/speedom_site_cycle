@@ -10,8 +10,9 @@
             &::after {content:""; width: 16px; height: 16px; margin-left: 12px; background: url(../../images/common/ic_16_page_prev.svg) center no-repeat; display: inline-block; align-self: center;}
         }
         dd {
-            width: 100%; display: block;  @include line1();
-            a {color: var(--Gray-700); font-size: rem(16px); font-weight: 400; line-height: 1.6;}
+            width: calc(100% - 160px); display: flex; justify-content: space-between;
+            a {width: calc(100% - 110px); color: var(--Gray-700); font-size: rem(16px); font-weight: 400; line-height: 1.6; @include line1();}
+            .date {width: 110px; color: var(--Gray-600); font-size: rem(16px); font-weight: 300; font-style: normal; text-align: right; line-height: 1.6; display: block;}
         }
         &:last-child {
             dt {
@@ -26,7 +27,9 @@
                 width: 90px; min-width: 90px; height: 24px; font-size: rem(15px); font-weight: 500;
             }
             dd {
-                font-size: rem(15px);
+                width: calc(100% - 90px); font-size: rem(15px);
+                a {width: 100%; font-size: rem(15px);}
+                .date {display: none;}
             }
         }
     }
