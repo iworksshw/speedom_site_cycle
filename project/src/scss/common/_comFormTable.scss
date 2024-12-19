@@ -108,6 +108,43 @@
             }
         }
     }
+    .formList {
+        width: 100%; display: flex; flex-wrap: wrap; gap: 16px;
+        .item {
+            width: 100%;
+            .formInfo {
+                width: 100%; display: flex;
+                dt {
+                    width: 200px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; line-height: 1.4;
+                }
+                dd {
+                    width: calc(100% - 200px); color: var(--Gray-800); font-size: rem(16px); font-weight: 400; line-height: 1.4;
+                }
+            }
+        }
+        @include media('mobile') {
+            .item {
+                .formInfo {
+                    dt {width: 120px;}
+                    dd {width: calc(100% - 120px);}
+                }
+            }
+        }
+    }
+    .cmt {
+        width: 100%; margin-top: 28px; display: flex; align-items: center;
+        .text{
+            color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: 1.6;
+        }
+        a.btn[target=_blank]{
+            margin-left: 8px; padding-right: 32px; background: url(../../images/common/ic_link_blank.svg) right 12px center no-repeat;
+        }
+        @include media('mobile') {
+            margin-top: 24px; flex-wrap: wrap;
+            .text {width: 100%;}
+            a.btn[target=_blank]{margin-left: 0; margin-top: 12px;}
+        }
+    }
 
     //조건
     .frmGroup {

@@ -32,7 +32,7 @@
         margin-top: 60px; overflow: hidden;
     }
     .snapScroll .list {
-        display: flex; gap: 0 40px; overflow-x: scroll;
+        display: flex; gap: 0 40px; overflow-x: auto;
     }
     .snapScroll .list > li {
         flex: 1; align-content: center; min-height: 100px; padding: 20px; border-radius: 10px; background-color: var(--Gray-600);
@@ -42,13 +42,16 @@
             margin: 30px -16px 0;
         }
         .snapScroll .list {
-            gap: 0 20px; padding-left: 16px; scroll-snap-type: x mandatory; scroll-padding: 16px;
+            gap: 0 20px; padding: 0 16px; scroll-snap-type: x mandatory; scroll-padding: 16px;
         }
         .snapScroll .list > li {
             flex: none; width: 200px; align-items:start; justify-content:start; scroll-snap-align:start;
         }
         .snapScroll .list > li:last-child {
-            margin-right: 16px;
+            /* margin-right: 16px; */
+        }
+        .lytMain .snapScroll {
+            margin: 30px 0 0;
         }
     }
 </style>

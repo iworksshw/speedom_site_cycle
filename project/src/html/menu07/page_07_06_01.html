@@ -70,7 +70,7 @@
                                                     안녕하세요. 명예심판 신청 관련 안내드립니다.안녕하세요. 명예심판 신청 관련 안내드립니다.안녕하세요. 명예심판 신청 관련 안내드립니다.
                                                 </td>
                                             </tr>
-                                            <!-- 20241213 수정 -->
+                                            <!-- 20241217 수정 -->
                                             <tr>
                                                 <td colspan="2" class="innerTxt">
                                                     <ul class="formList">
@@ -79,14 +79,20 @@
                                                                 <dt>이름</dt>
                                                                 <dd>홍길동</dd>
                                                             </dl>
+                                                        </li>
+                                                        <li class="item">
                                                             <dl class="formInfo">
                                                                 <dt>아이디</dt>
                                                                 <dd>abcd12345</dd>
                                                             </dl>
+                                                        </li>
+                                                        <li class="item">
                                                             <dl class="formInfo">
                                                                 <dt>휴대폰번호</dt>
                                                                 <dd>010-2345-6789</dd>
                                                             </dl>
+                                                        </li>
+                                                        <li class="item">
                                                             <dl class="formInfo">
                                                                 <dt>이메일주소</dt>
                                                                 <dd>abcd1234@gmail.com</dd>
@@ -94,23 +100,22 @@
                                                         </li>
                                                     </ul>
                                                     <span class="cmt">
-                                                        * 휴대폰번호, 이메일주소는 내정보 수정에서 가능합니다.
-                                                        <a href="#" target="_blank" title="새 창">내정보 수정 바로가기</a>
+                                                        <span class="text">* 휴대폰번호, 이메일주소는 내정보 수정에서 가능합니다.</span>
+                                                        <a href="#" target="_blank" title="새 창" class="btn gLine xs">내정보 수정 바로가기</a>
                                                     </span>
                                                 </td>
                                             </tr>
-                                            <!-- //20241213 수정 -->
                                             <tr>
-                                                <th>성별</th>
+                                                <th>성별<span class="required">*</span></th>
                                                 <td>
-                                                    <div class="frmGroup">
-                                                        <div class="frmBox maxCont"><input id="rdo101" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">남</label></div>
-                                                        <div class="frmBox maxCont"><input id="rdo102" type="checkbox" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">여</label></div>
+                                                    <div class="frmGroup gap40">
+                                                        <div class="frmBox maxCont"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">남</label></div>
+                                                        <div class="frmBox maxCont"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">여</label></div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>나이</th>
+                                                <th>나이<span class="required">*</span></th>
                                                 <td>
                                                     <div class="frmGroup">
                                                         <div class="frmBox frmMd">
@@ -120,7 +125,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>이용지점</th>
+                                                <th>이용지점<span class="required">*</span></th>
                                                 <td>
                                                     <div class="frmBox frmMd">
                                                         <select class="iptSlt">
@@ -130,6 +135,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <!-- //20241217 수정 -->
                                         </tbody>
                                     </table>
                                 </div>
