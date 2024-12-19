@@ -136,13 +136,11 @@ function mainVisual() {
     const cptmainVisual = document.querySelector(".lytMainEng .mainVisual");
     if (cptmainVisual) {
         const mobile = window.matchMedia('(max-width: 767px)');
-        const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1280px)');
-        const desktop = window.matchMedia('(min-width: 1281px)');
+        const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1279px)');
+        const desktop = window.matchMedia('(min-width: 1280px)');
 
         let cycleVisualSwiper;
         let boatVisualSwiper;
-        let cycleCurrentIndex;
-        let boatCurrentIndex;
 
         function initializeSwiper(config) {
             // 기존 swiper 인스턴스가 있으면 제거
@@ -152,11 +150,11 @@ function mainVisual() {
 
             // 새로운 swiper 생성
             cycleVisualSwiper = new Swiper(".cycleVisualSwiper", {
-                loop: false,
                 effect: "fade",
-                // autoplay: {
-                //     delay: 3000
-                // },
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
@@ -167,11 +165,11 @@ function mainVisual() {
             });
             
             boatVisualSwiper = new Swiper(".boatVisualSwiper", {
-                loop: false,
                 effect: "fade",
-                // autoplay: {
-                //     delay: 3000
-                // },
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
@@ -192,18 +190,24 @@ function mainVisual() {
             }
         }
 
-        // 초기 상태 확인
-        handleScreenChange();
+        function swiperControll(){
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('btnPlay') || e.target.classList.contains('btnStop')) {
+                    const swiper = e.target.closest('.cycleVisualSwiper') ? cycleVisualSwiper : boatVisualSwiper;
+            
+                    if (e.target.classList.contains('btnPlay')) {
+                        swiper.autoplay.start();
+                    } else if (e.target.classList.contains('btnStop')) {
+                        swiper.autoplay.stop();
+                    }
+                }
+            });
+            
+        }
 
-        // 화면 크기 변경 감지
-        [mobile, tablet, desktop].forEach(mediaQuery => {
-            mediaQuery.addEventListener("change", handleScreenChange);
-        });
-
-        mainVisualBtnEvent();
         function mainVisualBtnEvent(){
-            let mainVisualBtns = cptmainVisual.querySelectorAll('.btnWrap button');
-            let target = cptmainVisual.querySelector('.innerWrap .visualWrap')
+            let target = cptmainVisual.querySelector('.innerWrap')
+            let mainVisualBtns = target.querySelectorAll(':scope .visualWrap > .btnWrap button');
             mainVisualBtns.forEach((btn)=>{
                 btn.addEventListener('click', (e)=>{
                     let title = e.target.closest('button').className;
@@ -211,5 +215,17 @@ function mainVisual() {
                 });
             });
         }
+
+        // 초기 상태 확인
+        handleScreenChange();
+        // 경륜 경정 변경 이벤트
+        mainVisualBtnEvent();
+        // 스와이퍼 stop, play
+        swiperControll();
+
+        // 화면 크기 변경 감지
+        [mobile, tablet, desktop].forEach(mediaQuery => {
+            mediaQuery.addEventListener("change", handleScreenChange);
+        });
     }
 }

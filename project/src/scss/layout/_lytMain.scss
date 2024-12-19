@@ -612,7 +612,7 @@
 }
 
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual {
-    overflow: hidden;
+    overflow-x: hidden;
     .innerWrap {
         position: relative;
         .visualWrap {
@@ -695,6 +695,7 @@
                                 display: flex;
                                 align-items: center;
                                 gap: 5px;
+                                width: auto;
                                 height: 24px;
                                 .swiper-pagination-bullet {
                                     width: 48px;
@@ -702,6 +703,7 @@
                                     display: flex;
                                     align-items: center;
                                     background: none;
+                                    margin: 0;
                                     > span {
                                         width: 100%;
                                         height: 4px;
@@ -737,6 +739,9 @@
                     }
                     &.boatVisual {
                         left: 100%;
+                        .swiper .swiper-wrapper .swiper-slide .inner h2 {
+                            color: #78CEFF;
+                        }
                     }
                 }
             }
@@ -787,17 +792,6 @@
                             transform: translateX(-50%) rotate(180deg);
                         }
                     }
-                }
-            }
-            &.active {
-                .inner {
-                    > div[class*=Visual] {
-                        transform: translateX(-100%);
-                    }
-                }
-                > .btnWrap {
-                    .btnCycling {transform: translateX(0);}
-                    .btnBoating {transform: translateX(100%);}
                 }
             }
         }
@@ -1083,21 +1077,32 @@
                 }
             }
         }
-    }
-    @media screen and (max-width: 1280px) {
-        // .mainContentWrap {
-        //     .rankingListWrap {
-        //         grid-area: 2 / 1 / 3 / 4 !important;
-        //     }
-        //     .quickLinkWrap {
-        //         grid-area: 3 / 1 / 3 / 4 !important;
-        //     }
-        // }
+        &.active {
+            .visualWrap {
+                .inner {
+                    > div[class*=Visual] {
+                        transform: translateX(-100%);
+                    }
+                }
+                > .btnWrap {
+                    .btnCycling {transform: translateX(0);}
+                    .btnBoating {transform: translateX(100%);}
+                }
+            }
+            .mainContentWrap {
+                .newsContentWrap h2 {color: #78CEFF;}
+                .rankingListWrap {
+                    h2,
+                    > ol > li > span {color: #78CEFF;}
+                }
+            }
+        }
     }
     @media screen and (max-width: 1279px) {
         .innerWrap {
             .visualWrap {
                 .inner {
+                    height: 716px;
                     > div[class*=Visual] {
                         h1 {
                             width: 100%;
@@ -1131,15 +1136,34 @@
                                 width: 100%;
                                 top: 240px;
                                 padding: 0 20px;
+                                .swiper-pagination {
+                                    .swiper-pagination-bullet {
+                                        width: 40px;
+                                    }
+                                }
+                                .btnWrap {
+                                    flex-shrink: 0;
+                                }
                             }
                         }
+                    }
+                }
+                .btnWrap {
+                    button {
+                        top: 274px;
+                        min-width: 42px;
+                        height: 46px;
+                        span {display: none;}
                     }
                 }
             }
             .mainContentWrap {
                 width: 100%;
                 display: block;
-                top: 336px;
+                // top: 336px;
+                top: 0;
+                margin-top: -380px;
+                position: relative;
                 .newsContentWrap {
                     margin-left: 20px;
                     margin-right: 20px;
@@ -1149,7 +1173,10 @@
                     padding-left: 20px;
                     > ul {
                         overflow-x: auto;
+                        scroll-snap-type: x mandatory;
+                        scroll-padding: 16px;
                         > li {
+                            scroll-snap-align: start;
                             flex-shrink: 0;
                             width: 138px;
                             &:last-child {
