@@ -46,8 +46,9 @@
             min-width: auto; padding: 16px 12px; gap: 16px 4%; 
         }
         .dayItem {
-            font-size: rem(14px); flex: 1 1 10.85%; display: flex; justify-content: center;
+            font-size: rem(14px); flex: 1 1 11.5%; display: flex; justify-content: center;
             & > span {height: 32px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; flex: 0 1 32px;}
+            @media screen and (max-width: 350px) {flex: 1 1 11%;}
         }
     }
 
