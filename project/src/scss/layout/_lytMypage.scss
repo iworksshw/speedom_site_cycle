@@ -484,11 +484,11 @@
     // for main
     // &.inMain {}
     @at-root {
-        .lytMain & {
+        .lytMainEng & {
             position: absolute;
         }
         @include minWidth('mobile'){
-            .lytMain & { 
+            .lytMainEng & { 
                 &:not(.on) {
                     background: transparent;
                     .headArea {
@@ -834,7 +834,7 @@
 
     // for main
     @at-root {
-        .lytMain & {
+        .lytMainEng & {
             background: transparent;
             .addressGroup {
                 .adressLine {
