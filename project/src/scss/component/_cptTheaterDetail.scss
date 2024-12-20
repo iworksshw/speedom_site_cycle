@@ -1,16 +1,20 @@
 .cptTheaterDetail {
-    position: relative; display: flex; min-height: 100vh; padding-right: 320px; background-color: var(--Bg-Line-bg-300);
+    position: relative; display: flex; min-height: 100vh; background-color: var(--Bg-Line-bg-300);
     .theaterDetail {
-        width: 100%; display: flex; flex-direction: column; background-color: #fff;
+        width: 100%; background: #fff; padding-bottom: 40px;
         .videoArea {
+            width: 100%; padding-top: 56.25%; position: relative;
+            .playerBox {
+                width: 100%; height: 100%; background: #000 url(../../images/contents/cont04_novideo.png) center no-repeat; position: absolute; left: 0; top: 0;
+            }
             img {
                 width: 100%; vertical-align: top;
             }
         }
         .infoArea {
-            padding: 40px 32px;
+            padding: 40px 32px 0;
             .infoHead {
-                display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--Bg-Line-line-100);
+                display: flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--Bg-Line-line-100);
                 .title {
                     width: 100%; margin-bottom: 16px; font-size: rem(24px);
                 }
@@ -28,6 +32,7 @@
                 }
             }
             .infoBody {
+                margin-top: 24px; padding-bottom: 20px; border-bottom: 1px solid #E1E4EA;
                 .btnGroup {
                     margin-bottom: 24px;
                     .btn {
@@ -42,142 +47,186 @@
                 margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--Bg-Line-line-100);
             }
         }
+        .bottomArea {
+            margin-top: auto;
+            .copy {
+                padding: 24px 32px; font-size: rem(14px); font-weight: 400; color: var(--Gray-600); //background-color: var(--Bg-Line-bg-200);
+            }
+        }
+    }
+    .theaterAticle {
+        width: 320px; flex-grow: 0; flex-shrink: 0;
         .funcArea {
-            position: absolute; top: 0; right: 0; /*bottom: 0;*/ width: 320px; padding: 26px 20px; background-color: var(--Bg-Line-bg-300); overflow-y: auto;
-
+            width: 100%; padding: 12px; background-color: var(--Bg-Line-bg-300); overflow-y: auto;
+    
             & + .infoArea {
                 padding-top: 0;
             }
         }
-        .bottomArea {
-            margin-top: auto;
-            .copy {
-                padding: 24px 32px; font-size: rem(14px); font-weight: 400; color: var(--Gray-600); background-color: var(--Bg-Line-bg-200);
+    }
+    [class*=Area] {
+        .sectWrap {
+            &:not(:first-child) {
+                margin-top: 16px;
+            }   
+            &:not(:last-child) {
+                padding-bottom: 16px; border-bottom: 1px solid #E1E4EA; 
+            }
+            & > .tit {
+                margin-bottom: 8px; font-size: rem(16px); font-weight: 700; color: var(--Gray-900);
             }
         }
-
-        [class*=Area] {
-            .sectWrap {
-                &:not(:first-child) {
-                    margin-top: 36px;
+        .btnGroup {
+            display: flex; gap: 8px;
+            .btn { 
+                padding: 0 7px; @include line1();
+                & > span {
+                    font-size: rem(14px);
                 }
-                & > .tit {
-                    margin-bottom: 12px; font-size: rem(20px); font-weight: 700; color: var(--Gray-800);
-                }
-            }
-            .btnGroup {
-                display: flex; gap: 0 8px;
-                .btn {
-                    padding: 0 7px; @include line1();
+                &.on {
+                    border-color: var(---Primary); background-color: #F0FAF7 !important;
                     & > span {
-                        font-size: rem(14px);
+                        color: var(---Primary);
                     }
+                }
+                &[class*=play] {
+                    & > span::before {
+                        content: ''; position: relative; top: -1px; display: inline-block; width: 20px; height: 20px; margin-right: 4px; background-color: rgba(255,0,0,0.4); vertical-align: middle;
+                    }
+                }
+                &.playAll > span::before {background: url(../../images/common/ic_20_playall.svg) no-repeat center center;}
+                &.playAll.on > span::before {background: url(../../images/common/ic_20_playall_on.svg) no-repeat center center;}
+                &.playAfter > span::before {background: url(../../images/common/ic_20_playafter.svg) no-repeat center center;}
+                &.playAfter.on > span::before {background: url(../../images/common/ic_20_playafter_on.svg) no-repeat center center;}
+                &.playSlow > span::before {background: url(../../images/common/ic_20_playslow.svg) no-repeat center center;}
+                &.playSlow.on > span::before {background: url(../../images/common/ic_20_playslow_on.svg) no-repeat center center;}
+            }
+            &:not(ul) {
+                .btn {
+                    flex: 1;
+                }
+            }
+        }
+        ul.btnGroup {
+            flex-wrap: wrap; gap: 4px;
+            & > li {
+                width: calc(25% - 3px);
+                .btn {
+                    width: 100%; height: 29px; padding: 0; color: var(--Gray-800); font-size: rem(13px); font-weight: 400; line-height: 26px; 
+                    border-radius: 6px; border: 1px solid var(--Gray-200); background: #FFF; @include line1();
                     &.on {
-                        border-color: var(---Primary); background-color: #F0FAF7 !important;
-                        & > span {
-                            color: var(---Primary);
+                        &.blue {
+                            font-weight: 600; border: 1px solid #548CE0; background: #548CE0 !important;
+                        }
+                        &.red {
+                            color: #fff !important; font-weight: 600; border: 1px solid #F45990; background: #F45990 !important;
+                        }
+                        &.mint {
+                            color: #fff !important; font-weight: 600; border: 1px solid #2EB273; background: #2EB273 !important;
+                        }
+                        span {
+                            color: #fff !important;
                         }
                     }
-                    &[class*=play] {
-                        & > span::before {
-                            content: ''; position: relative; top: -1px; display: inline-block; width: 20px; height: 20px; margin-right: 4px; background-color: rgba(255,0,0,0.4); vertical-align: middle;
-                        }
-                    }
-                    &.playAll > span::before {background: url(../../images/common/ic_20_playall.svg) no-repeat center center;}
-                    &.playAll.on > span::before {background: url(../../images/common/ic_20_playall_on.svg) no-repeat center center;}
-                    &.playAfter > span::before {background: url(../../images/common/ic_20_playafter.svg) no-repeat center center;}
-                    &.playAfter.on > span::before {background: url(../../images/common/ic_20_playafter_on.svg) no-repeat center center;}
-                    &.playSlow > span::before {background: url(../../images/common/ic_20_playslow.svg) no-repeat center center;}
-                    &.playSlow.on > span::before {background: url(../../images/common/ic_20_playslow_on.svg) no-repeat center center;}
                 }
-                &:not(ul) {
-                    .btn {
+            }
+        }
+        .listGallery {
+            .listGroup {
+                .listItem {
+                    &:not(:first-child) {
+                        margin-top: 16px;
+                    }
+                    .itemLink {
+                        width: 100%; display: flex; align-items: center; column-gap: 12px;
+                    }
+                    .imgBox {
+                        width: 37.8571%; padding-top: calc(37.8571% * 0.5625); border-radius: 12px; position: relative; overflow: hidden;
+                        .bg {
+                            width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-repeat: no-repeat; background-size: cover; background-position: top center;
+                        }
+                    }
+                    .infoBox {
                         flex: 1;
-                    }
-                }
-            }
-            ul.btnGroup {
-                flex-wrap: wrap; gap: 8px;
-                & > li {
-                    width: calc(33.3333% - 5px);
-                    &:nth-child(3n) {
-                        width: calc(33.3334% - 6px);
-                    }
-                    .btn {
-                        width: 100%;
-                    }
-                }
-            }
-            .listGallery {
-                .listGroup {
-                    .listItem {
-                        &:not(:first-child) {
-                            margin-top: 16px;
+                        .title {
+                            width: 100%; color: var(--Gray-800); font-size: rem(14px); font-weight: 400; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
                         }
-                        .itemLink {
-                            width: 100%; display: flex; align-items: center; column-gap: 12px;
+                        .context {
+                            display: none;
                         }
-                        .imgBox {
-                            width: 37.8571%; padding-top: calc(37.8571% * 0.5625); border-radius: 12px; position: relative; overflow: hidden;
-                            .bg {
-                                width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-repeat: no-repeat; background-size: cover; background-position: top center;
-                            }
+                        .date {
+                            width:100%; margin-top: 8px; color: var(--Gray-600); font-size: rem(15px); font-weight: 300; line-height: 1.6;
+                            & + .date {margin-top:0;}
                         }
-                        .infoBox {
-                            flex: 1;
-                            .title {
-                                width: 100%; color: var(--Gray-800); font-size: rem(14px); font-weight: 400; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-                            }
-                            .context {
-                                display: none;
-                            }
-                            .date {
-                                width:100%; margin-top: 8px; color: var(--Gray-600); font-size: rem(15px); font-weight: 300; line-height: 1.6;
-                                & + .date {margin-top:0;}
-                            }
-                            ul.info {
-                                display: flex; flex-wrap: wrap; column-gap: 5px; margin-top: 4px;
-                                > li {
-                                    width: auto; margin-top: 0; color: var(--Gray-600); font-size: rem(11px); font-weight: 300; line-height: 1.6;
-                                }
+                        ul.info {
+                            display: flex; flex-wrap: wrap; column-gap: 5px; margin-top: 4px;
+                            > li {
+                                width: auto; margin-top: 0; color: var(--Gray-600); font-size: rem(11px); font-weight: 300; line-height: 1.6;
                             }
                         }
                     }
                 }
             }
-            .raceInfo {
-                display: flex; flex-wrap: wrap; gap: 4px 40px;
+        }
+        .raceInfo {
+            display: flex; flex-wrap: wrap;;
+            .item {
+                display: flex; align-items: center; min-height: 29px;
+                .itemTit {
+                    position: relative; top: 1px; margin-right: 12px; font-size: rem(13px); color: var(--Gray-600); font-weight: 500;
+                }
+                .itemVal {
+                    & + .itemVal {margin-left: 8px;}
+                    .number {
+                        width: 16px; height: 16px; border: 1px solid var(--Gray-200); border-radius: 50%; text-align: center; font-size: rem(11px); font-weight: 700; color: #fff; line-height: 15px;background: #fff; display: inline-block; vertical-align: middle;
+                        &.num01 {color: var(--Gray-200);}
+                        &.num02 {background: var(--Gray-900); border-color: var(--Gray-900);}
+                        &.num03 {background: #ff2828; border-color: #ff2828;}
+                        &.num04 {background: #2a7ddf; border-color: #2a7ddf;}
+                        &.num05 {background: #ffb907; border-color: #ffb907;}
+                        &.num06 {background: #55b965; border-color: #55b965;}
+                        &.num07 {background: #ff66af; border-color: #ff66af;}
+                    }
+                    .txt {
+                        color: var(--Gray-800); font-size: rem(13px); font-weight: 500; position: relative; display: inline-block; vertical-align: middle;
+                    }
+                }
+            }
+            &.half {
+                gap: 0 8px;
                 .item {
-                    display: flex; align-items: center; min-height: 34px;
-                    .itemTit {
-                        position: relative; top: 1px; margin-right: 12px; font-size: rem(16px); color: var(--Gray-600); font-weight: 500;
-                    }
+                    width: calc(50% - 4px);
+                    .itemTit {width: 34px;}
+                }
+            }
+            &.full {
+                .item {
+                    width: 100%;
                     .itemVal {
-                        & + .itemVal {margin-left: 8px;}
-                        .number {
-                            width: 16px; height: 16px; border: 1px solid var(--Gray-200); border-radius: 50%; text-align: center; font-size: rem(11px); font-weight: 700; color: #fff; line-height: 15px;background: #fff; display: inline-block; vertical-align: middle;
-                            &.num01 {color: var(--Gray-200);}
-                            &.num02 {background: var(--Gray-900); border-color: var(--Gray-900);}
-                            &.num03 {background: #ff2828; border-color: #ff2828;}
-                            &.num04 {background: #2a7ddf; border-color: #2a7ddf;}
-                            &.num05 {background: #ffb907; border-color: #ffb907;}
-                            &.num06 {background: #55b965; border-color: #55b965;}
-                            &.num07 {background: #ff66af; border-color: #ff66af;}
-                        }
-                        .txt {
-                            position: relative; display: inline-block; vertical-align: middle;
-                        }
+                        & + .itemVal {margin-left: 16px;}
                     }
                 }
-                &.full {
-                    .item {
-                        width: 100%;
-                        .itemVal {
-                            & + .itemVal {margin-left: 16px;}
+            }
+        }
+    }
+    .modTab02 {
+        margin-top: 16px;
+        .tabMenuGroup {
+            .tabMenu {
+                .tabItem {
+                    flex-grow: 1;
+                    .tabName {
+                        width: max-content; height: 30px; padding: 0; font-size: rem(14px); border-radius: 0; line-height: 22px; color: var(--Gray-600); 
+                        border: 0; border-bottom: 2px solid var(--Gray-200); background: transparent; display: inline-block; flex-grow: 1;
+                        &.on {
+                            color: var(---Primary); border: 0; border-bottom: 4px solid var(---Primary); background: transparent;
                         }
                     }
                 }
             }
+        }
+        .tabContianer {
+            margin-top: 8px;
         }
     }
     .comCalendar {
@@ -215,11 +264,11 @@
     }
 
     @include media('mobile') {
-        padding-right: 0;
+        flex-wrap: wrap;
         .theaterDetail {
-            min-height: auto !important;
+            min-height: auto !important; padding-bottom: 28px;
             .infoArea {
-                padding: 28px 16px;
+                padding: 28px 16px 0;
                 .infoHead {
                     .title {
                         margin-bottom: 14px; font-size: rem(20px);
@@ -241,34 +290,89 @@
                     }
                 }
             }
+            .bottomArea {
+                .copy {
+                    padding: 24px 16px 0; font-size: rem(13px);
+                }
+            }
+        }
+        
+        .theaterAticle {
+            width: 100%;
             .funcArea {
-                position: static; width: 100%; height: auto;
+                padding: 28px 16px; position: static; width: 100%; height: auto;
                 & + .infoArea {
                     padding-top: 28px;
                 }
             }
-            .bottomArea {
-                .copy {
-                    padding: 20px 16px; font-size: rem(13px);
-                }
-            }
-            [class*=Area] {
-                .btnGroup {
-                    .btn {
-                        padding: 0 10px;
-                        > span {
-                            font-size: rem(13px);
+        }
+
+        .modTab02 {
+            width: 100%; margin-left: 0; margin-top: 24px;
+            .tabMenuGroup {
+                padding: 0;
+                .tabMenu {
+                    .tabItem {
+                        .tabName {
+                            height: 38px; font-size: rem(16px); border-radius: 0; line-height: 26px;
                         }
                     }
                 }
-                .raceInfo {
-                    .item {
-                        .itemTit {
+            }
+            .tabContianer {
+                padding: 0; margin-top: 16px;
+            }
+        }
+
+        [class*=Area] {
+            .sectWrap {
+                &:not(:first-child) {
+                    margin-top: 24px;
+                }   
+                &:not(:last-child) {
+                    padding-bottom: 24px;
+                }
+                & > .tit {
+                    margin-bottom: 12px; font-size: rem(18px); font-weight: 600; color: var(--Gray-800);
+                }
+            }
+            .btnGroup {
+                .btn {
+                    padding: 0 10px;
+                    > span {
+                        font-size: rem(13px);
+                    }
+                }
+            }
+            ul.btnGroup {
+                flex-wrap: wrap; gap: 5px;
+                & > li {
+                    width: calc(25% - 3.75px);
+                    .btn {
+                        height: 36px; font-size: rem(15px); line-height: 33px; 
+                    }
+                }
+            }
+            .raceInfo {
+                .item {
+                    .itemTit {
+                        font-size: rem(15px);
+                    }
+                    .itemVal {
+                        & + .itemVal {margin-left: 16px;}
+                        .txt {
                             font-size: rem(15px);
                         }
                     }
                 }
+                &.half {
+                    gap: 8px;
+                    .item {
+                        .itemTit {width: 42px;}
+                    }
+                }
             }
+            
         }
         .comCalendar {
             .weekDays {
@@ -282,23 +386,21 @@
     }
 
     @media screen and (max-width: 500px) {
-        .theaterDetail {
-            [class*=Area] {
-                .btnGroup {
-                    &:not(ul) {
-                        .btn {
-                            min-width: 92px;
-                            &:not(.playAfter) {
-                                flex: 0;
-                            }
+        [class*=Area] {
+            .btnGroup {
+                &:not(ul) {
+                    .btn {
+                        min-width: 92px;
+                        &:not(.playAfter) {
+                            flex: 0;
                         }
                     }
-                    &.div_3 {
-                        .playAfter {
-                            max-width: calc(100vw - 32px - 184px - 16px);
-                            > span {
-                                margin-right: -1px;
-                            }
+                }
+                &.div_3 {
+                    .playAfter {
+                        max-width: calc(100vw - 32px - 184px - 16px);
+                        > span {
+                            margin-right: -1px;
                         }
                     }
                 }
