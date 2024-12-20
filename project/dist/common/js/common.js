@@ -992,14 +992,15 @@ function inputTextReset(){
 // ------------------------------- 모의베팅 함수 ------------------------------- //
 // 주간 지수 슬라이드
 function recordSlide() {
-    if (document.querySelector(".rcrdSwiper")) {
-        let recordSwiper = new Swiper(".rcrdSwiper", {
-            navigation: {
-                nextEl: ".rcrdNavi .swiper-button-next",
-                prevEl: ".rcrdNavi .swiper-button-prev",
-            },
-        });
-    }
+        // 20241219 기능 정지
+//     if (document.querySelector(".rcrdSwiper")) {
+//         let recordSwiper = new Swiper(".rcrdSwiper", {
+//             navigation: {
+//                 nextEl: ".rcrdNavi .swiper-button-next",
+//                 prevEl: ".rcrdNavi .swiper-button-prev",
+//             },
+//         });
+//     }
 }
 
 // 랭킹 슬라이드
