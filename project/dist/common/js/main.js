@@ -151,6 +151,7 @@ function mainVisual() {
             // 새로운 swiper 생성
             cycleVisualSwiper = new Swiper(".cycleVisualSwiper", {
                 effect: "fade",
+                speed: 1000,
                 autoplay: {
                     delay: 1000,
                     disableOnInteraction: false,
@@ -162,10 +163,12 @@ function mainVisual() {
                         return '<span class="' + className + '"><span></span></span>';
                     },
                 },
+                ...config, // 전달된 설정 추가
             });
             
             boatVisualSwiper = new Swiper(".boatVisualSwiper", {
                 effect: "fade",
+                speed: 1000,
                 autoplay: {
                     delay: 1000,
                     disableOnInteraction: false,
@@ -186,6 +189,7 @@ function mainVisual() {
             } else if (tablet.matches) {
                 initializeSwiper({allowTouchMove: true});
             } else if (desktop.matches) {
+                console.log('1')
                 initializeSwiper({allowTouchMove: false});
             }
         }
