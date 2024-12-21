@@ -14,21 +14,20 @@
 
 	<title>KCYCLE 경륜</title>
 
-	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<!-- <link rel="stylesheet" href="../common/css/swiper.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
-	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
 	<script src="../../common/js/swiper.min.js"></script>
 	<script src="../../common/js/tui-date-picker.js"></script>
 	<script src="../../common/js/common.js"></script>
-	<!--
-    <script src="../common/js/basic.js"></script>
-    -->
+	<script src="../../common/js/main.js"></script>
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
+
 
 <!-- 레이아웃 -->
 <div class="lytLayout">
@@ -38,761 +37,632 @@
         <div class="layoutTop">
             <!-- Top -->
             
-            <div class="cptHeader "> <!--20241204 class 'inMain' : main에서만 사용되는 클래스-->
-                <div class="quickArea">
-                    <div class="quickBox">
-                        <ul class="guickMenuGroup">
-                            <li class="item"><a href="#" target="_blank" rel="noopener noreferrer">국민체육진흥공단</a></li>
-                            <li class="item"><a href="#" target="_blank" rel="noopener noreferrer">KBOAT</a></li>
-                            <li class="item"><a href="#" target="_blank" rel="noopener noreferrer">스피드온</a></li>
-                            <li class="item"><a href="#" target="_self">원격지원</a></li>
-                            <li class="item"><a href="#" target="_self">ENG</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+            <div class="cptHeaderEn">
                 <div class="headArea">
                     <div class="headBox">
                         <div class="logoBox">
                             <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="26" viewBox="0 0 160 26" fill="none" class="logo">
-                                    <g clip-path="url(#clip0_269_1320)">
-                                        <path d="M86.1643 3.03442C84.7223 3.03442 83.5183 3.58351 82.8045 4.17595L73.8715 12.1883L68.219 3.04165H61.6221L69.8773 16.4076L67.2962 26.0599H70.3604C72.1051 26.0599 73.4317 25.0196 73.6841 24.0803C74.506 21.0242 75.4505 17.5274 75.8903 15.8946L90.3027 3.04887H86.1643V3.03442Z" fill="#6F6F71"/>
-                                        <path d="M36.4888 0H30.8363C28.5292 0 26.6474 0.787506 25.5876 1.68338L11.9178 11.5597C13.0137 7.47769 14.088 3.46069 15.0108 0H11.0598C8.61572 0 6.82047 0.744157 6.3951 2.1241L0 26.0527H3.93655C6.43115 26.0527 8.24802 25.2869 8.63014 23.8564V23.8708C9.42321 20.9086 10.2884 17.6647 11.1608 14.3919L19.0627 24.2971C19.8342 25.258 20.6849 26.0599 23.4751 26.0599H29.5169L19.2069 13.2503L36.4888 0Z" fill="#6F6F71"/>
-                                        <path d="M120.62 21.4578H118.926C117.852 21.4578 117.116 21.3422 116.749 21.111C116.165 20.7569 115.999 20.1934 116.309 19.1675C116.309 19.1675 119.445 7.63666 120.685 3.02722H118.897C116.46 3.02722 114.672 3.76415 114.24 5.13687L110.382 19.3481C109.82 21.4505 110.043 22.9966 111.002 24.2176C111.954 25.4459 113.54 26.06 115.761 26.0527H128.277C130.094 26.0527 131.348 25.0124 131.601 24.0731L132.3 21.4505H120.62V21.4578Z" fill="#6F6F71"/>
-                                        <path d="M94.1095 9.73908C94.4844 8.35914 95.8759 7.62221 96.842 7.62221C99.9422 7.62221 107.801 7.62221 107.801 7.62221C109.625 7.62221 110.879 6.58906 111.125 5.64983L111.824 3.02722H96.9285C91.55 3.02722 89.1131 6.50959 88.4426 9.00215L85.6308 19.3409C84.5925 23.2206 86.4094 26.0672 91.0093 26.0455H103.461C105.285 26.0455 106.532 25.0051 106.784 24.0659L107.484 21.4433H94.0879C92.0403 21.4289 90.9804 21.0387 91.5428 19.1603C91.5428 19.1603 93.1506 13.2865 94.1023 9.73186L94.1095 9.73908Z" fill="#6F6F71"/>
-                                        <path d="M37.6643 9.00218L34.8524 19.3409C33.8142 23.2206 35.6311 26.0672 40.2309 26.0455H52.6895C54.5136 26.0455 55.7609 25.0052 56.0132 24.0659L56.7126 21.4433H43.3167C41.2692 21.4289 40.2093 21.0387 40.7717 19.1603C40.7717 19.1603 42.3795 13.2865 43.3312 9.73188C43.7061 8.35194 45.1048 7.61501 46.0637 7.61501C49.1639 7.61501 57.0226 7.61501 57.0226 7.61501C58.8467 7.61501 60.094 6.58186 60.3463 5.64263L61.0457 3.02002H46.1502C40.7717 3.02002 38.3348 6.50239 37.6643 8.99495V9.00218Z" fill="#6F6F71"/>
-                                        <path d="M145.097 3.02722C139.719 3.02722 137.282 6.50959 136.611 9.00215L133.8 19.3409C132.761 23.2206 134.585 26.0672 139.178 26.0455H151.629C153.454 26.0455 154.708 25.0051 154.953 24.0659L155.653 21.4433H142.257C140.209 21.4289 139.149 21.0387 139.712 19.1603C139.712 19.1603 139.971 18.1994 140.353 16.8339H153.266C155.083 16.8339 156.337 15.8007 156.59 14.8615L157.289 12.2389H141.608C141.846 11.3502 142.076 10.4977 142.278 9.73908C142.653 8.35914 144.052 7.62221 145.011 7.62221C148.111 7.62221 155.97 7.62221 155.97 7.62221C157.794 7.62221 159.041 6.58906 159.293 5.64983L159.993 3.02722H145.097Z" fill="#6F6F71"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_269_1320">
-                                            <rect width="160" height="26.0527" fill="white"/>
-                                        </clipPath>
-                                    </defs>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="239" height="23" viewBox="0 0 239 23" fill="none" class="logo">
+                                    <path d="M185.026 7.4668H182.054C180.846 7.4668 179.853 7.88132 179.298 8.34838L172.117 13.5269C172.69 11.3843 173.256 9.27665 173.74 7.4668H171.662C170.378 7.4668 169.438 7.85796 169.21 8.5819L165.847 21.1283H167.914C169.222 21.1283 170.179 20.7254 170.383 19.9781C170.798 18.431 171.253 16.7321 171.715 15.0156L175.866 20.2058C176.274 20.7079 176.718 21.1283 178.183 21.1283H181.359L175.941 14.4143L185.014 7.47264L185.026 7.4668Z" fill="#00458D"></path>
+                                    <path d="M236.893 11.2846C237.85 11.2846 238.504 10.7417 238.632 10.2513L239 8.98438H227.441C226.133 8.98438 225.175 9.38721 224.977 10.1345L224.638 11.2788H230.173H230.167L227.575 21.0578H228.503C229.799 21.0578 230.739 20.6667 230.961 19.9369C231.288 18.7225 232.771 13.0711 233.25 11.2788H236.887L236.893 11.2846Z" fill="#00458D"></path>
+                                    <path d="M207.508 8.80859H206.89C203.398 8.80859 199.954 11.0738 199.049 14.3783L198.675 15.7503C197.77 19.0489 199.983 21.3199 203.474 21.3199H204.087C207.578 21.3199 211.023 19.0489 211.928 15.7503L212.302 14.3783C213.207 11.0738 210.994 8.80859 207.503 8.80859H207.508ZM209.038 14.8628L208.904 15.3474C208.256 17.7294 206.312 19.0138 204.718 19.0138H204.116C202.528 19.0138 201.285 17.7236 201.939 15.3474L202.073 14.8628C202.721 12.4867 204.659 11.2023 206.253 11.2023H206.855C208.443 11.2023 209.686 12.4867 209.032 14.8628H209.038Z" fill="#00458D"></path>
+                                    <path d="M197.619 12.6276C198.016 10.736 196.755 9.01953 194.548 9.01953H188.762C187.484 9.01953 186.544 9.40485 186.316 10.1288L183.338 21.1572H191.909C194.192 21.1572 195.99 20.2873 196.585 18.0454C196.895 16.8661 196.375 15.6459 195.733 15.2081C196.778 14.7644 197.373 13.8419 197.63 12.6334L197.619 12.6276ZM193.853 17.6601C193.672 18.3315 192.96 18.8803 192.166 18.8803H186.882L187.589 16.2181H192.837C193.619 16.2181 194.057 16.907 193.853 17.6601ZM194.916 12.7677C194.735 13.4391 193.894 13.9353 193.228 13.9353H188.196L188.896 11.2964H193.859C194.828 11.2964 195.097 12.0904 194.916 12.7677Z" fill="#00458D"></path>
+                                    <path d="M221.918 18.6058L222.443 20.2055C222.636 20.7952 223.109 21.1454 223.984 21.1454H225.695L221.591 8.99023H220.061C219.185 8.99023 218.543 9.29382 218.099 9.9769L211.047 21.1454H212.606C213.26 21.1454 214.106 20.9528 214.544 20.2405L219.705 12.067L221.083 16.1596H220.137C218.905 16.1596 218.38 16.5624 217.924 17.3214L217.124 18.5941H221.918" fill="#00458D"></path>
+                                    <path d="M121.687 9.01953C120.922 9.01953 120.274 9.31145 119.9 9.62671L115.136 13.8886L112.124 9.01953H108.609L113.011 16.1305L111.633 21.2623H113.262C114.19 21.2623 114.902 20.7135 115.037 20.2114C115.475 18.5884 115.977 16.726 116.21 15.8561L123.893 9.01953H121.687Z" fill="#00458D"></path>
+                                    <path d="M95.2039 7.40231H92.1856C90.9537 7.40231 89.9554 7.82267 89.389 8.3014L82.1029 13.5558C82.6868 11.384 83.2589 9.24719 83.7493 7.40231H81.6417C80.3339 7.40231 79.3823 7.79931 79.1546 8.53493L75.7393 21.2623H77.841C79.1721 21.2623 80.1413 20.8536 80.3456 20.0946C80.766 18.5242 81.2272 16.796 81.6943 15.0562L85.9036 20.3223C86.3181 20.8361 86.7677 21.2564 88.2564 21.2564H91.4791L85.9854 14.4432L95.1923 7.39648L95.2039 7.40231Z" fill="#00458D"></path>
+                                    <path d="M140.059 18.8161H139.154C138.582 18.8161 138.191 18.7577 137.992 18.6351C137.677 18.4483 137.59 18.1447 137.759 17.6017C137.759 17.6017 139.429 11.4657 140.088 9.01367H139.137C137.841 9.01367 136.883 9.40484 136.656 10.1346L134.6 17.6951C134.303 18.8161 134.419 19.6393 134.927 20.2873C135.435 20.9412 136.282 21.2681 137.467 21.2623H144.14C145.109 21.2623 145.775 20.7135 145.915 20.2114L146.289 18.8161H140.059Z" fill="#00458D"></path>
+                                    <path d="M125.924 12.5867C126.123 11.851 126.87 11.4599 127.378 11.4599C129.03 11.4599 133.222 11.4599 133.222 11.4599C134.191 11.4599 134.863 10.9111 134.997 10.409L135.371 9.01367H127.431C124.564 9.01367 123.262 10.8644 122.906 12.1897L121.406 17.6951C120.851 19.7619 121.82 21.274 124.272 21.2623H130.91C131.879 21.2623 132.551 20.7135 132.679 20.2114L133.053 18.8161H125.913C124.821 18.8161 124.255 18.6 124.558 17.6017C124.558 17.6017 125.416 14.4783 125.919 12.5867H125.924Z" fill="#00458D"></path>
+                                    <path d="M95.8337 12.1955L94.3333 17.701C93.7787 19.7677 94.7478 21.2798 97.1999 21.2681H103.838C104.807 21.2681 105.478 20.7193 105.613 20.2173L105.986 18.8219H98.8462C97.7545 18.8219 97.1882 18.6059 97.4918 17.6076C97.4918 17.6076 98.35 14.4841 98.8579 12.5925C99.0623 11.8569 99.8037 11.4658 100.317 11.4658C101.97 11.4658 106.162 11.4658 106.162 11.4658C107.131 11.4658 107.802 10.9169 107.936 10.4149L108.31 9.01953H100.37C97.5035 9.01953 96.2015 10.8703 95.8454 12.1955H95.8337Z" fill="#00458D"></path>
+                                    <path d="M153.107 9.01367C150.24 9.01367 148.938 10.8644 148.582 12.1897L147.082 17.6951C146.527 19.7619 147.502 21.274 149.948 21.2623H156.586C157.556 21.2623 158.227 20.7135 158.361 20.2114L158.735 18.8161H151.595C150.503 18.8161 149.937 18.6 150.24 17.6017C150.24 17.6017 150.38 17.0879 150.579 16.364H157.462C158.431 16.364 159.103 15.8094 159.237 15.3131L159.611 13.9178H151.25C151.379 13.4449 151.501 12.9895 151.606 12.5925C151.811 11.8569 152.552 11.4657 153.066 11.4657C154.718 11.4657 158.91 11.4657 158.91 11.4657C159.879 11.4657 160.545 10.9169 160.685 10.4148L161.053 9.01952H153.113L153.107 9.01367Z" fill="#00458D"></path>
+                                    <path d="M44.8848 8.97266H38.7605C35.8998 8.97266 34.5978 10.8234 34.2417 12.1487L31.813 21.2038H32.7588C34.0665 21.2038 35.024 20.8068 35.2459 20.0653C35.7538 18.1795 36.758 14.4256 37.2659 12.5398C37.4644 11.81 38.2059 11.4131 38.7196 11.4131C40.3718 11.4131 43.2092 11.4131 43.2092 11.4131C43.9857 11.4131 44.9432 11.5356 44.517 12.9777C44.2718 13.8301 43.507 14.2621 42.2167 14.2621H40.2084C38.8831 14.2621 37.9139 14.6708 37.7096 15.4297L37.3651 16.7025H41.7321C44.4236 16.7025 46.7939 16.1362 47.6696 12.8843C48.4052 10.1345 47.1092 8.97266 44.8965 8.97266H44.8848Z" fill="#00458D"></path>
+                                    <path d="M56.6596 8.62695H56.0349C52.5027 8.62695 49.0115 10.9681 48.0949 14.3776L47.7154 15.7963C46.7988 19.2058 49.0407 21.547 52.5728 21.547H53.1975C57.3309 21.547 60.2267 19.2058 61.1375 15.7963L61.517 14.3776C62.4336 10.9681 60.1917 8.62695 56.6596 8.62695ZM58.2125 14.8797L58.0782 15.3818C57.4185 17.8338 55.4569 19.1708 53.8455 19.1708H53.2383C51.627 19.1708 50.3718 17.8397 51.0315 15.3818L51.1658 14.8797C51.8197 12.4218 53.7871 11.0965 55.3985 11.0965H56.0057C57.617 11.0965 58.8664 12.4277 58.2125 14.8797Z" fill="#00458D"></path>
+                                    <path d="M19.418 7.36715H16.4054C15.1794 7.36715 14.1752 7.78167 13.6148 8.2604L6.34032 13.5031C6.92414 11.3313 7.49629 9.20037 7.9867 7.36133H5.88494C4.58301 7.36133 3.62554 7.75832 3.40369 8.4881L0 21.1979H2.09593C3.4212 21.1979 4.39035 20.7892 4.59469 20.0303C5.01504 18.4656 5.47626 16.7434 5.94332 15.0036L10.1527 20.2638C10.5614 20.7776 11.0167 21.1979 12.5055 21.1979H15.7165L10.2344 14.3905L19.4296 7.36133L19.418 7.36715Z" fill="#00458D"></path>
+                                    <path d="M28.7008 13.7542H24.4506C23.3005 13.7542 22.7575 13.5265 23.0553 12.5398C23.2946 11.6874 24.0244 11.4189 25.3088 11.4189H30.6741C31.9994 11.4189 32.9627 11.0102 33.1671 10.2512L33.5115 8.97266H25.7934C23.102 8.97266 20.7141 9.59151 19.9026 12.6391C19.3363 14.7525 20.3697 16.2121 22.7633 16.2004H27.0077C28.1929 16.2004 28.6891 16.4573 28.3856 17.479C28.1462 18.3313 27.3755 18.7575 26.0853 18.7575H20.6557C19.3305 18.7575 18.3613 19.1662 18.1628 19.9252L17.8184 21.2038H25.6007C28.5082 21.2038 30.6975 20.5148 31.5382 17.3855C32.1979 14.916 30.7967 13.7542 28.695 13.7542H28.7008Z" fill="#00458D"></path>
+                                    <path d="M67.7 5.00195C67.4606 4.86183 67.3497 4.86183 67.1512 5.07201C66.3689 5.91855 64.9735 7.5124 64.2671 8.31224C65.2187 9.68422 65.931 11.8911 65.5223 14.7168C65.4639 14.9094 65.5865 15.0379 65.7558 14.8686C67.5365 13.0645 69.5273 11.0796 71.3138 9.73092C70.6016 7.56494 69.0369 5.76676 67.7 5.00195Z" fill="#F39800"></path>
+                                    <path d="M56.6418 4.54091C56.5426 4.59346 56.5426 4.73359 56.6418 4.73359C59.1756 4.6752 60.8629 5.25318 62.264 6.27487C63.8637 4.96711 66.5727 2.91788 67.8863 2.24065C68.4059 2.11805 69.3341 2.00712 69.9588 1.98377C69.41 2.56759 68.6394 3.42582 68.2015 3.91039C68.0906 4.033 68.2015 4.14392 68.33 4.09138C71.9205 2.67852 76.6961 1.59261 80.5902 1.31237C71.7103 -0.544186 63.1106 0.886193 56.6301 4.53509L56.6418 4.54091Z" fill="#00458D"></path>
+                                    <path d="M81.8935 1.62109C78.4314 2.03561 73.8017 3.55939 71.4431 4.78542C71.1161 4.95473 71.1745 5.07734 71.4255 5.18826C72.1962 5.53272 73.5623 6.37926 74.333 7.5761C79.4122 4.54606 83.7325 3.04562 85.2038 2.54937C84.112 2.19324 82.9561 1.87798 81.8935 1.62694V1.62109Z" fill="#009DE1"></path>
                                 </svg>
                             </a>
                         </div>
-                        <ul class="myMenuGroup">
-                            <li class="item ico01"><a href="#" class="myLink">통합검색</a></li>
-                            <li class="item ico02">
-                                <a href="#" class="myLink">희망길벗</a>
-                                <div class="myMenuArea">
-                                    <div class="myMenuBox">
-                                        <ul class="menuBox">
-                                            <li class="subItem"><a href="#">희망길벗 소개</a></li>
-                                            <li class="subItem"><a href="#">희망길벗 연혁</a></li>
-                                            <li class="subItem"><a href="#">도박중독의 이해</a></li>
-                                            <li class="subItem"><a href="#">자가진단</a></li>
-                                            <li class="subItem"><a href="#">프로그램 안내</a></li>
-                                            <li class="subItem"><a href="#">관련 사이트</a></li>
-                                            <li class="subItem"><a href="#">상담안내</a></li>
-                                            <li class="subItem"><a href="#">희망길벗 아카이브</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item ico03"><a href="#" class="myLink">로그인</a></li>
-                            <li class="item ico04"><a href="#" class="myLink">회원가입</a></li>
-                            <li class="item ico05">
-                                <a href="#" class="myLink">마이페이지</a>
-                                <div class="myMenuArea">
-                                    <div class="myMenuBox">
-                                        <div class="myInfo">
-                                            <b class="name">홍길동님</b>
-                                            <span class="timeTxt">로그아웃까지 남은 시간</span>
-                                            <div class="timeBox">
-                                                <span class="time">12:00</span>
-                                                <button class="btnOvertime">시간연장</button>
-                                            </div>
+                        <div class="gnbBox">
+                            <ul class="depth1Group">
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>Company</span></a>
+                                    <div class="depth2Area">
+                                        <div class="depth2Box">
+                                            <ul class="depth2Group">
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>Introduction</span></a>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>Gwangmyeong Speedom</span></a>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>Misa KBOAT Park</span></a>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>Location</span></a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <ul class="menuBox">
-                                            <li class="subItem"><a href="#">나의 모의베팅</a></li>
-                                            <li class="subItem"><a href="#">나의 활동지수</a></li>
-                                            <li class="subItem"><a href="#">나의 게시글</a></li>
-                                            <li class="subItem"><a href="#">내정보 수정</a></li>
-                                        </ul>
-                                        <button class="btnLogout">로그아웃</button>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>K-Cycling</span></a>
+                                    <div class="depth2Area">
+                                        <div class="depth2Box">
+                                            <ul class="depth2Group">
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KCYCLE Guide</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Get to Know KCYCLE</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Guide</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Basic Info.</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>The Progress of the Race</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Velodrome Guide</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Enjoy KCYCLE</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>How to View the Race Start Table</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Build KCYCLE Knowledge</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Bicycle Guide</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Introduction to KCYCLE Tactics</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Referee·Equipment</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KCYCLE Info.</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Schedule</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Start Table</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Confirmed Rrace Start Table</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Unconfirmed Race Start Table</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Results</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>General Race Results</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Target Race Results</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>KCYCLE Judgment</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Photo of the Order of Arrival</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Judgement Broadcast</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KCYCLE Player</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Player Search</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Compare Player Records</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Ranking Info.</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Ranking</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Multi-win 30</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Cumulative Win Ranking</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Current Winning Streak</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Most Consecutive Wins</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Prize Info.</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Prize Ranking</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KCYCLE Video</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Racing Video</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>KCYCLE Insight</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>K-Boating</span></a>
+                                    <div class="depth2Area">
+                                        <div class="depth2Box">
+                                            <ul class="depth2Group">
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KBOAT Guide</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Get to Know KBOAT</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>KBOAT Guide</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Enjoy KBOAT</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>How to View the Race Start Table</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Build KBOAT Knowledge</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Introduction to KBOAT Tactics</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KBOAT Info.</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Schedule</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Start Table</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Confirmed Rrace Start Table</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Unconfirmed Race Start Table</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Race Results</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>General Race Results</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>KBOAT Judgment</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Start/Finishing Photos</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Judgement Broadcast</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KBOAT Player</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Player Search</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Compare Player Records</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Ranking Info.</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Ranking</span></a></li>
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Multi-Win Ranking</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Prize Info.</span></a>
+                                                            <ul class="depth4Group">
+                                                                <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Prize Ranking</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth2Menu">
+                                                    <a href="#" class="depth2Name"><span>KBOAT Video</span></a>
+                                                    <ul class="depth3Group">
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>Racing Video</span></a>
+                                                        </li>
+                                                        <li class="depth3Menu">
+                                                            <a href="#" class="depth3Name"><span>KBOAT Insight</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>Notice</span></a>
+                                </li>
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>Contact Us</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="quickBox">
+                            <button type="button" class="quickSltBtn"><span class="linkName">KR</span></button>
+                            <ul class="guickMenuGroup">
+                                <li class="item"><a href="#" target="_blank"><span class="linkName">K-Cycling</span></a></li>
+                                <li class="item"><a href="#" target="_blank"><span class="linkName">K-Boating</span></a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="allMenuEn">전체메뉴</button>
                     </div>
                 </div>
-                <div class="gnbArea">
-                    <div class="gnbBox">
-                        <ul class="depth1Group">
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">경륜 가이드</a>
-
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu on">
-                                                <a href="#" class="depth2Name">경륜 알아보기</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu on"><a href="#" class="depth3Name">경륜안내</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜기초정보</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주진행과정</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">벨로드롬 가이드</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜 즐겨보기</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">출주표 보는법</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">배당률 보는법</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주권 환급</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주권 구매 가이드</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜 지식쌓기</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜 자전거 안내</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주규칙안내</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜전법소개</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜심판장비</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">제재심의위원회</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜용어사전</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜·경정 관련법 안내</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜예상지</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">우승선수 예측</a>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">경륜 정보</a>
-
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주일정</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">종합경주정보</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주출주표</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">확정출주표</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">미확정출주표</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주결과</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">일반 경주결과</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">대상 경주결과</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주배당률</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">최종배당률</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">확정배당률</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주현황</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주속보</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경주소식</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">출전소식상담</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">심판판정</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">착순판정사진</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">심판방송</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">심판제재선수</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">통계데이터</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">배당률 통계</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">매출액 통계</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">고배당 순위</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">무적중 순위</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">경륜 선수</a>
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">선수조회</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">선수전적비교</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">신인선수 정보</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">훈련원 졸업성적</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">신인선수 시범경주</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">선수현황</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">낙차부상</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">특별승강급</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">제재선수</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">훈련지 변경</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">순위정보</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">전체성적순위</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">다승 30</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">다승누적순위</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">현재연승순위</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">최다연승순위</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">확정배당률</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">상금정보</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">상금지급정보</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">전체상금순위</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">경륜 영상관</a>
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜 영상관</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경주동영상</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">이벤트 경륜</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜 인사이트</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">대상경륜방송</a>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">고객광장</a>
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">공지사항</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">행사안내</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">이벤트</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">알림</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">예상과 후기</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">문화교실</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">자주묻는질문</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">고객헌장</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">고객의 소리</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜경정 신고센터</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">분실경주권 신고</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">부정행위자 신고</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">불법사이트 신고</a></li>
-                                                    <li class="depth3Menu"><a href="#" target="_blank" class="depth3Name">부조리 신고센터</a></li>
-                                                    <li class="depth3Menu"><a href="#" target="_blank" class="depth3Name">예산낭비 신고센터</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">약관</a>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">총괄본부</a>
-                                <div class="depth2Area">
-                                    <div class="depth2Box">
-                                        <ul class="depth2Group">
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">보도자료</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">BI소개</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">지점안내</a>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">광명스피돔</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">광명스피돔 소개</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">시설안내</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">오시는 길</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="depth2Menu">
-                                                <a href="#" class="depth2Name">경륜훈련원</a>
-                                                <ul class="depth3Group">
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">경륜훈련원 안내</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">선수 로드맵</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">후보생 졸업현황</a></li>
-                                                    <li class="depth3Menu"><a href="#" class="depth3Name">오시는길</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="bnBox">
-                                            <div class="imgBox">
-                                                <img src="../../images/thum/thum_head.png" alt="더운 날씨에 자전거 타는건 힘들지만! 예쁜 꽃을 볼 수 있어서 완전 백호비키 잔앙!">
-                                            </div>
-                                            <div class="textBox">
-                                                <p>경륜·경정 왕중왕전 기념<br>초성 퀴즈 이벤트 당첨자 발표</p>
-                                            </div>
-                                            <div class="moreBox">
-                                                <a href="#">자세히보기</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="depth1Menu">
-                                <a href="#" class="depth1Name">순위예측</a>
-                            </li>
-                        </ul>
-                        <button class="allMenu">
-                            전체메뉴
-                        </button>
-                    </div>
-                </div>
-                <div class="allMenuArea">
+                <div class="allMenuAreaEn">
                     <div class="allTop">
                         <div class="pcView">
                             <div class="logo">
-                                <img src="../../../images/common/ic_allmenu_ci.svg" alt="KCYCLE">
+                                <img src="../../images/common/ic_allmenu_ci_en.svg" alt="KSPO KCYCLE KBOAT">
                             </div>
-                            <button class="btnClose">전체 메뉴 닫기</button>
+                            <button type="button" class="btnClose">전체 메뉴 닫기</button>
                         </div>
                         <div class="moView">
-                            <div class="profile">
-                                <div class="name"><b>홍길동</b>님</div>
-                                <a href="#" class="btnLogout">로그인</a>
-                                <a href="#" class="btnLogout">로그아웃</a>
-                            </div>
-                            <button class="btnClose">전체 메뉴 닫기</button>
+                            <ul class="quickLink">
+                                <li class="quickItem"><a href="#" target="_blank"><span class="linkName">K-Cycling KR</span></a></li>
+                                <li class="quickItem"><a href="#" target="_blank"><span class="linkName">K-Boating KR</span></a></li>
+                            </ul>
+                            <button type="button" class="btnClose">전체 메뉴 닫기</button>
                         </div>
                     </div>
                     <div class="allMenuGroup">
                         <div class="allMenuBox">
                             <ul class="depth1Group">
-                                <li class="depth1Menu on">
-                                    <a href="#" class="depth1Name">경륜가이드</a>
-
+                                <li class="depth1Menu">
+                                    <a href="#" class="depth1Name"><span>Company</span></a>
                                     <ul class="depth2Group">
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜 알아보기</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜안내</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜기초정보</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경주진행과정</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">벨로드롬 가이드</a></li>
-                                            </ul>
+                                            <a href="#" class="depth2Name"><span>Introduction</span></a>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜 즐겨보기</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경주권구매 가이드</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">출주표 보는법</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">배당률 보는법</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">벨경주권 환급</a></li>
-                                            </ul>
+                                            <a href="#" class="depth2Name"><span>Gwangmyeong Speedom</span></a>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜 지식쌓기</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜 자전거 안내</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경주규칙안내</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜전법소개</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜심판·장비</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">제재심의위원회</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜용어사전</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜·경정 관련법 안내</a></li>
-                                            </ul>
+                                            <a href="#" class="depth2Name"><span>Misa KBOAT Park</span></a>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜예상지</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">우승선수 예측</a>
+                                            <a href="#" class="depth2Name"><span>Location</span></a>
                                         </li>
                                     </ul>
-
                                 </li>
                                 <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">경륜 정보</a>
-
+                                    <a href="#" class="depth1Name"><span>K-Cycling</span></a>
                                     <ul class="depth2Group">
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주일정</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">종합경주정보</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주출주표</a>
+                                            <a href="#" class="depth2Name"><span>KCYCLE Guide</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">일반 경주결과</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">미확정출주표</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Get to Know KCYCLE</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Guide</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Basic Info.</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>The Progress of the Race</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Velodrome Guide</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Enjoy KCYCLE</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>How to View the Race Start Table</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Build KCYCLE Knowledge</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Bicycle Guide</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Introduction to KCYCLE Tactics</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>KCYCLE Referee·Equipment</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주결과</a>
+                                            <a href="#" class="depth2Name"><span>KCYCLE Info.</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">일반 경주결과</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">대상 경주결과</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Schedule</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Start Table</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Confirmed Rrace Start Table</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Unconfirmed Race Start Table</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Results</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>General Race Results</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Target Race Results</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>KCYCLE Judgment</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Photo of the Order of Arrival</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Judgement Broadcast</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주배당률</a>
+                                            <a href="#" class="depth2Name"><span>KCYCLE Player</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">최종배당률</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">확정배당률</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Player Search</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Compare Player Records</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Ranking Info.</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Ranking</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Multi-win 30</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Cumulative Win Ranking</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Current Winning Streak</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Most Consecutive Wins</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Prize Info.</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Prize Ranking</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주현황</a>
+                                            <a href="#" class="depth2Name"><span>KCYCLE Video</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경주속보</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경주소식</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">출전소식상담</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">심판판정</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">착순판정사진</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">심판방송</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">심판제재선수</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">통계데이터</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">배당률 통계</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">매출액 통계</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">고배당 순위</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">무적중 순위</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </li>
-                                <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">경륜 선수</a>
-                                    <ul class="depth2Group">
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">선수조회</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">선수전적비교</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">신인선수 정보</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">훈련원 졸업성적</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">신인선수 시범경주</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">선수현황</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">낙차부상</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">특별승강급</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">제재선수</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">훈련지 변경</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">순위정보</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">전체성적순위</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">다승 30</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">다승누적순위</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">현재연승순위</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">최다연승순위</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">확정배당률</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">상금정보</a>
-                                            <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">상금지급정보</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">전체상금순위</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Racing Video</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>KCYCLE Insight</span></a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">경륜 영상관</a>
+                                    <a href="#" class="depth1Name"><span>K-Boating</span></a>
                                     <ul class="depth2Group">
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜 영상관</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경주동영상</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">이벤트 경륜</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜 인사이트</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">대상경륜방송</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">희망길벗</a>
-                                    <ul class="depth2Group">
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">희망길벗 소개</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">희망길벗 연혁</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">도박중독의 이해</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">자가진단</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">프로그램 안내</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">상담안내</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">희망길벗 아카이브</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">고객광장</a>
-                                    <ul class="depth2Group">
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">공지사항</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">행사안내</a>
+                                            <a href="#" class="depth2Name"><span>KBOAT Guide</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">이벤트</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">알림</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Get to Know KBOAT</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>KBOAT Guide</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Enjoy KBOAT</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>How to View the Race Start Table</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Build KBOAT Knowledge</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Introduction to KBOAT Tactics</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">예상과 후기</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">문화교실</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">자주묻는질문</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">고객헌장</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">고객의 소리</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜경정 신고센터</a>
+                                            <a href="#" class="depth2Name"><span>KBOAT Info.</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">분실경주권 신고</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">부정행위자 신고</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">불법사이트 신고</a></li>
-                                                <li class="depth3Menu"><a href="#" target="_blank" class="depth3Name">부조리 신고센터</a></li>
-                                                <li class="depth3Menu"><a href="#" target="_blank" class="depth3Name">예산낭비 신고센터</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Schedule</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Start Table</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Confirmed Rrace Start Table</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Unconfirmed Race Start Table</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Race Results</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>General Race Results</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>KBOAT Judgment</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Start/Finishing Photos</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Judgement Broadcast</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">약관</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">총괄본부</a>
-                                    <ul class="depth2Group">
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">보도자료</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">BI소개</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">지점안내</a>
-                                        </li>
-                                        <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">광명스피돔</a>
+                                            <a href="#" class="depth2Name"><span>KBOAT Player</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">광명스피돔 소개</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">시설안내</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">오시는 길</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Player Search</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Compare Player Records</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Ranking Info.</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Ranking</span></a></li>
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Multi-Win Ranking</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Prize Info.</span></a>
+                                                    <ul class="depth4Group">
+                                                        <li class="depth4Menu"><a href="#" class="depth4Name"><span>Overall Prize Ranking</span></a></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="depth2Menu">
-                                            <a href="#" class="depth2Name">경륜훈련원</a>
+                                            <a href="#" class="depth2Name"><span>KBOAT Video</span></a>
                                             <ul class="depth3Group">
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">경륜훈련원 안내</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">선수 로드맵</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">후보생 졸업현황</a></li>
-                                                <li class="depth3Menu"><a href="#" class="depth3Name">오시는길</a></li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>Racing Video</span></a>
+                                                </li>
+                                                <li class="depth3Menu">
+                                                    <a href="#" class="depth3Name"><span>KBOAT Insight</span></a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="depth1Menu">
-                                    <a href="#" class="depth1Name">순위예측</a>
+                                    <a href="#notice" class="depth1Name"><span>Notice</span></a>
                                 </li>
-                            </ul>
-                            <ul class="quickLink">
-                                <li class="quickItem"><a href="#" target="_blank">국민체육진흥공단</a></li>
-                                <li class="quickItem"><a href="#" target="_blank">KBOAT</a></li>
-                                <li class="quickItem"><a href="#" target="_blank">스피드온</a></li>
-                                <li class="quickItem"><a href="#" target="_blank">ENG</a></li>
+                                <li class="depth1Menu">
+                                    <a href="#contactus" class="depth1Name"><span>Contact Us</span></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.querySelector(".cptHeaderEn").addEventListener('mouseleave', (e) => {
+                        document.querySelector(".cptHeaderEn").classList.remove("on");
+                    });
+                    document.querySelectorAll(".cptHeaderEn .gnbBox .depth1Name").forEach(function(gnb1depth){
+                        gnb1depth.addEventListener('mouseenter', (e) => {
+                            document.querySelector(".cptHeaderEn").classList.add("on");
+                        });
+                    });
 
-            <!-- 20241204 추가 -->
-            <!-- 퀵메뉴 -->
-            <div class="cptQuickMenu "> <!-- class 'inMain' : main에서만 사용되는 클래스-->
-                <div class="quickHead">
-                    <div class="headTit">나의 활동지수</div>
-                    <p class="point">146,000,000</p> <!-- 로그인 시 노출 -->
-                    <!--<a href="#" class="linkLogin">로그인</a>--> <!-- 로그아웃 시 노출 -->
-                </div>
-                <ul class="quickBtns">
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico01">경주출주표</a>
-                    </li>
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico02">경주동영상</a>
-                    </li>
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico03">경주결과</a>
-                    </li>
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico04">경주배당률</a>
-                    </li>
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico05">예상과후기</a>
-                    </li>
-                    <li class="quickItem">
-                        <a href="#" class="quickIco ico06">활동지수안내</a>
-                    </li>
-                </ul>
-                <button type="button" class="btnTop">TOP</button>
-            </div>
-            <!-- //20241204 추가 -->
+                    all1MenuEnAction();
+                });
 
+                function all1MenuEnAction(){
+                    const btnAllMenu = document.querySelector(".cptHeaderEn .allMenuEn");
+                    const btnCloseAllMenus = document.querySelectorAll(".allMenuAreaEn .btnClose");
+                    const all1Menus = document.querySelectorAll(".allMenuAreaEn .depth1Name");
+                    const all2Menus = document.querySelectorAll(".allMenuAreaEn .depth2Name");
+                    const parent1Menus = document.querySelectorAll(".allMenuAreaEn .depth1Menu");
+                    const parent2Menus = document.querySelectorAll(".allMenuAreaEn .depth2Menu");
 
+                    const tabMo = window.matchMedia('(max-width: 768px)');      //모바일 분기
+                    
+                    if(btnAllMenu){
+                        btnAllMenu.addEventListener('click', (e) => {
+                            document.querySelector('body').style.overflow = 'hidden';
+                            document.querySelector('.allMenuAreaEn').classList.add('on');
+                        });
+                    }
+                    btnCloseAllMenus.forEach(function(btn){
+                        btn.addEventListener('click', () => {
+                            document.querySelector('body').style.overflow = '';
+                            document.querySelector('.allMenuAreaEn').classList.remove('on');
+                        });
+                    });
+
+                    all1Menus.forEach(function(all1Menu){
+                        all1Menu.addEventListener("click", function(e){
+                            const target = e.currentTarget;
+                            const targetIdx = Array.from(parent1Menus).indexOf(target.parentNode);
+
+                            if( target.parentNode.querySelector('.depth2Group') != null ) {
+                                e.preventDefault();
+                                if(tabMo.matches) {
+                                    target.parentNode.classList.toggle("on");
+                                    if(target.parentNode.classList.contains("on")){
+                                        parent1Menus.forEach(function(menu, idx){
+                                            if(idx != targetIdx) {
+                                                menu.classList.remove("on");
+                                                console.log( menu.querySelectorAll("ul") );
+                                                if( menu.querySelector(".depth2Group") != null && menu.querySelector(".depth2Group").getAttribute("style") != null ) {
+                                                    slideUp(menu.querySelector(".depth2Group"), 200);
+                                                }
+                                            }
+                                        });
+                                        parent2Menus.forEach(function(menu){
+                                            menu.classList.remove("on");
+                                            
+                                            if( menu.querySelector(".depth3Group") != null && menu.querySelector(".depth3Group").getAttribute("style") != null ) {
+                                                menu.querySelector(".depth3Group").removeAttribute("style");
+                                            }
+                                        });
+                                        slideDown(target.nextElementSibling, 200);
+                                    } else {
+                                        slideUp(target.nextElementSibling, 200);
+                                    }
+                                }
+                            }
+                        });
+                    });
+                    all2Menus.forEach(function(all2Menu){
+                        all2Menu.addEventListener("click", function(e){
+                            const target = e.currentTarget;
+                            const targetIdx = Array.from(parent2Menus).indexOf(target.parentNode);
+
+                            if( target.parentNode.querySelector('.depth3Group') != null ) {
+                                e.preventDefault();
+                                if(tabMo.matches) {
+                                    target.parentNode.classList.toggle("on");
+
+                                    if(target.parentNode.classList.contains("on")){
+                                        parent2Menus.forEach(function(menu, idx){
+                                            if(idx != targetIdx) {
+                                                menu.classList.remove("on");
+                                                
+                                                if( menu.querySelector(".depth3Group") != null && menu.querySelector(".depth3Group").getAttribute("style") != null ) {
+                                                    slideUp(menu.querySelector(".depth3Group"), 200);
+                                                }
+                                            }
+                                        });
+                                        slideDown(target.nextElementSibling, 200);
+                                    } else {
+                                        slideUp(target.nextElementSibling, 200);
+                                    }
+                                }
+                            }
+                        });
+                    });
+                    
+                    //BreakPoint
+                    tabMo.addListener(function(){
+                        if(!tabMo.matches) {
+                            parent1Menus.forEach(function(menu){
+                                menu.classList.remove("on");
+                                if(menu.querySelector(".depth2Group")){
+                                    menu.querySelector(".depth2Group").removeAttribute("style");
+                                }
+                            });
+                            parent2Menus.forEach(function(menu){
+                                menu.classList.remove("on");
+                                if(menu.querySelector(".depth3Group")){
+                                    menu.querySelector(".depth3Group").removeAttribute("style");
+                                }
+                            });
+                        }
+                    });
+                }
+            </script>
         </div>
         <!-- //상단영역 -->
 
@@ -1098,114 +968,32 @@
             <!-- Footer -->
             
 
-<div class="cptFooter">
-    <div class="footArea">
-        <div class="siteArea">
-            <ul class="siteGroup">
-                <!-- 20241214 2depth 추가 -->
-                <li class="item">
-                    <button type="button" class="depth1Btn">신고센터 안내</button> <!--class 'on' : 버튼 열림--> <!--20241214 a > button 변경, class 추가--> 
-                    <ul class="depth2Group">
-                        <li class="depth2Item"><a href="#" class="depth2Link">분실경주권 신고</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link">부정행위자 신고</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link">불법행위자 신고</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link">불법사이트 신고</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">부조리 신고센터</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link">예산낭비 신고센터</a></li>
+    <div class="cptFooterEn">
+        <div class="addressGroup">
+            <div class="alignL">
+                <div class="adressBox">
+                    <div class="adressLine"><span>721, Gwangmyeong-ro, Gwangmyeong-si, Gyeonggi-do, Republic of Korea</span></div>
+                </div>
+            </div>
+            <div class="alignR">
+                <div class="siteBox">
+                    <button type="button" class="siteSltBtn">Family site</button>
+                    <ul class="siteGroup">
+                        <li class="item"><a href="http://www.kspo.or.kr" target="_blank">국민체육진흥공단</a></li>
+                        <li class="item"><a href="http://www.kboat.or.kr" target="_blank">KBOAT 경정</a></li>
+                        <li class="item"><a href="http://www.parktel.co.kr" target="_blank">서울올림픽파크텔</a></li>
+                        <li class="item"><a href="http://gs.ecolian.or.kr/intro/html/intro.asp" target="_blank">에콜리안골프장</a></li>
+                        <li class="item"><a href="http://www.sports.re.kr" target="_blank">한국스포츠정책과학원</a></li>
+                        <li class="item"><a href="http://www.ksponco.or.kr" target="_blank">한국체육산업개발(주)</a></li>
                     </ul>
-                </li>
-                <li class="item">
-                    <button type="button" class="depth1Btn">패밀리사이트</button>
-                    <ul class="depth2Group">
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">서울올림픽파크텔</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">에콜리안골프장</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">한국스포츠정책과학원</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">한국체육산업개발(주)</a></li>
-                    </ul>
-                </li>
-                <li class="item">
-                    <button type="button" class="depth1Btn">연관사이트</button>
-                    <ul class="depth2Group">
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">스포원</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">창원레포츠파크</a></li>
-                        <li class="depth2Item"><a href="#" class="depth2Link newW" target="_blank" title="새창열림">사행산업통합감독위원회 불법사행산업감시신고센터</a></li>
-                    </ul>
-                </li>
-                <!-- //20241214 2depth 추가 -->
-            </ul>
+                </div>
+            </div>
         </div>
-        <div class="addressArea">
-            <div class="logoGroup">
-                <div class="logoBox">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="123" height="20" viewBox="0 0 160 26" fill="none" class="logo">
-                        <g clip-path="url(#clip0_269_1320)">
-                            <path d="M86.1643 3.03442C84.7223 3.03442 83.5183 3.58351 82.8045 4.17595L73.8715 12.1883L68.219 3.04165H61.6221L69.8773 16.4076L67.2962 26.0599H70.3604C72.1051 26.0599 73.4317 25.0196 73.6841 24.0803C74.506 21.0242 75.4505 17.5274 75.8903 15.8946L90.3027 3.04887H86.1643V3.03442Z" fill="#00458D"/>
-                            <path d="M36.4888 0H30.8363C28.5292 0 26.6474 0.787506 25.5876 1.68338L11.9178 11.5597C13.0137 7.47769 14.088 3.46069 15.0108 0H11.0598C8.61572 0 6.82047 0.744157 6.3951 2.1241L0 26.0527H3.93655C6.43115 26.0527 8.24802 25.2869 8.63014 23.8564V23.8708C9.42321 20.9086 10.2884 17.6647 11.1608 14.3919L19.0627 24.2971C19.8342 25.258 20.6849 26.0599 23.4751 26.0599H29.5169L19.2069 13.2503L36.4888 0Z" fill="#00458D"/>
-                            <path d="M120.62 21.4578H118.926C117.852 21.4578 117.116 21.3422 116.749 21.111C116.165 20.7569 115.999 20.1934 116.309 19.1675C116.309 19.1675 119.445 7.63666 120.685 3.02722H118.897C116.46 3.02722 114.672 3.76415 114.24 5.13687L110.382 19.3481C109.82 21.4505 110.043 22.9966 111.002 24.2176C111.954 25.4459 113.54 26.06 115.761 26.0527H128.277C130.094 26.0527 131.348 25.0124 131.601 24.0731L132.3 21.4505H120.62V21.4578Z" fill="#00458D"/>
-                            <path d="M94.1095 9.73908C94.4844 8.35914 95.8759 7.62221 96.842 7.62221C99.9422 7.62221 107.801 7.62221 107.801 7.62221C109.625 7.62221 110.879 6.58906 111.125 5.64983L111.824 3.02722H96.9285C91.55 3.02722 89.1131 6.50959 88.4426 9.00215L85.6308 19.3409C84.5925 23.2206 86.4094 26.0672 91.0093 26.0455H103.461C105.285 26.0455 106.532 25.0051 106.784 24.0659L107.484 21.4433H94.0879C92.0403 21.4289 90.9804 21.0387 91.5428 19.1603C91.5428 19.1603 93.1506 13.2865 94.1023 9.73186L94.1095 9.73908Z" fill="#00458D"/>
-                            <path d="M37.6643 9.00218L34.8524 19.3409C33.8142 23.2206 35.6311 26.0672 40.2309 26.0455H52.6895C54.5136 26.0455 55.7609 25.0052 56.0132 24.0659L56.7126 21.4433H43.3167C41.2692 21.4289 40.2093 21.0387 40.7717 19.1603C40.7717 19.1603 42.3795 13.2865 43.3312 9.73188C43.7061 8.35194 45.1048 7.61501 46.0637 7.61501C49.1639 7.61501 57.0226 7.61501 57.0226 7.61501C58.8467 7.61501 60.094 6.58186 60.3463 5.64263L61.0457 3.02002H46.1502C40.7717 3.02002 38.3348 6.50239 37.6643 8.99495V9.00218Z" fill="#00458D"/>
-                            <path d="M145.097 3.02722C139.719 3.02722 137.282 6.50959 136.611 9.00215L133.8 19.3409C132.761 23.2206 134.585 26.0672 139.178 26.0455H151.629C153.454 26.0455 154.708 25.0051 154.953 24.0659L155.653 21.4433H142.257C140.209 21.4289 139.149 21.0387 139.712 19.1603C139.712 19.1603 139.971 18.1994 140.353 16.8339H153.266C155.083 16.8339 156.337 15.8007 156.59 14.8615L157.289 12.2389H141.608C141.846 11.3502 142.076 10.4977 142.278 9.73908C142.653 8.35914 144.052 7.62221 145.011 7.62221C148.111 7.62221 155.97 7.62221 155.97 7.62221C157.794 7.62221 159.041 6.58906 159.293 5.64983L159.993 3.02722H145.097Z" fill="#00458D"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_269_1320">
-                                <rect width="160" height="26.0527" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-            <div class="addressGroup">
-                <div class="alignL">
-                    <div class="adressBox">
-                        <div class="adressLine"><span>(14299) 경기도 광명시 광명로 721(광명동)</span><span><b>02-2067-5000</b> (유료)</span><span><b>080-008-5000</b> (무료)</span></div>
-                        <div class="adressLine"><span class="mr5"><b>경륜ARS 1577-1900</b></span><span>(유료, 수~목 09시~18시/ 금~일 10시~19시, 이외시간 ARS 자동연결)</span></div>
-                    </div>
-                </div>
-                <div class="alignR">
-                    <!--20241204 삭제-->
-                    <!-- <div class="other">
-                        <a href="#">고객센터</a>
-                        <a href="#">총괄본부</a>
-                    </div> -->
-                    <!--//20241204 삭제-->
-                    <ul class="sns">
-                        <li class="inst"><a href="#" target="_blank">instagram</a></li>
-                        <li class="utube"><a href="#" target="_blank">youtube</a></li>
-                        <li class="sx"><a href="#" target="_blank">x</a></li>
-                        <li class="fb"><a href="#" target="_blank">facebook</a></li>
-                        <li class="blog"><a href="#" target="_blank">blog</a></li>
-                    </ul>
-                    <!--20241204 추가-->
-                    <ul class="ciGroup">
-                        <li class="ci">
-                            <img src="../../images/common/ci_footer_spo1.png" alt="SPO1 스포원">
-                        </li>
-                        <li class="ci">
-                            <img src="../../images/common/ci_footer_reports.png" alt="창원레포츠파크">
-                        </li>
-                        <li class="ci">
-                            <img src="../../images/common/ci_footer_supervisory.png" alt="사행산업통합감독위원회 불법사행산업감시신고센터">
-                        </li>
-                    </ul>
-                    <!--//20241204 추가-->
-                </div>
-            </div>
-            <ul class="menuGroup">
-                <li class="item"><a href="#">개인정보처리방침</a></li>
-                <li class="item"><a href="#">이용약관</a></li>
-                <li class="item"><a href="#">자료무단복제금지</a></li>
-                <li class="item"><a href="#">경륜경정 승자투표약관</a></li>
-                <li class="item"><a href="#">그린카드(전자카드) 서비스 이용약관</a></li>
-                <li class="item"><a href="#">저작권 정책</a></li>
-                <li class="item"><a href="#">건전 베팅가이드</a></li>
-                <li class="item"><a href="#">오시는 길</a></li> <!--20241204 추가-->
-            </ul>
-            <div class="copyGroup">
-                <span class="copy">© 2024 KCYCLE. All rights reserved.</span>
-            </div>
+        
+        <div class="copyGroup">
+            <span class="copy">© K-Cycling K-Boating. ALL RIGHT RESERVED.</span>
         </div>
     </div>
-</div>
         </div>
         <!-- //하단영역 -->
 

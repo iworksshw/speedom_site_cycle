@@ -13,7 +13,7 @@
 	<title>KCYCLE 경륜</title>
 
 	<!-- <link rel="stylesheet" href="../common/css/swiper.css" /> -->
-    <link rel="stylesheet" href="../common/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
 	<link rel="stylesheet" href="../common/css/style.css" />
@@ -36,7 +36,9 @@
         <!-- 상단영역 -->
         <div class="layoutTop">
             <!-- Top Header -->
-            
+            <%- include('_ejs_eng/header.ejs', {
+                url: "../",
+            }) %>
         </div>
         <!-- //상단영역 -->
 
@@ -244,16 +246,19 @@
         <!-- 하단영역 -->
         <div class="layoutFooter">
             <!-- Footer -->
-            
+			<%- include('./_ejs_eng/footer.ejs', {
+				url: "../"
+			}) %>
         </div>
         <!-- //하단영역 -->
     </div>
 </div>
-</div>
 
 <script>
-    mainVisual();
+    document.addEventListener("DOMContentLoaded", function () {
+        mainVisual();
+    });
 </script>
 
-</body>
-</html>
+<!-- Bottom -->
+<%- include('./_ejs_eng/bottom.ejs', { }) %>
