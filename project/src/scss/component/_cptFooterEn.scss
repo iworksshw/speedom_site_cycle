@@ -1,0 +1,86 @@
+
+// 영문푸터
+.cptFooterEn {
+    padding: 24px 20px 32px; background: var(--Bg-Line-bg-100);
+    .addressGroup {
+        display: flex; justify-content: space-between; width: 100%; max-width: 1480px; margin: 0 auto;
+        .adressBox {
+            .adressLine {
+                font-size: rem(16px);
+            }
+        }
+    }
+    .copyGroup {
+        width: 100%; max-width: 1480px; margin: 0 auto;
+        .copy {
+            font-size: rem(14px); color: #82858B;
+        }
+    }
+    .siteBox {
+        position: relative; 
+        .siteGroup {
+            display: none; position: absolute; bottom: 100%; right: 0; min-height: 30px; padding: 10px 0; border: 1px solid #B1B1B1; background-color: #fff; 
+            overflow: hidden; z-index: 100;
+            .item {
+                > * {
+                    display: block; padding: 5px 10px; white-space: nowrap;
+                    &:hover {background: var(--Bg-Line-bg-200);}
+                }
+            }
+        }
+        .siteSltBtn {
+            position: relative; padding: 8px 40px 8px 0; color: var(--Gray-800); font-size: rem(14px); font-weight: 600; text-transform: uppercase; text-align: left; line-height: 1; border-bottom: 1px solid #9B9B9B;
+            &::after {
+                content:''; position: absolute; top: 50%; right: 0; width: 20px; height: 20px; margin-top: -10px; background: url(../../images/common/ic_20_down_arr.svg) center no-repeat;
+            }
+        }
+        &.on, &:hover, &:focus {
+            .siteGroup {
+                display: block;
+            }
+        }
+    }
+    
+    @include media('mobile'){
+        .addressGroup {
+            flex-direction: column-reverse;
+        }
+        .siteBox {
+            margin-bottom: 24px;
+            .siteGroup {
+                width: 100%;
+            }
+            .siteSltBtn {
+                width: 100%;
+            }
+        }
+        .copyGroup {
+            margin-top: 16px;
+        }
+    }
+
+    // for main
+    @at-root {
+        .lytMainEng & {
+            background: #060A0D;
+            .addressGroup {
+                .adressLine {
+                    color: #A5A6A8;
+                }
+            }
+            .copyGroup {
+                .copy {
+                    color: #82858B;
+                }
+            }
+            .siteBox {
+                .siteSltBtn {
+                    color: #e1e1e1; border-color: #E1E1E1;
+                    &::after {
+                        background: url(../../images/common/ic_20_down_arr_w.svg) center no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

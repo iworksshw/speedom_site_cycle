@@ -1,0 +1,32 @@
+<%
+var url = locals.url ? locals.url : '../../';
+var location = locals.location ? locals.location : [];
+var subTitle = locals.subTitle ? locals.subTitle : '';
+var subText = locals.subText ? locals.subText : '';
+var visualClass = locals.visualClass ? locals.visualClass : '';
+%>
+
+<div class="cptSubTop <%= visualClass %>">
+    <div class="subTopArea">
+        <ul class="location">
+            <li class="item"><a href="#">홈</a></li>
+            <li class="item"><a href="#"><%= location[0] %></a></li>
+            <% if(location[1] && location[1]!=""){ %>
+            <li class="item"><a href="#"><%= location[1] %></a></li>
+            <% } %>
+            <% if(location[2] && location[2]!=""){ %>
+            <li class="item"><a href="#"><%= location[2] %></a></li>
+            <% } %>
+        </ul>
+        <div class="subTitle"><h1><%= subTitle %></h1></div>
+        <div class="subText"><p><%- subText %></p></div>
+        <ul class="addFunc">
+            <li class="item print">
+                <button class="btnPrint">프린트</button>
+            </li>
+            <li class="item share">
+                <button class="btnShare">공유</button>
+            </li>
+        </ul>
+    </div>
+</div>
