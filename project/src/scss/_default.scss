@@ -193,7 +193,23 @@ body.noScrl {height:100vh; overflow:hidden;}
 }
 
 
+/* ------------------- body scroll bar 제거 (전체메뉴 클릭시) ------------------- */
+body {
+  &:has(.allMenuArea.on) {
+    height:100%; min-height:100%; overflow:hidden !important;
+  }
+  &:has(.cptHeader.on) {
+    .allMenuArea {transform: translateY(112px);}
+  }
+}
 
+/* ------------------- 인쇄제어 ------------------- */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
 
 
 /* z-index

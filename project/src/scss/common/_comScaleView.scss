@@ -1,0 +1,12 @@
+.comScaleView {
+    width: 100%; margin: 0 auto; padding-top: 65.573%; position: relative; overflow: hidden;
+    &:hover {
+        .scaleViewArea {
+            transform: scale(2);
+        }
+    }
+    .scaleViewArea {
+        width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: transform .3s ease-out; pointer-events: none;
+        img {width: 100%; height: 100%;}
+    }
+}
