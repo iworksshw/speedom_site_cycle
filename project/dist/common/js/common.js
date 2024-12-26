@@ -366,6 +366,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 경륜영상관 - 검색 박스 - 체크박스 이벤트
     inputCheckBoxAll();
+    
+    //이미지 확대기능
+    scaleView();
 });
 
 // 모의배팅 init
@@ -386,6 +389,27 @@ function battingInit() {
     tabMenuInit();
 }
 
+
+//이미지 확대기능
+function scaleView(){
+    const screen = document.querySelector(".comScaleView");
+    if(screen){
+        const scaleBox = screen.querySelector(".scaleViewArea");
+        let posX = 0;
+        let posY = 0;
+        screen.addEventListener("mousemove", function(e){
+            const scrW = e.target.offsetWidth;
+            const scrH = e.target.offsetHeight;
+            const posX = e.offsetX;
+            const posY = e.offsetY;
+            const perX = posX*100/scrW;
+            const perY = posY*100/scrH;;
+            //console.log([scrW,scrH,posX, posY]);
+            //console.log(e.target.style);
+            scaleBox.style.cssText = "transform-origin:" + perX + "% " + perY + "%;";
+        });
+    }
+}
 
 // ------------------------------- 전체 메뉴 ------------------------------- //
 function all1MenuAction(){
