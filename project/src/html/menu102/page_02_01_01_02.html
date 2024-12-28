@@ -1,6 +1,6 @@
 <!-- Header -->
 <%- include('../_ejs_eng/top.ejs', {
-    title: "KCYCLE 경륜",
+	title: "KCYCLE Racing",
     url: "../../"
 }) %>
 
@@ -26,32 +26,27 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs_eng/sub_top.ejs', {
-                    location: ['경륜'],
-                    subTitle: '경륜기초정보',
-                    subText: '경륜이 <b>처음이신가요?</b><br>지금부터 경륜에 대해 알아봐요.',
+                    location: ['K-Cycling','Cycle Racing Guide','Understanding Cycle Racing'],
+                    subTitle: 'Basic Information on Cycle Racing',
+                    subText: '<b>Are you new</b> to track cycling?<br>Let&rsquo;s learn about it together.',
                     url: "../../",
                 }) %>
 
                 <div class="layoutContArea">
                     
                     <div class="comSubInfo">
-                        <h2 class="infoTit">경륜만의 스릴과 매력을 즐기기 위해 다양한 경륜의 기초정보를 알아봅시다</h2>
-                        <p class="info">경륜은 자전거를 이용해 속도를 즐기는 스포츠로 결과를 예측 할 수 없어 더욱 짜릿합니다.<br>
-                            경륜의 기초정보를 이용하여 경륜을 더욱 재밌게 즐겨보세요.</p>
+                        <h2 class="infoTit">Let&rsquo;s explore the fundamental information about track cycling to enjoy its unique thrill and charm.</h2>
+                        <p class="info">Track cycling is a sport that uses bicycles to experience the excitement of speed. Its unpredictable outcomes make it even more exhilarating.<br> By learning basic information about track cycling, you can enjoy it even more.</p>
                     </div>
 
                     <div class="cptSection">
                         <div class="sectArea">
                             <div class="comTitH2 bk">
-                                <h2>공정한 경주를 위한 선수 입소·확정검사</h2>
+                                <h2>Entry and Confirmation Testing Process for Fair Racing</h2>
                             </div>
             
                             <div class="comBasicTxt">
-                                <p class="txt">
-                                    모든 선수는 공정한 경주를 위해 <em>목요일 경륜장에 입소</em>하여 일요일 모든 경주가 끝날 때까지 일반인과의 접촉이 차단되며, 선수를 대상으로 출주 전후에 금지약물에 대한 <em>도핑테스트를 실시</em>합니다. <br>
-                                    입소한 선수는 최상의 경주를  위하여 <em>전문의의 건강검진을 받고, 자전거 또한 규격품사용, 조립상태, 부품상태 등의 정밀검사 등 이른바 확정검사</em>를 받습니다. <br>
-                                    이와 같이 <em>선수 신체 및 자전거에 대한 검열에서 합격되면 선수는 최종 합격통보</em>를 받게 되며 팬들은 이러한 엄격하고 공정한 검열이 있기 때문에 안심하고 경륜을 즐길 수 있습니다.
-                                </p>
+                                <p class="txt">To ensure fair competition, all cyclists <em>enter the velodrome on Thursday</em> and remain isolated from public contact until all races conclude on Sunday. Riders are subject to <em>doping tests</em> for banned substances both before and after participation. <br> During their stay, cyclists <em>undergo health examinations conducted by professional medical staff to maintain peak performance. Their bicycles are also inspected for compliance with regulations, proper assembly, and component condition. This comprehensive process is known as confirmation testing</em>. <br> <em>Once they pass these stringent evaluations, cyclists receive final approval to participate</em>. Fans can enjoy cycling with confidence, knowing the sport adheres to strict and impartial standards.</p>
                             </div>
                         </div>
                     </div>
@@ -59,33 +54,30 @@
                     <div class="cptSection">
                         <div class="sectArea">
                             <div class="comTitH2 bk">
-                                <h2>경주편성체계</h2>
+                                <h2>Race Composition System</h2>
                             </div>
             
                             <div class="comBasicTxt">
-                                <p class="txt">
-                                    경주의 편성은 해당회차 출전선수 중 기량이 비슷한 동일 등급의 선수로 이루어지며, 경륜선수는 선수 개개인의 기량에 따라 <em>특선(S)급 4반, 우수(A)급 3반, 선발(B)급 3반</em>으로 세분화 되어 있습니다.
-                                </p>
+                                <p class="txt">Races are organised with cyclists of similar abilities within the same grade. Cycling athletes are categorised into detailed levels based on their skills: <em>Special Grade (S), which consists of four groups; Excellence Grade (A), which consists of three groups; and Entry Grade (B), which consists of three groups</em>.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="modTab">
-                        <div class="tabMenuGroup tabSwiper toTab">
+                        <div class="tabMenuGroup tabSwiper toAll">
                             <ul class="tabMenu swiper-wrapper">
-                                <li class="tabItem swiper-slide"><button class="tabName on" title="선택 된 탭메뉴">경륜선수</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">경주득점</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">승률·연대율·삼연대율</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">기어배수</button></li>
-                                <li class="tabItem swiper-slide"><button class="tabName" title="탭메뉴">승식의 종류</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName on" title="Selected Tab Menu">Track Cyclist</button></li> <!-- addClass - on : 메뉴 선택됨 --><li class="tabItem swiper-slide"><button class="tabName" title="Tab Menu">Race Score</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="Tab Menu">Winning Percentage·Top Two Percentage·Top Three Percentage</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="Tab Menu">Gear Ratio</button></li>
+                                <li class="tabItem swiper-slide"><button class="tabName" title="Tab Menu">Betting Types</button></li>
                             </ul>
                         </div>
                         <div class="tabDirection">
                             <div class="tabBtn alignL">
-                                <button class="prev">이전</button>
+                                <button class="prev">Previous</button>
                             </div>
                             <div class="tabBtn alignR">
-                                <button class="next">다음</button>
+                                <button class="next">Next</button>
                             </div>
                         </div>
                         <div class="tabContianer">
@@ -94,35 +86,33 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>선수 등급</h2>
+                                            <h2>Athlete Grades</h2>
                                         </div>
                         
                                         <div class="comBasicTxt">
-                                            <p class="txt">
-                                                선수의 등급은 상ㆍ하반기(6개월단위)마다 경주 성적에 따라 등급 심사를 통하여 조정됩니다. 수급반은 매회차 변경됩니다.(S1↔S2)
-                                            </p>
+                                            <p class="txt">Cyclists&rsquo; grades are reviewed and adjusted every six months (for each half-year) based on race results. Grade changes occur with every cycle (S1 ↔ S2).</p>
                                         </div>
                         
                                         <div class="comTitH3 mgH">
-                                            <h3>특별 승·강급</h3>
+                                            <h3>Special Promotion and Demotion</h3>
                                         </div>
                         
                                         <div class="comBasicList space">
                                             <ul class="listGroup">
-                                                <li class="item">특별 승급은 3회 연속 1,2위(결승경주 포함) 기록 시 상위 등급으로 승급됩니다.</li>
-                                                <li class="item">특별 강급은 2회 연속 6, 7위 기록 시 하위 등급으로 강급됩니다.</li>
+                                                <li class="item">Special promotion occurs when a cyclist finishes 1st or 2nd in three consecutive races (including the final race), leading to advancement to a higher grade.</li>
+                                                <li class="item">Special demotion occurs when a cyclist finishes 6th or 7th in two consecutive races, leading to a downgrade to a lower grade.</li>
                                             </ul>
                                         </div>
                                         
                                         <div class="comTitH3">
-                                            <h3>선수 등급 구분표</h3>
+                                            <h3>Cyclist Grade Classification Table</h3>
                                         </div>
 
                                         <div class="comContTable">
                                             <!-- PC 테이블 -->
                                             <div class="pcView">
                                                 <table class="basic">
-                                                    <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                                    <caption>Cyclist Grade Classification Table: A table including classifications for S-grade, A-grade, and B-grade with their respective standards for grading</caption>
                                                     <colgroup>
                                                         <col>
                                                         <col>
@@ -137,49 +127,23 @@
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
-                                                            <th colspan="4" class="lineR">
-                                                                <span class="tOrange">S급(특선급)</span>
-                                                            </th>
-                                                            <th colspan="3" class="lineR">
-                                                                <span class="tBlue">A급(우수급)</span> 
-                                                            </th>
-                                                            <th colspan="3" class="lineR">
-                                                                <span class="tMint">B급(선발급)</span>
-                                                            </th>
+                                                            <th colspan="4" class="lineR"><span class="tOrange">S-Grade (Special Grade)</span></th>
+                                                            <th colspan="3" class="lineR"><span class="tBlue">A-Grade (Excellence Grade)</span></th>
+                                                            <th colspan="3" class="lineR"><span class="tMint">B-Grade (Entry Grade)</span></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>
-                                                                <span class="mark orange">SS</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark orange">S1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark orange">S2</span>
-                                                            </td>
-                                                            <td class="lineR">
-                                                                <span class="mark orange">S3</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark blue">A1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark blue">A2</span>
-                                                            </td>
-                                                            <td class="lineR">
-                                                                <span class="mark blue">A3</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B2</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B3</span>
-                                                            </td>
+                                                            <td><span class="mark orange">SS</span></td>
+                                                            <td><span class="mark orange">S1</span></td>
+                                                            <td><span class="mark orange">S2</span></td>
+                                                            <td class="lineR"><span class="mark orange">S3</span></td>
+                                                            <td><span class="mark blue">A1</span></td>
+                                                            <td><span class="mark blue">A2</span></td>
+                                                            <td class="lineR"><span class="mark blue">A3</span></td>
+                                                            <td><span class="mark mint">B1</span></td>
+                                                            <td><span class="mark mint">B2</span></td>
+                                                            <td><span class="mark mint">B3</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -187,17 +151,15 @@
                                             <!-- Mobile 테이블 -->
                                             <div class="mView">
                                                 <table class="basic">
-                                                    <caption>선수등급 구분표 : S급, A급, B급 별 구분기준을 포함한 표</caption>
+                                                    <caption>Cyclist Grade Classification Table: A table including classifications for S-grade, A-grade, and B-grade with their respective standards for grading</caption>
                                                     <colgroup>
                                                         <col style="width: 133px;">
                                                         <col style="width:auto;">
                                                     </colgroup>
                                                     <tbody>
                                                         <tr>
-                                                            <th rowspan="4" class="lineR"><span class="tOrange">S급(특선급)</span></th>
-                                                            <td>
-                                                                <span class="mark orange">SS</span>
-                                                            </td>
+                                                            <th rowspan="4" class="lineR"><span class="tOrange">S-Grade (Special Grade)</span></th>
+                                                            <td><span class="mark orange">SS</span></td>
                                                         </tr>
                                                         <tr>
                                                             <td><span class="mark orange">S1</span></td>
@@ -209,7 +171,7 @@
                                                             <td><span class="mark orange">S3</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <th rowspan="3" class="lineR"><span class="tBlue">A급(우수급)</span></th>
+                                                            <th rowspan="3" class="lineR"><span class="tBlue">A-Grade (Excellence Grade)</span></th>
                                                             <td><span class="mark blue">A1</span></td>
                                                         </tr>
                                                         <tr>
@@ -219,7 +181,7 @@
                                                             <td><span class="mark blue">A3</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <th rowspan="3" class="lineR"><span class="tMint">B급(선발급)</span></th>
+                                                            <th rowspan="3" class="lineR"><span class="tMint">B-Grade (Entry Grade)</span></th>
                                                             <td><span class="mark mint">B1</span></td>
                                                         </tr>
                                                         <tr>
@@ -240,41 +202,29 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>선수 유니폼 안내</h2>
+                                            <h2>Cyclist Uniform Guide</h2>
                                         </div>
                         
                                         <div class="comBasicTxt">
-                                            <p class="txt">
-                                                경륜선수의 유니폼은 색상과 번호로 한눈에 알아볼 수 있도록 디자인되어 있습니다.<br>
-                                                경주에 출전하는 선수의 차번과 색상이 아래 그림과 같이 유니폼 상의와 헬멧에 고유번호 별로 표시되고 선수등급은 유니폼 하의에 표시되어 있어 쉽게 경주를 관전할 수 있습니다.
-                                            </p>
+                                            <p class="txt">Cycling uniforms are designed with specific colours and numbers for easy identification.<br> The race number and colour for participating cyclists are displayed on their jersey and helmet, while their grade is marked on their trousers. This system allows fans to follow the races with ease.</p>
                                         </div>
                         
                                         <div class="comTitH3 mgH">
-                                            <h3>유니폼 상의 · 헬멧 색상 별 번호</h3>
+                                            <h3>Uniform Colours and Numbers for Jerseys and Helmets</h3>
                                         </div>
                                         
                                         <div class="comImgBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_001.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑">
-                                                <img src="../../images/contents/cont01_01_01_02_002.png" alt="유니폼 색상 별 번호: 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_001_m.png" alt="유니폼 색상 별 번호: 1번 하양, 2번 검정, 3번 빨강, 4번 파랑, 5번 노랑, 6번 초록, 7번 분홍, 8번 주황, 선수유도원 검정-하양 모자이크">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_001.png" alt="Uniform Colours and Numbers: 1 White, 2 Black, 3 Red, 4 Blue, 5 Yellow"> <img src="../../images/contents/cont01_01_01_02_002.png" alt="Uniform Colours and Numbers: 6 Green, 7 Pink, 8 Orange, Lead Guide Black and white mosaic"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_001_m.png" alt="Uniform Colours and Numbers: 1 White, 2 Black, 3 Red, 4 Blue, 5 Yellow, 6 Green, 7 Pink, 8 Orange, Lead Guide Black and white mosaic"></div>
                                         </div>
                                         
                                         <div class="comTitH3">
-                                            <h3>등급별 유니폼 하의 선수 등급 표시</h3>
+                                            <h3>Cyclist Grades Indicated by Uniform Trousers</h3>
                                         </div>
 
                                         <div class="comImgBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_003.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_003_m.png" alt="유니폼 하의 선수 등급: 슈퍼특선 무지개 별 라인, 특선급 빨간색 배경 별라인, 우수급 민트색 배경 별라인, 선발급 하얀색 배경에 검은 별 라인">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_003.png" alt="Uniform Trousers Athlete Grades Super Special Grade Rainbow pattern with star stripes, Special Grade Red background with star stripes, Excellence Grade Mint background with star stripes, Entry Grade White background with black star stripes"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_003_m.png" alt="Uniform Trousers Athlete Grades Super Special Grade Rainbow pattern with star stripes, Special Grade Red background with star stripes, Excellence Grade Mint background with star stripes, Entry Grade White background with black star stripes"></div>
                                         </div>
 
                                         
@@ -288,18 +238,16 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>경주득점</h2>
+                                            <h2>Race Score</h2>
                                         </div>
                         
                                         <div class="comBasicList">
                                             <ul class="listGroup">
-                                                <li class="item">경주득점은 <em>경륜 선수의 기량과 경주 성적을 평가하는 중요한 지표</em>입니다.</li>
-                                                <li class="item">경륜선수는 <em>경주득점에 따라 상금이 수여</em>되고, 각 <em>개인의 등급에 따른 경주, </em>
-                                                    같은 등급이지만 순위와 <em>1일차, 2일차, 3일차 경주에 따라 상금액이 다릅니다. </em></li>
-                                                <li class="item">예를 들어, 1일차 경주에 1위하고 3일차 결승전에 입상한다면 상금은 더욱 커지게 됩니다. <br>
-                                                    그래서 <em>선수에게 중요한 것이 경주 득점이고, 이 경주득점에 의해서 S급에서 B급까지의 등급이 결정됩니다.</em></li>
-                                                <li class="item">하지만, 경주득점은 선수가 강한지 아닌지 판단할 수 있는 자료임에 틀림없으나 과신해서는 안됩니다. </li>
-                                                <li class="item">예를 들어 3•4착이 많은 선수는 자신의 능력보다 득점이 높게 나오고, 반대로 1착이나 7착처럼 순위의 기복이 심한 선수는 입상기회에 비해 득점이 낮기 때문에 주의해야 합니다.</li>
+                                                <li class="item">Race scores are <em>key indicators used to evaluate the performance and skill level of cyclists</em>.</li>
+                                                <li class="item">Cyclists are <em>awarded prize money based on their race scores</em>, which also determine <em>participation in races according to their grade</em>. While cyclists may compete within the same grade, <em>the prize amounts differ depending on rank as well as the day of the race (Day 1, Day 2, or Day 3). </em></li>
+                                                <li class="item">For instance, a cyclist who finishes first in a Day 1 race and then places in the finals on Day 3 will receive a significantly higher prize. <br> Consequently, <em>race scores are critically important for cyclists as they determine grades ranging from S to B.</em></li>
+                                                <li class="item">However, while race scores undeniably provide insight into a cyclist&apos;s strength, they should not be overestimated. </li>
+                                                <li class="item">For example, a cyclist who frequently finishes in third or fourth place may have inflated scores compared to their true ability. Conversely, a cyclist with inconsistent rankings&mdash;such as frequently finishing first or seventh&mdash;may have lower scores than their potential suggests. These factors must be considered carefully.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -308,29 +256,29 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>경주득점 산출방식</h2>
+                                            <h2>Calculation of Race Scores</h2>
                                         </div>
                         
                                         <div class="comTitH3 mgH">
-                                            <h3>일반경륜</h3>
+                                            <h3>General Track Cycling</h3>
                                         </div>
                         
                                         <div class="comBasicList space">
                                             <ul class="listGroup">
-                                                <li class="item">1, 2일차 경주는 매경주 출전선수에 대하여 해당 급반 별 고유점수의 평균점을 중간순위인 4위 경주득점으로 하고 3위 이상은 평균점에 매순위 1점씩 더하여 산출하며 5위 이하는 매순위 1점씩 감하여 순위점수 산출합니다.</li>
-                                                <li class="item">3일차 경주는 1, 2일차에 입상기록한 선수별 순위득점의 평균점에 의거하여 1, 2일차와 동일한 방식으로 순위점수를 산출합니다.</li>
+                                                <li class="item">For Day 1 and Day 2 races, each participant&rsquo;s grade-specific standard score is used to determine an average score. This average represents the base score for fourth place. Scores for rankings higher than fourth place are calculated by adding 1 point to the average score for each higher rank. Conversely, scores for rankings below fourth place are calculated by subtracting 1 point from the average score for each lower rank.</li>
+                                                <li class="item">For Day 3 races, scores are determined based on the average ranking points from the results of Day 1 and Day 2. The same calculation method as Day 1 and Day 2 is applied to determine ranking points on Day 3.</li>
                                             </ul>
                                         </div>
 
                                         <div class="comTitH3">
-                                            <h3>급반 고유점수</h3>
+                                            <h3>Grade-specific Standard Scores</h3>
                                         </div>
 
                                         <div class="comContTable">
                                             <!-- PC 테이블 -->
                                             <div class="pcView">
                                                 <table class="basic">
-                                                    <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                                    <caption>Grade-specific standard score table: A table including grade-specific standard scores, including S-grade, A-grade, and B-grade cyclists</caption>
                                                     <colgroup>
                                                         <col style="width:auto;">
                                                         <col style="width:7%;">
@@ -346,51 +294,25 @@
                                                     </colgroup>
                                                     <tbody>
                                                         <tr>
-                                                            <th rowspan="2" class="lineR">급반별</th>
-                                                            <th colspan="4" class="lineR">
-                                                                <span class="tOrange">S급(특선급)</span>
-                                                            </th>
-                                                            <th colspan="3" class="lineR">
-                                                                <span class="tBlue">A급(우수급)</span> 
-                                                            </th>
-                                                            <th colspan="3">
-                                                                <span class="tMint">B급(선발급)</span>
-                                                            </th>
+                                                            <th rowspan="2" class="lineR">By Grade</th>
+                                                            <th colspan="4" class="lineR"><span class="tOrange">S-Grade (Special Grade)</span></th>
+                                                            <th colspan="3" class="lineR"><span class="tBlue">A-Grade (Excellence Grade)</span></th>
+                                                            <th colspan="3"><span class="tMint">B-Grade (Entry Grade)</span></th>
                                                         </tr>
                                                         <tr>
-                                                            <td>
-                                                                <span class="mark orange">SS</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark orange">S1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark orange">S2</span>
-                                                            </td>
-                                                            <td class="lineR">
-                                                                <span class="mark orange">S3</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark blue">A1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark blue">A2</span>
-                                                            </td>
-                                                            <td class="lineR">
-                                                                <span class="mark blue">A3</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B1</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B2</span>
-                                                            </td>
-                                                            <td>
-                                                                <span class="mark mint">B3</span>
-                                                            </td>
+                                                            <td><span class="mark orange">SS</span></td>
+                                                            <td><span class="mark orange">S1</span></td>
+                                                            <td><span class="mark orange">S2</span></td>
+                                                            <td class="lineR"><span class="mark orange">S3</span></td>
+                                                            <td><span class="mark blue">A1</span></td>
+                                                            <td><span class="mark blue">A2</span></td>
+                                                            <td class="lineR"><span class="mark blue">A3</span></td>
+                                                            <td><span class="mark mint">B1</span></td>
+                                                            <td><span class="mark mint">B2</span></td>
+                                                            <td><span class="mark mint">B3</span></td>
                                                         </tr>
                                                         <tr>
-                                                            <th class="lineR">고유점수</th>
+                                                            <th class="lineR">Standard Scores</th>
                                                             <td>102</td>
                                                             <td>100</td>
                                                             <td>98</td>
@@ -408,7 +330,7 @@
                                             <!-- Mobile 테이블 -->
                                             <div class="mView">
                                                 <table class="basic">
-                                                    <caption>급반 고유점수 표 : S급, A급, B급 급반별 고유점수를 포함한 표</caption>
+                                                    <caption>Grade-specific standard score table: A table of grade-specific standard scores, including S-grade, A-grade, and B-grade cyclists</caption>
                                                     <colgroup>
                                                         <col>
                                                         <col>
@@ -416,17 +338,15 @@
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
-                                                            <th class="lineR">선수등급</th>
-                                                            <th>급반별</th>
-                                                            <th>고유점수</th>
+                                                            <th class="lineR">Athlete Grades</th>
+                                                            <th>By Grade</th>
+                                                            <th>Standard Scores</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <th rowspan="4" class="lineR"><span class="tOrange">S급(특선급)</span></th>
-                                                            <td>
-                                                                <span class="mark orange">SS</span>
-                                                            </td>
+                                                            <th rowspan="4" class="lineR"><span class="tOrange">S-Grade (Special Grade)</span></th>
+                                                            <td><span class="mark orange">SS</span></td>
                                                             <td>102</td>
                                                         </tr>
                                                         <tr>
@@ -442,7 +362,7 @@
                                                             <td>96</td>
                                                         </tr>
                                                         <tr>
-                                                            <th rowspan="3" class="lineR"><span class="tBlue">A급(우수급)</span></th>
+                                                            <th rowspan="3" class="lineR"><span class="tBlue">A-Grade (Excellence Grade)</span></th>
                                                             <td><span class="mark blue">A1</span></td>
                                                             <td>97</td>
                                                         </tr>
@@ -455,7 +375,7 @@
                                                             <td>90</td>
                                                         </tr>
                                                         <tr>
-                                                            <th rowspan="3" class="lineR"><span class="tMint">B급(선발급)</span></th>
+                                                            <th rowspan="3" class="lineR"><span class="tMint">B-Grade (Entry Grade)</span></th>
                                                             <td><span class="mark mint">B1</span></td>
                                                             <td>88</td>
                                                         </tr>
@@ -473,14 +393,12 @@
                                         </div>
 
                                         <div class="comTitH3">
-                                            <h3>평균득점</h3>
+                                            <h3>Average Scores</h3>
                                         </div>
 
 
                                         <div class="comBasicTxt space">
-                                            <p class="txt">
-                                                광명, 창원, 부산에 출주한 레이스별 경주득점을 평균으로 계산한 득점이며, 출주표의 광명 평균득점은 광명에 출전한 최근 3회의 경주득점을 평균한 득점을 말하며, 종합 평균득점은 광명, 창원, 부산에 출전한 최근 3회의 경주득점의 평균한 득점을 말합니다.
-                                            </p>
+                                            <p class="txt">The average score is determined by calculating the mean of race scores from track cycling events held in Gwangmyeong, Changwon, and Busan. The Gwangmyeong average score shown on the racecard refers to the average of the race scores from the cyclist&rsquo;s most recent three races in Gwangmyeong. Similarly, the overall average score represents the mean of the race scores from the cyclist&rsquo;s most recent three races in Gwangmyeong, Changwon, and Busan.</p>
                                         </div>
 
                                     </div>
@@ -492,22 +410,16 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>승률</h2>
+                                            <h2>Winning Percentage</h2>
                                         </div>
                         
                                         <div class="comBasicTxt">
-                                            <p class="txt">
-                                                선수가 <em>1착으로 들어온 횟수를 출주회수로 나누어 백분율</em>로 나타낸 것을 말합니다.
-                                            </p>
+                                            <p class="txt">The winning percentage is calculated by <em>dividing the number of first-place finishes by the total number of races entered, expressed as a percentage</em>.</p>
                                         </div>
 
                                         <div class="comFomulBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_004.png" alt="수식: (1착횟수/출추횟수) * 100%">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_004_m.png" alt="수식: (1착횟수/출추횟수) * 100%">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_004.png" alt="Formula: (Number of first-place finishes/Number of races entered) * 100%"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_004_m.png" alt="Formula: (Number of first-place finishes/Number of races entered) * 100%"></div>
                                         </div>
 
                                     </div>
@@ -516,24 +428,20 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>연대율</h2>
+                                            <h2>Top Two Percentage</h2>
                                         </div>
                         
                                         <div class="comBasicList">
                                             <ul class="listGroup">
-                                                <li class="item">선수가 <em>1착, 2착로 들어온 회수를 전체 출주회수로 나누어 백분율</em>로 나타낸 것으로 <em>입착률</em>이라고도 합니다.</li>
-                                                <li class="item">수치가 클수록 1, 2착위로 들어올 확률이 높으며 경주권을 구입할 경우에도 평균착순점보다 연대율을 중시합니다.</li>
-                                                <li class="item">쌍승식에서는 1위와 2위를 함께 맞추는 것이므로 해당 선수가 1, 2위로 들어온 회수를 수치로 나타낸 연대율이 경주권 구입의 중요한 참고가 됩니다.</li>
+                                                <li class="item">The top two percentage is calculated by <em>dividing the number of first- and second-place finishes by the total number of races entered, expressed as a percentage</em>. It is also referred to as the <em>placement rate</em>.</li>
+                                                <li class="item">A higher percentage indicates a greater likelihood of the participant finishing in first or second place. When purchasing race tickets, the top two percentage is often given more weight than the average finishing score.</li>
+                                                <li class="item">In Straight Forecast betting, where you need to select both the first and second place finishers, the first two percentage, which reflects a cyclist&apos;s past first and second-place finishes, serves as an important reference when purchasing your race tickets.</li>
                                             </ul>
                                         </div>
 
                                         <div class="comFomulBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_013.png" alt="수식: ((1착횟수 + 2착횟수)/출추횟수) * 100%">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_013_m.png" alt="수식: ((1착횟수 + 2착횟수)/출추횟수) * 100%">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_013.png" alt="Formula: ((Number of first-place finishes + Number of second-place finishes)/Number of races entered) * 100%"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_013_m.png" alt="Formula: ((Number of first-place finishes + Number of second-place finishes)/Number of races entered) * 100%"></div>
                                         </div>
 
                                     </div>
@@ -542,24 +450,20 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>삼연대율</h2>
+                                            <h2>Top Three Percentage</h2>
                                         </div>
                         
                                         <div class="comBasicList">
                                             <ul class="listGroup">
-                                                <li class="item">선수가 <em>1, 2, 3착으로 들어온 회수를 전체 출주회수로 나누어 백분율</em>로 나타낸 것입니다.</li>
-                                                <li class="item">수치가 클수록 1, 2, 3착위로 들어올 확률이 높으며 경주권을 구입할 경우에도 평균착순점보다 연대율을 중시합니다.</li>
-                                                <li class="item">삼복승식에서는 1착 2착 3착를 함께 맞추는 것이므로 해당 선수가 1, 2, 3위로 들어온 회수를 수치로 나타낸 삼연대율이 경주권 구입의 중요한 참고가 됩니다.</li>
+                                                <li class="item">The top three percentage is calculated by <em>dividing the number of first-, second-, and third-place finishes by the total number of races entered, expressed as a percentage</em>.</li>
+                                                <li class="item">A higher percentage indicates a greater likelihood of the participant finishing in first, second, or third place. When purchasing race tickets, the top three percentage is often given more weight than the average finishing score.</li>
+                                                <li class="item">In Combination Tricast betting, where you need to select the first, second, and third place finishers, the first three percentage, which reflects a cyclist&rsquo;s past first-, second-, and third-place finishes, serves as an important reference when purchasing your race tickets.</li>
                                             </ul>
                                         </div>
 
                                         <div class="comFomulBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_014.png" alt="수식: ((1착횟수 + 2착횟수 + 3착횟수)/출추횟수) * 100%">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_014_m.png" alt="수식: ((1착횟수 + 2착횟수 + 3착횟수)/출추횟수) * 100%">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_014.png" alt="Formula: ((Number of first-place finishes + Number of second-place finishes + Number of third-place finishes)/Number of races entered) * 100%"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_014_m.png" alt="Formula: ((Number of first-place finishes + Number of second-place finishes + Number of third-place finishes)/Number of races entered) * 100%"></div>
                                         </div>
 
                                     </div>
@@ -571,43 +475,33 @@
                                 <div class="cptSection">
                                     <div class="sectArea">
                                         <div class="comTitH2">
-                                            <h2>기어배수</h2>
+                                            <h2>Gear Ratio</h2>
                                         </div>
                         
                                         <div class="comBasicList">
                                             <ul class="listGroup">
-                                                <li class="item">기어 배수는 페달 안쪽에(기어크랭크)부착된 <em>큰 기어(대기어)의 톱니바퀴 수</em>를 뒷바퀴 허브에 고정된 <em>작은 기어(소기어)의 톱니바퀴로 나눈 수치</em>입니다.</li>
-                                                <li class="item">기어배수는 큰 기어(45~55)와 작은 기어(12~16)의 조합에 따라 <em>2.75 에서 3.93까지의 비율</em>이 나옵니다.</li>
-                                                <li class="item">경주에서 <em>3.85, 3.92, 3.93 기어배수가 가장 많이 사용</em>되고 있습니다.</li>
+                                                <li class="item">The gear ratio is calculated by <em>dividing the number of teeth on the larger gear (large gear)</em> attached to the inside of the pedal (gear crank) by <em>the number of teeth on the smaller gear (small gear)</em> fixed to the rear wheel hub.</li>
+                                                <li class="item">Depending on the combination of larger gears (45 to 55 teeth) and smaller gears (12 to 16 teeth), <em>the ratio can range from 2.75 to 3.93</em>.</li>
+                                                <li class="item"><em>The most commonly used ratios in races are 3.85, 3.92, and 3.93</em>.</li>
                                             </ul>
                                         </div>
 
                                         <div class="comFomulBox">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_015.png" alt="수식: 페달 안쪽 큰기어 톱니바퀴 수(대기어)/뒷바퀴 작은 기어 톱니바퀴 수(소기어)">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_015_m.png" alt="수식: 페달 안쪽 큰기어 톱니바퀴 수(대기어)/뒷바퀴 작은 기어 톱니바퀴 수(소기어)">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_015.png" alt="Formula: Number of teeth on the inside large pedal gear (large gear)/Number of teeth on the rear wheel small gear (small gear)"></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_015_m.png" alt="Formula: Number of teeth on the inside large pedal gear (large gear)/Number of teeth on the rear wheel small gear (small gear)"></div>
                                         </div>
                                          
                                         <div class="comTitH3">
-                                            <h3>대기어 소기어</h3>
+                                            <h3>Large Gear and Small Gear</h3>
                                         </div>
                         
                                         <div class="comBasicTxt space">
-                                            <p class="txt">
-                                                이것은 선수의 각력이나 컨디션, 날씨 등에 따라 선수가 직접 정하는 것으로 <em>경주 전에 신고한 기어배수는 변경할 수 없습니다.</em>
-                                            </p>
+                                            <p class="txt">Cyclists select their gear ratio based on their leg strength, physical condition, and race-day factors such as weather. <em>Once the selected ratio is registered before a race, it cannot be changed</em>.</p>
                                         </div>
 
                                         <div class="comImgBox narrow">
-                                            <div class="pcView">
-                                                <img src="../../images/contents/cont01_01_01_02_005.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
-                                            </div>
-                                            <div class="mView">
-                                                <img src="../../images/contents/cont01_01_01_02_005_m.png" alt="자전거의 대기어와 소기어 사진. 대기어는 자전거 페달이 달린 커다란 기어 / 소기어는 자전거 앞바퀴에 달린 작은 기어를 의미함">
-                                            </div>
+                                            <div class="pcView"><img src="../../images/contents/cont01_01_01_02_005.png" alt="Photos of the large gears and small gears of a bicycle. The large gear refers to the larger gear attached to the pedals, while the small gear refers to the smaller gear attached to the front wheel of the bicycle."></div>
+                                            <div class="mView"><img src="../../images/contents/cont01_01_01_02_005_m.png" alt="Photos of the large gears and small gears of a bicycle. The large gear refers to the larger gear attached to the pedals, while the small gear refers to the smaller gear attached to the front wheel of the bicycle."></div>
                                         </div>
 
                                     </div>
@@ -617,25 +511,13 @@
                                 <div class="cptEtcInfo">
                                     <div class="infoBox">
                                         <dl class="info">
-                                            <dt>
-                                                <em class="tit">기어배수를 높게 올릴수록 경주에서 좋은가요?</em>
-                                                <span class="subTit">기어배수로 보는 경주이야기</span>
-                                            </dt>
+                                            <dt><em class="tit">Is a higher gear ratio better for racing?</em> <span class="subTit">Gear Ratios in Cycling Races</span></dt>
                                             <dd>
                                                 <div class="infoList">
                                                     <ul class="listGroup">
-                                                        <li class="item">
-                                                            일렬로 달리는 선수들을 관찰해 보면 같은 스피드로 달릴 때 높은 기어인 선수의 다리회전이 낮은 기어의 선수보다 느린 것을 알 수 있습니다.<br>그것은 기어배수의 차에 의한 것으로 똑같이 한 번 페달을 밟아도 달리는 거리는 다르기 때문입니다.
-                                                        </li>
-                                                        <li class="item">
-                                                            기어배수는 수치가 높아질수록 페달을 밟은데 큰 힘이 필요하며 반대로 낮아질수록 힘은 적게 소모됩니다. <br>
-                                                            또한 근력이 일정하다고 가정했을 때 큰 기어배수를 사용하는 경우에는 일정한 속도를 얻기까지 시간은 많이 걸리지만, 일단 속도를 얻고나면 오래 유지할 수 있는 장점이 있습니다.<br>
-                                                            반대로 작은 기어배수를 사용할 경우에는 동일 주행속도를 얻기까지 시간은 적게 걸리지만, 상대적으로 그 속도를 오래 유지하기가 어려운 단점이 있습니다.
-                                                        </li>
-                                                        <li class="item">
-                                                            일반적인 관점에서 말한다면 기어배수를 올리는 선수는 자신의 힘이 떨어지는 것을 방지하기 위해서나 혹은 일발을 노리기 위해서 입니다. <br>
-                                                            따라서 작전변화가 예상되므로 기어배수는 그 선수의 전법과 함께 고려해야 하며, 단순히 높은 기어는 안된다든지, 표준기어가 강하다는지 하는 극단적인 판단은 피해야 합니다.
-                                                        </li>
+                                                        <li class="item">Observing riders travelling in a line reveals that those using a higher gear ratio tend to have slower pedalling cadences compared to riders on lower gear ratios, even when travelling at the same speed.<br>This difference is due to the variations in the distance covered per pedal stroke depending on the gear ratio.</li>
+                                                        <li class="item">Higher gear ratios require more effort per pedal stroke. In contrast, lower gear ratios demand less force. <br> Assuming constant physical strength, using a higher gear ratio may take more time to reach a certain speed but offers the advantage of maintaining that speed over a longer period.<br> Conversely, using a lower gear ratio enables quicker acceleration to the same speed, but it is more challenging to sustain that speed over time.</li>
+                                                        <li class="item">Generally, cyclists adopt higher gear ratios either to mitigate fatigue or to execute short, powerful surges for strategic purposes. <br> As such, gear ratios should be considered in conjunction with the cyclist&rsquo;s tactics, and extreme judgements such as &ldquo;higher ratios should be avoided&rdquo; or &ldquo;standard ratios guarantee success.&rdquo;</li>
                                                     </ul>
                                                 </div> 
                                             </dd>
@@ -649,14 +531,14 @@
                                 <!-- 탭 컨텐츠 5 -->
                                 <div class="cptSection">
                                     <div class="sectArea">
-                                        <div class="comTitH2">
-                                            <h2>승식</h2>
-                                        </div>
-                        
-                                        <div class="comBasicTxt">
-                                            <p class="txt">
-                                                승식은 경주결과를 예측하고 베팅하는 방식으로 1위 또는 1·2위, 1·2·3위를 함께 맞추는 7종류의 승식으로 구성되어 경륜 승식에 따라 다양하게 즐길 수 있습니다.
-                                            </p>
+                                        <div class="sectArea">
+                                            <div class="comTitH2">
+                                                <h2>Betting Types</h2>
+                                            </div>
+                            
+                                            <div class="comBasicTxt">
+                                                <p class="txt">Betting types in cycling races involve predicting race outcomes and placing bets accordingly. These include seven distinct types of bets, such as predicting first place, first and second places, or first, second, and third places combined.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -667,120 +549,92 @@
                                     <div class="listArea">
                                         <ul class="thumList">
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_006.png" alt="경주 중 1위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_006.png" alt="Select the 1st place finisher in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">단승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/7</span></div>
+                                                    <dt><em class="tit">Win</em><div class="ballon">Accuracy rate: <span class="detail">1/7</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1, 2위 선수 2명을 순위에 상관없이 맞추는 방식입니다.</li>
-                                                            <li class="item">가장 기본적인 승식이며, 비교적 적은 금액으로 배당금을 기대할 수 있습니다.</li>
+                                                            <li class="item">This involves predicting the 1st and 2nd place finishers in any order.</li>
+                                                            <li class="item">It is the most basic type of bet, suitable for beginners, with modest stakes offering potential payouts.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_007.png" alt="경주 중 1, 2위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_007.png" alt="Select the 1st and 2nd place finishers in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">연승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">2/7</span></div>
+                                                    <dt><em class="tit">Place</em><div class="ballon">Accuracy rate: <span class="detail">2/7</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1위 혹은 2위 선수 중 1명을 맞추는 방식입니다.</li>
-                                                            <li class="item">8인 이상의 경우는 3위 이내,&nbsp;출주 선수 4인 이하로 열리는 경기에서는 진행하지 않습니다.</li>
+                                                            <li class="item">This involves predicting either the first or second place finisher.</li>
+                                                            <li class="item">For races with eight or more participants, predicting a position within the top three qualifies. This betting type is not available in races with four or fewer participants.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_008.png" alt="경주 중 1, 2위 순서 무관 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_008.png" alt="Select the 1st and 2nd place finishers in any order"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">복승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/21</span></div>
+                                                    <dt><em class="tit">Reverse Forecast</em><div class="ballon">Accuracy rate: <span class="detail">1/21</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1, 2위 선수 2명을 순위에 상관없이 맞추는 방식입니다.</li>
-                                                            <li class="item">연승보다 어렵지만 더 높은 배당금을 기대할 수 있습니다.</li>
+                                                            <li class="item">This involves predicting the 1st and 2nd place finishers in any order.</li>
+                                                            <li class="item">It is more difficult than the Place betting, but it offers the potential for higher payouts.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_009.png" alt="경주 중 1, 2위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_009.png" alt="Select the 1st and 2nd place finishers in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">쌍승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/42</span></div>
+                                                    <dt><em class="tit">Straight Forecast</em><div class="ballon">Accuracy rate: <span class="detail">1/42</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1, 2위 선수 2명을 순위에 맞게 맞추는 방식입니다.</li>
-                                                            <li class="item">복승식보다 어렵지만, 더 높은 배당금을 기대할 수 있습니다.</li>
+                                                            <li class="item">This involves predicting the 1st and 2nd place finishers in the correct order.</li>
+                                                            <li class="item">It is more difficult than the Reverse Forecast betting, but it offers the potential for higher payouts.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_010.png" alt="경주 중 1, 2, 3위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_010.png" alt="Select the 1st, 2nd, and 3rd place finishers in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">삼복승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/35</span></div>
+                                                    <dt><em class="tit">Combination Tricast</em><div class="ballon">Accuracy rate: <span class="detail">1/35</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1, 2, 3위의 선수 3명을 순위에 상관없이 맞추는 방식입니다.</li>
-                                                            <li class="item">쌍승식에 비해 간단한 승식입니다.</li>
+                                                            <li class="item">This involves predicting the 1st, 2nd, and 3rd place finishers in any order.</li>
+                                                            <li class="item">It is a simpler betting type than the Straight Forecast.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_011.png" alt="경주 중 1, 2, 3위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_011.png" alt="Select the 1st, 2nd, and 3rd place finishers in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">쌍복승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/105</span></div>
+                                                    <dt><em class="tit">Banker Tricast</em><div class="ballon">Accuracy rate: <span class="detail">1/105</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1위 선수를 순위에 맞게, 2, 3위 선수 2명은 순위에 상관없이 맞추는 방식입니다.</li>
-                                                            <li class="item">쌍승식보다 어렵지만 높은 배당금을 기대할 수 있습니다.</li>
+                                                            <li class="item">This involves predicting the 1st place finisher, and the 2nd and 3rd place finishers in any order.</li>
+                                                            <li class="item">It is more difficult than the Straight Forecast, but it offers the potential for higher payouts.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
                                             </li>
                                             <li class="thumItem">
-                                                <div class="thumArea">
-                                                    <img src="../../images/contents/cont01_01_01_02_012.png" alt="경주 중 1, 2, 3위 체크">
-                                                </div>
+                                                <div class="thumArea"><img src="../../images/contents/cont01_01_01_02_012.png" alt="Select the 1st, 2nd, and 3rd place finishers in the race"></div>
                                                 <dl class="descArea">
-                                                    <dt>
-                                                        <em class="tit">삼쌍승식</em>
-                                                        <div class="ballon">적중확률 : <span class="detail">1/210</span></div>
+                                                    <dt><em class="tit">Tricast</em><div class="ballon">Accuracy rate: <span class="detail">1/210</span></div>
                                                     </dt>
                                                     <dd>
                                                         <ul class="listGroup">
-                                                            <li class="item">1, 2, 3위 선수 3명을 순위에 맞게 맞추는 방식입니다.</li>
-                                                            <li class="item">가장 어려운 승식이지만, 가장 높은 배당금을 기대할 수 있습니다.</li>
+                                                            <li class="item">This involves predicting the 1st, 2nd, and 3rd place finishers in the correct order.</li>
+                                                            <li class="item">It is the most difficult betting type, but it offers the highest potential payout.</li>
                                                         </ul>
                                                     </dd>
                                                 </dl>
@@ -793,24 +647,13 @@
                                 <div class="cptEtcInfo">
                                     <div class="infoBox">
                                         <dl class="info">
-                                            <dt>
-                                                <em class="tit">경주를 올바르고 재밌게 즐겨보세요!</em>
-                                                <span class="subTit">건강하고 즐거운 경룬문화를 위한 TIP</span>
-                                            </dt>
+                                            <dt><em class="tit">Enjoy the race properly and have fun!</em> <span class="subTit">Tips for a healthy and enjoyable track cycling culture</span></dt>
                                             <dd>
                                                 <div class="infoList">
                                                     <ul class="listGroup">
-                                                        <li class="item">
-                                                            경륜은 스릴 넘치는 사이클 경주를 즐기면서 베팅으로 배당금까지 받는 "일석이조"의 재미있는 경기입니다.
-                                                        </li>
-                                                        <li class="item">
-                                                            자신 있게 선택한 레이스에만 베팅하고, 처음부터 무리하지 않고 조금씩 베팅 금액을 늘려나가는 것이 좋습니다.<br>
-                                                            (한 경주 당 3~5장 정도의 경주권을 구입하여 적당한 수준으로 베팅하는 것이 중요해요!)
-                                                        </li>
-                                                        <li class="item">
-                                                            베팅은 손실을 감수할 수 있는 범위 내에서 진행하세요.<br>
-                                                            <em>도박 중독 위험과 법적 제한 사항을 충분히 인지하고 책임감 있게 참여해야 합니다.</em>
-                                                        </li>
+                                                        <li class="item">Cycling races offer the excitement of high-speed competition with the added thrill of betting opportunities, providing both entertainment and financial rewards.</li>
+                                                        <li class="item">It is advisable to place bets only on races you are confident about and to gradually increase your betting amount rather than overextending from the beginning.<br> (It is recommended to purchase around 3 to 5 betting tickets per race and to bet within a reasonable range!)</li>
+                                                        <li class="item">Place bets only within an amount you can afford to lose.<br> <em>Be fully aware of the risks of gambling addiction and legal restrictions, and participate responsibly.</em></li>
                                                     </ul>
                                                 </div> 
                                             </dd>
@@ -827,12 +670,12 @@
 
                     
                 <!-- 서브 바텀 (담당자) -->
-                <%- include('../_ejs_eng/sub_btm.ejs', {
-                    team: '경륜운영팀',
-                    name: '조준호',
-                    phone: '02-2067-5711',
-                    url: "../../",
-                }) %>
+				<%- include('../_ejs_eng/sub_btm.ejs', {
+					team: 'Cycling Planning Team',
+					name: 'Cho Joon-ho',
+					phone: '+82 2 2067 5711',
+					url: "../../",
+				}) %>
                 
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 

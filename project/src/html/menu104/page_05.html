@@ -1,0 +1,125 @@
+<!-- Header -->
+<%- include('../_ejs_eng/top.ejs', {
+    title: "KCYCLE",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../_ejs_eng/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 서브 콘텐츠 영역 -->
+            <div class="layoutSubCont">
+
+                <!-- 서브 컨텐츠 내용이 들어오는 영역-->
+                <!-- 서브 탑 (타이틀) -->
+                <%- include('../_ejs_eng/sub_top.ejs', {
+                    location: [],
+                    subTitle: 'Contact Us',
+                    subText: 'Send us your business inquiries and suggestions <br>for K-CYCLE/K-BOAT.',
+                    url: "../../",
+                    visualClass: "bg06",
+                }) %>
+
+                <div class="layoutContArea">
+                    
+                    <div class="cptLocation">
+                        <div class="comTitH2">
+                            <h2>Visiting K-Cycling</h2>
+                        </div>
+                        <div class="comImgWrap">
+                            <div class="imgGroup">
+                                <div class="imgArea">
+                                    <div class="pcView"><img src="../../images/contents/cont104_05_001.png" alt="Visiting K-Cycling Map"></div>
+                                    <div class="mView"><img src="../../images/contents/cont104_05_001_m.png" alt="Visiting K-Cycling Map"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>Address</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                (14299) 721, Gwangmyeong-ro, Gwangmyeong-si, Gyeonggi-do, Republic of Korea
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>e-mail</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                choonee@kspo.or.kr
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cptLocation">
+                        <div class="comTitH2">
+                            <h2> Visiting K-Boating</h2>
+                        </div>
+                        <div class="comImgWrap">
+                            <div class="imgGroup">
+                                <div class="imgArea">
+                                    <div class="pcView"><img src="../../images/contents/cont104_05_002.png" alt="Visiting K-Boating Map"></div>
+                                    <div class="mView"><img src="../../images/contents/cont104_05_002_m.png" alt="Visiting K-Boating Map"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>Address</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                (12900) 505, Misa-daero, Hanam-si, Gyeonggi-do, Republic of Korea
+                            </p>
+                        </div>
+                        <div class="comTitH3">
+                            <h3>e-mail</h3>
+                        </div>
+                        <div class="comBasicTxt space">
+                            <p class="txt">
+                                choonee@kspo.or.kr
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+
+                <!-- 서브 바텀 (담당자) -->
+                
+                <!-- //서브 컨텐츠 내용이 들어오는 영역-->
+                
+            </div>
+            <!-- //서브 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../_ejs_eng/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+
+<!-- Bottom -->
+<%- include('../_ejs_eng/bottom.ejs', { }) %>

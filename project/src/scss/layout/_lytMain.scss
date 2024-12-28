@@ -617,100 +617,39 @@
         position: relative;
         .visualWrap {
             .inner {
-                display: flex;
-                height: 949px;
+                display: flex; height: 949px;
                 > div[class*=Visual] {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    transition: transform 0.6s;
+                    position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: transform 0.6s;
                     h1 {
-                        position: absolute;
-                        top: 278px;
-                        left: 0;
-                        right: 0;
-                        z-index: 10;
-                        width: 1280px;
-                        margin: 0 auto;
-                        color: #FFF;
-                        font-family: "Roboto Flex";
-                        font-size: rem(36px);
-                        font-weight: 700;
-                        line-height: normal;
+                        width: 1280px; margin: 0 auto; color: #FFF; font-family: "Roboto Flex"; font-size: rem(36px); font-weight: 700; line-height: normal;
+                        position: absolute; top: 278px; left: 0; right: 0; z-index: 10; 
                     }
                     .swiper {
-                        position: relative;
-                        overflow: hidden;
-                        position: absolute;
-                        width: 100%;
-                        height: 949px;
+                        width: 100%; height: 949px; position: relative; overflow: hidden; position: absolute; 
                         .swiper-wrapper {
                             .swiper-slide {
                                 background: #000;
                                 .inner {
-                                    position: relative;
-                                    max-width: 1920px;
-                                    margin: 0 auto;
-                                    height: 100%;
+                                    position: relative; max-width: 1920px; margin: 0 auto; height: 100%;
                                     h2 {
-                                        position: absolute;
-                                        top: 332px;
-                                        left: 0;
-                                        right: 0;
-                                        color: #fff;
-                                        z-index: 10;
-                                        width: 1280px;
-                                        margin: 0 auto;
-                                        color: #4EFFD5;
-                                        font-family: "Roboto Flex";
-                                        font-size: rem(64px);
-                                        font-weight: 700;
-                                        line-height: normal;
+                                        width: 1280px; margin: 0 auto; color: #4EFFD5; font-family: "Roboto Flex"; font-size: rem(64px); font-weight: 700; 
+                                        line-height: normal; position: absolute; top: 332px; left: 0; right: 0; color: #fff; z-index: 10; 
                                     }
                                     img {
-                                        display: block;
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
+                                        width: 100%; height: 100%; display: block; object-fit: cover;
                                         &.mView {display: none;}
                                     }
                                 }
                             }
                         }
                         .paginationWrap {
-                            position: absolute;
-                            top: 448px;
-                            left: 0;
-                            right: 0;
-                            z-index: 200;
-                            width: 1280px;
-                            margin: 0 auto;
-                            display: flex;
-                            gap: 8px;
+                            width: 1280px; margin: 0 auto; display: flex; gap: 8px; position: absolute; top: 448px; left: 0; right: 0; z-index: 200; 
                             .swiper-pagination {
-                                position: static;
-                                text-align: left;
-                                display: flex;
-                                align-items: center;
-                                gap: 5px;
-                                width: auto;
-                                height: 24px;
+                                width: auto; height: 24px; text-align: left; display: flex; align-items: center; gap: 5px; position: static; 
                                 .swiper-pagination-bullet {
-                                    width: 48px;
-                                    height: 24px;
-                                    display: flex;
-                                    align-items: center;
-                                    background: none;
-                                    margin: 0;
+                                    width: 48px; height: 24px; margin: 0; display: flex; align-items: center; background: none;
                                     > span {
-                                        width: 100%;
-                                        height: 4px;
-                                        background: #fff;
-                                        opacity: 0.4;
-                                        transition: opacity 0.3s;
-                                        border-radius: 0;
+                                        width: 100%; height: 4px; background: #fff; opacity: 0.4; transition: opacity 0.3s; border-radius: 0; 
                                         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
                                     }
                                     &.swiper-pagination-bullet-active span {
@@ -719,19 +658,14 @@
                                 }
                             }
                             .btnWrap {
-                                display: flex;
-                                gap: 8px;
+                                display: flex; gap: 8px;
                                 button {
-                                    font-size: 0;
-                                    width: 24px;
-                                    height: 24px;
+                                    font-size: 0; width: 24px; height: 24px;
                                     &.btnStop {
-                                        background: url('../../images/main/ic_24_stop.svg') no-repeat 50%;
-                                        background-size: 100%;
+                                        background: url('../../images/main/ic_24_stop.svg') no-repeat 50%; background-size: 100%;
                                     }
                                     &.btnPlay {
-                                        background: url('../../images/main/ic_24_play.svg') no-repeat 50%;
-                                        background-size: 100%;
+                                        background: url('../../images/main/ic_24_play.svg') no-repeat 50%; background-size: 100%;
                                     }
                                 }
                             }
@@ -747,47 +681,20 @@
             }
             > .btnWrap {
                 button {
-                    position: absolute;
-                    top: 486px;
-                    left: 0;
-                    z-index: 300;
-                    transition: transform 0.3s;
-                    min-width: 68px;
-                    height: 62px;
-                    padding: 0 8px 12px 4px;
-                    display: flex;
-                    align-items: end;
-                    border-radius: 0px 20px 20px 0px;
-                    background: #28C39E;
-                    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.36);
+                    min-width: 68px; height: 62px; padding: 0 8px 12px 4px; display: flex; align-items: end; border-radius: 0px 20px 20px 0px; box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.36);
+                    background: #28C39E; position: absolute; top: 486px; left: 0; z-index: 300; transition: transform 0.3s; 
                     span {
-                        color: #FFF;
-                        font-size: rem(12px);
-                        font-weight: 700;
-                        line-height: normal;
-                        text-transform: capitalize;
+                        color: #FFF; font-size: rem(12px); font-weight: 700; line-height: normal; text-transform: capitalize;
                     }
                     &:after {
                         content: '';
-                        position: absolute;
-                        top: 16px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 18px;
-                        height: 14px;
-                        background: url('../../images/main/ic_18_arrow.svg') no-repeat 50%;
-                        background-size: 18px 14px;
+                        position: absolute; top: 16px; left: 50%; transform: translateX(-50%); width: 18px; height: 14px; background: url('../../images/main/ic_18_arrow.svg') no-repeat 50%; background-size: 18px 14px;
                     }
                     &.btnCycling {
                         transform: translateX(-100%);
                     }
                     &.btnBoating {
-                        border-radius: 20px 0px 0px 20px;
-                        background: #1FAAF9;
-                        left: auto;
-                        right: 0;
-                        justify-content: right;
-                        padding: 0 4px 12px 8px;
+                        border-radius: 20px 0px 0px 20px; background: #1FAAF9; left: auto; right: 0; justify-content: right; padding: 0 4px 12px 8px;
                         &:after {
                             transform: translateX(-50%) rotate(180deg);
                         }
@@ -796,213 +703,110 @@
             }
         }
         .mainContentWrap {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 286px;
-            z-index: 10;
-            width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 278px 592px 310px;
-            gap: 56px 50px;
-            align-items: end;
-            pointer-events: none;
+            position: absolute; left: 0; right: 0; top: 286px; z-index: 10; width: 1280px; margin: 0 auto; 
+            display: grid; grid-template-columns: 278px 592px 310px; gap: 56px 50px; align-items: end; pointer-events: none;
+            &.cycle {
+                display: grid;
+            }
+            &.boat {
+                display: none;
+            }
             h2 {
-                color: #FFF;
-                font-family: 'Roboto';
-                font-size: rem(20px);
-                font-weight: 700;
-                line-height: normal;
+                color: #FFF; font-family: 'Roboto'; font-size: rem(20px); font-weight: 700; line-height: normal;
             }
             > div {pointer-events:all;}
             .newsContentWrap {
-                grid-area: 1 / 1;
-                padding: 16px 24px;
-                border-radius: 16px;
-                border: 1px solid rgba(238, 238, 238, 0.30);
-                background: rgba(0, 0, 0, 0.30);
-                backdrop-filter: blur(3px);
-                min-height: 192px;
+                grid-area: 1 / 1; padding: 16px 24px; border-radius: 16px; border: 1px solid rgba(238, 238, 238, 0.30); background: rgba(0, 0, 0, 0.30); backdrop-filter: blur(3px); min-height: 192px;
                 h2 {
-                    color: #28C39E;
-                    font-size: rem(18px);
+                    color: #28C39E; font-size: rem(18px);
                 }
                 a {
-                    margin-top: 12px;
-                    display: block;
-
-                    color: #FFF;
-                    font-family: 'Roboto';
-                    font-size: rem(14px);
-                    font-weight: 500;
-                    line-height: normal;
+                    margin-top: 12px; display: block; color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 500; line-height: normal;
                     strong {
-                        font-size: rem(18px);
-                        font-weight: 600;
-                        line-height: 140%; /* 25.2px */
+                        font-size: rem(18px); font-weight: 600; line-height: 140%; /* 25.2px */
                     }
                     span {
-                        display: block;
-                        margin-top: 12px;
+                        display: block; margin-top: 12px;
                     }
                 }
                 .paginationWrap {
-                    margin-top: 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    margin-top: 20px; display: flex; justify-content: space-between; align-items: center;
                     .countWrap {
-                        color: #FFF;
-                        font-family: 'Roboto';
-                        font-size: rem(14px);
-                        font-weight: 400;
-                        line-height: normal;
+                        color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 400; line-height: normal;
                         strong {
                             font-weight: 700;
                         }
                     }
                     .btnWrap {
                         button {
-                            font-size: 0;
-                            width: 20px;
-                            height: 20px;
+                            font-size: 0; width: 20px; height: 20px;
                             &.btnPrev {
-                                background: url('../../images/main/ic_16_arrow.svg') no-repeat 50%;
-                                background-size: 16px;
+                                background: url('../../images/main/ic_16_arrow.svg') no-repeat 50%; background-size: 16px;
                             }
                             &.btnNext {
-                                background: url('../../images/main/ic_16_arrow.svg') no-repeat 0 1px;
-                                background-size: 16px;
-                                transform: rotate(180deg);
+                                background: url('../../images/main/ic_16_arrow.svg') no-repeat 0 1px; background-size: 16px; transform: rotate(180deg);
                             }
                         }
                     }
                 }
             }
             .racingVideoWrap {
-                grid-area: 1 / 2;
-                position: relative;
+                grid-area: 1 / 2; position: relative;
                 > ul {
-                    margin-top: 16px;
-                    display: flex;
-                    gap:14px;
+                    margin-top: 16px; display: flex; gap:14px;
                     > li {
-                        overflow: hidden;
-                        border-radius: 4px;
-                        border: 2px solid #FFF;
-                        background: #fff;
+                        overflow: hidden; border-radius: 4px; border: 2px solid #FFF; background: #fff;
                         a {
-                            display: block;
-                            position: relative;
-                            overflow: hidden;
-                            border-radius: 2px;
+                            display: block; position: relative; overflow: hidden; border-radius: 2px;
                             img {
-                                display: block;
-                                object-fit: cover;
+                                display: block; object-fit: cover;
                             }
                             &:after {
-                                content: '';
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 30px;
-                                height: 30px;
-                                background: url('../../images/main/ic_30_play.svg') no-repeat 50%;
-                                background-size: 100%;
+                                content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; 
+                                background: url('../../images/main/ic_30_play.svg') no-repeat 50%; background-size: 100%;
                             }
                         }
                     }
                 }
                 .btnMore {
-                    position: absolute;
-                    top: 3px;
-                    right: 0;
-                    height: 27px;
+                    position: absolute; top: 3px; right: 0; height: 27px;
                     span {
-                        position: relative;
-                        padding-right: 24px;
-                        color: #FFF;
-                        font-family: 'Roboto';
-                        font-size: rem(14px);
-                        font-weight: 400;
-                        line-height: normal;
-                        text-transform: capitalize;
+                        position: relative; padding-right: 24px; color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 400; line-height: normal; text-transform: capitalize;
                         &:after {
                             content: '';
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            width: 20px;
-                            height: 20px;
-                            background: url('../../images/main/ic_12_more.svg') no-repeat 50%;
+                            position: absolute; top: 0; right: 0; width: 20px; height: 20px; background: url('../../images/main/ic_12_more.svg') no-repeat 50%; 
                             background-size: 12px;
                         }
                     }
                 }
             }
             .rankingListWrap {
-                grid-area: 1 / 3;
-                border-radius: 16px;
-                border: 1px solid rgba(238, 238, 238, 0.20);
-                background: rgba(0, 0, 0, 0.50);
+                grid-area: 1 / 3; border-radius: 16px; border: 1px solid rgba(238, 238, 238, 0.20); background: rgba(0, 0, 0, 0.50); 
                 backdrop-filter: blur(4px);
                 h2 {
-                    padding: 24px 32px 12px 32px;
-                    color: #FFF;
-                    font-family: 'Roboto';
-                    font-size: rem(22px);
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: -1px;
+                    padding: 24px 32px 12px 32px; color: #FFF; font-family: 'Roboto'; font-size: rem(22px); font-weight: 700; line-height: normal; letter-spacing: -1px;
                     span {
-                        font-size: rem(20px);
-                        letter-spacing: -1px;
+                        font-size: rem(20px); letter-spacing: -1px;
                     }
                 }
                 > ol {
                     > li {
-                        padding: 8px 30px;
-                        display: flex;
-                        align-items: center;
+                        padding: 8px 30px; display: flex; align-items: center;
                         > span {
-                            color: #99FFD4;
-                            font-family: 'Roboto';
-                            font-size: rem(34px);
-                            font-style: italic;
-                            font-weight: 700;
-                            line-height: normal;
+                            color: #99FFD4; font-family: 'Roboto'; font-size: rem(34px); font-style: italic; font-weight: 700; line-height: normal;
                         }
                         > img {
-                            display: block;
-                            margin-left: 20px;
-                            border-radius: 16px;
-                            background: #FFF;
-                            object-fit: cover;
-                            width: 54px;
-                            height: 58px;
+                            display: block; margin-left: 20px; border-radius: 16px; background: #FFF; object-fit: cover; width: 54px; height: 58px;
                         }
                         > dl {
-                            margin-left: 16px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                            color: #EEE;
-                            font-family: Roboto;
-                            font-size: rem(16px);
-                            font-weight: 400;
+                            margin-left: 16px; display: flex; flex-direction: column; justify-content: space-between; color: #EEE; font-family: Roboto; font-size: rem(16px); font-weight: 400;
                             @include line1();
                             dt {
-                                color: #FFF;
-                                font-size: rem(20px);
-                                font-weight: 700;
-                                line-height: normal;
+                                color: #FFF; font-size: rem(20px); font-weight: 700; line-height: normal;
                                 @include line1();
                             }
                             dd {
-                                line-height: normal;
-                                text-transform: uppercase;
+                                line-height: normal; text-transform: uppercase;
                                 @include line1();
                             }
                         }
@@ -1012,62 +816,27 @@
                     }
                 }
                 > .btnMore {
-                    margin-top: 24px;
-                    display: block;
-                    text-align: center;
-                    border-top: 1px solid rgba(238, 238, 238, 0.12);
-                    padding: 16px 0;
+                    margin-top: 24px; display: block; text-align: center; border-top: 1px solid rgba(238, 238, 238, 0.12); padding: 16px 0;
                     span {
-                        position: relative;
-                        padding-right: 24px;
-                        color: #FFF;
-                        font-family: 'Roboto';
-                        font-size: rem(14px);
-                        font-weight: 400;
-                        line-height: normal;
+                        position: relative; padding-right: 24px; color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 400; line-height: normal;
                         &:after {
                             content: '';
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            width: 20px;
-                            height: 20px;
-                            background: url('../../images/main/ic_12_more.svg') no-repeat 50%;
+                            position: absolute; top: 0; right: 0; width: 20px; height: 20px; background: url('../../images/main/ic_12_more.svg') no-repeat 50%; 
                             background-size: 12px;
                         }
                     }
                 }
             }
             .quickLinkWrap {
-                grid-area: 2 / 1 / 3 / 4;
-                /*
-                grid-row-start: 2;
-                grid-column-start: 1;
-                grid-row-end: 3;
-                grid-column-end: 4;
-                */
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
+                grid-area: 2 / 1 / 3 / 4; flex-direction: column; align-items: center; gap: 12px;
                 > ul {
-                    display: flex;
-                    justify-content: center;
-                    gap: 8px;
+                    display: flex; justify-content: center; gap: 8px;
                     > li {
-                        width: 180px;
+                        width: 200px; background: rgba(0, 0, 0, 0.30);
                         a {
-                            display: flex;
-                            height: 34px;
-                            align-items: center;
-                            justify-content: center;
+                            display: flex; height: 34px; align-items: center; justify-content: center;
                             span {
-                                position: relative;
-                                color: #CACACA;
-                                font-family: 'Roboto';
-                                font-size: rem(16px);
-                                font-weight: 700;
-                                line-height: normal;
-                                border-bottom: 2px solid transparent;
+                                position: relative; color: #CACACA; font-family: 'Roboto'; font-size: rem(16px); font-weight: 700; line-height: normal; border-bottom: 2px solid transparent;
                                 &:hover {
                                     border-bottom-color: #8D8D8D;
                                 }
@@ -1090,6 +859,12 @@
                 }
             }
             .mainContentWrap {
+                &.cycle {
+                    display: none;
+                }
+                &.boat {
+                    display: grid;
+                }
                 .newsContentWrap h2 {color: #78CEFF;}
                 .rankingListWrap {
                     h2,
@@ -1105,10 +880,7 @@
                     height: 716px;
                     > div[class*=Visual] {
                         h1 {
-                            width: 100%;
-                            top: 82px;
-                            font-size: rem(24px);
-                            padding: 0 20px;
+                            width: 100%; top: 82px; font-size: rem(24px); padding: 0 20px;
                         }
                         .swiper {
                             height: 716px;
@@ -1116,11 +888,7 @@
                                 .swiper-slide {
                                     .inner {
                                         h2 {
-                                            width: 100%;
-                                            top: 116px;
-                                            font-size: rem(42px);
-                                            line-height: 1;
-                                            padding: 0 20px;
+                                            width: 100%; top: 116px; font-size: rem(42px); line-height: 1; padding: 0 20px;
                                         }
                                         img {
                                             &.pcView {display: none;}
@@ -1133,9 +901,7 @@
                                 }
                             }
                             .paginationWrap {
-                                width: 100%;
-                                top: 240px;
-                                padding: 0 20px;
+                                width: 100%; top: 240px; padding: 0 20px;
                                 .swiper-pagination {
                                     .swiper-pagination-bullet {
                                         width: 40px;
@@ -1150,35 +916,28 @@
                 }
                 .btnWrap {
                     button {
-                        top: 274px;
-                        min-width: 42px;
-                        height: 46px;
+                        top: 274px; min-width: 42px; height: 46px;
                         span {display: none;}
                     }
                 }
             }
             .mainContentWrap {
-                width: 100%;
-                display: block;
-                // top: 336px;
-                top: 0;
-                margin-top: -380px;
-                position: relative;
+                width: 100%; display: block; top: 0; margin-top: -380px; position: relative;
+                &.cycle {
+                    display: block;
+                }
+                &.boat {
+                    display: none;
+                }
                 .newsContentWrap {
-                    margin-left: 20px;
-                    margin-right: 20px;
+                    margin-left: 20px; margin-right: 20px;
                 }
                 .racingVideoWrap {
-                    margin-top: 32px;
-                    padding-left: 20px;
+                    margin-top: 32px; padding-left: 20px;
                     > ul {
-                        overflow-x: auto;
-                        scroll-snap-type: x mandatory;
-                        scroll-padding: 16px;
+                        overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 16px;
                         > li {
-                            scroll-snap-align: start;
-                            flex-shrink: 0;
-                            width: 138px;
+                            scroll-snap-align: start; flex-shrink: 0; width: 138px;
                             &:last-child {
                                 margin-right: 20px;
                             }
@@ -1187,17 +946,11 @@
                     .btnMore {right: 20px;}
                 }
                 .rankingListWrap {
-                    margin-top: 27px;
-                    background: #fff;
-                    border-radius: 0;
-                    border: 0 none;
-                    border-top: 12px solid #F1F3F6;
-                    color: var(--Gray-800);
+                    margin-top: 27px; background: #fff; border-radius: 0; border: 0 none; border-top: 12px solid #F1F3F6; color: var(--Gray-800);
                     h2 {color: var(---Primary);}
                     > ol {
                         > li {
-                            padding-left: 24px;
-                            padding-right: 24px;
+                            padding-left: 24px; padding-right: 24px;
                             > span {
                                 color: var(--Point-Primary2);
                             }
@@ -1212,51 +965,59 @@
                         }
                     }
                     .btnMore {
-                        margin-top: 12px;
-                        border-top-color: #E1E1E1;
+                        margin-top: 12px; border-top-color: #E1E1E1;
                         span {
                             color: var(--Gray-800);
                             &:after {
-                                background-image: url('../../images/main/ic_12_more_b.svg');
-                                background-size: 17px 16px;
+                                background-image: url('../../images/main/ic_12_more_b.svg'); background-size: 17px 16px;
                             }
                         }
                     }
                 }
                 .quickLinkWrap {
-                    border-top: 12px solid #F1F3F6;
-                    border-bottom: 12px solid #F1F3F6;
+                    border-top: 12px solid #F1F3F6; border-bottom: 12px solid #F1F3F6;
                     > ul {
-                        padding: 8px 20px;
-                        gap: 0 16px;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
+                        padding: 8px 20px; gap: 0 16px; display: grid; grid-template-columns: 1fr 1fr;
                         > li {
-                            width: auto;
+                            width: auto; background: transparent;
                             a {
-                                position: relative;
-                                padding-right: 26px;
-                                justify-content: left;
-                                height: 44px;
+                                position: relative; padding-right: 26px; justify-content: left; height: 44px;
                                 span {
-                                    color: var(--Gray-800);
-                                    font-weight: 600;
+                                    color: var(--Gray-800); font-weight: 600;
                                 }
                                 &:after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 0;
-                                    transform: translateY(-50%);
-                                    width: 12px;
-                                    height: 12px;
-                                    background: url('../../images/main/ic_12_arrow.svg') no-repeat 50%;
-                                    background-size: 12px;
+                                    content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 12px; height: 12px; 
+                                    background: url('../../images/main/ic_12_arrow.svg') no-repeat 50%; background-size: 12px;
                                 }
                             }
                         }
                     }
                 }
+            }
+            &.active {
+                .mainContentWrap {
+                    &.cycle {
+                        display: none;
+                    }
+                    &.boat {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include media('mobile') {
+        .innerWrap .mainContentWrap {
+            .quickLinkWrap {
+                > ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+        @at-root {
+            .lytMainEng .layoutArea .layoutContainer {
+                padding-top: 72px;
             }
         }
     }

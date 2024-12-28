@@ -11,8 +11,8 @@
                 .tit {
                     margin-top: 16px;
                     &:first-child {margin-top: 0;}
-                    .num {font-size: rem(20px); color: var(--Gray-300); font-weight: 600; display: inline-block; vertical-align: middle;}
-                    .txt {font-size: rem(16px); color: var(--Gray-800); font-weight: 700; display: inline-block; vertical-align: middle; word-break: keep-all;}                    
+                    .num {font-size: rem(20px); color: var(--Gray-300); font-weight: 600; display: inline-block; vertical-align: top;}
+                    .txt {width: calc(100% - 30px); margin-top: 4px; font-size: rem(16px); color: var(--Gray-800); font-weight: 700; display: inline-block; vertical-align: top; word-break: keep-all;}                    
                 }
                 .imgArea {
                     width: 100%; margin-top: 12px; overflow: hidden; line-height: 1;
