@@ -56,6 +56,9 @@
         }
         .copyGroup {
             margin-top: 16px;
+            .copy {
+                font-size: rem(13px);
+            }
         }
     }
 
