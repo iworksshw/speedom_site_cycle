@@ -1,0 +1,46 @@
+/* ------------------------------ gif 애니 ------------------------------ */
+.comGifWrap {
+    width: 100%; margin-top: 12px; padding: 40px 60px 60px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); background: rgba(255, 255, 255, 0.50);
+    .gifGroup {
+        width: 100%; display: flex; justify-content: center;
+        &.division {
+            justify-content: space-between; gap: 60px;
+        }
+        .alignL {
+            width: 100%; display: flex; justify-content: center;
+        }
+        .alignR {
+            width: 100%; display: flex; justify-content: center;
+        }
+        .gifBox {
+            width: 100%; max-width: 544px; 
+            .image {
+                border-radius: 16px; overflow: hidden;
+            }
+            img {
+               width: 100%; display: block;
+            }
+        }
+        .text {
+            width: 100%; margin-top: 16px; color: var(--Gray-800); text-align: center; font-size: rem(16px); font-weight: 400; line-height: 1.6; display: block;
+            b {color: var(---Primary); font-weight: 700;}
+        }
+    }
+    .downArr {
+        height: 120px; padding: 20px 0; font-size: 0; background: url(../../images/common/ic_80_down_arr.svg) center no-repeat;
+    }
+    @include media('mobile') {
+        padding: 12px;
+        .gifGroup {
+            &.division {
+                gap: 16px; flex-wrap: wrap;
+            }
+            .text {
+                margin-top: 8px;
+            }
+        }
+        .downArr {
+            height: 96px; padding: 16px 0; background: url(../../images/common/ic_80_down_arr.svg) center / 60px no-repeat;
+        }
+    }
+}

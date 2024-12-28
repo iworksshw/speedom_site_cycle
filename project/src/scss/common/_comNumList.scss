@@ -58,4 +58,25 @@
             > li {font-size: rem(14px);}
         }
     }
+
+    @at-root {
+        .termsPopArea .comNumList {
+            .listGroup {
+                .item {
+                    .txt {
+                        font-size: rem(15px);
+                    }
+                }
+            }
+            @include media('mobile') {
+                .listGroup {
+                    .item {
+                        .txt {
+                            font-size: rem(14px);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
