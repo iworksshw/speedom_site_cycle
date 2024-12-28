@@ -62,4 +62,97 @@
             }
         }
     }
+
+    //팝업 내에서 사용
+    .termsPopArea {
+        .termsTop {
+            dt {
+                h2 {
+                    color: var(--Gray-900); font-size: rem(24px); font-weight: 700; line-height: 1.4;
+                }
+            }
+            dd {
+                margin-top: 12px; color: var(--Gray-700); font-size: rem(16px); font-weight: 400; line-height: 1.6;
+            }
+        }
+        .agreeGroup {
+            margin-top: 32px;
+            .agreeBox {
+                width: 100%; height: 200px; margin-top: 12px; padding: 20px 8px 20px 28px;
+                border-radius: 12px; border: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-50);
+                .scrollBox {
+                    width: 100%; height: 100%; padding-right: 20px; overflow-y: auto;
+                }
+                @include minWidth('mobile'){
+                    *:hover::-webkit-scrollbar-thumb {
+                        background: rgba(87, 87, 87, 0.54);
+                    }
+                    *::-webkit-scrollbar {width:3px; padding:0; background-color: transparent;}
+                    *::-webkit-scrollbar-thumb {
+                      padding:0; border: 0px solid #eee; background: rgba(87, 87, 87, 0.2);/* box-shadow: inset 6px 6px 0 rgba(87, 87, 87, 0.54); */ 
+                      min-height: 70px;
+                    }
+                    *::-webkit-scrollbar-track{background-color: rgba(0,0,0,0);}
+                }
+            }
+        }
+        .termsGroup {
+            & > ul {
+                & > li {
+                    & + li {
+                        margin-top: 12px;
+                    }
+                    & > h3 {
+                        color: var(--Gray-700); font-size: rem(15px); font-weight: 600; line-height: 160%;
+                        & + .comBasicTxt {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+            h2 {
+                &:first-child {margin-top: 0;}
+                margin-top: 12px; color: var(--Gray-700); font-size: rem(15px); font-weight: 600; line-height: 160%;
+            }
+        }
+        @include media ('mobile') {
+            .termsTop {
+                dt {
+                    h2 {
+                        font-size: rem(20px);
+                    }
+                }
+                dd {
+                    margin-top: 8px; font-size: rem(15px);
+                }
+            }
+            .agreeGroup {
+                margin-top: 24px;
+                .agreeBox {
+                    margin-top: 8px; padding: 16px 20px;
+                    .scrollBox {
+                        padding-right: 0;
+                    }
+                }
+            }
+            .termsGroup {
+                & > ul {
+                    & > li {
+                        & + li {
+                            margin-top: 8px;
+                        }
+                        & > h3 {
+                            & + .comBasicTxt {
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }
+                h2 {
+                    &:first-child {margin-top: 0;}
+                    margin-top: 8px; font-size: rem(15px);
+                }
+            }
+        }
+    }
 }

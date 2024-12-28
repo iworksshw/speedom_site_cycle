@@ -64,10 +64,11 @@
                     .rcrdNavi {
                         position: absolute; top: 32px; right: 24px; display: flex;z-index: 99;
                         & > div {
-                            width: 24px; height: 24px; margin: 0 4px 0 0; font-size: 0; border-radius: 6px; background: rgba(0,0,0,0.2) url(../../images/common/ic_16_arr_right_lg.svg) center no-repeat; position: static; display: block;
+                            width: 24px; height: 24px; margin: 0 4px 0 0; font-size: 0; border-radius: 6px; opacity: 0.5;
+                            background: rgba(0,0,0,0.2) url(../../images/common/ic_16_arr_right_lg.svg) center no-repeat; position: static; display: block;
                             &::after {display: none;}
                             &.swiper-button-prev {transform: rotate(180deg);}
-                            &.on {opacity: 0.5; cursor: default;}
+                            &.on {opacity: 1; cursor: default;}
                         }
                     }
 

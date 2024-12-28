@@ -27,6 +27,16 @@
                 }
             }
         }
+        &.col3Sch {
+            gap: 60px;
+            .condition {
+                width: calc(33.3333% - 94.666px);
+                .title {
+                    width: 70px;
+                }
+            }
+            .btn {margin-left: 0;}
+        }
         &.col2_1 {
             .condition {
                 width: calc(50% - 30px);
@@ -86,6 +96,16 @@
                     }
                 }
             }
+            &.col3Sch {
+                flex-wrap: wrap; gap: 16px 0;
+                .condition {
+                    width: calc(50% - 30px);
+                    &:nth-child(3) {
+                        width: calc(100% - 122px);
+                    }
+                }
+                .btn {margin-left: 20px;}
+            }
             &.col2_1 {
                 flex-wrap: wrap; row-gap: 16px;
                 .condition {
@@ -113,7 +133,7 @@
         }
     }
     @include media('mobile') {
-        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 40px 16px; border-radius: 0; gap: 16px;
+        width: calc(100% + 32px); margin-top: 40px; margin-left: -16px; padding: 20px 16px; border-radius: 0; gap: 16px;
         &:first-child {margin-top: -40px;}
         .searchLine {
             &.col2 {
@@ -129,6 +149,15 @@
                     }
                 }
             }
+            &.col3Sch {
+                .condition {
+                    width: calc(50% - 6px);
+                    &:nth-child(3) {
+                        width: calc(100% - 96px);
+                    }
+                }
+                .btn {margin-left: 10px;}
+            }
             &.col4 {
                 flex-wrap: wrap; row-gap: 16px;
                 .condition {
@@ -143,6 +172,14 @@
             .btn {
                 padding: 0 16px; margin-left: 10px;
             }
+        }
+    }
+    @at-root {
+        .comTitH2 + .comSearchBox {margin-top: 24px;}
+        .comSearchBox + .comTitH3 {margin-top: 24px;}
+        @include media('mobile') {
+            .comTitH2 + .comSearchBox {margin-top: 20px;}
+            .comSearchBox + .comTitH3 {margin-top: 20px;}
         }
     }
 }
