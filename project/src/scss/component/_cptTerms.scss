@@ -82,6 +82,11 @@
                 border-radius: 12px; border: 1px solid var(--Bg-Line-line-100); background: var(--Bg-Line-bg-50);
                 .scrollBox {
                     width: 100%; height: 100%; padding-right: 20px; overflow-y: auto;
+                    .termsGroup {
+                        h2 {
+                            margin-top: 8px; font-size: rem(15px);
+                        }
+                    }
                 }
                 @include minWidth('mobile'){
                     *:hover::-webkit-scrollbar-thumb {
@@ -112,7 +117,7 @@
             }
             h2 {
                 &:first-child {margin-top: 0;}
-                margin-top: 12px; color: var(--Gray-700); font-size: rem(15px); font-weight: 600; line-height: 160%;
+                margin-top: 12px; color: var(--Gray-900); font-size: rem(18px); font-weight: 600; line-height: 160%;
             }
         }
         @include media ('mobile') {
@@ -132,6 +137,11 @@
                     margin-top: 8px; padding: 16px 20px;
                     .scrollBox {
                         padding-right: 0;
+                        .termsGroup {
+                            h2 {
+                                margin-top: 8px; font-size: rem(15px);
+                            }
+                        }
                     }
                 }
             }
@@ -150,7 +160,7 @@
                 }
                 h2 {
                     &:first-child {margin-top: 0;}
-                    margin-top: 8px; font-size: rem(15px);
+                    margin-top: 8px; color: var(--Gray-900); font-size: rem(16px);
                 }
             }
         }
