@@ -858,9 +858,17 @@ function fullFloating(){
 // 날짜 선택 슬라이드
 function slctDateSlide() {
     if (document.querySelector(".comDateSwiper")) {
+        
+        const onDateBtn = document.querySelector(".dateBox.on");
+        const dateSlide = onDateBtn.closest(".swiper-slide");
+        const dateSlides = Array.from(dateSlide.parentNode.children);  
+        const sdindex = dateSlides.indexOf(dateSlide); 
+
         let dateSwiper = new Swiper(".dateSwiper", {
             slidesPerView: "auto",
             spaceBetween: 12,
+            centeredSlides: false,
+            initialSlide: sdindex,
             navigation: {
                 nextEl: ".swiper-button-next.selectDate",
                 prevEl: ".swiper-button-prev.selectDate",
