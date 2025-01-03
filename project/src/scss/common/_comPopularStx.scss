@@ -4,22 +4,22 @@
     &.mView {display: none;}
     .listTen {
         ul {
-            display: flex; flex-wrap: wrap; gap: 20px 40px;
+            display: flex; flex-wrap: wrap; gap: 20px 40px; flex-direction: column; max-height: 210px;
             li {                
                 width: calc(50% - 20px);
                 a { display: flex; align-items: center; gap: 8px; min-width: 0;}
                 .num {display: flex; width: 22px; height: 22px; justify-content: center; align-items: center; color: var(--Gray-600); font-size: rem(14px); border-radius: 4px; background: var(--Bg-Line-bg-300); line-height: 1.6; font-weight: 600;} 
                 .pTxt {flex: 1; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; text-overflow: ellipsis; white-space: nowrap; word-break: break-all; overflow: hidden; min-width: 0;}
-                &:nth-of-type(1) {order: 1;}
-                &:nth-of-type(2) {order: 3;}
-                &:nth-of-type(3) {order: 5;}
-                &:nth-of-type(4) {order: 7;}
-                &:nth-of-type(5) {order: 9;}
-                &:nth-of-type(6) {order: 2;}
-                &:nth-of-type(7) {order: 4;}
-                &:nth-of-type(8) {order: 6;}
-                &:nth-of-type(9) {order: 8;}
-                &:nth-of-type(10) {order: 10;}
+                // &:nth-of-type(1) {order: 1;}
+                // &:nth-of-type(2) {order: 3;}
+                // &:nth-of-type(3) {order: 5;}
+                // &:nth-of-type(4) {order: 7;}
+                // &:nth-of-type(5) {order: 9;}
+                // &:nth-of-type(6) {order: 2;}
+                // &:nth-of-type(7) {order: 4;}
+                // &:nth-of-type(8) {order: 6;}
+                // &:nth-of-type(9) {order: 8;}
+                // &:nth-of-type(10) {order: 10;}
             }
             .rank .num {color: #FFF; background: var(--Point-Primary2);} 
             // 조건 인기 검색어 순서가 100% 인 경우
