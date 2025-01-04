@@ -30,7 +30,7 @@
                     subTitle: 'How to Read the Racecard',
                     subText: 'What is the <b>racecard</b>, <br/>the complete guide to a race?</b>!',
                     url: "../../",
-                    visualClass : "bg01",
+                    visualClass : "bg02",
                 }) %>
 
                 <div class="layoutContArea">
@@ -54,7 +54,7 @@
                                         <div class="desc">Analyses collected data such as riders&rsquo; race records, performances, and winning statistics to provide predictions.</div>
                                         
                                         <div class="comAddGuide"> 
-                                            <p class="guide">Higher gear ratios result in greater acceleration once speed builds up. Lower gear ratios enhance quicker speed and responsiveness.</p>
+                                            <p class="guide">Higher gear ratios result in greater acceleration once speed builds up. Lower gear ratios result in a higher top speed and increased responsiveness.</p> <!-- 20250104 수정 -->
                                         </div>
                                     </li>
                                     <li class="numItem">
@@ -62,15 +62,15 @@
                                         <div class="desc">Provides information on the race schedule, including the time slots and race grades (Entry, Excellence, Special) as well as the starting times</div>
                                         
                                         <div class="comAddGuide"> 
-                                            <p class="guide">Higher gear ratios result in greater acceleration once speed builds up. Lower gear ratios enhance quicker speed and responsiveness.</p>
+                                            <p class="guide">Higher gear ratios result in greater acceleration once speed builds up. Lower gear ratios result in a higher top speed and increased responsiveness.</p> <!-- 20250104 수정 -->
                                         </div>
                                     </li>
                                     <li class="numItem">
                                         <div class="tit"><span class="num">04</span> <span class="txt">200m Record</span></div>
-                                        <div class="desc">Shows the fastest 200m record from the races conducted over the most recent weekend (Friday, Saturday, Sunday) the rider participated in.</div>
+                                        <div class="desc">Shows the fastest record from the races conducted over the most recent weekend (Friday, Saturday, Sunday) the rider participated in.</div> <!-- 20250104 수정 -->
                                     </li>
                                     <li class="numItem">
-                                        <div class="tit"><span class="num">05</span> <span class="txt">Placings/Number of Races Entered</span></div>
+                                        <div class="tit"><span class="num">05</span> <span class="txt">Number of Placement/Races Entered</span></div> <!-- 20250104 수정 -->
                                         <div class="desc">Represents the number of placings (1st, 2nd, and 3rd places) and the total number of races the rider has entered since the first round of the previous half-year period.</div>
                                     </li>
                                     <li class="numItem">
@@ -87,15 +87,15 @@
                                     </li>
                                     <li class="numItem">
                                         <div class="tit"><span class="num">09</span> <span class="txt">Top Three Percentage</span></div>
-                                        <div class="desc">Calculated by adding the total number of 1st, 2nd, and 3rd place finishes in the current year (or the previous year for new entrants) and dividing by the total number of races entered.</div>
+                                        <div class="desc">Calculated by adding the total number of 1st, 2nd, and 3rd place finishes in the current year (or the previous year for first-timers) and dividing by the total number of races entered.</div> <!-- 20250104 수정 -->
                                         
                                         <div class="comAddGuide"> 
-                                            <p class="guide">Riders with higher winning percentages, top two percentage, and top three percentage have a higher likelihood of securing a placement.</p>
+                                            <p class="guide">Riders with higher winning percentages, top two percentages, and top three percentages have a higher likelihood of securing a placing.</p> <!-- 20250104 수정 -->
                                         </div>
                                     </li>
                                     <li class="numItem">
                                         <div class="tit"><span class="num">10</span> <span class="txt">Winning Strategy (Lead, Quick-timed Overtake, Late Charge, Marking)</span></div>
-                                        <div class="desc">This refers to the number of times a strategy has resulted in a placement (1st, 2nd, or 3rd place) from the first round of the previous half-year to the present.</div>
+                                        <div class="desc">This refers to the number of times a strategy has resulted in a placing (1st, 2nd, or 3rd place) from the first round of the previous half-year to the present.</div> <!-- 20250104 수정 -->
                                     </li>
                                     <li class="numItem">
                                         <div class="tit"><span class="num">11</span> <span class="txt">Grade</span></div>
@@ -113,7 +113,7 @@
                                         </div>
                                         
                                         <div class="comAddGuide"> 
-                                            <p class="guide">Higher scores indicate a greater chance of securing a placement!</p>
+                                            <p class="guide">Higher scores indicate a greater chance of securing a placing!</p> <!-- 20250104 수정 -->
                                         </div>
                                     </li>
                                     <li class="numItem">
@@ -171,7 +171,7 @@
                                         <div class="desc">This shows the cumulative head-to-head win/loss record between two riders who competed in the same races, starting from the previous year to the current date.</div>
                                     </li>
                                     <li class="numItem">
-                                        <div class="tit"><span class="num">19</span> <span class="txt">Joint Placement Records (Placement/Number)</span></div>
+                                        <div class="tit"><span class="num">19</span> <span class="txt">Joint Placing Records (Place/Number)</span></div> <!-- 20250104 수정 -->
                                         <div class="desc">This represents the cumulative record of the two riders achieving 1st to 3rd place together in the same races, from the previous year to the current date.</div>
                                     </li>
                                     <li class="numItem">
@@ -302,15 +302,6 @@
                         </div>
                     </div>
                 </div>
-
-                    
-                <!-- 서브 바텀 (담당자) -->
-                <%- include('../_ejs_eng/sub_btm.ejs', {
-                    team: 'Cycling Planning Team',
-                    name: 'Cho Joon-ho',
-                    phone: '+82 2 2067 5711',
-                    url: "../../",
-                }) %>
                 
                 <!-- //서브 컨텐츠 내용이 들어오는 영역-->
                 

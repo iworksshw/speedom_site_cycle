@@ -451,9 +451,9 @@ function all1MenuAction(){
     
     all2Menus.forEach(function(all2Menu){
         all2Menu.addEventListener("click", function(e){
-            e.preventDefault();
             if(tabMo.matches) {
                 if(!all2Menu.nextElementSibling){return;}
+                e.preventDefault(); //모바일에서만
                 all2Menu.parentNode.classList.toggle("on");
                 if(all2Menu.parentNode.classList.contains("on")){
                     slideDown(all2Menu.nextElementSibling, 200);
