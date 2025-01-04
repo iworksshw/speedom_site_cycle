@@ -30,7 +30,7 @@
         &.toAll {
             .tabMenu {
                 .tabItem {
-                    width: max-content; min-width: auto; white-space: nowrap;
+                    width: max-content; min-width: auto; white-space: nowrap; flex-grow: 1;
                 }
             }
             & ~ .tabDirection {display: block;}
