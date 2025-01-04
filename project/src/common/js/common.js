@@ -1355,3 +1355,36 @@ function inputCheckBoxAll(){
         }
     }
 }
+
+//개인정보 동의 박스 전체 동의/해제
+function inputCheckAll(){
+    if (document.querySelector(".comPrivacyBox")){
+        document.querySelectorAll('.comPrivacyBox .infoBox').forEach((form) => {
+            const checkboxes = Array.from(form.querySelectorAll('.iptChk[type=checkbox]'));
+            const chkAll = checkboxes.find((el) => el.classList.contains('chkAll'));
+            const otherCheckboxes = checkboxes.filter((el) => el !== chkAll);
+            console.log(checkboxes)
+            console.log(chkAll)
+            console.log(otherCheckboxes)
+
+            if (checkboxes.length > 1) {
+                checkboxes.forEach((checkbox) => {
+                    checkbox.addEventListener('change', (e) => {
+                        handleCheckboxChange(e.target, chkAll, otherCheckboxes);
+                    });
+                });
+            }
+        });
+
+        function handleCheckboxChange(target, chkAll, checkboxes) {
+            if (target === chkAll) {
+                checkboxes.forEach((checkbox) => {
+                    checkbox.checked = chkAll.checked;
+                });
+            } else {
+                const allChecked = checkboxes.every((checkbox) => checkbox.checked);
+                chkAll.checked = allChecked;
+            }
+        }
+    }
+}
