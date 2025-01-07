@@ -1015,6 +1015,7 @@ function inputTextReset(){
     btnResets.forEach(function(btn){
         btn.addEventListener('click', function(){
             btn.parentNode.querySelector('.iptText').value = "";
+            fnValid.check();
         })
     })
 }
