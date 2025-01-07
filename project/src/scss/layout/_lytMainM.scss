@@ -151,4 +151,48 @@
         }
         .modAlertPopup .btn {width: 150px;}
     }
+
+    .mainPopup {
+        width: 100%; height: 100vh; background: rgba(0,0,0,0.8); position: fixed; left: 0; top: 0; z-index: 1000; display: none; 
+        flex-direction: column; justify-content: center; align-items: center;
+        &.on {
+            display: flex;
+        }
+        .popArea {
+            width: calc(100% - 32px); height: auto; max-height: calc(100vh - 64px); border-radius: 16px; background: #FFF; position: relative; z-index: 2; overflow: hidden;
+            .popCont {
+                height: calc(100% - 50px);
+                &:has(.imgArea) .txtArea {
+                    display: none;
+                }
+                .imgArea {
+                    width: 100%; height: 100%; overflow-y: auto;
+                    a {width: 100%; display: block;}
+                    img {width: 100%; display: block;}
+                }
+                .txtArea {
+                    width: 100%; height: 100%; padding: 20px; overflow-y: auto;
+                    img {max-width: 100%;}
+                }
+            }
+            .popClose {
+                width: 100%; height: 50px; padding: 13px 16px; background: var(--Bg-Line-bg-200); display: flex; justify-content: space-between;
+                border-radius: 0 0 16px 16px;
+                .frmGroup {
+                    .iptLbl {
+                        color: var(--Gray-700); font-size: rem(15px); font-weight: 400;
+                    }
+                }
+                .btnClose {
+                    color: var(--Gray-900); font-size: rem(15px); font-weight: 600;
+                }
+            }
+            .alignL {
+                display: flex; flex: 1 1 auto; justify-content: flex-start;
+            }
+            .alignR {
+                display: flex; flex: 1 1 auto; justify-content: flex-end;
+            }
+        }
+    }
 }

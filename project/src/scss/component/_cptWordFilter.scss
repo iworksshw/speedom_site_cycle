@@ -1,4 +1,12 @@
 .cptWordFilter {
+    &.eng {
+        .btnArea {
+            .btnGroup {
+                flex-wrap: wrap; justify-content: flex-start; gap: 10px 1%;
+                .btnItem {flex: 0 0 auto;}
+            }
+        }
+    }
     .btnArea {
         .btnGroup {
             width: 100%; display: flex; gap: 1%; align-items: center; justify-content: space-between;
