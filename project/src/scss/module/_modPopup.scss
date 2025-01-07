@@ -389,20 +389,27 @@
         .popupInMotion {width:100%; height: 100%;}
         .popupContainer {width:100%; height: 100%; max-height: calc(100vh - 200px); border-radius: 16px; overflow:hidden;}
         .popupContArea {
-            width: 100%; height: 100%; max-height: calc(100vh - 200px); padding-bottom: 40px; position:relative; background:#fff; display: flex; flex-direction: column;
+            width: 100%; height: 100%; max-height: calc(100vh - 200px); padding-bottom: 24px; position:relative; background:#fff; display: flex; flex-direction: column;
             .btnPopClose {
                 width:44px; height:44px; font-size:0; border:0; background:url(../../images/common/ic_24_pop_close.svg) center no-repeat; 
                 position:absolute; right:22px; top:10px; z-index:10;
             }
             .popCont {
-                width:100%; max-height:calc(100vh - 304px); padding:40px 16px 0; overflow:auto; overflow-y: scroll;
+                width:100%; max-height:calc(100vh - 304px); padding:40px 16px 0; overflow:auto; overflow-y: auto;
+                &:not(.alertTit) {
+                    padding-top: 80px;
+                }
                 .alertTit {margin-bottom: 16px; font-size: rem(20px); font-weight: 700; color: var(--Gray-800); text-align: center;}
                 .alertDt {font-size: rem(16px); color: var(--Gray-800);text-align: center;}
             }
             .popBtm {
-                padding:36px 40px 0; display:flex; justify-content:center;
+                padding:36px 24px 0; display:flex; justify-content:center;
                 &.division {justify-content:space-between;}
                 .btn {padding:0 24px; height: 48px; margin-left:2px; font-size: rem(16px); font-weight: 400; white-space: nowrap; border-radius: 8px;}
+                &:has(.btn:nth-child(2)){
+                    gap: 12px;
+                    .btn {width: 100%;}
+                }
             }
         }
     }

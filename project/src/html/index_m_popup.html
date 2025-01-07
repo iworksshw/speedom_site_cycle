@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>KCYCLE 경륜</title>
+
+	<link rel="stylesheet" href="../common/css/swiper.css" />
+	<link rel="stylesheet" href="../common/css/style.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../common/js/swiper.min.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="../common/js/main_m.js"></script>
+	<!-- <script src="../common/js/basic.js"></script>-->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMainM">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('_ejs/header.ejs', {
+                url: "../../",
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 본문영역 -->
+        <div class="layoutContainer">
+            <div class="mainLayoutWrap">
+                <div class="racingBanner">
+                    <p class="nowGame">
+                        <i>2024.11.21(일) 43회차 3일차</i> <!--20241213 텍스트 수정-->
+                        <b>광명 제 03경주</b><!--20241213 텍스트 수정-->
+                    </p>
+                    <a href="#" class="nowBtn">발매중</a>
+                </div>
+
+                <div class="mainBannerArea">
+                    <div class="swiper bannerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bannerArea">
+                                    <div class="txtArea">
+                                        <div class="tit">광명스피돔 행운쿠폰 이벤트</div>
+                                        <i class="date">2024. 10. 16(수) ~ 10.17(목)</i>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="../images/main/main_m_bannerBg.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bannerArea">
+                                    <div class="txtArea">
+                                        <div class="tit">광명스피돔 행운쿠폰 이벤트 이벤트 두줄노출</div>
+                                        <i class="date">2024. 10. 16(수) ~ 10.17(목)</i>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="../images/main/main_m_bannerBg.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bannerArea">
+                                    <div class="txtArea">
+                                        <div class="tit">광명스피돔 행운쿠폰 이벤트</div>
+                                        <i class="date">2024. 10. 16(수) ~ 10.17(목)</i>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="../images/main/main_m_bannerBg.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bannerArea">
+                                    <div class="txtArea">
+                                        <div class="tit">광명스피돔 행운쿠폰 이벤트</div>
+                                        <i class="date">2024. 10. 16(수) ~ 10.17(목)</i>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="../images/main/main_m_bannerBg.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="quickMenuArea">
+                    <ul class="menuGroup">
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon01" onclick="openPopup('infoAlert');"> <!--경주없는 날일 시 안내 팝업-->
+                                <b>순위예측</b>
+                                <i>AI를 활용한<br/>선수순위예측</i>
+                            </a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon02" onclick="openPopup('infoAlert');">
+                                <b>모의베팅</b>
+                                <i>활동지수로<br/>모의베팅하기</i>
+                            </a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon03" onclick="openPopup('infoAlert');">
+                                <b>실시간영상</b>
+                                <i>현장의 열기를<br/>느껴보세요</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="basicMenuArea">
+                    <ul class="menuGroup">
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon01">출주표</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon02">경주결과</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon03">경주동영상</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon04">경주배당률</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon05">선수성적비교</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon06">초보자가이드</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon07">경륜영상관</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon08">예상과후기</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="boardMenuArea">
+                    <ul class="menuGroup">
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon01 new">경주속보</a> <!--class 'new' : 새글 알림-->
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon02">낙차부상</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon03 new">특별승강급</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon04">심판방송</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon05">공지사항</a>
+                        </li>
+                        <li class="menuItem">
+                            <a href="#" class="menuBtn icon06">보도자료</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="eventArea">
+                    <div class="eventTab">
+                        <ul class="tabBtnGroup">
+                            <li class="btnItem">
+                                <button type="button" class="tabBtn on" title="선택된 탭">전체</button> <!--class 'on' : 현재 선택된 탭-->
+                            </li>
+                            <li class="btnItem">
+                                <button type="button" class="tabBtn new" title="비활성화 탭">이벤트</button> <!--class 'new' : 새 글 알림-->
+                            </li>
+                            <li class="btnItem">
+                                <button type="button" class="tabBtn" title="비활성화 탭">알림</button>
+                            </li>
+                        </ul>
+
+                        <ul class="tabContGroup">
+                            <li class="tabCont on"> <!--class 'on' : 현재 탭-->
+                                <div class="swiper event01Swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tabCont">
+                                <div class="swiper event02Swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tabCont">
+                                <div class="swiper event03Swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum01_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum02_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="eventItem">
+                                                <img src="../images/thum/main_eventthum03_m.png" alt="대체텍스트 : 이벤트 썸네일 내용">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- //본문영역 -->
+
+        <!-- 안내 팝업 -->
+        <div id="infoAlert" class="modAlertPopup"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+            <div class="popupDim">딤영역</div>
+            <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                <div class="popupInMotion">
+                    <div class="popupContainer">
+                        <div class="popupContArea">
+                            <button class="btnPopClose" onclick="closePopup('infoAlert');">닫기</button>
+                            <div class="popCont">
+                                <!-- 팝업 컨텐츠 영역 -->
+                                <div class="alertTit">
+                                    안내
+                                </div>
+                                <p class="alertDt">
+                                    해당 서비스는 경주일에만 제공됩니다 
+                                </p>
+                                <!-- //팝업 컨텐츠 영역 -->
+                            </div>
+        
+                            <!-- 팝업 하단 영역 -->
+                            <div class="popBtm">
+                                <button type="button" class="btn Primary">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 20250107 메인팝업 추가 -->
+        <div class="mainPopup on" id="mainPop01">
+            <div class="popArea">
+                <div class="popCont">
+                    <!-- 팝업 콘텐츠의 영역 (.imgArea과 .txtArea 중 하나만 사용) -->
+
+                    <!-- 이미지 팝업 일 때(이미지가 영역에 무조건 100% 맞춰짐, 영역 내 스크롤 없음) -->
+                    <div class="imgArea">
+                        <a href="#">
+                            <!-- 이미지 영역 -->
+                            <img src="../images/thum/main_mainslide03.png" alt="대상경륜">
+                        </a>
+                    </div>
+
+                    <!-- 텍스트 팝업 일 때(내용이 영역보다 많으면 영역 내 스크롤 생김) -->
+                    <div class="txtArea">
+                        <!-- 콘텐츠 내용 -->
+                    </div>
+
+                    <!-- //팝업 콘텐츠의 영역 -->
+                </div>
+                <div class="popClose">
+                    <div class="alignL">
+                        <div class="frmGroup">
+                            <div class="frmBox maxCont"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">일주일 동안 보지 않기</label></div>
+                        </div>
+                    </div>
+                    <div class="alignR">
+                        <button type="button" class="btnClose" onclick="closePopup('mainPop01');">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+    </div>
+</div>
+
+</div>
+</body>
+</html>

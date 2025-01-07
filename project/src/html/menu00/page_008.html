@@ -1,0 +1,39 @@
+<!-- Header -->
+<%- include('../_ejs/top.ejs', {
+    title: "KCYCLE 경륜",
+    url: "../../"
+}) %>
+
+
+<!-- Alert 팝업 -->
+<div id="logoutTime" class="modAlertPopup on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> 
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('logoutTime');">닫기</button>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <p class="alertDt">
+                            고객님의 안전한 개인정보보호를 위해 로그인 후<br> 30분간 사용이 없으실 경우 자동으로 로그아웃 됩니다.
+                            로그아웃을 원하시지 않으시면 [로그인 연장]을 <br>클릭해주세요
+                        </p>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+
+                    <!-- 팝업 하단 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">로그아웃</button>
+                        <button class="btn Primary">로그인 연장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bottom -->
+<%- include('../_ejs/bottom.ejs', { }) %>
