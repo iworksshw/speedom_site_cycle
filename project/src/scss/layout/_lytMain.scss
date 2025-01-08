@@ -760,6 +760,12 @@
                 h2 {
                     color: #28C39E; font-size: rem(18px);
                 }
+                .newsGroup {
+                    .newsItem {
+                        display: none;
+                        &.on {display: block;}
+                    }
+                }
                 a {
                     margin-top: 12px; display: block; color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 500; line-height: normal;
                     strong {
