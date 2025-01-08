@@ -1,11 +1,11 @@
 <!-- Header -->
 <%- include('../_ejs_eng/top.ejs', {
-    title: "KCYCLE 경륜",
-    url: "../../"
+	title: "KCYCLE Racing",
+	url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytLayout eng">
     <div class="layoutArea">
 
         <!-- 상단영역 -->
@@ -28,7 +28,7 @@
                 <%- include('../_ejs_eng/sub_top.ejs', {
                     location: ['Notification'],
                     subTitle: 'Notification',
-                    subText: '<b>경륜경정총괄본부</b>에서<br>주요 정보를 알려드려요.',
+                    subText: '<b>The General Headquarters for Cycling and Boating</b><br>provides key information for you.',
                     url: "../../",
                     visualClass: "bg05",
                 }) %>
@@ -42,15 +42,25 @@
                             <!-- 게시판 리스트 상단 -->
                             <div class="comGroupTop">
                                 <div class="alignL">
-                                    <div class="unit"><span class="text">전체 <span class="total">999</span> 건</span></div>
+                                    <div class="unit"><span class="text">Total <span class="total">999</span> cases</span></div>
                                 </div>
                                 <div class="alignR">
                                     <ul class="opList">
                                         <li class="item">
                                             <div class="frmGroup">
+                                                <div class="frmBox">
+                                                    <select class="iptSlt">
+                                                        <option value="">All</option>
+                                                        <option value="">Dropdown</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="frmGroup">
                                                 <div class="frmSearch">
                                                     <input type="text" class="iptText" placeholder="내용을 입력하세요">
-                                                    <button class="btnSearch">검색</button>
+                                                    <button class="btnSearch">Search</button>
                                                 </div>
                                             </div>
                                         </li>
@@ -61,7 +71,7 @@
                             <div class="cptPersonList">
                                 <div class="sectArea">
                                     <div class="comNoneData">
-                                        <p class="noneTxt">등록된 게시글이 없습니다.</p>
+                                        <p class="noneTxt">There are no registered posts.</p>
                                     </div>
                                 </div>
                             </div>
