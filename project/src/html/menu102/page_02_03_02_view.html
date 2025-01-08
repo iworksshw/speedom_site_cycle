@@ -1,11 +1,11 @@
 <!-- Header -->
 <%- include('../_ejs_eng/top.ejs', {
-    title: "KCYCLE 경륜",
+	title: "KCYCLE Racing",
     url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytLayout eng">
     <div class="layoutArea">
 
         <!-- 상단영역 -->
@@ -26,34 +26,34 @@
                 <!-- 서브 컨텐츠 내용이 들어오는 영역-->
                 <!-- 서브 탑 (타이틀) -->
                 <%- include('../_ejs_eng/sub_top.ejs', {
-                    location: ['경륜가이드', '경륜선수'],
-                    subTitle: '선수전적비교',
-                    subText: '<b>비교하고 싶은 선수를 검색</b>하여<br/>결과를 확인하세요.',
+                    location: ['K-Cycling','Track Cyclist'],
+                    subTitle: 'Compare Athlete Records',
+                    subText: '<b>Search for the athlete you would like to compare</b> and <br/>see the results.',
                     url: "../../",
-                    visualClass: "bg03",
+                    visualClass: "bg02",
                 }) %>
 
                 <div class="layoutContArea">
                     <div class="cptCompareData">
                         <div class="sectArea">
                             <div class="alertArea">
-                                <p class="txt">비교선수를 선택하여 <br class="mView"/> 선수 상대 전적을 비교해보세요.</p>
+                                <p class="txt">Select a comparison athlete <br class="mView"/> to evaluate their head-to-head record.</p>
                                 <div class="comBtnGroup">
                                     <div class="alignC">
                                         <div class="btnBox min">
-                                            <button class="btn Primary">선수 전적 다시 비교하기</button>
+                                            <button class="btn Primary">Compare Athlete Records Again</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="comTitH2">
-                                <h2>선수 간 전적비교</h2>
+                                <h2>Head-to-Head Record Comparison</h2>
                                 <div class="right">
                                     <div class="frmBox">
                                         <select class="iptSlt">
-                                            <option value="">2024년</option>
-                                            <option value="">2023년</option>
+                                            <option value="">2024</option>
+                                            <option value="">2023</option>
                                         </select>
                                     </div>
                                 </div>
@@ -61,46 +61,25 @@
                             <div class="compareBox">
                                 <ul class="cpList">
                                     <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
+                                        <div class="thumArea"><img src="../../images/thum/thum_compare01.png" alt="Example image of Kang Dong-gook's record comparison"></div>
+                                        <div class="txtArea"><b class="name">Kang Dong-gook</b><div class="cateGroup"><span class="cate blue">A1</span> <span class="cate">Generation 06</span></div>
                                         </div>
                                     </li>
                                     <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
+                                        <div class="thumArea"><img src="../../images/thum/thum_compare01.png" alt="Example image of Kang Dong-gook's record comparison"></div>
+                                        <div class="txtArea"><b class="name">Kang Dong-gook</b><div class="cateGroup"><span class="cate blue">A1</span> <span class="cate">Generation 06</span></div>
                                         </div>
                                     </li>
                                     <li class="cpItem">
-                                        <div class="thumArea">
-                                            <img src="../../images/thum/thum_compare01.png" alt="강동국_전적비교 예시 이미지">
-                                        </div>
-                                        <div class="txtArea">
-                                            <b class="name">강동국</b>
-                                            <div class="cateGroup">
-                                                <span class="cate blue">A1</span>
-                                                <span class="cate">06기</span>
-                                            </div>
+                                        <div class="thumArea"><img src="../../images/thum/thum_compare01.png" alt="Example image of Kang Dong-gook's record comparison"></div>
+                                        <div class="txtArea"><b class="name">Kang Dong-gook</b><div class="cateGroup"><span class="cate blue">A1</span> <span class="cate">Generation 06</span></div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="comTitH3">
-                                <h3>경주 성적비교</h3>
+                                <h3>Race Performance Comparison</h3>
                             </div>
 
                             <div class="comDataTable both">
@@ -115,78 +94,78 @@
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>선수명</th>
-                                                <th>강동국</th>
-                                                <th>강동규</th>
-                                                <th>강동진</th>
+                                                <th>Athlete Name</th>
+                                                <th>Kang Dong-gook</th>
+                                                <th>Kang Dong-gyu</th>
+                                                <th>Kang Dong-jin</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th>등급정보</th>
+                                                <th>Grade Information</th>
                                                 <td>A1</td>
                                                 <td>S1</td>
                                                 <td>B1</td>
                                             </tr>
                                             <tr>
-                                                <th>승률(%)</th>
+                                                <th>Winning Percentage (%)</th>
                                                 <td>5</td>
                                                 <td>30</td>
                                                 <td>5</td>
                                             </tr>
                                             <tr>
-                                                <th>연대율(%)</th>
+                                                <th>Top Two Percentage (%)</th>
                                                 <td>0</td>
                                                 <td>10</td>
                                                 <td>0</td>
                                             </tr>
                                             <tr>
-                                                <th>삼연대율(%)</th>
+                                                <th>Top Three Percentage (%)</th>
                                                 <td>1</td>
                                                 <td>15</td>
                                                 <td>1</td>
                                             </tr>
                                             <tr>
-                                                <th>출주횟수</th>
+                                                <th>Number of Races Entered</th>
                                                 <td>10</td>
                                                 <td>15</td>
                                                 <td>10</td>
                                             </tr>
                                             <tr>
-                                                <th>출주일수</th>
+                                                <th>Number of Competition Days</th>
                                                 <td>30</td>
                                                 <td>40</td>
                                                 <td>30</td>
                                             </tr>
                                             <tr>
-                                                <th>최근 3회 종합득점</th>
+                                                <th>Comprehensive Score Over the Last 3 Races</th>
                                                 <td>81.356</td>
                                                 <td>81.356</td>
                                                 <td>81.356</td>
                                             </tr>
                                             <tr>
-                                                <th>최근 3회 종합순위</th>
+                                                <th>Comprehensive Ranking Over the Last 3 Races</th>
                                                 <td>438</td>
                                                 <td>15</td>
                                                 <td>438</td>
                                             </tr>
                                             <tr>
-                                                <th>총 평균 득점</th>
+                                                <th>Total Average Score</th>
                                                 <td>82.402</td>
                                                 <td>115.402</td>
                                                 <td>115.402</td>
                                             </tr>
                                             <tr>
-                                                <th>총 순위 득점</th>
+                                                <th>Total Score Ranking</th>
                                                 <td>517</td>
                                                 <td>850</td>
                                                 <td>130</td>
                                             </tr>
                                             <tr>
-                                                <th>최근 3경주 200m 최고기록</th>
-                                                <td>11”58</td>
-                                                <td>11”58</td>
-                                                <td>11”58</td>
+                                                <th>Best 200m Record Over the Last 3 Races</th>
+                                                <td>11&rdquo;58</td>
+                                                <td>11&rdquo;58</td>
+                                                <td>11&rdquo;58</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -194,7 +173,7 @@
                             </div>
                             
                             <div class="comTitH3">
-                                <h3>상대 전적 결과</h3>
+                                <h3>Head-to-Head Results</h3>
                             </div>
 
                             <div class="comDataTable both">
@@ -209,90 +188,84 @@
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>경주회차</th>
-                                                <th>선수 1(순위)</th>
-                                                <th>선수 2(순위)</th>
-                                                <th>선수 3(순위)</th>
+                                                <th>Race Session</th>
+                                                <th>Athlete 1 (Placing)</th>
+                                                <th>Athlete 2 (Placing)</th>
+                                                <th>Athlete 3 (Placing)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating red">강동규 (1위)</span>
-                                                </td>
-                                                <td>강동진 (5위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20)</button></th>
+                                                <td>Kang Dong-gook (6)</td>
+                                                <td><span class="rating red">Kang Dong-gyu (1)</span></td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20)</button> </th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating blue">강동규 (2위)</span>
-                                                </td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20)</button> </th>
+                                                <td>Kang Dong-gook (6)</td>
+                                                <td><span class="rating blue">Kang Dong-gyu (2)</span></td>
                                                 <td>-</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
-                                                <td>
-                                                    <span class="rating mint">강동규 (3위)</span>
-                                                </td>
-                                                <td>강동진 (5위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
+                                                <td><span class="rating mint">Kang Dong-gyu (3)</span></td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                             <tr>
-                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">28회차 2일차 창원 10경주(2022.07.20) </button></th>
-                                                <td>강동국 (6위)</td>
+                                                <th><button type="button" class="txtBtn" onclick="openPopup('raceResult01')">10th Race on Day 2 of the 28th Racing Series in Changwon (2022.07.20) </button></th>
+                                                <td>Kang Dong-gook (6)</td>
                                                 <td>-</td>
-                                                <td>강동진 (5위)</td>
+                                                <td>Kang Dong-jin (5)</td>
                                             </tr>
                                         </tbody>
                                     </table>
