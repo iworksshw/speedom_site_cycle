@@ -1,11 +1,11 @@
 <!-- Header -->
 <%- include('../_ejs_eng/top.ejs', {
-	title: "KCYCLE 경륜",
-	url: "../../"
+	title: "KCYCLE Racing",
+    url: "../../"
 }) %>
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytLayout eng">
 	<div class="layoutArea">
 
 		<!-- 상단영역 -->
@@ -25,26 +25,26 @@
 
 				<!-- 서브 컨텐츠 내용이 들어오는 영역-->
 				<!-- 서브 탑 (타이틀) -->
-				<%- include('../_ejs_eng/sub_top.ejs', {
-					location: ['경륜가이드', '순위정보'],
-					subTitle: '1착 다승 누적 순위',
-					subText: '경륜선수의 <br><b>1착 다승 누적 순위</b>를 알려드려요.',
-					url: "../../",
-					visualClass: "bg03",
-				}) %> 
+                <%- include('../_ejs_eng/sub_top.ejs', {
+                    location: ['K-Cycling','Track Cyclist','Ranking Information'],
+                    subTitle: 'Cumulative Ranking for Most 1st Place Finishes',
+                    subText: 'We provide <br><b>the cumulative ranking for most 1st place finishes</b> among cycling athletes.',
+                    url: "../../",
+                    visualClass: "bg02",
+                }) %>
 				
 				<div class="layoutContArea">
 					
 					<div class="comSubInfo">
-						<h2 class="infoTit">다승누적순위는 현역 선수를 대상으로 안내드리고 있습니다.</h2>
-						<p class="info">특별경주 승수는 제외한 데이터이오니 이용에 참고하여 주시기 바랍니다.</p>
+						<h2 class="infoTit">The cumulative ranking for most wins is provided for active athletes only.</h2>
+						<p class="info">Please note that this data excludes wins from special races.</p>
 					</div>
 					
 					<div class="cptSection">
 						<div class="sectArea">
 
 							<div class="comTitH2">
-								<h2>전체 1착 다승 누적 순위 안내</h2>
+								<h2>Guide to Overall Cumulative Ranking for 1st Place Finishes</h2>
 							</div>
 
 							<div class="comDataTable">
@@ -55,19 +55,18 @@
 											<col span="8" style="width:auto;">
 										</colgroup>
 										<thead>
-											<th>순위</th>
-											<th>선수명</th>
-											<th>기수</th>
-											<th><button type="button" class="sortIco tRed" title="내림차순으로 정렬">전체 누적승수</button></th>
-											<th><button type="button" class="sortIco" title="내림차순으로 정렬">선행 누적승수</button></th><!-- class="sortIco up" title="오름차순으로 정렬" -->
-											<th><button type="button" class="sortIco" title="내림차순으로 정렬">젖히기 누적승수</button></th>
-											<th><button type="button" class="sortIco" title="내림차순으로 정렬">추입 누적승수</button></th>
-											<th><button type="button" class="sortIco" title="내림차순으로 정렬">마크 누적승수</button></th>
+											<th>Ranking</th>
+											<th>Athlete Name</th>
+											<th>Generation</th>
+											<th><button type="button" class="sortIco tRed" title="Sort in descending order">Total Cumulative Wins</button></th>
+											<th><button type="button" class="sortIco" title="Sort in descending order">Total Lead Cumulative Wins</button></th><!-- class="sortIco up" title="오름차순으로 정렬" --><th><button type="button" class="sortIco" title="Sort in descending order">Total Quick-timed Overtake Cumulative Wins</button></th>
+											<th><button type="button" class="sortIco" title="Sort in descending order">Total Late Charge Cumulative Wins</button></th>
+											<th><button type="button" class="sortIco" title="Sort in descending order">Total Mark Cumulative Wins</button></th>
 										</thead>
 										<tbody>
 											<tr>
 												<td>1</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -77,7 +76,7 @@
 											</tr>
 											<tr>
 												<td>2</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -87,7 +86,7 @@
 											</tr>
 											<tr>
 												<td>3</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -97,7 +96,7 @@
 											</tr>
 											<tr>
 												<td>4</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -107,7 +106,7 @@
 											</tr>
 											<tr>
 												<td>5</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -117,7 +116,7 @@
 											</tr>
 											<tr>
 												<td>6</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -127,7 +126,7 @@
 											</tr>
 											<tr>
 												<td>7</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -137,7 +136,7 @@
 											</tr>
 											<tr>
 												<td>8</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -147,7 +146,7 @@
 											</tr>
 											<tr>
 												<td>9</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -157,7 +156,7 @@
 											</tr>
 											<tr>
 												<td>10</td>
-												<td>임채빈</td>
+												<td>Lim Chae-bin</td>
 												<td>8</td>
 												<td>547</td>
 												<td>113</td>
@@ -190,14 +189,6 @@
 					</div>
 
 				</div>
-					
-				<!-- 서브 바텀 (담당자) -->
-				<%- include('../_ejs_eng/sub_btm.ejs', {
-					team: '경륜기획팀',
-					name: '조준호',
-					phone: '02-2067-5711',
-					url: "../../",
-				}) %>
 				
 				<!-- //서브 컨텐츠 내용이 들어오는 영역-->
 				

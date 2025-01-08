@@ -1,0 +1,79 @@
+/* 영문버전 수정 */
+
+.eng {
+    /* 경륜동영상 */
+    .comSchDetail .searchOptionBox {
+        .iptRdoChk[type=checkbox] + label {
+            min-width: max-content; padding: 0 20px;
+        }
+        > dl dd .innerBox {
+            flex-wrap: wrap; gap: 10px 40px;
+            .subMenu .schBox .schDet {
+                min-width: max-content; padding: 0 15px; white-space: nowrap;
+            } 
+            .frmGroup {
+                flex-wrap: wrap;
+            }
+            .frmBox {
+                width: max-content;
+            }
+        }
+        @include media('mobile') {
+            .iptRdoChk[type=checkbox] + label {
+                min-width: max-content; padding: 0 20px;
+            }
+            > dl dt {
+                width: 100%;
+            }
+            > dl dd .innerBox {
+                flex-wrap: wrap; gap: 10px 40px;
+                .subMenu .schBox .schDet {
+                    min-width: max-content; padding: 0 15px; white-space: nowrap;
+                } 
+                .frmGroup {
+                    flex-wrap: nowrap;
+                    &.frmGroup.gridItem4 {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+                .frmBox {
+                    width: auto;
+                }
+            }
+        }
+    }
+    /* 경륜동영상 상세부분 */
+    .cptTheaterDetail {
+        .theaterDetail {
+            height: 100vh; overflow-y: auto;
+        }
+    }
+    .cptTheaterDetail [class*=Area] {
+        &.funcArea {
+            height: 100vh;
+        }
+        ul.btnGroup > li {
+            width: 100%;
+        }
+        .raceInfo {
+            .item {
+                flex-wrap: wrap;
+                .itemTit {
+                    width: 100%;
+                }
+                .itemVal {
+                    width: 50%;
+                }
+            }
+            &.half {
+                .item {
+                    width: 100%; flex-wrap: nowrap;
+                    .itemTit {width: 50%; flex-shrink: 0;}
+                }
+            }
+            &.full .item .itemVal + .itemVal {
+                margin-left: 0;
+            }
+        }
+    }
+}
