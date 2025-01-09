@@ -1,6 +1,82 @@
 /* 영문버전 수정 */
 
 .eng {
+    /* 출주표 */
+    .comDateSwiper {
+        &.sticky.sOn {
+            .dateSwiper {
+                top: 0;
+            }
+        }
+        .dateSwiper {
+            .swiper-slide {
+                .dateBox {
+                    width: max-content; padding: 11px 10px; border-radius: 5px;
+                }
+            }
+        }
+    }
+    .comDataTable {
+        .legend {
+            width: 50px;
+        }
+        .name {
+            width: 100%; justify-content: flex-start;
+        }
+    }
+    .modLinkScroll {
+        .comTitH3 {
+            .right {
+                .legendList {
+                    .lgItem {
+                        .legend {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        @include media('mobile') {
+            .comTitH3:has(.right) {
+                flex-wrap: wrap;
+                .right {
+                    .legendList {
+                        flex-wrap: wrap;
+                        .lgItem {
+                            width: 100%; display: flex; flex-direction: row-reverse; align-items: center; gap: 5px;
+                            .legend {
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 상세페이지 */
+    .cptBoardView {
+        @include media('mobile') {
+            .boardViewArea {
+                .viewTop {
+                    .info {flex-wrap: wrap; gap: 0 12px;}
+                } 
+            } 
+        }
+    } 
+    /* 이전/다음 페이지 */
+    .comPrevNext {
+        @include media('mobile') {
+            dl {
+                gap: 10px;
+                dt {
+                    width: 130px; flex: 0 0 auto; justify-content: flex-end;
+                }
+                dd {
+                    width: calc(100% - 140px);
+                }
+            }
+        }
+    }
     /* 경륜동영상 */
     .comSchDetail .searchOptionBox {
         .iptRdoChk[type=checkbox] + label {
