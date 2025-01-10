@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     aiCharts.forEach(function(aiChart){
         const bar = aiChart.querySelector(".progressBar");
         const num = aiChart.querySelector(".chartNum em").innerHTML;
-        const barnum = (num*1.58) + 2;
+        const barnum = (num*1.58)*2 + 2;
 
         bar.style.cssText = `transform: rotateZ(${barnum}deg);`
     })
