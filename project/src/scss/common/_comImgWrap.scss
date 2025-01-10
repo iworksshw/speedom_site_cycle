@@ -8,6 +8,9 @@
         width: 100%; display: flex; align-items: stretch; 
         .imgArea {
             flex: 0 0 100%; overflow: hidden; line-height: 1; text-align: center;
+            &:has(.plyr){
+                border: 1px solid #000;
+            }
             .imgTxt {
                 margin-top: 12px; font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; text-align: left; word-break: keep-all;
                 &.center {text-align: center;}

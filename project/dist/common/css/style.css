@@ -1195,6 +1195,7 @@ input[type=radio] {
 	font-size: 0;
 	opacity: 0.01;
 	overflow: hidden;
+	display: block;
 }
 
 input[type=checkbox] {
@@ -1203,6 +1204,7 @@ input[type=checkbox] {
 	font-size: 0;
 	opacity: 0.01;
 	overflow: hidden;
+	display: block;
 }
 
 select {
@@ -1584,6 +1586,12 @@ body:has(.cptHeader.on) .allMenuArea {
 .cptHeader .gnbArea .gnbBox .depth2Area : 99
 .cptHeader .allMenuArea : ----------------200
 
+#퀵메뉴
+.cptQuickMenu ----------------------------95
+
+#하단 플로팅 배너
+.lytMain .layoutArea .layoutContainer .bannerBtm ----95
+
 #테이블
 .comDataTable .tableArea table thead tr th - 10
 
@@ -1657,20 +1665,6 @@ body:has(.cptHeader.on) .allMenuArea {
 	height: 48px;
 	align-content: center;
 }
-@media screen and (max-width: 767px) {
-	.frmGroup.email {
-		flex-wrap: wrap;
-	}
-	.frmGroup.email .frmBox:nth-child(1), .frmGroup.email .frmBox:nth-child(2) {
-		width: calc(50% - 6px);
-		min-width: none;
-	}
-	.frmGroup.email .frmBox:nth-child(3) {
-		width: 100%;
-		min-width: none;
-	}
-}
-
 /* ----- 폼 박스 ----- */
 .frmBox {
 	width: 100%;
@@ -2010,6 +2004,8 @@ body:has(.cptHeader.on) .allMenuArea {
 }
 .iptRdoChk[type=radio]:checked + label,
 .iptRdoChk[type=checkbox]:checked + label {
+	color: var(--Gray-900);
+	font-weight: 600;
 	border: 1px solid var(---Primary, #078B7B);
 	background: #F0FAF7;
 }
@@ -2915,7 +2911,7 @@ select.iptSlt.typeLine {
 		width: 100%;
 		margin: 0;
 		background-color: #fff;
-		z-index: 100;
+		z-index: 95;
 	}
 	.lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutContArea .cptBoardList,
 	.lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutContArea .cptSection:not(:first-of-type),
@@ -3299,6 +3295,9 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .columnGroup .columnItem .rowItem {
 	border-bottom: 1px solid #e9ebf0;
 }
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .columnGroup .columnItem .rowItem:last-child {
+	border-bottom: 0;
+}
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .columnGroup .columnItem:nth-child(2) .plNum {
 	color: #000;
 }
@@ -3584,14 +3583,16 @@ select.iptSlt.typeLine {
 	bottom: -4px;
 	left: 50%;
 	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .aiChart .chartNum em {
-	font-size: 1rem;
+	font-size: 0.875rem;
 	color: var(--Gray-800);
 	font-weight: 600;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .aiChart .chartNum i {
-	font-size: 0.75rem;
+	font-size: 0.625rem;
 	color: #111;
 	font-style: normal;
 }
@@ -4352,7 +4353,7 @@ select.iptSlt.typeLine {
 	bottom: -100%;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 999;
+	z-index: 95;
 	transition: bottom 0.4s;
 }
 .lytMain .layoutArea .layoutContainer .bannerBtm.on {
@@ -5735,6 +5736,8 @@ select.iptSlt.typeLine {
 .cptHeader .quickArea .quickBox .guickMenuGroup .item {
 	padding-left: 29px;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 .cptHeader .quickArea .quickBox .guickMenuGroup .item::before {
 	content: "";
@@ -5759,6 +5762,36 @@ select.iptSlt.typeLine {
 .cptHeader .quickArea .quickBox .guickMenuGroup .item a[target=_blank] {
 	padding-right: 20px;
 	background: url(../../images/common/ic_link_blank.svg) right 2px center no-repeat;
+}
+.cptHeader .quickArea .quickBox .guickMenuGroup .item .txt {
+	color: var(--Gray-700);
+	font-size: 0.9375rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+}
+.cptHeader .quickArea .quickBox .guickMenuGroup .item .viewPer {
+	color: var(--Gray-700);
+	font-size: 0.9375rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-left: 4px;
+}
+.cptHeader .quickArea .quickBox .guickMenuGroup .item .btnView {
+	width: 16px;
+	height: 16px;
+	font-size: 0;
+	border-radius: 4px;
+	border: 1px solid var(--Gray-300);
+}
+.cptHeader .quickArea .quickBox .guickMenuGroup .item .btnView.minus {
+	background: url(../../images/common/ic_12_header_minus.svg) center no-repeat;
+	margin-left: 8px;
+}
+.cptHeader .quickArea .quickBox .guickMenuGroup .item .btnView.plus {
+	background: url(../../images/common/ic_12_header_plus.svg) center no-repeat;
+	margin-left: 4px;
 }
 .cptHeader .headArea {
 	width: 100%;
@@ -5979,7 +6012,10 @@ select.iptSlt.typeLine {
 	height: 470px;
 	display: block;
 }
-.cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu.on .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:hover .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:focus .depth1Name {
+.cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area).active .depth1Name {
+	background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
+}
+.cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu.on .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:hover .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:focus .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu.active .depth1Name {
 	color: var(---Primary);
 }
 .cptHeader .gnbArea .gnbBox .depth2Area {
@@ -6029,7 +6065,7 @@ select.iptSlt.typeLine {
 	line-height: normal;
 	display: block;
 }
-.cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu:hover {
+.cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu:hover, .cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu.active {
 	border-radius: 12px;
 	background: #F9FAFC;
 }
@@ -6073,6 +6109,10 @@ select.iptSlt.typeLine {
 }
 .cptHeader .gnbArea .gnbBox .depth3Group .depth3Menu {
 	width: 100%;
+}
+.cptHeader .gnbArea .gnbBox .depth3Group .depth3Menu.active .depth3Name {
+	text-decoration: underline;
+	text-underline-position: under;
 }
 .cptHeader .gnbArea .gnbBox .depth3Group .depth3Menu .depth3Name {
 	width: 100%;
@@ -6351,6 +6391,9 @@ select.iptSlt.typeLine {
 	transition: all 0.1s;
 }
 .allMenuArea .allMenuGroup .allMenuBox .depth3Group .depth3Menu .depth3Name:hover::after {
+	opacity: 1;
+}
+.allMenuArea .allMenuGroup .allMenuBox .depth3Group .depth3Menu.active .depth3Name::after {
 	opacity: 1;
 }
 .allMenuArea .allMenuGroup .allMenuBox .quickLink {
@@ -7318,7 +7361,7 @@ select.iptSlt.typeLine {
 	top: 200px;
 	box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
 	overflow: hidden;
-	z-index: 999;
+	z-index: 95;
 	transition: opacity 0.3s;
 }
 .cptQuickMenu .quickHead {
@@ -9454,6 +9497,17 @@ select.iptSlt.typeLine {
 		margin-top: 40px;
 		height: 10px;
 		background: #f4f6fa;
+	}
+}
+form:has(.cptSection:first-child) {
+	margin-top: 60px;
+}
+form:has(.cptSection:first-child):first-child {
+	margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+	form:has(.cptSection:first-child) {
+		margin-top: 40px;
 	}
 }
 
@@ -12464,6 +12518,7 @@ select.iptSlt.typeLine {
 	display: flex;
 	column-gap: 8px;
 	align-items: center;
+	justify-content: space-between;
 }
 .cptDateSelect .selectBox .layerPopup .popCont .dateSetting .btnGroup {
 	display: flex;
@@ -17583,6 +17638,7 @@ select.iptSlt.typeLine {
 		right: -17px;
 	}
 	.cptBatSimul .smlCont .smryArea .userRecord .tooltipBox {
+		left: auto;
 		right: calc(24% - 40px);
 	}
 	.cptBatSimul .smlCont .smryArea .rankingBox .tooltipBox {
@@ -19730,6 +19786,8 @@ select.iptSlt.typeLine {
 	position: relative;
 	padding-bottom: 56.25%;
 	margin-bottom: 8px;
+	border-radius: 12px;
+	overflow: hidden;
 }
 .cptSchRstCont .thumGall .list a .thum img {
 	display: block;
@@ -19789,6 +19847,15 @@ select.iptSlt.typeLine {
 	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
+}
+.cptSchRstCont .thumGall .list a .videoPlayback > button[class*=btnPlay]:disabled {
+	cursor: default;
+}
+.cptSchRstCont .thumGall .list a .videoPlayback > button[class*=btnPlay]:disabled:before {
+	opacity: 0.5;
+}
+.cptSchRstCont .thumGall .list a .videoPlayback > button[class*=btnPlay]:disabled span {
+	color: var(--Gray-300);
 }
 .cptSchRstCont .thumGall .list a .videoPlayback > button.btnPlayAll:before {
 	background: url("../../images/contents/cont04_01_icon1.svg") no-repeat 50%;
@@ -20335,14 +20402,14 @@ select.iptSlt.typeLine {
 	display: flex;
 	width: 262px;
 	height: 154px;
-	padding: 6px;
+	padding: 4px;
 	border-radius: 8px;
 	background-color: #A3D3E7;
 	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .cptTheater .eventNoti .listEvent .imgBox .bg {
 	width: 100%;
-	border-radius: 8px;
+	border-radius: 6px;
 	background-size: cover;
 }
 .cptTheater .eventNoti .listEvent .txtMore {
@@ -20402,6 +20469,10 @@ select.iptSlt.typeLine {
 	.cptTheater .sectArea .btnMore {
 		width: 100%;
 		height: 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
 	}
 	.cptTheater .sectArea[class*=addBg] {
 		padding: 60px 0;
@@ -20750,7 +20821,7 @@ select.iptSlt.typeLine {
 }
 @media screen and (max-width: 767px) {
 	.cptTheater .listGallery .listGroup:not(.swiper-wrapper) {
-		gap: 32px 24px;
+		gap: 24px 24px;
 	}
 	.cptTheater .listGallery .listGroup .listItem {
 		width: calc(50% - 12px);
@@ -22756,6 +22827,10 @@ select.iptSlt.typeLine {
 	background: #fff;
 }
 @media screen and (max-width: 767px) {
+	.popupContainer .comDataTable .tableArea {
+		width: 100%;
+		margin-left: 0;
+	}
 	.comDataTable .tableArea {
 		width: calc(100% + 32px);
 		margin-left: -16px;
@@ -22812,6 +22887,7 @@ select.iptSlt.typeLine {
 }
 .comDataTable .profile .info .other {
 	margin-top: 4px;
+	font-weight: 400;
 	display: flex;
 	white-space: nowrap;
 }
@@ -23138,16 +23214,16 @@ select.iptSlt.typeLine {
 		width: calc(100% + 16px);
 		overflow: auto;
 	}
-	.comContTable .tableArea table th {
+	.comContTable table th {
 		padding: 8px 5px;
 		font-size: 0.875rem;
 		word-break: keep-all;
 	}
-	.comContTable .tableArea table tbody td {
+	.comContTable table tbody td {
 		padding: 8px 5px;
 		font-size: 0.875rem;
 	}
-	.comContTable .tableArea table tbody td .mark {
+	.comContTable table tbody td .mark {
 		height: 20px;
 		line-height: 20px;
 	}
@@ -24246,6 +24322,9 @@ select.iptSlt.typeLine {
 	line-height: 1;
 	text-align: center;
 }
+.comImgWrap .imgGroup .imgArea:has(.plyr) {
+	border: 1px solid #000;
+}
 .comImgWrap .imgGroup .imgArea .imgTxt {
 	margin-top: 12px;
 	font-size: 1rem;
@@ -24543,7 +24622,7 @@ select.iptSlt.typeLine {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-end;
 }
 .comGroupTop .alignR {
 	width: 100%;
@@ -25651,14 +25730,15 @@ select.iptSlt.typeLine {
 	padding: 6px 16px;
 	border-radius: 8px;
 	background: var(--Bg-Line-bg-200);
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
 	column-gap: 15px;
 }
 .comCalendar .dayGroup {
 	min-width: 290px;
 	padding: 16px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
 	gap: 14px 15px;
 }
 .comCalendar .dayItem {
@@ -28956,8 +29036,8 @@ select.iptSlt.typeLine {
 	display: block;
 }
 .comSchDetail .detBox.toggleMenu > .searchOptionBox dl dt span {
-	font-weight: 600;
-	color: var(---Primary, #078B7B);
+	font-weight: 300;
+	color: var(--Gray-600);
 }
 .comSchDetail .detBox.toggleMenu > .searchOptionBox:not(:first-child) {
 	display: none;
@@ -29124,12 +29204,21 @@ select.iptSlt.typeLine {
 @media screen and (max-width: 767px) {
 	.comSchDetail .schBox {
 		gap: 12px;
+		flex-wrap: nowrap;
+	}
+	.comSchDetail .schBox:has(.schDet) {
 		flex-wrap: wrap;
+	}
+	.comSchDetail .schBox:has(.schDet) .schSelc {
+		flex: none;
+	}
+	.comSchDetail .schBox:has(.schDet) .schBtn {
+		width: calc(50% - 6px);
 	}
 	.comSchDetail .schBox .schSelc {
 		width: 100%;
 		height: 48px;
-		flex: none;
+		flex: 1 1 auto;
 		border: 2px solid transparent;
 	}
 	.comSchDetail .schBox .schSelc .box .selc {
@@ -29143,7 +29232,8 @@ select.iptSlt.typeLine {
 		font-size: 1rem;
 	}
 	.comSchDetail .schBox .schBtn {
-		width: calc(50% - 6px);
+		width: 86px;
+		flex: 0 0 auto;
 	}
 	.comSchDetail .schBox .schBtn button {
 		width: 100%;
@@ -29920,6 +30010,9 @@ select.iptSlt.typeLine {
 	width: 600px;
 	height: auto;
 	max-height: calc(100% - 200px);
+}
+.modMdPopup .popupArea .popupInMotion {
+	width: 100%;
 }
 .modMdPopup .popupArea .popupContainer {
 	width: 100%;
