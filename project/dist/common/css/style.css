@@ -3524,6 +3524,9 @@ select.iptSlt.typeLine {
 	top: 4px;
 	right: -6px;
 }
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .playerName .plInfo .info:nth-child(3)::after {
+	top: 2px;
+}
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .aiChart {
 	position: relative;
 	width: 90px;
@@ -3935,6 +3938,9 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .mainSlide .swiper-slide .mainItem img {
 	width: 100%;
 }
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox:not(:has(.swiper-slide:nth-child(3))) .slideUnit {
+	display: none;
+}
 .lytMain .layoutArea .layoutContainer .mediaArea {
 	margin-top: 20px;
 }
@@ -4219,6 +4225,9 @@ select.iptSlt.typeLine {
 	border-radius: 10px;
 }
 .lytMain .layoutArea .layoutContainer .newsArea .newsSlideWrap .slideBox .newsPost {
+	width: 100%;
+	height: 180px;
+	display: block;
 	position: relative;
 }
 .lytMain .layoutArea .layoutContainer .newsArea .newsSlideWrap .slideBox .newsPost .thumArea {
@@ -4637,7 +4646,7 @@ select.iptSlt.typeLine {
 	top: 448px;
 	left: 0;
 	right: 0;
-	z-index: 200;
+	z-index: 95;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .visualWrap .inner > div[class*=Visual] .swiper .paginationWrap .swiper-pagination {
 	width: auto;
@@ -5997,7 +6006,7 @@ select.iptSlt.typeLine {
 	padding-right: 0;
 	color: var(--Gray-800);
 	font-size: 1.25rem;
-	font-weight: 800;
+	font-weight: 600;
 	line-height: normal;
 	display: flex;
 }
@@ -7380,6 +7389,9 @@ select.iptSlt.typeLine {
 	font-size: 1rem;
 	font-weight: 600;
 	color: #a7ffef;
+}
+.cptQuickMenu .quickHead .point i {
+	font-style: normal;
 }
 .cptQuickMenu .quickHead .linkLogin {
 	padding-left: 4px;
@@ -9828,7 +9840,6 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 600;
 	display: inline-block;
 	vertical-align: middle;
-	white-space: nowrap;
 }
 .cptEtcInfo.col2 dd {
 	display: flex;
@@ -11431,6 +11442,9 @@ form:has(.cptSection:first-child):first-child {
 .cptCalendar .calenWrap .yearData .yearArw.next {
 	transform: rotate(180deg);
 }
+.cptCalendar .calenWrap .yearData .yearArw:disabled {
+	opacity: 0.3;
+}
 .cptCalendar .calenWrap .yearData .yearTxt {
 	margin: 0 60px;
 	font-size: 3.125rem;
@@ -12140,6 +12154,9 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptCompareData .compareBox .cpList .cpItem {
 	text-align: center;
+}
+.cptCompareData .compareBox .cpList .cpItem:not(:has(.thumArea)) {
+	display: none;
 }
 .cptCompareData .compareBox .cpList .cpItem .thumArea {
 	width: 112px;
@@ -13375,6 +13392,12 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.cptJoinTable .joinArea .certifyResult + .comBtnGroup, .cptJoinTable .joinArea .comGroupTop .certifyResult + .btnList, .comGroupTop .cptJoinTable .joinArea .certifyResult + .btnList, .cptJoinTable .joinArea .comTitH2 .right .certifyResult + .btnList, .comTitH2 .right .cptJoinTable .joinArea .certifyResult + .btnList {
 		margin: 40px 0;
+	}
+	.cptJoinTable .joinArea .registrationTitle h2 {
+		font-size: 1.5rem;
+	}
+	.cptJoinTable .joinArea .registrationTitle h3 {
+		font-size: 1rem;
 	}
 	.cptJoinTable .joinArea .membershipTitle h2 {
 		font-size: 1.375rem;
@@ -16275,6 +16298,90 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.cptTerms .termsPopArea .termsGroup h2:first-child {
 		margin-top: 0;
+	}
+}
+
+/* 개발에서 팝업에 .termsContent만 붙여 사용할 때의 CSS */
+.wrap:not(:has(.cptTerms)) .termsContent .termsTitle {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
+	color: var(--Gray-900, #111);
+	font-size: 1.75rem;
+	font-weight: 500;
+	line-height: 140%; /* 39.2px */
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
+	color: var(--Gray-800, #2C2C2C);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup {
+	margin-top: 40px;
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
+	color: var(---Primary, #078B7B);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 140%; /* 33.6px */
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
+	margin-top: 20px;
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
+	margin-top: 60px;
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
+	color: var(--Gray-800, #2C2C2C);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
+	margin-top: 32px;
+}
+.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
+	color: var(--Gray-900, #111);
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 140%; /* 25.2px */
+}
+@media screen and (max-width: 767px) {
+	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle {
+		display: block;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
+		font-size: 1.625rem;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright {
+		margin-top: 4px;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
+		font-size: 0.9375rem;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup {
+		margin-top: 32px;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
+		font-size: 1.25rem;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
+		margin-top: 16px;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
+		margin-top: 40px;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
+		font-size: 0.9375rem;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
+		margin-top: 24px;
+	}
+	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
+		font-size: 1rem;
 	}
 }
 
@@ -19904,6 +20011,16 @@ form:has(.cptSection:first-child):first-child {
 	background: url("../../images/common/ic_12_arr_bottom.svg") center no-repeat;
 	background-size: 100%;
 }
+@media screen and (max-width: 1280px) {
+	.cptSchRstCont .thumGall .list {
+		width: 33.33%;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.cptSchRstCont .thumGall .list {
+		width: 50%;
+	}
+}
 @media screen and (max-width: 767px) {
 	.cptSchRstCont {
 		margin-top: 40px;
@@ -22582,9 +22699,12 @@ form:has(.cptSection:first-child):first-child {
 	transform: translateY(-50%);
 	background: url(../../images/common/ic_16_tbl_sort.svg) no-repeat center center;
 }
+.comDataTable .tableArea table thead tr th .sortIco.btm {
+	padding-right: 0;
+}
 .comDataTable .tableArea table thead tr th .sortIco.btm::before {
 	top: 110%;
-	right: 50%;
+	right: calc(50% - 8px);
 }
 .comDataTable .tableArea table thead tr th .sortIco.up::before {
 	transform: translateY(-50%) rotate(180deg) !important;
@@ -22706,6 +22826,12 @@ form:has(.cptSection:first-child):first-child {
 }
 .comDataTable .tableArea .bdbBold {
 	border-bottom: 1px solid var(--Gray-300) !important;
+}
+.comDataTable .tableArea .bdr {
+	border-right: 1px solid var(--Bg-Line-line-200) !important;
+}
+.comDataTable .tableArea .bdb {
+	border-bottom: 1px solid var(--Bg-Line-line-200) !important;
 }
 .comDataTable.colLineDel .tableArea.player01 table tbody th {
 	color: var(--font-700);
@@ -22883,6 +23009,7 @@ form:has(.cptSection:first-child):first-child {
 	display: block;
 }
 .comDataTable .profile .info .name {
+	padding-left: 0;
 	justify-content: flex-start;
 }
 .comDataTable .profile .info .other {
@@ -22980,9 +23107,10 @@ form:has(.cptSection:first-child):first-child {
 	background: #FF66AF;
 }
 .comDataTable .name {
+	padding-left: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .comDataTable .prediction {
 	display: flex;
@@ -23796,6 +23924,9 @@ form:has(.cptSection:first-child):first-child {
 		width: 100%;
 		max-width: none;
 	}
+	.comTitH2.mRow .rightTxt {
+		margin-left: 0;
+	}
 	.comTitH2.mRow .etcAdds {
 		margin-left: 0;
 	}
@@ -24335,6 +24466,9 @@ form:has(.cptSection:first-child):first-child {
 }
 .comImgWrap .imgGroup .imgArea .imgTxt.center {
 	text-align: center;
+}
+.comImgWrap .imgGroup .imgArea .imgTxt em {
+	font-weight: 700;
 }
 .comImgWrap img {
 	display: block;
@@ -26039,6 +26173,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
+	gap: 20px;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .alignR {
 	width: 100%;
@@ -26972,6 +27107,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
+	gap: 20px;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .alignR {
 	width: 100%;
@@ -27453,7 +27589,8 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 300;
 	color: var(--Gray-600);
 	line-height: 1.6;
-	display: inline-block;
+	display: flex;
+	align-items: center;
 }
 .comPlayerGrade .gradeGroup .gradeItem .nameArea .desc .number {
 	width: 16px;

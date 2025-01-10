@@ -35,7 +35,10 @@
                         .sortIco {
                             position: relative; padding-right: 16px; font-weight: 600; font-size: unset;
                             &::before {content: ''; position: absolute; top: 50%; right: 0; width: 16px; height: 16px; transform: translateY(-50%); background: url(../../images/common/ic_16_tbl_sort.svg) no-repeat center center;}
-                            &.btm::before {top: 110%; right: 50%;}
+                            &.btm{
+                                padding-right: 0;
+                                &::before {top: 110%; right: calc(50% - 8px);;}
+                            }
                             &.up::before {transform: translateY(-50%) rotate(180deg) !important;}
                             &.tRed::before {background: url(../../images/common/ic_16_tbl_sort_red.svg) no-repeat center center;}
                         }
@@ -95,6 +98,8 @@
         .tbGray {background: #EDF4F8;}
         .bdrBold {border-right: 1px solid var(--Gray-300) !important;}
         .bdbBold {border-bottom: 1px solid var(--Gray-300) !important;}
+        .bdr {border-right: 1px solid var(--Bg-Line-line-200) !important;}
+        .bdb {border-bottom: 1px solid var(--Bg-Line-line-200) !important;}
     }
     &.colLineDel {
         .tableArea {
@@ -271,7 +276,7 @@
         }
         .info {
             margin-left: 8px; display: block; 
-            .name {justify-content: flex-start;}
+            .name {padding-left: 0; justify-content: flex-start;}
             .other {margin-top: 4px; font-weight: 400; display: flex; white-space: nowrap;}
         }
     }
@@ -295,7 +300,7 @@
         &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
         &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
     }
-    .name {display: flex; align-items: center; justify-content: center;}
+    .name {padding-left: 20px; display: flex; align-items: center; justify-content: flex-start;}
     .prediction {
         display: flex; align-items: center; justify-content: center; gap:8px;
         &.interval12 {gap: 12px;}

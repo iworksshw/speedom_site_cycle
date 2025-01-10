@@ -68,7 +68,7 @@
                 &:first-child {margin-top: 0;}
                 + .miniCheck {margin-top: 20px;}
                 .alignL {
-                    width: 100%; display: flex; justify-content: flex-start;
+                    width: 100%; display: flex; justify-content: flex-start; gap: 20px;
                 }
                 .alignR {
                     width: 100%; display: flex; justify-content: flex-end;

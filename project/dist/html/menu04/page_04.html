@@ -105,7 +105,7 @@
                                 <div class="myMenuArea">
                                     <div class="myMenuBox">
                                         <div class="myInfo">
-                                            <b class="name">홍길동님</b>
+                                            <b class="name"><a href="#">홍길동님</a></b> <!-- 20250110 a태그 추가 -->
                                             <span class="timeTxt">로그아웃까지 남은 시간</span>
                                             <div class="timeBox">
                                                 <span class="time">12:00</span>
@@ -1634,9 +1634,11 @@
                         const schDetButton = document.querySelector('.schDet');
                         const comSchDetail = document.querySelector('.comSchDetail');
 
-                        schDetButton.addEventListener('click', () => {
-                            comSchDetail.classList.toggle('detOpen');
-                        });
+                        if(schDetButton){
+                            schDetButton.addEventListener('click', () => {
+                                comSchDetail.classList.toggle('detOpen');
+                            });
+                        }
 
                         // 검색대상/검색기간 토글
                         const dBtns = document.querySelectorAll('.dBtn');

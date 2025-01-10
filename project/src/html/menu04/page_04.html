@@ -847,9 +847,11 @@
                         const schDetButton = document.querySelector('.schDet');
                         const comSchDetail = document.querySelector('.comSchDetail');
 
-                        schDetButton.addEventListener('click', () => {
-                            comSchDetail.classList.toggle('detOpen');
-                        });
+                        if(schDetButton){
+                            schDetButton.addEventListener('click', () => {
+                                comSchDetail.classList.toggle('detOpen');
+                            });
+                        }
 
                         // 검색대상/검색기간 토글
                         const dBtns = document.querySelectorAll('.dBtn');

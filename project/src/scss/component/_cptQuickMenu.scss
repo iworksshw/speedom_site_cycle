@@ -4,7 +4,9 @@
     .quickHead {
         width: 100%; padding: 12px 3px; text-align: center; background: var(---Primary);
         .headTit {margin-bottom: 6px; font-size: rem(14px); color: #fff; font-weight: 600;}
-        .point {font-size: rem(16px); font-weight: 600; color: #a7ffef;}
+        .point {font-size: rem(16px); font-weight: 600; color: #a7ffef;
+            i {font-style: normal;}
+        }
         .linkLogin {
             padding-left: 4px; font-size: rem(16px); font-weight: 600; color: #a7ffef; display: inline-block;
             &::after {display: inline-block; vertical-align: middle; content: ""; width: 16px; height: 16px; background: url(../../images/common/ic_quick_arr.svg) center no-repeat;}
