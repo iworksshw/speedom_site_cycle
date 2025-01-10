@@ -62,7 +62,7 @@
         }
         &.toggleMenu {
             display:block;
-            > .searchOptionBox dl dt span {font-weight: 600; color: var(---Primary, #078B7B);}
+            > .searchOptionBox dl dt span {font-weight: 300; color: var(--Gray-600);}
             > .searchOptionBox:not(:first-child) {display: none;}
             &.active {
                 > .searchOptionBox:first-child + .searchOptionBox {
@@ -139,16 +139,21 @@
 
     @include media("mobile"){
         .schBox {
-            gap: 12px; flex-wrap: wrap;
+            gap: 12px; flex-wrap: nowrap;
+            &:has(.schDet){
+                flex-wrap: wrap;
+                .schSelc {flex: none;}
+                .schBtn {width: calc(50% - 6px);}
+            }
             .schSelc {
-                width: 100%; height: 48px; flex: none; border: 2px solid transparent;
+                width: 100%; height: 48px; flex: 1 1 auto; border: 2px solid transparent;
                 .box {
                     .selc {height: 100%; width: 80px; font-size: rem(16px); border-radius: 8px; background-size: 16px;}
                     .ipt {font-size: rem(16px);}
                 }
             }
             .schBtn {
-                width: calc(50% - 6px);
+                width: 86px; flex: 0 0 auto;
                 button {
                     width: 100%; height: 48px; font-size: rem(16px);
                     &::before {width: 20px; height: 20px; background-size: 16px;}

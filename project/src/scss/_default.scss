@@ -69,8 +69,8 @@ a:active, a:hover {text-decoration:none;}
 address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 caption {font-size: 0;}
 
-input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
-input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden; display: block;}
+input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden; display: block;}
 
 select {-moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../common/images/icon_select.png) calc(100% - 9px) center no-repeat;}
 select::-ms-expand {display:none}
@@ -220,6 +220,12 @@ body {
 .cptHeader .gnbArea : --------------------100
 .cptHeader .gnbArea .gnbBox .depth2Area : 99
 .cptHeader .allMenuArea : ----------------200
+
+#퀵메뉴
+.cptQuickMenu ----------------------------95
+
+#하단 플로팅 배너
+.lytMain .layoutArea .layoutContainer .bannerBtm ----95
 
 #테이블
 .comDataTable .tableArea table thead tr th - 10

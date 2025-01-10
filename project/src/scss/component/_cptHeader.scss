@@ -71,13 +71,28 @@
             .guickMenuGroup {
                 width: 100%; height:20px; display:flex; justify-content: flex-end;
                 .item {
-                    padding-left:29px; position: relative;
+                    padding-left:29px; position: relative;display: flex; align-items: center;
                     &::before {content:""; width:1px; height:16px; background: var(--Bg-Line-line-100); display: block; position: absolute; left: 14px; top: 3px;}
                     &:first-child::before {display: none;}
                     a {
                         color: var(--Gray-700); font-size: rem(15px); font-weight: 400; line-height: 150%; display:block;
                         &[target=_blank] {
                             padding-right:20px; background: url(../../images/common/ic_link_blank.svg) right 2px center no-repeat;
+                        }
+                    }
+                    .txt {
+                        color: var(--Gray-700); font-size: rem(15px); font-style: normal; font-weight: 400; line-height: 1.5;
+                    }
+                    .viewPer {
+                        color: var(--Gray-700); font-size: rem(15px); font-style: normal; font-weight: 400; line-height: 1.5; margin-left: 4px;
+                    }
+                    .btnView {
+                        width: 16px; height: 16px; font-size: 0; border-radius: 4px; border: 1px solid var(--Gray-300);
+                        &.minus {
+                            background: url(../../images/common/ic_12_header_minus.svg) center no-repeat; margin-left: 8px;
+                        }
+                        &.plus {
+                            background: url(../../images/common/ic_12_header_plus.svg) center no-repeat; margin-left: 4px;
                         }
                     }
                 }
@@ -192,8 +207,13 @@
                             }
                             .depth2Area {height:470px; display: block; }
                         }
+                        &.active {
+                            .depth1Name {
+                                background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
+                            }
+                        }
                     }
-                    &.on, &:hover, &:focus {
+                    &.on, &:hover, &:focus, &.active {
                         .depth1Name {
                             color: var(---Primary);
                         }
@@ -214,7 +234,7 @@
                             .depth2Name {
                                 width: 100%; padding: 20px; color: var(--Gray-900); font-size: rem(18px); font-weight: 700; line-height: normal; display: block;
                             }
-                            &:hover {
+                            &:hover, &.active {
                                 border-radius: 12px; background: #F9FAFC;
                             }
                         }
@@ -244,6 +264,11 @@
                 width: 100%;
                 .depth3Menu {
                     width: 100%;
+                    &.active {
+                        .depth3Name {
+                            text-decoration: underline; text-underline-position: under;
+                        }
+                    }
                     .depth3Name {
                         width: 100%; padding: 0 20px 20px; color: var(--Gray-600); font-size: rem(16px); font-weight: 400; line-height: normal; display: block;
                         &:hover {
@@ -410,6 +435,13 @@
                             z-index: -1; opacity: 0; transition: all 0.1s;
                         }
                         &:hover {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &.active {
+                        .depth3Name {
                             &::after {
                                 opacity: 1;
                             }
