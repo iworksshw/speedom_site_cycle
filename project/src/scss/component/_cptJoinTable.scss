@@ -217,6 +217,16 @@
                     margin: 40px 0;
                 }
             }
+
+            .registrationTitle {
+                h2 {
+                    font-size: rem(24px);
+                }
+                h3 {
+                    font-size: rem(16px);
+                }
+            }
+
             // 회원 가입
             .membershipTitle h2 {font-size: rem(22px);font-weight: 600;}
             .registrationTitle + .comBtnGroup + .linkBoxGroup {margin-top: 60px;}

@@ -84,7 +84,7 @@
                         margin-top: 6px; font-size: rem(15px); line-height: 1.6; color: var(--Gray-800); display: flex; justify-content: flex-start; align-items: flex-start; column-gap: 5px;
                         &:first-child {margin-top: 0;}
                         .txt {font-style: normal; line-height: 1.8; display: inline-block; vertical-align: middle; flex: 0 1 auto;}
-                        .num {font-weight: 600; display: inline-block;vertical-align: middle; white-space: nowrap;}
+                        .num {font-weight: 600; display: inline-block; vertical-align: middle;}
                     }
                 }
             }

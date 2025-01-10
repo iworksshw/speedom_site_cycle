@@ -166,3 +166,64 @@
         }
     }
 }
+
+/* 개발에서 팝업에 .termsContent만 붙여 사용할 때의 CSS */
+.wrap:not(:has(.cptTerms)){
+    .termsContent {
+        .termsTitle {
+            display: flex;align-items: flex-end;justify-content: space-between;
+            .alignLeft {
+                h2 {color: var(--Gray-900, #111);font-size: rem(28px);font-weight: 500;line-height: 140%; /* 39.2px */}
+            }
+            .alignright {
+                p {color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */}
+            }
+        }
+        .termsGroup {
+            margin-top: 40px;
+            > h2 {
+                color: var(---Primary, #078B7B);font-size: rem(24px);font-weight: 700;line-height: 140%; /* 33.6px */
+                & + ul,
+                & + .cptQuickMove {margin-top: 20px;}
+                &:not(:first-child) {margin-top: 60px;}
+            }
+            > ul {
+                > li {
+                    color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 400;line-height: 160%; /* 25.6px */
+                    & + li {margin-top: 32px;}
+                    > h3 {color: var(--Gray-900, #111);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 25.2px */}
+                }
+    
+            }
+        }
+        @include media("mobile"){
+            .termsTitle {
+                display: block;
+                .alignLeft {
+                    h2 {font-size: rem(26px);}
+                }
+                .alignright {
+                    margin-top: 4px;
+                    p {font-size: rem(15px);}
+                }
+            }
+            .termsGroup {
+                margin-top: 32px;
+                > h2 {
+                    font-size: rem(20px);
+                    & + ul,
+                    & + .cptQuickMove {margin-top: 16px;}
+                    &:not(:first-child) {margin-top: 40px;}
+                }
+                > ul {
+                    > li {
+                        font-size: rem(15px);
+                        & + li {margin-top: 24px;}
+                        > h3 {font-size: rem(16px);}
+                    }
+                }
+            }
+        }
+    }
+}
+

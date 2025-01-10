@@ -143,6 +143,16 @@
             &:after {content: "";width: 12px;height: 12px;background: url('../../images/common/ic_12_arr_bottom.svg') center no-repeat;background-size: 100%;}
         }
     }
+    @include media("pcs"){
+        .thumGall {
+            .list {width: 33.33%;}
+        }
+    }
+    @include media("tablet"){
+        .thumGall {
+            .list {width: 50%;}
+        }
+    }
 
     @include media("mobile"){
         margin-top: 40px;        

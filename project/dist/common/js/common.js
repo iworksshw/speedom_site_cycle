@@ -435,8 +435,9 @@ function all1MenuAction(){
 
     all1Menus.forEach(function(all1Menu){
         all1Menu.addEventListener("click", function(e){
-            e.preventDefault();
             if(tabMo.matches) {
+                if(!all1Menu.nextElementSibling){return;}
+                e.preventDefault();
                 parent1Menus.forEach(function(menu){
                     menu.classList.remove("on");
                 });
