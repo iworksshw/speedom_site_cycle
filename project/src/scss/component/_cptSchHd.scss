@@ -1,4 +1,5 @@
 .cptSchHd {    
+    position: relative; z-index: 97;
     .schDim {width: 100%; height: 100%; font-size: 0; background: #FFF; position: fixed; left: 0; top: 0; z-index: 2;}
     .mView {display: none;}
     .schHdClose {position: fixed; top: 176px; right: 0; width: 60px; height: 60px; background: url(../../images/common/ic_28_close.svg) no-repeat left bottom; cursor: pointer; z-index: 4;}

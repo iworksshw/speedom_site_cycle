@@ -19324,6 +19324,10 @@ form:has(.cptSection:first-child):first-child {
 	}
 }
 
+.cptSchHd {
+	position: relative;
+	z-index: 97;
+}
 .cptSchHd .schDim {
 	width: 100%;
 	height: 100%;
