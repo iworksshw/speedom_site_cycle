@@ -195,7 +195,7 @@
                 .depth1Menu {
                     height: 100%; align-content: center; flex-grow: 1;
                     .depth1Name {
-                        width: max-content; padding-right:0; color: var(--Gray-800); font-size: rem(20px); font-weight: 600; line-height: normal; display: flex;
+                        width: max-content; padding-right:0; color: var(--Gray-800); font-size: rem(20px); font-weight: 700; line-height: normal; display: flex;
                     }
                     &:has(.depth2Area) {
                         .depth1Name {

@@ -300,7 +300,7 @@
         &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
         &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
     }
-    .name {padding-left: 20px; display: flex; align-items: center; justify-content: flex-start;}
+    .name {display: flex; align-items: center; justify-content: center;}
     .prediction {
         display: flex; align-items: center; justify-content: center; gap:8px;
         &.interval12 {gap: 12px;}
