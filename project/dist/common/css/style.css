@@ -21325,6 +21325,28 @@ form:has(.cptSection:first-child):first-child {
 	display: flex;
 	min-height: 100vh;
 	background-color: var(--Bg-Line-bg-300);
+	/*
+	.modTab02 {
+	    margin-top: 16px;
+	    .tabMenuGroup {
+	        .tabMenu {
+	            .tabItem {
+	                flex-grow: 1;
+	                .tabName {
+	                    width: max-content; height: 30px; padding: 0; font-size: rem(14px); border-radius: 0; line-height: 22px; color: var(--Gray-600); 
+	                    border: 0; border-bottom: 2px solid var(--Gray-200); background: transparent; display: inline-block; flex-grow: 1;
+	                    &.on {
+	                        color: var(---Primary); border: 0; border-bottom: 4px solid var(---Primary); background: transparent;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    .tabContianer {
+	        margin-top: 8px;
+	    }
+	}
+	*/
 }
 .cptTheaterDetail .theaterDetail {
 	width: 100%;
@@ -21683,33 +21705,46 @@ form:has(.cptSection:first-child):first-child {
 .cptTheaterDetail [class*=Area] .raceInfo.full .item .itemVal + .itemVal {
 	margin-left: 16px;
 }
-.cptTheaterDetail .modTab02 {
+.cptTheaterDetail .theaterTabArea {
 	margin-top: 16px;
 }
-.cptTheaterDetail .modTab02 .tabMenuGroup .tabMenu .tabItem {
+.cptTheaterDetail .theaterTabArea .tabMenuGroup {
+	width: 100%;
+	overflow: hidden;
+}
+.cptTheaterDetail .theaterTabArea .tabMenuGroup .tabMenu {
+	width: 100%;
+	display: flex;
+}
+.cptTheaterDetail .theaterTabArea .tabMenuGroup .tabMenu .tabItem {
+	width: max-content;
+	flex-shrink: 1;
+	display: flex;
+	justify-content: center;
 	flex-grow: 1;
 }
-.cptTheaterDetail .modTab02 .tabMenuGroup .tabMenu .tabItem .tabName {
-	width: max-content;
+.cptTheaterDetail .theaterTabArea .tabMenuGroup .tabMenu .tabItem .tabName {
+	width: 100%;
 	height: 30px;
 	padding: 0;
-	font-size: 0.875rem;
-	border-radius: 0;
-	line-height: 22px;
 	color: var(--Gray-600);
-	border: 0;
-	border-bottom: 2px solid var(--Gray-200);
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 22px;
 	background: transparent;
+	border-bottom: 2px solid var(--Gray-200);
+	align-content: center;
+	position: relative;
 	display: inline-block;
-	flex-grow: 1;
 }
-.cptTheaterDetail .modTab02 .tabMenuGroup .tabMenu .tabItem .tabName.on {
+.cptTheaterDetail .theaterTabArea .tabMenuGroup .tabMenu .tabItem .tabName.on {
+	font-weight: 700;
 	color: var(---Primary);
 	border: 0;
 	border-bottom: 4px solid var(---Primary);
 	background: transparent;
 }
-.cptTheaterDetail .modTab02 .tabContianer {
+.cptTheaterDetail .theaterTabArea .tabContianer {
 	margin-top: 8px;
 }
 .cptTheaterDetail .comCalendar {
@@ -24961,6 +24996,9 @@ form:has(.cptSection:first-child):first-child {
 }
 .comSearchBox .searchLine.col2_1 .condition .title {
 	width: 70px;
+}
+.comSearchBox .searchLine.col2_1:not(:has(.condition:nth-child(2))) .condition {
+	width: 100%;
 }
 .comSearchBox .searchLine.col21Sch {
 	gap: 40px;
