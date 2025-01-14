@@ -6,6 +6,11 @@
         // 총괄본부 오시는길 - 노선이미지 표시 
         &.metro {height: 26px; padding-left: 54px; background: url(../../images/contents/cont08_04_03_01_metro7.svg) left center no-repeat; background-size: 38px;}
     }
+    &.noIcon {
+        h3 {
+            padding-left: 0; font-size: rem(20px); background: none;
+        }
+    }
     &.mgH {margin-top:24px;}
     &.mgH20 {margin-top: 20px;}
     &.mgH40 {margin-top: 40px;}

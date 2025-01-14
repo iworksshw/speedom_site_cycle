@@ -23991,6 +23991,11 @@ form:has(.cptSection:first-child):first-child {
 	background: url(../../images/contents/cont08_04_03_01_metro7.svg) left center no-repeat;
 	background-size: 38px;
 }
+.comTitH3.noIcon h3 {
+	padding-left: 0;
+	font-size: 1.25rem;
+	background: none;
+}
 .comTitH3.mgH {
 	margin-top: 24px;
 }
