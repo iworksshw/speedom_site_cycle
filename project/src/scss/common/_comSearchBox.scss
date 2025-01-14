@@ -44,6 +44,9 @@
                     width: 70px;
                 }
             }
+            &:not(:has(.condition:nth-child(2))) {
+                .condition { width: 100%; }
+            }
         }
         &.col21Sch {
             gap: 40px;
