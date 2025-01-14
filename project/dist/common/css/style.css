@@ -6006,7 +6006,7 @@ select.iptSlt.typeLine {
 	padding-right: 0;
 	color: var(--Gray-800);
 	font-size: 1.25rem;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: normal;
 	display: flex;
 }
@@ -23143,10 +23143,9 @@ form:has(.cptSection:first-child):first-child {
 	background: #FF66AF;
 }
 .comDataTable .name {
-	padding-left: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 }
 .comDataTable .prediction {
 	display: flex;
