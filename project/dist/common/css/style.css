@@ -26412,7 +26412,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comDiagrm .digrmBox {
 	width: 100%;
-	padding: 60px 0;
+	min-height: 325px;
 	border-radius: 16px;
 	border: 1px solid var(--Bg-Line-line-200);
 	display: flex;
@@ -29785,7 +29785,7 @@ form:has(.cptSection:first-child):first-child {
 	gap: 24px;
 }
 .comChart.col03 .chartArea .chartBox {
-	width: calc(33% - 16px);
+	width: calc(33.333% - 16px);
 	height: 500px;
 	border-radius: 16px;
 	border: 1px solid var(--Bg-Line-line-200);
@@ -29809,6 +29809,28 @@ form:has(.cptSection:first-child):first-child {
 	.comChart.col03 .chartArea .chartBox {
 		width: 100%;
 		height: 375px;
+	}
+}
+
+/* ------------------------------- 분할영역 ------------------------------- */
+.comDivide {
+	width: 100%;
+	margin-top: 24px;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+}
+.comDivide:first-child {
+	margin-top: 0;
+}
+.comDivide .divideArea {
+	width: 100%;
+	min-height: 325px;
+	flex: 1 1 auto;
+}
+@media screen and (max-width: 767px) {
+	.comDivide {
+		flex-wrap: wrap;
 	}
 }
 

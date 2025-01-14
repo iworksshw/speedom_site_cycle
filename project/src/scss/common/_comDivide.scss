@@ -1,0 +1,12 @@
+/* ------------------------------- 분할영역 ------------------------------- */
+.comDivide {
+    width: 100%; margin-top: 24px; display: flex; justify-content: space-between; gap: 24px;
+    &:first-child {margin-top: 0;}
+    .divideArea {
+        width: 100%; min-height: 325px; flex: 1 1 auto;
+    }
+
+    @include media('mobile') {
+        flex-wrap: wrap;
+    }
+}
