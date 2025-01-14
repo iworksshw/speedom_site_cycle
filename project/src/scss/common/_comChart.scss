@@ -7,7 +7,7 @@
         .chartArea {
             display: flex; justify-content: space-between; gap: 24px;
             .chartBox {
-                width: calc(33% - 16px); height: 500px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200);
+                width: calc(33.333% - 16px); height: 500px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200);
             }
         }
     }

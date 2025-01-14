@@ -10,11 +10,11 @@
     .pcView {display: flex; align-items: center; justify-content: center;}
 
     .digrmBox {
-        width: 100%; padding: 60px 0; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); display: flex; align-items: center; justify-content: center;
+        width: 100%; min-height: 325px; border-radius: 16px; border: 1px solid var(--Bg-Line-line-200); display: flex; align-items: center; justify-content: center;
         img {max-width: 100%;}
     }
     .digrmArea {
-        width: 100%; text-align: center;
+        width: 100%; text-align: center; 
         img {max-width: 100%;}
     }
 
