@@ -1164,6 +1164,26 @@ function ttClose(contId) {
     ttBox.classList.remove("on");
 }
 
+// ------------------------------- 화면크기 확대/축소 기능 ------------------------------- //
+function zoomView($str){
+    const bodyView = document.querySelector("body");
+    const zoomNum = Number(bodyView.style.zoom ? bodyView.style.zoom : 1);
+    bodyView.style.zoom = zoomNum;
+    
+    if($str=="plus"){
+        if(zoomNum>=1.2){return;}
+        bodyView.style.cssText = 'zoom:' + (zoomNum + 0.05);
+    } else if ($str=="minus") {
+        if(zoomNum<=0.9){return;}
+        bodyView.style.cssText = 'zoom:' + (zoomNum - 0.05);
+    } else {
+        bodyView.style.cssText = 'zoom:' + $str;
+    }
+    document.querySelector(".quickArea .viewPer").textContent = Math.round(bodyView.style.zoom * 100) + "%";
+    return bodyView.style.zoom;
+}
+
+
 // ------------------------------- 모션 함수 ------------------------------- //
 
 //fade in

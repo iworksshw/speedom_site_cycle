@@ -76,10 +76,10 @@
                 .frmBox{
                     width: max-content;
                     .iptChk {
-                        &+ .iptLbl {background:url(../../images/common/ic_20_check_mini.svg) left top no-repeat;}
-                        &:checked + .iptLbl {background:url(../../images/common/ic_20_check_mini_on.svg) left top no-repeat;}
-                        &:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_check_mini.svg) left top no-repeat;}
-                        &:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_check_mini.svg) left top no-repeat;}
+                        &+ .iptLbl {background:url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;}
+                        &:checked + .iptLbl {background:url(../../images/common/ic_20_check_mini_on.svg) left 3px no-repeat;}
+                        &:disabled + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;}
+                        &:disabled:checked + .iptLbl {color: var(--Gray-600); background:url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;}
                     }
                     .iptLbl {
                         min-height:20px; margin-right:20px; padding-left: 28px; color: var(--Gray-800); font-size: rem(16px); font-weight: 700; word-break: keep-all; line-height: 22px;

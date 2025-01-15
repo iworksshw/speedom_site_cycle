@@ -24536,6 +24536,9 @@ form:has(.cptSection:first-child):first-child {
 .comImgWrap .imgGroup .imgArea:has(.plyr) {
 	border: 1px solid #000;
 }
+.comImgWrap .imgGroup .imgArea:has(video) {
+	border: 1px solid #000;
+}
 .comImgWrap .imgGroup .imgArea .imgTxt {
 	margin-top: 12px;
 	font-size: 1rem;
@@ -26255,18 +26258,18 @@ form:has(.cptSection:first-child):first-child {
 	width: max-content;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk + .iptLbl {
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:checked + .iptLbl {
-	background: url(../../images/common/ic_20_check_mini_on.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini_on.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:disabled + .iptLbl {
 	color: var(--Gray-600);
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:disabled:checked + .iptLbl {
 	color: var(--Gray-600);
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptLbl {
 	min-height: 20px;
@@ -27189,18 +27192,18 @@ form:has(.cptSection:first-child):first-child {
 	width: max-content;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk + .iptLbl {
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:checked + .iptLbl {
-	background: url(../../images/common/ic_20_check_mini_on.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini_on.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:disabled + .iptLbl {
 	color: var(--Gray-600);
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptChk:disabled:checked + .iptLbl {
 	color: var(--Gray-600);
-	background: url(../../images/common/ic_20_check_mini.svg) left top no-repeat;
+	background: url(../../images/common/ic_20_check_mini.svg) left 3px no-repeat;
 }
 .comPrivacyBox .infoBox .boxCont .miniCheck .frmBox .iptLbl {
 	min-height: 20px;
