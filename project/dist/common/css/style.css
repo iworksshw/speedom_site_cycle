@@ -26000,18 +26000,6 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 800;
 	position: relative;
 }
-.comCalendar .dayItem.today .txt::after {
-	display: block;
-	content: "";
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: var(--Gray-300);
-	position: absolute;
-	bottom: 5px;
-	left: 50%;
-	transform: translateX(-50%);
-}
 @media screen and (max-width: 767px) {
 	.comCalendar .monthData {
 		padding: 12px 0;
