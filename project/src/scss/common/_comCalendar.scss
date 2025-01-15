@@ -29,7 +29,7 @@
         &.today {
             .txt {
                 color: var(--Gray-900); font-weight: 800; position: relative;
-                &::after {display: block; content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--Gray-300); position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);}
+                //&::after {display: block; content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--Gray-300); position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);}
             }
         }
     }
