@@ -22647,6 +22647,42 @@ form:has(.cptSection:first-child):first-child {
 	background: url(../../images/common/ic_20_down_arr_w.svg) center no-repeat;
 }
 
+/* ----------------- 모바일 플로팅 메뉴 ----------------- */
+.cptFloatMob {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 90;
+}
+.cptFloatMob .floatArea {
+	width: 49px;
+	position: absolute;
+	right: 16px;
+	bottom: 11px;
+}
+.cptFloatMob .floatGroup {
+	width: 100%;
+}
+.cptFloatMob .floatGroup .item {
+	width: 100%;
+}
+.cptFloatMob .speedOn {
+	display: block;
+}
+.cptFloatMob .speedOn img {
+	width: 100%;
+	display: block;
+}
+.cptFloatMob .goTop {
+	width: 44px;
+	height: 44px;
+	margin-top: 5px;
+	font-size: 0;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.5) url(../../images/contents/cont_main_top_m.png) center no-repeat;
+}
+
 /* --------------------------- 데이터 테이블 --------------------------- */
 .comDataTable {
 	width: 100%;
