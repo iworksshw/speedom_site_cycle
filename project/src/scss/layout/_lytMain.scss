@@ -682,7 +682,7 @@
                                     position: relative; max-width: 1920px; margin: 0 auto; height: 100%;
                                     h2 {
                                         width: 1280px; margin: 0 auto; color: #4EFFD5; font-family: "Roboto Flex"; font-size: rem(64px); font-weight: 700; 
-                                        line-height: normal; position: absolute; top: 332px; left: 0; right: 0; color: #fff; z-index: 10; 
+                                        line-height: normal; position: absolute; top: 332px; left: 0; right: 0; z-index: 10; 
                                     }
                                     img {
                                         width: 100%; height: 100%; display: block; object-fit: cover;
@@ -778,10 +778,11 @@
                 a {
                     margin-top: 12px; display: block; color: #FFF; font-family: 'Roboto'; font-size: rem(14px); font-weight: 500; line-height: normal;
                     strong {
-                        font-size: rem(18px); font-weight: 600; line-height: 140%; /* 25.2px */
+                        height: 50px; line-height: 1.2em; font-size: rem(18px); font-weight: 600; line-height: 140%; /* 25.2px */
+                        overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
                     }
                     span {
-                        display: block; margin-top: 12px;
+                        display: block; margin-top: 12px; @include line1();
                     }
                 }
                 .paginationWrap {
@@ -810,11 +811,11 @@
                 > ul {
                     margin-top: 16px; display: flex; gap:14px;
                     > li {
-                        overflow: hidden; border-radius: 4px; border: 2px solid #FFF; background: #fff;
+                        width: calc(25% - 10px); height: 82px; overflow: hidden; border-radius: 4px; border: 2px solid #FFF; background: #fff;
                         a {
-                            display: block; position: relative; overflow: hidden; border-radius: 2px;
+                            width: 100%; height: 100%; display: block; position: relative; overflow: hidden; border-radius: 2px;
                             img {
-                                display: block; object-fit: cover;
+                                width: 100%; height: 100%; display: block; object-fit: cover;
                             }
                             &:after {
                                 content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30px; height: 30px; 
