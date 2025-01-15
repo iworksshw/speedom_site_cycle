@@ -4625,7 +4625,6 @@ select.iptSlt.typeLine {
 	top: 332px;
 	left: 0;
 	right: 0;
-	color: #fff;
 	z-index: 10;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .visualWrap .inner > div[class*=Visual] .swiper .swiper-wrapper .swiper-slide .inner img {
@@ -4806,13 +4805,23 @@ select.iptSlt.typeLine {
 	line-height: normal;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .newsContentWrap a strong {
+	height: 50px;
+	line-height: 1.2em;
 	font-size: 1.125rem;
 	font-weight: 600;
 	line-height: 140%; /* 25.2px */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .newsContentWrap a span {
 	display: block;
 	margin-top: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .newsContentWrap .paginationWrap {
 	margin-top: 20px;
@@ -4854,18 +4863,24 @@ select.iptSlt.typeLine {
 	gap: 14px;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .racingVideoWrap > ul > li {
+	width: calc(25% - 10px);
+	height: 82px;
 	overflow: hidden;
 	border-radius: 4px;
 	border: 2px solid #FFF;
 	background: #fff;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .racingVideoWrap > ul > li a {
+	width: 100%;
+	height: 100%;
 	display: block;
 	position: relative;
 	overflow: hidden;
 	border-radius: 2px;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .racingVideoWrap > ul > li a img {
+	width: 100%;
+	height: 100%;
 	display: block;
 	object-fit: cover;
 }
