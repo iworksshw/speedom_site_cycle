@@ -207,6 +207,9 @@
                             width: 100%;display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 8px 12px;
                             &.gridItem2 {grid-template-columns: repeat(2, 1fr);}
                             &.gridItem4 {grid-template-columns: repeat(4, 1fr);}
+                            &.basicForm {
+                                display: flex; 
+                            }
                             .frmBox label {width: 100%;}
                         }
                         .subMenu {

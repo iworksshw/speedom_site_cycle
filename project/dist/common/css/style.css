@@ -1661,7 +1661,6 @@ body:has(.cptHeader.on) .allMenuArea {
 	line-height: 150%; /* 22.5px */
 }
 .frmGroup .textBox {
-	margin-left: 5px;
 	height: 48px;
 	align-content: center;
 }
@@ -21656,7 +21655,7 @@ form:has(.cptSection:first-child):first-child {
 .cptTheaterDetail [class*=Area] .raceInfo .item .itemTit {
 	position: relative;
 	top: 1px;
-	margin-right: 12px;
+	margin-right: 3px;
 	font-size: 0.8125rem;
 	color: var(--Gray-600);
 	font-weight: 500;
@@ -21707,7 +21706,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptTheaterDetail [class*=Area] .raceInfo .item .itemVal .txt {
 	color: var(--Gray-800);
-	font-size: 0.8125rem;
+	font-size: 0.75rem;
 	font-weight: 500;
 	position: relative;
 	display: inline-block;
@@ -25985,6 +25984,10 @@ form:has(.cptSection:first-child):first-child {
 	flex: 1 1 calc(14.28% - 12.85px);
 	text-align: center;
 }
+.cptTheaterDetail .comCalendar .dayItem {
+	font-size: 0.75rem;
+}
+
 .comCalendar .dayItem p {
 	color: var(--Gray-600);
 }
@@ -26021,6 +26024,15 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Gray-900);
 	font-weight: 800;
 	position: relative;
+}
+.comCalendar .dayItem.on .mark.mint {
+	outline: rgba(40, 195, 158, 0.4) solid 4px;
+}
+.comCalendar .dayItem.on .mark.blue {
+	outline: rgba(14, 163, 246, 0.4) solid 4px;
+}
+.comCalendar .dayItem.on .mark.yellow {
+	outline: rgba(255, 180, 68, 0.4) solid 4px;
 }
 @media screen and (max-width: 767px) {
 	.comCalendar .monthData {
@@ -29561,6 +29573,9 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.comSchDetail .searchOptionBox > dl dd .innerBox .frmGroup.gridItem4 {
 		grid-template-columns: repeat(4, 1fr);
+	}
+	.comSchDetail .searchOptionBox > dl dd .innerBox .frmGroup.basicForm {
+		display: flex;
 	}
 	.comSchDetail .searchOptionBox > dl dd .innerBox .frmGroup .frmBox label {
 		width: 100%;

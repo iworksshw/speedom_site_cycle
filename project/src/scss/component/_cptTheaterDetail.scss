@@ -173,7 +173,7 @@
             .item {
                 display: flex; align-items: center; min-height: 29px;
                 .itemTit {
-                    position: relative; top: 1px; margin-right: 12px; font-size: rem(13px); color: var(--Gray-600); font-weight: 500;
+                    position: relative; top: 1px; margin-right: 3px; font-size: rem(13px); color: var(--Gray-600); font-weight: 500;
                 }
                 .itemVal {
                     & + .itemVal {margin-left: 8px;}
@@ -188,7 +188,7 @@
                         &.num07 {background: #ff66af; border-color: #ff66af;}
                     }
                     .txt {
-                        color: var(--Gray-800); font-size: rem(13px); font-weight: 500; position: relative; display: inline-block; vertical-align: middle;
+                        color: var(--Gray-800); font-size: rem(12px); font-weight: 500; position: relative; display: inline-block; vertical-align: middle;
                     }
                 }
             }

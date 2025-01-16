@@ -11,6 +11,11 @@
     }
     .dayItem {
         font-size: rem(14px); flex: 1 1 calc(14.28% - 12.85px); text-align: center;
+        @at-root {
+            .cptTheaterDetail .comCalendar {
+                .dayItem {font-size: rem(12px);}
+            }
+        }
         p {
             color: var(--Gray-600); 
             &.sun {color: var(--Point-Red);}
@@ -30,6 +35,13 @@
             .txt {
                 color: var(--Gray-900); font-weight: 800; position: relative;
                 //&::after {display: block; content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--Gray-300); position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);}
+            }
+        }
+        &.on {
+            .mark {
+                &.mint {outline: rgba(40,195,158, 0.4) solid 4px; }
+                &.blue {outline: rgba(14, 163, 246, 0.4) solid 4px; }
+                &.yellow {outline: rgba(255,180,68, 0.4) solid 4px; }
             }
         }
     }
