@@ -152,4 +152,27 @@
             }
         }
     }
+    /* 선수 프로필 상세 */
+    .cptPersonDesc {
+        .profBox {
+            .photoArea {
+                .txtArea {
+                    .name {
+                        max-width: 186px; word-break: break-all;
+                    }
+                }
+            }
+        }
+        @include media('mobile') {
+            .profBox {
+                .photoArea {
+                    .txtArea {
+                        .name {
+                            max-width: none; word-break: break-all;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
