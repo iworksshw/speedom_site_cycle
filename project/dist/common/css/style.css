@@ -16318,85 +16318,85 @@ form:has(.cptSection:first-child):first-child {
 }
 
 /* 개발에서 팝업에 .termsContent만 붙여 사용할 때의 CSS */
-.wrap:not(:has(.cptTerms)) .termsContent .termsTitle {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle {
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
 	color: var(--Gray-900, #111);
 	font-size: 1.75rem;
 	font-weight: 500;
 	line-height: 140%; /* 39.2px */
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
 	color: var(--Gray-800, #2C2C2C);
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 160%; /* 25.6px */
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup {
 	margin-top: 40px;
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
 	color: var(---Primary, #078B7B);
 	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 140%; /* 33.6px */
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
 	margin-top: 20px;
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
 	margin-top: 60px;
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
 	color: var(--Gray-800, #2C2C2C);
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 160%; /* 25.6px */
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
 	margin-top: 32px;
 }
-.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
+.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
 	color: var(--Gray-900, #111);
 	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 140%; /* 25.2px */
 }
 @media screen and (max-width: 767px) {
-	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle {
 		display: block;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle .alignLeft h2 {
 		font-size: 1.625rem;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle .alignright {
 		margin-top: 4px;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsTitle .alignright p {
 		font-size: 0.9375rem;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup {
 		margin-top: 32px;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
 		font-size: 1.25rem;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + ul, .modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 + .cptQuickMove {
 		margin-top: 16px;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2:not(:first-child) {
 		margin-top: 40px;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li {
 		font-size: 0.9375rem;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li + li {
 		margin-top: 24px;
 	}
-	.wrap:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
+	.modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > ul > li > h3 {
 		font-size: 1rem;
 	}
 }
@@ -30171,10 +30171,9 @@ form:has(.cptSection:first-child):first-child {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	left: 50%;
-	top: 50%;
+	left: 0;
+	top: 0;
 	z-index: 1000;
-	transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
 	.modMdPopup *:hover::-webkit-scrollbar-thumb {
