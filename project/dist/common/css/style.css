@@ -6089,6 +6089,9 @@ select.iptSlt.typeLine {
 	line-height: normal;
 	display: block;
 }
+.cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu .depth2Name[target=_blank] {
+	background: url(../../images/common/ic_20_outlink.svg) right 40px center no-repeat;
+}
 .cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu:hover, .cptHeader .gnbArea .gnbBox .depth2Area .depth2Box .depth2Group .depth2Menu.active {
 	border-radius: 12px;
 	background: #F9FAFC;
@@ -25088,6 +25091,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comSearchBox .searchLine .condition .title {
 	width: 70px;
+	height: 48px;
 	color: var(--Gray-800);
 	font-size: 1rem;
 	font-weight: 600;
@@ -29828,9 +29832,12 @@ form:has(.cptSection:first-child):first-child {
 }
 .comChart.col03 .chartArea .chartBox {
 	width: calc(33.333% - 16px);
-	height: 500px;
+	height: 450px;
 	border-radius: 16px;
 	border: 1px solid var(--Bg-Line-line-200);
+}
+.comChart.col03 .chartArea:not(:has(.chartBox:nth-child(3))) .chartBox {
+	width: calc(50% - 12px);
 }
 .comChart .chartArea {
 	width: 100%;
@@ -29849,7 +29856,7 @@ form:has(.cptSection:first-child):first-child {
 		gap: 12px;
 	}
 	.comChart.col03 .chartArea .chartBox {
-		width: 100%;
+		width: 100% !important;
 		height: 375px;
 	}
 }
@@ -30962,6 +30969,7 @@ form:has(.cptSection:first-child):first-child {
 	/* 이전/다음 페이지 */
 	/* 경륜동영상 */
 	/* 경륜동영상 상세부분 */
+	/* 선수 프로필 상세 */
 }
 .eng .comDateSwiper.sticky.sOn .dateSwiper {
 	top: 0;
@@ -31093,6 +31101,16 @@ form:has(.cptSection:first-child):first-child {
 }
 .eng .cptTheaterDetail [class*=Area] .raceInfo.full .item .itemVal + .itemVal {
 	margin-left: 0;
+}
+.eng .cptPersonDesc .profBox .photoArea .txtArea .name {
+	max-width: 186px;
+	word-break: break-all;
+}
+@media screen and (max-width: 767px) {
+	.eng .cptPersonDesc .profBox .photoArea .txtArea .name {
+		max-width: none;
+		word-break: break-all;
+	}
 }
 
 @media print {
