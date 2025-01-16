@@ -20,7 +20,7 @@
         &.inline {width: auto;display: none;background: none;padding-left: 0;margin-top: 0;align-self: center;}
     }
     .helpMsg {margin-top:12px;color: var(--Gray-600, #58595F);font-size: rem(15px);font-weight: 400;line-height: 150%; /* 22.5px */}
-    .textBox {margin-left: 5px; height: 48px; align-content: center;}
+    .textBox {height: 48px; align-content: center;}
     @include media('mobile') {
         // &.email {
         //     flex-wrap: wrap;
