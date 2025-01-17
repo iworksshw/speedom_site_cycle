@@ -335,7 +335,7 @@
                         display: flex; column-gap: 8px; align-items: center;
                         dt {font-size: rem(15px); color: var(--Gray-800); font-weight: 600;}
                         dd {
-                            font-size: rem(16px); color: var(--Gray-400);
+                            font-size: rem(16px); color: var(--Gray-400); display: flex; gap: 4px;
                             .number {
                                 width: 16px; height: 16px; border: 1px solid var(--Gray-200); border-radius: 50%; text-align: center; font-size: rem(11px); font-weight: 700; color: #fff; line-height: 15px;background: #fff; display: inline-block; vertical-align: middle;
                                 &.num01 {color: var(--Gray-200);}

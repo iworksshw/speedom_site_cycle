@@ -4120,13 +4120,13 @@ select.iptSlt.typeLine {
 	display: block;
 }
 .lytMain .layoutArea .layoutContainer .rankingArea .linkBanner .bannerItem .banner.bg01 {
-	background-image: url(../../images/main/ic_banner01.svg), linear-gradient(96deg, #20A2C4 0%, #67D0C2 100%);
+	background-image: url(../../images/common/ic_banner01.png), linear-gradient(96deg, #20A2C4 0%, #67D0C2 100%);
 }
 .lytMain .layoutArea .layoutContainer .rankingArea .linkBanner .bannerItem .banner.bg02 {
-	background-image: url(../../images/main/ic_banner03.svg), linear-gradient(96deg, #278AE3 0%, #5AC2E5 100%);
+	background-image: url(../../images/common/ic_banner02.png), linear-gradient(96deg, #278AE3 0%, #5AC2E5 100%);
 }
 .lytMain .layoutArea .layoutContainer .rankingArea .linkBanner .bannerItem .banner.bg03 {
-	background-image: url(../../images/main/ic_banner02.svg), linear-gradient(96deg, #596BEF 0%, #6CABFB 100%);
+	background-image: url(../../images/common/ic_banner03.png), linear-gradient(96deg, #596BEF 0%, #6CABFB 100%);
 }
 .lytMain .layoutArea .layoutContainer .rankingArea .linkBanner .bannerItem .banner i {
 	font-size: 1rem;
@@ -5912,6 +5912,7 @@ select.iptSlt.typeLine {
 	background: #fff;
 	border-radius: 12px;
 	filter: drop-shadow(0px 0px 1px #ededed);
+	overflow: hidden;
 }
 .cptHeader .headArea .headBox .myMenuGroup .item .myMenuArea .myMenuBox::after {
 	content: "";
@@ -17494,6 +17495,8 @@ form:has(.cptSection:first-child):first-child {
 .cptBatSimul .smlFloating .contBox .contArea .contDt .batCont dd {
 	font-size: 1rem;
 	color: var(--Gray-400);
+	display: flex;
+	gap: 4px;
 }
 .cptBatSimul .smlFloating .contBox .contArea .contDt .batCont dd .number {
 	width: 16px;
@@ -27613,14 +27616,16 @@ form:has(.cptSection:first-child):first-child {
 		padding: 24px;
 	}
 	.comDateSwiper .dateSwiper::before {
-		width: 24px;
-		top: 24px;
-		background: #fff;
+		width: 60px;
+		top: 10px;
+		background: linear-gradient(90deg, #fff 40%, transparent);
+		pointer-events: none;
 	}
 	.comDateSwiper .dateSwiper::after {
 		width: 60px;
-		top: 24px;
+		top: 10px;
 		background: linear-gradient(270deg, #fff 40%, transparent);
+		pointer-events: none;
 	}
 }
 .comDateSwiper.sticky.sOn {

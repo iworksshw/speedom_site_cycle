@@ -470,9 +470,9 @@
                         &:last-child {margin-bottom: 0;}
                         .banner {
                             width: 100%; height: 92px; padding: 21px 30px; border-radius: 10px; overflow: hidden; background: calc(100% - 5px) 22px no-repeat, left top no-repeat; display: block;
-                            &.bg01 {background-image: url(../../images/main/ic_banner01.svg), linear-gradient(96deg, #20A2C4 0%, #67D0C2 100%);}
-                            &.bg02 {background-image: url(../../images/main/ic_banner03.svg), linear-gradient(96deg, #278AE3 0%, #5AC2E5 100%);}
-                            &.bg03 {background-image: url(../../images/main/ic_banner02.svg), linear-gradient(96deg, #596BEF 0%, #6CABFB 100%);}
+                            &.bg01 {background-image: url(../../images/common/ic_banner01.png), linear-gradient(96deg, #20A2C4 0%, #67D0C2 100%);}
+                            &.bg02 {background-image: url(../../images/common/ic_banner02.png), linear-gradient(96deg, #278AE3 0%, #5AC2E5 100%);}
+                            &.bg03 {background-image: url(../../images/common/ic_banner03.png), linear-gradient(96deg, #596BEF 0%, #6CABFB 100%);}
                             i {font-size: rem(16px); color: #fff; font-style: normal; display: block;}
                             b {font-size: rem(18px); color: #fff; font-weight: 700;display: block;}
                         }

@@ -65,8 +65,9 @@
         width: calc(100% + 32px); margin-left: -16px; border-bottom: 10px solid #f4f6fa;
         .dateSwiper {
             padding: 24px;
-            &::before {width: 24px; top: 24px;background:#fff;}
-            &::after {width: 60px;top: 24px;background:linear-gradient(270deg, #fff 40%, transparent);}
+            //&::before {width: 24px; top: 24px;background:#fff;}
+            &::before {width: 60px; top: 10px; background:linear-gradient(90deg, #fff 40%, transparent); pointer-events: none;}
+            &::after {width: 60px;top: 10px; background:linear-gradient(270deg, #fff 40%, transparent); pointer-events: none;}
         }
     }
 
