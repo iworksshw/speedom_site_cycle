@@ -280,8 +280,13 @@
                                 }
     
                                 .txt {
-                                    text-align: center; font-size: rem(16px); color: var(--Gray-800); font-weight: 600; line-height: 32px;
-                                    .sm {font-style: normal; font-size: rem(13px); color: var(--Gray-600);}
+                                    width: 100%; text-align: center; font-size: rem(16px); color: var(--Gray-800); font-weight: 600; line-height: 32px; display: flex; justify-content: center;
+                                    .sm {
+                                        padding-top: 1px; padding-left: 7px; font-style: normal; font-size: rem(13px); color: var(--Gray-600); position: relative;
+                                        &::before {
+                                            content: "/"; font-size: 0.625rem; color: var(--Gray-300); display: block; position: absolute; top: 0; left: 2px
+                                        }
+                                    }
                                     em {font-weight: 700; color: #000;}
                                 }
                                 .checked {width: 20px; height:20px; font-size: 0; line-height: 24px; display: inline-block; background: url(../../images/main/ic_24_check_on.svg) center / 20px no-repeat;}

@@ -197,7 +197,7 @@
             & + .searchOptionBox {margin-top: 32px;}
             > dl {
                 flex-direction: column;align-items: normal;
-                dt span {color: var(---Primary, #078B7B);font-size: rem(15px);font-weight: 600;}
+                dt span {color: var(--Gray-600); font-size: rem(14px);font-weight: 300;}
                 dd {
                     display: block;
                     .innerBox {
@@ -216,7 +216,7 @@
                             flex-direction: column;align-items: normal; gap:4px;width: 100%;
                             > p {
                                 display: flex;align-items: center;gap:4px;font-size: rem(15px);
-                                span {color: var(---Primary, #078B7B);font-size: rem(15px);font-weight: 600;}
+                                span {color: var(--Gray-600); font-size: rem(14px);font-weight: 300;}
                             }
                             .schBox {
                                 .schBtn button,
