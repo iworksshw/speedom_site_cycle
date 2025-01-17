@@ -64,7 +64,7 @@
         margin-top: 36px;
         .listTen {
             ul {
-                gap: 20px 0;
+                gap: 20px 0; max-height: none; flex-direction: row;
                 li {
                     width: 100%; order: initial !important;
                     .num {font-size: rem(13px);}
@@ -85,6 +85,15 @@
             .schStxRst {
                 margin-top: 16px;
                 .noStxRst {font-size: rem(15px);}
+            }
+        }
+    }
+    @at-root {
+        .rstRi .comPopularStx{
+            .listTen {
+                ul {
+                    max-height: none; flex-direction: row;
+                }
             }
         }
     }

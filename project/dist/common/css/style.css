@@ -3599,16 +3599,31 @@ select.iptSlt.typeLine {
 	font-style: normal;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt {
+	width: 100%;
 	text-align: center;
 	font-size: 1rem;
 	color: var(--Gray-800);
 	font-weight: 600;
 	line-height: 32px;
+	display: flex;
+	justify-content: center;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt .sm {
+	padding-top: 1px;
+	padding-left: 7px;
 	font-style: normal;
 	font-size: 0.8125rem;
 	color: var(--Gray-600);
+	position: relative;
+}
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt .sm::before {
+	content: "/";
+	font-size: 0.625rem;
+	color: var(--Gray-300);
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 2px;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt em {
 	font-weight: 700;
@@ -29036,6 +29051,8 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.comPopularStx .listTen ul {
 		gap: 20px 0;
+		max-height: none;
+		flex-direction: row;
 	}
 	.comPopularStx .listTen ul li {
 		width: 100%;
@@ -29065,6 +29082,10 @@ form:has(.cptSection:first-child):first-child {
 	.comPopularStx .schStx .schStxRst .noStxRst {
 		font-size: 0.9375rem;
 	}
+}
+.rstRi .comPopularStx .listTen ul {
+	max-height: none;
+	flex-direction: row;
 }
 
 .comSchDetail .schBox {
@@ -29548,9 +29569,9 @@ form:has(.cptSection:first-child):first-child {
 		align-items: normal;
 	}
 	.comSchDetail .searchOptionBox > dl dt span {
-		color: var(---Primary, #078B7B);
-		font-size: 0.9375rem;
-		font-weight: 600;
+		color: var(--Gray-600);
+		font-size: 0.875rem;
+		font-weight: 300;
 	}
 	.comSchDetail .searchOptionBox > dl dd {
 		display: block;
@@ -29593,9 +29614,9 @@ form:has(.cptSection:first-child):first-child {
 		font-size: 0.9375rem;
 	}
 	.comSchDetail .searchOptionBox > dl dd .innerBox .subMenu > p span {
-		color: var(---Primary, #078B7B);
-		font-size: 0.9375rem;
-		font-weight: 600;
+		color: var(--Gray-600);
+		font-size: 0.875rem;
+		font-weight: 300;
 	}
 	.comSchDetail .searchOptionBox > dl dd .innerBox .subMenu .schBox .schBtn button,
 	.comSchDetail .searchOptionBox > dl dd .innerBox .subMenu .schBox .schDet {
