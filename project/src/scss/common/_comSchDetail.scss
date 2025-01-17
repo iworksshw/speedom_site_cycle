@@ -88,9 +88,9 @@
         display: flex; flex-wrap: wrap; gap: 40px;
         & + .searchOptionBox {margin-top: 24px;}
         > dl {
-            display: flex;align-items: center;flex: 1;gap: 8px;
+            display: flex; align-items: flex-start; flex: 1; gap: 8px;
             dt {
-                display: flex;align-items: center;gap:4px;width: 160px;flex-shrink: 0; color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 600;line-height: 160%; /* 25.6px */
+                height: 48px; display: flex;align-items: center;gap:4px;width: 160px;flex-shrink: 0; color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 600;line-height: 160%; /* 25.6px */
                 span {color: var(--Gray-600, #58595F);font-size: rem(14px);font-weight: 300;line-height: 160%; /* 22.4px */}
             }
             dd {

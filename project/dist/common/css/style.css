@@ -23712,6 +23712,9 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 400;
 	line-height: 1.6;
 }
+.comFormTable .cmt .text + a.btn {
+	margin-left: 8px;
+}
 .comFormTable .cmt a.btn[target=_blank] {
 	margin-left: 8px;
 	padding-right: 32px;
@@ -29353,11 +29356,12 @@ form:has(.cptSection:first-child):first-child {
 }
 .comSchDetail .searchOptionBox > dl {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	flex: 1;
 	gap: 8px;
 }
 .comSchDetail .searchOptionBox > dl dt {
+	height: 48px;
 	display: flex;
 	align-items: center;
 	gap: 4px;
