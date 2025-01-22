@@ -217,9 +217,9 @@ document.addEventListener("DOMContentLoaded", function () {
             let fileName;
             if(window.FileReader){
                 fileName = this.files[0].name;
-                console.log(fileName);
+                // console.log(fileName);
             } else {
-                console.log("noFileReader");
+                // console.log("noFileReader");
                 //var filename = $(this).val().split('/').pop().split('\\').pop();
                 //var filename = this.val().split('/').pop().split('\\').pop();
             }
@@ -506,7 +506,7 @@ function designSelect() {
 
 //디자인 셀렉트 선택 후 콜백
 function designSelectCallback($target){
-    console.log($target, $target.querySelector(".sltTitle").textContent);
+    // console.log($target, $target.querySelector(".sltTitle").textContent);
 }
 
 // ------------------------------- 팝업 함수 ------------------------------- //
@@ -618,7 +618,7 @@ function tabMenuDataSwiper(){
         this.slidesEl.querySelectorAll("li").forEach(function(tabItem){
             if(tabItem.querySelector(".tabName").classList.contains("on")){
                 tabSwiperData.slideTo(_idx);
-                console.log(_idx);
+                // console.log(_idx);
             }else{
                 _idx++;
             }
@@ -836,7 +836,7 @@ function fullFloating(){
         
         window.addEventListener("scroll", function(){
             const scrlT = window.scrollY;
-            console.log(winH, contH, scrlT, floatH);
+            // console.log(winH, contH, scrlT, floatH);
 
             if(window.matchMedia("(min-width:768px)").matches){
                 if(scrlT > contH - winH - floatH) {
@@ -1316,7 +1316,7 @@ function datePickerTo(startIpt, startCont, endIpt, endCont){
     });
 
     picker.on('change:end', () => {
-        console.log(123);
+        // console.log(123);
     })
 }
 //날짜 기간+시간 ~ 기간+시간
@@ -1341,7 +1341,7 @@ function timePickerTo(startIpt, startCont, endIpt, endCont){
     });
 
     picker.on('change:end', () => {
-        console.log(123);
+        // console.log(123);
     })
 }
 
@@ -1385,9 +1385,9 @@ function inputCheckAll(){
             const checkboxes = Array.from(form.querySelectorAll('.iptChk[type=checkbox]'));
             const chkAll = checkboxes.find((el) => el.classList.contains('chkAll'));
             const otherCheckboxes = checkboxes.filter((el) => el !== chkAll);
-            console.log(checkboxes)
-            console.log(chkAll)
-            console.log(otherCheckboxes)
+            // console.log(checkboxes)
+            // console.log(chkAll)
+            // console.log(otherCheckboxes)
 
             if (checkboxes.length > 1) {
                 checkboxes.forEach((checkbox) => {

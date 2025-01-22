@@ -59,11 +59,11 @@
 
             .raceArea {
                 .raceBox {
-                    width: 100%;  height: 618px;  padding: 15px 20px 20px; border-radius: 16px; background: var(--Bg-Line-bg-200);
+                    width: 100%;  height: 618px;  padding: 20px; border-radius: 16px; background: var(--Bg-Line-bg-200);
                     .raceTit {
                         display: flex; align-items: center; justify-content: space-between;
                         .titArea {
-                            .date {font-size: rem(16px); color: var(--Gray-600); font-weight: 500;}
+                            .date {font-size: rem(16px); color: var(--Gray-600); font-weight: 500; line-height: 26px;}
                             .race {
                                 display: flex; align-items: center; column-gap: 8px;
                                 .tit {font-size: rem(24px); color: var(--Gray-900); font-weight: 700;}
@@ -88,7 +88,7 @@
                     }
 
                     .tabArea {
-                        margin-top: 4px;
+                        margin-top: 18px;
                         .modTab {
                             .tabMenuGroup {
                                 padding: 0; display: flex; justify-content: space-between; align-items: center; position: relative;
@@ -153,8 +153,19 @@
 
                         .assayArea {
                             position: relative;
+
+                            .refresh {
+                                width: 100%; margin-top: 14px; display: flex; justify-content: flex-end; align-items: center;
+                                .btnRefresh {
+                                    width: 16px; height: 16px; font-size: 0; background: url(../../images/common/ic_16_refresh.svg) center no-repeat; display: block;
+                                }
+                                .text {
+                                    margin-left: 4px; color: var(--Gray-500); font-size: rem(14px); font-weight: 400; line-height: 20px; display: block;
+                                }
+                            }
+
                             .playerTable {
-                                margin-top:12px;
+                                margin-top:8px;
                                 .columnGroup {
                                     width: 100%; display: flex; column-gap: 8px;
                                     .tableHead {
@@ -217,9 +228,12 @@
     
                                 .rowGroup {
                                     .rowItem {
-                                        height: 33px; position: relative; text-align: center;
-                                        &:nth-child(1) {height: 121px;}
-                                        &:nth-child(2) {height: 54px;}
+                                        height: 32px; position: relative; text-align: center;
+                                        &:nth-child(1) {height: 120px;}
+                                        &:nth-child(2) {height: 53px;}
+                                        &:nth-last-child(1) {height: 27px;}
+                                        &:nth-last-child(2) {height: 27px;}
+                                        &:nth-last-child(3) {height: 30px;}
     
                                         .th {
                                             width: 100%; height: 25px; margin-bottom: 8px; border-radius: 12.5px 0 0 12.5px; text-align: center; line-height: 25px; font-size: rem(14px); color: #fff; font-weight: 600; background: var(--Point-Primary2);
@@ -289,7 +303,7 @@
                                     }
                                     em {font-weight: 700; color: #000;}
                                 }
-                                .checked {width: 20px; height:20px; font-size: 0; line-height: 24px; display: inline-block; background: url(../../images/main/ic_24_check_on.svg) center / 20px no-repeat;}
+                                .checked {width: 20px; height:20px; font-size: 0; line-height: 28px; display: inline-block; background: url(../../images/main/ic_24_check_on.svg) center / 20px no-repeat;}
     
                             }
 
@@ -314,7 +328,7 @@
                                 }
                                 dd {font-size: rem(15px); color: var(--Gray-800); font-weight: 500;}
                             }
-                            & > .info {display: inline-block; padding-left: 20px; font-size: rem(13px); color: var(--Gray-600); position: absolute; bottom: -23px; right: 3px; background: url(../../images/common/ic_16_info.svg) left center no-repeat;}
+                            & > .info {display: inline-block; padding-left: 20px; font-size: rem(13px); color: var(--Gray-600); position: absolute; bottom: -31px; right: 3px; background: url(../../images/common/ic_16_info.svg) left center no-repeat;}
 
                         }
 
@@ -541,6 +555,38 @@
                         .snsCont {font-size: rem(15px); color: #58595f; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
                     }
                 }
+                
+                .snsGroup {
+                    margin-top: 5px;
+                    .snsBox {
+                        width: 100%; height: 86px; margin-top: 9px; border-radius: 10px; display: flex; align-items: center;
+                        &:first-child {margin-top:0;}
+                        &.blog {
+                            background:#F3F5F8 url(../../images/main/ic_60_sns_blog.svg) right 24px center no-repeat;
+                        }
+                        &.inst {
+                            background:#F3F5F8 url(../../images/main/ic_60_sns_inst.svg) right 24px center no-repeat;
+                        }
+                        .snsName {
+                            color: var(--Gray-800); font-size: rem(17px); font-weight: 400; line-height: 1.6;
+                            em {font-weight: 700;}
+                        }
+                        a {
+                            width: 100%; height: 100%; padding: 0 24px; display: block;
+                        }
+                    }
+                }
+                // <div class="mainTitArea">
+                //     <h2 class="mainTit">SNS</h2>
+                // </div>
+                // <div class="snsGroup">
+                //     <div class="snsBox blog">
+                //         <span class="snsName">경륜경정 <em>블로그</em></span>
+                //     </div>
+                //     <div class="snsBox ints">
+                //         <span class="snsName">경륜경정 <em>인스타그램</em></span>
+                //     </div>
+                // </div>
             }
 
             .bannerArea {
