@@ -233,7 +233,11 @@
                             &:first-child {margin-top: 0;}
                             .depth2Name {
                                 width: 100%; padding: 20px; color: var(--Gray-900); font-size: rem(18px); font-weight: 700; line-height: normal; display: block;
-                                &[target=_blank] {background: url(../../images/common/ic_20_outlink.svg) right 40px center no-repeat;}
+                                //&[target=_blank] {background: url(../../images/common/ic_20_outlink.svg) right 40px center no-repeat;}
+                                &[target=_blank]::after {
+                                    content:""; width: 20px; height: 20px; margin-left: 8px; display: inline-block; vertical-align: bottom; 
+                                    background: url(../../images/common/ic_20_outlink.svg) center no-repeat;
+                                }
                             }
                             &:hover, &.active {
                                 border-radius: 12px; background: #F9FAFC;
@@ -420,6 +424,10 @@
                     width: calc(20% - 16px); min-width: 160px;
                     .depth2Name {
                         color: var(--Gray-900); font-size: rem(20px); font-style: normal; font-weight: 700; line-height: 1.4;
+                        &[target=_blank]::after {
+                            content:""; width: 20px; height: 20px; margin-top: -3px; margin-left: 8px; display: inline-block; vertical-align: bottom; 
+                            background: url(../../images/common/ic_20_outlink.svg) center no-repeat;
+                        }
                     }
                 }
             }
@@ -431,19 +439,23 @@
                     &:first-child {margin-top: 0;}
                     .depth3Name {
                         color: var(--Gray-800); font-size: rem(16px); font-style: normal; font-weight: 400; line-height: 1.6; position: relative; z-index: 1;
-                        &::after {
+                        &[target=_blank]::after {
+                            content:""; width: 20px; height: 20px; margin-top: -3px; margin-left: 8px; display: inline-block; vertical-align: middle; 
+                            background: url(../../images/common/ic_16_outlink.svg) center no-repeat;
+                        }
+                        &::before {
                             content: ""; width: calc(100% + 4px); height: 14px; background: #A1F4C7; display: block; position: absolute; left: -2px; bottom: -3px; 
                             z-index: -1; opacity: 0; transition: all 0.1s;
                         }
                         &:hover {
-                            &::after {
+                            &::before {
                                 opacity: 1;
                             }
                         }
                     }
                     &.active {
                         .depth3Name {
-                            &::after {
+                            &::before {
                                 opacity: 1;
                             }
                         }

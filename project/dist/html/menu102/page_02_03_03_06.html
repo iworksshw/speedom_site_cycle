@@ -606,7 +606,7 @@
                                         parent1Menus.forEach(function(menu, idx){
                                             if(idx != targetIdx) {
                                                 menu.classList.remove("on");
-                                                console.log( menu.querySelectorAll("ul") );
+                                                //console.log( menu.querySelectorAll("ul") );
                                                 if( menu.querySelector(".depth2Group") != null && menu.querySelector(".depth2Group").getAttribute("style") != null ) {
                                                     slideUp(menu.querySelector(".depth2Group"), 200);
                                                 }
