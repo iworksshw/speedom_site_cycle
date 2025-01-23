@@ -5125,7 +5125,7 @@ select.iptSlt.typeLine {
 	gap: 8px;
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .quickLinkWrap > ul > li {
-	width: 200px;
+	width: 20%;
 	background: rgba(0, 0, 0, 0.3);
 }
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .quickLinkWrap > ul > li a {
