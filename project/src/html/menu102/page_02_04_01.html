@@ -63,11 +63,25 @@
                                                     <div class="innerBox">
                                                         <div class="subMenu">
                                                             <p>Enter Directly</p>
-                                                            <ul class="datePick">
+                                                            <!-- 20250123 수정 -->
+                                                            <div class="frmGroup">
+                                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmMd">
+                                                                    <input id="startpicker-input02" type="text" aria-label="Date">
+                                                                    <div id="startpicker-container02" style="margin-left: -1px;"></div>
+                                                                </div>
+                                                                <div class="textBox deco">~</div>
+                                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmMd">
+                                                                    <input id="endpicker-input02" type="text" aria-label="Date">
+                                                                    <div id="endpicker-container02" style="margin-left: -1px;"></div>
+                                                                </div>
+                                                            </div>
+                                                            <script>datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");</script>
+                                                            <!-- //20250123 수정 -->
+                                                            <!-- <ul class="datePick">
                                                                 <li><input type="text" placeholder="2024.01.01" /></li>
                                                                 <li class="hpn">-</li>
                                                                 <li><input type="text" placeholder="2024.03.01" /></li>
-                                                            </ul>
+                                                            </ul> -->
                                                         </div>
                                                     </div>
                                                     <div class="innerBox">
@@ -169,7 +183,7 @@
                                                         <div class="subMenu">
                                                             <p>Athlete Name</p>
                                                             <div class="frmBox">
-                                                                <input type="text" class="iptText" placeholder="선수명을 입력하세요." value="" />
+                                                                <input type="text" class="iptText" placeholder="Enter player name" value="" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -226,7 +240,18 @@
                                                 <dt>Payout Odds<span>Multiple Selections Available</span></dt>
                                                 <dd class="noWrap">
                                                     <div class="innerBox">
-                                                        <div class="frmGroup gridItem2">
+                                                        <!-- 20250123 수정 -->
+                                                        <div class="frmGroup basicForm">
+                                                            <div class="frmBox">
+                                                                <input type="text" class="iptText" placeholder="최저 배당률">
+                                                            </div>
+                                                            <div class="textBox">-</div>
+                                                            <div class="frmBox">
+                                                                <input type="text" class="iptText" placeholder="최고 배당률">
+                                                            </div>
+                                                        </div>
+                                                        <!-- //20250123 수정 -->
+                                                        <!-- <div class="frmGroup gridItem2">
                                                             <div class="frmBox">
                                                                 <input type="checkbox" name="rdoGroup5" id="rdo5-1" class="iptRdoChk lg chkAll" />
                                                                 <label for="rdo5-1">All</label>
@@ -239,7 +264,7 @@
                                                                 <input type="checkbox" name="rdoGroup5" id="rdo5-3" class="iptRdoChk lg" />
                                                                 <label class="rdo5-3">High Payout (10 and Above)</label>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
 
                                                     <div class="innerBox">
