@@ -20036,6 +20036,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptSchRstCont .thumGall .list a {
 	display: block;
+	cursor: default;
 }
 .cptSchRstCont .thumGall .list a .thum {
 	position: relative;
