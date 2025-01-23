@@ -4362,6 +4362,16 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .snsArea .snsGroup {
 	margin-top: 5px;
 }
+.lytMain .layoutArea .layoutContainer .snsArea .snsGroup .linkBox {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.lytMain .layoutArea .layoutContainer .snsArea .snsGroup .linkBox a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
 .lytMain .layoutArea .layoutContainer .snsArea .snsGroup .snsBox {
 	width: 100%;
 	height: 86px;
@@ -4393,6 +4403,7 @@ select.iptSlt.typeLine {
 	height: 100%;
 	padding: 0 24px;
 	display: block;
+	align-content: center;
 }
 .lytMain .layoutArea .layoutContainer .bannerArea .bannerSlideWrap {
 	margin-top: 2px;
@@ -6714,7 +6725,7 @@ select.iptSlt.typeLine {
 		font-size: 0.9375rem;
 		display: block;
 	}
-	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth3Group .depth3Menu .depth3Name::after {
+	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth3Group .depth3Menu .depth3Name::before {
 		display: none;
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .quickLink {
@@ -24669,6 +24680,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comImgWrap .imgGroup .imgArea:has(video) {
 	border: 1px solid #000;
+	border-radius: 20px;
 }
 .comImgWrap .imgGroup .imgArea .imgTxt {
 	margin-top: 12px;
@@ -30616,6 +30628,10 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.modMdPopup .popupArea .popupContArea .popBtm.division {
 		justify-content: space-between;
+	}
+	.modMdPopup .popupArea .popupContArea .popBtm:has(.btn:nth-child(2)) .btn {
+		width: calc(50% - 6px);
+		min-width: calc(50% - 6px);
 	}
 }
 

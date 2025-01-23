@@ -313,9 +313,12 @@
                 .popBtm {
                     padding:24px 24px 0; display:flex; justify-content:flex-end;
                     &.division {justify-content:space-between;}
+                    &:has(.btn:nth-child(2)){
+                        .btn {width: calc(50% - 6px); min-width: calc(50% - 6px)}
+                    }
                 }
             }
-        } 
+        }
     }
 }
 /* --------------------------- 로딩중 --------------------------- */

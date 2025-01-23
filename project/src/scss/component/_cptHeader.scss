@@ -560,7 +560,7 @@
                             margin-top: 0;
                             .depth3Name {
                                 padding: 8px 12px; font-size: rem(15px); display: block;
-                                &::after {display: none;}
+                                &::before {display: none;}
                             }
                         }
                     }
