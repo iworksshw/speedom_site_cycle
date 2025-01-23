@@ -189,7 +189,7 @@ function mainVisual() {
             } else if (tablet.matches) {
                 initializeSwiper({allowTouchMove: true});
             } else if (desktop.matches) {
-                console.log('1')
+                //console.log('1')
                 initializeSwiper({allowTouchMove: false});
             }
         }
