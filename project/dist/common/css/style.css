@@ -10946,8 +10946,12 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptOrderGuide .imgGuide .guideGroup .guideItem {
 	flex: 0 0 calc(25% - 24px);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
 }
 .cptOrderGuide .imgGuide .guideGroup .guideItem .tit {
+	width: 100%;
 	margin-top: 16px;
 }
 .cptOrderGuide .imgGuide .guideGroup .guideItem .tit:first-child {
@@ -31160,6 +31164,12 @@ form:has(.cptSection:first-child):first-child {
 	.eng .modLinkScroll .comTitH3:has(.right) .right .legendList .lgItem .legend {
 		width: 50px;
 	}
+}
+.eng .comTitH2.mRow {
+	flex-wrap: wrap;
+}
+.eng .comTitH2.mRow .right {
+	margin-top: 12px;
 }
 @media screen and (max-width: 767px) {
 	.eng .cptBoardView .boardViewArea .viewTop .info {

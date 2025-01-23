@@ -53,6 +53,13 @@
             }
         }
     }
+    .comTitH2 {
+        &.mRow {
+            flex-wrap: wrap;
+            .right {margin-top: 12px; }
+        }
+    }
+
     /* 상세페이지 */
     .cptBoardView {
         @include media('mobile') {
