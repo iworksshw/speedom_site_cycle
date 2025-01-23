@@ -232,7 +232,7 @@
                                         &:nth-child(1) {height: 120px;}
                                         &:nth-child(2) {height: 53px;}
                                         &:nth-last-child(1) {height: 27px;}
-                                        &:nth-last-child(2) {height: 27px;}
+                                        &:nth-last-child(2):not(:nth-child(1)) {height: 27px;}
                                         &:nth-last-child(3) {height: 30px;}
     
                                         .th {

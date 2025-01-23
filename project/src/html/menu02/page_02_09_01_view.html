@@ -49,13 +49,11 @@
 
                             <div class="viewBody">
 
-                                <!-- 20241226 추가 (이미지 확대기능) -->
-                                <div class="comScaleView">
-                                    <div class="scaleViewArea">
-                                        <img src="../../images/thum/board_temp_img02.png" alt="착순판정 이미지 자료">
-                                    </div>
+                                <!-- 20250123 추가 -->
+                                <div class="viewContArea">
+                                    <button class="btnScale" onclick="openPopup('scale01')"><img src="../../images/thum/board_temp_img02.png" alt="착순판정 이미지 자료"></button>
                                 </div>
-                                <!-- //20241226 추가 (이미지 확대기능) -->
+                                <!-- //20250123 추가 -->
 
                                 <div class="comPlayerGrade">
                                     <ul class="gradeGroup">
@@ -129,6 +127,33 @@
 
                         </div>
                     </div>
+
+                    <!-- 20250123 추가 이미지 확대 팝업 -->
+                    <div id="scale01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('scale01');">닫기</button>
+                                        <div class="popTitle">착순판정사진</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+
+                                            <div class="comScaleView">
+                                                <div class="scaleViewArea">
+                                                    <img src="../../images/thum/board_temp_img02.png" alt="착순판정 이미지 자료">
+                                                </div>
+                                            </div>
+
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //20250123 추가 이미지 확대 팝업 -->
                     
                     <!-- 선수정보 팝업 -->
                     <div id="playerData01" class="modPopup lg"> <!-- class - on : 팝업오픈, md : middle,  lg : large -->

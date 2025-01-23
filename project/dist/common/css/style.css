@@ -3397,7 +3397,7 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(1) {
 	height: 27px;
 }
-.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(2) {
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(2):not(:nth-child(1)) {
 	height: 27px;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(3) {
@@ -29882,7 +29882,7 @@ form:has(.cptSection:first-child):first-child {
 	overflow: hidden;
 }
 .comScaleView:hover .scaleViewArea {
-	transform: scale(2);
+	transform: scale(3);
 }
 .comScaleView .scaleViewArea {
 	width: 100%;
@@ -29890,8 +29890,9 @@ form:has(.cptSection:first-child):first-child {
 	position: absolute;
 	left: 0;
 	top: 0;
-	transition: transform 0.3s ease-out;
+	transition: transform 0.6s ease-in-out;
 	pointer-events: none;
+	transition-delay: 0.3s;
 }
 .comScaleView .scaleViewArea img {
 	width: 100%;
