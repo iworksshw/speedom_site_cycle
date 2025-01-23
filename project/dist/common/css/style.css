@@ -24367,6 +24367,14 @@ form:has(.cptSection:first-child):first-child {
 .comBasicTxt .txtBold:first-child {
 	margin-top: 0;
 }
+.comBasicTxt button.copy {
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+	font-size: 0;
+	background: url(../../images/common/ic_16_copy.svg) center/16px no-repeat;
+	display: inline-block;
+}
 .comBasicTxt.space {
 	padding-left: 18px;
 }
