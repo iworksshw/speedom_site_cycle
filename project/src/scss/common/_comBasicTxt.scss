@@ -12,6 +12,9 @@
         margin-top:8px;font-size: rem(18px); font-weight: 700;line-height: 1.6; color: var(--Gray-800); word-break: keep-all;
         &:first-child {margin-top: 0;}
     }
+    button.copy {
+        width: 16px; height: 16px; margin-left: 2px; font-size: 0; background: url(../../images/common/ic_16_copy.svg) center / 16px no-repeat; display: inline-block;
+    }
 
     // 컴포넌트 변경 Class
     // H3 하단 내부 리스트
