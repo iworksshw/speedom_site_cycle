@@ -573,6 +573,9 @@
                 
                 .snsGroup {
                     margin-top: 5px;
+                    &:has(.linkBox) {
+                        margin-top: 2px;
+                    }
                     .linkBox {
                         width: 100%; height: 100%; border-radius: 10px;
                         a {
