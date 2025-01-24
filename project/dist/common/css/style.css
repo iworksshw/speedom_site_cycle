@@ -31143,19 +31143,37 @@ form:has(.cptSection:first-child):first-child {
 	top: 0;
 }
 .eng .comDateSwiper .dateSwiper .swiper-slide .dateBox {
-	width: max-content;
-	padding: 11px 10px;
-	border-radius: 5px;
+	width: 140px;
+	height: 40px;
+	padding: 12px 0;
+	border: 1px solid #B0B2B7;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
 }
-.eng .comDataTable .legend {
-	width: 50px;
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox .date {
+	margin-left: 4px;
+}
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox:hover {
+	color: #111;
+	border: 1px solid #6F7176;
+	background: #fff;
+}
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox:hover span {
+	color: #111;
+}
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox.on.blue {
+	border: 1px solid var(--zone-blue);
+}
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox.on.red {
+	border: 1px solid var(--zone-pink);
+}
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox.on.green {
+	border: 1px solid var(--zone-green);
 }
 .eng .comDataTable .name {
 	width: 100%;
 	justify-content: flex-start;
-}
-.eng .modLinkScroll .comTitH3 .right .legendList .lgItem .legend {
-	width: 50px;
 }
 @media screen and (max-width: 767px) {
 	.eng .modLinkScroll .comTitH3:has(.right) {
@@ -31170,9 +31188,6 @@ form:has(.cptSection:first-child):first-child {
 		flex-direction: row-reverse;
 		align-items: center;
 		gap: 5px;
-	}
-	.eng .modLinkScroll .comTitH3:has(.right) .right .legendList .lgItem .legend {
-		width: 50px;
 	}
 }
 .eng .comTitH2.mRow {
