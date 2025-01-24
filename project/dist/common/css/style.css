@@ -4396,8 +4396,14 @@ select.iptSlt.typeLine {
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
+	overflow: hidden;
 }
 .lytMain .layoutArea .layoutContainer .snsArea .snsGroup .linkBox a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.lytMain .layoutArea .layoutContainer .snsArea .snsGroup .linkBox a img {
 	width: 100%;
 	height: 100%;
 	display: block;
