@@ -3882,6 +3882,7 @@ select.iptSlt.typeLine {
 	height: 618px;
 	padding: 40px 0 28px 40px;
 	border-radius: 16px;
+	position: relative;
 	background: #2b3540 url(../../images/main/mainslide_bg.png) right top no-repeat;
 	position: relative;
 	overflow: hidden;
@@ -3898,6 +3899,32 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .mainPraise b {
 	font-weight: 700;
 	display: block;
+}
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea {
+	position: absolute;
+	right: 40px;
+	top: 40px;
+}
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea .raceCheck {
+	padding-left: 30px;
+	margin-left: 8px;
+	line-height: 24px;
+	font-size: 0.875rem;
+	color: #fff;
+	font-weight: 500;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../images/main/ic_24_check_on.svg) left center no-repeat;
+}
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea .raceCheck b {
+	color: #A1F4C7;
+	font-weight: 700;
+}
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea .raceCheck.uncheck {
+	background-image: url(../../images/main/ic_24_check_off.svg);
+}
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea .raceCheck.uncheck b {
+	color: #fff;
 }
 .lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .slideUnit {
 	display: flex;
