@@ -3395,13 +3395,22 @@ select.iptSlt.typeLine {
 	height: 53px;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(1) {
-	height: 27px;
+	height: 30px;
+}
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(1) .th {
+	margin-bottom: 5px;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(2):not(:nth-child(1)) {
 	height: 27px;
 }
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(2):not(:nth-child(1)) .th {
+	margin-bottom: 2px;
+}
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(3) {
-	height: 30px;
+	height: 27px;
+}
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem:nth-last-child(3) .th {
+	margin-bottom: 2px;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem .th {
 	width: 100%;
@@ -3423,7 +3432,7 @@ select.iptSlt.typeLine {
 	vertical-align: text-bottom;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem.rowspan6 {
-	height: 219px;
+	height: 202px;
 	border-bottom: none;
 	display: flex;
 	align-items: center;
