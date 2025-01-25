@@ -153,7 +153,7 @@ function mainVisual() {
                 effect: "fade",
                 speed: 1000,
                 autoplay: {
-                    delay: 1000,
+                    delay: 4000,
                     disableOnInteraction: false,
                 },
                 pagination: {
@@ -170,7 +170,7 @@ function mainVisual() {
                 effect: "fade",
                 speed: 1000,
                 autoplay: {
-                    delay: 1000,
+                    delay: 4000,
                     disableOnInteraction: false,
                 },
                 pagination: {
