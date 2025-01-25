@@ -4595,33 +4595,28 @@ select.iptSlt.typeLine {
 	}
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea {
-	min-width: 1760px;
+	min-width: 1740px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .siteArea {
-	min-width: 1760px;
+	min-width: 1740px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .siteArea .siteGroup {
-	max-width: 1610px;
-	padding-right: 130px;
+	max-width: 1480px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .addressArea {
-	min-width: 1760px;
+	min-width: 1740px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .addressArea .logoGroup {
-	max-width: 1610px;
-	padding-right: 130px;
+	max-width: 1480px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .addressArea .addressGroup {
-	max-width: 1610px;
-	padding-right: 130px;
+	max-width: 1480px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .addressArea .menuGroup {
-	max-width: 1610px;
-	padding-right: 130px;
+	max-width: 1480px;
 }
 .lytMain .layoutArea .layoutFooter .cptFooter .footArea .addressArea .copyGroup {
-	max-width: 1610px;
-	padding-right: 130px;
+	max-width: 1480px;
 }
 .lytMain .mainPopup {
 	min-width: max-content;
