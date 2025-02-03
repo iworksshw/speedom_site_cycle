@@ -7471,12 +7471,6 @@ select.iptSlt.typeLine {
 		height: 23px;
 		font-size: 0.9375rem;
 	}
-	.cptFooter .footArea .siteArea .siteGroup .item .depth2Group .depth2Item:hover .depth2Link {
-		pointer-events: none;
-	}
-	.cptFooter .footArea .siteArea .siteGroup .item .depth2Group .depth2Item:hover .depth2Link.newW::after {
-		pointer-events: none;
-	}
 	.cptFooter .footArea .addressArea {
 		padding: 32px 0 40px;
 	}
