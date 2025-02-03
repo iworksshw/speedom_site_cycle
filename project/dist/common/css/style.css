@@ -25633,6 +25633,30 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 40px;
 	font-size: 0;
 	text-align: center;
+	/*
+	@include media ('mobile') {
+	    .start {
+	        width:32px; height:32px;
+	    }
+	    .prev {
+	        width:32px; height:32px;
+	    }
+	    .next {
+	        width:32px; height:32px;
+	    }
+	    .end {
+	        width:32px; height:32px;
+	    }
+	    .numList {
+	        li {
+	            width: 32px; height: 32px;
+	            &:first-child {margin-left:0;}
+	            a {
+	                line-height: 30px; 
+	            }
+	        }
+	    }
+	}*/
 }
 .comPaging .start {
 	width: 36px;
@@ -25710,30 +25734,42 @@ form:has(.cptSection:first-child):first-child {
 }
 @media screen and (max-width: 767px) {
 	.comPaging .start {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
+		background-size: 14px;
 	}
 	.comPaging .prev {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
+		margin-left: 2px;
+		background-size: 14px;
 	}
 	.comPaging .next {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
+		margin-left: 2px;
+		background-size: 14px;
 	}
 	.comPaging .end {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
+		margin-left: 2px;
+		background-size: 14px;
+	}
+	.comPaging .numList {
+		margin-left: 2px;
 	}
 	.comPaging .numList li {
-		width: 32px;
-		height: 32px;
+		width: 22px;
+		height: 22px;
+		margin-left: 2px;
 	}
 	.comPaging .numList li:first-child {
 		margin-left: 0;
 	}
 	.comPaging .numList li a {
-		line-height: 30px;
+		line-height: 20px;
+		font-size: 0.75rem;
 	}
 }
 

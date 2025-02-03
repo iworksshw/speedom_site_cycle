@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     //All Menu -Start
-    all1MenuAction();
+    //all1MenuAction();
 
     //GNB - Start
     const depth1Menus = document.querySelectorAll(".gnbArea .depth1Menu");
