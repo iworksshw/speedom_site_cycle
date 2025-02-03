@@ -1578,6 +1578,19 @@ body:has(.cptHeader.on) .allMenuArea {
 		min-width: 1000px;
 	}
 }
+/* ------------------- 영문전용 ------------------- */
+:root:has(.lytMainEng) {
+	background: #060A0D;
+}
+
+:root:has(.lytLayout.eng) {
+	background: var(--Bg-Line-bg-100);
+}
+
+.lytLayout.eng {
+	background: #fff;
+}
+
 /* z-index
 #탑메뉴 영역
 .cptHeader : -----------------------------100
@@ -4699,10 +4712,6 @@ select.iptSlt.typeLine {
 	display: flex;
 	flex: 1 1 auto;
 	justify-content: flex-end;
-}
-
-:root:has(.lytMainEng) {
-	background: #060A0D;
 }
 
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual {
