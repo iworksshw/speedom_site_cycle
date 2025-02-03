@@ -30,6 +30,32 @@
             }
         }
     }
+    
+    @include media ('mobile') {
+        .start {
+            width:22px; height:22px; background-size: 14px;
+        }
+        .prev {
+            width:22px; height:22px; margin-left:2px; background-size: 14px;
+        }
+        .next {
+            width:22px; height:22px; margin-left:2px; background-size: 14px;
+        }
+        .end {
+            width:22px; height:22px; margin-left:2px; background-size: 14px;
+        }
+        .numList {
+            margin-left:2px;
+            li {
+                width: 22px; height: 22px; margin-left: 2px;
+                &:first-child {margin-left:0;}
+                a {
+                    line-height: 20px; font-size: rem(12px);
+                }
+            }
+        }
+    }
+    /*
     @include media ('mobile') {
         .start {
             width:32px; height:32px;
@@ -52,5 +78,5 @@
                 }
             }
         }
-    }
+    }*/
 }
