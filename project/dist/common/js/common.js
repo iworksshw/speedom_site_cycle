@@ -864,7 +864,7 @@ function slctDateSlide() {
         const dateSlide = onDateBtn.closest(".swiper-slide");
         const dateSlides = Array.from(dateSlide.parentNode.children);  
         const sdindex = dateSlides.indexOf(dateSlide); 
-        console.log(dateSlides);
+        //console.log(dateSlides);
         let dateSwiper = new Swiper(".dateSwiper", {
             slidesPerView: "auto",
             spaceBetween: 12,
@@ -876,7 +876,10 @@ function slctDateSlide() {
             },
         });
 
-        slctDateWatch(dateSwiper);
+        //스티키 기능이 있을 때 감시 호출
+        if (document.querySelector(".comDateSwiper.sticky")){
+            slctDateWatch(dateSwiper);
+        }
     }
 }
 
@@ -886,7 +889,7 @@ function slctDateWatch($swiper) {
     let dateSlide = onDateBtn.closest(".swiper-slide");
     let dateSlides = Array.from(dateSlide.parentNode.children);  
     let sdindex = dateSlides.indexOf(dateSlide); 
-
+    //console.log('날짜선택감시');
     setInterval(function(){
         onDateBtn = document.querySelector(".dateBox.on");
         dateSlide = onDateBtn.closest(".swiper-slide");
