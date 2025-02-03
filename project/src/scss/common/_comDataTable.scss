@@ -344,4 +344,21 @@
         &.type03 {background: #F07E3F;} //추입
         &.type04 {background: #92BA2B;} //마크
     }
+
+
+    /* 예외 */
+    &.prize {
+        .tableArea {
+            table {
+                tr {
+                    th:nth-child(1) {
+                        width: 87px;
+                    }
+                    th.th02 {
+                        position: sticky; left: 87px; z-index: 10;
+                    }
+                }
+            }
+        }
+    }
 }
