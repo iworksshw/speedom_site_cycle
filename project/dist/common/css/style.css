@@ -4701,6 +4701,10 @@ select.iptSlt.typeLine {
 	justify-content: flex-end;
 }
 
+:root:has(.lytMainEng) {
+	background: #060A0D;
+}
+
 .lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual {
 	overflow-x: hidden;
 }
@@ -22876,6 +22880,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 100%;
 	margin-top: 12px;
 	background: #fff;
+	/* 예외 */
 }
 .comDataTable:first-child {
 	margin-top: 0;
@@ -23481,6 +23486,14 @@ form:has(.cptSection:first-child):first-child {
 }
 .comDataTable .legend.type04 {
 	background: #92BA2B;
+}
+.comDataTable.prize .tableArea table tr th:nth-child(1) {
+	width: 87px;
+}
+.comDataTable.prize .tableArea table tr th.th02 {
+	position: sticky;
+	left: 87px;
+	z-index: 10;
 }
 
 .comContTable {
