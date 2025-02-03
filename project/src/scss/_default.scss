@@ -212,6 +212,16 @@ body {
   body {min-width: 1000px;}
 }
 
+/* ------------------- 영문전용 ------------------- */
+:root:has(.lytMainEng) {
+  background: #060A0D;
+}
+:root:has(.lytLayout.eng) {
+  background: var(--Bg-Line-bg-100);
+}
+.lytLayout.eng {
+  background: #fff;
+}
 
 /* z-index
 #탑메뉴 영역
