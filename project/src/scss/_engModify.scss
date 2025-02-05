@@ -11,7 +11,8 @@
         .dateSwiper {
             .swiper-slide {
                 .dateBox {
-                    width: 140px; height: 40px; padding: 12px 0; border: 1px solid #B0B2B7; border-radius: 20px; display: flex; justify-content: center;
+                    //width: 140px; height: 40px; padding: 12px 0; border: 1px solid #B0B2B7; border-radius: 20px; display: flex; justify-content: center;
+                    border: 1px solid #B0B2B7;
                     .region {}
                     .date {margin-left: 4px;}
                     &:hover {

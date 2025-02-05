@@ -516,7 +516,8 @@
                 }
             }
             .allMenuGroup {
-                height: calc(100vh - 65px); overflow-y: auto;
+                //20250205 수정 height: calc(100vh - 65px); overflow-y: auto; 
+                height: calc(100dvh - 65px); overflow-y: auto;
                 .allMenuBox {
                     height: 100%; padding: 0;
                     .depth1Group {
