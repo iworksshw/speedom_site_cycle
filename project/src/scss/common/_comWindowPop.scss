@@ -1,0 +1,18 @@
+/* 윈도우 모바일용 팝업상단 */
+.comWindowPop {
+    display: none;
+    @include media('mobile'){
+        width: 100%; height: 65px; display: block; position: relative;
+        .popArea {
+            width: 100%; background: #fff; position: fixed; top: 0; left: 0; z-index: 100;
+        }
+        .winTitle {
+            width: 100%; min-height: 65px; padding: 20px 40px 20px 16px;; font-size: rem(18px); font-weight: 700; color: var(--Gray-900, #111); 
+            line-height: 1.4; border-bottom: 1px solid var(--Bg-Line-line-100); position: relative; word-break: keep-all;
+        }
+        .btnWinClose {
+            width: 44px; height: 44px; font-size: 0; border: 0; background: url(../../images/common/ic_24_pop_close.svg) center no-repeat; 
+            position: absolute; right: 22px; top: 10px; z-index: 10;
+        }
+    }
+}
