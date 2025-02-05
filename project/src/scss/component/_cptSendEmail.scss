@@ -3,10 +3,11 @@
     width: 100%;max-width: 600px;margin: 0 auto;padding: 32px;background: #fff;
     .sectArea {
         .titleBox {
-            display: flex;justify-content: center;align-items: center;padding: 20px 10px;background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
+            display: flex;justify-content: center;align-items: center;padding: 20px 20px;background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
             h1 {color: var(---Primary, #078B7B);font-size: rem(30px);font-weight: 600;line-height: 140%; /* 42px */}
             & ~ .comTitH3,
             & ~ .comBtnGroup {margin-top: 60px;}
+            .btnClose {display: none;}
         }
         .comTitH3 + .comFormTable {margin-top: 20px;}
         .comFormTable {
@@ -36,8 +37,16 @@
         }
     }
     @include media('mobile') {
-        padding: 20px 16px;
+        padding: 0 16px 20px;
         .sectArea {
+            .titleBox {
+                width: calc(100% + 40px); margin-left: -20px; justify-content: space-between; position: relative;
+
+                .btnClose {
+                    width: 44px; height: 44px; font-size: 0; border: 0; background: url(../../images/common/ic_24_pop_close.svg) center no-repeat; display: block;
+                    position: absolute; right: 9px; top: 19px; z-index: 10;
+                }
+            }
             .titleBox ~ .comBtnGroup {margin-top: 40px;}
             .comTitH3 + .comFormTable {margin-top: 12px;}
             .comFormTable {
