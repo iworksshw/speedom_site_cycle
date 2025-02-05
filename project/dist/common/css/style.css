@@ -16585,7 +16585,7 @@ form:has(.cptSection:first-child):first-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 10px;
+	padding: 20px 20px;
 	background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
 }
 .cptSendEmail .sectArea .titleBox h1 {
@@ -16596,6 +16596,9 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptSendEmail .sectArea .titleBox ~ .comTitH3, .cptSendEmail .sectArea .titleBox ~ .comBtnGroup, .cptSendEmail .sectArea .comGroupTop .titleBox ~ .btnList, .comGroupTop .cptSendEmail .sectArea .titleBox ~ .btnList, .cptSendEmail .sectArea .comTitH2 .right .titleBox ~ .btnList, .comTitH2 .right .cptSendEmail .sectArea .titleBox ~ .btnList {
 	margin-top: 60px;
+}
+.cptSendEmail .sectArea .titleBox .btnClose {
+	display: none;
 }
 .cptSendEmail .sectArea .comTitH3 + .comFormTable {
 	margin-top: 20px;
@@ -16635,7 +16638,25 @@ form:has(.cptSection:first-child):first-child {
 }
 @media screen and (max-width: 767px) {
 	.cptSendEmail {
-		padding: 20px 16px;
+		padding: 0 16px 20px;
+	}
+	.cptSendEmail .sectArea .titleBox {
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		justify-content: space-between;
+		position: relative;
+	}
+	.cptSendEmail .sectArea .titleBox .btnClose {
+		width: 44px;
+		height: 44px;
+		font-size: 0;
+		border: 0;
+		background: url(../../images/common/ic_24_pop_close.svg) center no-repeat;
+		display: block;
+		position: absolute;
+		right: 9px;
+		top: 19px;
+		z-index: 10;
 	}
 	.cptSendEmail .sectArea .titleBox ~ .comBtnGroup, .cptSendEmail .sectArea .comGroupTop .titleBox ~ .btnList, .comGroupTop .cptSendEmail .sectArea .titleBox ~ .btnList, .cptSendEmail .sectArea .comTitH2 .right .titleBox ~ .btnList, .comTitH2 .right .cptSendEmail .sectArea .titleBox ~ .btnList {
 		margin-top: 40px;
@@ -16846,6 +16867,9 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1.25rem;
 	color: #fff;
 	font-weight: 700;
+}
+.cptBatSimul .smlHead .btnClose {
+	display: none;
 }
 .cptBatSimul .smlCont {
 	padding: 0 32px 240px;
@@ -17803,6 +17827,21 @@ form:has(.cptSection:first-child):first-child {
 	opacity: 1;
 }
 @media screen and (max-width: 959px) {
+	.cptBatSimul .smlHead {
+		justify-content: space-between;
+	}
+	.cptBatSimul .smlHead .btnClose {
+		width: 44px;
+		height: 44px;
+		font-size: 0;
+		border: 0;
+		background: url(../../images/common/ic_24_pop_close_w.svg) center no-repeat;
+		display: block;
+		position: absolute;
+		right: 22px;
+		top: 12px;
+		z-index: 10;
+	}
 	.cptBatSimul .smlCont {
 		padding: 0 16px 207px;
 	}

@@ -6,6 +6,9 @@
             line-height: 0;
             .txt {margin-left: 7px; font-size: rem(20px); color: #fff; font-weight: 700;}
         }
+        .btnClose {
+            display: none;
+        }
     }
 
     .smlCont {
@@ -393,6 +396,14 @@
 
     // 960 이하부터 모바일 레이아웃 고정
     @include media(959px){    
+        .smlHead {
+            justify-content: space-between;
+
+            .btnClose {
+                width: 44px; height: 44px; font-size: 0; border: 0; background: url(../../images/common/ic_24_pop_close_w.svg) center no-repeat; display: block;
+                position: absolute; right: 22px; top: 12px; z-index: 10;
+            }
+        }
         .smlCont {
             padding: 0 16px 207px;
     
