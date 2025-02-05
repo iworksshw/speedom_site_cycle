@@ -1559,11 +1559,6 @@ body.noScrl {
 	}
 }
 /* ------------------- body scroll bar 제거 (전체메뉴 클릭시) ------------------- */
-body:has(.allMenuArea.on) {
-	height: 100%;
-	min-height: 100%;
-	overflow: hidden !important;
-}
 body:has(.cptHeader.on) .allMenuArea {
 	transform: translateY(112px);
 }
@@ -31460,5 +31455,94 @@ form:has(.cptSection:first-child):first-child {
 	.lytLayout .layoutArea .layoutFooter {
 		display: none;
 	}
+}
+/*  */
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .titArea .race .tit {
+	font-size: 26px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .titArea .date {
+	font-size: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .modTab .tabMenuGroup .tabMenu .tabItem .tabName {
+	font-size: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .btnArea .raceCheck {
+	font-size: 16px;
+}
+
+.comDateSwiper .dateSwiper .swiper-slide .dateBox > span {
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .refresh .text {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .playerName .plInfo .info {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .playerName .plInfo .info em {
+	font-size: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .aiChart .chartNum em {
+	font-size: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .aiChart .chartNum i {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt {
+	font-size: 18px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt .sm::before {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem .th {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .rowGroup .rowItem .th .tooltip {
+	vertical-align: middle;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .txt .sm {
+	font-size: 16px;
+}
+
+.lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea > .info {
+	font-size: 16px;
+}
+
+/* 출주표 */
+.comDataTable .tableArea table thead tr th {
+	font-size: 18px;
+	padding: 8px 5px;
+}
+
+.comDataTable .tableArea table tbody tr th {
+	font-size: 18px;
+	padding: 8px 5px;
+}
+
+.comDataTable .tableArea table tbody tr td {
+	font-size: 18px;
+	padding: 8px 5px;
+}
+
+.comDataTable .tableArea table tbody tr .left {
+	padding: 8px 20px;
+}
+
+.comDataTable .player {
+	font-size: 17px;
 }
 /*# sourceMappingURL=../maps/style.css.map */
