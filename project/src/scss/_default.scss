@@ -195,6 +195,7 @@ body.noScrl {height:100vh; overflow:hidden;}
 
 /* ------------------- body scroll bar 제거 (전체메뉴 클릭시) ------------------- */
 body {
+  // 20250205 차트 속도 이슈로 스크립트에서 처리
   // &:has(.allMenuArea.on) {
   //   height:100%; min-height:100%; overflow:hidden !important;
   // }

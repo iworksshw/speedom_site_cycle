@@ -425,11 +425,13 @@ function all1MenuAction(){
     if(btnAllMenu){
         btnAllMenu.addEventListener("click", function(e){
             document.querySelector(".allMenuArea").classList.add("on");
+            document.querySelector("body").style.cssText = "height:100%; min-height:100%; overflow:hidden !important;";
         });
     }
     btnCloseAllMenus.forEach(function(btn){
         btn.addEventListener("click", function(e){
             document.querySelector(".allMenuArea").classList.remove("on");
+            document.querySelector("body").style.cssText = "";
         });
     });
 
