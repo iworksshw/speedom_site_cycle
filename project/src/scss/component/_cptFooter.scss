@@ -32,8 +32,8 @@
                             }
                             &:hover {
                                 .depth2Link {
-                                    color: var(---Primary); text-decoration: underline; text-underline-position: under;
-                                    &.newW::after {border-color: 1px solid var(---Primary); background-image: url(../../images/common/ic_16_new_window_mint.svg); background-size: 16px;}
+                                    color: var(--Primary); text-decoration: underline; text-underline-position: under;
+                                    &.newW::after {border-color: 1px solid var(--Primary); background-image: url(../../images/common/ic_16_new_window_mint.svg); background-size: 16px;}
                                 }
                             }
                         }
@@ -101,7 +101,7 @@
                 width: 100%; max-width:1480px; margin: 0 auto; padding: 16px 20px; border-top: 1px solid var(--Bg-Line-line-100); display: flex; gap: 24px;
                 .item {
                     width: max-content; height: 24px; display: flex;
-                    &:first-child a {color: var(---Primary); font-weight: 700;;}
+                    &:first-child a {color: var(--Primary); font-weight: 700;;}
                     a {
                         width: max-content; height: 100%; padding-top: 1px; color: var(--Gray-800, #2C2C2C); font-size: rem(16px); font-weight: 400; line-height: 1; display: block; align-content: center;
                     }

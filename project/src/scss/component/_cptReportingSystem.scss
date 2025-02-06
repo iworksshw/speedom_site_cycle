@@ -47,7 +47,7 @@
                 display: flex;align-items: center;gap: 32px;
                 > li {
                     flex: 1;background: var(--bg-line-bg-300, #EDF0F5);border-radius: 12px;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:12px;min-height: 114px;
-                    > p {color: var(---Primary);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 25.2px */}
+                    > p {color: var(--Primary);font-size: rem(18px);font-weight: 700;line-height: 140%; /* 25.2px */}
                 }
             }
         }

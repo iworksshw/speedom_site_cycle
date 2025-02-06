@@ -66,8 +66,8 @@
         .dateSwiper {
             padding: 24px;
             //&::before {width: 24px; top: 24px;background:#fff;}
-            &::before {width: 60px; top: 10px; background:linear-gradient(90deg, #fff 40%, transparent); pointer-events: none;}
-            &::after {width: 60px;top: 10px; background:linear-gradient(270deg, #fff 40%, transparent); pointer-events: none;}
+            &::before {width: 60px; height: 84px; top: 10px; background:linear-gradient(90deg, #fff 40%, transparent); pointer-events: none;}
+            &::after {width: 60px; height: 84px; top: 10px; background:linear-gradient(270deg, #fff 40%, transparent); pointer-events: none;}
         }
     }
 
@@ -84,6 +84,8 @@
             &.sOn {
                 .dateSwiper {
                     top:70px;
+                    &::before {height: 56px;}
+                    &::after {height: 56px;}
                 }
             }
         }

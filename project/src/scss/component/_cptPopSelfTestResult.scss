@@ -4,12 +4,12 @@
         text-align: center;
         .txtTit {font-size: rem(24px); color: var(--Grey-900); font-weight: 700; line-height: 1.4; word-break: keep-all;}
         .ic {width: 60PX; height: 60px; margin: 0 auto 16px; background: url(../../images/common/ic_76_complete.svg) no-repeat center/100%;}
-        .totalCnt {color: var(---Primary);}
+        .totalCnt {color: var(--Primary);}
     }
 
     .rowB {
         margin-top: 32px; padding: 24px 20px; text-align: center; border-radius: 16px; background: var(--Bg-Line-bg-200);
-        .txtRst {font-size: rem(20px); color: var(---Secondary); font-weight: 700; line-height: 1.6;}
+        .txtRst {font-size: rem(20px); color: var(--Secondary); font-weight: 700; line-height: 1.6;}
         .txtRstInfo {
             font-size: rem(16px); color: var(--Gray-800); line-height: 1.6; margin-top: 8px;
             .blk {display: block;}

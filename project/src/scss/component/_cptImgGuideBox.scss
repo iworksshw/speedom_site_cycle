@@ -23,7 +23,7 @@
         }
         .viewArea {
             flex: 0 0 calc(50% - 40px);
-            .viewTit {font-size: rem(20px); color: var(---Primary); font-weight: 700;}
+            .viewTit {font-size: rem(20px); color: var(--Primary); font-weight: 700;}
             .dotList {
                 @extend .comBasicList;
                 .listGroup.half {

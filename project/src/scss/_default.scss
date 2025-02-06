@@ -3,15 +3,15 @@
   --key-blue01:#00aede;
   --key-text01:#00aede;
 
-  ---Primary:#078B7B;
-  ---Point2:#A7FFEF;
+  --Primary:#078B7B;
+  --Point2:#A7FFEF;
   --Point-Orange: #F97B07;
   --Point-Blue:#0EA3F6;
   --Point-Blue2:#2E6CFF;
   --Point-Primary2: #28C39E;
   --Point-Primary3: #1F4F82;
   --Point-Red: #f33;
-  ---Secondary: #254962;
+  --Secondary: #254962;
   --Gray-900:#111111;
   --Gray-800:#2C2C2C;
   --Gray-700:#414347;
@@ -39,7 +39,7 @@
   --zone-pink: #F45990;
   --zone-green: #2EB273;
 
-  ---Secondary: #254962;
+  --Secondary: #254962;
 }
 $basicFontSize:16px;
 
@@ -157,7 +157,7 @@ body.noScrl {height:100vh; overflow:hidden;}
 }
 
 /* ------------------- Font Color ------------------- */
-.tKey {color: var(---Primary) !important;}
+.tKey {color: var(--Primary) !important;}
 .tRed {color: var(--Point-Red) !important;}
 .tOrange {color: var(--Point-Orange) !important;}
 .tBlue {color: var(--Point-Blue) !important;}

@@ -588,7 +588,11 @@ function calendarPop() {
                     calPop.style.left = "auto";
                     calPop.style.right = 0;
                 } else {
-                    calPop.style.left = `${btnXY.left - frameXY.left - 168}px`;
+                    if(btnXY.left - frameXY.left - 168 <= 0){
+                        calPop.style.left = "0px";
+                    } else {
+                        calPop.style.left = `${btnXY.left - frameXY.left - 168}px`;
+                    }
                 }
             }
         })

@@ -30,7 +30,7 @@
                         &:first-child {margin-top: 0;}
                     }
                     .rowA {}
-                    .more {color: var(---Primary); font-size: rem(14px); margin-top: 8px; border-bottom: 1px solid var(---Primary); display: inline-block; vertical-align: middle; cursor: pointer;}
+                    .more {color: var(--Primary); font-size: rem(14px); margin-top: 8px; border-bottom: 1px solid var(--Primary); display: inline-block; vertical-align: middle; cursor: pointer;}
                     .rowB {display: none; margin-top: 8px;}
                     .rowB.open {display: block;}
                 }

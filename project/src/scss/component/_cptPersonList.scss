@@ -4,7 +4,7 @@
     .listTit {
         margin-top: 60px; padding-bottom: 12px; border-bottom: 1px solid var(--Bg-Line-line-200);
         &:first-child {margin-top: 0;}
-        h2 {font-size: rem(30px); font-weight: 600; line-height: 1.4; color: var(---Primary);}
+        h2 {font-size: rem(30px); font-weight: 600; line-height: 1.4; color: var(--Primary);}
     }
     .prsnList {
         margin-top: 60px; display: flex; flex-wrap: wrap; gap: 60px 34px; align-items: stretch;

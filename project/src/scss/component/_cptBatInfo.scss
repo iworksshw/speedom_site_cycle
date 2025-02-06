@@ -8,7 +8,7 @@
         .check {
             display: flex; justify-content: space-between; align-items: center;
             dt {font-size: rem(15px); color: var(--Gray-900); font-weight: 500; line-height: 1.6;}
-            dd {font-size: rem(32px); color: var(---Primary); font-weight: 700; line-height: 1.4;}
+            dd {font-size: rem(32px); color: var(--Primary); font-weight: 700; line-height: 1.4;}
         }
     }
     .finalPoint {
@@ -26,7 +26,7 @@
                 .remain {
                     padding-top: 10px;display: flex; justify-content: space-between; align-items: center;
                     dt {font-size: rem(15px); color: var(--Gray-900); line-height: 1.6; font-weight: 500;}
-                    dd {font-size: rem(32px); color: var(---Primary); line-height: 1.6; font-weight: 700;}
+                    dd {font-size: rem(32px); color: var(--Primary); line-height: 1.6; font-weight: 700;}
                 }
             }
         }

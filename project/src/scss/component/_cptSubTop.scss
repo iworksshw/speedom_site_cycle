@@ -18,7 +18,7 @@
                 height: 18px; padding-left: 28px; position: relative; 
                 &:first-child {
                     padding-left: 0; background: none;
-                    a {width: 18px; height: 18px; font-size: 0; background: url(../../images/common/ic_loca_home.svg) center no-repeat; border-bottom: none;}
+                    a {width: 18px !important; height: 18px !important; font-size: 0 !important; background: url(../../images/common/ic_loca_home.svg) center no-repeat; border-bottom: none;}
                     &::before {display: none;}
                 }
                 &::before {content: ""; width: 16px; height: 16px; display: block; background: url(../../images/common/ic_loca_arr.svg) center no-repeat; position: absolute; left: 6px; top: 3px;}
@@ -31,7 +31,7 @@
             width: 100%; margin-top:26px;
             h1 {
                 padding: 0 2px; color: var(--Gray-900); font-size: rem(16px); font-weight: 700; display: inline-block; position: relative; z-index: 1;
-                &::after {display: block; content: ""; width: calc(100% + 4px); height: 12px; background: var(---Point2); position: absolute; left: -2px; bottom: 0; z-index: -1;}
+                &::after {display: block; content: ""; width: calc(100% + 4px); height: 12px; background: var(--Point2); position: absolute; left: -2px; bottom: 0; z-index: -1;}
             }
         }
         .subText {
@@ -85,7 +85,7 @@
                     &:last-child {
                         width: max-content; background: none; display: block;
                         a {
-                            width: max-content; font-size: rem(14px); display: block;
+                            width: max-content; height: auto; font-size: rem(14px); display: block;
                         }
                     }
                 }

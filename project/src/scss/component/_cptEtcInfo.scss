@@ -12,7 +12,7 @@
                 min-height: 40px; padding-left: 48px; background: url(../../images/common/ico_etc_info.svg) left center no-repeat; display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;
                 .tit {font-size: rem(20px); color: var(--Gray-800); font-weight:700; line-height: 1.4;}
                 .subTit {
-                    margin-left: 24px; font-size: rem(18px); color: var(---Primary); font-weight: 600; line-height: 1.6;  display: inline-block; position: relative;
+                    margin-left: 24px; font-size: rem(18px); color: var(--Primary); font-weight: 600; line-height: 1.6;  display: inline-block; position: relative;
                     &::after {display: block; content: ""; width: 1px; height: 12px; position: absolute; left: -12px; top: 8px; background: var(--Gray-200);}
                 }
             }
@@ -40,7 +40,7 @@
                         &::after {display: block; content: ""; width: 24px; height: 24px; background: url(../../images/common/ic_20_arr_right_g.svg) center no-repeat; position: absolute; top: 50%; right: -39px; transform: translateY(-50%);}
                         &:last-child:after {display: none;}
 
-                        em {font-size: rem(18px); color: var(---Primary); font-weight: 700; display: block;}
+                        em {font-size: rem(18px); color: var(--Primary); font-weight: 700; display: block;}
                         i {margin-top: 4px; font-style: normal; font-size: rem(16px); color: var(--Gray-800); font-weight: 300; display: block;}
                         b {font-weight: 600;}
                     }
@@ -61,7 +61,7 @@
                         &:first-child {margin-top: 0;}
                         .qTit {
                             line-height: 1.6;
-                            .num {font-size: rem(18px); color: var(---Primary); font-weight: 700;}
+                            .num {font-size: rem(18px); color: var(--Primary); font-weight: 700;}
                             .txt {font-size: rem(16px); color: var(--Gray-800); }
                             .bullet {
                                 position: relative;padding-left: 18px;color: var(--Gray-800, #2C2C2C);font-size: rem(16px);font-weight: 700;line-height: 150%; /* 24px */
@@ -79,7 +79,7 @@
                 }
                 .etcInfoBox {
                     width: 100%; margin: 20px 0; padding: 24px 30px; border-radius: 8px; background: var(--Bg-Line-bg-300);
-                    .etcTit {margin-bottom: 12px; font-size: rem(15px); color: var(---Primary); font-weight: 700; display: inline-block;}
+                    .etcTit {margin-bottom: 12px; font-size: rem(15px); color: var(--Primary); font-weight: 700; display: inline-block;}
                     .etcItem {
                         margin-top: 6px; font-size: rem(15px); line-height: 1.6; color: var(--Gray-800); display: flex; justify-content: flex-start; align-items: flex-start; column-gap: 5px;
                         &:first-child {margin-top: 0;}

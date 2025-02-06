@@ -27,7 +27,7 @@
                     input[type=radio] {display: block;}
                     label {font-size: rem(16px); color: var(--Gray-800); line-height: 1.5; width: 120px; height: 48px; background: var(--Bg-Line-white); border: 1px solid var(--Gray-200); border-radius: 8px; display: flex; justify-content: center; align-items: center; cursor: pointer; position: relative;}
                     label::before {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_check_mini.svg) center no-repeat; display: block; margin-right: 8px;}
-                    input[type=radio]:checked + label {border: 1px solid var(---Primary); background: #F0FAF7; font-weight: 600; color: var(--Gray-900);}
+                    input[type=radio]:checked + label {border: 1px solid var(--Primary); background: #F0FAF7; font-weight: 600; color: var(--Gray-900);}
                     input[type=radio]:checked + label::before {background: url(../../images/common/ic_20_check_mini_on.svg) center no-repeat;}
                 }
             }

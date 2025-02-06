@@ -9,8 +9,8 @@
             flex: 0 0 calc(33.3333% - 26.6667px); border-radius: 12px; border: 1px solid var(--Point-Primary2); padding: 24px 30px 20px;
             dt {
                 padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--Bg-Line-line-200); text-align: center;
-                .num {width: 30px; height: 30px; border-radius: 50%; background: var(---Primary); color: #fff; font-size: 16px; font-weight: 700; line-height: 30px; display: inline-block;}
-                b {margin-top: 12px; font-size: rem(20px); color: var(---Primary); font-weight: 700; display: block;}
+                .num {width: 30px; height: 30px; border-radius: 50%; background: var(--Primary); color: #fff; font-size: 16px; font-weight: 700; line-height: 30px; display: inline-block;}
+                b {margin-top: 12px; font-size: rem(20px); color: var(--Primary); font-weight: 700; display: block;}
             }
             dd {font-size: rem(16px); color: var(--Gray-800); word-break: keep-all;}
         }

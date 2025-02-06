@@ -14,8 +14,8 @@
             .noti {
                 width: 100%; margin-bottom: 12px; font-style: normal; display: flex; gap: 8px;
                 .mark {
-                    width: max-content; height: 24px; padding: 0 16px; font-size: rem(12px); color: var(---Primary); font-weight: 600; line-height: 22px;
-                    border-radius: 20px; border: 1px solid var(---Primary); display:block;
+                    width: max-content; height: 24px; padding: 0 16px; font-size: rem(12px); color: var(--Primary); font-weight: 600; line-height: 22px;
+                    border-radius: 20px; border: 1px solid var(--Primary); display:block;
                     &.ing {
                         color: #fff; border: 1px solid var(--Point-Primary2); background: var(--Point-Primary2);
                     }
@@ -31,12 +31,12 @@
                 width: 100%; margin-top: 16px; display: flex; gap: 24px;
                 .item {
                     color: var(--Gray-600); font-size: rem(15px); font-weight: 400; line-height: 1.5;
-                    .recomNum {color: var(---Primary); font-weight: 600;}
+                    .recomNum {color: var(--Primary); font-weight: 600;}
                     // 고객의 소리 게시판 view
                     &.processing {
                         span {
                             display: inline-block; align-content: center; padding-left: 16px; padding-right: 16px; height: 26px; 
-                            font-size: rem(13px); font-weight: 600; color: var(---Primary);line-height: 26px; border-radius: 20px;border: 1px solid var(---Primary); background: #FFF;
+                            font-size: rem(13px); font-weight: 600; color: var(--Primary);line-height: 26px; border-radius: 20px;border: 1px solid var(--Primary); background: #FFF;
                         }
                         &.progress span {color: var(--Point-Red);border-color: var(--Point-Red);
                         }
@@ -179,7 +179,7 @@
         .boardViewArea {
             .viewTop {
                 .eyebrow {
-                    margin-bottom: 12px; color: var(---Primary); font-size: rem(16px); font-style: normal; font-weight: 700; line-height: 1.4; display: block;
+                    margin-bottom: 12px; color: var(--Primary); font-size: rem(16px); font-style: normal; font-weight: 700; line-height: 1.4; display: block;
                 }
                 .viewTitle {
                     font-size: rem(18px);

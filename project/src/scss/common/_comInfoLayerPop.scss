@@ -6,7 +6,7 @@
         width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--Bg-Line-line-100); background: #fff;
         .popHead {
             margin-bottom: 12px; display: flex;
-            .popTit {font-size: rem(15px); color: var(---Primary); font-weight: 600; line-height: 1.4;}
+            .popTit {font-size: rem(15px); color: var(--Primary); font-weight: 600; line-height: 1.4;}
             .popClose {width: 16px;height: 16px; margin-left: auto; font-size: 0; background: url(../../images/common/ic_24_pop_close.svg) center / 16px no-repeat;}
         }
         .popBody {

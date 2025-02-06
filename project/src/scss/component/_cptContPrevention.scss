@@ -8,7 +8,7 @@
             &::before {content:""; position: absolute; top: -4px; left: 0; right: 0; height: 50%; border-radius: 16px 16px 25px 25px; background-image: linear-gradient(to right, rgba(70, 195, 183, 1), rgba(63, 144, 221, 1)); background-origin: border-box; background-clip: content-box, border-box;}
             a {display: block; padding: 40px 40px; height: 100%; background: #FFF; border-radius: 16px; border: 1px solid var(--Bg-Line-line-100); position: relative; z-index: 1;}
             a:hover {background: linear-gradient(90deg, #EEFAF9 -0.24%, #EDF5FD 99.92%);}
-            a:hover .lk {color: var(---Primary);}
+            a:hover .lk {color: var(--Primary);}
             a:hover .lk::after {background: url(../../images/common/ic_12_arr_right_p.svg) no-repeat center;}
             dl {
                 dt {color: var(--font-800); font-size: rem(20px); font-weight: 700; line-height: 1.4; margin-bottom: 10px;}

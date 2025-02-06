@@ -84,9 +84,9 @@
                     font-size: rem(14px);
                 }
                 &.on {
-                    border-color: var(---Primary); background-color: #F0FAF7 !important;
+                    border-color: var(--Primary); background-color: #F0FAF7 !important;
                     & > span {
-                        color: var(---Primary);
+                        color: var(--Primary);
                     }
                 }
                 &[class*=play] {
@@ -220,7 +220,7 @@
                         width: max-content; height: 30px; padding: 0; font-size: rem(14px); border-radius: 0; line-height: 22px; color: var(--Gray-600); 
                         border: 0; border-bottom: 2px solid var(--Gray-200); background: transparent; display: inline-block; flex-grow: 1;
                         &.on {
-                            color: var(---Primary); border: 0; border-bottom: 4px solid var(---Primary); background: transparent;
+                            color: var(--Primary); border: 0; border-bottom: 4px solid var(--Primary); background: transparent;
                         }
                     }
                 }
@@ -244,7 +244,7 @@
                         border-bottom: 2px solid var(--Gray-200); align-content: center; position: relative; display: inline-block;
                     }
                     .tabName.on {
-                        font-weight: 700; color: var(---Primary); border: 0; border-bottom: 4px solid var(---Primary); background: transparent;
+                        font-weight: 700; color: var(--Primary); border: 0; border-bottom: 4px solid var(--Primary); background: transparent;
                     }
                 }
             }
