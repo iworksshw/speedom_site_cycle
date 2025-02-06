@@ -11801,10 +11801,10 @@ form:has(.cptSection:first-child):first-child {
 	.cptCalendar .calenPopup {
 		width: 100%;
 		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+		top: 0 !important;
+		left: 0 !important;
+		bottom: 0 !important;
+		right: 0 !important;
 		align-items: center;
 		justify-content: center;
 	}
@@ -19264,7 +19264,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptRoadMap .stepGrp ul li .inTxt dd {
 	font-size: 1rem;
-	font-size: 600;
+	font-weight: 600;
 	line-height: 1.6;
 	color: var(--Bg-Line-white);
 }
@@ -28539,7 +28539,7 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.comContInfo .ppBox .cont .rowA .m1 {
 		font-size: 0.9375rem;
-		font-size: 600;
+		font-weight: 600;
 	}
 	.comContInfo .ppBox .cont .rowA .m2 {
 		font-size: 1.25rem;
@@ -29394,7 +29394,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 160px;
 	height: 48px;
 	font-size: 1.125rem;
-	color: var(---Gray-600);
+	color: var(--Gray-600);
 	line-height: 1.6;
 	padding-left: 20px;
 	margin-right: 20px;
@@ -30751,7 +30751,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .modMdPopup .popupArea .popupContArea .popCont .modMdPopup_Tit20 {
 	font-size: 1.25rem;
-	font-size: 700;
+	font-weight: 700;
 	line-height: 1.4;
 	margin-bottom: 32px;
 	color: var(--Primary);
@@ -31189,7 +31189,7 @@ form:has(.cptSection:first-child):first-child {
 	.modTab .tabMenuGroup.on ~ .tabDirection button {
 		opacity: 1;
 		transition: opacity 0.1s;
-		transition-delay: 0;
+		transition-delay: 0s;
 	}
 	.modTab .tabMenuGroup .tabMenu .tabItem .tabName {
 		padding: 0 16px;
@@ -31402,6 +31402,15 @@ form:has(.cptSection:first-child):first-child {
 .eng .comDateSwiper .dateSwiper .swiper-slide .dateBox.on.green {
 	border: 1px solid var(--zone-green);
 }
+.eng .comDataTable.both .tableArea table thead tr th {
+	position: static;
+}
+.eng .comDataTable.both .tableArea table tbody tr th {
+	position: static;
+}
+.eng .comDataTable.row .tableArea table tbody tr th {
+	position: static;
+}
 .eng .comDataTable .name {
 	width: 100%;
 	justify-content: flex-start;
@@ -31541,7 +31550,7 @@ form:has(.cptSection:first-child):first-child {
 		display: none;
 	}
 }
-/*  */
+/* 메인 */
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .titArea .race .tit {
 	font-size: 26px;
 }

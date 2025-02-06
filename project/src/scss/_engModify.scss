@@ -29,6 +29,37 @@
         }
     }
     .comDataTable {
+        &.both {
+            .tableArea {
+                table {
+                    thead {
+                        tr {
+                            th { 
+                                position: static;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            th {position: static;}
+                        }
+                    }
+                }
+            }
+        }
+        &.row {
+            .tableArea {
+                table {
+                    tbody {
+                        tr {
+                            th {
+                                position: static;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .legend {
             //width: 50px;
         }

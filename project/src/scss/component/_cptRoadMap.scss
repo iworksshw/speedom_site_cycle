@@ -10,7 +10,7 @@
                     display: flex; align-items: center; gap: 12px; padding-left: 40px; height: 56px;
                     &:first-child {padding-left: 32px;}
                     dt {display: flex; align-items: center; justify-content: center; width: 37px; height: 25px; border-radius: 20px; font-size: rem(14px); font-weight: 700; background: var(--Bg-Line-white);}
-                    dd {font-size: rem(16px); font-size: 600; line-height: 1.6; color: var(--Bg-Line-white);}
+                    dd {font-size: rem(16px); font-weight: 600; line-height: 1.6; color: var(--Bg-Line-white);}
                 }
                 &.li1 {color: var(--Point-Primary2); background-image: url(../../images/contents/page_08_05_02_step1.svg);}
                 &.li2 {color: #40C4DA; background-image: url(../../images/contents/page_08_05_02_step2.svg);}
