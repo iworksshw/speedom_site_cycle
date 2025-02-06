@@ -230,7 +230,7 @@
                     img {max-width: 100%; height: auto; display: block;}
                 }          
                 // 시설안내 안내 팝업 중 font-size:20px인 타이틀
-                .modMdPopup_Tit20 {font-size: rem(20px); font-size: 700; line-height: 1.4; margin-bottom: 32px; color: var(--Primary); font-weight: 700;}
+                .modMdPopup_Tit20 {font-size: rem(20px); font-weight: 700; line-height: 1.4; margin-bottom: 32px; color: var(--Primary); font-weight: 700;}
 
                 // 마이페이지 - 활동지수 이용안내
                 [class^=cpt]:not(:first-child) {
