@@ -30286,6 +30286,65 @@ form:has(.cptSection:first-child):first-child {
 	}
 }
 
+/* ------------------- 현재 경주 발매상태 및 현재시간 ------------------- */
+.comRaceTime {
+	width: 100%;
+	margin-top: 60px;
+}
+.comRaceTime .timeArea {
+	width: 100%;
+	padding: 20px 40px;
+	border-radius: 12px;
+	background: #EEF9FD;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.comRaceTime .timeArea .alignL {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.comRaceTime .timeArea .alignR {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.comRaceTime .timeArea .tit {
+	color: var(--Gray-900, #111);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.6;
+}
+.comRaceTime .timeArea .tag {
+	width: max-content;
+	height: 26px;
+	margin-left: 8px;
+	padding: 0 10px;
+	border-radius: 20px;
+	color: #FFF;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+.comRaceTime .timeArea .tag.before {
+	background: var(--Secondary);
+}
+.comRaceTime .timeArea .tag.ing {
+	background: var(--Point-Orange);
+}
+.comRaceTime .timeArea .tag.end {
+	background: #B0B2B7;
+}
+.comRaceTime .timeArea .time {
+	color: var(--Gray-700);
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
 /* -------------------------------- 파일 업로드/다운로드 -------------------------------- */
 /* -------------------------------- 이전글/다음글 -------------------------------- */
 /* --------------------------- 팝업 Large --------------------------- */
