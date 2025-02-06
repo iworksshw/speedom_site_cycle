@@ -15,7 +15,7 @@
                     color: var(--Gray-600); border: 1px solid var(--Gray-300); background: #fff; display: inline-block;
                     
                     &.on {
-                        color: #fff; border: 1px solid var(---Primary); background: var(---Primary);
+                        color: #fff; border: 1px solid var(--Primary); background: var(--Primary);
                         &.orange { border: 1px solid var(--Point-Orange); background: var(--Point-Orange);}
                         &.blue { border: 1px solid var(--Point-Blue); background: var(--Point-Blue);}
                         &.mint { border: 1px solid var(--Point-Primary2); background: var(--Point-Primary2);}

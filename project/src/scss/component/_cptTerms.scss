@@ -14,7 +14,7 @@
             .termsGroup {
                 margin-top: 40px;
                 > h2 {
-                    color: var(---Primary, #078B7B);font-size: rem(24px);font-weight: 700;line-height: 140%; /* 33.6px */
+                    color: var(--Primary, #078B7B);font-size: rem(24px);font-weight: 700;line-height: 140%; /* 33.6px */
                     & + ul,
                     & + .cptQuickMove {margin-top: 20px;}
                     &:not(:first-child) {margin-top: 60px;}
@@ -182,7 +182,7 @@
         .termsGroup {
             margin-top: 40px;
             > h2 {
-                color: var(---Primary, #078B7B);font-size: rem(24px);font-weight: 700;line-height: 140%; /* 33.6px */
+                color: var(--Primary, #078B7B);font-size: rem(24px);font-weight: 700;line-height: 140%; /* 33.6px */
                 & + ul,
                 & + .cptQuickMove {margin-top: 20px;}
                 &:not(:first-child) {margin-top: 60px;}

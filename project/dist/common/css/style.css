@@ -1082,15 +1082,15 @@
 :root {
 	--key-blue01:#00aede;
 	--key-text01:#00aede;
-	---Primary:#078B7B;
-	---Point2:#A7FFEF;
+	--Primary:#078B7B;
+	--Point2:#A7FFEF;
 	--Point-Orange: #F97B07;
 	--Point-Blue:#0EA3F6;
 	--Point-Blue2:#2E6CFF;
 	--Point-Primary2: #28C39E;
 	--Point-Primary3: #1F4F82;
 	--Point-Red: #f33;
-	---Secondary: #254962;
+	--Secondary: #254962;
 	--Gray-900:#111111;
 	--Gray-800:#2C2C2C;
 	--Gray-700:#414347;
@@ -1115,7 +1115,7 @@
 	--zone-blue: #548CE0;
 	--zone-pink: #F45990;
 	--zone-green: #2EB273;
-	---Secondary: #254962;
+	--Secondary: #254962;
 }
 
 * {
@@ -1493,7 +1493,7 @@ body.noScrl {
 }
 /* ------------------- Font Color ------------------- */
 .tKey {
-	color: var(---Primary) !important;
+	color: var(--Primary) !important;
 }
 
 .tRed {
@@ -2013,7 +2013,7 @@ body:has(.cptHeader.on) .allMenuArea {
 .iptRdoChk[type=checkbox]:checked + label {
 	color: var(--Gray-900);
 	font-weight: 600;
-	border: 1px solid var(---Primary, #078B7B);
+	border: 1px solid var(--Primary, #078B7B);
 	background: #F0FAF7;
 }
 .iptRdoChk[type=radio].lg + label,
@@ -2368,8 +2368,8 @@ select.iptSlt.typeLine {
 }
 .btn.Primary {
 	color: #fff;
-	border: 1px solid var(---Primary);
-	background: var(---Primary);
+	border: 1px solid var(--Primary);
+	background: var(--Primary);
 }
 .btn.Primary:hover {
 	border: 1px solid #077265;
@@ -2719,7 +2719,7 @@ select.iptSlt.typeLine {
 .lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutContArea .tooltipBox .btnMore {
 	display: inline;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutContArea .tooltipBox .btnMore::after {
 	display: inline-block;
@@ -3130,7 +3130,7 @@ select.iptSlt.typeLine {
 	color: #fff;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .titArea .race .tag.before {
-	background: var(---Secondary);
+	background: var(--Secondary);
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .raceTit .titArea .race .tag.ing {
 	background: var(--Point-Orange);
@@ -3482,7 +3482,7 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .tooltipBox .btnMore {
 	display: inline;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .tooltipBox .btnMore::after {
 	display: inline-block;
@@ -3699,7 +3699,7 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .analay dt {
 	padding-left: 30px;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	background: url(../../images/main/ic_20_analy.svg) left center no-repeat;
 	position: relative;
@@ -3743,7 +3743,7 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .analay dt .tooltipBox .btnMore {
 	display: inline;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .analay dt .tooltipBox .btnMore::after {
 	display: inline-block;
@@ -4085,7 +4085,7 @@ select.iptSlt.typeLine {
 }
 .lytMain .layoutArea .layoutContainer .mediaArea .boardGroup .mediaItem .titArea .cate {
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	display: block;
 }
@@ -4146,7 +4146,7 @@ select.iptSlt.typeLine {
 	width: 100%;
 	padding: 24px 27px 24px 20px;
 	border-radius: 10px;
-	background: var(---Secondary);
+	background: var(--Secondary);
 }
 .lytMain .layoutArea .layoutContainer .rankingArea .rankBox .rankItem {
 	margin-bottom: 12px;
@@ -5312,7 +5312,7 @@ select.iptSlt.typeLine {
 		color: var(--Gray-800);
 	}
 	.lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .rankingListWrap h2 {
-		color: var(---Primary);
+		color: var(--Primary);
 	}
 	.lytMainEng .layoutArea .layoutContainer .mainLayoutWrap .mainVisual .innerWrap .mainContentWrap .rankingListWrap > ol > li {
 		padding-left: 24px;
@@ -5814,7 +5814,7 @@ select.iptSlt.typeLine {
 }
 .cptHeader:not(.inMain).on {
 	transform: translateY(-112px);
-	background: var(---Primary);
+	background: var(--Primary);
 }
 .cptHeader:not(.inMain).on .headArea .headBox .logoBox {
 	width: 104px;
@@ -5861,8 +5861,8 @@ select.iptSlt.typeLine {
 	right: -26px;
 }
 .cptHeader:not(.inMain).on .gnbArea {
-	border-top: 1px solid var(---Primary);
-	border-bottom: 1px solid var(---Primary);
+	border-top: 1px solid var(--Primary);
+	border-bottom: 1px solid var(--Primary);
 }
 .cptHeader:not(.inMain).on .gnbArea .gnbBox .depth1Group {
 	margin-left: 165px;
@@ -5873,7 +5873,7 @@ select.iptSlt.typeLine {
 	font-size: 16px;
 }
 .cptHeader:not(.inMain).on .gnbArea .gnbBox .depth1Group .depth1Menu.on .depth1Name, .cptHeader:not(.inMain).on .gnbArea .gnbBox .depth1Group .depth1Menu:hover .depth1Name, .cptHeader:not(.inMain).on .gnbArea .gnbBox .depth1Group .depth1Menu:focus .depth1Name {
-	color: var(---Point2);
+	color: var(--Point2);
 }
 .cptHeader:not(.inMain).on .gnbArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area) .depth1Name {
 	padding-right: 20px;
@@ -6123,7 +6123,7 @@ select.iptSlt.typeLine {
 	width: 100%;
 	margin-top: 8px;
 	padding: 16px 24px 18px 48px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.9375rem;
 	font-weight: 500;
 	text-align: left;
@@ -6185,7 +6185,7 @@ select.iptSlt.typeLine {
 	background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
 }
 .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu.on .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:hover .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu:focus .depth1Name, .cptHeader .gnbArea .gnbBox .depth1Group .depth1Menu.active .depth1Name {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptHeader .gnbArea .gnbBox .depth2Area {
 	width: 100%;
@@ -6513,7 +6513,7 @@ select.iptSlt.typeLine {
 }
 .allMenuArea .allMenuGroup .allMenuBox .depth1Group .depth1Menu .depth1Name {
 	width: 23.6%;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: 700;
@@ -6616,7 +6616,7 @@ select.iptSlt.typeLine {
 .allMenuArea .allMenuGroup .allMenuBox .quickLink .quickItem a {
 	width: max-content;
 	height: 24px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.9375rem;
 	font-weight: 600;
 	line-height: 1.6;
@@ -6720,7 +6720,7 @@ select.iptSlt.typeLine {
 		line-height: 1.3;
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth1Group .depth1Menu.on .depth1Name {
-		color: var(---Primary);
+		color: var(--Primary);
 		font-weight: 700;
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth1Group .depth1Menu.on .depth2Group {
@@ -6790,7 +6790,7 @@ select.iptSlt.typeLine {
     width:100%; background: #fff; transition: transform 0.2s, background 0.2s; position: fixed; left:0; top:0; z-index: 100;
 
     &.on {
-        transform: translateY(-112px); background: var(---Primary);
+        transform: translateY(-112px); background: var(--Primary);
         .headArea {
             .headBox {
                 .logoBox {
@@ -6812,7 +6812,7 @@ select.iptSlt.typeLine {
             }
         }
         .gnbArea {
-            border-top: 1px solid var(---Primary); border-bottom: 1px solid var(---Primary);
+            border-top: 1px solid var(--Primary); border-bottom: 1px solid var(--Primary);
             .gnbBox {
                 .depth1Group {
                     margin-left: 215px; margin-right:290px;
@@ -6822,7 +6822,7 @@ select.iptSlt.typeLine {
                         }
                         &.on {
                             .depth1Name {
-                                color: var(---Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
+                                color: var(--Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
                             }
                         }
                     }
@@ -6888,7 +6888,7 @@ select.iptSlt.typeLine {
                     }
                     &.on {
                         .depth1Name {
-                            color: var(---Primary); background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
+                            color: var(--Primary); background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
                         }
                         .depth2Area {height:396px; display: block; }
                     }
@@ -7075,7 +7075,7 @@ select.iptSlt.typeLine {
 
                     &:first-child {border-top: 0;}
                     .depth1Name{
-                        width: 23.6%; color: var(---Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
+                        width: 23.6%; color: var(--Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
                     }
                 }
             }
@@ -7124,7 +7124,7 @@ select.iptSlt.typeLine {
                             width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
                         }
                         &.on {
-                            .depth1Name{color: var(---Primary); font-weight: 700;}
+                            .depth1Name{color: var(--Primary); font-weight: 700;}
                             .depth2Group {display: flex;}
                         }
                     }
@@ -7253,12 +7253,12 @@ select.iptSlt.typeLine {
 	vertical-align: middle;
 }
 .cptFooter .footArea .siteArea .siteGroup .item .depth2Group .depth2Item:hover .depth2Link {
-	color: var(---Primary);
+	color: var(--Primary);
 	text-decoration: underline;
 	text-underline-position: under;
 }
 .cptFooter .footArea .siteArea .siteGroup .item .depth2Group .depth2Item:hover .depth2Link.newW::after {
-	border-color: 1px solid var(---Primary);
+	border-color: 1px solid var(--Primary);
 	background-image: url(../../images/common/ic_16_new_window_mint.svg);
 	background-size: 16px;
 }
@@ -7385,7 +7385,7 @@ select.iptSlt.typeLine {
 	display: flex;
 }
 .cptFooter .footArea .addressArea .menuGroup .item:first-child a {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .cptFooter .footArea .addressArea .menuGroup .item a {
@@ -7560,7 +7560,7 @@ select.iptSlt.typeLine {
 	width: 100%;
 	padding: 12px 3px;
 	text-align: center;
-	background: var(---Primary);
+	background: var(--Primary);
 }
 .cptQuickMenu .quickHead .headTit {
 	margin-bottom: 6px;
@@ -7698,9 +7698,9 @@ select.iptSlt.typeLine {
 	background: none;
 }
 .cptSubTop .subTopArea .location .item:first-child a {
-	width: 18px;
-	height: 18px;
-	font-size: 0;
+	width: 18px !important;
+	height: 18px !important;
+	font-size: 0 !important;
 	background: url(../../images/common/ic_loca_home.svg) center no-repeat;
 	border-bottom: none;
 }
@@ -7745,7 +7745,7 @@ select.iptSlt.typeLine {
 	content: "";
 	width: calc(100% + 4px);
 	height: 12px;
-	background: var(---Point2);
+	background: var(--Point2);
 	position: absolute;
 	left: -2px;
 	bottom: 0;
@@ -7842,6 +7842,7 @@ select.iptSlt.typeLine {
 	}
 	.cptSubTop .subTopArea .location .item:last-child a {
 		width: max-content;
+		height: auto;
 		font-size: 0.875rem;
 		display: block;
 	}
@@ -8008,7 +8009,7 @@ select.iptSlt.typeLine {
 	border-radius: 16px;
 }
 .cptLogin .loginArea .loginTitle {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.125rem;
 	font-weight: 600;
 	line-height: 140%; /* 25.2px */
@@ -8168,9 +8169,9 @@ select.iptSlt.typeLine {
 	height: 26px;
 	font-size: 0.8125rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 	border-radius: 20px;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #FFF;
 	display: block;
 	align-content: center;
@@ -8222,7 +8223,7 @@ select.iptSlt.typeLine {
 }
 .cptBoardList .boardListArea .listTable table tr td.bdTitle .title .icons .read {
 	margin-right: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.6;
@@ -8256,7 +8257,7 @@ select.iptSlt.typeLine {
 .cptBoardList .boardListArea .listTable table tr td .recommend {
 	min-width: 63px;
 	padding-left: 24px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 600;
 	line-height: 1.6;
@@ -8293,10 +8294,10 @@ select.iptSlt.typeLine {
 	height: 26px;
 	font-size: 0.8125rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 	line-height: 26px;
 	border-radius: 20px;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #FFF;
 }
 .cptBoardList .boardListArea .listTable table.thTable tbody tr td.processing.progress span {
@@ -8675,8 +8676,8 @@ select.iptSlt.typeLine {
 	background: #fff;
 }
 .cptAlbumList .albumListArea .listBoard .listGroup .listItem .infoBox .progress .mark.line {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 	background: #fff;
 }
 .cptAlbumList .albumListArea .listBoard .listGroup .listItem .infoBox .date {
@@ -8833,8 +8834,8 @@ select.iptSlt.typeLine {
 	background: #fff;
 }
 .cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .progress .mark.line {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 	background: #fff;
 }
 .cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .context {
@@ -9089,11 +9090,11 @@ select.iptSlt.typeLine {
 	height: 24px;
 	padding: 0 16px;
 	font-size: 0.75rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 	line-height: 22px;
 	border-radius: 20px;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	display: block;
 }
 .cptBoardView .boardViewArea .viewTop .noti .mark.ing {
@@ -9126,7 +9127,7 @@ select.iptSlt.typeLine {
 	line-height: 1.5;
 }
 .cptBoardView .boardViewArea .viewTop .info .item .recomNum {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 }
 .cptBoardView .boardViewArea .viewTop .info .item.processing span {
@@ -9137,10 +9138,10 @@ select.iptSlt.typeLine {
 	height: 26px;
 	font-size: 0.8125rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 	line-height: 26px;
 	border-radius: 20px;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #FFF;
 }
 .cptBoardView .boardViewArea .viewTop .info .item.processing.progress span {
@@ -9294,7 +9295,7 @@ select.iptSlt.typeLine {
 }
 .modMdPopup .cptBoardView .boardViewArea .viewTop .eyebrow {
 	margin-bottom: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 700;
@@ -9830,7 +9831,7 @@ form:has(.cptSection:first-child):first-child {
 .cptEtcInfo .infoBox .info dt .subTit {
 	margin-left: 24px;
 	font-size: 1.125rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 	line-height: 1.6;
 	display: inline-block;
@@ -9892,7 +9893,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptEtcInfo .infoBox .info dd .boxStep .stepItem em {
 	font-size: 1.125rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	display: block;
 }
@@ -9944,7 +9945,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptEtcInfo .infoBox .info dd .qnaList .qnaItem .qTit .num {
 	font-size: 1.125rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .cptEtcInfo .infoBox .info dd .qnaList .qnaItem .qTit .txt {
@@ -9995,7 +9996,7 @@ form:has(.cptSection:first-child):first-child {
 .cptEtcInfo .infoBox .info dd .etcInfoBox .etcTit {
 	margin-bottom: 12px;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	display: inline-block;
 }
@@ -10665,7 +10666,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptImgGuideBox .boxArea .viewArea .viewTit {
 	font-size: 1.25rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .cptImgGuideBox .boxArea .viewArea .dotList .listGroup.half::after {
@@ -10811,8 +10812,8 @@ form:has(.cptSection:first-child):first-child {
 	vertical-align: middle;
 }
 .cptWordTab .contArea .wordGroup .wordItem dt .tagWrap .tag.mint {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 }
 .cptWordTab .contArea .wordGroup .wordItem dt .tagWrap .tag.blue {
 	color: var(--Point-Primary3);
@@ -11303,7 +11304,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background: var(---Primary);
+	background: var(--Primary);
 	line-height: 30px;
 	font-size: 1rem;
 	color: #fff;
@@ -11323,7 +11324,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 100%;
 	font-size: 1.125rem;
 	font-weight: 700;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptProcess .stepWrap .stepGroup .stepItem .stepCont dd {
 	width: 100%;
@@ -11436,7 +11437,7 @@ form:has(.cptSection:first-child):first-child {
 .cptLaw .lawGroup .lawItem .lawLink {
 	margin-top: 12px;
 	font-size: 0.875rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	text-decoration: underline;
 	text-underline-position: under;
 	display: inline-block;
@@ -11844,7 +11845,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1.875rem;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptPersonList .prsnList {
 	margin-top: 60px;
@@ -12467,7 +12468,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 1.4;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptFullFloat .floatBox .contArea .floatTit .desc {
 	font-size: 0.9375rem;
@@ -12680,7 +12681,7 @@ form:has(.cptSection:first-child):first-child {
 	height: 48px;
 	border-radius: 50%;
 	font-size: 0;
-	background: var(---Primary) url(../../images/common/ic_24_calendar.svg) center no-repeat;
+	background: var(--Primary) url(../../images/common/ic_24_calendar.svg) center no-repeat;
 	flex: 0 0 48px;
 }
 .cptDateSelect .selectBox .layerPopup {
@@ -12834,7 +12835,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background: var(---Primary);
+	background: var(--Primary);
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
@@ -12844,7 +12845,7 @@ form:has(.cptSection:first-child):first-child {
 .cptMission .mssnGroup .mssnItem dt b {
 	margin-top: 12px;
 	font-size: 1.25rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	display: block;
 }
@@ -13242,8 +13243,8 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptJoinTable .joinArea .joinStep .stepGroup .step.complete::after {
 	font-size: 0;
-	border: 1px solid var(---Primary);
-	background: var(---Primary) url(../../images/common/ic_20_step.svg) center no-repeat;
+	border: 1px solid var(--Primary);
+	background: var(--Primary) url(../../images/common/ic_20_step.svg) center no-repeat;
 	opacity: 0.4;
 }
 .cptJoinTable .joinArea .joinStep .stepGroup .step.complete::before {
@@ -13255,14 +13256,14 @@ form:has(.cptSection:first-child):first-child {
 .cptJoinTable .joinArea .joinStep .stepGroup .step.current::after {
 	color: #fff;
 	font-weight: 700;
-	border: 1px solid var(---Primary);
-	background: var(---Primary);
+	border: 1px solid var(--Primary);
+	background: var(--Primary);
 }
 .cptJoinTable .joinArea .joinStep .stepGroup .step.current::before {
 	background: url(../../images/common/ic_etc_step_on.svg) center no-repeat;
 }
 .cptJoinTable .joinArea .joinStep .stepGroup .step.current .txt {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .cptJoinTable .joinArea .joinStep + .membershipTitle, .cptJoinTable .joinArea .joinStep + .registrationTitle {
@@ -13355,7 +13356,7 @@ form:has(.cptSection:first-child):first-child {
 	background-size: 20px;
 }
 .cptJoinTable .joinArea .bulletTitle > p {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 160%; /* 22.4px */
@@ -13379,7 +13380,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 32px;
 }
 .cptJoinTable .joinArea .certifyTitle.color h2 {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-weight: 700;
 }
 .cptJoinTable .joinArea .certifyTitle h2 {
@@ -13439,7 +13440,7 @@ form:has(.cptSection:first-child):first-child {
 	line-height: 160%; /* 28.8px */
 }
 .cptJoinTable .joinArea .registrationTitle h3 strong {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-weight: 600;
 }
 .cptJoinTable .joinArea .registrationTitle + .comBtnGroup + .linkBoxGroup, .cptJoinTable .joinArea .comGroupTop .registrationTitle + .btnList + .linkBoxGroup, .comGroupTop .cptJoinTable .joinArea .registrationTitle + .btnList + .linkBoxGroup, .cptJoinTable .joinArea .comTitH2 .right .registrationTitle + .btnList + .linkBoxGroup, .comTitH2 .right .cptJoinTable .joinArea .registrationTitle + .btnList + .linkBoxGroup {
@@ -13662,7 +13663,7 @@ form:has(.cptSection:first-child):first-child {
 .cptAnnounce .announceInfoBox > div > dl dt {
 	position: relative;
 	padding-left: 62px;
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.75rem;
 	font-weight: 600;
 	line-height: 46px;
@@ -13892,7 +13893,7 @@ form:has(.cptSection:first-child):first-child {
 	flex: 1;
 }
 .cptReportingCenter .reportingCenterList .comBasicTxt p b {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 @media screen and (max-width: 1023px) {
 	.cptReportingCenter .reportingCenterList > ul {
@@ -14080,7 +14081,7 @@ form:has(.cptSection:first-child):first-child {
 	min-height: 114px;
 }
 .cptReportingSystem .reportingForm .formList > ul > li > p {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 140%; /* 25.2px */
@@ -14352,10 +14353,10 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 0;
 }
 .cptContHistory .contArea .yearCont .yearList .monthCont .more {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.875rem;
 	margin-top: 8px;
-	border-bottom: 1px solid var(---Primary);
+	border-bottom: 1px solid var(--Primary);
 	display: inline-block;
 	vertical-align: middle;
 	cursor: pointer;
@@ -14478,7 +14479,7 @@ form:has(.cptSection:first-child):first-child {
 	background: linear-gradient(90deg, #EEFAF9 -0.24%, #EDF5FD 99.92%);
 }
 .cptContPrevention .prevntBox .item a:hover .lk {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptContPrevention .prevntBox .item a:hover .lk::after {
 	background: url(../../images/common/ic_12_arr_right_p.svg) no-repeat center;
@@ -14659,7 +14660,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-right: 8px;
 }
 .cptContSelfTest .testCont .clickBox ul li input[type=radio]:checked + label {
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #F0FAF7;
 	font-weight: 600;
 	color: var(--Gray-900);
@@ -14794,7 +14795,7 @@ form:has(.cptSection:first-child):first-child {
 	background: url(../../images/common/ic_76_complete.svg) no-repeat center/100%;
 }
 .cptPopSelfTestResult .rowA .totalCnt {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptPopSelfTestResult .rowB {
 	margin-top: 32px;
@@ -14805,7 +14806,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptPopSelfTestResult .rowB .txtRst {
 	font-size: 1.25rem;
-	color: var(---Secondary);
+	color: var(--Secondary);
 	font-weight: 700;
 	line-height: 1.6;
 }
@@ -14950,7 +14951,7 @@ form:has(.cptSection:first-child):first-child {
 	background: linear-gradient(90deg, #EEFAF9 -0.24%, #EDF5FD 99.92%);
 }
 .cptContProgram .prevntBox .item a:hover .lk {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptContProgram .prevntBox .item a:hover .lk::after {
 	background: url(../../images/common/ic_12_arr_right_p.svg) no-repeat center;
@@ -15192,7 +15193,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.4;
-	color: var(---Primary);
+	color: var(--Primary);
 	margin-bottom: 8px;
 }
 .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .comBasicList .item, .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .comJoinBtmText .item, .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .comNumList .listGroup .item .addList .item, .comNumList .listGroup .item .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .addList .item, .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .cptEtcInfo .infoBox .info dd .infoList .item, .cptEtcInfo .infoBox .info dd .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .infoList .item, .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .cptDescList .thumList .thumItem .descArea dd .item, .cptDescList .thumList .thumItem .descArea .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 dd .item, .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .cptImgGuideBox .boxArea .viewArea .dotList .item, .cptImgGuideBox .boxArea .viewArea .cptContPrgmView .subCont .rowList .contBox .halfCont .wd50 .dotList .item {
@@ -15710,7 +15711,7 @@ form:has(.cptSection:first-child):first-child {
 .cptDataList .dataListBox .cate {
 	width: 100%;
 	margin-bottom: 8px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 600;
 }
@@ -16010,7 +16011,7 @@ form:has(.cptSection:first-child):first-child {
 	flex: 1;
 }
 .cptReportingCenter .reportingCenterList .comBasicTxt p b {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 @media screen and (max-width: 1023px) {
 	.cptReportingCenter .reportingCenterList > ul {
@@ -16198,7 +16199,7 @@ form:has(.cptSection:first-child):first-child {
 	min-height: 114px;
 }
 .cptReportingSystem .reportingForm .formList > ul > li > p {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 140%; /* 25.2px */
@@ -16314,7 +16315,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 40px;
 }
 .cptTerms .sectArea .termsContent .termsGroup > h2 {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 140%; /* 33.6px */
@@ -16511,7 +16512,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 40px;
 }
 .modMdPopup:not(:has(.cptTerms)) .termsContent .termsGroup > h2 {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 140%; /* 33.6px */
@@ -16589,7 +16590,7 @@ form:has(.cptSection:first-child):first-child {
 	background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
 }
 .cptSendEmail .sectArea .titleBox h1 {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.875rem;
 	font-weight: 600;
 	line-height: 140%; /* 42px */
@@ -17097,7 +17098,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-left: 8px;
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankTit .pageArea .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-	background: var(---Primary);
+	background: var(--Primary);
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankSwiper {
 	overflow: hidden;
@@ -17134,14 +17135,14 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Gray-600);
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankSwiper .rankList .rankItem.ranker .num {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankSwiper .rankList .rankItem.ranker .id {
 	font-weight: 600;
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankSwiper .rankList .rankItem.ranker .point {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 }
 .cptBatSimul .smlCont .smryArea .rankingBox .rankInfo {
@@ -17191,7 +17192,7 @@ form:has(.cptSection:first-child):first-child {
 .cptBatSimul .smlCont .smryArea .tooltipBox .btnMore {
 	display: inline;
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptBatSimul .smlCont .smryArea .tooltipBox .btnMore::after {
 	display: inline-block;
@@ -17274,7 +17275,7 @@ form:has(.cptSection:first-child):first-child {
 	line-height: 25px;
 	border-radius: 12.5px;
 	font-size: 0.875rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 	background: rgba(7, 139, 123, 0.1);
 	display: inline-block;
@@ -17298,7 +17299,7 @@ form:has(.cptSection:first-child):first-child {
 	background-position: top center;
 }
 .cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox.on .matchTag, .cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox:hover .matchTag {
-	color: var(---Point2);
+	color: var(--Point2);
 	background: rgba(0, 0, 0, 0.3);
 }
 .cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox.on .matchTime, .cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox:hover .matchTime {
@@ -17360,7 +17361,7 @@ form:has(.cptSection:first-child):first-child {
 	border-radius: 16.5px;
 	font-size: 1.125rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 	background: rgba(7, 139, 123, 0.1);
 }
 .cptBatSimul .smlCont .matchDetail .mtchTit .etc {
@@ -17502,8 +17503,8 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptBatSimul .smlCont .matchDetail .mtchDt .batSection .batGroup .batItem input:checked + label {
 	background: #f0faf7;
-	border-color: var(---Primary);
-	color: var(---Primary);
+	border-color: var(--Primary);
+	color: var(--Primary);
 }
 .cptBatSimul .smlCont .matchDetail .mtchDt .batSection .batGroup .batItem input:checked + label .name::after {
 	display: block;
@@ -17780,7 +17781,7 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 700;
 }
 .cptBatSimul .smlFloating .unitArea .numUnit .numItem dd .result {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .cptBatSimul .smlFloating .unitArea .btnArea {
@@ -18018,7 +18019,7 @@ form:has(.cptSection:first-child):first-child {
 		background-position: center -24px;
 	}
 	.cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox:hover .matchTag {
-		color: var(---Primary);
+		color: var(--Primary);
 		background: rgba(7, 139, 123, 0.1);
 	}
 	.cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox:hover .matchTime {
@@ -18036,7 +18037,7 @@ form:has(.cptSection:first-child):first-child {
 		background-position: top center;
 	}
 	.cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox.on .matchTag {
-		color: var(---Point2);
+		color: var(--Point2);
 		background: rgba(0, 0, 0, 0.3);
 	}
 	.cptBatSimul .smlCont .matchSlct .matchSwiper .swiper-wrapper .swiper-slide .matchBox.on .matchTime {
@@ -18294,7 +18295,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptinfoPoint .pointGroup .pointItem .point {
 	font-size: 1.25rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 @media screen and (max-width: 959px) {
@@ -18348,7 +18349,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptBatInfo .checkPoint .check dd {
 	font-size: 2rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	line-height: 1.4;
 }
@@ -18397,7 +18398,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptBatInfo .finalPoint .finalBox .finalItem .remain dd {
 	font-size: 2rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	line-height: 1.6;
 	font-weight: 700;
 }
@@ -18584,7 +18585,7 @@ form:has(.cptSection:first-child):first-child {
 	justify-content: center;
 	height: 48px;
 	padding: 0 24px;
-	background: var(---Primary);
+	background: var(--Primary);
 	border-radius: 8px;
 	color: #fff;
 	font-size: 1rem;
@@ -18713,7 +18714,7 @@ form:has(.cptSection:first-child):first-child {
 	height: 48px;
 	font-size: 1rem;
 	font-weight: 500;
-	color: var(---Secondary);
+	color: var(--Secondary);
 }
 .cptContBranch ul li .inCont .rowB .linkBtn::before {
 	content: "";
@@ -18754,7 +18755,7 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Gray-600);
 }
 .cptContBranch ul li .inCont .branchInfo dl dd b {
-	color: var(---Secondary);
+	color: var(--Secondary);
 	font-weight: 600;
 }
 .cptContBranch ul li .comTitH2.bk h2 {
@@ -18850,7 +18851,7 @@ form:has(.cptSection:first-child):first-child {
 	height: 24px;
 	padding: 0 10px;
 	font-size: 0.75rem;
-	color: var(---Secondary);
+	color: var(--Secondary);
 	font-weight: 600;
 	border-radius: 20px;
 	border: 1px solid var(--Point-Primary3);
@@ -18900,13 +18901,13 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptFacInfo .list .cont .rowB dl dd .popMap {
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	cursor: pointer;
 	margin-left: 20px;
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	border-bottom: 1px solid var(---Primary);
+	border-bottom: 1px solid var(--Primary);
 	line-height: 20px;
 	font-weight: 500;
 	flex-shrink: 0;
@@ -18919,7 +18920,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptFacInfo .list .cont .rowB dl dd .popUseInfo {
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	cursor: pointer;
 	position: relative;
 	display: inline-flex;
@@ -19057,7 +19058,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 1.4;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptFacRental .flowGrp ul li .contIn dl dd {
 	margin-top: 12px;
@@ -19312,7 +19313,7 @@ form:has(.cptSection:first-child):first-child {
 .cptRoadMap .contArea .list .subject .num {
 	font-size: 1.875rem;
 	font-weight: 300;
-	color: var(---Primary);
+	color: var(--Primary);
 	margin-bottom: 12px;
 }
 .cptRoadMap .contArea .list .subject .blk {
@@ -19454,7 +19455,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-top: 24px;
 	font-size: 1.125rem;
 	font-weight: 700;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptStepLine .stepGroup .stepItem .stepCont .subTit:first-child {
 	margin-top: 0;
@@ -19665,7 +19666,7 @@ form:has(.cptSection:first-child):first-child {
 	padding: 6px 16px;
 }
 .cptSchHd .cptArea .inCont .schBox .schBoxRel ul li strong {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 }
 .cptSchHd .cptArea .inCont .schBox .schBoxRel ul li:hover {
@@ -20471,8 +20472,8 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 500;
 	border-radius: 8px;
 	line-height: 46px;
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 }
 .cptTheater .sectArea .btnMore::before {
 	content: "+ ";
@@ -20536,7 +20537,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 100%;
 	font-size: 1.25rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptTheater .sectTit .tit {
 	font-size: 2.5rem;
@@ -20555,7 +20556,7 @@ form:has(.cptSection:first-child):first-child {
 	margin-left: 20px;
 	padding: 4px;
 	border-radius: 24px;
-	background-color: var(---Primary);
+	background-color: var(--Primary);
 }
 .cptTheater .sortBtn button {
 	height: 37px;
@@ -20565,7 +20566,7 @@ form:has(.cptSection:first-child):first-child {
 	border-radius: 20px;
 }
 .cptTheater .sortBtn button.on {
-	color: var(---Primary);
+	color: var(--Primary);
 	background-color: #fff;
 }
 .cptTheater [class*=swiper-] .btnPrev,
@@ -20662,7 +20663,7 @@ form:has(.cptSection:first-child):first-child {
 	min-height: 304px;
 	padding: 40px;
 	border-radius: 0px 80px 0px 0px;
-	background-color: var(---Primary);
+	background-color: var(--Primary);
 }
 .cptTheater .newsInfo .sectTit::after {
 	content: "";
@@ -20767,7 +20768,7 @@ form:has(.cptSection:first-child):first-child {
 	position: absolute;
 	top: 0;
 	right: 0;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptTheater .eventNoti .listEvent .txtMore::before {
 	content: "+ ";
@@ -20993,13 +20994,13 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptTheater .tabMenuGroup .sortTab .tabItem .tabName.on {
 	font-weight: 700;
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptTheater .tabMenuGroup .sortTab .tabItem .tabName.on::before {
 	content: "";
 	width: 100%;
 	height: 4px;
-	background: var(---Primary);
+	background: var(--Primary);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -21122,8 +21123,8 @@ form:has(.cptSection:first-child):first-child {
 	background: #fff;
 }
 .cptTheater .listGallery .listGroup .listItem .infoBox .progress .mark.line {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 	background: #fff;
 }
 .cptTheater .listGallery .listGroup .listItem .infoBox .context {
@@ -21270,7 +21271,7 @@ form:has(.cptSection:first-child):first-child {
 	background: url(../../images/common/ic_title_video.svg) no-repeat 100% 50%;
 }
 .cptTheater .videoGallery .inner .title h2 {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.875rem;
 	font-weight: 700;
 	line-height: 140%; /* 42px */
@@ -21570,7 +21571,7 @@ form:has(.cptSection:first-child):first-child {
 	                    width: max-content; height: 30px; padding: 0; font-size: rem(14px); border-radius: 0; line-height: 22px; color: var(--Gray-600); 
 	                    border: 0; border-bottom: 2px solid var(--Gray-200); background: transparent; display: inline-block; flex-grow: 1;
 	                    &.on {
-	                        color: var(---Primary); border: 0; border-bottom: 4px solid var(---Primary); background: transparent;
+	                        color: var(--Primary); border: 0; border-bottom: 4px solid var(--Primary); background: transparent;
 	                    }
 	                }
 	            }
@@ -21707,11 +21708,11 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 0.875rem;
 }
 .cptTheaterDetail [class*=Area] .btnGroup .btn.on {
-	border-color: var(---Primary);
+	border-color: var(--Primary);
 	background-color: #F0FAF7 !important;
 }
 .cptTheaterDetail [class*=Area] .btnGroup .btn.on > span {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .cptTheaterDetail [class*=Area] .btnGroup .btn[class*=play] > span::before {
 	content: "";
@@ -21973,9 +21974,9 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptTheaterDetail .theaterTabArea .tabMenuGroup .tabMenu .tabItem .tabName.on {
 	font-weight: 700;
-	color: var(---Primary);
+	color: var(--Primary);
 	border: 0;
-	border-bottom: 4px solid var(---Primary);
+	border-bottom: 4px solid var(--Primary);
 	background: transparent;
 }
 .cptTheaterDetail .theaterTabArea .tabContianer {
@@ -22612,7 +22613,7 @@ form:has(.cptSection:first-child):first-child {
 .allMenuAreaEn .allMenuGroup .allMenuBox .quickLink .quickItem a {
 	width: max-content;
 	height: 24px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.9375rem;
 	font-weight: 600;
 	line-height: 1.6;
@@ -24061,7 +24062,7 @@ form:has(.cptSection:first-child):first-child {
 	width: 48px;
 	height: 48px;
 	border-radius: 4px;
-	background: var(---Primary) url(../../images/common/ico_info_bicycle.svg) center no-repeat;
+	background: var(--Primary) url(../../images/common/ico_info_bicycle.svg) center no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -24081,7 +24082,7 @@ form:has(.cptSection:first-child):first-child {
 .comSubInfo .infoEtc {
 	margin-top: 8px;
 	font-size: 1rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 	line-height: 1.6;
 }
@@ -24136,7 +24137,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comTitH2 h2 {
 	font-size: 1.5rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 	line-height: 1.4;
 	word-break: keep-all;
@@ -25112,7 +25113,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comGroupTop .unit .total {
 	font-size: 1rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .comGroupTop .opList {
@@ -25493,9 +25494,9 @@ form:has(.cptSection:first-child):first-child {
 	height: 26px;
 	font-size: 0.8125rem;
 	font-weight: 600;
-	color: var(---Primary);
+	color: var(--Primary);
 	border-radius: 20px;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #FFF;
 	display: block;
 	align-content: center;
@@ -26401,7 +26402,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxTop .txt {
 	margin-top: 8px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -26418,7 +26419,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxCont .txtTit {
 	margin-top: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -26441,7 +26442,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxCont .anno {
 	margin-top: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.6;
@@ -26801,7 +26802,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comInfoLayerPop .popWrap .popHead .popTit {
 	font-size: 0.9375rem;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 600;
 	line-height: 1.4;
 }
@@ -27042,7 +27043,7 @@ form:has(.cptSection:first-child):first-child {
 	vertical-align: middle;
 	font-size: 1.125rem;
 	font-weight: 500;
-	color: var(---Secondary);
+	color: var(--Secondary);
 }
 .comMovieBox .boxArea .movieList .movieItem a::after {
 	display: inline-block;
@@ -27192,8 +27193,8 @@ form:has(.cptSection:first-child):first-child {
 }
 .comTabData .tabMenuGroup .tabMenu .tabItem .tabName.on, .modTab02 .tabMenuGroup .tabMenu .tabItem .tabName.on {
 	color: #fff;
-	border: 1px solid var(---Primary);
-	background: var(---Primary);
+	border: 1px solid var(--Primary);
+	background: var(--Primary);
 }
 .comTabData .tabMenuGroup .tabMenu .tabItem .tabName.on.orange, .modTab02 .tabMenuGroup .tabMenu .tabItem .tabName.on.orange {
 	border: 1px solid var(--Point-Orange);
@@ -27335,7 +27336,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxTop .txt {
 	margin-top: 8px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -27352,7 +27353,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxCont .txtTit {
 	margin-top: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -27375,7 +27376,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comPrivacyBox .infoBox .boxCont .anno {
 	margin-top: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.6;
@@ -27680,7 +27681,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comMovieLinkBox .linkBox .item .movieLink {
 	padding-right: 28px;
-	color: var(---Secondary);
+	color: var(--Secondary);
 	font-size: 1.125rem;
 	font-weight: 500;
 	display: inline-block;
@@ -27868,12 +27869,14 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.comDateSwiper .dateSwiper::before {
 		width: 60px;
+		height: 84px;
 		top: 10px;
 		background: linear-gradient(90deg, #fff 40%, transparent);
 		pointer-events: none;
 	}
 	.comDateSwiper .dateSwiper::after {
 		width: 60px;
+		height: 84px;
 		top: 10px;
 		background: linear-gradient(270deg, #fff 40%, transparent);
 		pointer-events: none;
@@ -27896,6 +27899,12 @@ form:has(.cptSection:first-child):first-child {
 @media screen and (max-width: 767px) {
 	.comDateSwiper.sticky.sOn .dateSwiper {
 		top: 70px;
+	}
+	.comDateSwiper.sticky.sOn .dateSwiper::before {
+		height: 56px;
+	}
+	.comDateSwiper.sticky.sOn .dateSwiper::after {
+		height: 56px;
 	}
 }
 
@@ -27930,7 +27939,7 @@ form:has(.cptSection:first-child):first-child {
 	flex: 1 0 29px;
 }
 .comPlayerGrade .gradeGroup .gradeItem .grade.first {
-	color: var(---Primary);
+	color: var(--Primary);
 }
 .comPlayerGrade .gradeGroup .gradeItem .grade.second {
 	background-image: url(../../images/common/ic_28_grade_silver.svg);
@@ -28318,7 +28327,7 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 300;
 }
 .comDataSwiper .dataWrap .swiperUnit .swiper-pagination .swiper-pagination-current {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 @media screen and (max-width: 767px) {
@@ -28364,7 +28373,7 @@ form:has(.cptSection:first-child):first-child {
 	border-radius: 16px;
 }
 .comContInfo .ppBox .cont .rowA {
-	color: var(---Primary);
+	color: var(--Primary);
 	padding: 15px 30px;
 	text-align: center;
 	background: rgba(7, 139, 123, 0.05);
@@ -28723,7 +28732,7 @@ form:has(.cptSection:first-child):first-child {
 .comContVerFlow .wdBox .rowA .num {
 	width: 30px;
 	height: 30px;
-	background: var(---Primary);
+	background: var(--Primary);
 	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: 1.4;
@@ -28735,7 +28744,7 @@ form:has(.cptSection:first-child):first-child {
 }
 .comContVerFlow .wdBox .rowA .txt {
 	margin-top: 12px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.4;
@@ -29423,7 +29432,7 @@ form:has(.cptSection:first-child):first-child {
 	align-items: center;
 	justify-content: center;
 	border-radius: 8px;
-	background: var(---Primary);
+	background: var(--Primary);
 	line-height: 1.6;
 }
 .comSchDetail .schBox .schBtn button::before {
@@ -29526,7 +29535,7 @@ form:has(.cptSection:first-child):first-child {
 .comSchDetail .detBox .list dl dd .dBtn input:checked + label {
 	color: var(--Gray-900);
 	font-weight: 600;
-	border: 1px solid var(---Primary);
+	border: 1px solid var(--Primary);
 	background: #F0FAF7;
 }
 .comSchDetail .detBox .list dl dd .datePick {
@@ -29578,15 +29587,15 @@ form:has(.cptSection:first-child):first-child {
 	display: block;
 }
 .comSchDetail .detBox.toggleMenu.active .schDet {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 }
 .comSchDetail .detBox.toggleMenu.active .schDet::after {
 	background: url(../../images/common/ic_24_up_arr_p.svg) center no-repeat;
 }
 .comSchDetail.detOpen .schDet {
-	color: var(---Primary);
-	border: 1px solid var(---Primary);
+	color: var(--Primary);
+	border: 1px solid var(--Primary);
 }
 .comSchDetail.detOpen .schDet::after {
 	background: url(../../images/common/ic_24_up_arr_p.svg) center no-repeat;
@@ -30080,7 +30089,7 @@ form:has(.cptSection:first-child):first-child {
 	display: block;
 }
 .comGifWrap .gifGroup .text b {
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .comGifWrap .downArr {
@@ -30410,7 +30419,7 @@ form:has(.cptSection:first-child):first-child {
 	overflow-y: scroll;
 }
 .modPopup .popupArea .popupContArea .popCont .popSubTitle {
-	color: var(---Primary, #078B7B);
+	color: var(--Primary, #078B7B);
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 140%; /* 28px */
@@ -30745,7 +30754,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 700;
 	line-height: 1.4;
 	margin-bottom: 32px;
-	color: var(---Primary);
+	color: var(--Primary);
 	font-weight: 700;
 }
 .modMdPopup .popupArea .popupContArea .popCont [class^=cpt]:not(:first-child) {
@@ -30873,9 +30882,8 @@ form:has(.cptSection:first-child):first-child {
 	.modMdPopup .popupArea .popupContArea .popBtm.division {
 		justify-content: space-between;
 	}
-	.modMdPopup .popupArea .popupContArea .popBtm:has(.btn:nth-child(2)) .btn {
-		width: calc(50% - 6px);
-		min-width: calc(50% - 6px);
+	.modMdPopup .popupArea .popupContArea .popBtm .btnBox {
+		flex-wrap: nowrap;
 	}
 }
 

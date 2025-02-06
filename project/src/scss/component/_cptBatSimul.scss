@@ -101,7 +101,7 @@
                             .swiper-pagination-bullet {
                                 margin-left: 8px;
                                 &.swiper-pagination-bullet-active {
-                                    background: var(---Primary);
+                                    background: var(--Primary);
                                 }
                             }
                         }
@@ -123,9 +123,9 @@
                             }
 
                             &.ranker {
-                                .num {color: var(---Primary); font-weight: 600;}
+                                .num {color: var(--Primary); font-weight: 600;}
                                 .id {font-weight: 600;}
-                                .point {color: var(---Primary); font-weight: 600;}
+                                .point {color: var(--Primary); font-weight: 600;}
                             }
                         }
                     }
@@ -141,7 +141,7 @@
                 .btnClose {width: 16px; height: 16px; font-size: 0; background: url(../../images/common/ic_12_close.svg) center no-repeat; position: absolute; top: 8px; right: 8px;}
                 .txt {font-size: rem(15px); font-weight: 500; line-height: 1.6; color: var(--Gray-800); text-align: left;}
                 .btnMore {
-                    display: inline; font-size: rem(15px); color: var(---Primary);
+                    display: inline; font-size: rem(15px); color: var(--Primary);
                     &::after {display: inline-block; content: ""; width: 16px; height: 16px; margin-left: 2px; background: url(../../images/common/ic_16_new_window_mint.svg) center no-repeat; vertical-align: text-top;}
                 }
                 &::after {display: block; content: ""; width: 14px; height: 14px; background: url(../../images/common/ic_14_ballon_tail.svg) center no-repeat; position: absolute; top: -12px; left: 30px; z-index: 1;}
@@ -177,13 +177,13 @@
                         .matchBox {
                             width: 117px; height: 143px; border-radius: 12px; padding: 10px; background: #fff; text-align: center; transition: all 0.3s;
                             .matchTit {font-size: rem(20px); font-weight: 700; color: var(--Gray-800); transition: all 0.3s;background: url(../../images/common/ic_20_match_check.png) center -24px no-repeat;}
-                            .matchTag {margin-top: 8px; height: 25px; padding:0 10px; line-height: 25px; border-radius: 12.5px; font-size: rem(14px); color: var(---Primary); font-weight: 600; background: rgba(7, 139, 123, 0.10); display: inline-block;  transition: all 0.3s;}
+                            .matchTag {margin-top: 8px; height: 25px; padding:0 10px; line-height: 25px; border-radius: 12.5px; font-size: rem(14px); color: var(--Primary); font-weight: 600; background: rgba(7, 139, 123, 0.10); display: inline-block;  transition: all 0.3s;}
                             .matchTime {margin-top: 4px; font-size: rem(15px); color: var(--Gray-600); transition: all 0.3s;}
                             
                             &.on, &:hover {
                                 width: 125px; height: 157px; background:linear-gradient(180deg, #18C3AD 0%, #226B95 100%); box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
                                 .matchTit {padding-top: 24px; color: #fff; background-position: top center;}
-                                .matchTag {color: var(---Point2); background: rgba(0, 0, 0, 0.30); }
+                                .matchTag {color: var(--Point2); background: rgba(0, 0, 0, 0.30); }
                                 .matchTime {color: #fff;}
                             }
 
@@ -213,7 +213,7 @@
             .mtchTit {
                 display: flex; align-items: center; column-gap: 8px;
                 .tit {font-size: rem(24px); color: var(--Gray-800); font-weight: 700;}
-                .tag {height: 33px; line-height: 32px; padding: 0 16px; border-radius: 16.5px; font-size: rem(18px); font-weight: 600; color: var(---Primary); background: rgba(7, 139, 123, 0.10);}
+                .tag {height: 33px; line-height: 32px; padding: 0 16px; border-radius: 16.5px; font-size: rem(18px); font-weight: 600; color: var(--Primary); background: rgba(7, 139, 123, 0.10);}
                 .etc {font-size: rem(18px); color: var(--Gray-800); font-weight: 500;}
             }
 
@@ -273,7 +273,7 @@
                                 .name {display: inline-block; vertical-align: middle; position: relative;}
                             }
                             input:checked + label {
-                                background: #f0faf7; border-color: var(---Primary); color: var(---Primary);
+                                background: #f0faf7; border-color: var(--Primary); color: var(--Primary);
                                 .name {
                                     &::after {display: block; content: ""; width: 18px; height: 18px; background: url(../../images/common/ic_12_chk_mit.svg) center no-repeat; position: absolute; right: -20px; top: 13px;}
                                 }
@@ -373,7 +373,7 @@
                     dt {font-size: rem(16px); color: var(--Gray-500); font-weight: 500;}
                     dd {
                         font-size: rem(20px); color: var(--Gray-900); font-weight: 700;
-                        .result {color: var(---Primary);font-weight: 700;}
+                        .result {color: var(--Primary);font-weight: 700;}
                     }
                 }
             }
@@ -532,14 +532,14 @@
                                 &:hover {
                                     width: 93px; height: 114px; box-shadow: none; background: #fff;
                                     .matchTit {padding-top: 0; color:var(--Gray-800); background-position: center -24px;}
-                                    .matchTag {color: var(---Primary); background: rgba(7, 139, 123, 0.10); }
+                                    .matchTag {color: var(--Primary); background: rgba(7, 139, 123, 0.10); }
                                     .matchTime {color: var(--Gray-600);}
                                 }  
 
                                 &.on {
                                     width: 101px; height: 122px; box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.10);background:linear-gradient(180deg, #18C3AD 0%, #226B95 100%); 
                                     .matchTit {padding-top: 24px; color: #fff; background-position: top center;}
-                                    .matchTag {color: var(---Point2); background: rgba(0, 0, 0, 0.30); }
+                                    .matchTag {color: var(--Point2); background: rgba(0, 0, 0, 0.30); }
                                     .matchTime {color: #fff;}
                                 }
 

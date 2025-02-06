@@ -5,8 +5,8 @@
         border-radius: 12px; border: 1px solid var(--Point-Primary2); flex: 1; padding: 24px 30px;
         .rowA {
             text-align: center; padding-bottom: 20px; border-bottom: 1px solid var(--Gray-150);
-            .num {width: 30px; height: 30px; background: var(---Primary); font-size: rem(14px); font-weight: 700; line-height: 1.4; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--Bg-Line-white);}
-            .txt {margin-top: 12px; color: var(---Primary); font-size: rem(20px); font-weight: 700; line-height: 1.4;}
+            .num {width: 30px; height: 30px; background: var(--Primary); font-size: rem(14px); font-weight: 700; line-height: 1.4; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--Bg-Line-white);}
+            .txt {margin-top: 12px; color: var(--Primary); font-size: rem(20px); font-weight: 700; line-height: 1.4;}
         }
         .rowB {
             margin-top: 20px;

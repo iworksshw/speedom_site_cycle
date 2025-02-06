@@ -4,7 +4,7 @@
     .sectArea {
         .titleBox {
             display: flex;justify-content: center;align-items: center;padding: 20px 20px;background: linear-gradient(90deg, #EBF8FA 0%, #EDF9F5 100%);
-            h1 {color: var(---Primary, #078B7B);font-size: rem(30px);font-weight: 600;line-height: 140%; /* 42px */}
+            h1 {color: var(--Primary, #078B7B);font-size: rem(30px);font-weight: 600;line-height: 140%; /* 42px */}
             & ~ .comTitH3,
             & ~ .comBtnGroup {margin-top: 60px;}
             .btnClose {display: none;}

@@ -325,7 +325,7 @@
                         a {letter-spacing: -0.3px;}
                     }
                     a {
-                        width: max-content; height: 24px; color: var(---Primary); font-size: rem(15px); font-weight: 600; line-height: 1.6; display: block;
+                        width: max-content; height: 24px; color: var(--Primary); font-size: rem(15px); font-weight: 600; line-height: 1.6; display: block;
                         &[target=_blank] {
                             padding-right: 18px; background: url(../../images/common/ic_link_blank_primary.svg) right center no-repeat;
                         }

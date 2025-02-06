@@ -12,7 +12,7 @@
                 .rowB {
                     display: flex; gap: 10px; margin-top: 40px;
                     .linkBtn {
-                        cursor: pointer; border-radius: 6px; background: #EEF6FC; display: flex; align-items: center; justify-content: center; gap: 4px; width: 50%; height: 48px; font-size: rem(16px); font-weight: 500; color: var(---Secondary);
+                        cursor: pointer; border-radius: 6px; background: #EEF6FC; display: flex; align-items: center; justify-content: center; gap: 4px; width: 50%; height: 48px; font-size: rem(16px); font-weight: 500; color: var(--Secondary);
                         &::before {content: ''; width: 20px; height: 20px;}
                         &.a1 {
                             &::before {background: url(../../images/contents/cont08_03_01_cald.svg);}
@@ -31,7 +31,7 @@
                         dt {color: var(--Gray-800); font-weight: 600; width: 100px;}
                         dd {
                             flex: 1; color: var(--Gray-600);
-                            b {color: var(---Secondary); font-weight: 600;}
+                            b {color: var(--Secondary); font-weight: 600;}
                         }
                     }
                 }

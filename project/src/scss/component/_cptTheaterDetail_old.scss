@@ -77,9 +77,9 @@
                         font-size: rem(14px);
                     }
                     &.on {
-                        border-color: var(---Primary); background-color: #F0FAF7 !important;
+                        border-color: var(--Primary); background-color: #F0FAF7 !important;
                         & > span {
-                            color: var(---Primary);
+                            color: var(--Primary);
                         }
                     }
                     &[class*=play] {

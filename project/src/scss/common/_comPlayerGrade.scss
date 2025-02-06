@@ -8,7 +8,7 @@
             padding: 24px 3%; border: 1px solid var(--Bg-Line-line-100); border-radius: 12px; flex: 0 1 calc(33.3333% - 26.6667px); display: flex; align-items: center; gap: 20px 10%;
             .grade {
                 width: 29px; padding-top: 36px; font-size: rem(20px); font-weight: 700; color: var(--Gray-600); text-align: center; background: url(../../images/common/ic_28_grade_gold.svg) top center no-repeat; flex: 1 0 29px;
-                &.first {color: var(---Primary);}
+                &.first {color: var(--Primary);}
                 &.second {background-image: url(../../images/common/ic_28_grade_silver.svg);}
                 &.third {background-image: url(../../images/common/ic_28_grade_bronze.svg);}
             }

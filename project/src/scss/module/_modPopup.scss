@@ -49,7 +49,7 @@
             .popCont {
                 width:100%; max-height:calc(100vh - 304px); padding:28px 2px 0 32px; overflow:auto; overflow-y: scroll;
                 .popSubTitle {
-                    color: var(---Primary, #078B7B);font-size: rem(20px);font-weight: 700;line-height: 140%; /* 28px */
+                    color: var(--Primary, #078B7B);font-size: rem(20px);font-weight: 700;line-height: 140%; /* 28px */
                     & + .comFormTable {margin-top: 12px;}
                 }     
                 .comPrivacyBox {
@@ -230,7 +230,7 @@
                     img {max-width: 100%; height: auto; display: block;}
                 }          
                 // 시설안내 안내 팝업 중 font-size:20px인 타이틀
-                .modMdPopup_Tit20 {font-size: rem(20px); font-size: 700; line-height: 1.4; margin-bottom: 32px; color: var(---Primary); font-weight: 700;}
+                .modMdPopup_Tit20 {font-size: rem(20px); font-size: 700; line-height: 1.4; margin-bottom: 32px; color: var(--Primary); font-weight: 700;}
 
                 // 마이페이지 - 활동지수 이용안내
                 [class^=cpt]:not(:first-child) {
@@ -311,11 +311,13 @@
                     }
                 }
                 .popBtm {
-                    padding:24px 24px 0; display:flex; justify-content:flex-end;
+                    padding:24px 24px 0; display:flex; justify-content:flex-end; 
                     &.division {justify-content:space-between;}
-                    &:has(.btn:nth-child(2)){
-                        .btn {width: calc(50% - 6px); min-width: calc(50% - 6px)}
-                    }
+                    // &:has(.btn:nth-child(2)){
+                    //     flex-wrap: nowrap;
+                    //     .btn {width: calc(50% - 6px); min-width: calc(50% - 6px)}
+                    // }
+                    .btnBox {flex-wrap: nowrap;}
                 }
             }
         }

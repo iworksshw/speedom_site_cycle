@@ -10,7 +10,7 @@
         margin-left: 5px; display:inline-block;
         &:first-child {margin-left: 0;}
         .text {font-size:rem(16px); line-height:1.6; vertical-align:bottom; color: var(--font-700);}
-        .total {font-size:rem(16px); color: var(---Primary); font-weight: 700;}
+        .total {font-size:rem(16px); color: var(--Primary); font-weight: 700;}
     }
     .opList {
         display: flex; gap: 12px;

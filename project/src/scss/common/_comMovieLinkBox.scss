@@ -10,7 +10,7 @@
             }
             &:first-child::before {display:none;}
             .movieLink {
-                padding-right: 28px; color: var(---Secondary); font-size: rem(18px); font-weight: 500; display: inline-block; 
+                padding-right: 28px; color: var(--Secondary); font-size: rem(18px); font-weight: 500; display: inline-block; 
                 background: url(../../images/common/ic_16_monitor.svg) right center no-repeat;
                 &.disabled {
                     color: var(--Gray-300); background: url(../../images/common/ic_16_monitor_g.svg) right center no-repeat; cursor: default;

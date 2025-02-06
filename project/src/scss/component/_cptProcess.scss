@@ -8,10 +8,10 @@
             display: flex; justify-content: space-between; gap: 65px;
             .stepItem {
                 border: 1px solid var(--Point-Primary2); border-radius: 12px; padding: 20px 10px 15px; text-align: center; position: relative; flex: 0 0 calc(25% - 48.75px);
-                .num {width: 30px;height: 30px; border-radius: 50%; background: var(---Primary); line-height: 30px; font-size: rem(16px); color: #fff; font-weight: 700; display: inline-block;}
+                .num {width: 30px;height: 30px; border-radius: 50%; background: var(--Primary); line-height: 30px; font-size: rem(16px); color: #fff; font-weight: 700; display: inline-block;}
                 .stepCont {
                     margin-top: 10px; width: 100%; min-height: 73px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-                    dt {width: 100%;font-size: rem(18px); font-weight: 700; color: var(---Primary);}
+                    dt {width: 100%;font-size: rem(18px); font-weight: 700; color: var(--Primary);}
                     dd{
                         width: 100%;font-size: rem(16px); color: var(--Gray-800); font-weight: 500; line-height: 1.6; 
                         .adds {font-size: rem(14px); font-weight: 300;}

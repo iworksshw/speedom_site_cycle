@@ -25,7 +25,7 @@
         .btnGrp {
             margin-top: 32px; display: flex; align-items: center; gap: 12px;
             a {
-                display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 24px; background: var(---Primary); border-radius: 8px; color: #fff; font-size: rem(16px); font-weight: 500; position: relative;
+                display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 24px; background: var(--Primary); border-radius: 8px; color: #fff; font-size: rem(16px); font-weight: 500; position: relative;
                 &::after {content:''; width: 20px; height: 20px; background: url(../../images/common/ic_20_link_icon.svg) no-repeat center; margin-left: 4px;}
             }
         }

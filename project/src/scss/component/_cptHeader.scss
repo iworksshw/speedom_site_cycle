@@ -3,7 +3,7 @@
     width:100%; background: #fff; transition: transform 0.2s, background 0.2s; position: fixed; left:0; top:0; z-index: 100;
 
     &:not(.inMain).on {
-        transform: translateY(-112px); background: var(---Primary);
+        transform: translateY(-112px); background: var(--Primary);
         .headArea {
             .headBox {
                 .logoBox {
@@ -33,7 +33,7 @@
             }
         }
         .gnbArea {
-            border-top: 1px solid var(---Primary); border-bottom: 1px solid var(---Primary);
+            border-top: 1px solid var(--Primary); border-bottom: 1px solid var(--Primary);
             .gnbBox {
                 .depth1Group {
                     // margin-left: 215px; margin-right:290px;
@@ -45,7 +45,7 @@
                         }
                         &.on, &:hover, &:focus  {
                             .depth1Name {
-                                color: var(---Point2);
+                                color: var(--Point2);
                             }
                         }
                         &:has(.depth2Area) {
@@ -176,7 +176,7 @@
                                 }
                             }
                             .btnLogout {
-                                width: 100%; margin-top: 8px; padding: 16px 24px 18px 48px; color: var(---Primary); font-size: rem(15px); font-weight: 500; text-align: left; display: block;
+                                width: 100%; margin-top: 8px; padding: 16px 24px 18px 48px; color: var(--Primary); font-size: rem(15px); font-weight: 500; text-align: left; display: block;
                                 border-top: 1px solid var(--Bg-Line-bg-200); background: url(../../images/common/ic_16_logout_green.svg) 24px center no-repeat;
                             }
                         }
@@ -215,7 +215,7 @@
                     }
                     &.on, &:hover, &:focus, &.active {
                         .depth1Name {
-                            color: var(---Primary);
+                            color: var(--Primary);
                         }
                     }
                 }
@@ -413,7 +413,7 @@
 
                     &:first-child {border-top: 0;}
                     .depth1Name{
-                        width: 23.6%; color: var(---Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
+                        width: 23.6%; color: var(--Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
                     }
                 }
             }
@@ -472,7 +472,7 @@
                         a {letter-spacing: -0.3px;}
                     }
                     a {
-                        width: max-content; height: 24px; color: var(---Primary); font-size: rem(15px); font-weight: 600; line-height: 1.6; display: block;
+                        width: max-content; height: 24px; color: var(--Primary); font-size: rem(15px); font-weight: 600; line-height: 1.6; display: block;
                         &[target=_blank] {
                             padding-right: 18px; background: url(../../images/common/ic_link_blank_primary.svg) right center no-repeat;
                         }
@@ -528,7 +528,7 @@
                                 width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
                             }
                             &.on {
-                                .depth1Name{color: var(---Primary); font-weight: 700;}
+                                .depth1Name{color: var(--Primary); font-weight: 700;}
                                 .depth2Group {display: flex;}
                             }
                         }
@@ -578,7 +578,7 @@
     width:100%; background: #fff; transition: transform 0.2s, background 0.2s; position: fixed; left:0; top:0; z-index: 100;
 
     &.on {
-        transform: translateY(-112px); background: var(---Primary);
+        transform: translateY(-112px); background: var(--Primary);
         .headArea {
             .headBox {
                 .logoBox {
@@ -600,7 +600,7 @@
             }
         }
         .gnbArea {
-            border-top: 1px solid var(---Primary); border-bottom: 1px solid var(---Primary);
+            border-top: 1px solid var(--Primary); border-bottom: 1px solid var(--Primary);
             .gnbBox {
                 .depth1Group {
                     margin-left: 215px; margin-right:290px;
@@ -610,7 +610,7 @@
                         }
                         &.on {
                             .depth1Name {
-                                color: var(---Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
+                                color: var(--Point2); background: url(../../images/common/ic_gnb_dep1_at_on.svg) right 2px center no-repeat;
                             }
                         }
                     }
@@ -676,7 +676,7 @@
                     }
                     &.on {
                         .depth1Name {
-                            color: var(---Primary); background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
+                            color: var(--Primary); background: url(../../images/common/ic_gnb_dep1_on.svg) right 2px center no-repeat;
                         }
                         .depth2Area {height:396px; display: block; }
                     }
@@ -863,7 +863,7 @@
 
                     &:first-child {border-top: 0;}
                     .depth1Name{
-                        width: 23.6%; color: var(---Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
+                        width: 23.6%; color: var(--Primary); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.4; flex-shrink: 0;
                     }
                 }
             }
@@ -912,7 +912,7 @@
                             width: 100%; padding: 16px; color: var(--Gray-800); font-size: rem(17px); font-weight: 500; line-height: 1.3;
                         }
                         &.on {
-                            .depth1Name{color: var(---Primary); font-weight: 700;}
+                            .depth1Name{color: var(--Primary); font-weight: 700;}
                             .depth2Group {display: flex;}
                         }
                     }

@@ -30,7 +30,7 @@
                     }
                     &.complete {
                         &::after {
-                            font-size: 0; border: 1px solid var(---Primary); background: var(---Primary) url(../../images/common/ic_20_step.svg) center no-repeat; opacity: 0.4;
+                            font-size: 0; border: 1px solid var(--Primary); background: var(--Primary) url(../../images/common/ic_20_step.svg) center no-repeat; opacity: 0.4;
                         }
                         &::before {
                             background: url(../../images/common/ic_etc_step_on.svg) center no-repeat;
@@ -42,13 +42,13 @@
                     }
                     &.current {
                         &::after {
-                            color: #fff; font-weight: 700; border: 1px solid var(---Primary); background: var(---Primary);
+                            color: #fff; font-weight: 700; border: 1px solid var(--Primary); background: var(--Primary);
                         }
                         &::before {
                             background: url(../../images/common/ic_etc_step_on.svg) center no-repeat;
                         }
                         .txt {
-                            color: var(---Primary); font-weight: 700;
+                            color: var(--Primary); font-weight: 700;
                         }
                     }
                 }
@@ -95,7 +95,7 @@
                 }
             }
             > p {
-                color: var(---Primary, #078B7B);font-size: rem(14px);font-weight: 400;line-height: 160%; /* 22.4px */
+                color: var(--Primary, #078B7B);font-size: rem(14px);font-weight: 400;line-height: 160%; /* 22.4px */
                 span {
                     display: inline-block;
                     position: relative;padding-left: 20px;
@@ -106,7 +106,7 @@
         .certifyGroup .comBtnGroup + .bulletTitle {margin-top: 32px;}
         // 아이디 찾기
         .certifyTitle {
-            &.color h2 {color: var(---Primary, #078B7B);font-weight: 700;}
+            &.color h2 {color: var(--Primary, #078B7B);font-weight: 700;}
             h2 {color: var(--Gray-900, #111);font-size: rem(24px);font-weight: 500;line-height: 140%; /* 33.6px */}
             & + .certifyResult {margin-top: 20px;}
         }
@@ -135,7 +135,7 @@
             }
             h3 {
                 margin-top: 32px;color: var(--Gray-800, #2C2C2C);font-size: rem(18px);font-weight: 400;line-height: 160%; /* 28.8px */
-                strong {color: var(---Primary, #078B7B);font-weight: 600;}
+                strong {color: var(--Primary, #078B7B);font-weight: 600;}
             }
             & + .comBtnGroup + .linkBoxGroup {margin-top: 100px;}
         }
