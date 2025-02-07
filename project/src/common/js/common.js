@@ -343,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slctDateSlide();
 
     // 일별달력 선택 - 내부 스크롤
-    dateCalInit();
+    //dateCalInit();
 
     // 경륜정보 > 통계 > 데이터 슬라이드
     imgsDataSlide();
@@ -897,6 +897,7 @@ function slctDateWatch($swiper) {
     let sdindex = dateSlides.indexOf(dateSlide); 
     //console.log('날짜선택감시');
     setInterval(function(){
+        dateBoxInit();
         onDateBtn = document.querySelector(".dateBox.on");
         dateSlide = onDateBtn.closest(".swiper-slide");
         dateSlides = Array.from(dateSlide.parentNode.children);  
@@ -925,7 +926,7 @@ function dateCalInit () {
             dateBoxInit();
         })
 
-    
+        
     }
 }
 
