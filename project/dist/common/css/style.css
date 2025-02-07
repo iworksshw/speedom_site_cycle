@@ -31471,6 +31471,9 @@ form:has(.cptSection:first-child):first-child {
 	height: auto;
 	bottom: 9px;
 }
+.eng .cptSection:has(.comDateSwiper.sticky) {
+	top: 0;
+}
 .eng .comDateSwiper.sticky.sOn .dateSwiper {
 	top: 0;
 }
