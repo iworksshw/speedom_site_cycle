@@ -3,6 +3,30 @@ document.addEventListener("DOMContentLoaded", function () {
     //스크롤에 따른 헤더 반응
     let scrlT = document.documentElement.scrollTop;
     let afterScrlT = scrlT;
+
+    //헤더 스크롤 이벤트
+    // setInterval(function(){
+    //     const header = document.querySelector(".cptHeader");
+    //     scrlT = document.documentElement.scrollTop;
+    //     if(header){
+    //         if(scrlT > 200){
+    //             header.classList.add("on")
+    //         }else{
+    //             header.classList.remove("on")
+    //         }
+    //         //모바일
+    //         if(afterScrlT > scrlT){
+    //             //scroll down => GNB up
+    //             header.classList.remove("up")
+    //         }else{
+    //             //scroll up => GNB down
+    //             header.classList.add("up")
+    //         }
+    //     }
+    //     afterScrlT = scrlT;
+    // },250);
+
+    // 헤더 스크롤 이벤트
     document.addEventListener("scroll",function(e){
         const header = document.querySelector(".cptHeader");
         scrlT = document.documentElement.scrollTop;
