@@ -27,6 +27,9 @@
         }
     }
     /* 출주표 */
+    .cptSection:has(.comDateSwiper.sticky) {
+        top: 0;
+    }
     .comDateSwiper {
         &.sticky.sOn {
             .dateSwiper {
