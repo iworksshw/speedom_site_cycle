@@ -22893,7 +22893,7 @@ form:has(.cptSection:first-child):first-child {
 	z-index: 90;
 }
 .cptFloatMob .floatArea {
-	width: 49px;
+	width: 44px;
 	position: absolute;
 	right: 16px;
 	bottom: 11px;
@@ -22906,6 +22906,10 @@ form:has(.cptSection:first-child):first-child {
 }
 .cptFloatMob .speedOn {
 	display: block;
+	border-radius: 10px;
+	border: 1px solid #DEE2E7;
+	box-shadow: 1.5px 1.5px 2px 0px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
 }
 .cptFloatMob .speedOn img {
 	width: 100%;
@@ -22914,7 +22918,7 @@ form:has(.cptSection:first-child):first-child {
 .cptFloatMob .goTop {
 	width: 44px;
 	height: 44px;
-	margin-top: 5px;
+	margin-top: 8px;
 	font-size: 0;
 	border-radius: 50%;
 	background: rgba(0, 0, 0, 0.5) url(../../images/contents/cont_main_top_m.png) center no-repeat;
