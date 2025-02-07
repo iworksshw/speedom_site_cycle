@@ -31455,6 +31455,22 @@ form:has(.cptSection:first-child):first-child {
 	/* 경륜동영상 상세부분 */
 	/* 선수 프로필 상세 */
 }
+.eng .cptContSpeedom .contArea .btnGrp {
+	flex-wrap: wrap;
+}
+.eng .cptContSpeedom .contArea .btnGrp a {
+	width: 100%;
+}
+.eng .comImgBox .btnGroup.cameraEquip .ballon.num01, .eng .comFomulBox .btnGroup.cameraEquip .ballon.num01 {
+	height: auto;
+}
+.eng .comImgBox .btnGroup.cameraEquip .ballon.num02, .eng .comFomulBox .btnGroup.cameraEquip .ballon.num02 {
+	height: auto;
+}
+.eng .comImgBox .btnGroup.cameraEquip .ballon.num03, .eng .comFomulBox .btnGroup.cameraEquip .ballon.num03 {
+	height: auto;
+	bottom: 9px;
+}
 .eng .comDateSwiper.sticky.sOn .dateSwiper {
 	top: 0;
 }
@@ -31514,6 +31530,13 @@ form:has(.cptSection:first-child):first-child {
 }
 .eng .comTitH2.mRow .right {
 	margin-top: 12px;
+}
+.eng .comPlayerThumList .playerGroup .playerItem {
+	width: 100%;
+	text-align: center;
+}
+.eng .comInfoLayerPop .popWrap .popBody .sumBox {
+	height: auto;
 }
 @media screen and (max-width: 767px) {
 	.eng .cptBoardView .boardViewArea .viewTop .info {

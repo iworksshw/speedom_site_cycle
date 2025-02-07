@@ -1,6 +1,31 @@
 /* 영문버전 수정 */
 
 .eng {
+    .cptContSpeedom {
+        .contArea {
+            .btnGrp {
+                flex-wrap: wrap;
+                a {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .comImgBox {
+        .btnGroup.cameraEquip {
+            .ballon {
+                &.num01 {
+                    height: auto;
+                }
+                &.num02 {
+                    height: auto;
+                }
+                &.num03 {
+                    height: auto; bottom: 9px;
+                }
+            }
+        }
+    }
     /* 출주표 */
     .comDateSwiper {
         &.sticky.sOn {
@@ -100,6 +125,22 @@
         &.mRow {
             flex-wrap: wrap;
             .right {margin-top: 12px; }
+        }
+    }
+    .comPlayerThumList {
+        .playerGroup {
+            .playerItem {
+                width: 100%; text-align: center;
+            }
+        }
+    }
+    .comInfoLayerPop {
+        .popWrap {
+            .popBody {
+                .sumBox {
+                    height: auto;
+                }
+            }
         }
     }
 
