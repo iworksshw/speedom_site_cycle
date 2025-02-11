@@ -61,11 +61,20 @@
 .comDataTable .tableArea table tbody tr th {
     font-size: 18px; padding: 8px 5px;
 }
+.comDataTable .tableArea table tbody tr th .txtBtn {
+    font-size: 18px;
+}
 .comDataTable .tableArea table tbody tr td {
     font-size: 18px; padding: 8px 5px;
 }
+.comDataTable .tableArea table tbody tr td .txtBtn {
+    font-size: 18px;
+}
 .comDataTable .tableArea table tbody tr .left {
     padding: 8px 20px;
+}
+.comDataTable .tableArea table tbody tr td .txtBtn {
+    
 }
 .comDataTable .player {
     font-size: 18px;
