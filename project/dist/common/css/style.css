@@ -10867,8 +10867,10 @@ form:has(.cptSection:first-child):first-child {
 	.cptWordTab .contArea .wordGroup .wordItem dt .word {
 		font-size: 1.125rem;
 		font-weight: 600;
+		flex-shrink: 0;
 	}
 	.cptWordTab .contArea .wordGroup .wordItem dt .tagWrap {
+		width: 100%;
 		margin-left: 8px;
 	}
 	.cptWordTab .contArea .wordGroup .wordItem dd {
@@ -31352,15 +31354,18 @@ form:has(.cptSection:first-child):first-child {
 	.modTab .tabDirection .tabBtn.alignL {
 		padding-left: 12px;
 		left: 0;
+		pointer-events: none;
 	}
 	.modTab .tabDirection .tabBtn.alignR {
 		padding-right: 12px;
 		right: 0;
+		pointer-events: none;
 	}
 	.modTab .tabDirection .tabBtn button {
 		width: 20px;
 		height: 20px;
 		border-radius: 4px;
+		pointer-events: none;
 	}
 	.modTab .tabDirection .tabBtn button.prev {
 		background: #fff url(../../images/common/ic_16_tab_left.svg) center no-repeat;

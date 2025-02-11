@@ -97,17 +97,17 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    // 배너 on/off
-    const btmBanner = document.querySelector(".bannerBtm");
-    // 20241213 영문 메인 대응 태그 없을 경우 추가
-    if (btmBanner) {
-        const bannerClose = btmBanner.querySelector(".btnClose");
+    // // 배너 on/off
+    // const btmBanner = document.querySelector(".bannerBtm");
+    // // 20241213 영문 메인 대응 태그 없을 경우 추가
+    // if (btmBanner) {
+    //     const bannerClose = btmBanner.querySelector(".btnClose");
     
-        btmBanner.classList.add("on");
-        bannerClose.addEventListener("click", function(){
-            btmBanner.classList.remove("on");
-        })
-    }
+    //     btmBanner.classList.add("on");
+    //     bannerClose.addEventListener("click", function(){
+    //         btmBanner.classList.remove("on");
+    //     })
+    // }
     
     // 퀵메뉴 / 헤더 스크롤 보정
     // let lastScrollX = 0;

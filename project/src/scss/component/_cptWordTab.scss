@@ -67,9 +67,9 @@
                 .wordItem {
                     margin-top: 32px;
                     dt {
-                        .word {font-size: rem(18px);font-weight: 600;}
+                        .word {font-size: rem(18px); font-weight: 600; flex-shrink: 0;}
                         .tagWrap {
-                            margin-left: 8px;
+                            width: 100%; margin-left: 8px;
                         }
                     }
                     dd {margin-top: 9px; font-size: rem(15px);}
