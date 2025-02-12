@@ -5464,8 +5464,15 @@ select.iptSlt.typeLine {
 	color: var(--Gray-600);
 	display: inline-block;
 }
+.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .imgArea {
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .imgArea img {
 	max-height: 100%;
+	width: 80px;
+	height: 80px;
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .swiper-pagination {
 	bottom: -6px;
