@@ -16628,7 +16628,7 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 700;
 	line-height: 1.3;
 }
-.cptHeaderEn .headArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area).on .depth2Area, .cptHeaderEn .headArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area):hover .depth2Area, .cptHeaderEn .headArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area):focus .depth2Area {
+.cptHeaderEn .headArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area):hover .depth2Area, .cptHeaderEn .headArea .gnbBox .depth1Group .depth1Menu:has(.depth2Area):focus .depth2Area {
 	display: block;
 	height: auto;
 }
