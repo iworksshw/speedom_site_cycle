@@ -80,3 +80,20 @@
     font-size: 18px;
 }
 
+
+/* as is table */
+.header_box1 {
+    display: flex;
+    .header_box2 {
+        display: flex;
+        .header_box3 {
+            font-size: 24px;
+        }
+    }
+}
+
+.sokbo {
+    letter-spacing: 1px; border-collapse: collapse;
+    td {border: 1px solid #aaa; text-align: center; padding: 5px 10px;}
+    thead td, thead th {background: #eee;}
+}

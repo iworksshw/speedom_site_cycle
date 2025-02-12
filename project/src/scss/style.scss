@@ -8,11 +8,15 @@
 @import 'layout/lytMypage';
 @import 'layout/lytMain';
 @import 'layout/lytMainM';
-@import 'component/component';
 @import 'common/common';
-@import 'module/module';
 
-@import 'engModify';
-@import 'common/print';
+// // component.css 사용시 삭제
+// @import 'component/component';
 
-@import 'other';
+// // module.css 사용시 삭제
+// @import 'module/module';
+
+// @import 'engModify';    
+// @import 'common/print'; 
+
+// @import 'other';
