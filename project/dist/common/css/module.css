@@ -1445,6 +1445,44 @@
 	}
 }
 
+/* -------------------------- 국문 텍스트 확대에 따른 영문 재 축소 스타일 -------------------------- */
+.eng .comDateSwiper .dateSwiper .swiper-slide .dateBox > span {
+	font-size: 0.875rem;
+	line-height: 1.25;
+}
+
+/* 출주표 */
+.eng .comDataTable .tableArea table thead tr th {
+	font-size: 0.9375rem;
+	padding: 20px 5px;
+}
+
+.eng .comDataTable .tableArea table tbody tr th {
+	font-size: 0.9375rem;
+	padding: 20px 5px;
+}
+
+.eng .comDataTable .tableArea table tbody tr th .txtBtn {
+	font-size: 0.9375rem;
+}
+
+.eng .comDataTable .tableArea table tbody tr td {
+	font-size: 0.9375rem;
+	padding: 20px 5px;
+}
+
+.eng .comDataTable .tableArea table tbody tr td .txtBtn {
+	font-size: 0.9375rem;
+}
+
+.eng .comDataTable .tableArea table tbody tr .left {
+	padding: 20px;
+}
+
+.eng .comDataTable .player {
+	font-size: 0.9375rem;
+}
+
 @media print {
 	.lytLayout .layoutArea .layoutTop {
 		display: none;
