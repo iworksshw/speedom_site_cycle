@@ -11,7 +11,7 @@
             width: 48px; height: 48px; border-radius: 50%; font-size: 0; background: var(--Primary) url(../../images/common/ic_24_calendar.svg) center no-repeat; flex: 0 0 48px; 
         }
         .layerPopup {
-            max-width: 360px; border-radius: 20px; overflow: hidden; background: #fff; position: absolute; right: 20px; top: 90px; box-shadow: 2px 4px 30px 0px rgba(0, 0, 0, 0.10); z-index: 9; display: none;
+            max-width: 360px; border-radius: 20px; overflow: hidden; background: #fff; position: absolute; right: 20px; top: 90px; box-shadow: 2px 4px 30px 0px rgba(0, 0, 0, 0.10); z-index: 91; display: none;
 
             &.on {display: block;}
 
@@ -56,7 +56,7 @@
                 position: absolute; bottom: 0; right: 0;
             }
             .layerPopup {
-                right: 0; top: 120px;z-index: 15;
+                right: 0; top: 120px; z-index: 91;
                 .popHead {
                     padding: 16px 20px;
                     h3 {font-size: rem(18px);font-weight: 600; line-height: 1.3;}

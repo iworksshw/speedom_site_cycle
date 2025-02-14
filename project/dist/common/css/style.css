@@ -3077,6 +3077,9 @@ select.iptSlt.typeLine {
 	top: 3px;
 	right: -2px;
 }
+.lytMain .layoutArea .layoutContainer .modTab.mainTit .tabMenuGroup .tabMenu:not(:has(.tabItem:nth-child(2))) .tabName {
+	pointer-events: none;
+}
 .lytMain .layoutArea .layoutContainer .modTab.mainTit .tabContianer {
 	margin-top: 3px;
 	position: relative;
