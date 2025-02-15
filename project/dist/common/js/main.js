@@ -132,6 +132,179 @@ document.addEventListener("DOMContentLoaded", function () {
     // })
 })
 
+function cycleVisual() {
+    const cptmainVisual = document.querySelector(".lytMainEng .mainVisual");
+    if (cptmainVisual) {
+        const mobile = window.matchMedia('(max-width: 767px)');
+        const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1279px)');
+        const desktop = window.matchMedia('(min-width: 1280px)');
+
+        let cycleVisualSwiper;
+
+        function initializeSwiper(config) {
+            // 기존 swiper 인스턴스가 있으면 제거
+            if (cycleVisualSwiper) cycleVisualSwiper.destroy(true, true);
+
+
+            // 새로운 swiper 생성
+            cycleVisualSwiper = new Swiper(".cycleVisualSwiper", {
+                effect: "fade",
+                speed: 1000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"><span></span></span>';
+                    },
+                },
+                ...config, // 전달된 설정 추가
+            });
+        }
+
+        function handleScreenChange() {
+            if (mobile.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (tablet.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (desktop.matches) {
+                //console.log('1')
+                initializeSwiper({allowTouchMove: false});
+            }
+        }
+
+        function swiperControll(){
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('btnPlay') || e.target.classList.contains('btnStop')) {
+                    const swiper = e.target.closest('.cycleVisualSwiper') ? cycleVisualSwiper : null;
+            
+                    if(swiper){
+                        if (e.target.classList.contains('btnPlay')) {
+                            swiper.autoplay.start();
+                            //console.log("cycle play");
+                        } else if (e.target.classList.contains('btnStop')) {
+                            swiper.autoplay.stop();
+                            //console.log("cycle stop");
+                        }
+                    }
+                }
+            });
+        }
+
+        function mainVisualBtnEvent(){
+            let target = cptmainVisual.querySelector('.innerWrap')
+            let mainVisualBtns = target.querySelectorAll(':scope .visualWrap > .btnWrap button');
+            mainVisualBtns.forEach((btn)=>{
+                btn.addEventListener('click', (e)=>{
+                    let title = e.target.closest('button').className;
+                    title === 'btnBoating' ? target.classList.add('active') : target.classList.remove('active')
+                });
+            });
+        }
+
+        // 초기 상태 확인
+        handleScreenChange();
+        // 경륜 경정 변경 이벤트
+        mainVisualBtnEvent();
+        // 스와이퍼 stop, play
+        swiperControll();
+
+        // 화면 크기 변경 감지
+        [mobile, tablet, desktop].forEach(mediaQuery => {
+            mediaQuery.addEventListener("change", handleScreenChange);
+        });
+    }
+}
+
+
+function boatVisual() {
+    const cptmainVisual = document.querySelector(".lytMainEng .mainVisual");
+    if (cptmainVisual) {
+        const mobile = window.matchMedia('(max-width: 767px)');
+        const tablet = window.matchMedia('(min-width: 768px) and (max-width: 1279px)');
+        const desktop = window.matchMedia('(min-width: 1280px)');
+
+        let boatVisualSwiper;
+
+        function initializeSwiper(config) {
+            // 기존 swiper 인스턴스가 있으면 제거
+            if (boatVisualSwiper) boatVisualSwiper.destroy(true, true);
+
+            boatVisualSwiper = new Swiper(".boatVisualSwiper", {
+                effect: "fade",
+                speed: 1000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"><span></span></span>';
+                    },
+                },
+            });
+        }
+
+        function handleScreenChange() {
+            if (mobile.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (tablet.matches) {
+                initializeSwiper({allowTouchMove: true});
+            } else if (desktop.matches) {
+                //console.log('1')
+                initializeSwiper({allowTouchMove: false});
+            }
+        }
+
+        function swiperControll(){
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('btnPlay') || e.target.classList.contains('btnStop')) {
+                    const swiper = e.target.closest('.boatVisualSwiper') ? boatVisualSwiper : null;
+            
+                    if(swiper){
+                        if (e.target.classList.contains('btnPlay')) {
+                            swiper.autoplay.start();
+                            //console.log("boat play");
+                        } else if (e.target.classList.contains('btnStop')) {
+                            swiper.autoplay.stop();
+                            //console.log("boat stop");
+                        }
+                    }
+                }
+            });
+            
+        }
+
+        function mainVisualBtnEvent(){
+            let target = cptmainVisual.querySelector('.innerWrap')
+            let mainVisualBtns = target.querySelectorAll(':scope .visualWrap > .btnWrap button');
+            mainVisualBtns.forEach((btn)=>{
+                btn.addEventListener('click', (e)=>{
+                    let title = e.target.closest('button').className;
+                    title === 'btnBoating' ? target.classList.add('active') : target.classList.remove('active')
+                });
+            });
+        }
+
+        // 초기 상태 확인
+        handleScreenChange();
+        // 경륜 경정 변경 이벤트
+        mainVisualBtnEvent();
+        // 스와이퍼 stop, play
+        swiperControll();
+
+        // 화면 크기 변경 감지
+        [mobile, tablet, desktop].forEach(mediaQuery => {
+            mediaQuery.addEventListener("change", handleScreenChange);
+        });
+    }
+}
+
 function mainVisual() {
     const cptmainVisual = document.querySelector(".lytMainEng .mainVisual");
     if (cptmainVisual) {
