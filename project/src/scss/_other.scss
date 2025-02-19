@@ -97,3 +97,70 @@
     td {border: 1px solid #aaa; text-align: center; padding: 5px 10px;}
     thead td, thead th {background: #eee;}
 }
+
+/* 모바일 텍스트 크기 조절 */
+@include media('mobile') {
+    .comBasicTxt .txt {
+        font-size: 16px;
+    }
+    .comSubInfo .info {
+        font-size: 16px;
+    }   
+    .comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item {
+        font-size: 16px;
+    }
+    .cptOrderGuide .imgGuide .guideGroup .guideItem .tit .txt {
+        font-size: 16px;
+    }
+    .cptImgGuideBox .boxArea .descArea .descItem dd {
+        font-size: 16px;
+    }
+    .comImgBox .imgTxt, .comFomulBox .imgTxt {
+        font-size: 16px;
+    }
+    .comNumList .listGroup .item .txt {
+        font-size: 16px;
+    }
+    .comPrevNext dl dt {
+        font-size: 16px;
+    }
+    .comPrevNext dl dd a {
+        font-size: 16px;
+    }
+    .comContInfo .ppBox .cont .rowB .listGroup .item {
+        font-size: 16px;
+    }
+    .cptContSelfTest .testCont .subject .txt {
+        font-size: 16px;
+    }
+    .cptContSelfTest .testCont .clickBox ul li label {
+        font-size: 16px;
+    }
+    .cptContProgram .prevntBox .item a .prevtPrgm .cont .txt {
+        font-size: 16px; //14px
+    }
+    .cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .title {
+        font-size: 16px;
+    }
+    .comPrivacyBox .infoBox .boxCont .txtTit + .txt {
+        font-size: 16px;
+    }
+    .comPrivacyBox .infoBox .boxCont .listGroup .item {
+        font-size: 16px;
+    }
+    .comPrivacyBox .infoBox .boxCont .txt {
+        font-size: 16px;
+    }
+    .cptQuickMove .boxArea .quickBox .txtArea .desc {
+        font-size: 16px;
+    }
+    .cptContSpeedom .contArea .vrInfo dd {
+        font-size: 16px;
+    }
+    .cptFacInfo .list .cont .rowA dl dd {
+        font-size: 16px;
+    }
+    .cptSchRstCont .ctt .rstContent {
+        font-size: 16px; //14px
+    }
+}
