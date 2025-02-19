@@ -1543,6 +1543,72 @@
 	font-size: 0.9375rem;
 }
 
+/* 모바일 텍스트 크기 조절 */
+@media screen and (max-width: 767px) {
+	.eng .comBasicTxt .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .comSubInfo .info {
+		font-size: 0.9375rem;
+	}
+	.eng .comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item {
+		font-size: 0.9375rem;
+	}
+	.eng .cptOrderGuide .imgGuide .guideGroup .guideItem .tit .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .cptImgGuideBox .boxArea .descArea .descItem dd {
+		font-size: 0.9375rem;
+	}
+	.eng .comImgBox .imgTxt, .comFomulBox .imgTxt {
+		font-size: 0.9375rem;
+	}
+	.eng .comNumList .listGroup .item .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .comPrevNext dl dt {
+		font-size: 0.9375rem;
+	}
+	.eng .comPrevNext dl dd a {
+		font-size: 0.9375rem;
+	}
+	.eng .comContInfo .ppBox .cont .rowB .listGroup .item {
+		font-size: 0.9375rem;
+	}
+	.eng .cptContSelfTest .testCont .subject .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .cptContSelfTest .testCont .clickBox ul li label {
+		font-size: 0.9375rem;
+	}
+	.eng .cptContProgram .prevntBox .item a .prevtPrgm .cont .txt {
+		font-size: 0.875rem;
+	}
+	.eng .cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .title {
+		font-size: 0.9375rem;
+	}
+	.eng .comPrivacyBox .infoBox .boxCont .txtTit + .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .comPrivacyBox .infoBox .boxCont .listGroup .item {
+		font-size: 0.9375rem;
+	}
+	.eng .comPrivacyBox .infoBox .boxCont .txt {
+		font-size: 0.9375rem;
+	}
+	.eng .cptQuickMove .boxArea .quickBox .txtArea .desc {
+		font-size: 0.9375rem;
+	}
+	.eng .cptContSpeedom .contArea .vrInfo dd {
+		font-size: 0.9375rem;
+	}
+	.eng .cptFacInfo .list .cont .rowA dl dd {
+		font-size: 0.9375rem;
+	}
+	.eng .cptSchRstCont .ctt .rstContent {
+		font-size: 0.875rem;
+	}
+}
 @media print {
 	.lytLayout .layoutArea .layoutTop {
 		display: none;
@@ -1671,5 +1737,72 @@
 }
 .sokbo thead td, .sokbo thead th {
 	background: #eee;
+}
+
+/* 모바일 텍스트 크기 조절 */
+@media screen and (max-width: 767px) {
+	.comBasicTxt .txt {
+		font-size: 16px;
+	}
+	.comSubInfo .info {
+		font-size: 16px;
+	}
+	.comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item {
+		font-size: 16px;
+	}
+	.cptOrderGuide .imgGuide .guideGroup .guideItem .tit .txt {
+		font-size: 16px;
+	}
+	.cptImgGuideBox .boxArea .descArea .descItem dd {
+		font-size: 16px;
+	}
+	.comImgBox .imgTxt, .comFomulBox .imgTxt {
+		font-size: 16px;
+	}
+	.comNumList .listGroup .item .txt {
+		font-size: 16px;
+	}
+	.comPrevNext dl dt {
+		font-size: 16px;
+	}
+	.comPrevNext dl dd a {
+		font-size: 16px;
+	}
+	.comContInfo .ppBox .cont .rowB .listGroup .item {
+		font-size: 16px;
+	}
+	.cptContSelfTest .testCont .subject .txt {
+		font-size: 16px;
+	}
+	.cptContSelfTest .testCont .clickBox ul li label {
+		font-size: 16px;
+	}
+	.cptContProgram .prevntBox .item a .prevtPrgm .cont .txt {
+		font-size: 16px;
+	}
+	.cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .title {
+		font-size: 16px;
+	}
+	.comPrivacyBox .infoBox .boxCont .txtTit + .txt {
+		font-size: 16px;
+	}
+	.comPrivacyBox .infoBox .boxCont .listGroup .item {
+		font-size: 16px;
+	}
+	.comPrivacyBox .infoBox .boxCont .txt {
+		font-size: 16px;
+	}
+	.cptQuickMove .boxArea .quickBox .txtArea .desc {
+		font-size: 16px;
+	}
+	.cptContSpeedom .contArea .vrInfo dd {
+		font-size: 16px;
+	}
+	.cptFacInfo .list .cont .rowA dl dd {
+		font-size: 16px;
+	}
+	.cptSchRstCont .ctt .rstContent {
+		font-size: 16px;
+	}
 }
 /*# sourceMappingURL=../maps/module.css.map */

@@ -298,3 +298,71 @@
 .eng .comDataTable .player {
     font-size: rem(15px);
 }
+
+
+/* 모바일 텍스트 크기 조절 */
+@include media('mobile') {
+    .eng .comBasicTxt .txt {
+        font-size: rem(15px);
+    }
+    .eng .comSubInfo .info {
+        font-size: rem(15px);
+    }   
+    .eng .comBasicList .item, .comJoinBtmText .item, .comNumList .listGroup .item .addList .item {
+        font-size: rem(15px);
+    }
+    .eng .cptOrderGuide .imgGuide .guideGroup .guideItem .tit .txt {
+        font-size: rem(15px);
+    }
+    .eng .cptImgGuideBox .boxArea .descArea .descItem dd {
+        font-size: rem(15px);
+    }
+    .eng .comImgBox .imgTxt, .comFomulBox .imgTxt {
+        font-size: rem(15px);
+    }
+    .eng .comNumList .listGroup .item .txt {
+        font-size: rem(15px);
+    }
+    .eng .comPrevNext dl dt {
+        font-size: rem(15px);
+    }
+    .eng .comPrevNext dl dd a {
+        font-size: rem(15px);
+    }
+    .eng .comContInfo .ppBox .cont .rowB .listGroup .item {
+        font-size: rem(15px);
+    }
+    .eng .cptContSelfTest .testCont .subject .txt {
+        font-size: rem(15px);
+    }
+    .eng .cptContSelfTest .testCont .clickBox ul li label {
+        font-size: rem(15px);
+    }
+    .eng .cptContProgram .prevntBox .item a .prevtPrgm .cont .txt {
+        font-size: rem(14px); //14px
+    }
+    .eng .cptGalleryList .galleryListArea .listBoard .listGroup .listItem .infoBox .title {
+        font-size: rem(15px);
+    }
+    .eng .comPrivacyBox .infoBox .boxCont .txtTit + .txt {
+        font-size: rem(15px);
+    }
+    .eng .comPrivacyBox .infoBox .boxCont .listGroup .item {
+        font-size: rem(15px);
+    }
+    .eng .comPrivacyBox .infoBox .boxCont .txt {
+        font-size: rem(15px);
+    }
+    .eng .cptQuickMove .boxArea .quickBox .txtArea .desc {
+        font-size: rem(15px);
+    }
+    .eng .cptContSpeedom .contArea .vrInfo dd {
+        font-size: rem(15px);
+    }
+    .eng .cptFacInfo .list .cont .rowA dl dd {
+        font-size: rem(15px);
+    }
+    .eng .cptSchRstCont .ctt .rstContent {
+        font-size: rem(14px); //14px
+    }
+}
