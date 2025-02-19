@@ -1993,6 +1993,9 @@
 .cptQuickMenu .quickBtns .quickItem .quickIco.ico11 {
 	background-image: url(../../images/common/ic_quick_other05.svg);
 }
+.cptQuickMenu .quickBtns .quickItem .quickIco.ico12 {
+	background-image: url(../../images/common/ic_quick_other06.svg);
+}
 .cptQuickMenu .btnTop {
 	width: 100%;
 	height: 38px;
