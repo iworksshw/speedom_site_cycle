@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="경륜, 광명스피돔, 경륜경정총괄본부, 경륜가이드, 경주일정, 종합경주, 경주출주표, 경주결과, 경주배당률, 경주현황, 심판판정, 통계데이터, 선수조회, 선수전적비교, 신인선수, 선수현황, 순위정보, 상금정보, 경륜영상관, 경주동영상, 스피돔소식, 이벤트 경륜, 경륜인사이트, 대상경륜방송, 모의베팅, 예상과 후기, 문화교실, 신고센터, 순위예측, 희망길벗 ">
+	<meta name="keywords" content="KCYCLE, 스피돔, 경륜, 스포츠, 경주, 일정, 출주표, 배당률, 베팅, 경륜선수">
+	<meta name="author" content="경륜경정총괄본부">
+	<meta property="og:title" content="KCYCLE 경륜 - KSPO">
+	<meta property="og:description" content="경륜, 광명스피돔, 경륜경정총괄본부, 경륜가이드, 경주일정, 종합경주, 경주출주표, 경주결과, 경주배당률, 경주현황, 심판판정, 통계데이터, 선수조회, 선수전적비교, 신인선수, 선수현황, 순위정보, 상금정보, 경륜영상관, 경주동영상, 스피돔소식, 이벤트 경륜, 경륜인사이트, 대상경륜방송, 예상과 후기, 문화교실, 신고센터, 순위예측, 희망길벗 ">
+	<meta property="og:image" content="../images/favicon/favicon.ico">
+	<meta property="og:url" content="https://www.kcycle.or.kr/">
+	
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>KCYCLE 경륜</title>
+
+	<link rel="stylesheet" href="../common/css/swiper.css" />
+	<link rel="stylesheet" href="../common/css/style.css" />
+	<link rel="stylesheet" href="../common/css/component.css" />
+	<link rel="stylesheet" href="../common/css/module.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../common/js/swiper.min.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="../common/js/main.js"></script>
+	<!-- <script src="../common/js/basic.js"></script>-->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytMain">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('_ejs/header.ejs', {
+                url: "../../",
+                mainClass: "inMain"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 본문영역 -->
+        <div class="layoutContainer">
+            <div class="mainLayoutWrap">
+                
+
+            </div>
+
+
+            <!-- 경주취소 팝업 -->
+            <div class="mainPopup on" id="mainPop01" style="width: auto; left: 120px; top: 100px;"> <!-- 팝업의 가로값 style값은 개발에서 변형합니다 -->
+                <div class="popArea">
+                    <div class="popCont" style="height: auto;"> <!-- 팝업 콘텐츠의 높이값 style값은 개발에서 변형합니다 -->
+                        <!-- 팝업 콘텐츠의 영역 (.imgArea과 .txtArea 중 하나만 사용) -->
+
+                        <!-- 텍스트 팝업 일 때(내용이 영역보다 많으면 영역 내 스크롤 생김) -->
+                        <div class="txtArea">
+                            <!-- 콘텐츠 내용 -->
+
+                            <!-- 20250220 경주취소 내용 추가 -->
+                            <div class="raceCancel">
+                                <div class="cancelTitle">
+                                    <h3>경륜 경주 취소 안내</h3>
+                                </div>
+                                <div class="cancelDate">
+                                    2월 14일 (목) 부산 43회 2일차
+                                </div>
+                                <div class="cancelMsg">
+                                    <p>천재지변 또는 우천 등 부득이한 사유(폭설)로 
+                                        부산 43회 2일차 경주가 취소되었습니다.
+                                        고객님들께 불편을 드려 진심으로 사과드립니다. 
+                                        고객 여러분의 깊은 양해를 부탁드립니다 고객 여러분의 깊은 양해를 부탁드립니다 고객 여러분의 깊은 양해를 부탁드립니다.</p>
+                                </div>
+                            </div>
+                            <!-- //20250220 경주취소 내용 추가 -->
+
+                        </div>
+
+                        <!-- //팝업 콘텐츠의 영역 -->
+                    </div>
+                    <div class="popClose">
+                        <div class="alignL">
+                            <div class="frmGroup">
+                                <div class="frmBox maxCont"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">일주일 동안 보지 않기</label></div>
+                            </div>
+                        </div>
+                        <div class="alignR">
+                            <button type="button" class="btnClose" onclick="closePopup('mainPop01');">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //경주취소 팝업 -->
+
+        </div>
+        <!-- //본문영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('_ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+    </div>
+</div>
+
+</div>
+</body>
+</html>
