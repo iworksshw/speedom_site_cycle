@@ -5636,6 +5636,9 @@ select.iptSlt.typeLine {
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .basicMenuArea .menuGroup .menuItem .menuBtn.icon08::before {
 	background-image: url(../../images/main/main_m_basicIco08.svg);
 }
+.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .basicMenuArea .menuGroup .menuItem .menuBtn.icon09::before {
+	background-image: url(../../images/main/main_m_basicIco09.svg);
+}
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .boardMenuArea {
 	margin-top: 32px;
 }
