@@ -1710,6 +1710,11 @@
 .comDataTable .tableArea table tbody tr .left {
 	padding: 8px 20px;
 }
+@media screen and (max-width: 767px) {
+	.comDataTable .tableArea table tbody tr .left {
+		padding: 8px;
+	}
+}
 
 .comDataTable .player {
 	font-size: 18px;

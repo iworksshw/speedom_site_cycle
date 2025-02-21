@@ -1,6 +1,7 @@
 /* ------------------- 현재 경주 발매상태 및 현재시간 ------------------- */
 .comRaceTime {
     width: 100%; margin-top: 60px;
+    &:first-child {margin-top: 0;}
     .timeArea {
         width: 100%; padding: 20px 40px; border-radius: 12px; background: #EEF9FD; display: flex; justify-content: space-between; align-items: center;
         .alignL {
@@ -10,10 +11,10 @@
             display: flex; justify-content: flex-end; align-items: center;
         }
         .tit {
-            color: var(--Gray-900, #111); font-size: 24px; font-style: normal; font-weight: 700; line-height: 1.6;
+            color: var(--Gray-900, #111); font-size: rem(24px); font-style: normal; font-weight: 700; line-height: 1.6;
         }
         .tag {
-            width: max-content; height: 26px; margin-left: 8px; padding: 0 10px; border-radius: 20px; 
+            width: max-content; min-width: max-content; height: 26px; margin-left: 8px; padding: 0 10px; border-radius: 20px; 
             color: #FFF; font-size: rem(16px); font-weight: 700; line-height: 1.6;
             &.before {
                 background: var(--Secondary); 
@@ -26,21 +27,34 @@
             }           
         }
         .time {
-            color: var(--Gray-700); font-size: rem(24px); font-style: normal; font-weight: 500; line-height: 1.4;
+            padding-left: 36px; color: var(--Gray-700); font-size: rem(24px); font-style: normal; font-weight: 500; line-height: 1.4; position: relative;
+            &::before {
+                content: ""; width: 28px; height: 28px; font-size: 0; background: url(../../images/common/ic_20_timer.svg) center no-repeat; display: block; position: absolute; left: 0; top: 3px;
+            }
         }
     }
+    @include media("mobile"){
+        margin-top: 40px;
+        .timeArea {
+            width: calc(100% + 32px); margin-left: -16px; flex-wrap: wrap; padding: 16px;
+            .alignL {
+                align-items: flex-end;
+            }
+            .alignR {
+                justify-content: flex-start;
+            }
+            .tit {
+                font-size: rem(20px);
+                .mbr {width: 100%; display: block;}
+            }
+            .tag {
+                margin-bottom: 3px;
+            }
+            .time {
+                margin-top: 16px; font-size: rem(20px);
+            }
+        }
+        & + .cptSection {margin-top: 0;}
+        & + .comDataTable {margin-top: 40px;}
+    }
 }
-
-// <div class="comRaceTime">
-// <div class="timeArea">
-//     <div class="alignL">
-//         <b class="tit">2025년 02월 05일 (수) (일반) 제 07 경주 43회차 1일차</b>
-//         <span class="tag before">발매전</span> <!-- class 'before' : 발매 전-->
-//         <span class="tag ing">발매중</span> <!-- class 'ing' : 발매 중-->
-//         <span class="tag end">발매마감</span> <!-- class 'end' : 발매 마감-->
-//     </div>
-//     <div class="alignR">
-//         <span class="time">AM 10:25:07</span>
-//     </div>
-// </div>
-// </div>

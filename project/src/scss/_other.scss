@@ -72,6 +72,7 @@
 }
 .comDataTable .tableArea table tbody tr .left {
     padding: 8px 20px;
+    @include media('mobile') {padding: 8px;}
 }
 .comDataTable .tableArea table tbody tr td .txtBtn {
     
