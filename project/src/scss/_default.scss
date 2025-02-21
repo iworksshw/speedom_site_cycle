@@ -54,6 +54,12 @@ $basicFontSize:16px;
 
 
 * {box-sizing: border-box; font-family:'PretendardGOV', sans-serif; letter-spacing: 0;}
+html, body{ /* 텍스트 커지는 이슈 (필수로 들어가야 하는 부분) */
+  -webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */
+  -ms-text-size-adjust : none;  /* IE */
+  -moz-text-size-adjust : none;  /* 파이어폭스 */
+  -o-text-size-adjust : none;  /* 오페라 구버전 */
+}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
 fieldset,img {border:0 none}
 dl,ul,ol,menu,li {list-style:none}
