@@ -7,11 +7,18 @@
         .playerGroup {
             display: flex; align-items: center; justify-content: space-around;
             .playerItem {
+                &:has(.descArea .player .num01) .thumArea {border: 2px solid #CED1D6;}
+                &:has(.descArea .player .num02) .thumArea {border: 2px solid #111111;}
+                &:has(.descArea .player .num03) .thumArea {border: 2px solid #FF2828;}
+                &:has(.descArea .player .num04) .thumArea {border: 2px solid #2A7DDF;}
+                &:has(.descArea .player .num05) .thumArea {border: 2px solid #FFB907;}
+                &:has(.descArea .player .num06) .thumArea {border: 2px solid #55B965;}
+                &:has(.descArea .player .num07) .thumArea {border: 2px solid #FF66AF;}
                 .playerPf {
                     display: inline-block; text-align: center;
                     .thumArea {
                         width: 45px; height: 45px; border-radius: 50%; margin: 0 auto; overflow: hidden;
-                        img {width: 100%; height: 100%; object-fit: cover;}
+                        img {width: 100%; height: 100%; object-fit: contain;}
                     }
                     .descArea {
                         margin-top: 4px;

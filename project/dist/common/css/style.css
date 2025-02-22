@@ -6324,6 +6324,27 @@ select.iptSlt.typeLine {
 	width: max-content;
 	display: inline-flex;
 }
+.comDataTable .profile:has(.info .name .num01) .img {
+	border: 2px solid #CED1D6;
+}
+.comDataTable .profile:has(.info .name .num02) .img {
+	border: 2px solid #111111;
+}
+.comDataTable .profile:has(.info .name .num03) .img {
+	border: 2px solid #FF2828;
+}
+.comDataTable .profile:has(.info .name .num04) .img {
+	border: 2px solid #2A7DDF;
+}
+.comDataTable .profile:has(.info .name .num05) .img {
+	border: 2px solid #FFB907;
+}
+.comDataTable .profile:has(.info .name .num06) .img {
+	border: 2px solid #55B965;
+}
+.comDataTable .profile:has(.info .name .num07) .img {
+	border: 2px solid #FF66AF;
+}
 .comDataTable .profile .img {
 	width: 40px;
 	height: 40px;
@@ -11215,6 +11236,27 @@ select.iptSlt.typeLine {
 	align-items: center;
 	justify-content: space-around;
 }
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num01) .thumArea {
+	border: 2px solid #CED1D6;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num02) .thumArea {
+	border: 2px solid #111111;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num03) .thumArea {
+	border: 2px solid #FF2828;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num04) .thumArea {
+	border: 2px solid #2A7DDF;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num05) .thumArea {
+	border: 2px solid #FFB907;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num06) .thumArea {
+	border: 2px solid #55B965;
+}
+.comPlayerThumList .listBox .playerGroup .playerItem:has(.descArea .player .num07) .thumArea {
+	border: 2px solid #FF66AF;
+}
 .comPlayerThumList .listBox .playerGroup .playerItem .playerPf {
 	display: inline-block;
 	text-align: center;
@@ -11229,7 +11271,7 @@ select.iptSlt.typeLine {
 .comPlayerThumList .listBox .playerGroup .playerItem .playerPf .thumArea img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 .comPlayerThumList .listBox .playerGroup .playerItem .playerPf .descArea {
 	margin-top: 4px;

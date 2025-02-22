@@ -5045,6 +5045,29 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Primary);
 	font-weight: 700;
 }
+.cptImgGuideBox .boxArea .viewArea .dotList {
+	margin-top: 20px;
+}
+.cptImgGuideBox .boxArea .viewArea .dotList .listGroup .item {
+	padding-left: 11px;
+	position: relative;
+}
+.cptImgGuideBox .boxArea .viewArea .dotList .listGroup .item::after {
+	content: "";
+	width: 3px;
+	height: 3px;
+	background: #92959A;
+	display: block;
+	position: absolute;
+	top: 11px;
+	left: 0;
+}
+.cptImgGuideBox .boxArea .viewArea .dotList .listGroup .item .sTit {
+	color: var(--Gray-800);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
 .cptImgGuideBox .boxArea .viewArea .dotList .listGroup.half::after {
 	display: block;
 	content: "";

@@ -292,6 +292,14 @@
     }
     .profile {
         width: max-content; display: inline-flex;
+        &:has(.info .name .num01) .img {border: 2px solid #CED1D6;}
+        &:has(.info .name .num02) .img {border: 2px solid #111111;}
+        &:has(.info .name .num03) .img {border: 2px solid #FF2828;}
+        &:has(.info .name .num04) .img {border: 2px solid #2A7DDF;}
+        &:has(.info .name .num05) .img {border: 2px solid #FFB907;}
+        &:has(.info .name .num06) .img {border: 2px solid #55B965;}
+        &:has(.info .name .num07) .img {border: 2px solid #FF66AF;}
+
         .img {
             width: 40px; height: 40px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: #fff; display: flex; justify-content: center;
             img {height: 40px;}
