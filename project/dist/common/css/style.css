@@ -3932,6 +3932,9 @@ select.iptSlt.typeLine {
 	right: 40px;
 	top: 40px;
 }
+.lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea > p {
+	color: #fff;
+}
 .lytMain .layoutArea .layoutContainer .mainSlideArea .mainBox .btnArea .raceCheck {
 	padding-left: 30px;
 	margin-left: 8px;
