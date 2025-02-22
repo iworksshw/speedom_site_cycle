@@ -923,7 +923,7 @@ function slctDateSlide() {
         //console.log(dateSlides);
         let dateSwiper = new Swiper(".dateSwiper", {
             slidesPerView: "auto",
-            spaceBetween: 12,
+            //spaceBetween: 12,
             centeredSlides: false,
             initialSlide: sdindex,
             navigation: {
