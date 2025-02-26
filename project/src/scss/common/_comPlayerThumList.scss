@@ -46,9 +46,16 @@
         margin-top: 32px;
     
         .listBox {
-            padding: 24px 38px;
+            padding: 24px 20px;
             .playerGroup {
-                flex-wrap: wrap; justify-content: flex-start; gap: 40px;
+                flex-wrap: wrap; justify-content: flex-start; gap: 10px;
+                .playerItem {
+                    .playerPf {
+                        .thumArea {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
