@@ -4427,7 +4427,7 @@ select.iptSlt.typeLine {
 }
 .lytMain .layoutArea .layoutContainer .snsArea .snsGroup .linkBox {
 	width: 100%;
-	height: 100%;
+	height: 180px;
 	border-radius: 10px;
 	overflow: hidden;
 }
