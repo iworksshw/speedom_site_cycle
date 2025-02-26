@@ -4193,6 +4193,9 @@ select.iptSlt.typeLine {
 .lytMain .layoutArea .layoutContainer .rankingArea .rankBox .rankItem:nth-child(3) .id {
 	background-image: url(../../images/main/ic_medal_3rd.svg);
 }
+.lytMain .layoutArea .layoutContainer .rankingArea .rankLink img {
+	display: block;
+}
 .lytMain .layoutArea .layoutContainer .rankingArea .linkBanner {
 	margin-top: 8px;
 }
