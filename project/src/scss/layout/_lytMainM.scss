@@ -29,11 +29,11 @@
                         .bannerArea {
                             width: 100%; height: 80px; margin: 16px 0 14px; padding:0 12px; display: flex; align-items: center; justify-content: space-between; column-gap: 20px;
                             .txtArea {
-                                .tit {font-size: rem(18px); font-weight: 700; color: var(--Gray-800);}
-                                .date {margin-top: 4px; font-style: normal; font-size: rem(14px); color: var(--Gray-600); display: inline-block;}
+                                .tit {font-size: rem(18px); font-weight: 700; color: var(--Gray-800); white-space: nowrap;}
+                                .date {margin-top: 4px; font-style: normal; font-size: rem(14px); color: var(--Gray-600); display: inline-block; white-space: nowrap;}
                             }
                             .imgArea {
-                                width: 80px; height: 80px; overflow: hidden;
+                                width: 80px; min-width: 80px; height: 80px; overflow: hidden;
                                 img {max-height: 100%; width: 80px; height: 80px;}
                             }
                         }
@@ -60,7 +60,12 @@
                                 &.icon02 {background-image: url(../../images/main/main_m_quickIco02.png);}
                                 &.icon03 {background-image: url(../../images/main/main_m_quickIco03.png);}
                                 b {font-size: rem(16px); color: var(--Gray-800); font-weight: 700; display: block;}
-                                i {margin-top: 2px; font-size :rem(13px); color: var(--Gray-600); font-weight: 400; font-style: normal; display: block;}
+                                i {
+                                    margin-top: 2px; font-size :rem(13px); color: var(--Gray-600); font-weight: 400; font-style: normal; display: block;
+                                    @include media("min") {
+                                        display: none;
+                                    }
+                                }
                             }
                         }
                     }
@@ -104,6 +109,9 @@
                                 &.icon04 {background-image: url(../../images/main/main_m_boardIco04.svg);}
                                 &.icon05 {background-image: url(../../images/main/main_m_boardIco05.svg);}
                                 &.icon06 {background-image: url(../../images/main/main_m_boardIco06.svg);}
+                                @include media("min") {
+                                    padding: 0 10px; background-image: none !important;
+                                }
                             }
                         }
                     }

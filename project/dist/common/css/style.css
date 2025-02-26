@@ -5509,6 +5509,7 @@ select.iptSlt.typeLine {
 	font-size: 1.125rem;
 	font-weight: 700;
 	color: var(--Gray-800);
+	white-space: nowrap;
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .txtArea .date {
 	margin-top: 4px;
@@ -5516,9 +5517,11 @@ select.iptSlt.typeLine {
 	font-size: 0.875rem;
 	color: var(--Gray-600);
 	display: inline-block;
+	white-space: nowrap;
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .imgArea {
 	width: 80px;
+	min-width: 80px;
 	height: 80px;
 	overflow: hidden;
 }
@@ -5591,6 +5594,11 @@ select.iptSlt.typeLine {
 	font-weight: 400;
 	font-style: normal;
 	display: block;
+}
+@media screen and (max-width: 374px) {
+	.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .quickMenuArea .menuGroup .menuItem .menuBtn i {
+		display: none;
+	}
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .basicMenuArea {
 	margin-top: 28px;
@@ -5703,6 +5711,12 @@ select.iptSlt.typeLine {
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .boardMenuArea .menuGroup .menuItem .menuBtn.icon06 {
 	background-image: url(../../images/main/main_m_boardIco06.svg);
+}
+@media screen and (max-width: 374px) {
+	.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .boardMenuArea .menuGroup .menuItem .menuBtn {
+		padding: 0 10px;
+		background-image: none !important;
+	}
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .eventArea {
 	margin-top: 28px;
@@ -5975,6 +5989,7 @@ select.iptSlt.typeLine {
 	background: var(--Bg-Line-bg-100);
 	position: sticky;
 	top: 0;
+	white-space: nowrap;
 }
 .comDataTable .tableArea table thead tr th:last-child {
 	border-right: 0;
@@ -6023,6 +6038,7 @@ select.iptSlt.typeLine {
 	border-right: 1px solid var(--Gray-300);
 	border-bottom: 1px solid var(--Bg-Line-line-100);
 	background: var(--Bg-Line-bg-100);
+	white-space: nowrap;
 }
 .comDataTable .tableArea table tbody tr th:last-child {
 	border-right: 0;
@@ -6040,6 +6056,7 @@ select.iptSlt.typeLine {
 	line-height: 1.3;
 	border-right: 1px solid var(--Bg-Line-line-200);
 	border-bottom: 1px solid var(--Bg-Line-line-100);
+	white-space: nowrap;
 }
 .comDataTable .tableArea table tbody tr td:last-child {
 	border-right: 0;
@@ -6279,6 +6296,9 @@ select.iptSlt.typeLine {
 	left: 0;
 	z-index: 5;
 }
+.comDataTable.noSticky .tableArea table thead tr th {
+	position: static;
+}
 .comDataTable.noSticky .tableArea table tbody tr th {
 	position: static;
 }
@@ -6374,6 +6394,11 @@ select.iptSlt.typeLine {
 	font-weight: 400;
 	display: flex;
 	white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+	.comDataTable .profile .img {
+		display: none;
+	}
 }
 .comDataTable .pinkLine {
 	padding: 0 2px;

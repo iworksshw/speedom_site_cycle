@@ -949,9 +949,6 @@
 	width: 100%;
 	padding: 20px 16px 32px;
 	border-top: 1px solid var(--Bg-Line-line-200);
-	position: absolute;
-	left: 0;
-	bottom: 0;
 	display: none;
 }
 .allMenuArea .allMenuGroup .allMenuBox .quickLink .quickItem {
@@ -1049,14 +1046,15 @@
 	.allMenuArea:not(.inMain) .allMenuGroup {
 		height: calc(100dvh - 65px);
 		overflow-y: auto;
+		position: relative;
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox {
 		height: 100%;
 		padding: 0;
+		overflow-y: auto;
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth1Group {
-		height: 100%;
-		position: relative;
+		min-height: calc(100% - 185px);
 	}
 	.allMenuArea:not(.inMain) .allMenuGroup .allMenuBox .depth1Group .depth1Menu {
 		padding: 0;
@@ -2268,6 +2266,7 @@
 }
 .cptSubBtm .subBtmArea .subBtmBox .manager dt {
 	width: max-content;
+	min-width: max-content;
 	height: 28px;
 	padding-left: 44px;
 	color: var(--Gray-800);
@@ -2288,6 +2287,9 @@
 	line-height: 1.6;
 	position: relative;
 	align-content: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .cptSubBtm .subBtmArea .subBtmBox .manager dd::before {
 	content: "";
@@ -3627,7 +3629,8 @@
 	}
 	.cptBoardView .boardViewArea .viewTop .info {
 		margin-top: 8px;
-		gap: 12px;
+		gap: 4px 12px;
+		flex-wrap: wrap;
 	}
 	.cptBoardView .boardViewArea .viewTop .info .item {
 		color: var(--Gray-500);
