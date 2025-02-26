@@ -5512,7 +5512,7 @@ select.iptSlt.typeLine {
 	font-size: 1.125rem;
 	font-weight: 700;
 	color: var(--Gray-800);
-	white-space: nowrap;
+	word-break: keep-all;
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .txtArea .date {
 	margin-top: 4px;
@@ -11374,12 +11374,15 @@ select.iptSlt.typeLine {
 		margin-top: 32px;
 	}
 	.comPlayerThumList .listBox {
-		padding: 24px 38px;
+		padding: 24px 20px;
 	}
 	.comPlayerThumList .listBox .playerGroup {
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		gap: 40px;
+		gap: 10px;
+	}
+	.comPlayerThumList .listBox .playerGroup .playerItem .playerPf .thumArea {
+		display: none;
 	}
 }
 .comPlayerThumList.inPop .playerPf {
