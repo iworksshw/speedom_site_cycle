@@ -500,6 +500,9 @@
                         &:nth-child(3) .id {background-image: url(../../images/main/ic_medal_3rd.svg);}
                     }
                 }
+                .rankLink {
+                    img {display: block;}
+                }
 
                 .linkBanner {
                     margin-top: 8px;
