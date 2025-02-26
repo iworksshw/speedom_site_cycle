@@ -464,7 +464,7 @@
             }
             
             .quickLink {
-                width: 100%; padding: 20px 16px 32px; border-top: 1px solid var(--Bg-Line-line-200); position: absolute; left: 0; bottom: 0; display: none;
+                width: 100%; padding: 20px 16px 32px; border-top: 1px solid var(--Bg-Line-line-200); display: none; //20250225 삭제 position: absolute; left: 0; bottom: 0; 
                 .quickItem {
                     width: 100%; margin-top: 12px;
                     &:first-child {
@@ -517,11 +517,14 @@
             }
             .allMenuGroup {
                 //20250205 수정 height: calc(100vh - 65px); overflow-y: auto; 
-                height: calc(100dvh - 65px); overflow-y: auto;
+                //20250225 수정 height: calc(100dvh - 65px); overflow-y: auto;
+                height: calc(100dvh - 65px); overflow-y: auto; position: relative;
                 .allMenuBox {
-                    height: 100%; padding: 0;
+                    //20250225 수정 height: 100%; padding: 0;
+                    height: 100%; padding: 0; overflow-y: auto;
                     .depth1Group {
-                        height: 100%; position: relative;
+                        //20250225 수정 height: 100%; position: relative;
+                        min-height: calc(100% - 185px);
                         .depth1Menu {
                             padding: 0; border-top: 0;
                             .depth1Name{
