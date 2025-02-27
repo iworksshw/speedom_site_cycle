@@ -153,6 +153,20 @@
 	}
 }
 
+.modPopup .comTabData {
+	width: 100%;
+	margin-left: 0;
+}
+.modPopup .comTabData .tabMenuGroup {
+	padding: 0;
+}
+.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem {
+	margin-right: 12px;
+}
+.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem:last-child {
+	margin-right: 0;
+}
+
 /* ------------------------------- 헤더 ------------------------------- */
 .cptHeader {
 	width: 100%;
