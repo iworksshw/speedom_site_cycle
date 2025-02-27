@@ -1515,11 +1515,13 @@
 .eng .comDataTable .tableArea table thead tr th {
 	font-size: 0.9375rem;
 	padding: 20px 5px;
+	white-space: normal;
 }
 
 .eng .comDataTable .tableArea table tbody tr th {
 	font-size: 0.9375rem;
 	padding: 20px 5px;
+	white-space: normal;
 }
 
 .eng .comDataTable .tableArea table tbody tr th .txtBtn {
@@ -1529,6 +1531,7 @@
 .eng .comDataTable .tableArea table tbody tr td {
 	font-size: 0.9375rem;
 	padding: 20px 5px;
+	white-space: normal;
 }
 
 .eng .comDataTable .tableArea table tbody tr td .txtBtn {
