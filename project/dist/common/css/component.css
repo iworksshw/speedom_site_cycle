@@ -2226,6 +2226,7 @@
 	.cptSubTop .subTopArea .subText p {
 		font-size: 1.75rem;
 		font-weight: 300;
+		word-break: keep-all;
 	}
 	.cptSubTop .subTopArea .addFunc {
 		right: 16px;

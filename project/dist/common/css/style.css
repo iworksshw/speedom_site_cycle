@@ -5520,7 +5520,7 @@ select.iptSlt.typeLine {
 	font-size: 0.875rem;
 	color: var(--Gray-600);
 	display: inline-block;
-	white-space: nowrap;
+	word-break: keep-all;
 }
 .lytMainM .layoutArea .layoutContainer .mainLayoutWrap .mainBannerArea .bannerSwiper .bannerArea .imgArea {
 	width: 80px;
@@ -5599,6 +5599,9 @@ select.iptSlt.typeLine {
 	display: block;
 }
 @media screen and (max-width: 374px) {
+	.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .quickMenuArea .menuGroup .menuItem .menuBtn {
+		height: 90px;
+	}
 	.lytMainM .layoutArea .layoutContainer .mainLayoutWrap .quickMenuArea .menuGroup .menuItem .menuBtn i {
 		display: none;
 	}
@@ -11382,6 +11385,9 @@ select.iptSlt.typeLine {
 		gap: 10px;
 	}
 	.comPlayerThumList .listBox .playerGroup .playerItem .playerPf .thumArea {
+		display: none;
+	}
+	.comPlayerThumList .listBox .playerGroup .playerItem .playerPf .descArea p.desc {
 		display: none;
 	}
 }
