@@ -87,3 +87,15 @@
         }
     }
 }
+.modPopup .comTabData {
+    width: 100%; margin-left: 0;
+    .tabMenuGroup {
+        padding: 0;
+        .tabMenu {
+            .tabItem {
+                margin-right: 12px;
+                &:last-child {margin-right: 0;}
+            }
+        }
+    }
+}

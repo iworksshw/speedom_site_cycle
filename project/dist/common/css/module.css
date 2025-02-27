@@ -153,6 +153,20 @@
 	}
 }
 
+.modPopup .comTabData, .modPopup .modTab02 {
+	width: 100%;
+	margin-left: 0;
+}
+.modPopup .comTabData .tabMenuGroup, .modPopup .modTab02 .tabMenuGroup {
+	padding: 0;
+}
+.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem, .modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem {
+	margin-right: 12px;
+}
+.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem:last-child, .modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem:last-child {
+	margin-right: 0;
+}
+
 /* --------------------------- 팝업 Large --------------------------- */
 .modPopup {
 	width: 100%;
