@@ -721,9 +721,6 @@
 		left: 20px;
 		top: 94px;
 	}
-	.cptHeader:not(.inMain) .headArea .headBox .logoBox .logo g path, .cptHeader:not(.inMain).on .headArea .headBox .logoBox .logo g path {
-		fill: #00458D;
-	}
 	.cptHeader:not(.inMain) .headArea .headBox .myMenuGroup, .cptHeader:not(.inMain).on .headArea .headBox .myMenuGroup {
 		position: absolute;
 		right: 74px;
