@@ -3569,9 +3569,11 @@ select.iptSlt.typeLine {
 	line-height: 1.3;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .playerName .plInfo .info em {
+	min-width: 42px;
 	font-size: 1rem;
 	color: var(--Gray-900);
 	font-weight: 600;
+	display: inline-block;
 }
 .lytMain .layoutArea .layoutContainer .raceArea .raceBox .tabArea .assayArea .playerTable .playerName .plInfo .info:nth-child(2n-1)::after {
 	display: block;
@@ -10937,6 +10939,7 @@ select.iptSlt.typeLine {
 }
 .comDateSwiper .dateSwiper .swiper-slide {
 	width: fit-content;
+	margin-right: 12px;
 }
 .comDateSwiper .dateSwiper .swiper-slide .dateBox {
 	width: 56px;
