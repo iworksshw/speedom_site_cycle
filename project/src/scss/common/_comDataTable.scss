@@ -2,6 +2,25 @@
 .comDataTable {
     width:100%; margin-top: 12px; background:#fff;
     &:first-child {margin-top:0;}
+    &.f16 {
+        @include media("mobile"){
+            .tableArea {
+                table {
+                    thead {
+                        tr {
+                            th {font-size: rem(16px);}
+                        }
+                    }
+                    tbody {
+                        tr {
+                            th {font-size: rem(16px);}
+                            td {font-size: rem(16px);}
+                        }
+                    }
+                }
+            }
+        }
+    }
     .tableArea {
         width:100%; border-top: 2px solid var(--Gray-900); overflow: auto;
         @include minWidth('mobile'){

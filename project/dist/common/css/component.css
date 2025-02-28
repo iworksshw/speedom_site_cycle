@@ -153,18 +153,18 @@
 	}
 }
 
-.modPopup .comTabData {
-	width: 100%;
-	margin-left: 0;
+/* 모바일 요약출주표 전용(다른곳엔 팝업내 탭이 없다는 가정하에) */
+.modPopup .modTab02 {
+	margin-right: -16px;
 }
-.modPopup .comTabData .tabMenuGroup {
-	padding: 0;
-}
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem {
 	margin-right: 12px;
 }
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem:last-child {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem:last-child {
 	margin-right: 0;
+}
+.modPopup .modTab02 .tabContianer {
+	padding: 0;
 }
 
 /* ------------------------------- 헤더 ------------------------------- */
@@ -6185,6 +6185,7 @@ form:has(.cptSection:first-child):first-child {
 	}
 	.cptCalendar .calenInfo .markInfo .item .mark {
 		font-size: 0.875rem;
+		letter-spacing: -1px;
 	}
 	.cptCalendar .calenInfo .markInfo .item .mark::before {
 		width: 16px;

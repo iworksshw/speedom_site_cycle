@@ -79,7 +79,7 @@
                 padding-bottom: 20px; column-gap: 14px;
                 .item {
                     .mark {
-                        font-size: rem(14px); 
+                        font-size: rem(14px); letter-spacing: -1px;
                         &::before {width: 16px; height: 16px;margin-right:4px;vertical-align: text-top;}
                     }
                 }

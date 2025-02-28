@@ -153,18 +153,18 @@
 	}
 }
 
-.modPopup .comTabData, .modPopup .modTab02 {
-	width: 100%;
-	margin-left: 0;
+/* 모바일 요약출주표 전용(다른곳엔 팝업내 탭이 없다는 가정하에) */
+.modPopup .modTab02 {
+	margin-right: -16px;
 }
-.modPopup .comTabData .tabMenuGroup, .modPopup .modTab02 .tabMenuGroup {
-	padding: 0;
-}
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem, .modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem {
 	margin-right: 12px;
 }
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem:last-child, .modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem:last-child {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem:last-child {
 	margin-right: 0;
+}
+.modPopup .modTab02 .tabContianer {
+	padding: 0;
 }
 
 /* --------------------------- 팝업 Large --------------------------- */

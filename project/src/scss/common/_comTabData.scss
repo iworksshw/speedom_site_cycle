@@ -87,15 +87,19 @@
         }
     }
 }
-.modPopup .comTabData {
-    width: 100%; margin-left: 0;
+
+/* 모바일 요약출주표 전용(다른곳엔 팝업내 탭이 없다는 가정하에) */
+.modPopup .modTab02 {
+    margin-right: -16px;
     .tabMenuGroup {
-        padding: 0;
         .tabMenu {
             .tabItem {
                 margin-right: 12px;
                 &:last-child {margin-right: 0;}
             }
         }
+    }
+    .tabContianer {
+        padding: 0;
     }
 }
