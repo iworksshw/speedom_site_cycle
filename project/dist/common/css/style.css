@@ -5937,6 +5937,17 @@ select.iptSlt.typeLine {
 .comDataTable:first-child {
 	margin-top: 0;
 }
+@media screen and (max-width: 767px) {
+	.comDataTable.f16 .tableArea table thead tr th {
+		font-size: 1rem;
+	}
+	.comDataTable.f16 .tableArea table tbody tr th {
+		font-size: 1rem;
+	}
+	.comDataTable.f16 .tableArea table tbody tr td {
+		font-size: 1rem;
+	}
+}
 .comDataTable .tableArea {
 	width: 100%;
 	border-top: 2px solid var(--Gray-900);
@@ -10473,18 +10484,18 @@ select.iptSlt.typeLine {
 	}
 }
 
-.modPopup .comTabData {
-	width: 100%;
-	margin-left: 0;
+/* 모바일 요약출주표 전용(다른곳엔 팝업내 탭이 없다는 가정하에) */
+.modPopup .modTab02 {
+	margin-right: -16px;
 }
-.modPopup .comTabData .tabMenuGroup {
-	padding: 0;
-}
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem {
 	margin-right: 12px;
 }
-.modPopup .comTabData .tabMenuGroup .tabMenu .tabItem:last-child {
+.modPopup .modTab02 .tabMenuGroup .tabMenu .tabItem:last-child {
 	margin-right: 0;
+}
+.modPopup .modTab02 .tabContianer {
+	padding: 0;
 }
 
 /* ------------------------------- 컨텐츠 내 약관상자 ------------------------------- */
@@ -13143,6 +13154,7 @@ select.iptSlt.typeLine {
 	line-height: 1.6;
 	color: var(--Gray-800);
 	text-align: left;
+	white-space: normal;
 }
 .comToolTip .tooltipBox .btnMore {
 	display: inline;
