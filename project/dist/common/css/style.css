@@ -6096,6 +6096,12 @@ select.iptSlt.typeLine {
 .comDataTable .tableArea table tbody tr.active td {
 	background: #F0FAF7;
 }
+.comDataTable .tableArea table tbody tr.minH th {
+	height: 42px;
+}
+.comDataTable .tableArea table tbody tr.minH td {
+	height: 42px;
+}
 .comDataTable .tableArea table tbody tr .raceTime {
 	color: var(--Gray-700);
 	font-size: 16px;
