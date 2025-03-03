@@ -8988,7 +8988,7 @@ select.iptSlt.typeLine {
 	.comPaging .numList li {
 		width: 22px;
 		height: 22px;
-		margin-left: 2px;
+		margin-left: 0;
 	}
 	.comPaging .numList li:first-child {
 		margin-left: 0;
@@ -11055,19 +11055,19 @@ select.iptSlt.typeLine {
 		border-bottom: 10px solid #f4f6fa;
 	}
 	.comDateSwiper .dateSwiper {
-		padding: 24px;
+		padding: 3px 24px;
 	}
 	.comDateSwiper .dateSwiper::before {
 		width: 60px;
-		height: 84px;
-		top: 10px;
+		height: 62px;
+		top: 0;
 		background: linear-gradient(90deg, #fff 40%, transparent);
 		pointer-events: none;
 	}
 	.comDateSwiper .dateSwiper::after {
 		width: 60px;
-		height: 84px;
-		top: 10px;
+		height: 62px;
+		top: 0;
 		background: linear-gradient(270deg, #fff 40%, transparent);
 		pointer-events: none;
 	}

@@ -57,22 +57,25 @@
 /* 출주표 */
 .comDataTable .tableArea table thead tr th {
     font-size: 18px; padding: 8px 5px;
+    @include media('mobile') {padding: 4px 5px;}
 }
 .comDataTable .tableArea table tbody tr th {
     font-size: 18px; padding: 8px 5px;
+    @include media('mobile') {padding: 4px 5px;}
 }
 .comDataTable .tableArea table tbody tr th .txtBtn {
     font-size: 18px;
 }
 .comDataTable .tableArea table tbody tr td {
     font-size: 18px; padding: 8px 5px;
+    @include media('mobile') {padding: 4px 5px;}
 }
 .comDataTable .tableArea table tbody tr td .txtBtn {
     font-size: 18px;
 }
 .comDataTable .tableArea table tbody tr .left {
     padding: 8px 20px;
-    @include media('mobile') {padding: 8px;}
+    @include media('mobile') {padding: 4px 10px;}
 }
 .comDataTable .tableArea table tbody tr td .txtBtn {
     

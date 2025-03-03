@@ -291,7 +291,16 @@
     @include media('mobile') {
         flex-wrap: wrap;
         .theaterDetail {
-            min-height: auto !important; padding-bottom: 28px;
+            min-height: auto !important; padding-top: 56.25%; padding-bottom: 28px;
+            .videoArea {
+                width: 100%; padding-top: 56.25%; position: fixed; left: 0; top: 66px;
+                .playerBox {
+                    width: 100%; height: 100%; background: #000 url(../../images/contents/cont04_novideo.png) center no-repeat; position: absolute; left: 0; top: 0;
+                }
+                img {
+                    width: 100%; vertical-align: top;
+                }
+            }
             .infoArea {
                 padding: 28px 16px 0;
                 .infoHead {
