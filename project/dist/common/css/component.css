@@ -11302,7 +11302,20 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Gray-900);
 	font-weight: 600;
 	line-height: 24px;
-	background: url(../../images/common/ic_24_notice.svg) left center no-repeat;
+	background: url(../../images/common/ic_24_notice.svg) left top 2px no-repeat;
+}
+@media screen and (max-width: 767px) {
+	.cptBatSimul .smlCont .noticeArea .notice .pcView {
+		display: none;
+	}
+}
+.cptBatSimul .smlCont .noticeArea .notice .mView {
+	display: none;
+}
+@media screen and (max-width: 767px) {
+	.cptBatSimul .smlCont .noticeArea .notice .mView {
+		display: block;
+	}
 }
 .cptBatSimul .smlCont .smryArea {
 	display: flex;
