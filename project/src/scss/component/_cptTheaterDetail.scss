@@ -176,9 +176,11 @@
                     position: relative; top: 1px; margin-right: 3px; font-size: rem(13px); color: var(--Gray-600); font-weight: 500;
                 }
                 .itemVal {
+                    display: flex; ;
                     & + .itemVal {margin-left: 8px;}
                     .number {
-                        width: 16px; height: 16px; border: 1px solid var(--Gray-200); border-radius: 50%; text-align: center; font-size: rem(11px); font-weight: 700; color: #fff; line-height: 15px;background: #fff; display: inline-block; vertical-align: middle;
+                        width: 16px; height: 16px; border: 1px solid var(--Gray-200); border-radius: 50%; text-align: center; font-size: rem(11px); 
+                        font-weight: 700; color: #fff; line-height: 15px;background: #fff; display: inline-block; vertical-align: middle; align-self: center;
                         &.num01 {color: var(--Gray-200);}
                         &.num02 {background: var(--Gray-900); border-color: var(--Gray-900);}
                         &.num03 {background: #ff2828; border-color: #ff2828;}
@@ -186,9 +188,10 @@
                         &.num05 {background: #ffb907; border-color: #ffb907;}
                         &.num06 {background: #55b965; border-color: #55b965;}
                         &.num07 {background: #ff66af; border-color: #ff66af;}
+                        & + .number {margin-left: 3px;}
                     }
                     .txt {
-                        color: var(--Gray-800); font-size: rem(12px); font-weight: 500; position: relative; display: inline-block; vertical-align: middle;
+                        margin-left: 3px; color: var(--Gray-800); font-size: rem(12px); font-weight: 500; position: relative; display: inline-block; vertical-align: middle; align-self: center;
                     }
                 }
             }
@@ -293,7 +296,7 @@
         .theaterDetail {
             min-height: auto !important; padding-top: 56.25%; padding-bottom: 28px;
             .videoArea {
-                width: 100%; padding-top: 56.25%; position: fixed; left: 0; top: 66px;
+                width: 100%; padding-top: 56.25%; position: fixed; left: 0; top: 66px; z-index: 90;
                 .playerBox {
                     width: 100%; height: 100%; background: #000 url(../../images/contents/cont04_novideo.png) center no-repeat; position: absolute; left: 0; top: 0;
                 }

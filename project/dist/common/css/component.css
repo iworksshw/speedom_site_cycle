@@ -16291,6 +16291,9 @@ form:has(.cptSection:first-child):first-child {
 	color: var(--Gray-600);
 	font-weight: 500;
 }
+.cptTheaterDetail [class*=Area] .raceInfo .item .itemVal {
+	display: flex;
+}
 .cptTheaterDetail [class*=Area] .raceInfo .item .itemVal + .itemVal {
 	margin-left: 8px;
 }
@@ -16307,6 +16310,7 @@ form:has(.cptSection:first-child):first-child {
 	background: #fff;
 	display: inline-block;
 	vertical-align: middle;
+	align-self: center;
 }
 .cptTheaterDetail [class*=Area] .raceInfo .item .itemVal .number.num01 {
 	color: var(--Gray-200);
@@ -16335,13 +16339,18 @@ form:has(.cptSection:first-child):first-child {
 	background: #ff66af;
 	border-color: #ff66af;
 }
+.cptTheaterDetail [class*=Area] .raceInfo .item .itemVal .number + .number {
+	margin-left: 3px;
+}
 .cptTheaterDetail [class*=Area] .raceInfo .item .itemVal .txt {
+	margin-left: 3px;
 	color: var(--Gray-800);
 	font-size: 0.75rem;
 	font-weight: 500;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
+	align-self: center;
 }
 .cptTheaterDetail [class*=Area] .raceInfo.half {
 	gap: 0 8px;
@@ -16465,6 +16474,7 @@ form:has(.cptSection:first-child):first-child {
 		position: fixed;
 		left: 0;
 		top: 66px;
+		z-index: 90;
 	}
 	.cptTheaterDetail .theaterDetail .videoArea .playerBox {
 		width: 100%;
