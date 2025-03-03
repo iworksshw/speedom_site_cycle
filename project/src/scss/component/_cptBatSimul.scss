@@ -16,7 +16,22 @@
 
         .noticeArea {
             padding: 16px 0;
-            .notice {padding-left: 32px; font-size: rem(15px); color: var(--Gray-900); font-weight: 600; line-height: 24px; background: url(../../images/common/ic_24_notice.svg) left center no-repeat;}
+            .notice {
+                padding-left: 32px; font-size: rem(15px); color: var(--Gray-900); font-weight: 600; line-height: 24px; 
+                background: url(../../images/common/ic_24_notice.svg) left top 2px no-repeat;
+                
+                .pcView {
+                    @include media("mobile") {
+                        display: none;
+                    }
+                }
+                .mView {
+                    display: none;
+                    @include media("mobile") {
+                        display: block;
+                    }
+                }
+            }
         }
 
         .smryArea {
