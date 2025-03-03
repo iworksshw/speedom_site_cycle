@@ -3,7 +3,7 @@
     &:first-child {margin-top: 0;}
 
     &:has(.comDateSwiper.sticky) {
-        position: sticky; left: 0; top: 64px; z-index: 90; background: #fff;
+        position: sticky; left: 0; top: 72px; z-index: 90; background: #fff;
     }
 
     @include media("mobile"){

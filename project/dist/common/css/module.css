@@ -1705,10 +1705,20 @@
 	font-size: 18px;
 	padding: 8px 5px;
 }
+@media screen and (max-width: 767px) {
+	.comDataTable .tableArea table thead tr th {
+		padding: 4px 5px;
+	}
+}
 
 .comDataTable .tableArea table tbody tr th {
 	font-size: 18px;
 	padding: 8px 5px;
+}
+@media screen and (max-width: 767px) {
+	.comDataTable .tableArea table tbody tr th {
+		padding: 4px 5px;
+	}
 }
 
 .comDataTable .tableArea table tbody tr th .txtBtn {
@@ -1718,6 +1728,11 @@
 .comDataTable .tableArea table tbody tr td {
 	font-size: 18px;
 	padding: 8px 5px;
+}
+@media screen and (max-width: 767px) {
+	.comDataTable .tableArea table tbody tr td {
+		padding: 4px 5px;
+	}
 }
 
 .comDataTable .tableArea table tbody tr td .txtBtn {
@@ -1729,7 +1744,7 @@
 }
 @media screen and (max-width: 767px) {
 	.comDataTable .tableArea table tbody tr .left {
-		padding: 8px;
+		padding: 4px 10px;
 	}
 }
 
