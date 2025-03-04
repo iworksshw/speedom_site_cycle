@@ -1528,13 +1528,13 @@
 /* 출주표 */
 .eng .comDataTable .tableArea table thead tr th {
 	font-size: 0.9375rem;
-	padding: 20px 5px;
+	padding: 4px 5px;
 	white-space: normal;
 }
 
 .eng .comDataTable .tableArea table tbody tr th {
 	font-size: 0.9375rem;
-	padding: 20px 5px;
+	padding: 4px 5px;
 	white-space: normal;
 }
 
@@ -1544,7 +1544,7 @@
 
 .eng .comDataTable .tableArea table tbody tr td {
 	font-size: 0.9375rem;
-	padding: 20px 5px;
+	padding: 4px 5px;
 	white-space: normal;
 }
 
@@ -1553,7 +1553,7 @@
 }
 
 .eng .comDataTable .tableArea table tbody tr .left {
-	padding: 20px;
+	padding: 4px 10px;
 }
 
 .eng .comDataTable .player {
