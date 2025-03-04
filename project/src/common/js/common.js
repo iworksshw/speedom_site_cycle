@@ -988,7 +988,9 @@ function dateBoxInit() {
     
     sections.forEach((section, idx) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        //console.log(rect.top);
+        //각 형태의 상단 위치가 화면높이보다 작고, 형태의 하단이 0보다 크면 => 해당 컨텐츠가 화면안에 절반이상 올라오면 동작
+        if (rect.top <= window.innerHeight/2 && rect.bottom >= 0) {
             btns.forEach(btn => btn.classList.remove("on"));
 
             const targetS = slides[idx];
