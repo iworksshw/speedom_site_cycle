@@ -41,6 +41,7 @@
                 max-height: 196px;
             }
         }
+        &.ex01 table tbody td {height: 52px;}
         table {
             width:100%; border-spacing: 0; border-collapse: separate; /*table-layout: fixed;*/
             thead {

@@ -2591,11 +2591,13 @@ select.iptSlt.typeLine {
 	margin-top: 12px;
 }
 .lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutLnbArea .userArea .txtBtn {
+	width: max-content;
 	display: inline-flex;
 	padding-right: 16px;
 	text-align: right;
 	font-size: 0.875rem;
 	color: var(--Gray-600);
+	white-space: nowrap;
 	background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;
 }
 .lytMypage .layoutArea .layoutContainer .layoutSubCont .layoutContArea {
@@ -5992,6 +5994,9 @@ select.iptSlt.typeLine {
 		max-height: 196px;
 	}
 }
+.comDataTable .tableArea.ex01 table tbody td {
+	height: 52px;
+}
 .comDataTable .tableArea table {
 	width: 100%;
 	border-spacing: 0;
@@ -7281,10 +7286,12 @@ select.iptSlt.typeLine {
 	background-position: right 16px center;
 }
 .comTitH2 .right .txtBtn {
+	width: max-content;
 	padding-right: 16px;
 	text-align: right;
 	font-size: 0.875rem;
 	color: var(--Gray-600);
+	white-space: nowrap;
 	background: url(../../images/common/ic_12_arr_right_g.svg) right center no-repeat;
 }
 .comTitH2 .right.sm {

@@ -129,6 +129,7 @@
             .viewBody {
                 .viewContArea {
                     padding: 32px 16px;
+                    table {max-width: 100% !important;} //게시판 내 모든 테이블은 모바일에서 최대 100%이상 넘어가지 못함
                 }
                 .comPlayerGrade {padding: 0 16px;}
             }
