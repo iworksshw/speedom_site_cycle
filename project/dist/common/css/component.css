@@ -3656,6 +3656,9 @@
 	.cptBoardView .boardViewArea .viewBody .viewContArea {
 		padding: 32px 16px;
 	}
+	.cptBoardView .boardViewArea .viewBody .viewContArea table {
+		max-width: 100% !important;
+	}
 	.cptBoardView .boardViewArea .viewBody .comPlayerGrade {
 		padding: 0 16px;
 	}
@@ -11291,6 +11294,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1.25rem;
 	color: #fff;
 	font-weight: 700;
+	white-space: nowrap;
 }
 .cptBatSimul .smlHead .btnClose {
 	display: none;
