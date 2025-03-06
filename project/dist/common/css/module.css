@@ -1320,12 +1320,24 @@
 
 /* 영문버전 수정 */
 .eng {
+	/* 서브탑 수정 */
 	/* 출주표 */
 	/* 상세페이지 */
 	/* 이전/다음 페이지 */
 	/* 경륜동영상 */
 	/* 경륜동영상 상세부분 */
 	/* 선수 프로필 상세 */
+}
+.eng .cptSubTop .subTopArea .subTitle h1 {
+	font-size: 2.5rem;
+}
+.eng .cptSubTop .subTopArea .subTitle h1::after {
+	display: none;
+}
+@media screen and (max-width: 767px) {
+	.eng .cptSubTop .subTopArea .subTitle h1 {
+		font-size: 1.75rem;
+	}
 }
 .eng .cptContSpeedom .contArea .btnGrp {
 	flex-wrap: wrap;
