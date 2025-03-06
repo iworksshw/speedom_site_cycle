@@ -1,6 +1,18 @@
 /* 영문버전 수정 */
 
 .eng {
+
+    /* 서브탑 수정 */
+    .cptSubTop .subTopArea .subTitle h1 {
+        font-size: rem(40px);
+        &::after {
+            display: none;
+        }
+        @include media('mobile') {
+            font-size: rem(28px);
+        }
+    }
+
     .cptContSpeedom {
         .contArea {
             .btnGrp {
