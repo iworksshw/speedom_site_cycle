@@ -16820,6 +16820,13 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 1rem;
 	font-weight: 700;
 }
+.cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth3Group .depth3Menu .depth3Name.on {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+.cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth3Group:has(.depth4Name.on) .depth3Menu .depth3Name.on {
+	text-decoration: none;
+}
 .cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu {
 	margin-top: 8px;
 }
@@ -16827,7 +16834,7 @@ form:has(.cptSection:first-child):first-child {
 	font-size: 0.9375rem;
 	color: #555;
 }
-.cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu .depth4Name:hover, .cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu .depth4Name:focus {
+.cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu .depth4Name:hover, .cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu .depth4Name:focus, .cptHeaderEn .headArea .gnbBox .depth2Area .depth2Box .depth4Group .depth4Menu .depth4Name.on {
 	color: #000;
 	text-decoration: underline;
 	text-underline-position: under;
