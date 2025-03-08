@@ -197,6 +197,9 @@
 	top: 93px;
 	gap: 16px;
 }
+.cptHeader:not(.inMain).on .headArea .headBox .myMenuGroup .item .myInfo {
+	display: none;
+}
 .cptHeader:not(.inMain).on .headArea .headBox .myMenuGroup .item .myLink {
 	padding-left: 28px;
 	height: 24px;
