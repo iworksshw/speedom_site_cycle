@@ -6011,8 +6011,8 @@ select.iptSlt.typeLine {
 	font-size: 0.9375rem;
 	font-weight: 600;
 	line-height: 1.3;
-	border-right: 1px solid var(--Bg-Line-line-200);
-	border-bottom: 1px solid var(--Bg-Line-line-100);
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	background: var(--Bg-Line-bg-100);
 	position: sticky;
 	top: 0;
@@ -6063,7 +6063,7 @@ select.iptSlt.typeLine {
 	font-weight: 600;
 	line-height: 1.3;
 	border-right: 1px solid var(--Gray-300);
-	border-bottom: 1px solid var(--Bg-Line-line-100);
+	border-bottom: 1px solid #ddd;
 	background: var(--Bg-Line-bg-100);
 	white-space: nowrap;
 }
@@ -6081,8 +6081,8 @@ select.iptSlt.typeLine {
 	font-size: 0.9375rem;
 	font-weight: 400;
 	line-height: 1.3;
-	border-right: 1px solid var(--Bg-Line-line-200);
-	border-bottom: 1px solid var(--Bg-Line-line-100);
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	word-break: keep-all;
 }
 .comDataTable .tableArea table tbody tr td:last-child {
@@ -6158,9 +6158,9 @@ select.iptSlt.typeLine {
 	font-size: 0.9375rem;
 	font-weight: 600;
 	line-height: 1.3;
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid #ddd;
 	border-top: 1px solid var(--Gray-900);
-	border-bottom: 1px solid var(--Bg-Line-line-100);
+	border-bottom: 1px solid #ddd;
 	background: var(--Bg-Line-bg-100);
 }
 .comDataTable .tableArea table tfoot tr th:last-child {
@@ -6177,9 +6177,9 @@ select.iptSlt.typeLine {
 	font-size: 0.9375rem;
 	font-weight: 400;
 	line-height: 1.3;
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid #ddd;
 	border-top: 1px solid var(--Gray-900);
-	border-bottom: 1px solid var(--Bg-Line-line-100);
+	border-bottom: 1px solid #ddd;
 }
 .comDataTable .tableArea table tfoot tr td:last-child {
 	border-right: 0;
@@ -6214,10 +6214,10 @@ select.iptSlt.typeLine {
 	border-bottom: 1px solid var(--Gray-300) !important;
 }
 .comDataTable .tableArea .bdr {
-	border-right: 1px solid var(--Bg-Line-line-200) !important;
+	border-right: 1px solid #ddd !important;
 }
 .comDataTable .tableArea .bdb {
-	border-bottom: 1px solid var(--Bg-Line-line-200) !important;
+	border-bottom: 1px solid #ddd !important;
 }
 .comDataTable.colLineDel .tableArea.player01 table tbody th {
 	color: var(--font-700);
@@ -6293,7 +6293,7 @@ select.iptSlt.typeLine {
 	border-right: 0;
 }
 .comDataTable.colLineDel .tableArea table tbody tr.row2Line th {
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid #ddd;
 }
 .comDataTable.colLineDel .tableArea table tbody tr.row2Line th:nth-child(2n) {
 	border-right: 1px solid var(--Gray-300);
@@ -6313,7 +6313,7 @@ select.iptSlt.typeLine {
 	left: 0;
 }
 .comDataTable.both .tableArea table thead tr th.noStand {
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid #ddd;
 	left: auto;
 	z-index: 0;
 }
@@ -6693,8 +6693,8 @@ select.iptSlt.typeLine {
 }
 .comContTable table th {
 	padding: 20px 5px;
-	border-bottom: 1px solid var(--Bg-Line-line-200);
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
 	text-align: center;
 	font-size: 0.9375rem;
 	color: var(--Gray-900);
@@ -6709,19 +6709,19 @@ select.iptSlt.typeLine {
 	border-right-color: var(--Gray-300);
 }
 .comContTable table .rowLineR {
-	border-right: 1px solid var(--Bg-Line-line-200) !important;
+	border-right: 1px solid #ddd !important;
 }
 .comContTable table thead th {
 	border-bottom: 1px solid var(--Gray-900);
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-right: 1px solid #ddd;
 }
 .comContTable table tbody td {
 	padding: 20px 5px;
 	text-align: center;
 	font-size: 0.9375rem;
 	color: var(--Gray-700);
-	border-bottom: 1px solid var(--Bg-Line-line-200);
-	border-right: 1px solid var(--Bg-Line-line-200);
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
 }
 .comContTable table tbody td:last-child {
 	border-right: none;

@@ -357,6 +357,33 @@
 .cptHeader .headArea .headBox .myMenuGroup .item {
 	position: relative;
 }
+.cptHeader .headArea .headBox .myMenuGroup .item > .myInfo .timeTxt {
+	margin-right: 8px;
+	color: var(--Gray-600);
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.6;
+}
+.cptHeader .headArea .headBox .myMenuGroup .item > .myInfo .timeBox .time {
+	padding-left: 20px;
+	color: #254962;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+	background: url(../../images/common/ic_16_clock.svg) left center no-repeat;
+}
+.cptHeader .headArea .headBox .myMenuGroup .item > .myInfo .timeBox .btnOvertime {
+	height: 24px;
+	padding: 0 8px;
+	margin-left: 3px;
+	color: #254962;
+	font-size: 0.75rem;
+	font-weight: 700;
+	border-radius: 4px;
+	background: #EFF6FF;
+}
 .cptHeader .headArea .headBox .myMenuGroup .item .myLink {
 	padding-left: 28px;
 	color: var(--Gray-800);
@@ -699,6 +726,9 @@
 	padding: 0 150px;
 }
 @media screen and (max-width: 1280px) {
+	.cptHeader:not(.inMain) .headArea .headBox .myMenuGroup .item > .myInfo {
+		display: none;
+	}
 	.cptHeader:not(.inMain) .gnbArea .gnbBox {
 		justify-content: flex-end;
 	}
