@@ -290,6 +290,13 @@
 .modPopup .popupArea .popupContArea .popTitle.shadow {
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
 }
+.modPopup .popupArea .popupContArea .popTitle a {
+	padding-left: 32px;
+	min-height: 24px;
+	background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat;
+	line-height: 24px;
+	display: block;
+}
 .modPopup .popupArea .popupContArea .popCont {
 	width: 100%;
 	max-height: calc(100vh - 304px);
@@ -407,6 +414,13 @@
 		padding: 20px 40px 20px 16px;
 		font-size: 1.25rem;
 		line-height: 1.4;
+	}
+	.modPopup .popupArea .popupContArea .popTitle a {
+		padding-left: 28px;
+		min-height: 24px;
+		background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat;
+		line-height: 24px;
+		display: block;
 	}
 	.modPopup .popupArea .popupContArea .popCont {
 		width: 100%;
