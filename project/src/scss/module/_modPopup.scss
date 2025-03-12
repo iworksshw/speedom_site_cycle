@@ -46,7 +46,8 @@
                 border-bottom: 1px solid var(--Bg-Line-line-100); position:relative; word-break:keep-all;
                 &.shadow {box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);}
                 a {
-                    padding-left: 32px; min-height: 24px; background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat; line-height: 24px; display: block;
+                    padding-left: 32px; min-height: 24px; font-size: 0; background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat; 
+                    line-height: 24px; display: inline-block; vertical-align: middle;
                 }
             }
             .popCont {
@@ -128,7 +129,7 @@
                 .popTitle {
                     min-height:65px; padding:20px 40px 20px 16px; font-size:rem(20px); line-height: 1.4;
                     a {
-                        padding-left: 28px; min-height: 24px; background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat; line-height: 24px; display: block;
+                        padding-left: 28px;
                     }
                 }  
                 .popCont {

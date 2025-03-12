@@ -293,9 +293,11 @@
 .modPopup .popupArea .popupContArea .popTitle a {
 	padding-left: 32px;
 	min-height: 24px;
+	font-size: 0;
 	background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat;
 	line-height: 24px;
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
 }
 .modPopup .popupArea .popupContArea .popCont {
 	width: 100%;
@@ -417,10 +419,6 @@
 	}
 	.modPopup .popupArea .popupContArea .popTitle a {
 		padding-left: 28px;
-		min-height: 24px;
-		background: url(../../images/common/ic_20_back.svg) 2px 1px no-repeat;
-		line-height: 24px;
-		display: block;
 	}
 	.modPopup .popupArea .popupContArea .popCont {
 		width: 100%;
