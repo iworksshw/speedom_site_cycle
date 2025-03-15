@@ -46,6 +46,9 @@
             padding: 13px 5px;
         }
         .left {padding-left: 16px; text-align: left;}
+        .link[target=_blank] {
+            width: max-content; padding-right: 20px; background: url(../../images/common/ic_16_new_window.svg) right center no-repeat; display: inline-block;
+        }
     }
 
     @include media("mobile"){
