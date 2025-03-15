@@ -366,6 +366,11 @@
         &.num06 {color: #fff; border: 1px solid #55B965; background: #55B965;}
         &.num07 {color: #fff; border: 1px solid #FF66AF; background: #FF66AF;}
     }
+    &.numL {
+        .sign {
+            width: 18px; height: 18px; font-size: rem(13px); line-height: 18px;
+        }
+    }
     .name {display: flex; align-items: center; justify-content: center;}
     .prediction {
         display: flex; align-items: center; justify-content: center; gap:8px;

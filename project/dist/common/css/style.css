@@ -6523,6 +6523,12 @@ select.iptSlt.typeLine {
 	border: 1px solid #FF66AF;
 	background: #FF66AF;
 }
+.comDataTable.numL .sign {
+	width: 18px;
+	height: 18px;
+	font-size: 0.8125rem;
+	line-height: 18px;
+}
 .comDataTable .name {
 	display: flex;
 	align-items: center;
@@ -6756,6 +6762,12 @@ select.iptSlt.typeLine {
 .comContTable table .left {
 	padding-left: 16px;
 	text-align: left;
+}
+.comContTable table .link[target=_blank] {
+	width: max-content;
+	padding-right: 20px;
+	background: url(../../images/common/ic_16_new_window.svg) right center no-repeat;
+	display: inline-block;
 }
 @media screen and (max-width: 767px) {
 	.comContTable {
@@ -7471,6 +7483,9 @@ select.iptSlt.typeLine {
 }
 .comTitH3.mgH40 {
 	margin-top: 40px;
+}
+.comTitH3 .left {
+	margin-left: 10px;
 }
 .comTitH3 .right {
 	margin-left: auto;
