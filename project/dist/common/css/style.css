@@ -6523,6 +6523,12 @@ select.iptSlt.typeLine {
 	border: 1px solid #FF66AF;
 	background: #FF66AF;
 }
+.comDataTable.numL .sign {
+	width: 18px;
+	height: 18px;
+	font-size: 0.8125rem;
+	line-height: 18px;
+}
 .comDataTable .name {
 	display: flex;
 	align-items: center;
@@ -7471,6 +7477,9 @@ select.iptSlt.typeLine {
 }
 .comTitH3.mgH40 {
 	margin-top: 40px;
+}
+.comTitH3 .left {
+	margin-left: 10px;
 }
 .comTitH3 .right {
 	margin-left: auto;
