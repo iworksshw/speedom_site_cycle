@@ -6763,6 +6763,12 @@ select.iptSlt.typeLine {
 	padding-left: 16px;
 	text-align: left;
 }
+.comContTable table .link[target=_blank] {
+	width: max-content;
+	padding-right: 20px;
+	background: url(../../images/common/ic_16_new_window.svg) right center no-repeat;
+	display: inline-block;
+}
 @media screen and (max-width: 767px) {
 	.comContTable {
 		margin-top: 12px;
