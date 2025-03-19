@@ -6019,9 +6019,8 @@ select.iptSlt.typeLine {
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	background: var(--Bg-Line-bg-100);
-	position: sticky;
-	top: 0;
 	white-space: nowrap;
+	position: sticky;
 }
 .comDataTable .tableArea table thead tr th:last-child {
 	border-right: 0;
@@ -6345,6 +6344,11 @@ select.iptSlt.typeLine {
 }
 .comDataTable.predictionTbl .tableArea table tbody tr td {
 	background: #fff;
+}
+@media screen and (max-width: 1023px) {
+	.comDataTable .tableArea table tbody tr th {
+		background: var(--Bg-Line-bg-100);
+	}
 }
 @media screen and (max-width: 767px) {
 	.popupContainer .comDataTable .tableArea {
