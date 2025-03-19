@@ -205,6 +205,9 @@
                     .viewContArea {
                         padding-top: 12px;
                         padding-bottom: 0;
+                        pre {
+                            white-space: normal;
+                        }
                     }
                 }
             }
