@@ -16167,6 +16167,11 @@ form:has(.cptSection:first-child):first-child {
 	font-weight: 700;
 	color: var(--Gray-900);
 }
+.cptTheaterDetail [class*=Area] .sectWrap > .tit a, .cptTheaterDetail [class*=Area] .sectWrap > .tit button {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--Gray-900);
+}
 .cptTheaterDetail [class*=Area] .btnGroup {
 	display: flex;
 	gap: 8px;
@@ -16330,8 +16335,11 @@ form:has(.cptSection:first-child):first-child {
 	line-height: 1.6;
 }
 .cptTheaterDetail [class*=Area] .raceInfo {
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
+}
+.cptTheaterDetail [class*=Area] .raceInfo.on {
+	display: flex;
 }
 .cptTheaterDetail [class*=Area] .raceInfo .item {
 	display: flex;

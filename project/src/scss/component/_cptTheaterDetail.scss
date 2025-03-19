@@ -74,6 +74,9 @@
             }
             & > .tit {
                 margin-bottom: 8px; font-size: rem(16px); font-weight: 700; color: var(--Gray-900);
+                a, button {
+                    font-size: rem(16px); font-weight: 700; color: var(--Gray-900);
+                }
             }
         }
         .btnGroup {
@@ -169,7 +172,8 @@
             }
         }
         .raceInfo {
-            display: flex; flex-wrap: wrap;;
+            display: none; flex-wrap: wrap;
+            &.on {display: flex;}
             .item {
                 display: flex; align-items: center; min-height: 29px;
                 .itemTit {
