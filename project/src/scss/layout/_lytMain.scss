@@ -539,7 +539,7 @@
                             .infoArea {
                                 margin-top: 4px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 10px;
                                 .info {
-                                    display: inline-block; font-size: rem(15px); color: var(--Gray-600); position: relative;
+                                    min-width: 42px; display: inline-block; font-size: rem(15px); color: var(--Gray-600); position: relative;
                                     em {font-size: rem(16px); color: var(--Gray-900); font-weight: 600;}
                                     &:nth-child(2n-1)::after {display: block; content: "/"; font-size: rem(11px); color: var(--Gray-300); position: absolute; top: 4px; right: -7px;}
                                 }

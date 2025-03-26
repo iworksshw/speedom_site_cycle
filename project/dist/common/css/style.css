@@ -4317,6 +4317,7 @@ select.iptSlt.typeLine {
 	column-gap: 10px;
 }
 .lytMain .layoutArea .layoutContainer .playerArea .playerBox .plGroup .plItem .infoArea .info {
+	min-width: 42px;
 	display: inline-block;
 	font-size: 0.9375rem;
 	color: var(--Gray-600);
